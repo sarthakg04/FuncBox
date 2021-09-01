@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.signup__container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) 1fr;
+  background: #edeeef;
+  min-height: 88vh;
+
+}
+
+.circular__carosel {
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  /* min-height: 85vh; */
+}
+
+.login__signup {
+  padding: 64px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: auto;
+  height: fit-content;
+}
+
+.title h1 {
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 8px;
+  border-bottom: 4px solid transparent;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.Login_Signup_link {
+  color: #3d4372;
+  text-decoration: none;
+}
+.title h1 a {
+  color: #3d4372;
+  text-decoration: none;
+}
+
+.title h1.active,
+.title h1:hover {
+  border-bottom: 4px solid #f06f38;
+}
+
+.content {
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+  display: none;
+}
+
+.content.active {
+  display: block;
+}
+
+.content form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: 16px;
+  border-bottom: 1px solid #787878;
+  font-size: 16px;
+  padding-left: 0;
+  margin-bottom: 32px;
+  color: #787878;
+}
+
+.submit {
+  margin-top: 64px;
+  background: #f06f38;
+  color: white;
+  width: 129px;
+  height: 40px;
+  border-radius: 8px;
+  border: 0;
+  outline: 0;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/*
+circular__carosel */
+
+.carousel li {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  transition: 1s;
+}
+
+.carousel li.active {
+  top: 50%;
+  left: 45%;
+  z-index: 6;
+}
+
+.carousel li img {
+  width: 200px;
+  transition: 1s;
+}
+
+.carousel li.active img {
+  width: 300px;
+  transition: 1s;
+}
+
+.carousel li.point1 {
+  top: 45%;
+  left: 25%;
+  z-index: 5;
+}
+
+.carousel li.point2 {
+  top: 35%;
+  left: 20%;
+  z-index: 4;
+}
+
+.carousel li.point3 {
+  top: 25%;
+  left: 32%;
+  z-index: 3;
+}
+
+.carousel li.point4 {
+  top: 25%;
+  left: 55%;
+  z-index: 2;
+}
+
+.carousel li.point5 {
+  top: 35%;
+  left: 65%;
+  z-index: 4;
+}
+
+.carousel li.point6 {
+  top: 45%;
+  left: 60%;
+  z-index: 5;
+}
+
+/* .car-wrapper{
+  width:100%;
+
+}
+.carousel{
+  background: red;
+}
+
+.carousel .item {
+	display: block;
+	position: absolute;
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	-o-transform: scale(0.5);
+	transform: scale(0.5);
+}
+
+.carousel .item:not(.active){
+  background:red;
+  overflow:hidden;
+}
+
+
+.carousel .item.active {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+.carousel .item.transition {
+	-webkit-transition: all 0.35s ease;
+	-moz-transition: all 0.35s ease;
+	-o-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+.carousel .item.active{
+  width: 100px;
+  overflow:hidden;
+}
+
+.carousel .item:not(.active) {
+    width: 200px;
+}
+
+.carousel img{
+  width:100%;
+} */

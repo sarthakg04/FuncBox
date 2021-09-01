@@ -1,0 +1,60 @@
+.editor-container {
+  flex-grow: 1;
+  flex-basis: 0;
+  height: 50vh;
+  width: 50vw;
+  display: flex;
+  background-color: white;
+  position: absolute;
+}
+
+.editor-container.collapsed {
+  flex-grow: 0;
+}
+
+.editor-container.collapsed .CodeMirror-scroll {
+  position: absolute;
+  overflow: hidden !important;
+}
+
+.expand-collapse-btn {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.editor-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: #6e2aff;
+  color: white;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+.editorheader {
+  background-color: #6e2aff;
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  width: 50vw;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-top-right-radius: 1rem;
+}
+.editortext {
+  color: white;
+  font-size: 0.9rem;
+  font-family: Raleaway;
+}
+.CodeMirror {
+  height: 100% !important;
+}
+
+.code-mirror-wrapper {
+  flex-grow: 1;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  overflow: hidden;
+}
