@@ -15,7 +15,7 @@ function createInteractionPad(){
   <img class="ballstyle" id="ball" src="FuncBoxx/BowlingGameFiles/assets/images/ball.png" height="50vh" width="50vw">
   `;
 }
-function control(){
+function up(){
   let id = null;
   const elem = document.getElementById('ball');
   const dem = elem.getBoundingClientRect();  
@@ -27,6 +27,23 @@ function control(){
     } else {
       pos--; 
       elem.style.marginTop = pos + "px"; 
+    }
+  }
+}
+function left(){
+  let id = null;
+  const elem = document.getElementById('ball');
+  const dem = elem.getBoundingClientRect();  
+  let post = 0;
+  clearInterval(id);
+  id = setInterval(frame, 5);
+  function frame() {
+    if (post == 350) {
+      clearInterval(id);
+    } else {
+      console.log("are");
+      post++; 
+      elem.style.marginLeft = post + "px"; 
     }
   }
 }
