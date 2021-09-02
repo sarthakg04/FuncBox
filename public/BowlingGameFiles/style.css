@@ -1,9 +1,81 @@
-*{
-  margin:0px 0px 0px 0px;
-  padding:0px 0px 0px 0px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
-#CursorLayer{
-  height:532px;
-  width:398px;
-  background-size : contain;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.GamePad {
+  width: 400px;
+  height: 535px;
+  /* border: solid black 1px; */
+  margin: auto;
+  position: relative;
+  /* background-image: url('../MissionMarsFiles/assets/backgrounds/Frame.png'); */
+  background-position: center;
+  background-size: cover;
+  padding-top: 1px;
+  /* background: red; */
+}
+
+.score {
+  margin: 2px;
+  padding: 4px;
+  border-radius: 0 22px 22px 0;
+  background: white;
+  min-width: 40%;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.grid {
+  height: 400px;
+  /* border: solid black 1px; */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /* grid-template-rows: repeat(5,1fr); */
+  box-sizing: border-box;
+  padding: 5px;
+  margin: auto;
+  position: relative;
+
+  z-index: 2;
+}
+
+.grid div {
+  box-sizing: border-box;
+  margin: 0;
+  /* border : 1px solid */
+}
+
+.rocks {
+  /* border-radius: 15px; */
+}
+
+.goodrocks {
+  background: url('../MissionMarsFiles/assets/GoodRock.svg') no-repeat center;
+}
+
+.badrocks {
+  background: url('../MissionMarsFiles/assets/BadRock.svg') no-repeat center;
+}
+
+.wasterocks1 {
+  background: url('../MissionMarsFiles/assets/WasteRock-2.svg') no-repeat center;
+}
+
+.wasterocks2 {
+  background: url('../MissionMarsFiles/assets/WasteRock-1.svg') no-repeat center;
+}
+
+.rover {
+  background: url('../MissionMarsFiles/assets/Rover.svg') no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100%;
 }

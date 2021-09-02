@@ -1,30 +1,23 @@
-function canvas(){
-var canvas = document.createElement('canvas');
-canvas.id = "CursorLayer";
-canvas.style.zIndex = 8;
-canvas.style.position = "absolute";
-canvas.style.border = "1px solid";
-var body = document.getElementsByTagName("body")[0];
-body.appendChild(canvas);
-cursorLayer = document.getElementById("CursorLayer");
-console.log(cursorLayer);
-document.getElementById("CursorLayer").style.backgroundImage='url(FuncBoxx/BowlingGameFiles/assets/backgrounds/Frame.png)';
+
+let gamePad,elements, squares , goodrocks = 0 , badrocks = 0 , currentRoverPosition = 35;
+let roverDiv , roverImg = 'rover', Score = 0 , time;
+var goodrocksScanned = 0;
+
+
+function createGamepad() {
+    let gamePadd = document.createElement('DIV')
+    gamePadd.classList.add('GamePad')
+    gamePadd.id = 'GamePad'
+    document.body.appendChild(gamePadd);
+    gamePad = document.getElementById('GamePad')
+    // return gamePad;
+
 }
 
-function addball(){
-var canvas = document.getElementById('CursorLayer');
-var context = canvas.getContext('2d');
-var centerX = canvas.width / 2;
-var centerY = canvas.height / 2;
-var radius = 70;
+function fill(background) {
+  document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(FuncBoxx/BowlingGameFiles/assets/backgrounds/Frame.png)';
+}
 
-let circle = new Path2D();  // <<< Declaration
-circle.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-
-context.fillStyle = 'blue';
-context.fill(circle); //   <<< pass circle to context
-
-context.lineWidth = 10;
-context.strokeStyle = '#000066';
-context.stroke(circle); 
+function createElement(elementss){
+  elements = elementss;
 }
