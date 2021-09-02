@@ -79,3 +79,135 @@ body {
   background-size: contain;
   height: 100%;
 }
+
+.up {
+  transform: rotate(0);
+}
+
+.down {
+  transform: rotate(180deg);
+}
+
+.scanned {
+  background-color: green;
+  border-radius: 10px;
+}
+
+.scanning {
+  animation: 0.75s blink;
+  animation-iteration-count: infinite;
+}
+
+.controller-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 8px;
+}
+
+.controller-container.active {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.arrow-keys {
+  text-align: center;
+}
+
+.arrow-keys img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.Scan {
+  background: #46124f;
+
+  color: white;
+  border-radius: 16px;
+  border: 3px solid white;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.Scan:active,
+.Scan:focus {
+  outline: 0;
+}
+
+.Scan.active {
+  background: #832394;
+  cursor: pointer;
+}
+
+.restartBtn {
+  background-color: #5e7622;
+  position: absolute;
+  top: 87%;
+  left: 40%;
+
+  color: white;
+  border-radius: 16px;
+  border: 3px solid white;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.restartBtn:active,
+.restartBtn:focus {
+  outline: 0;
+}
+
+.restartBtn.active {
+  background: #97be37;
+  cursor: pointer;
+}
+
+/* .upRotate {
+  transform: rotate(0deg);
+}
+
+.downRotate {
+  transform: rotate(180deg);
+}
+
+.rightRotate {
+  transform: rotate(90deg);
+}
+
+.leftRotate {
+  transform: rotate(-90deg);
+}
+
+.roverImg {
+  position: absolute;
+  left: 290px;
+  top: 408px;
+  width: 40px;
+  transition: 0.5s;
+  z-index: 4;
+  opacity: 0;
+} */
+
+/* 72
+45
+325
+354 */
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* .notransform {
+  transform: none;
+} */
