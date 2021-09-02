@@ -1,0 +1,9 @@
+*{
+  margin:0px 0px 0px 0px;
+  padding:0px 0px 0px 0px;
+}
+#CursorLayer{
+  height:532px;
+  width:398px;
+  background-size : contain;
+}
