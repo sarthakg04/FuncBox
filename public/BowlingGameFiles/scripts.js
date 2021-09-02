@@ -12,6 +12,21 @@ function fill(background) {
 }
 function createInteractionPad(){
   gamePad.innerHTML += `
-  <img id="ball" src="FuncBoxx/BowlingGameFiles/assets/images/ball.png" height="55vh" width="55vw">
+  <img class="ballstyle" id="ball" src="FuncBoxx/BowlingGameFiles/assets/images/ball.png" height="50vh" width="50vw">
   `;
+}
+function control(){
+  let id = null;
+  const elem = document.getElementById('ball');
+  const dem = elem.getBoundingClientRect();  
+  let pos = dem.top;
+  clearInterval(id);
+  id = setInterval(frame, 2);
+  function frame() {
+    if (pos == 0) {
+    } else {
+      pos--; 
+      elem.style.marginTop = pos + "px"; 
+    }
+  }
 }
