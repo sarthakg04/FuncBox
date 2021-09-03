@@ -1,9 +1,9 @@
-<svg width="63" height="43" viewBox="0 0 63 43" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect x="60" y="38.0325" width="57" height="35" rx="17" transform="rotate(-180 60 38.0325)" fill="#84A039" stroke="#AFAFAF" stroke-width="6"/>
-<rect x="56.9727" y="42.0325" width="50" height="42" transform="rotate(-179.963 56.9727 42.0325)" fill="url(#pattern0)"/>
+<svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect x="55.1814" y="54.4268" width="51.9275" height="50.5046" rx="17" transform="rotate(-180 55.1814 54.4268)" fill="white" stroke="black" stroke-width="6"/>
+<rect width="46.342" height="57.9275" transform="matrix(-1 -0.000927305 0.000453209 -1 52.6394 58.8047)" fill="url(#pattern0)"/>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0" transform="translate(0.08) scale(0.028 0.0333333)"/>
+<use xlink:href="#image0" transform="translate(0 0.1) scale(0.0333333 0.0266667)"/>
 </pattern>
 <image id="image0" width="30" height="30" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAaElEQVRIie3OOwqAMBBF0Yt7MOD+N6NgZeNG7LWJTVDMZzKN78Jr5wwopf5aANa44IWOwAaccTsweaMu+BvaFf9Cu+C5qCleiprgtWgT3opW4VZoMb4YovfmFBke4CPnu8J63FRKKecugPKDYRg5jP4AAAAASUVORK5CYII="/>
 </defs>

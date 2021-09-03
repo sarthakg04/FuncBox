@@ -25,12 +25,14 @@ function createElement(elementss){
 
 
 function createScore(){
-  let he = document.createElement('h3');
-  he.id = 'score';
-  he.classList.add('score');
-  he.innerHTML = 'Start'
-  gamePad.appendChild(he)
-  scoreDisplay = document.getElementById('score')
+  gamePad.innerHTML +=`
+  <div class="score">
+    <div class="score-div">
+    <img src="FuncBoxx/MissionMarsFiles/assets/star.svg" alt="">
+    <h3 id="score" >Start</h3>
+  </div>
+  </div>
+  `;
 }
 
 
@@ -85,6 +87,7 @@ function createInteractionPad(){
       <img class="movementButton" src='FuncBoxx/MissionMarsFiles/assets/buttons/up.svg' id="upButton"></img>
       <div class="left-right">
       <img class="movementButton" src='FuncBoxx/MissionMarsFiles/assets/buttons/left.svg' id="leftButton"></img>
+      <img src="FuncBoxx/MissionMarsFiles/assets/buttons/middle.svg" alt="" class="middle">
       <img class="movementButton" src='FuncBoxx/MissionMarsFiles/assets/buttons/right.svg' id="rightButton"></img>
       </div>
       <img class="movementButton" src='FuncBoxx/MissionMarsFiles/assets/buttons/down.svg' id="downButton"></img>
@@ -106,9 +109,9 @@ function createInteractionPad(){
 }
 
 function createRestartButton(){
-  cc = document.getElementById('cc');
-  restartBtn = document.createElement('button');
-  restartBtn.innerHTML = "Restart";
+  cc = document.getElementById('GamePad');
+  restartBtn = document.createElement('img');
+  restartBtn.src = "FuncBoxx/MissionMarsFiles/assets/buttons/restart.svg";
   restartBtn.classList.add('restartBtn');
 
   restartBtn.addEventListener("click", function(event){
