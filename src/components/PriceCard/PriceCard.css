@@ -77,6 +77,7 @@ body {
 
 .plan-details .heading {
   text-align: center;
+  padding-bottom: 24px;
 }
 
 .plan-details .add-to-cart {

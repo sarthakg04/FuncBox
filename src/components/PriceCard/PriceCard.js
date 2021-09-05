@@ -36,7 +36,7 @@ export default function PriceCard(props) {
     }
 
     return (
-        <div>
+
             <div className="plan">
                 <div className="plan-container">
                 <div className={"plan-details "+ Color }>
@@ -92,6 +92,5 @@ export default function PriceCard(props) {
                 </div>
                 </div>
             </div>
-        </div>
     )
 }
