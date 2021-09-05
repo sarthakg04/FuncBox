@@ -4,7 +4,7 @@ import Frame from '../Frame/Frame';
 import useLocalStorage from '../../hooks/useLocalStorage';
 import Navbar from '../Navbar/Navbar';
 
-const BowlingGame = () => {
+const MissionMars = () => {
     const [js, setJs] = useLocalStorage('js', '')
     const [srcDoc, setSrcDoc] = useState('')
 
@@ -17,13 +17,13 @@ const BowlingGame = () => {
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                <title>BowlingGame</title>
-                <link rel="stylesheet" href="FuncBoxx/BowlingGameFiles/style.css">
+                <title>ClockGame</title>
+                <link rel="stylesheet" href="FuncBoxx/ClockGameFiles/style.css">
             </head>
 
             <body>
               
-                <script src='FuncBoxx/BowlingGameFiles/scripts.js'></script>
+                <script src='FuncBoxx/MissionMarsFiles/scripts.js'></script>
                 <script>${ js }</script>
             </body>
 
@@ -54,4 +54,4 @@ const BowlingGame = () => {
     )
 }
 
-export default BowlingGame;
+export default ClockGame;
