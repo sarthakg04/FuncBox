@@ -6,7 +6,12 @@ export default function PriceCard(props) {
 
     const {
         Heading,
-        Color
+        Color,
+        Feature_1,
+        Feature_2,
+        Feature_3,
+        Feature_4,
+        Feature_5,
      } = props
     
     const [cart, setCart] = useState(1);
@@ -40,19 +45,19 @@ export default function PriceCard(props) {
                     <div className="details">
                     <ul>
                         <li>
-                        Feature
+                        {Feature_1}
                         </li>
                         <li>
-                        Feature
+                        {Feature_2}
                         </li>
                         <li>
-                        Feature
+                        {Feature_3}
                         </li>
                         <li>
-                        Feature
+                        {Feature_4}
                         </li>
                         <li>
-                        Feature
+                        {Feature_5}
                         </li>
                     </ul>
                     </div>
@@ -62,6 +67,7 @@ export default function PriceCard(props) {
                     className = {Color + ' Cart_btn'}
                     style={{ display: AddToCartDisplay ? 'block' : 'none',
                     color: 'white',
+                    paddingLeft: "85%"
                     // position: 'relative',
                     // left: '85%'
                      }} 

@@ -4,7 +4,9 @@ import PriceCard from '../PriceCard/PriceCard';
 import './ShopingPage.css';
 import insta from './assets/insta.svg';
 import cloud from './assets/clouds.svg';
-import { counter } from '@fortawesome/fontawesome-svg-core';
+import sicon from './assets/sicon.svg';
+import rocket from './assets/rocket.png';
+import trolley from './assets/trolley.svg';
 
 export default function ShopingPage() {
 
@@ -32,142 +34,44 @@ export default function ShopingPage() {
 
     return (
         <div>
-            <Navbar/>
+            {/* <Navbar/> */}
             <div className="shop-header">
             <div className="">
             </div>
-            <img src="sicon.svg" alt="" className="shop-icon" />
-            <img src="trolley.svg" alt="" className="trolley" />
+            <img src={sicon} alt="" className="shop-icon" />
+            <img src={trolley} alt="" className="trolley" />
             </div>
             <div className="prices">
                 <PriceCard
                     Heading = "Plan 1"
                     Color = "red"
+                    Feature_1 = "Features of plan 1"
+                    Feature_2 = "Feature"
+                    Feature_3 = "Feature"
+                    Feature_4 = "Feature"
+                    Feature_5 = "Feature"
                 />
                 <PriceCard
                     Heading = "Plan 2"
                     Color = "yellow"
+                    Feature_1 = "Features of plan 2"
+                    Feature_2 = "Feature"
+                    Feature_3 = "Feature"
+                    Feature_4 = "Feature"
+                    Feature_5 = "Feature"
                 />
                 <PriceCard
                     Heading = "Plan 3"
                     Color = "green"
+                    Feature_1 = "Features of plan 3"
+                    Feature_2 = "Feature"
+                    Feature_3 = "Feature"
+                    Feature_4 = "Feature"
+                    Feature_5 = "Feature"
                 />
-            {/* <div className="plan">
-                <div className="plan-container">
-                <div className="plan-details red">
-                    <div className="heading">
-                    <h2>Plan 1</h2>
-                    </div>
-                    <div className="details">
-                    <ul>
-                        <li>
-                        Feature
-                        </li>
-                        <li>
-                        Feature
-                        </li>
-                        <li>
-                        Feature
-                        </li>
-                        <li>
-                        Feature
-                        </li>
-                        <li>
-                        Feature
-                        </li>
-                    </ul>
-                    </div>
-                    <div className="add-to-cart">
-                    <a href="#">Add To Cart</a>
-                    </div>
-                </div>
-                <div className="black">
-                </div>
-                <div className="plan-cover">
-                    <h1>Price</h1>
-                </div>
-                </div>
-            </div>
-            <div className="plan">
-                <div className="plan-container">
-                <div className="plan-details yellow">
-                    <div className="heading">
-                    <h2>Plan 2</h2>
-                    </div>
-                    <div className="details">
-                    <ul>
-                        <li>
-                        Feature
-                        </li>
-                        <li>
-                        Feature
-                        </li>
-                        <li>
-                        Feature
-                        </li>
-                        <li>
-                        Feature
-                        </li>
-                        <li>
-                        Feature
-                        </li>
-                    </ul>
-                    </div>
-                    <div className="add-to-cart">
-                    <button style={{display: AddToCartDisplay ? 'block' : 'none' }} onClick={handleAddToCart}>Add To Cart</button>
-                    <div style={{display: counterDisplay ? 'block' : 'none' }} className="Cart-Counter">
-                        <button onClick={counterDecrement}>-</button>
-                        <span>{cart}</span>
-                        <button onClick={counterIncrement}>+</button>
-                    </div>
-                    </div>
-                </div>
-                <div className="black">
-                </div>
-                <div className="plan-cover">
-                    <h1>Price</h1>
-                </div>
-                </div>
-            </div>
-            <div className="plan">
-                <div className="plan-container">
-                <div className="plan-details green">
-                    <div className="heading">
-                    <h2>Plan 3</h2>
-                    </div>
-                    <div className="details">
-                    <ul>
-                        <li>
-                        Feature
-                        </li>
-                        <li>
-                        Feature
-                        </li>
-                        <li>
-                        Feature
-                        </li>
-                        <li>
-                        Feature
-                        </li>
-                        <li>
-                        Feature
-                        </li>
-                    </ul>
-                    </div>
-                    <div className="add-to-cart" id="add">
-                    <a href="#">Add To Cart</a>
-                    </div>
-                </div>
-                <div className="black">
-                </div>
-                <div className="plan-cover">
-                    <h1>Price</h1>
-                </div>
-                </div> 
-                </div> */}
             </div>
             <div style={{backgroundImage: `url(${cloud})`}} className="footer">
-            <img src="rocket.png" alt="" className="rocket" />
+            <img src={rocket} alt="" className="rocket" />
             <div className="margin">
                 <p>hello</p>
             </div>
