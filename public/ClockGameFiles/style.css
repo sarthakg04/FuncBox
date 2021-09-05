@@ -27,3 +27,51 @@ body {
   width:400px;
   position:fixed;
 }
+.clock{
+  margin-left:20vw;
+}
+.submitbutton{
+position: absolute;
+margin-top: 15vh;
+margin-left: 15vw;
+width: 100px;
+height: 35px;
+background: #47C6D8;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+border:none;
+}
+.reloadbutton{
+  position: absolute;
+  margin-top: 15vh;
+  margin-left: 50vw;
+  width: 100px;
+  height: 35px;
+  background: #47C6D8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border:none;
+  }
+.answer{
+position: absolute;
+width: 311px;
+height: 71px;
+background: #D93E3E;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 20px;
+}
+.inputfield{
+  position: absolute;
+  width: 250px;
+  height: 50px;
+  padding: 10px;
+  margin-left:15vw;
+  background: #C4C4C4;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  text-align: center;
+}

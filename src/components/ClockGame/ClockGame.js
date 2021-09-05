@@ -4,7 +4,7 @@ import Frame from '../Frame/Frame';
 import useLocalStorage from '../../hooks/useLocalStorage';
 import Navbar from '../Navbar/Navbar';
 
-const MissionMars = () => {
+const ClockGame = () => {
     const [js, setJs] = useLocalStorage('js', '')
     const [srcDoc, setSrcDoc] = useState('')
 
@@ -23,7 +23,7 @@ const MissionMars = () => {
 
             <body>
               
-                <script src='FuncBoxx/MissionMarsFiles/scripts.js'></script>
+                <script src='FuncBoxx/ClockGameFiles/scripts.js'></script>
                 <script>${ js }</script>
             </body>
 
