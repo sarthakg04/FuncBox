@@ -1,5 +1,6 @@
 // Frontend Function
 let flag=1;
+let lpos=0;
 function createGamepad() {
     let gamePadd = document.createElement('DIV')
     gamePadd.classList.add('GamePad')
@@ -13,12 +14,12 @@ function fill(background) {
 }
 function createInteractionPad(){
   gamePad.innerHTML += `
-  <div class="ball1" id="ball">
-  <img class="ballstyle"src="FuncBoxx/BowlingGameFiles/assets/images/ball.png" height="50vh" width="50vw"/>
-  </div>
-  <div class="buttons" id="controllers">
+  <div class="game">
+  <img  id="ball" src="FuncBoxx/BowlingGameFiles/assets/images/ball.png" height="50vh" width="50vw"/>
+  <div class="controllers" id="control">
   <button onclick="control(0)" >Play</button>
   <button onclick="control(1); flag=0">Shoot</button>
+  </div>
   </div>
   `;
   
@@ -37,8 +38,9 @@ function control(value){
   function frame() {
     if (post == 350) {
       clearInterval(id);
+      lpos=post;
       post=0;
-    } 
+    }
     else if(flag==0){
       clearInterval(id);
       post=0;
@@ -49,21 +51,24 @@ function control(value){
     }
   }}
   else{
-  let id = null;
-  let elem = document.getElementById('ball');
-  const dem = elem.getBoundingClientRect();  
-  let pos = dem.top | 0;
-  clearInterval(id);
-  id = setInterval(frame, 2);
-  function frame() {
-    if (pos == -400) {
-      clearInterval(id);  
-    } 
-    else {
-      console.log(pos);
-      pos--; 
-      elem.style.marginTop = pos + "px"; 
+    let id = null;
+    let elem = document.getElementById('ball');
+    const dem = elem.getBoundingClientRect();  
+    let post = 400;
+    clearInterval(id);
+    let i;
+    id = setInterval(frame, 5);
+    function frame() {
+      if (post == 50) {
+        clearInterval(id);
+        post=0;
+      } 
+      else {
+        post--; 
+        elem.style.marginTop = post + "px"; 
+      }
     }
-  }
-  }
+}}
+function result(){
+  
 }

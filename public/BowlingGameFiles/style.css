@@ -15,17 +15,27 @@ body {
   height: 535px;
   /* border: solid black 1px; */
   margin: auto;
-  position: relative;
+  position: absolute;
   /* background-image: url('../MissionMarsFiles/assets/backgrounds/Frame.png'); */
   background-position: center;
   background-size: cover;
   padding-top: 1px;
   /* background: red; */
 }
-
-.ballstyle{
+.game{
+  height:450px;
+  width:300px;
+  position:fixed;
+}
+#ball{
   margin-left: 43vw;
   margin-top : 85vh;
   width: 50px;
   height: 50px;
+  position: fixed;
 }
+.controllers{
+  margin-top:400px;
+  margin-left:10px;
+}
+
