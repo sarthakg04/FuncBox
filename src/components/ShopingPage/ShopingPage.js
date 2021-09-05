@@ -34,7 +34,7 @@ export default function ShopingPage() {
 
     return (
         <div>
-            {/* <Navbar/> */}
+            <Navbar/>
             <div className="shop-header">
             <div className="">
             </div>
