@@ -1,4 +1,11 @@
 import React from 'react';
+import {
+  Link,
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 import Navbar from '../Navbar/Navbar';
 import PriceCard from '../PriceCard/PriceCard';
 import './ShopingPage.css';

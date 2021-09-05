@@ -36,10 +36,10 @@ export default function Navbar() {
                     <div className="option">
                     <a href="#">
                         <img src={shop} alt="shop" />
-                        <p>Shop</p>
+                        <Link to='/ShopingPage'><p>Shop</p></Link>
                     </a>
                     </div>
-                    <div className="option active">
+                    <div className="option">
                     <a href="#">
                         <img src={login} alt="login" /><br />
                         <Link to="/Login">Login / Signup</Link>
