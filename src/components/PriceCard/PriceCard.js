@@ -14,7 +14,7 @@ export default function PriceCard(props) {
         Feature_4,
         Feature_5,
      } = props
-    
+
     const [cart, setCart] = useState(1);
     const [counterDisplay, setCounterDisplay] = useState(false);
     const [AddToCartDisplay, setAddToDisplay] = useState(true);
@@ -64,14 +64,15 @@ export default function PriceCard(props) {
                     </div>
                     <div className="add-to-cart">
 
-                    <button 
+                    <button
                     className = {Color + ' Cart_btn'}
                     style={{ display: AddToCartDisplay ? 'block' : 'none',
                     color: 'white',
-                    paddingLeft: "85%"
+                    paddingLeft: "85%",
+                    cursor : 'pointer'
                     // position: 'relative',
                     // left: '85%'
-                     }} 
+                     }}
                     onClick={handleAddToCart}
                     >
                         Add To Cart
