@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.shop-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+
+.shop-icon {
+  width: 150px;
+}
+
+.trolley {
+  width: 30px;
+}
+
+.prices {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+  margin-bottom: 34px;
+  height: 400px;
+  max-height: 400px;
+  position: relative;
+}
+
+.plan-container {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+.plan-details {
+  position: relative;
+  color: white;
+  padding: 16px;
+  padding-bottom: 32px;
+  border-radius: 12px;
+  z-index: 2;
+  margin: 0 6px;
+}
+
+.plan-details.red {
+  background: #f05d6a;
+}
+
+.plan-details.yellow {
+  background: #ffd27b;
+}
+
+.plan-details.green {
+  background-color: #36bfa5;
+}
+
+.plan-details .heading {
+  text-align: center;
+}
+
+.plan-details .add-to-cart {
+  text-align: right;
+}
+
+.plan-details .add-to-cart a {
+  color: white;
+  text-decoration: none;
+}
+
+.plan-container .black {
+  position: relative;
+  background-color: black;
+  opacity: 0.7;
+  height: 12px;
+  z-index: 1;
+  margin-top: -170px;
+  border-radius: 0 0 12px 12px;
+  margin-bottom: -5px;
+  transition: 0.5s;
+}
+
+.plan-cover {
+  position: relative;
+  background: #eeeeee;
+  text-align: center;
+  padding: 32px;
+  z-index: 3;
+  min-height: 200px;
+  border-radius: 0 0 12px 12px;
+}
+
+.plan-container:hover .black {
+  margin-top: -20px;
+}
+
+.footer {
+  /* background: url('clouds.svg'); */
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
+
+.footer .rocket {
+  position: absolute;
+  top: 20px;
+  right: 7%;
+  width: 200px;
+}
+
+.footer .margin {
+  margin-bottom: 370px;
+  opacity: 0;
+}
+
+.footer .icons img {
+  margin-right: 16px;
+}
+
+.text {
+  color: #8c90b1;
+  text-align: center;
+}
+
+/* Added */
+
+.details {
+  padding-left: 5%;
+}
