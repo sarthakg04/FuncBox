@@ -16,7 +16,7 @@ function createInteractionPad(){
   0/9
   </div>
   <div class="game">
-  
+
   <img  id="ball" src="FuncBoxx/BowlingGameFiles/assets/images/ball.png" class="pin">
   <img id="pin1" src="FuncBoxx/BowlingGameFiles/assets/images/pin.png" class="pin" >
   <img id="pin2" src="FuncBoxx/BowlingGameFiles/assets/images/pin.png" class="pin">
@@ -33,13 +33,13 @@ function createInteractionPad(){
   </div>
   </div>
   `;
-  
+
 }
 function control(value){
   if (value==0){
   let id = null;
   let elem = document.getElementById('ball');
-  const dem = elem.getBoundingClientRect();  
+  const dem = elem.getBoundingClientRect();
   let post = 0;
   clearInterval(id);
   let i;
@@ -47,8 +47,8 @@ function control(value){
   id = setInterval(frame, 50);
   }
   function frame() {
-    if (post == 350) {
-      clearInterval(id);  
+    if (post == 300) {
+      clearInterval(id);
       post=0;
     }
     else if(flag==0){
@@ -56,14 +56,14 @@ function control(value){
       clearInterval(id);
     }
     else {
-      post++; 
-      elem.style.marginLeft = post + "px"; 
+      post++;
+      elem.style.marginLeft = post + "px";
     }
   }}
   else{
     let id = null;
     let elem = document.getElementById('ball');
-    const dem = elem.getBoundingClientRect();  
+    const dem = elem.getBoundingClientRect();
     let post = 400;
     clearInterval(id);
     let i;
@@ -73,16 +73,16 @@ function control(value){
         clearInterval(id);
         console.log(lpos);
         result();
-      } 
+      }
       else {
-        post--; 
-        elem.style.marginTop = post + "px"; 
+        post--;
+        elem.style.marginTop = post + "px";
       }
     }
 }}
 function result(){
   if (lpos<110 && lpos>=0)
-  { 
+  {
     document.getElementById("score").innerHTML='3/9';
     document.getElementById('pin1').style.opacity=0;
     document.getElementById('pin2').style.opacity=0;
