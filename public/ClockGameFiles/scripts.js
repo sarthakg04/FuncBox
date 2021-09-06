@@ -1,5 +1,5 @@
 
-let result_time='02:55 PM';
+let result_time='02:55 AM';
 let pathofimg='FuncBoxx/ClockGameFiles/assets/images/02_55_PM.png';
 let clock =['02_55_AM','04_00_AM','05_00_AM','10_10_PM','07_10_AM','01_25_PM','07_45_PM','09_35_PM','04_30_PM','11_45_AM'];
 function createGamepad() {
@@ -18,7 +18,7 @@ function createInteractionPad(){
   Guess the Correct Time!
   </div>
   <div class="game">
-  <img class="clock" id="clock" src="FuncBoxx/ClockGameFiles/assets/images/02_55_PM.png" height="350vh" width="270vw">  
+  <img class="clock" id="clock" src="FuncBoxx/ClockGameFiles/assets/images/02_55_AM.png" height="350vh" width="270vw">  
   <input class="inputfield" id="inputfield" type="text" placeholder="10:00 AM" style="outline-width:0;">
   <div class="controllers" id="control">
   <button class="submitbutton" onclick="result()" >Submit</button>
