@@ -7,6 +7,10 @@
   border: 0;
   margin-bottom: 8px;
   cursor: pointer;
+  background-color: transparent;
+  position: absolute;
+  top: 85%;
+  left: 10%;
 }
 
 .compile-button:active,

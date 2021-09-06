@@ -4,6 +4,7 @@ import Frame from '../Frame/Frame'
 import useLocalStorage from '../../hooks/useLocalStorage'
 import Navbar from '../Navbar/Navbar'
 import './CodeEditor.css'
+import RunBtn from './assets/RunBtn.svg'
 
 export default function CodeEditor() {
     const [js, setJs] = useLocalStorage('js', '')
@@ -31,7 +32,7 @@ export default function CodeEditor() {
     return (
         <div>
             <Navbar/>
-            <button onClick={updateCode} className="compile-button" >Run</button>
+            <button onClick={updateCode} className="compile-button" ><img src={RunBtn} alt="RunBtn" height="60px"/></button>
             <div className="top-pane">
                 <Editor
                     language="javascript"
