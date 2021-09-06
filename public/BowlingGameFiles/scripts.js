@@ -28,8 +28,8 @@ function createInteractionPad(){
   <img id="pin8" src="FuncBoxx/BowlingGameFiles/assets/images/pin.png" class="pin">
   <img id="pin9" src="FuncBoxx/BowlingGameFiles/assets/images/pin.png" class="pin">
   <div class="controllers" id="control">
-  <button onclick="control(0)" >Play</button>
-  <button onclick="control(1); flag=0">Shoot</button>
+  <button id="playButton" onclick="control(0)" >Play</button>
+  <button id="restartButton" onclick="control(1); flag=0">Shoot</button>
   </div>
   </div>
   `;
@@ -37,6 +37,7 @@ function createInteractionPad(){
 }
 function control(value){
   if (value==0){
+  document.getElementById("playButton").disabled = true;
   let id = null;
   let elem = document.getElementById('ball');
   const dem = elem.getBoundingClientRect();
@@ -61,6 +62,7 @@ function control(value){
     }
   }}
   else{
+    document.getElementById("restartButton").disabled = true;
     let id = null;
     let elem = document.getElementById('ball');
     const dem = elem.getBoundingClientRect();
