@@ -14,6 +14,7 @@ import CodeEditor from '../components/CodeEditor/CodeEditor';
 import FuncBoxx from './FuncBoxx/FuncBoxx';
 import BowlingGame from '../components/BowlingGame/BowlingGame';
 import ClockGame from '../components/ClockGame/ClockGame';
+import AlienGame from '../components/AlienGame/AlienGame';
 import ShopingPage from './ShopingPage/ShopingPage';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route exact path="/BowlingGame" component={BowlingGame}/>
           <Route exact path="/ShopingPage" component={ShopingPage}/>
           <Route exact path="/ClockGame" component={ClockGame}/>
+          <Route exact path="/AlienGame" component={AlienGame}/>
         </Switch>
       </div>
     </Router>
