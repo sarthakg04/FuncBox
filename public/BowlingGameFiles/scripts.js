@@ -47,7 +47,7 @@ function control(value){
   id = setInterval(frame, 50);
   }
   function frame() {
-    if (post == 300) {
+    if (post == 350) {
       clearInterval(id);
       post=0;
     }
