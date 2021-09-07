@@ -7,27 +7,10 @@
 }
 
 .code-mirror-wrapper {
-  max-height: 600px;
+  height: 650px;
   position: relative;
-  overflow-y: scroll;
+
   padding: 8px;
   border-radius:32px;
-
-}
-
-.code-mirror-wrapper::-webkit-scrollbar {
-  width: 8px;
-}
-
-/* Track */
-.code-mirror-wrapper::-webkit-scrollbar-track {
-  background: white;
-  border-radius: 8px;
-}
-
-/* Handle */
-.code-mirror-wrapper::-webkit-scrollbar-thumb {
-  background: #F06F38;
-  border-radius: 20px;
 
 }
