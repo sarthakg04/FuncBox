@@ -3,6 +3,7 @@ import Editor from '../Editor/Editor';
 import Frame from '../Frame/Frame';
 import useLocalStorage from '../../hooks/useLocalStorage';
 import Navbar from '../Navbar/Navbar';
+import '../CodeEditor/CodeEditor.css'
 
 const ClockGame = () => {
     const [js, setJs] = useLocalStorage('js', '')
@@ -22,7 +23,7 @@ const ClockGame = () => {
             </head>
 
             <body>
-              
+
                 <script src='FuncBoxx/ClockGameFiles/scripts.js'></script>
                 <script>${ js }</script>
             </body>
@@ -36,20 +37,34 @@ const ClockGame = () => {
     return (
     <div>
     <Navbar/>
-    <button onClick={updateCode} className="compile-button" >Run</button>
-        <div className="top-pane">
-            <Editor
-                language="javascript"
-                displayName="JS"
-                value={js}
-                onChange={setJs}
-            />
-            <div className="frame_container">
-                    <div className='phone'>
-                        <Frame srcDoc={srcDoc}/>
-                    </div>
-                </div>
+      <div className="main__container">
+        <Editor
+            language="javascript"
+            displayName="JS"
+            value={js}
+            onChange={setJs}
+            updateCode = {updateCode}
+
+        />
+      <div className="preview">
+        <div class="heading">
+        <p>Preview</p>
         </div>
+        <div className="frame_container">
+            <div className='phone'>
+                <Frame srcDoc={srcDoc}/>
+                {/* <iframe
+                    srcDoc={srcDoc}
+                    title="output"
+                    sandbox="allow-scripts"
+                    frameBorder="0"
+                    width="100%"
+                    height="100%"
+                /> */}
+            </div>
+        </div>
+        </div>
+    </div>
     </div>
     )
 }

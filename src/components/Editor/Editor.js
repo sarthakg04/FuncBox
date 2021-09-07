@@ -6,6 +6,10 @@ import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/css/css'
 import { Controlled as ControlledEditor } from 'react-codemirror2'
 import './Editor.css'
+import RunBtn from '../CodeEditor/assets/RunBtn.svg'
+import save from '../CodeEditor/assets/save.svg'
+import share from '../CodeEditor/assets/share.svg'
+import stamp from '../CodeEditor/assets/stamp.svg'
 
 export default function Editor(props) {
   const {
@@ -19,9 +23,10 @@ export default function Editor(props) {
     onChange(value)
   }
   return (
-    <>
-    <div class="editorheader"><div class="editortext">Code Editor</div></div>
-    <div className={`editor-container ${open ? '' : 'collapsed'}`}>
+    <div className="code__editor">
+      <div className="heading">
+      <p>Code Editor</p>
+      </div>
       <ControlledEditor
         onBeforeChange={handleChange}
         value={value}
@@ -33,7 +38,22 @@ export default function Editor(props) {
           lineNumbers: true
         }}
       />
+    <div className="icons">
+        <div className="play">
+          <a href="javascript:void(0)" onClick={props.updateCode}><img src={RunBtn} alt="" /></a>
+        </div>
+        <div className="other__icons">
+          <a href="#">
+            <img src={save} alt="" />
+          </a>
+          <a href="#">
+            <img src={share} alt="" />
+          </a>
+          <a href="#">
+            <img src={stamp} alt="" />
+          </a>
+        </div>
+      </div>
     </div>
-    </>
   )
 }
