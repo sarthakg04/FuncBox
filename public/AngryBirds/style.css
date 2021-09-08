@@ -15,7 +15,7 @@ body {
   flex-wrap: wrap;
   height: 400px;
   width: 287px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: 35px auto 0 auto;
 }
 
