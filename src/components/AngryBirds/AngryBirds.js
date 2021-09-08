@@ -28,7 +28,7 @@ const AngryBirds = () => {
 
     return (
       <div>
-      <Navbar/>
+      {/* <Navbar/> */}
         <div className="main__container">
           <Editor
               language="javascript"

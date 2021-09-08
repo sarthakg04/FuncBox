@@ -50,12 +50,13 @@ function createElements() {
 function createInteractionPad() {
     Phone.innerHTML += `
     <div class="ControlPad">
-        <button class="MovementBtns" onclick="MoveNext()">⬅</button>
-        <button class="MovementBtns" onclick="MovePrev()">➡</button>
+        <button id="nextButton" class="MovementBtns" onclick="MoveNext()">⬅</button>
+        <button id="prevButton" class="MovementBtns" onclick="MovePrev()">➡</button>
         <button class="hitBtn" onclick="Hit()" disabled>Hit</button>
         <button onclick="Restart()">Restart</button>
     </div>
     `
+    addMovementLogic();
     squares = Array.from(document.querySelectorAll('.grid div'));
     scoreSpan = document.querySelector('.Score')
     MovementBtns = document.querySelectorAll('.MovementBtns')
@@ -284,4 +285,37 @@ function Hit() {
 
 function Restart() {
     window.location.reload();
+}
+
+// Long Press for the buttons
+
+function addMovementLogic(){
+
+    let nextButton = document.getElementById('nextButton');
+    let prevButton= document.getElementById('prevButton');
+
+
+    nextButton.addEventListener("mousedown",()=>{
+    MoveNext();
+    time = setInterval(()=>{
+        MoveNext();
+    },250)
+    })
+
+    nextButton.addEventListener("mouseup",()=>{
+    clearInterval(time);
+    })
+
+
+    prevButton.addEventListener("mousedown",()=>{
+    MovePrev();
+    time = setInterval(()=>{
+        MovePrev();
+    },250)
+    })
+
+    prevButton.addEventListener("mouseup",()=>{
+    clearInterval(time);
+    })
+
 }
