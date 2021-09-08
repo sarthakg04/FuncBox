@@ -6,7 +6,7 @@ import {
   Link
 } from "react-router-dom";
 
-
+import AngryBirds from './AngryBirds/AngryBirds';
 import MissionMars from '../components/MissionMars/MissionMars';
 import Login from '../components/LoginAndSignup/Login';
 import Signup from '../components/LoginAndSignup/Signup';
@@ -23,6 +23,7 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
+          <Route exact path="/AngryBirds" component={AngryBirds} />
           <Route exact path="/MissionMars" component={MissionMars} />
           <Route exact path="/Login" component={Login} />
           <Route exact path="/Signup" component={Signup}/>
