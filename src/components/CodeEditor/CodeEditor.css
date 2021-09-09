@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
 
 
-*{
+.main__container *{
   margin : 0;
   padding: 0;
   font-family: 'Bubblegum Sans', cursive !important;
@@ -43,6 +43,12 @@
   border-radius: 40px;
 }
 
+.CodeMirror-scroll{
+  overflow-x: hidden!important;
+  overflow-y: scroll!important;
+}
+
+
 .CodeMirror-gutter{
   background: #F06F38;
   padding: 16px;
@@ -67,7 +73,7 @@
   padding-bottom: 16px!important;
 }
 
-.icons{
+.main__container .icons{
   margin-top: 32px;
   display: flex;
   justify-content: space-between;
