@@ -1,0 +1,26 @@
+Fronend Functions:
+
+-------------------------------------------------------------------------
+
+MissionMars:
+
+createGamepad()
+fill()
+createElement()
+createScore()
+createGrid()
+createRover()
+draw()
+createInteractionPad()
+createRestartButton()
+
+-------------------------------------------------------------------------
+
+AngryBirds:
+
+fill()
+createScore()
+createGamePad()
+createPlancks()
+createElements()
+createInteractionPad()
