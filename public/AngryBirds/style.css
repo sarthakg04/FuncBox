@@ -15,7 +15,7 @@ body {
   flex-wrap: wrap;
   height: 400px;
   width: 287px;
-  /* border: 1px solid black; */
+  border: 1px solid black;
   margin: 35px auto 0 auto;
 }
 
@@ -68,4 +68,14 @@ body {
 .bird_box_planck {
   background: url(./assets/bird_box_planck.svg) no-repeat;
   background-position: center bottom;
+}
+
+.Score {
+  background-color: black;
+  color: white;
+  /* line-height: 20px; */
+}
+
+.Star_img_angryBirds {
+  vertical-align: middle;
 }

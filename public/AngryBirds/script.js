@@ -15,7 +15,7 @@ function fill() {
 function createScore() {
     let scoreSpanCreate = document.createElement('span')
     scoreSpanCreate.classList.add('Score')
-    scoreSpanCreate.innerHTML = "Start"
+    scoreSpanCreate.innerHTML =  "Start"
     Phone.appendChild(scoreSpanCreate)
 }
 
@@ -56,7 +56,6 @@ function createInteractionPad() {
         <button onclick="Restart()">Restart</button>
     </div>
     `
-    addMovementLogic();
     squares = Array.from(document.querySelectorAll('.grid div'));
     scoreSpan = document.querySelector('.Score')
     MovementBtns = document.querySelectorAll('.MovementBtns')
@@ -289,33 +288,33 @@ function Restart() {
 
 // Long Press for the buttons
 
-function addMovementLogic(){
+// function addMovementLogic(){
 
-    let nextButton = document.getElementById('nextButton');
-    let prevButton= document.getElementById('prevButton');
-
-
-    nextButton.addEventListener("mousedown",()=>{
-    MoveNext();
-    time = setInterval(()=>{
-        MoveNext();
-    },250)
-    })
-
-    nextButton.addEventListener("mouseup",()=>{
-    clearInterval(time);
-    })
+//     let nextButton = document.getElementById('nextButton');
+//     let prevButton= document.getElementById('prevButton');
 
 
-    prevButton.addEventListener("mousedown",()=>{
-    MovePrev();
-    time = setInterval(()=>{
-        MovePrev();
-    },250)
-    })
+//     nextButton.addEventListener("mousedown",()=>{
+//     MoveNext();
+//     time = setInterval(()=>{
+//         MoveNext();
+//     },250)
+//     })
 
-    prevButton.addEventListener("mouseup",()=>{
-    clearInterval(time);
-    })
+//     nextButton.addEventListener("mouseup",()=>{
+//     clearInterval(time);
+//     })
 
-}
+
+//     prevButton.addEventListener("mousedown",()=>{
+//     MovePrev();
+//     time = setInterval(()=>{
+//         MovePrev();
+//     },250)
+//     })
+
+//     prevButton.addEventListener("mouseup",()=>{
+//     clearInterval(time);
+//     })
+
+// }
