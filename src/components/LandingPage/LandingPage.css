@@ -149,8 +149,8 @@
 
 .getInTouch {
   padding: 32px;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
   display: flex;
   color: white;
   font-family: 'Montserrat', sans-serif;
@@ -179,6 +179,7 @@
 }
 
 .madeWith {
+  font-weight:300;
   text-align: center;
   color: white;
   font-size: 18px;
@@ -187,7 +188,7 @@
 
 .footer .links {
   display: flex;
-  padding: 32px;
+  padding: 38px;
   justify-content: space-between;
 }
 
@@ -206,6 +207,10 @@
 }
 
 .footer .links a {
+  line-height: 21.94px;
+  font-size: 18px;
+  margin-right: 10vw;
+  font-weight:300;
   color: white;
   text-decoration: none;
 }
