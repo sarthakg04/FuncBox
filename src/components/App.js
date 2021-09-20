@@ -16,6 +16,7 @@ import BowlingGame from '../components/BowlingGame/BowlingGame';
 import ClockGame from '../components/ClockGame/ClockGame';
 import AlienGame from '../components/AlienGame/AlienGame';
 import ShopingPage from './ShopingPage/ShopingPage';
+import LandingPage from './LandingPage/LandingPage';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <Route exact path="/ShopingPage" component={ShopingPage}/>
           <Route exact path="/ClockGame" component={ClockGame}/>
           <Route exact path="/AlienGame" component={AlienGame}/>
+          <Route exact path="/LandingPage" component={LandingPage}/>
         </Switch>
       </div>
     </Router>
