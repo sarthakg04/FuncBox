@@ -57,7 +57,7 @@ export default function LandingPage() {
           </div>
           <div className="details">
             <div className="info">
-              <p>Introduce your child to the world of Creative Thinking and Logic Building</p>
+              <p>Introduce your child to the world<br/> of Creative Thinking and Logic<br/> Building</p>
             </div>
             <div className="logo">
               <img src={logo} alt="" />
