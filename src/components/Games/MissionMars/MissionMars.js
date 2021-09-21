@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Editor from '../Editor/Editor';
-import Frame from '../Frame/Frame';
-import useLocalStorage from '../../hooks/useLocalStorage';
+import Editor from '../../Editor/Editor';
+import Frame from '../../Frame/Frame';
+import useLocalStorage from '../../../hooks/useLocalStorage';
 
 const MissionMars = () => {
     const [js, setJs] = useLocalStorage('js', '')

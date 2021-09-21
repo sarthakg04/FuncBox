@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Editor from '../Editor/Editor';
-import Frame from '../Frame/Frame';
-import useLocalStorage from '../../hooks/useLocalStorage';
-import Navbar from '../Navbar/Navbar';
+import Editor from '../../Editor/Editor';
+import Frame from '../../Frame/Frame';
+import useLocalStorage from '../../../hooks/useLocalStorage';
+import Navbar from '../../Navbar/Navbar';
 
 const AngryBirds = () => {
     const [js, setJs] = useLocalStorage('js', '')

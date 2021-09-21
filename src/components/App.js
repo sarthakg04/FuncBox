@@ -6,15 +6,15 @@ import {
   Link
 } from "react-router-dom";
 
-import AngryBirds from './AngryBirds/AngryBirds';
-import MissionMars from '../components/MissionMars/MissionMars';
+import AngryBirds from '../components/Games/AngryBirds/AngryBirds';
+import MissionMars from '../components/Games/MissionMars/MissionMars';
 import Login from '../components/LoginAndSignup/Login';
 import Signup from '../components/LoginAndSignup/Signup';
 import CodeEditor from '../components/CodeEditor/CodeEditor';
 import FuncBoxx from './FuncBoxx/FuncBoxx';
-import BowlingGame from '../components/BowlingGame/BowlingGame';
-import ClockGame from '../components/ClockGame/ClockGame';
-import AlienGame from '../components/AlienGame/AlienGame';
+import BowlingGame from '../components/Games/BowlingGame/BowlingGame';
+import ClockGame from '../components/Games/ClockGame/ClockGame'
+import AlienGame from '../components/Games/AlienGame/AlienGame';
 import ShopingPage from './ShopingPage/ShopingPage';
 import LandingPage from './LandingPage/LandingPage';
 import AboutPage from './AboutPage/AboutPage';
