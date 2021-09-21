@@ -15,7 +15,7 @@ body {
   flex-wrap: wrap;
   height: 400px;
   width: 287px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: 35px auto 0 auto;
 }
 
@@ -37,6 +37,16 @@ body {
 }
 
 .hitBtn {
+  height: 40px;
+  width: 40px;
+  /* background: url('./assets/right.svg') no-repeat center; */
+  /* background-size: 40px 40px; */
+  border: none;
+  outline: none;
+  position: relative;
+  top: -10px;
+  font-size: 30px;
+  background-color: transparent;
 }
 .hitted {
   background: url(./assets/hitted.svg) no-repeat;
@@ -78,4 +88,35 @@ body {
 
 .Star_img_angryBirds {
   vertical-align: middle;
+}
+
+.ControlPad {
+  margin: 25px 0 0 130px;
+}
+
+.left_btn {
+  /* border-radius: 50%; */
+  height: 40px;
+  width: 40px;
+  background: url('./assets/left.svg') no-repeat center;
+  background-size: 40px 40px;
+  border: none;
+  outline: none;
+}
+.restart_btn {
+  /* border-radius: 50%; */
+  height: 40px;
+  width: 40px;
+  background: url('./assets/restart.svg') no-repeat center;
+  border: none;
+  outline: none;
+}
+.right_btn {
+  /* border-radius: 50%; */
+  height: 40px;
+  width: 40px;
+  background: url('./assets/right.svg') no-repeat center;
+  background-size: 40px 40px;
+  border: none;
+  outline: none;
 }

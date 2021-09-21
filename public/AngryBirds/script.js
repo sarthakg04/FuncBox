@@ -59,10 +59,10 @@ function createElements() {
 function createInteractionPad() {
     Phone.innerHTML += `
     <div class="ControlPad">
-        <button id="nextButton" class="MovementBtns" onclick="MoveNext()">⬅</button>
-        <button id="prevButton" class="MovementBtns" onclick="MovePrev()">➡</button>
-        <button class="hitBtn" onclick="Hit()" disabled>Hit</button>
-        <button onclick="Restart()">Restart</button>
+        <button id="nextButton" class="MovementBtns left_btn" onclick="MoveNext()"></button>
+        <button id="prevButton" class="MovementBtns right_btn" onclick="MovePrev()"></button>
+        <button class="hitBtn" onclick="Hit()" disabled>💥</button>
+        <button class="restart_btn" onclick="Restart()"></button>
     </div>
     `
     squares = Array.from(document.querySelectorAll('.grid div'));
