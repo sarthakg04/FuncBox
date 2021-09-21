@@ -1,10 +1,10 @@
 //Frontend Functions for testing
 // createBackground()
-// createFinish()
 // createGrid()
 // createCharacters()
 // LokiMovement()
 // createInteractionPad()
+// createFinish()
 
 
 // Initializing variables
