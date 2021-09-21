@@ -1,5 +1,6 @@
 import React from 'react'
 import './LandingPage.css'
+import Navbar from '../Navbar/Navbar'
 
 import about from './assets/about.svg'
 import home from './assets/home.svg'
@@ -21,29 +22,7 @@ export default function LandingPage() {
   return (
     <div>
       <div className="landingPage__main">
-          <div className="navigation">
-            <div className="logo__container">
-              <img src={logo} alt="logo" className="logo" />
-            </div>
-            <div className="link">
-              <a href="#">
-                <img src={home} alt="" />
-                <p>Home</p>
-              </a>
-              <a href="#">
-                <img src={about} alt="" />
-                <p>About</p>
-              </a>
-              <a href="#">
-                <img src={shop} alt="" />
-                <p>Shop</p>
-              </a>
-              <a href="#">
-                <img src={login} alt="" />
-                <p>Login</p>
-              </a>
-            </div>
-          </div>
+          <Navbar/>
           <div className="hero__section">
             <div className="hero__image">
               <img src={homepageimg} alt="" />

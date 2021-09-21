@@ -17,37 +17,31 @@ import shop from './assets/shop.svg'
 export default function Navbar() {
     return (
         <div>
-            <section>
-                <div className="navbar">
+            <div className="navigation">
+                <div className="logo__container">
                 <img src={logo} alt="logo" className="logo" />
-                <div className="options">
-                    <div className="option">
-                    <a href="#">
-                        <img src={home} alt="home" />
-                        <p>Home</p>
-                    </a>
-                    </div>
-                    <div className="option">
-                    <a href="#">
-                        <img src={about} alt="about" />
-                        <p>About</p>
-                    </a>
-                    </div>
-                    <div className="option">
-                    <a href="#">
-                        <img src={shop} alt="shop" />
-                        <Link to='/ShopingPage'><p>Shop</p></Link>
-                    </a>
-                    </div>
-                    <div className="option">
-                    <a href="#">
-                        <img src={login} alt="login" /><br />
-                        <Link to="/Login">Login / Signup</Link>
-                    </a>
-                    </div>
                 </div>
+                <div className="link">
+                <a href="#">
+                    <img src={home} alt="home" />
+                    <p>Home</p>
+                </a>
+                <a href="#">
+                    <img src={about} alt="about" />
+                    <p>About</p>
+                </a>
+                <a href="#">
+                    <img src={shop} alt="shop" />
+                    <p>Shop</p>
+                </a>
+                <Link to="/Login">
+                <a href="#">
+                    <img src={login} alt="login"/>
+                    <p>Login</p>
+                </a>
+                </Link>
                 </div>
-            </section>
+            </div>
         </div>
     )
 }
