@@ -1,3 +1,15 @@
+//Frontend Functions for testing
+// createGamepad()
+// fill()
+// createElement(['goodrocks','badrocks','wasterocks1','wasterocks2'])
+// createScore()
+// createGrid()
+// createRover()
+// draw()
+// createInteractionPad()
+// createRestartButton()
+
+
 // Frontend Functions
 
 let gamePad,elements, squares , goodrocks = 0 , badrocks = 0 , currentRoverPosition = 35;

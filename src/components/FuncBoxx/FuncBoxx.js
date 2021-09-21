@@ -4,7 +4,7 @@ export default function FuncBoxx() {
     return (
         <div>
             <span>http://localhost:3000/X</span><br />
-            X = CodeEditor, MissionMars, Login, Signup, BowlingGame, ShopingPage, LandingPage
+            X = CodeEditor, MissionMars, Login, Signup, BowlingGame, ShopingPage, LandingPage, AboutPage, AngryBirds
         </div>
     )
 }

@@ -1,3 +1,12 @@
+//Frontend Functions for testing
+// fill()
+// createScore()
+// createGamePad()
+// createPlancks()
+// createElements()
+// createInteractionPad()
+
+
 // Frontend Functions
 Phone = document.createElement('div')
 Phone.classList.add('Phone')
