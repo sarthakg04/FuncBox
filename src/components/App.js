@@ -8,6 +8,7 @@ import {
 
 import AngryBirds from '../components/Games/AngryBirds/AngryBirds';
 import MissionMars from '../components/Games/MissionMars/MissionMars';
+import AvengersGame from './Games/AvengersGame/AvengersGame';
 import Login from '../components/LoginAndSignup/Login';
 import Signup from '../components/LoginAndSignup/Signup';
 import CodeEditor from '../components/CodeEditor/CodeEditor';
@@ -35,6 +36,7 @@ function App() {
           <Route exact path="/ShopingPage" component={ShopingPage}/>
           <Route exact path="/ClockGame" component={ClockGame}/>
           <Route exact path="/AlienGame" component={AlienGame}/>
+          <Route exact path="/AvengersGame" component={AvengersGame}/>
           <Route exact path="/LandingPage" component={LandingPage}/>
           <Route exact path="/AboutPage" component={AboutPage}/>
         </Switch>
