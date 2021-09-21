@@ -22,14 +22,19 @@ export default function Navbar() {
                 <img src={logo} alt="logo" className="logo" />
                 </div>
                 <div className="link">
+                    
+                <Link to="/LandingPage">
                 <a href="#">
                     <img src={home} alt="home" />
                     <p>Home</p>
                 </a>
+                </Link>
+                <Link to="/AboutPage">
                 <a href="#">
                     <img src={about} alt="about" />
                     <p>About</p>
                 </a>
+                </Link>
                 <a href="#">
                     <img src={shop} alt="shop" />
                     <p>Shop</p>
