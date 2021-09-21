@@ -4,7 +4,7 @@
 // createElement(['goodrocks','badrocks','wasterocks1','wasterocks2'])
 // createScore()
 // createGrid()
-// createRover()
+// createRover("rover")
 // draw()
 // createInteractionPad()
 // createRestartButton()
