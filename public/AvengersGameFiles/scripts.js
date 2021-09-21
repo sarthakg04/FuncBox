@@ -1,3 +1,12 @@
+//Frontend Functions for testing
+// createBackground()
+// createFinish()
+// createGrid()
+// createCharacters()
+// LokiMovement()
+
+
+
 // var current_loki_position = 0
 // var current_ironman_position = 3
 // var current_fireball_position = 0
