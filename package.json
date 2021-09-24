@@ -1,5 +1,5 @@
 {
-  "homepage": "https://nishant0811.github.io/FuncBoxx",
+  "homepage": "https://sarthakg04.github.io/FuncBox",
   "name": "dyteapp",
   "version": "0.1.0",
   "private": true,
@@ -25,12 +25,13 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
+
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b gh-deploy -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
