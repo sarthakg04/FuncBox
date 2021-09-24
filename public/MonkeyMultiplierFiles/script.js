@@ -64,7 +64,7 @@ function createScore(){
 function generateRandomNumber(){
     var multiplt_info = document.createElement('div')
     multiplt_info.classList.add('multiplt_info')
-    var span_rndom_number = document.createElement('span') 
+    var span_rndom_number = document.createElement('span')
     //Initializing the random number
     span_rndom_number.innerHTML = number
     span_rndom_number.classList.add('rand_num')
@@ -84,11 +84,11 @@ function createJumpPlaces(){
     `
     GamePad.appendChild(jump_boxes_div)
     jump_boxes = Array.from(document.querySelectorAll('.jump_boxes button'))
-    
+
 }
 
 function createMonkey(){
-    
+
     monkey_box = document.createElement('div')
     monkey_box.classList.add('monkey_box')
     //Initializing Monkey position
@@ -100,7 +100,7 @@ function createMonkey(){
 
 function generateMultiples(){
     var number_span = document.createElement('span')
-    number_span.innerHTML = `${multiple}`
+    number_span.innerHTML = `${multiple}`;
     number_span.classList.add('span_number')
     jump_boxes[ans_box_index].appendChild(number_span)
     //Initializing the waste numbers into jump_boxes
@@ -108,8 +108,8 @@ function generateMultiples(){
         if( i == ans_box_index ){
             continue
         }
-        var number_span = document.createElement('span')   
-        number_span.innerHTML = `${arr[k]}`
+        var number_span = document.createElement('span')
+        number_span.innerHTML = `${arr[k]}`;
         number_span.classList.add('span_number')
         jump_boxes[i].appendChild(number_span)
         k++
@@ -129,7 +129,7 @@ function createInteractionPad(){
 }
 
 function createGameOver(){
-    
+
     var Game_Over = document.createElement('div')
     Game_Over.classList.add('Game_Over')
     var GamePad = document.querySelector('.GamePad')
@@ -141,11 +141,11 @@ function createGameOver(){
 //Jump functions
 function Jump_on_1(){
     next_button.disabled = false
-    
+
     var monkey_position = document.querySelector('.monkey')
     monkey_position.classList.remove('monkey')
     // console.log(jump_boxes[0])
-    
+
     var jump_box_1 = document.querySelector('.jump_box_1')
     jump_box_1.classList.add('monkey')
 
@@ -171,7 +171,7 @@ function Jump_on_2(){
     var monkey_position = document.querySelector('.monkey')
     monkey_position.classList.remove('monkey')
     // console.log(jump_boxes[0])
-    
+
     var jump_box_2 = document.querySelector('.jump_box_2')
     jump_box_2.classList.add('monkey')
 
@@ -200,7 +200,7 @@ function Jump_on_3(){
     var monkey_position = document.querySelector('.monkey')
     monkey_position.classList.remove('monkey')
     // console.log(jump_boxes[0])
-    
+
     var jump_box_3 = document.querySelector('.jump_box_3')
     jump_box_3.classList.add('monkey')
     for(i=0;i<3;i++){
@@ -221,9 +221,38 @@ function Jump_on_3(){
 }
 
 function Next(){
-    
-    // localStorage.setItem("MonkeyMultipler_Game_Score", Score);
-    window.location.reload()
+
+    number  = Math.floor((Math.random() * 9)+2);
+    multiple = ( number * Math.floor((Math.random() * 10)+1));
+    waste_number_1 = ( number * Math.floor((Math.random() * 10)+1)) - 1;
+    waste_number_2 = ( number * Math.floor((Math.random() * 10)+1)) + 1;
+    while(true){
+        if( waste_number_2 === waste_number_1 ){
+            waste_number_2 = ( number * Math.floor((Math.random() * 10)+1)) + 1
+        }
+        else{
+            break
+        }
+    }
+    arr = [multiple,waste_number_1,waste_number_2];
+    ans_box_index = Math.floor((Math.random() * 3));
+    k=1
+    phone_div = document.getElementsByClassName('Phone')[0];
+    phone_div.innerHTML = '';
+    GamePad = document.createElement('div')
+    GamePad.classList.add('GamePad')
+    phone_div.appendChild(GamePad)
+    score_text = document.createElement('div')
+    score_text.classList.add('score')
+    score_text.innerHTML = 'Score: ' + `${Score}`
+    GamePad.appendChild(score_text);
+    generateRandomNumber()
+    createJumpPlaces()
+    createMonkey()
+    generateMultiples()
+    createInteractionPad()
+    createGameOver()
+
 }
 
 function Restart(){
