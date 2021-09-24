@@ -22,7 +22,6 @@ export default function MonkeyMultiplier() {
 
             <body>
                 <script src='FuncBoxx/MonkeyMultiplierFiles/script.js'></script>
-                <script type="text/javascript" src="FuncBoxx/MonkeyMultiplierFiles/score_info.json"></script>
                 <script>${ js }</script>
             </body>
 

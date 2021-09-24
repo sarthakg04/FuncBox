@@ -1,3 +1,12 @@
+//Frontend Function for testing
+// createScore()
+// generateRandomNumber()
+// createJumpPlaces()
+// createMonkey()
+// generateMultiples()
+// createInteractionPad()
+// createGameOver()
+
 // variables
 
 var number  = Math.floor((Math.random() * 9)+2)
