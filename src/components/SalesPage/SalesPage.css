@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* NAVBAR CSS Starts */
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 32px;
+}
+
+.navigation * {
+  font-family: 'Lato', sans-serif;
+}
+
+.navigation .link {
+  display: flex;
+}
+
+.navigation .logo {
+  width: 200px;
+  height: 79px;
+}
+
+.navigation .link a {
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  color: #6e6e6e;
+  font-family: 'Lato', sans-serif;
+  margin-right: 32px;
+}
+
+.navigation .link a p {
+  margin-top: -4px;
+}
+
+/* NAVBAR ENDS */
+
+.salesPage__main * {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero__section {
+  border-radius: 16px;
+  background: #fffae7;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 32px;
+  margin: 12vh 10vw 12vh 64px;
+}
+
+.hero__section .left__section {
+  position: relative;
+}
+
+.hero__section .left__section img {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translate(-3%, -50%);
+  width: 25vw;
+}
+
+.hero__section .right__section {
+  padding: 64px;
+  position: relative;
+}
+
+.hero__section .right__section img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+}
+
+.hero__section .right__section .title {
+  margin-bottom: 32px;
+}
+
+.hero__section .right__section .content {
+  position: relative;
+  z-index: 3;
+  font-size: 18px;
+}
+
+.hero__section .right__section p {
+  margin-bottom: 8px;
+}
+
+.features {
+  padding: 16px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f2af27;
+  margin-bottom: 32px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature img {
+  margin-right: 8px;
+  width: 50px;
+}
+
+.prices__heading {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10vh;
+}
+
+.prices__heading p {
+  font-size: 32px;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.prices * {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.prices {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  justify-content: center;
+  margin: 32px 10% 34px;
+  height: 450px;
+  max-height: 450px;
+  position: relative;
+}
+
+.plan-container {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+.plan-details {
+  position: relative;
+  color: white;
+  padding: 16px;
+  padding-bottom: 32px;
+  border-radius: 12px;
+  z-index: 2;
+  margin: 0 6px;
+}
+
+.plan .details ul {
+  list-style: none;
+  padding-top: 16px;
+  padding-left: 32px;
+}
+
+.plan-details.red {
+  background: #f05d6a;
+}
+
+.plan-details.yellow {
+  background: #ffd27b;
+}
+
+.plan-details.green {
+  background-color: #36bfa5;
+}
+
+.plan-details .heading {
+  text-align: center;
+}
+
+.plan-details .add-to-cart {
+  text-align: right;
+}
+
+.plan-details .add-to-cart a {
+  color: white;
+  text-decoration: none;
+}
+
+.plan-container .black {
+  position: relative;
+  background-color: black;
+  opacity: 0.7;
+  height: 12px;
+  z-index: 1;
+  margin-top: -135px;
+  border-radius: 0 0 12px 12px;
+  margin-bottom: -5px;
+  transition: 0.5s;
+}
+
+.plan-cover {
+  position: relative;
+  background: #eeeeee;
+  text-align: center;
+  padding: 32px;
+  z-index: 3;
+  min-height: 200px;
+  border-radius: 0 0 12px 12px;
+}
+
+.plan-cover .price {
+  margin-top: 8vh;
+}
+
+.plan-cover .price .atc {
+  margin-top: 8px;
+}
+
+.plan-container:hover .black {
+  margin-top: -20px;
+}
+
+.payment {
+  text-align: center;
+}
+
+.payment a {
+  display: block;
+  width: 12%;
+  padding: 8px 16px;
+  border: 1px solid black;
+  border-radius: 16px;
+  margin-right: 0;
+  margin-left: auto;
+  color: black;
+  text-decoration: none;
+}
+
+.for__school .heading {
+  text-align: center;
+}
+
+.for__school .heading h1 {
+  font-weight: 400;
+}
+
+.for__school .content img {
+  width: 35%;
+}
+
+.for__school .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+  margin-top: 32px;
+  margin-bottom: 64px;
+}
+
+.for__school .contentt {
+  padding: 32px;
+  background: #eeeeee;
+  border-radius: 16px;
+  margin-left: -64px;
+  min-height: 250px;
+}
+
+.for__school .contentt p {
+  font-size: 19px;
+}
+
+.for__school .contentt a {
+  display: block;
+  text-decoration: none;
+  color: #00b2ff;
+  margin-top: 8vh;
+}
+
+.footer {
+  background: url('../assets/footerback.png');
+  background-size: cover;
+  background-position: center;
+  padding-top: 64px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.getInTouch {
+  padding: 32px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  display: flex;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.getInTouch p {
+  font-size: 28px;
+}
+
+.getInTouch input {
+  padding: 16px 64px 16px 32px;
+  border-radius: 26px;
+  border: 0;
+  outline: 0;
+  margin: 8px;
+  width: 500px;
+  font-size: 20px;
+  margin-left: 64px;
+}
+
+.getInTouch img {
+  margin-left: -56px;
+}
+
+.madeWith {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  margin-top: 32px;
+}
+
+.footer .links {
+  display: flex;
+  padding: 32px;
+  justify-content: space-between;
+}
+
+.footer .links .social {
+  display: flex;
+  align-items: center;
+}
+
+.footer .links .social a {
+  display: block;
+  margin-right: 16px;
+}
+
+.footer .links ul {
+  list-style: none;
+}
+
+.footer .links a {
+  color: white;
+  text-decoration: none;
+}
