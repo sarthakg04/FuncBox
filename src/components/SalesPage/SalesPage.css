@@ -3,42 +3,6 @@
   padding: 0;
 }
 
-/* NAVBAR CSS Starts */
-
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  padding: 0px 32px;
-}
-
-.navigation * {
-  font-family: 'Lato', sans-serif;
-}
-
-.navigation .link {
-  display: flex;
-}
-
-.navigation .logo {
-  width: 200px;
-  height: 79px;
-}
-
-.navigation .link a {
-  text-align: center;
-  text-decoration: none;
-  font-size: 14px;
-  color: #6e6e6e;
-  font-family: 'Lato', sans-serif;
-  margin-right: 32px;
-}
-
-.navigation .link a p {
-  margin-top: -4px;
-}
-
-/* NAVBAR ENDS */
-
 .salesPage__main * {
   font-family: 'Montserrat', sans-serif;
 }
@@ -277,7 +241,7 @@
 }
 
 .footer {
-  background: url('../assets/footerback.png');
+  background: url('./assets/footerback.png');
   background-size: cover;
   background-position: center;
   padding-top: 64px;

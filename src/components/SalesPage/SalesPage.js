@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './SalesPage.css'
 import Navbar from '../Navbar/Navbar'
 
 import kids from './assets/kids.svg'
