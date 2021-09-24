@@ -9,6 +9,7 @@ import {
 import AngryBirds from '../components/Games/AngryBirds/AngryBirds';
 import MissionMars from '../components/Games/MissionMars/MissionMars';
 import AvengersGame from './Games/AvengersGame/AvengersGame';
+import MonkeyMultiplier from './Games/MonkeyMultiplier/MonkeyMultiplier';
 import Login from '../components/LoginAndSignup/Login';
 import Signup from '../components/LoginAndSignup/Signup';
 import CodeEditor from '../components/CodeEditor/CodeEditor';
@@ -29,6 +30,7 @@ function App() {
         <Switch>
           <Route exact path="/AngryBirds" component={AngryBirds} />
           <Route exact path="/MissionMars" component={MissionMars} />
+          <Route exact path="/MonkeyMultiplier" component={MonkeyMultiplier} />
           <Route exact path="/Login" component={Login} />
           <Route exact path="/Signup" component={Signup}/>
           <Route exact path="/CodeEditor" component={CodeEditor}/>
