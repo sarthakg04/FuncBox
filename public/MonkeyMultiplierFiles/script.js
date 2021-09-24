@@ -148,10 +148,13 @@ function Jump_on_1(){
 
     var jump_box_1 = document.querySelector('.jump_box_1')
     jump_box_1.classList.add('monkey')
+    var jump_box_1 = document.querySelector('.jump_box_1')
+    var jump_box_2 = document.querySelector('.jump_box_2')
+    var jump_box_3 = document.querySelector('.jump_box_3')
 
-    for(i=0;i<3;i++){
-        jump_boxes[i].disabled = true
-    }
+    jump_box_1.disabled = true
+    jump_box_3.disabled = true
+    jump_box_3.disabled = true
     if(ans_box_index != 0){
         next_button.disabled = true
         var Game_Over = document.querySelector('.Game_Over')
@@ -174,10 +177,13 @@ function Jump_on_2(){
 
     var jump_box_2 = document.querySelector('.jump_box_2')
     jump_box_2.classList.add('monkey')
+    var jump_box_1 = document.querySelector('.jump_box_1')
+    var jump_box_2 = document.querySelector('.jump_box_2')
+    var jump_box_3 = document.querySelector('.jump_box_3')
 
-    for(i=0;i<3;i++){
-        jump_boxes[i].disabled = true
-    }
+    jump_box_1.disabled = true
+    jump_box_3.disabled = true
+    jump_box_3.disabled = true
     if(ans_box_index != 1){
         next_button.disabled = true
         var Game_Over = document.querySelector('.Game_Over')
@@ -203,9 +209,13 @@ function Jump_on_3(){
 
     var jump_box_3 = document.querySelector('.jump_box_3')
     jump_box_3.classList.add('monkey')
-    for(i=0;i<3;i++){
-        jump_boxes[i].disabled = true
-    }
+    var jump_box_1 = document.querySelector('.jump_box_1')
+    var jump_box_2 = document.querySelector('.jump_box_2')
+    var jump_box_3 = document.querySelector('.jump_box_3')
+
+    jump_box_1.disabled = true
+    jump_box_3.disabled = true
+    jump_box_3.disabled = true
     if(ans_box_index != 2){
         next_button.disabled = true
         var Game_Over = document.querySelector('.Game_Over')
