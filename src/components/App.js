@@ -16,6 +16,7 @@ import FuncBoxx from './FuncBoxx/FuncBoxx';
 import BowlingGame from '../components/Games/BowlingGame/BowlingGame';
 import ClockGame from '../components/Games/ClockGame/ClockGame'
 import AlienGame from '../components/Games/AlienGame/AlienGame';
+import CardGame from '../components/Games/CardGame/cardGame';
 import ShopingPage from './ShopingPage/ShopingPage';
 import LandingPage from './LandingPage/LandingPage';
 import AboutPage from './AboutPage/AboutPage';
@@ -39,6 +40,8 @@ function App() {
           <Route exact path="/AvengersGame" component={AvengersGame}/>
           <Route exact path="/LandingPage" component={LandingPage}/>
           <Route exact path="/AboutPage" component={AboutPage}/>
+          <Route exact path="/CardGame" component={CardGame}/>
+
         </Switch>
       </div>
     </Router>
