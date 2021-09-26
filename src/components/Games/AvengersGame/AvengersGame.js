@@ -22,6 +22,7 @@ export default function AvengersGame() {
 
             <body>
                 <script src='FuncBoxx/AvengersGameFiles/scripts.js'></script>
+                <script src='AvengersGameFiles/scripts.js'></script>
                 <script>${ js }</script>
             </body>
 
