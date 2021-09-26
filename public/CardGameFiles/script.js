@@ -13,7 +13,7 @@ function createGamepad() {
 
 
 function fill(background) {
-  document.getElementsByClassName('game__container')[0].style.backgroundImage =  'url(FuncBoxx/CardGameFiles/assets/'+background+'.svg)';
+  document.getElementsByClassName('game__container')[0].style.backgroundImage =  'url(FuncBox/CardGameFiles/assets/'+background+'.svg)';
 }
 
 function createContentContianer(){

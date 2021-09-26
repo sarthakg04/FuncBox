@@ -18,7 +18,7 @@ let currentBirdPosition = 34
 
 function fill() {
     let phone = document.querySelector('.Phone')
-    phone.style.backgroundImage = "url('FuncBoxx/AngryBirds/assets/Background.svg')";
+    phone.style.backgroundImage = "url('FuncBox/AngryBirds/assets/Background.svg')";
 }
 
 function createScore() {

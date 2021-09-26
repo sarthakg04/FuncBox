@@ -10,7 +10,7 @@ function createGamepad() {
     gamePad = document.getElementById('GamePad')
 }
 function fill(background) {
-  document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(FuncBoxx/ClockGameFiles/assets/backgrounds/kids1.png)';
+  document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(FuncBox/ClockGameFiles/assets/backgrounds/kids1.png)';
 }
 function createInteractionPad(){
   gamePad.innerHTML += `
@@ -18,7 +18,7 @@ function createInteractionPad(){
   Guess the Correct Time!
   </div>
   <div class="game">
-  <img class="clock" id="clock" src="FuncBoxx/ClockGameFiles/assets/images/02_55_AM.png" height="350vh" width="270vw">  
+  <img class="clock" id="clock" src="FuncBox/ClockGameFiles/assets/images/02_55_AM.png" height="350vh" width="270vw">  
   <input class="inputfield" id="inputfield" type="text" placeholder="10:00 AM" style="outline-width:0;">
   <div class="controllers" id="control">
   <button class="submitbutton" onclick="result()" >Submit</button>
@@ -35,7 +35,7 @@ function getRandomItem(arr) {
 function reload(){
   document.getElementById('inputfield').style.backgroundColor ="#C4C4C4";
   let temp=getRandomItem(clock);
-  let mainpath="FuncBoxx/ClockGameFiles/assets/images/";
+  let mainpath="FuncBox/ClockGameFiles/assets/images/";
   pathofimg=mainpath+temp+'.png';
   document.getElementById("clock").src=pathofimg;
   const myArr = temp.split("_");
