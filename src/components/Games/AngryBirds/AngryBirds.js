@@ -15,11 +15,13 @@ const AngryBirds = () => {
             <head>
                 <meta charset="UTF-8">
                 <title>Document</title>
-                <link rel="stylesheet" href="FuncBoxx/AngryBirds/style.css">
+                <link rel="stylesheet" href="FuncBox/AngryBirds/style.css">
+                <link rel="stylesheet" href="./AngryBirds/style.css">
             </head>
             <body>
             </body>
-            <script src="FuncBoxx/AngryBirds/script.js"></script>
+            <script src="FuncBox/AngryBirds/script.js"></script>
+            <script src="./AngryBirds/script.js"></script>
             <script>${ js }</script>
             </html>
         `)
