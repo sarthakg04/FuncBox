@@ -29,7 +29,6 @@ function App() {
   return (
     <HashRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
-        <div>Hello</div>
         <Switch>
           <Route exact path="/AngryBirds" component={AngryBirds} />
           <Route exact path="/MissionMars" component={MissionMars} />
