@@ -28,7 +28,7 @@ function createGamepad() {
 }
 
 function fill(background) {
-  document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(FuncBox/MissionMarsFiles/assets/backgrounds/Frame.png)';
+  document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(./MissionMarsFiles/assets/backgrounds/Frame.png)';
 }
 
 function createElement(elementss){
@@ -123,7 +123,7 @@ function createInteractionPad(){
 function createRestartButton(){
   cc = document.getElementById('GamePad');
   restartBtn = document.createElement('img');
-  restartBtn.src = "FuncBox/MissionMarsFiles/assets/buttons/restart.svg";
+  restartBtn.src = "./MissionMarsFiles/assets/buttons/restart.svg";
   restartBtn.classList.add('restartBtn');
 
   restartBtn.addEventListener("click", function(event){
