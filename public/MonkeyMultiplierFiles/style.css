@@ -18,7 +18,7 @@ body {
   flex-wrap: wrap;
   height: 400px;
   width: 287px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   margin: 50px auto 0 auto;
   /* box-sizing: border-box; */
 }
