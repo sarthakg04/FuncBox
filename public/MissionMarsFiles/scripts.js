@@ -96,13 +96,13 @@ function createInteractionPad(){
   gamePad.innerHTML += `
   <div class="controller-container" id='cc'>
     <div class="arrow-keys">
-      <img class="movementButton" src='FuncBox/MissionMarsFiles/assets/buttons/up.svg' id="upButton"></img>
+      <img class="movementButton" src='./MissionMarsFiles/assets/buttons/up.svg' id="upButton"></img>
       <div class="left-right">
-      <img class="movementButton" src='FuncBox/MissionMarsFiles/assets/buttons/left.svg' id="leftButton"></img>
-      <img src="FuncBox/MissionMarsFiles/assets/buttons/middle.svg" alt="" class="middle">
-      <img class="movementButton" src='FuncBox/MissionMarsFiles/assets/buttons/right.svg' id="rightButton"></img>
+      <img class="movementButton" src='./MissionMarsFiles/assets/buttons/left.svg' id="leftButton"></img>
+      <img src="./MissionMarsFiles/assets/buttons/middle.svg" alt="" class="middle">
+      <img class="movementButton" src='./MissionMarsFiles/assets/buttons/right.svg' id="rightButton"></img>
       </div>
-      <img class="movementButton" src='FuncBox/MissionMarsFiles/assets/buttons/down.svg' id="downButton"></img>
+      <img class="movementButton" src='./MissionMarsFiles/assets/buttons/down.svg' id="downButton"></img>
     </div>
     <button class="Scan" onclick="ScanObject()" disabled>Scan</button>
   </div>
