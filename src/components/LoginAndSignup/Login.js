@@ -55,7 +55,7 @@ export default function Login() {
 
 
     const [details, setDetails] = useState({
-        username: "User name",
+        username: "Box Code",
         password: "Password",
     });
 
@@ -83,7 +83,7 @@ export default function Login() {
         <div>
             <Navbar/>
             <div className="signup__container">
-                <div style={{backgroundImage: `url(${bg})`}} className="circular__carosel">
+                <div className="circular__carosel">
                     <div className="car-wrapper">
                     <ul className="carousel">
                         <li className="item active"><img src={card1} /></li>

@@ -53,9 +53,9 @@ export default function Signup() {
 
 
     const [details, setDetails] = useState({
-        name: "John Doe",
-        email: "example@gmail.com",
-        username: "User name",
+        code: "Box Code",
+        name: "Name",
+        standard: "Standard",
         password: "Password",
         confirmPassword: "Confirm Password"
     });
@@ -83,7 +83,7 @@ export default function Signup() {
         <div>
             <Navbar/>
             <div className="signup__container">
-                <div style={{backgroundImage: `url(${bg})`}} className="circular__carosel">
+                <div className="circular__carosel">
                 <div className="car-wrapper">
                     <ul className="carousel">
                       <li className="item active"><img src={card1} /></li>
@@ -107,12 +107,12 @@ export default function Signup() {
                 </div>
                 <div className="content active">
                     <form onSubmit={handleSubmit}>
-                    <input type="text" name="name" placeholder={details.name} onChange={handleChange} />
-                    <input type="email" name="email" placeholder={details.email} onChange={handleChange} />
-                    <input type="text" name="username" placeholder={details.username} onChange={handleChange} />
+                    <input type="text" name="name" placeholder={details.code} onChange={handleChange} />
+                    <input type="text" name="email" placeholder={details.name} onChange={handleChange} />
+                    <input type="text" name="username" placeholder={details.standard} onChange={handleChange} />
                     <input type="password" name="password" placeholder={details.password} onChange={handleChange} />
                     <input type="text" name="confirmPassword" placeholder={details.confirmPassword} onChange={handleChange} />
-                    <button type="submit" name="button" className="submit">SignUp</button>
+                    <button type="submit" name="button" className="submit">Sign Up</button>
                     </form>
                 </div>
                 </div>

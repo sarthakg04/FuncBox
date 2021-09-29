@@ -92,16 +92,17 @@ form input {
 
 .submit {
   margin-top: 64px;
-  background: #f06f38;
-  color: white;
+  background: white;
   width: 129px;
   height: 40px;
-  border-radius: 8px;
+  border-radius: 24px;
   border: 0;
   outline: 0;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
+  border : 1px solid #f06f38;
+
 }
 
 /*
