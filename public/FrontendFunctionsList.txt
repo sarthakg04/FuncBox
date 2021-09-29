@@ -1,26 +1,51 @@
-Fronend Functions:
 
--------------------------------------------------------------------------
+
+Fronend Functionsfor Games:
+
+-----------------------------------------------------------------------------------------------------------------------------
 
 MissionMars:
-
+-----------------------
 createGamepad()
 fill()
-createElement()
+createElement(['goodrocks','badrocks','wasterocks1','wasterocks2'])
 createScore()
 createGrid()
-createRover()
+createRover("rover")
 draw()
 createInteractionPad()
 createRestartButton()
 
--------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
+
+Avengers:
+-----------------------
+createBackground()
+createGrid()
+createCharacters()
+LokiMovement()
+createInteractionPad()
+createFinish()
+
+-----------------------------------------------------------------------------------------------------------------------------
 
 AngryBirds:
-
+-----------------------
 fill()
 createScore()
 createGamePad()
 createPlancks()
 createElements()
 createInteractionPad()
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+MonkeyMultiplier:
+-----------------------
+createScore()
+generateRandomNumber()
+createJumpPlaces()
+createMonkey()
+generateMultiples()
+createInteractionPad()
+createGameOver()

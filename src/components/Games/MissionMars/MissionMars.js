@@ -17,12 +17,14 @@ const MissionMars = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <meta http-equiv="X-UA-Compatible" content="ie=edge">
                 <title>MarsRover Game</title>
-                <link rel="stylesheet" href="FuncBoxx/MissionMarsFiles/style.css">
+                <link rel="stylesheet" href="FuncBox/MissionMarsFiles/style.css">
+                <link rel="stylesheet" href="./MissionMarsFiles/style.css">
             </head>
 
             <body>
 
-                <script src='FuncBoxx/MissionMarsFiles/scripts.js'></script>
+                <script src='FuncBox/MissionMarsFiles/scripts.js'></script>
+                <script src='./MissionMarsFiles/scripts.js'></script>
                 <script>${ js }</script>
             </body>
 

@@ -28,7 +28,7 @@ function createGamepad() {
 }
 
 function fill(background) {
-  document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(FuncBoxx/MissionMarsFiles/assets/backgrounds/Frame.png)';
+  document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(./MissionMarsFiles/assets/backgrounds/Frame.png)';
 }
 
 function createElement(elementss){
@@ -40,7 +40,7 @@ function createScore(){
   gamePad.innerHTML +=`
   <div class="score">
     <div class="score-div">
-    <img src="FuncBoxx/MissionMarsFiles/assets/star.svg" alt="">
+    <img src="FuncBox/MissionMarsFiles/assets/star.svg" alt="">
     <h3 id="score" >Start</h3>
   </div>
   </div>
@@ -96,13 +96,13 @@ function createInteractionPad(){
   gamePad.innerHTML += `
   <div class="controller-container" id='cc'>
     <div class="arrow-keys">
-      <img class="movementButton" src='FuncBoxx/MissionMarsFiles/assets/buttons/up.svg' id="upButton"></img>
+      <img class="movementButton" src='./MissionMarsFiles/assets/buttons/up.svg' id="upButton"></img>
       <div class="left-right">
-      <img class="movementButton" src='FuncBoxx/MissionMarsFiles/assets/buttons/left.svg' id="leftButton"></img>
-      <img src="FuncBoxx/MissionMarsFiles/assets/buttons/middle.svg" alt="" class="middle">
-      <img class="movementButton" src='FuncBoxx/MissionMarsFiles/assets/buttons/right.svg' id="rightButton"></img>
+      <img class="movementButton" src='./MissionMarsFiles/assets/buttons/left.svg' id="leftButton"></img>
+      <img src="./MissionMarsFiles/assets/buttons/middle.svg" alt="" class="middle">
+      <img class="movementButton" src='./MissionMarsFiles/assets/buttons/right.svg' id="rightButton"></img>
       </div>
-      <img class="movementButton" src='FuncBoxx/MissionMarsFiles/assets/buttons/down.svg' id="downButton"></img>
+      <img class="movementButton" src='./MissionMarsFiles/assets/buttons/down.svg' id="downButton"></img>
     </div>
     <button class="Scan" onclick="ScanObject()" disabled>Scan</button>
   </div>
@@ -123,7 +123,7 @@ function createInteractionPad(){
 function createRestartButton(){
   cc = document.getElementById('GamePad');
   restartBtn = document.createElement('img');
-  restartBtn.src = "FuncBoxx/MissionMarsFiles/assets/buttons/restart.svg";
+  restartBtn.src = "./MissionMarsFiles/assets/buttons/restart.svg";
   restartBtn.classList.add('restartBtn');
 
   restartBtn.addEventListener("click", function(event){

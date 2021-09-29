@@ -18,12 +18,16 @@ const AlienGame = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <meta http-equiv="X-UA-Compatible" content="ie=edge">
                 <title>AlienGame</title>
-                <link rel="stylesheet" href="FuncBoxx/AlienGameFiles/style.css">
+                <link rel="stylesheet" href="FuncBox/AlienGameFiles/style.css">
+                <link rel="stylesheet" href="./AlienGameFiles/style.css">
+
             </head>
 
             <body>
 
-                <script src='FuncBoxx/AlienGameFiles/scripts.js'></script>
+                <script src='FuncBox/AlienGameFiles/scripts.js'></script>
+                <script src='./AlienGameFiles/scripts.js'></script>
+
                 <script>${ js }</script>
             </body>
 

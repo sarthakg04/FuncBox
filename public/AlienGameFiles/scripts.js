@@ -9,12 +9,12 @@ function createGamepad() {
     gamePad = document.getElementById('GamePad')
 }
 function fill(background) {
-  document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(FuncBoxx/AlienGameFiles/assets/backgrounds/back.png)';
+  document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(FuncBox/AlienGameFiles/assets/backgrounds/back.png)';
 }
 function createInteractionPad(){
   gamePad.innerHTML += `
   <div class="game">
-  <img  id="alien" src="FuncBoxx/AlienGameFiles/assets/images/left.svg">
+  <img  id="alien" src="FuncBox/AlienGameFiles/assets/images/left.svg">
   <div class="controllers" id="control">
   <button id="playButton" onclick="ani()" >Play</button>
   </div>
@@ -53,13 +53,13 @@ function ani(){
         temp+=10;
         elem.style.marginTop = post + "px";
         if (flag==1){
-        document.getElementById("alien").src='FuncBoxx/AlienGameFiles/assets/images/right.svg';
+        document.getElementById("alien").src='FuncBox/AlienGameFiles/assets/images/right.svg';
         document.getElementById("alien").style.height=temp+"px";
         document.getElementById("alien").style.width+=temp+"px";
         flag=0;
       }
       else{
-        document.getElementById("alien").src='FuncBoxx/AlienGameFiles/assets/images/left.svg';
+        document.getElementById("alien").src='FuncBox/AlienGameFiles/assets/images/left.svg';
         document.getElementById("alien").style.height=temp+"px";
         document.getElementById("alien").style.width+=temp+"px";
         flag=1;

@@ -5,6 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 import AngryBirds from '../components/Games/AngryBirds/AngryBirds';
 import MissionMars from '../components/Games/MissionMars/MissionMars';
@@ -26,7 +27,7 @@ import SalesPage from './SalesPage/SalesPage';
 function App() {
 
   return (
-    <Router>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Switch>
           <Route exact path="/AngryBirds" component={AngryBirds} />
@@ -48,7 +49,7 @@ function App() {
 
         </Switch>
       </div>
-    </Router>
+     </HashRouter>
   )
 }
 export default App;

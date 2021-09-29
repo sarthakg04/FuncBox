@@ -3,6 +3,7 @@
   height: 533px;
   width: 396px;
   margin: 0;
+  background-image: url('./assets/Background.svg');
 }
 
 body {
@@ -29,7 +30,7 @@ body {
 }
 
 .planck {
-  background: url(./assets/planck.svg) no-repeat;
+  background: url('./assets/planck.svg') no-repeat;
   background-position: center bottom;
   /* position: fixed;
   z-index: 0;
@@ -49,34 +50,34 @@ body {
   background-color: transparent;
 }
 .hitted {
-  background: url(./assets/hitted.svg) no-repeat;
+  background: url('./assets/hitted.svg') no-repeat;
   position: absolute;
   left: 30%;
   top: 20%;
 }
 
 .bird_planck {
-  background: url(./assets/bird_planck.svg) no-repeat;
+  background: url('./assets/bird_planck.svg') no-repeat;
   background-position: center bottom;
 }
 
 .pig_planck {
-  background: url(./assets/pig_planck.svg) no-repeat;
+  background: url('./assets/pig_planck.svg') no-repeat;
   background-position: center bottom;
 }
 
 .box_planck {
-  background: url(./assets/box_planck.svg) no-repeat;
+  background: url('./assets/box_planck.svg') no-repeat;
   background-position: center bottom;
 }
 
 .bird_pig_planck {
-  background: url(./assets/bird_pig_planck.svg) no-repeat;
+  background: url('./assets/bird_pig_planck.svg') no-repeat;
   background-position: center bottom;
 }
 
 .bird_box_planck {
-  background: url(./assets/bird_box_planck.svg) no-repeat;
+  background: url('./assets/bird_box_planck.svg') no-repeat;
   background-position: center bottom;
 }
 
