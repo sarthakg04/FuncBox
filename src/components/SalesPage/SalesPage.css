@@ -7,7 +7,7 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.hero__section {
+.salesPage__main .hero__section {
   border-radius: 16px;
   background: #fffae7;
   display: grid;
@@ -16,7 +16,7 @@
   margin: 12vh 10vw 12vh 64px;
 }
 
-.hero__section .left__section {
+.salesPage__main .hero__section .left__section {
   position: relative;
 }
 
@@ -28,12 +28,12 @@
   width: 25vw;
 }
 
-.hero__section .right__section {
+.salesPage__main .hero__section .right__section {
   padding: 64px;
   position: relative;
 }
 
-.hero__section .right__section img {
+.salesPage__main .hero__section .right__section img {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -41,21 +41,21 @@
   width: 45%;
 }
 
-.hero__section .right__section .title {
+.salesPage__main .hero__section .right__section .title {
   margin-bottom: 32px;
 }
 
-.hero__section .right__section .content {
+.salesPage__main .hero__section .right__section .content {
   position: relative;
   z-index: 3;
   font-size: 18px;
 }
 
-.hero__section .right__section p {
+.salesPage__main .hero__section .right__section p {
   margin-bottom: 8px;
 }
 
-.features {
+.salesPage__main .features {
   padding: 16px 64px;
   display: flex;
   justify-content: space-between;
@@ -64,51 +64,51 @@
   margin-bottom: 32px;
 }
 
-.feature {
+.salesPage__main .feature {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.feature img {
+.salesPage__main .feature img {
   margin-right: 8px;
   width: 50px;
 }
 
-.prices__heading {
+.salesPage__main .prices__heading {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 10vh;
 }
 
-.prices__heading p {
+.salesPage__main .prices__heading p {
   font-size: 32px;
   margin-top: 16px;
   margin-bottom: 32px;
 }
 
-.prices * {
+.salesPage__main .prices * {
   font-family: 'Montserrat', sans-serif;
 }
 
-.prices {
+.salesPage__main .prices {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   justify-content: center;
   margin: 32px 10% 34px;
-  height: 450px;
-  max-height: 450px;
+  height: 550px;
+  max-height: 550px;
   position: relative;
 }
 
-.plan-container {
+.salesPage__main .plan-container {
   width: 90%;
   margin: auto;
   position: relative;
 }
 
-.plan-details {
+.salesPage__main .plan-details {
   position: relative;
   color: white;
   padding: 16px;
@@ -118,50 +118,55 @@
   margin: 0 6px;
 }
 
-.plan .details ul {
+.salesPage__main .plan .details ul {
   list-style: none;
-  padding-top: 16px;
-  padding-left: 32px;
+  padding-top: 8px;
+  padding-left: 24px;
 }
 
-.plan-details.red {
+.salesPage__main .plan .details ul li{
+  margin-bottom: 8px;
+}
+
+.salesPage__main .plan-details.red {
   background: #f05d6a;
 }
 
-.plan-details.yellow {
+.salesPage__main .plan-details.yellow {
   background: #ffd27b;
 }
 
-.plan-details.green {
+.salesPage__main .plan-details.green {
   background-color: #36bfa5;
 }
 
-.plan-details .heading {
+.salesPage__main .plan-details .heading {
   text-align: center;
+  margin-bottom: 0;
 }
 
-.plan-details .add-to-cart {
+.salesPage__main .plan-details .add-to-cart {
   text-align: right;
 }
 
-.plan-details .add-to-cart a {
+.salesPage__main .plan-details .add-to-cart a {
   color: white;
   text-decoration: none;
 }
 
-.plan-container .black {
+.salesPage__main .plan-container .black {
   position: relative;
   background-color: black;
   opacity: 0.7;
   height: 12px;
   z-index: 1;
-  margin-top: -135px;
+  margin-top: -185px;
   border-radius: 0 0 12px 12px;
   margin-bottom: -5px;
-  transition: 0.5s;
+  transition: 0.7s;
 }
 
-.plan-cover {
+.salesPage__main .plan-cover {
   position: relative;
   background: #eeeeee;
   text-align: center;
@@ -171,57 +176,57 @@
   border-radius: 0 0 12px 12px;
 }
 
-.plan-cover .price {
+.salesPage__main .plan-cover .price {
   margin-top: 8vh;
 }
 
-.plan-cover .price .atc {
+.salesPage__main .plan-cover .price .atc {
   margin-top: 8px;
 }
 
-.plan-container:hover .black {
+.salesPage__main .plan-container:hover .black {
   margin-top: -20px;
 }
 
-.payment {
+.salesPage__main .payment {
   text-align: center;
 }
 
-.payment a {
+.salesPage__main .payment a {
   display: block;
   width: 12%;
   padding: 8px 16px;
   border: 1px solid black;
   border-radius: 16px;
-  margin-right: 0;
+  margin-right: 10px;
   margin-left: auto;
   color: black;
   text-decoration: none;
 }
 
-.for__school .heading {
+.salesPage__main .for__school .heading {
   text-align: center;
 }
 
-.for__school .heading h1 {
+.salesPage__main .for__school .heading h1 {
   font-weight: 400;
 }
 
-.for__school .content img {
-  width: 35%;
+.salesPage__main .for__school .content img {
+  width: 30%;
 }
 
-.for__school .content {
+.salesPage__main .for__school .content {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 85%;
+  width: 75%;
   margin: auto;
   margin-top: 32px;
   margin-bottom: 64px;
 }
 
-.for__school .contentt {
+.salesPage__main .for__school .contentt {
   padding: 32px;
   background: #eeeeee;
   border-radius: 16px;
@@ -229,86 +234,13 @@
   min-height: 250px;
 }
 
-.for__school .contentt p {
+.salesPage__main .for__school .contentt p {
   font-size: 19px;
 }
 
-.for__school .contentt a {
+.salesPage__main .for__school .contentt a {
   display: block;
   text-decoration: none;
   color: #00b2ff;
   margin-top: 8vh;
-}
-<<<<<<< HEAD
-=======
-
-.footer {
-  background: url('./assets/footerback.png');
-  background-size: cover;
-  background-position: center;
-  padding-top: 64px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.getInTouch {
-  padding: 32px;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
-  display: flex;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.getInTouch p {
-  font-size: 28px;
-}
-
-.getInTouch input {
-  padding: 16px 64px 16px 32px;
-  border-radius: 26px;
-  border: 0;
-  outline: 0;
-  margin: 8px;
-  width: 500px;
-  font-size: 20px;
-  margin-left: 64px;
-}
-
-.getInTouch img {
-  margin-left: -56px;
-}
-
-.madeWith {
-  text-align: center;
-  color: white;
-  font-size: 18px;
-  margin-top: 32px;
-}
-
-.footer .links {
-  display: flex;
-  padding: 32px;
-  justify-content: space-between;
-}
-
-.footer .links .social {
-  display: flex;
-  align-items: center;
-}
-
-.footer .links .social a {
-  display: block;
-  margin-right: 16px;
-}
-
-.footer .links ul {
-  list-style: none;
-}
-
-.footer .links a {
-  color: white;
-  text-decoration: none;
 }

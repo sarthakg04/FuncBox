@@ -28,7 +28,7 @@
   padding: 64px;
 }
 
-.title {
+.signup__container .title {
   display: flex;
   justify-content: space-between;
   width: 60%;
@@ -36,7 +36,7 @@
   height: fit-content;
 }
 
-.title h1 {
+.signup__container .title h1 {
   font-size: 24px;
   font-weight: 500;
   padding-bottom: 8px;
@@ -45,39 +45,39 @@
   transition: 0.5s;
 }
 
-.Login_Signup_link {
+.signup__container .Login_Signup_link {
   color: #3d4372;
   text-decoration: none;
 }
-.title h1 a {
+.signup__container .title h1 a {
   color: #3d4372;
   text-decoration: none;
 }
 
-.title h1.active,
-.title h1:hover {
+.signup__container .title h1.active,
+.signup__container .title h1:hover {
   border-bottom: 4px solid #f06f38;
 }
 
-.content {
+.signup__container .content {
   width: 80%;
   margin: auto;
   margin-top: 40px;
   display: none;
 }
 
-.content.active {
+.signup__container .content.active {
   display: block;
 }
 
-.content form {
+.signup__container .content form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-form input {
+.signup__container form input {
   width: 100%;
   background: transparent;
   border: 0;
@@ -90,7 +90,7 @@ form input {
   color: #787878;
 }
 
-.submit {
+.signup__container .submit {
   margin-top: 64px;
   background: white;
   width: 129px;
@@ -108,60 +108,60 @@ form input {
 /*
 circular__carosel */
 
-.carousel li {
+.signup__container .carousel li {
   position: absolute;
   transform: translate(-50%, -50%);
   list-style: none;
   transition: 1s;
 }
 
-.carousel li.active {
+.signup__container .carousel li.active {
   top: 50%;
   left: 45%;
   z-index: 6;
 }
 
-.carousel li img {
+.signup__container .carousel li img {
   width: 200px;
   transition: 1s;
 }
 
-.carousel li.active img {
+.signup__container .carousel li.active img {
   width: 300px;
   transition: 1s;
 }
 
-.carousel li.point1 {
+.signup__container .carousel li.point1 {
   top: 45%;
   left: 25%;
   z-index: 5;
 }
 
-.carousel li.point2 {
+.signup__container .carousel li.point2 {
   top: 35%;
   left: 20%;
   z-index: 4;
 }
 
-.carousel li.point3 {
+.signup__container .carousel li.point3 {
   top: 25%;
   left: 32%;
   z-index: 3;
 }
 
-.carousel li.point4 {
+.signup__container .carousel li.point4 {
   top: 25%;
   left: 55%;
   z-index: 2;
 }
 
-.carousel li.point5 {
+.signup__container .carousel li.point5 {
   top: 35%;
   left: 65%;
   z-index: 4;
 }
 
-.carousel li.point6 {
+.signup__container .carousel li.point6 {
   top: 45%;
   left: 60%;
   z-index: 5;

@@ -115,28 +115,6 @@ body {
   margin-top: -20px;
 }
 
-.footer {
-  /* background: url('clouds.svg'); */
-  background-size: cover;
-  height: 500px;
-  position: relative;
-}
-
-.footer .rocket {
-  position: absolute;
-  top: 20px;
-  right: 7%;
-  width: 200px;
-}
-
-.footer .margin {
-  margin-bottom: 370px;
-  opacity: 0;
-}
-
-.footer .icons img {
-  margin-right: 16px;
-}
 
 .text {
   color: #8c90b1;
