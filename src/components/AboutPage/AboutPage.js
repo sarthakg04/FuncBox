@@ -59,8 +59,10 @@ export default function AboutPage() {
         <div className="footer">
           <div className="getInTouch">
             <p>Get in Touch</p>
-            <input type="text" name="email" />
-            <img src={bell} alt="bell" />
+              <div className='input'>
+              <input type="text" name="email" />
+              <img src={bell} alt="" />
+            </div>
           </div>
           <div className="madeWith">
             <p>Made With ❤️  by Team FuncBox </p>
