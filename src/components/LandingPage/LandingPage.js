@@ -2,10 +2,7 @@ import React from 'react'
 import './LandingPage.css'
 import Navbar from '../Navbar/Navbar'
 
-import about from './assets/about.svg'
-import home from './assets/home.svg'
-import shop from './assets/shop.svg'
-import login from './assets/login.svg'
+
 import homepageimg from './assets/homepageimg.webp'
 import downArrow from './assets/downArrow.svg'
 import roadmap from './assets/roadmap.svg'

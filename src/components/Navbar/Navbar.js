@@ -1,10 +1,11 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import {
   Link,
   BrowserRouter as Router,
   Route,
   Switch,
   Redirect,
+  useLocation
 } from "react-router-dom";
 import './Navbar.css'
 
@@ -56,7 +57,7 @@ export default function Navbar() {
                 </div>
             </div>
             <div className="mobile__links" id="mobile__links">
-              <Link to="/LandingPage">
+              <Link to="/">
               <a href="#">
                   <img src={home} alt="home" />
                   <p>Home</p>
@@ -68,10 +69,11 @@ export default function Navbar() {
                   <p>About</p>
               </a>
               </Link>
-              <a href="#">
+
+              <Link to="/SalesPage">
                   <img src={shop} alt="shop" />
                   <p>Shop</p>
-              </a>
+              </Link>
               {/*<Link to="/Login">
               <a href="#">
                   <img src={login} alt="login"/>
