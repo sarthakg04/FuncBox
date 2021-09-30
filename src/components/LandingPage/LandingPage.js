@@ -12,7 +12,7 @@ import fb from './assets/fb.svg'
 import linked from './assets/linked.svg'
 import insta from './assets/insta.svg'
 import logo from './assets/logo.svg'
-import img1 from './assets/img1.svg'
+import img1 from './assets/img1.png'
 import img2 from './assets/img2.png'
 
 export default function LandingPage() {
