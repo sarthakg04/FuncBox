@@ -74,7 +74,7 @@
 }
 
 .landingPage__main .individuals .left__container img {
-  width: 350px;
+  width: 400px;
 }
 
 .landingPage__main .schools .right__container img {
@@ -87,7 +87,7 @@
   padding: 32px;
   background: #eeeeee;
   margin-left: -32px;
-
+  min-height: 350px;
   width: 37%;
   margin-bottom: 32px;
   position: relative;

@@ -27,6 +27,9 @@ export default function AboutPage() {
           <img src={roadmap} alt="roadmap" />
         </div>
         <div className="faqs">
+          <div className="faq__heading">
+            <h1>Frequently Asked Questions</h1>
+          </div>
           <div className="faq">
             <p>What age is Funcbox for?</p>
             <p> Funcbox is designed for kids 6-12 years in age.</p>

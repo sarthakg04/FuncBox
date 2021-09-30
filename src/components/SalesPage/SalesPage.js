@@ -27,10 +27,10 @@ export default function SalesPage() {
                 <img src={box} alt="box" className="background__img" />
                 <div className="content">
                 <p className="title">FuncBox is a box full of surprises which will teach you education concepts and coding with a revolutionary twist.</p>
-                <p>Perfect for age-group 6-12 years.</p>
-                <p>Perfect for age-group 6-12 years.</p>
-                <p>Perfect for age-group 6-12 years.</p>
-                <p>Perfect for age-group 6-12 years.</p>
+                <p><i class="fas fa-chevron-right"></i> Perfect for age-group 6-12 years.</p>
+                <p><i class="fas fa-chevron-right"></i> Build your own fun game</p>
+                <p><i class="fas fa-chevron-right"></i> Learn to code and explore.</p>
+                <p><i class="fas fa-chevron-right"></i> Share your game with your friends.</p>
                 </div>
             </div>
             </div>
@@ -69,19 +69,25 @@ export default function SalesPage() {
                     <div className="details">
                     <ul>
                         <li>
-                        Feature
+                          • FuncBox Binder
                         </li>
                         <li>
-                        Feature
+                        • 3 mathematical apps
                         </li>
                         <li>
-                        Feature
+                        • 3 scientific apps
                         </li>
                         <li>
-                        Feature
+                        • 3 game apps
                         </li>
                         <li>
-                        Feature
+                        • Stickers
+                        </li>
+                        <li>
+                        • Kickstart guide
+                        </li>
+                        <li>
+                        • Interactive website
                         </li>
                     </ul>
                     </div>
@@ -105,21 +111,31 @@ export default function SalesPage() {
                     </div>
                     <div className="details">
                     <ul>
-                        <li>
-                        Feature
-                        </li>
-                        <li>
-                        Feature
-                        </li>
-                        <li>
-                        Feature
-                        </li>
-                        <li>
-                        Feature
-                        </li>
-                        <li>
-                        Feature
-                        </li>
+                      <li>
+                        • FuncBox Binder
+                      </li>
+                      <li>
+                      • 5 mathematical apps
+                      </li>
+                      <li>
+                      • 5 scientific apps
+                      </li>
+                      <li>
+                      • 5 game apps
+                      </li>
+
+                      <li>
+                      • Stickers
+                      </li>
+                      <li>
+                      • Mini fun deck
+                      </li>
+                      <li>
+                      • Kickstart guide
+                      </li>
+                      <li>
+                      • Interactive website
+                      </li>
                     </ul>
                     </div>
                 </div>
@@ -142,21 +158,38 @@ export default function SalesPage() {
                     </div>
                     <div className="details">
                     <ul>
+                      <ul>
                         <li>
-                        Feature
+                          • FuncBox Binder
                         </li>
                         <li>
-                        Feature
+                        • 8 mathematical apps
                         </li>
                         <li>
-                        Feature
+                        • 8 scientific apps
                         </li>
                         <li>
-                        Feature
+                        • 8 game apps
                         </li>
                         <li>
-                        Feature
+                        • 2 Surprise goodies
                         </li>
+                        <li>
+                        • Mystery toy
+                        </li>
+                        <li>
+                        • Stickers
+                        </li>
+                        <li>
+                        • Mini fun deck
+                        </li>
+                        <li>
+                        • Kickstart guide
+                        </li>
+                        <li>
+                        • Interactive website
+                        </li>
+                      </ul>
                     </ul>
                     </div>
                 </div>
@@ -172,9 +205,6 @@ export default function SalesPage() {
                 </div>
             </div>
             </div>
-            <div className="payment">
-            <a href="#">Proceed To Payment</a>
-            </div>
             <div className="for__school">
             <div className="heading">
                 <h1> For Schools </h1>
@@ -182,7 +212,7 @@ export default function SalesPage() {
             <div className="content">
                 <img src={house} alt="house" />
                 <div className="contentt">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, adipisci. Ratione ad unde suscipit illo, explicabo aperiam eum laudantium ea quidem nesciunt distinctio enim ut fuga temporibus? Voluptatum, reiciendis, veniam.</p>
+                <p>We at FuncBox aim to bring an exclusive element to make kids in the age group of 6-14 years learn concepts of Coding and Creative Thinking.</p>
                 <a href="#">Connect Today</a>
                 </div>
             </div>
