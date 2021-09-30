@@ -48,6 +48,13 @@ export default function SalesPage() {
                 <p>Cancel Anytime</p>
             </div>
             </div>
+
+            <div class="marquee">
+              <marquee direction="left" height="100px">
+  We are not accepting any orders Due to COVID-19 restrictions.
+  </marquee>
+            </div>
+
             <div className="prices__heading">
             <h1>Our Plans</h1>
             <p>All of these Box types will be customised as per student grade</p>
@@ -183,8 +190,10 @@ export default function SalesPage() {
             <div className="footer">
             <div className="getInTouch">
                 <p>Get in Touch</p>
-                <input type="text" name="email" defaultValue />
-                <img src={bell} alt="bell" />
+                  <div className='input'>
+                  <input type="text" name="email" />
+                  <img src={bell} alt="" />
+                </div>
             </div>
             <div className="madeWith">
                 <p>Made With ❤️  by Team FuncBox </p>

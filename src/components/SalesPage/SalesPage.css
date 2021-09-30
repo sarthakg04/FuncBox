@@ -145,6 +145,17 @@
   margin-bottom: 0;
 }
 
+
+.salesPage__main .marquee{
+  width: 60%;
+  margin: auto;
+}
+
+.salesPage__main marquee{
+  width: 100%;
+  height: 100px;
+}
+
 .salesPage__main .plan-details .add-to-cart {
   text-align: right;
 }
