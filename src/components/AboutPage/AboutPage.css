@@ -62,3 +62,19 @@
   font-size: 24px;
   margin-bottom: 16px;
 }
+
+
+@media (max-width : 767px) {
+  .aboutPage__main .roadMap img{
+    width: 95%;
+  }
+}
+
+@media (max-width : 550px) {
+  .aboutPage__main .howWeWork h1{
+    font-size: 40px;
+  }
+  .aboutPage__main .faqs{
+    margin: 64px 16px;
+  }
+}
