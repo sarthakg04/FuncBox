@@ -19,7 +19,8 @@
   height: 79px;
 }
 
-.navigation .link a  , .mobile__links a{
+.navigation .link a,
+.mobile__links a {
   text-align: center;
   text-decoration: none;
   font-size: 14px;
@@ -27,8 +28,6 @@
   font-family: 'Lato', sans-serif;
   margin-right: 32px;
 }
-
-
 
 .navigation .link a p {
   margin-top: -4px;
@@ -42,11 +41,11 @@
   margin-left: 32px;
 }
 
-.mobile__links.active{
+.mobile__links.active {
   max-height: 300px;
 }
 
-.navigation .bars{
+.navigation .bars {
   display: flex;
   align-items: center;
   font-size: 20px;
@@ -55,7 +54,7 @@
 }
 
 .footer {
-  background: url('./assets/footerback.png');
+  background: url('./assets/footerback.webp');
   background-size: cover;
   background-position: center;
   padding-top: 64px;
@@ -78,8 +77,7 @@
   font-size: 28px;
 }
 
-
-.getInTouch .input{
+.getInTouch .input {
   display: flex;
   align-items: center;
 }
@@ -131,70 +129,67 @@
   text-decoration: none;
 }
 
-
-@media (max-width : 1000px) {
+@media (max-width: 1000px) {
   .navigation {
     padding: 16px;
     padding-right: 0;
   }
 
-  .navigation .logo{
-    width : 175px;
+  .navigation .logo {
+    width: 175px;
   }
-  .navigation .link a{
+  .navigation .link a {
     margin-right: 20px;
   }
 
-  .getInTouch input{
+  .getInTouch input {
     width: 300px;
   }
 }
 
-@media (max-width : 767px) {
-  .navigation{
+@media (max-width: 767px) {
+  .navigation {
     padding: 0 16px;
   }
-  .navigation .logo{
-    width : 120px;
+  .navigation .logo {
+    width: 120px;
   }
-  .navigation .link{
+  .navigation .link {
     display: none;
   }
 
-  .navigation .bars{
+  .navigation .bars {
     display: flex;
   }
 
-  .getInTouch input{
+  .getInTouch input {
     width: 50%;
   }
 }
 
-@media (max-width : 600px) {
-  .getInTouch{
+@media (max-width: 600px) {
+  .getInTouch {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .getInTouch .input{
+  .getInTouch .input {
     justify-content: center;
   }
 
-  .getInTouch input{
+  .getInTouch input {
     margin-left: 0;
     width: 100%;
   }
-
 }
 
-
-@media (max-width : 424px) {
+@media (max-width: 424px) {
   .footer .links {
     flex-direction: column-reverse;
   }
 
-  .footer .social{
+  .footer .social {
     margin-top: 16px;
   }
 }

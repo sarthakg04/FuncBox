@@ -3,8 +3,8 @@ import './AboutPage.css'
 import Navbar from '../Navbar/Navbar'
 
 
-import hero from './assets/hero.svg'
-import roadmap from './assets/roadmap.png'
+import hero from './assets/hero.webp'
+import roadmap from './assets/roadmap.webp'
 import bell from "./assets/bell.png"
 import fb from "./assets/fb.svg"
 import linked from "./assets/linked.svg"
