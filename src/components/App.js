@@ -36,13 +36,13 @@ function App() {
           <Route exact path="/Login" component={Login} />
           <Route exact path="/Signup" component={Signup}/>
           <Route exact path="/CodeEditor" component={CodeEditor}/>
-          <Route exact path="/" component={FuncBoxx}/>
+          <Route exact path="/" component={LandingPage}/>
           <Route exact path="/BowlingGame" component={BowlingGame}/>
           <Route exact path="/ShopingPage" component={ShopingPage}/>
           <Route exact path="/ClockGame" component={ClockGame}/>
           <Route exact path="/AlienGame" component={AlienGame}/>
           <Route exact path="/AvengersGame" component={AvengersGame}/>
-          <Route exact path="/LandingPage" component={LandingPage}/>
+          {/* <Route exact path="/LandingPage" component={LandingPage}/> */}
           <Route exact path="/AboutPage" component={AboutPage}/>
           <Route exact path="/CardGame" component={CardGame}/>
           <Route exact path="/SalesPage" component={SalesPage}/>
