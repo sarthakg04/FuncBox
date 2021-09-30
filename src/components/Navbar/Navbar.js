@@ -28,7 +28,7 @@ export default function Navbar() {
                 </div>
                 <div className="link">
 
-                <Link to="/LandingPage">
+                <Link to="/">
                 <a href="#">
                     <img src={home} alt="home" />
                     <p>Home</p>
@@ -40,10 +40,10 @@ export default function Navbar() {
                     <p>About</p>
                 </a>
                 </Link>
-                <a href="#">
+                <Link to="/SalesPage">
                     <img src={shop} alt="shop" />
                     <p>Shop</p>
-                </a>
+                </Link>
                 {/*<Link to="/Login">
                 <a href="#">
                     <img src={login} alt="login"/>
