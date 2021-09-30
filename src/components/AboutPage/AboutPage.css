@@ -3,33 +3,6 @@
   padding: 0;
 }
 
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  padding: 0px 32px;
-}
-
-.navigation .link {
-  display: flex;
-}
-
-.navigation .logo {
-  width: 200px;
-  height: 79px;
-}
-
-.navigation .link a {
-  text-align: center;
-  text-decoration: none;
-  font-size: 14px;
-  color: #6e6e6e;
-  font-family: 'Lato', sans-serif;
-  margin-right: 32px;
-}
-
-.navigation .link a p {
-  margin-top: -4px;
-}
 
 .aboutPage__main .howWeWork {
   text-align: center;
@@ -88,75 +61,4 @@
 .faqs p {
   font-size: 24px;
   margin-bottom: 16px;
-}
-
-.footer {
-  background: url('./assets/footerback.png');
-  background-size: cover;
-  background-position: center;
-  padding-top: 64px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.getInTouch {
-  padding: 32px;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
-  display: flex;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.getInTouch p {
-  font-size: 28px;
-}
-
-.getInTouch input {
-  padding: 16px 64px 16px 32px;
-  border-radius: 26px;
-  border: 0;
-  outline: 0;
-  margin: 8px;
-  width: 500px;
-  font-size: 20px;
-  margin-left: 64px;
-}
-
-.getInTouch img {
-  margin-left: -56px;
-}
-
-.madeWith {
-  text-align: center;
-  color: white;
-  font-size: 18px;
-  margin-top: 32px;
-}
-
-.footer .links {
-  display: flex;
-  padding: 32px;
-  justify-content: space-between;
-}
-
-.footer .links .social {
-  display: flex;
-  align-items: center;
-}
-
-.footer .links .social a {
-  display: block;
-  margin-right: 16px;
-}
-
-.footer .links ul {
-  list-style: none;
-}
-
-.footer .links a {
-  color: white;
-  text-decoration: none;
 }

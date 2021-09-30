@@ -36,7 +36,7 @@ export default function LandingPage() {
           </div>
           <div className="details">
             <div className="info">
-              <p>Introduce your child to the world<br/> of Creative Thinking and Logic<br/> Building</p>
+              <p>Introduce your child to the world of Creative Thinking and Logic Building</p>
             </div>
             <div className="logo">
               <img src={logo} alt="" />
@@ -87,8 +87,10 @@ export default function LandingPage() {
           <div className="footer">
             <div className="getInTouch">
               <p>Get in Touch</p>
+              <div className='input'>
               <input type="text" name="email" />
               <img src={bell} alt="" />
+            </div>
             </div>
             <div className="madeWith">
               <p>Made With ❤️  by Team FuncBox </p>

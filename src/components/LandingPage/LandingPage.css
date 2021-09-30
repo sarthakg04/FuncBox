@@ -3,33 +3,6 @@
   padding: 0;
 }
 
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 35px;
-}
-
-.navigation .link {
-  display: flex;
-}
-
-.navigation .logo {
-  width: 200px;
-  height: 79px;
-}
-
-.navigation .link a {
-  text-align: center;
-  text-decoration: none;
-  font-size: 14px;
-  color: #6e6e6e;
-  font-family: 'Lato', sans-serif;
-  margin-right: 32px;
-}
-
-.navigation .link a p {
-  margin-top: -4px;
-}
 
 .landingPage__main .hero__image {
   text-align: center;
@@ -139,78 +112,132 @@
   margin-top: 32px;
 }
 
-.footer {
-  background: url('./assets/footerback.png');
-  background-size: cover;
-  background-position: center;
-  padding-top: 64px;
-  font-family: 'Montserrat', sans-serif;
+
+@media (max-width : 1130px) {
+
+  .landingPage__main .hero__image img{
+    width: 68%;
+  }
+
+  .landingPage__main .roadMap img{
+    width: 90%;
+  }
+  .landingPage__main .details{
+    padding-left: 0;
+    width: 90%;
+  }
+  .landingPage__main .details .info{
+    font-size: 22px;
+  }
+
+  .landingPage__main .how__works img{
+    width: 85%;
+  }
 }
 
-.getInTouch {
-  padding: 32px;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  display: flex;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+@media (max-width : 1000px) {
+  .landingPage__main .roadMap{
+    margin: 64px 16px 64px 32px;
+  }
+  .landingPage__main .roadMap img{
+    width: 100%;
+  }
+
+  .landingPage__main .details{
+    margin: 0;
+    margin-bottom: 64px;
+  }
+
+  .landingPage__main .how__works{
+    padding: 32px;
+  }
+
+
+  .landingPage__main .individuals,
+  .landingPage__main .schools{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .landingPage__main .individuals .left__container img{
+    width: 60%;
+  }
+  .landingPage__main .individuals .right__container{
+    margin: auto;
+    width: 60%;
+    margin-top: -10px;
+  }
+
+  .landingPage__main .schools .left__container{
+    grid-row: 2/3;
+    margin: auto;
+    width: 60%;
+    margin-top: -10px;
+  }
+  .landingPage__main .schools .right__container img{
+    width: 60%;
+    margin-left: 0;
+  }
+
 }
 
-.getInTouch p {
-  font-size: 28px;
+
+@media (max-width : 767px) {
+  .landingPage__main .hero__image img{
+    width: 90%;
+    text-align: left;
+    margin-left: -72px;
+  }
+
+  .landingPage__main .details{
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 64px;
+  }
+
+  .landingPage__main .details .info{
+    margin-left: 0;
+  }
+
+  .landingPage__main .details .logo{
+    grid-row: 1/2;
+    margin-bottom: 16px;
+  }
+
+  .landingPage__main .how__works{
+    padding: 16px 8px;
+  }
+  .landingPage__main .how__works img{
+    width: 95%;
+  }
+
+  .landingPage__main .individuals .left__container img,
+  .landingPage__main .individuals .right__container,
+  .landingPage__main .schools .left__container,
+  .landingPage__main .schools .right__container img{
+    width: 80%;
+  }
+
 }
 
-.getInTouch input {
-  padding: 16px 64px 16px 32px;
-  border-radius: 26px;
-  border: 0;
-  outline: 0;
-  margin: 8px;
-  width: 500px;
-  font-size: 20px;
-  margin-left: 64px;
-}
+@media (max-width : 600px) {
+  .landingPage__main .hero__image img{
+    width: 95%;
+    margin-left: 0;
+  }
 
-.getInTouch img {
-  margin-left: -56px;
-}
+  .landingPage__main .hero__section .downArrow img{
+    display: none;
+  }
 
-.madeWith {
-  font-weight:300;
-  text-align: center;
-  color: white;
-  font-size: 18px;
-  margin-top: 32px;
-}
-
-.footer .links {
-  display: flex;
-  padding: 38px;
-  justify-content: space-between;
-}
-
-.footer .links .social {
-  display: flex;
-  align-items: center;
-}
-
-.footer .links .social a {
-  display: block;
-  margin-right: 16px;
-}
-
-.footer .links ul {
-  list-style: none;
-}
-
-.footer .links a {
-  line-height: 21.94px;
-  font-size: 18px;
-  margin-right: 10vw;
-  font-weight:300;
-  color: white;
-  text-decoration: none;
+  
 }

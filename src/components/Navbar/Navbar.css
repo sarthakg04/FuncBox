@@ -56,6 +56,12 @@
   font-size: 28px;
 }
 
+
+.getInTouch .input{
+  display: flex;
+  align-items: center;
+}
+
 .getInTouch input {
   padding: 16px 64px 16px 32px;
   border-radius: 26px;
@@ -101,4 +107,68 @@
 .footer .links a {
   color: white;
   text-decoration: none;
+}
+
+
+@media (max-width : 1000px) {
+  .navigation {
+    padding: 16px;
+    padding-right: 0;
+  }
+
+  .navigation .logo{
+    width : 175px;
+  }
+  .navigation .link a{
+    margin-right: 20px;
+  }
+
+  .getInTouch input{
+    width: 300px;
+  }
+}
+
+@media (max-width : 767px) {
+  .navigation{
+    padding: 0 16px;
+  }
+  .navigation .logo{
+    width : 120px;
+  }
+  .navigation .link{
+    display: none;
+  }
+
+  .getInTouch input{
+    width: 50%;
+  }
+}
+
+@media (max-width : 600px) {
+  .getInTouch{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .getInTouch .input{
+    justify-content: center;
+  }
+
+  .getInTouch input{
+    margin-left: 0;
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width : 424px) {
+  .footer .links {
+    flex-direction: column-reverse;
+  }
+
+  .footer .social{
+    margin-top: 16px;
+  }
 }
