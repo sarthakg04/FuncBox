@@ -12,10 +12,12 @@ import insta from "./assets/insta.svg"
 
 export default function AboutPage() {
     return (
-        <div className="landingPage__main">
+        <div className="aboutPage__main">
         <Navbar/>
         <div className="hero__section">
+          <div className="about_heading">
           <h1>About us</h1>
+          </div>
           <img src={hero} alt="hero" />
         </div>
         <div className="howWeWork">
@@ -57,7 +59,7 @@ export default function AboutPage() {
         <div className="footer">
           <div className="getInTouch">
             <p>Get in Touch</p>
-            <input type="text" name="email" defaultValue />
+            <input type="text" name="email" />
             <img src={bell} alt="bell" />
           </div>
           <div className="madeWith">

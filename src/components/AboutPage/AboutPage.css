@@ -31,44 +31,49 @@
   margin-top: -4px;
 }
 
-.howWeWork {
+.aboutPage__main .howWeWork {
   text-align: center;
   margin: 32px;
 }
 
-.hero__section h1 {
-  font-weight: 400;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 50px;
-  margin-bottom: -110px;
+.aboutPage__main .hero__section .about_heading{
+  background-color: #F4F4F4;
+  padding: 16px;
+  text-align: center;
+  margin-bottom: -70px;
   position: relative;
   z-index: 2;
-  color: rgba(0, 0, 0, 0.5);
-  margin-left: 32px;
 }
 
-.howWeWork h1 {
+.aboutPage__main .hero__section h1 {
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.aboutPage__main .howWeWork h1 {
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
   font-size: 50px;
   line-height: 98px;
 }
 
-.hero__section img {
+.aboutPage__main .hero__section img {
   width: 100%;
 }
 
-.roadMap {
+.aboutPage__main .roadMap {
   margin: 32px;
   text-align: center;
 }
 
-.roadMap img {
-  width: 90%;
+.aboutPage__main .roadMap img {
+  width: 75%;
   margin: auto;
 }
 
-.faqs {
+.aboutPage__main .faqs {
   font-family: 'Montserrat', sans-serif;
   margin: 64px;
   font-size: 28px;
@@ -76,13 +81,12 @@
   margin-bottom: 32px;
 }
 
-.faq {
-  margin-bottom: 64px;
+.aboutPage__main .faq {
+  margin-bottom: 32px;
 }
 
 .faqs p {
-  font-size: 36px;
-  line-height: 44px;
+  font-size: 24px;
   margin-bottom: 16px;
 }
 

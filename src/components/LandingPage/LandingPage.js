@@ -87,7 +87,7 @@ export default function LandingPage() {
           <div className="footer">
             <div className="getInTouch">
               <p>Get in Touch</p>
-              <input type="text" name="email" defaultValue />
+              <input type="text" name="email" />
               <img src={bell} alt="" />
             </div>
             <div className="madeWith">
