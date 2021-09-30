@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 
@@ -20,14 +21,14 @@
 
 .aboutPage__main .hero__section h1 {
   font-weight: 400;
-  font-family: 'Montserrat', sans-serif;
+
   font-size: 40px;
   color: rgba(0, 0, 0, 0.5);
 }
 
 .aboutPage__main .howWeWork h1 {
   font-weight: 400;
-  font-family: 'Montserrat', sans-serif;
+
   font-size: 50px;
   line-height: 98px;
 }
@@ -47,7 +48,7 @@
 }
 
 .aboutPage__main .faqs {
-  font-family: 'Montserrat', sans-serif;
+  
   margin: 64px;
   font-size: 28px;
   font-weight: 300;
@@ -76,5 +77,9 @@
   }
   .aboutPage__main .faqs{
     margin: 64px 16px;
+  }
+
+  .aboutPage__main .hero__section .about_heading{
+    margin-bottom: -4%;
   }
 }
