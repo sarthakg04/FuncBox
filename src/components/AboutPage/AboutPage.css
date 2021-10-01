@@ -11,7 +11,7 @@
 }
 
 .aboutPage__main .hero__section .about_heading{
-  background-color: #F4F4F4;
+  background-color: #F5F5F5;
   padding: 16px;
   text-align: center;
   margin-bottom: -70px;
@@ -67,6 +67,29 @@
 .aboutPage__main .faqs p {
   font-size: 24px;
   margin-bottom: 16px;
+}
+
+.question{
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question i.active{
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+
+.question i{
+  transform: none;
+  transition: 0.5s;
+}
+
+.answer{
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
 }
 
 

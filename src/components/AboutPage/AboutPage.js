@@ -1,4 +1,4 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import './AboutPage.css'
 import Navbar from '../Navbar/Navbar'
 
@@ -11,6 +11,24 @@ import linked from "./assets/linked.svg"
 import insta from "./assets/insta.svg"
 
 export default function AboutPage() {
+
+  useEffect(()=>{
+    var dropdown = document.getElementsByClassName("question");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+        var dropdownContent = this.nextElementSibling;
+        this.getElementsByTagName('i')[0].classList.toggle('active')
+        if (dropdownContent.style.maxHeight) {
+          dropdownContent.style.maxHeight = null;
+        } else {
+          dropdownContent.style.maxHeight = dropdownContent.scrollHeight + "px";
+        }
+      });
+    }
+  },[]);
+
     return (
         <div className="aboutPage__main">
         <Navbar/>
@@ -31,32 +49,53 @@ export default function AboutPage() {
             <h1>Frequently Asked Questions</h1>
           </div>
           <div className="faq">
+            <div className="question">
             <p>What age is Funcbox for?</p>
-            <p> Funcbox is designed for kids 6-12 years in age.</p>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+            <p className="answer"> Funcbox is designed for kids 6-12 years in age.</p>
           </div>
           <div className="faq">
+            <div className="question">
             <p>What age is Funcbox for?</p>
-            <p> Funcbox is designed for kids 6-12 years in age.</p>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+            <p className="answer"> Funcbox is designed for kids 6-12 years in age.</p>
           </div>
           <div className="faq">
+            <div className="question">
             <p>What age is Funcbox for?</p>
-            <p> Funcbox is designed for kids 6-12 years in age.</p>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+            <p className="answer"> Funcbox is designed for kids 6-12 years in age.</p>
           </div>
           <div className="faq">
+            <div className="question">
             <p>What age is Funcbox for?</p>
-            <p> Funcbox is designed for kids 6-12 years in age.</p>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+            <p className="answer"> Funcbox is designed for kids 6-12 years in age.</p>
           </div>
           <div className="faq">
+            <div className="question">
             <p>What age is Funcbox for?</p>
-            <p> Funcbox is designed for kids 6-12 years in age.</p>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+            <p className="answer"> Funcbox is designed for kids 6-12 years in age.</p>
           </div>
           <div className="faq">
+            <div className="question">
             <p>What age is Funcbox for?</p>
-            <p> Funcbox is designed for kids 6-12 years in age.</p>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+            <p className="answer"> Funcbox is designed for kids 6-12 years in age.</p>
           </div>
           <div className="faq">
+            <div className="question">
             <p>What age is Funcbox for?</p>
-            <p> Funcbox is designed for kids 6-12 years in age.</p>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+            <p className="answer"> Funcbox is designed for kids 6-12 years in age.</p>
           </div>
         </div>
         <div className="footer">
