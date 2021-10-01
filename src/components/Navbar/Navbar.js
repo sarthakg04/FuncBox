@@ -67,19 +67,19 @@ export default function Navbar(props) {
             <div className="mobile__links" id="mobile__links">
               <Link to="/">
               <a href="#">
-                  <img src={home} alt="home" />
+                  <img src={home_check ? home_current : home} alt="home" />
                   <p>Home</p>
               </a>
               </Link>
               <Link to="/AboutPage">
               <a href="#">
-                  <img src={about} alt="about" />
+                  <img src={about_check ? about_current : about } alt="about" />
                   <p>About</p>
               </a>
               </Link>
 
               <Link to="/SalesPage">
-                  <img src={shop} alt="shop" />
+                  <img src={shop_check ? shop_current : shop} alt="shop" />
                   <p>Shop</p>
               </Link>
               {/*<Link to="/Login">
