@@ -13,7 +13,11 @@ import insta from "./assets/insta.svg"
 export default function AboutPage() {
     return (
         <div className="aboutPage__main">
-        <Navbar/>
+        <Navbar
+        home_check = {false}
+        about_check =  {true}
+        shop_check = {false}
+        />
         <div className="hero__section">
           <div className="about_heading">
           <h1>About us</h1>

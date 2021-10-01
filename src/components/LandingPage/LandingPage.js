@@ -19,7 +19,11 @@ export default function LandingPage() {
   return (
     <div>
       <div className="landingPage__main">
-          <Navbar/>
+          <Navbar
+          home_check = {true}
+          about_check =  {false}
+          shop_check = {false}
+          />
           <div className="hero__section">
             <div className="hero__image">
               <img src={homepageimg} alt="" />

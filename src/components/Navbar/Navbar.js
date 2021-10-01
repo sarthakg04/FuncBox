@@ -1,4 +1,4 @@
-import React , {useEffect} from 'react'
+import React from 'react'
 import {
   Link,
   BrowserRouter as Router,
@@ -10,13 +10,21 @@ import {
 import './Navbar.css'
 
 import about from './assets/about.svg'
+import about_current from './assets/about_current.png'
 import home from './assets/home.svg'
+import home_current from './assets/home_current.png'
 import logo from './assets/logo.svg'
 import login from './assets/login.svg'
 import shop from './assets/shop.svg'
+import shop_current from './assets/shop_current.png'
 
-export default function Navbar() {
-
+export default function Navbar(props) {
+    console.log(props)
+    const {
+        home_check,
+        about_check,
+        shop_check,
+    } = props
     function toggleNav(){
         document.getElementById('mobile__links').classList.toggle('active');
     }
@@ -31,18 +39,18 @@ export default function Navbar() {
 
                 <Link to="/">
                 <a href="#">
-                    <img src={home} alt="home" />
+                    <img src={home_check ? home_current : home} alt="home" />
                     <p>Home</p>
                 </a>
                 </Link>
                 <Link to="/AboutPage">
-                <a href="#">
-                    <img src={about} alt="about" />
+                <a  href="#">
+                    <img src={about_check ? about_current : about } alt="about" />
                     <p>About</p>
                 </a>
                 </Link>
                 <Link to="/SalesPage">
-                    <img src={shop} alt="shop" />
+                    <img src={shop_check ? shop_current : shop} alt="shop" />
                     <p>Shop</p>
                 </Link>
                 {/*<Link to="/Login">

@@ -193,3 +193,6 @@
     margin-top: 16px;
   }
 }
+.current_about {
+  background-image: url(./assets/about_current.png);
+}

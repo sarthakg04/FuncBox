@@ -16,7 +16,11 @@ import bell from './assets/bell.png'
 export default function SalesPage() {
     return (
             <div>
-                <Navbar/>
+                <Navbar
+                home_check = {false}
+                about_check =  {false}
+                shop_check = {true}
+                />
             <div className="salesPage__main">
             <div className="hero__section">
             <div className="left__section">
