@@ -68,7 +68,7 @@ export default function SalesPage() {
                 <div className="plan-container">
                 <div className="plan-details red">
                     <div className="heading">
-                    <h2>Basic</h2>
+                    <h2>Plan 1</h2>
                     </div>
                     <div className="details">
                     <ul>
@@ -99,7 +99,7 @@ export default function SalesPage() {
                 <div className="black">
                 </div>
                 <div className="plan-cover">
-                    <h1>Price</h1>
+                    <h1>Basic</h1>
                     <div className="price">
                     <p>Rs. 799/-</p>
                     <p className="atc">Add to Cart <span><i className="fas fa-shopping-cart" /></span> </p>
@@ -111,7 +111,7 @@ export default function SalesPage() {
                 <div className="plan-container">
                 <div className="plan-details yellow">
                     <div className="heading">
-                    <h2>Delux</h2>
+                    <h2>Plan 2</h2>
                     </div>
                     <div className="details">
                     <ul>
@@ -146,7 +146,7 @@ export default function SalesPage() {
                 <div className="black">
                 </div>
                 <div className="plan-cover">
-                    <h1>Price</h1>
+                    <h1>Delux</h1>
                     <div className="price">
                     <p>Rs. 1199/-</p>
                     <p className="atc">Add to Cart <span><i className="fas fa-shopping-cart" /></span> </p>
@@ -158,11 +158,10 @@ export default function SalesPage() {
                 <div className="plan-container">
                 <div className="plan-details green">
                     <div className="heading">
-                    <h2>Premium</h2>
+                    <h2>Plan 3</h2>
                     </div>
                     <div className="details">
                     <ul>
-                      <ul>
                         <li>
                           • FuncBox Binder
                         </li>
@@ -194,13 +193,13 @@ export default function SalesPage() {
                         • Interactive website
                         </li>
                       </ul>
-                    </ul>
+
                     </div>
                 </div>
                 <div className="black">
                 </div>
                 <div className="plan-cover">
-                    <h1>Price</h1>
+                    <h1>Premium</h1>
                     <div className="price">
                     <p>Rs. 1499/-</p>
                     <p className="atc">Add to Cart <span><i className="fas fa-shopping-cart" /></span> </p>
@@ -216,7 +215,7 @@ export default function SalesPage() {
             <div className="content">
                 <img src={house} alt="house" />
                 <div className="contentt">
-                <p>We at FuncBox aim to bring an exclusive element to make kids in the age group of 6-14 years learn concepts of Coding and Creative Thinking.</p>
+                <p>Yay! FuncBox brings special discount for all the School Tie-ups. FuncBox can be easily incorporated in all the school grades. To make your students outperform and help your institute gain an edge over the others contact our team NOW!</p>
                 <a href="#">Connect Today</a>
                 </div>
             </div>

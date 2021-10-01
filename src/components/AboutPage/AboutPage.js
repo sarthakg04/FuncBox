@@ -50,7 +50,7 @@ export default function AboutPage() {
         </div>
         <div className="faqs">
           <div className="faq__heading">
-            <h1>Frequently Asked Questions</h1>
+            <h1>FAQs</h1>
           </div>
           <div className="faq">
             <div className="question">

@@ -145,6 +145,10 @@
   .getInTouch input {
     width: 300px;
   }
+
+  .footer .social img {
+    width: 24px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -181,6 +185,19 @@
   .getInTouch input {
     margin-left: 0;
     width: 100%;
+    padding: 8px 64px 8px 32px;
+  }
+
+  .footer .madeWith p{
+    font-size: 14px;
+  }
+
+  .footer .social img {
+    width: 22px;
+  }
+
+  .footer .terms a{
+    font-size: 14px;
   }
 }
 
@@ -191,8 +208,13 @@
 
   .footer .social {
     margin-top: 16px;
+
   }
+
+
+
 }
+
 .current_about {
   background-image: url(./assets/about_current.png);
 }
