@@ -33,11 +33,11 @@ export default function AboutPage() {
         <div className="aboutPage__main">
           <Helmet>
             <title>About page</title>
-            <meta 
+            <meta
               name="description"
               content="this is the about page description of funcbox company"
             />
-            <meta 
+            <meta
               name="keywords"
               content="education, online, coding, online coding, learn coding, e-learning, funcbox, programming for kids, programming"
             />
@@ -65,52 +65,52 @@ export default function AboutPage() {
           </div>
           <div className="faq">
             <div className="question">
-            <p>What age is Funcbox for?</p>
+            <p>What is FuncBox?</p>
             <i class="fas fa-chevron-down"></i>
           </div>
-            <p className="answer"> Funcbox is designed for kids 6-12 years in age.</p>
+            <p className="answer"> FuncBox is a box full of surprises with games, goodies, and app cards with an intelligent live code editor that enables your kid to make his fun and educational apps, play them on any device and even share them with their friends.</p>
           </div>
           <div className="faq">
             <div className="question">
-            <p>What age is Funcbox for?</p>
+            <p>How does FuncBox work?</p>
             <i class="fas fa-chevron-down"></i>
           </div>
-            <p className="answer"> Funcbox is designed for kids 6-12 years in age.</p>
+            <p className="answer">It's Simple! A separate unique code is generated for every child which comes within the box. Using that code, The child can log in to the website and open the code editor. The child can select the game they want to make and then type in their code from the app cards and make their own game. Once they finish writing the code, they can play their game and even share it!</p>
           </div>
           <div className="faq">
             <div className="question">
-            <p>What age is Funcbox for?</p>
+            <p>What age group is FuncBox for?</p>
             <i class="fas fa-chevron-down"></i>
           </div>
-            <p className="answer"> Funcbox is designed for kids 6-12 years in age.</p>
+            <p className="answer"> We make personalized boxes based on the grade of the student. FuncBox is perfect for the age group 6-12 years. (ie Grade 1 to Grade 7)</p>
           </div>
           <div className="faq">
             <div className="question">
-            <p>What age is Funcbox for?</p>
+            <p>What kind of Computer do kids need to use FuncBox?</p>
             <i class="fas fa-chevron-down"></i>
           </div>
-            <p className="answer"> Funcbox is designed for kids 6-12 years in age.</p>
+            <p className="answer"> Any computer or laptop with a web browser is all they need. We run on a webpage that can be opened on any web browser. No complex tools to download or install.</p>
           </div>
           <div className="faq">
             <div className="question">
-            <p>What age is Funcbox for?</p>
+            <p>Can it work on a tablet or Ipad?</p>
             <i class="fas fa-chevron-down"></i>
           </div>
-            <p className="answer"> Funcbox is designed for kids 6-12 years in age.</p>
+            <p className="answer"> Yes, Don't worry at all! We know kids love tablets. The code editor is perfectly designed for any tablet/Ipad/Laptop or PC.</p>
           </div>
           <div className="faq">
             <div className="question">
-            <p>What age is Funcbox for?</p>
+            <p>What language does FuncBox teaches? </p>
             <i class="fas fa-chevron-down"></i>
           </div>
-            <p className="answer"> Funcbox is designed for kids 6-12 years in age.</p>
+            <p className="answer">It's Javascript! Nonetheless, it's not naked Javascript. We give a quick and painless library of programming orders, all painstakingly intended to be not difficult to type, simple to learn, and adaptable. </p>
           </div>
           <div className="faq">
             <div className="question">
-            <p>What age is Funcbox for?</p>
+            <p>Why Javascript? </p>
             <i class="fas fa-chevron-down"></i>
           </div>
-            <p className="answer"> Funcbox is designed for kids 6-12 years in age.</p>
+            <p className="answer">Since it's ostensibly the most famous scripting language around. Javascript is perfect since it's the language of the web. Google, Facebook, Amazon, Instagram and Twitter are completely written in Javascript (undoubtedly somewhat). Javascript is likewise incredible in light of the fact that it's a nearby cousin to C, C++, Objective C, and Java, which are Big Important Languages utilized by the industry.</p>
           </div>
         </div>
         <Footer/>
