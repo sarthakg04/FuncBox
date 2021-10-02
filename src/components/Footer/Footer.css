@@ -74,6 +74,12 @@
   text-decoration: none;
 }
 
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
 @media (max-width: 1000px) {
   .getInTouch input {
     width: 300px;
