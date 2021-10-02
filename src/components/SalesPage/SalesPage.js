@@ -1,4 +1,6 @@
 import React from 'react'
+import {Helmet} from "react-helmet"
+
 import './SalesPage.css'
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
@@ -13,6 +15,17 @@ import house from './assets/house.svg'
 export default function SalesPage() {
     return (
             <div>
+                <Helmet>
+                    <title>Sales page</title>
+                    <meta 
+                      name="description"
+                      content="this is the sales page description of funcbox company"
+                    />
+                    <meta 
+                      name="keywords"
+                      content="education, online, coding, online coding, learn coding, e-learning, funcbox, programming for kids, programming"
+                    />
+                </Helmet>
                 <Navbar
                 home_check = {false}
                 about_check =  {false}

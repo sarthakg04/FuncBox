@@ -1,4 +1,7 @@
 import React , {useEffect} from 'react'
+import {Helmet} from "react-helmet"
+
+
 import './AboutPage.css'
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
@@ -28,6 +31,17 @@ export default function AboutPage() {
 
     return (
         <div className="aboutPage__main">
+          <Helmet>
+            <title>About page</title>
+            <meta 
+              name="description"
+              content="this is the about page description of funcbox company"
+            />
+            <meta 
+              name="keywords"
+              content="education, online, coding, online coding, learn coding, e-learning, funcbox, programming for kids, programming"
+            />
+          </Helmet>
         <Navbar
         home_check = {false}
         about_check =  {true}

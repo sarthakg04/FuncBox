@@ -1,4 +1,6 @@
 import React from 'react'
+import {Helmet} from "react-helmet"
+
 import './LandingPage.css'
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
@@ -15,6 +17,17 @@ import img2 from './assets/img2.png'
 export default function LandingPage() {
   return (
     <div>
+      <Helmet>
+            <title>Landing page</title>
+            <meta 
+              name="description"
+              content="this is the landing page description of funcbox company"
+            />
+            <meta 
+              name="keywords"
+              content="education, online, coding, online coding, learn coding, e-learning, funcbox, programming for kids, programming"
+            />
+          </Helmet>
       <div className="landingPage__main">
           <Navbar
           home_check = {true}
