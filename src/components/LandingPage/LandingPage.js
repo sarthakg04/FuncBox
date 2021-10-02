@@ -1,16 +1,13 @@
 import React from 'react'
 import './LandingPage.css'
 import Navbar from '../Navbar/Navbar'
+import Footer from '../Footer/Footer'
 
 
 import homepageimg from './assets/homepageimg.webp'
 import downArrow from './assets/downArrow.svg'
 import roadmap from './assets/roadmap.svg'
 import howWorks from './assets/howWorks.png'
-import bell from './assets/bell.png'
-import fb from './assets/fb.svg'
-import linked from './assets/linked.svg'
-import insta from './assets/insta.svg'
 import logo from './assets/logo.svg'
 import img1 from './assets/img1.png'
 import img2 from './assets/img2.png'
@@ -85,44 +82,7 @@ export default function LandingPage() {
               <img src={img2} alt="" />
             </div>
           </div>
-          <div className="footer">
-            <div className="getInTouch">
-              <p>Get in Touch</p>
-              <div className='input'>
-              <input type="text" name="email" />
-              <img src={bell} alt="" />
-            </div>
-            </div>
-            <div className="madeWith">
-              <p>Made With ❤️  by Team FuncBox </p>
-            </div>
-            <div className="links">
-              <div className="social">
-                <a href="#">
-                  <img src={fb} alt="" />
-                </a>
-                <a href="#">
-                  <img src={linked} alt="" />
-                </a>
-                <a href="#">
-                  <img src={insta} alt="" />
-                </a>
-              </div>
-              <div className="terms">
-                <ul>
-                  <li>
-                    <a href="#">Join our Team</a>
-                  </li>
-                  <li>
-                    <a href="#">Terms</a>
-                  </li>
-                  <li>
-                    <a href="#">Privacy</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <Footer/>
         </div>
       </div>
   )

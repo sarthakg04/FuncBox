@@ -1,6 +1,7 @@
 import React from 'react'
 import './SalesPage.css'
 import Navbar from '../Navbar/Navbar'
+import Footer from '../Footer/Footer'
 
 import kids from './assets/kids.svg'
 import box from './assets/boxsvg.svg'
@@ -8,10 +9,6 @@ import van from './assets/van.svg'
 import new_pic from './assets/new.svg'
 import check from './assets/check.svg'
 import house from './assets/house.svg'
-import fb from './assets/fb.svg'
-import linked from './assets/linked.svg'
-import insta from './assets/insta.svg'
-import bell from './assets/bell.png'
 
 export default function SalesPage() {
     return (
@@ -220,44 +217,7 @@ export default function SalesPage() {
                 </div>
             </div>
             </div>
-            <div className="footer">
-            <div className="getInTouch">
-                <p>Get in Touch</p>
-                  <div className='input'>
-                  <input type="text" name="email" />
-                  <img src={bell} alt="" />
-                </div>
-            </div>
-            <div className="madeWith">
-                <p>Made With ❤️  by Team FuncBox </p>
-            </div>
-            <div className="links">
-                <div className="social">
-                <a href="#">
-                    <img src={fb} alt="" />
-                </a>
-                <a href="#">
-                    <img src={linked} alt="" />
-                </a>
-                <a href="#">
-                    <img src={insta} alt="" />
-                </a>
-                </div>
-                <div className="terms">
-                <ul>
-                    <li>
-                    <a href="#">Join our Team</a>
-                    </li>
-                    <li>
-                    <a href="#">Terms</a>
-                    </li>
-                    <li>
-                    <a href="#">Privacy</a>
-                    </li>
-                </ul>
-                </div>
-            </div>
-            </div>
+            <Footer/>
       </div>
             </div>
     )
