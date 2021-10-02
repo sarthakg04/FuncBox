@@ -19,11 +19,11 @@ export default function LandingPage() {
     <div>
       <Helmet>
             <title>Landing page</title>
-            <meta 
+            <meta
               name="description"
               content="this is the landing page description of funcbox company"
             />
-            <meta 
+            <meta
               name="keywords"
               content="education, online, coding, online coding, learn coding, e-learning, funcbox, programming for kids, programming"
             />
@@ -89,7 +89,7 @@ export default function LandingPage() {
               <p>
                 Bring a new dimension to teaching at your school.
               </p>
-              <a href="#">Connect</a>
+              <a href="https://forms.gle/TxefVyHrnWj1doSL7" target="_blank">Connect</a>
             </div>
             <div className="right__container">
               <img src={img2} alt="" />

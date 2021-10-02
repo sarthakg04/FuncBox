@@ -17,11 +17,11 @@ export default function SalesPage() {
             <div>
                 <Helmet>
                     <title>Sales page</title>
-                    <meta 
+                    <meta
                       name="description"
                       content="this is the sales page description of funcbox company"
                     />
-                    <meta 
+                    <meta
                       name="keywords"
                       content="education, online, coding, online coding, learn coding, e-learning, funcbox, programming for kids, programming"
                     />
@@ -226,7 +226,7 @@ export default function SalesPage() {
                 <img src={house} alt="house" />
                 <div className="contentt">
                 <p>Yay! FuncBox brings special discount for all the School Tie-ups. FuncBox can be easily incorporated in all the school grades. To make your students outperform and help your institute gain an edge over the others contact our team NOW!</p>
-                <a href="#">Connect Today</a>
+                <a href="https://forms.gle/TxefVyHrnWj1doSL7" target="_blank">Connect Today</a>
                 </div>
             </div>
             </div>
