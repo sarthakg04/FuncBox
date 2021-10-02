@@ -23,10 +23,8 @@ export default function Footer() {
             <div className="getInTouch">
                 <p>Get in Touch</p>
                 <div className='input'>
-                <form>
-                    <input type="text" name="email" onChange = { e => setGetInTouchEmail(e.target.value) }/>
-                    <button onClick={handleSubmit}><img src={bell} alt="bell" /></button>
-                </form>
+                <input type="text" name="email" onChange = { e => setGetInTouchEmail(e.target.value) }/>
+                <button onClick={handleSubmit}><img src={bell} alt="bell" /></button>
                 </div>
             </div>
             <div className="madeWith">
