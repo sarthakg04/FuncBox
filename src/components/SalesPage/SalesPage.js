@@ -16,14 +16,30 @@ export default function SalesPage() {
     return (
             <div>
                 <Helmet>
-                    <title>Sales page</title>
+                    <title>FuncBox - Shop</title>
                     <meta
                       name="description"
-                      content="this is the sales page description of funcbox company"
+                      content="Funcbox provides an interactive box that teaches grade schoolers how to program apps. Hurry! Buy your own Funcbox Today"
                     />
                     <meta
                       name="keywords"
-                      content="education, online, coding, online coding, learn coding, e-learning, funcbox, programming for kids, programming"
+                      content="Coding for kids, ELearning, FuncBox, Coding, programming, STEM, Kids, Children, Buy Funcbox"
+                    />
+                    <meta 
+                      name="robots" 
+                      content="index, follow"
+                    />
+                    <meta 
+                      http-equiv="Content-Type" 
+                      content="text/html; charset=utf-8"
+                    />
+                    <meta 
+                      name="language" 
+                      content="English"
+                    />
+                    <meta 
+                      name="author" 
+                      content="Team Funcbox"
                     />
                 </Helmet>
                 <Navbar
@@ -41,7 +57,7 @@ export default function SalesPage() {
                 <img src={box} alt="box" className="background__img" />
                 <div className="content">
                 <p className="title">FuncBox is a box full of surprises which will teach you education concepts and coding with a revolutionary twist.</p>
-                <p><i class="fas fa-chevron-right"></i> Perfect for age-group 6-12 years.</p>
+                <p><i class="fas fa-chevron-right"></i> Perfect for age-group 6-14 years.</p>
                 <p><i class="fas fa-chevron-right"></i> Build your own fun game</p>
                 <p><i class="fas fa-chevron-right"></i> Learn to code and explore.</p>
                 <p><i class="fas fa-chevron-right"></i> Share your game with your friends.</p>

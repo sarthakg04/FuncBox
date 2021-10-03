@@ -18,14 +18,30 @@ export default function LandingPage() {
   return (
     <div>
       <Helmet>
-            <title>Landing page</title>
+            <title>FuncBox - Coding for Kids</title>
             <meta
               name="description"
-              content="this is the landing page description of funcbox company"
+              content="FuncBox brings a small box full of creative app cards which will help your kid learn to Code, Build and Share Apps"
             />
             <meta
               name="keywords"
-              content="education, online, coding, online coding, learn coding, e-learning, funcbox, programming for kids, programming"
+              content="Coding for kids, ELearning, FuncBox, Coding, programming, STEM, Kids, Children"
+            />
+            <meta 
+              name="robots" 
+              content="index, follow"
+            />
+            <meta 
+              http-equiv="Content-Type" 
+              content="text/html; charset=utf-8"
+            />
+            <meta 
+              name="language" 
+              content="English"
+            />
+            <meta 
+              name="author" 
+              content="Team Funcbox"
             />
           </Helmet>
       <div className="landingPage__main">
