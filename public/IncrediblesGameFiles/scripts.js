@@ -104,7 +104,7 @@ function createInteractionPad(){
 
 // Edna movement function
 function ednaMove(){
-    
+
     // console.log(current_edna_position)
     edna_squares[current_edna_position].classList.remove('Edna_bg')
     // basketball_squares[current_edna_position].classList.remove('thunder_bg')
@@ -141,7 +141,7 @@ function shoot(){
         var shoot_btn = document.querySelector('.shoot_btn')
         shoot_btn.disabled = true
         current_basketball_position = current_incredible_position + 20 // start div of the basketball
-    
+
         basketball_Id1 = setTimeout(Movebasketball,100)
         // console.log(current_basketball_position)
         function Movebasketball(){
@@ -156,7 +156,7 @@ function shoot(){
                 basketball_Id2 = setTimeout(Movebasketball,200)
             }
             if( current_basketball_position < 4 ){
-                
+
                 basketball_squares[current_basketball_position].classList.add('Basketball_bg')
                 // console.log(current_basketball_position)
                 if(( current_basketball_position % 4 ) == current_edna_position ){
@@ -170,14 +170,14 @@ function shoot(){
                     for( i=0 ; i<Interaction_Buttons.length; i++ ){
                         Interaction_Buttons[i].disabled = true
                     }
-                    
+
                     clearInterval(basketball_Id1)
                     clearInterval(basketball_Id2)
                     clearInterval(ednaMovementId1)
                     clearInterval(ednaMovementId2)
                     return
                 }
-                
+
                 setTimeout(function(){ basketball_squares[current_basketball_position].classList.remove('Basketball_bg') }, 100);
                 shooted = false
                 shoot_btn.disabled = false
