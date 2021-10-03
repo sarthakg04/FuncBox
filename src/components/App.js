@@ -23,6 +23,7 @@ import LandingPage from './LandingPage/LandingPage';
 import AboutPage from './AboutPage/AboutPage';
 import SalesPage from './SalesPage/SalesPage';
 import MoleGame from './Games/WhackAMole/WhackAMole';
+import IncrediblesGame from './Games/IncrediblesGame/IncrediblesGame';
 
 function App() {
 
@@ -39,7 +40,7 @@ function App() {
           <Route exact path="/AlienGame" component={AlienGame}/>
           <Route exact path="/AvengersGame" component={AvengersGame}/>
           <Route exact path="/MoleGame" component={MoleGame}/>
-          {/* <Route exact path="/LandingPage" component={LandingPage}/> */}
+          <Route exact path="/IncrediblesGame" component={IncrediblesGame}/>
           <Route exact path="/Login" component={Login} />
           <Route exact path="/Signup" component={Signup}/>
           <Route exact path="/" component={LandingPage}/>

@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.Phone {
+  /* border: 1px solid black; */
+  height: 535px;
+  width: 400px;
+  margin: 0;
+  background-image: url('./assets/bg.svg');
+}
+
+.Gamepad {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  width: 287px;
+  /* border: 1px solid black; */
+  /* margin: 50px auto 0 auto; */
+  /* box-sizing: border-box; */
+}
+
+.Edna {
+  display: flex;
+  flex-wrap: wrap;
+  width: 287px;
+  height: 100px;
+  /* box-sizing: border-box;
+  border: 1px solid red; */
+  border-bottom: 5px solid black;
+}
+
+.Edna div {
+  height: 100px;
+  width: 71px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+}
+
+.basketball {
+  display: flex;
+  flex-wrap: wrap;
+  width: 284px;
+  height: 198px;
+  /* box-sizing: border-box; */
+  /* border: 1px solid blue; */
+}
+
+.basketball div {
+  height: 40px;
+  width: 71px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+}
+
+.mrIncredible {
+  display: flex;
+  flex-wrap: wrap;
+  width: 287px;
+  height: 100px;
+
+  border-bottom: 5px solid black;
+  /* border-bottom: 5px solid black;
+  box-sizing: border-box;
+  border: 1px solid green; */
+}
+
+.mrIncredible div {
+  height: 100px;
+  width: 71px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+}
+
+/* bg */
+
+.Edna_bg {
+  background: url('./assets/edna.svg') no-repeat center;
+}
+.Incredible_bg {
+  background: url('./assets/incredible.svg') no-repeat center;
+}
+.Basketball_bg {
+  background: url('./assets/basketball.svg') no-repeat center;
+}
+.Spaceship_bg {
+  background: url('./assets/spaceship.svg') no-repeat center;
+}
+
+.InteractionPad {
+  margin: 15px 0 0 50px;
+}
+
+.right_btn {
+  /* border-radius: 50%; */
+  height: 40px;
+  width: 40px;
+  background: url('./assets/right.svg') no-repeat center;
+  background-size: 40px 40px;
+  border: none;
+  outline: none;
+}
+
+.left_btn {
+  /* border-radius: 50%; */
+  height: 40px;
+  width: 40px;
+  background: url('./assets/left.svg') no-repeat center;
+  background-size: 40px 40px;
+  border: none;
+  outline: none;
+}
+
+.restart_btn {
+  /* border-radius: 50%; */
+  height: 40px;
+  width: 40px;
+  background: url('./assets/restart.svg') no-repeat center;
+  border: none;
+  outline: none;
+}
+
+.shoot_btn {
+  position: absolute;
+  margin: 6px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+  /* border: none; */
+  outline: none;
+  height: 30px;
+  width: 30px;
+}
+
+.edna_basketball {
+  background-image: url('./assets/fire.gif'), url('./assets/edna.svg');
+  background-size: 50px 100px;
+}
+
+.GameDisplay {
+  background: url('./assets/GameOver.svg') no-repeat center;
+  position: absolute;
+  top: 25%;
+  left: 8%;
+  height: 150px;
+  width: 180px;
+  display: none;
+}
