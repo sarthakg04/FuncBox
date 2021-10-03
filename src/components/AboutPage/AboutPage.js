@@ -32,15 +32,31 @@ export default function AboutPage() {
     return (
         <div className="aboutPage__main">
           <Helmet>
-            <title>About page</title>
-            <meta
-              name="description"
-              content="this is the about page description of funcbox company"
-            />
-            <meta
-              name="keywords"
-              content="education, online, coding, online coding, learn coding, e-learning, funcbox, programming for kids, programming"
-            />
+            <title>FuncBox - About</title>
+                    <meta
+                      name="description"
+                      content="Visit to know more about how we build the attitude of experimenting, creating and building your kid's first self-coded app"
+                    />
+                    <meta
+                      name="keywords"
+                      content="Coding for kids, ELearning, About FuncBox, Coding, programming, STEM, Kids, Children, Funcbox, Know More"
+                    />
+                    <meta 
+                      name="robots" 
+                      content="index, follow"
+                    />
+                    <meta 
+                      http-equiv="Content-Type" 
+                      content="text/html; charset=utf-8"
+                    />
+                    <meta 
+                      name="language" 
+                      content="English"
+                    />
+                    <meta 
+                      name="author" 
+                      content="Team Funcbox"
+                    />
           </Helmet>
         <Navbar
         home_check = {false}
@@ -82,7 +98,7 @@ export default function AboutPage() {
             <p>What age group is FuncBox for?</p>
             <i class="fas fa-chevron-down"></i>
           </div>
-            <p className="answer"> We make personalized boxes based on the grade of the student. FuncBox is perfect for the age group 6-12 years. (ie Grade 1 to Grade 7)</p>
+            <p className="answer"> We make personalized boxes based on the grade of the student. FuncBox is perfect for the age group 6-14 years. (ie Grade 1 to Grade 7)</p>
           </div>
           <div className="faq">
             <div className="question">

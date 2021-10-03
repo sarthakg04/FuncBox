@@ -32,8 +32,9 @@ export default function Navbar(props) {
         <div>
             <div className="navigation">
                 <div className="logo__container">
+                <Link to="/">
                 <img src={logo} alt="logo" className="logo" />
-
+                </Link>
                 </div>
                 <div className="link">
 

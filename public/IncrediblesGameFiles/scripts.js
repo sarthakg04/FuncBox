@@ -2,7 +2,7 @@
 // createBackground()
 // createGrid()
 // createCharacters()
-// LokiMovement()
+// EdnaMovement()
 // createInteractionPad()
 // createFinish()
 
@@ -38,7 +38,7 @@ function createFinish(){
 //Create GamePad div
 function createGrid(){
     var GamePad = document.createElement('div')
-    GamePad.classList.add('GamePad')
+    GamePad.classList.add('Gamepad')
     GamePad.innerHTML +=`
     <div class="Edna"></div>
     <div class="basketball"></div>
@@ -100,6 +100,7 @@ function createInteractionPad(){
 
 
 // Backend Functions
+
 
 
 // Edna movement function
