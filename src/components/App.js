@@ -22,6 +22,7 @@ import ShopingPage from './ShopingPage/ShopingPage';
 import LandingPage from './LandingPage/LandingPage';
 import AboutPage from './AboutPage/AboutPage';
 import SalesPage from './SalesPage/SalesPage';
+import MoleGame from './Games/WhackAMole/WhackAMole';
 
 function App() {
 
@@ -32,19 +33,20 @@ function App() {
           <Route exact path="/AngryBirds" component={AngryBirds} />
           <Route exact path="/MissionMars" component={MissionMars} />
           <Route exact path="/MonkeyMultiplier" component={MonkeyMultiplier} />
-          <Route exact path="/Login" component={Login} />
-          <Route exact path="/Signup" component={Signup}/>
-          <Route exact path="/CodeEditor" component={CodeEditor}/>
-          <Route exact path="/" component={LandingPage}/>
           <Route exact path="/BowlingGame" component={BowlingGame}/>
           <Route exact path="/ShopingPage" component={ShopingPage}/>
           <Route exact path="/ClockGame" component={ClockGame}/>
           <Route exact path="/AlienGame" component={AlienGame}/>
           <Route exact path="/AvengersGame" component={AvengersGame}/>
+          <Route exact path="/MoleGame" component={MoleGame}/>
           {/* <Route exact path="/LandingPage" component={LandingPage}/> */}
+          <Route exact path="/Login" component={Login} />
+          <Route exact path="/Signup" component={Signup}/>
+          <Route exact path="/" component={LandingPage}/>
           <Route exact path="/AboutPage" component={AboutPage}/>
           <Route exact path="/CardGame" component={CardGame}/>
           <Route exact path="/SalesPage" component={SalesPage}/>
+          <Route exact path="/CodeEditor" component={CodeEditor}/>
 
         </Switch>
       </div>
