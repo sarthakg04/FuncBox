@@ -7,10 +7,15 @@ import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 
 
-import hero from './assets/hero.webp'
-import roadmap from './assets/roadmap.webp'
+// import hero from './assets/hero.webp'
+// import roadmap from './assets/roadmap.webp'
 
 export default function AboutPage() {
+
+
+  const hero = 'https://ik.imagekit.io/funcboxImages/AboutPage_assets/hero_69A9xPXf0Ys.svg?updatedAt=1633351401170'
+  const roadmap = 'https://ik.imagekit.io/funcboxImages/AboutPage_assets/roadmap_4smn76KAF.webp?updatedAt=1633351397597'
+
 
   useEffect(()=>{
     var dropdown = document.getElementsByClassName("question");

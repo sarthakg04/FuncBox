@@ -6,15 +6,23 @@ import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 
 
-import homepageimg from './assets/homepageimg.webp'
-import downArrow from './assets/downArrow.svg'
-import roadmap from './assets/roadmap.svg'
-import howWorks from './assets/howWorks.png'
-import logo from './assets/logo.svg'
-import img1 from './assets/img1.png'
-import img2 from './assets/img2.png'
+// import downArrow from './assets/downArrow.svg'
+// import roadmap from './assets/roadmap.svg'
+// import howWorks from './assets/howWorks.png'
+// import logo from './assets/logo.svg'
+// import img1 from './assets/img1.png'
+// import img2 from './assets/img2.png'
 
 export default function LandingPage() {
+  
+  const homepageimg = 'https://ik.imagekit.io/funcboxImages/LandingPage_assets/homepageimg_eAE7Ev4l4.webp?updatedAt=1633350407186'
+  const downArrow = 'https://ik.imagekit.io/funcboxImages/LandingPage_assets/downArrow_ERZrukLPOgq.svg?updatedAt=1633350406566'
+  const roadmap = 'https://ik.imagekit.io/funcboxImages/LandingPage_assets/roadmap_KPBKbYICZ19.svg?updatedAt=1633350423096'
+  const howWorks = 'https://ik.imagekit.io/funcboxImages/LandingPage_assets/howWorks_d9jnCExuqeK.png?updatedAt=1633350408220'
+  const logo = 'https://ik.imagekit.io/funcboxImages/LandingPage_assets/logo_48r9sJgkg.svg?updatedAt=1633350411013'
+  const img1 = 'https://ik.imagekit.io/funcboxImages/LandingPage_assets/img1_oY6UgmjUV.png?updatedAt=1633350409016'
+  const img2 = 'https://ik.imagekit.io/funcboxImages/LandingPage_assets/img2_WF1sZcUIzJu.png?updatedAt=1633350410095'
+
   return (
     <div>
       <Helmet>

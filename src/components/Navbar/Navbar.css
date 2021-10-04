@@ -53,14 +53,6 @@
   display: none;
 }
 
-.footer {
-  background: url('./assets/footerback.webp');
-  background-size: cover;
-  background-position: center;
-  padding-top: 64px;
-  font-family: 'Montserrat', sans-serif;
-}
-
 .getInTouch {
   padding: 32px;
   border-top: 2px solid white;
@@ -188,7 +180,7 @@
     padding: 8px 64px 8px 32px;
   }
 
-  .footer .madeWith p{
+  .footer .madeWith p {
     font-size: 14px;
   }
 
@@ -196,7 +188,7 @@
     width: 22px;
   }
 
-  .footer .terms a{
+  .footer .terms a {
     font-size: 14px;
   }
 }
@@ -208,13 +200,5 @@
 
   .footer .social {
     margin-top: 16px;
-
   }
-
-
-
-}
-
-.current_about {
-  background-image: url(./assets/about_current.png);
 }
