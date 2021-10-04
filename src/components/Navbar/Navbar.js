@@ -23,13 +23,13 @@ export default function Navbar(props) {
 
 
     
-    const about = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/about_-rZUdGtFCsY.svg?updatedAt=1633351777829'
+    const about = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/about_Kyi50psMa.png?updatedAt=1633368974643'
     const about_current = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/about_current_ZVYrXtG6O.png?updatedAt=1633351778318'
-    const home = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/home_r6PBvFfFSpG.svg?updatedAt=1633351779214'
+    const home = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/home_TNxeUkAI2oj.png?updatedAt=1633369073852'
     const home_current = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/home_current_7g2zrFN17.png?updatedAt=1633351779952'
     const logo = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/logo_fABtRefL6.png?updatedAt=1633358637425'
-    const login = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/login_f5moWLsfuTP.svg?updatedAt=1633351780800'
-    const shop = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/shop_YYMM9_1YQPk.svg?updatedAt=1633351782401'
+    const login = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/login_OS_KcRsPy.png?updatedAt=1633368915926'
+    const shop = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/shop_evdV8iuaBL0.png?updatedAt=1633369146900'
     const shop_current = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/shop_current_zUZ1xbFqsMTZ.png?updatedAt=1633351783276'
 
 

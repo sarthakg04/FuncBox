@@ -15,12 +15,12 @@ import Footer from '../Footer/Footer'
 export default function SalesPage() {
 
     
-    const kids = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/kids_tsV5nzbV7Zq.svg?updatedAt=1633351231317'
-    const box = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/boxsvg_9qQ2paTZ0.svg?updatedAt=1633351230066'
-    const van = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/van_VUp2Mj3dsj_.svg?updatedAt=1633351226380'
-    const new_pic = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/new_0BXgbae5-.svg?updatedAt=1633351225599'
-    const check = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/check_JDQENloqdTN.svg?updatedAt=1633351223103'
-    const house = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/house_un73TxYA7.svg?updatedAt=1633351230661'
+    const kids = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/kids_KxFxgItfQ.png?updatedAt=1633370064495'
+    const box = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/boxsvg_htn4YEPUA.png?updatedAt=1633370132694'
+    const van = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/van_7wcuQOH469p.png?updatedAt=1633370212059'
+    const new_pic = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/new_D67a6cI2D.png?updatedAt=1633370211173'
+    const check = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/check_WVyL7QyckNr.png?updatedAt=1633370210466'
+    const house = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/house_SKMIzZuL3.png?updatedAt=1633370327541'
 
     return (
             <div>

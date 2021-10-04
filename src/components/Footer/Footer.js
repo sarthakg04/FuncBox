@@ -14,9 +14,9 @@ export default function Footer() {
 
     
     const bell = "https://ik.imagekit.io/funcboxImages/Footer_assets/bell_gFHth6UrGbt.png?updatedAt=1633351576358"
-    const fb = "https://ik.imagekit.io/funcboxImages/Footer_assets/fb_BoNQv_X7I.svg?updatedAt=1633351576900"
-    const linked = "https://ik.imagekit.io/funcboxImages/Footer_assets/linked_40eXXl0u4.svg?updatedAt=1633351578507"
-    const insta = "https://ik.imagekit.io/funcboxImages/Footer_assets/insta_e6KtIxAxOs-.svg?updatedAt=1633351577684"
+    const fb = "https://ik.imagekit.io/funcboxImages/Footer_assets/fb_1loztYmLx.png?updatedAt=1633369897725"
+    const linked = "https://ik.imagekit.io/funcboxImages/Footer_assets/linked_VElNZJlpu.png?updatedAt=1633369896020"
+    const insta = "https://ik.imagekit.io/funcboxImages/Footer_assets/insta_ESr1g9XOwSQ.png?updatedAt=1633369896765"
 
 
     const [getInTouchEmail,setGetInTouchEmail] = useState('');
