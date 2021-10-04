@@ -17,9 +17,9 @@ export default function LandingPage() {
   
   const homepageimg = 'https://ik.imagekit.io/funcboxImages/LandingPage_assets/homepageimg_eAE7Ev4l4.webp?updatedAt=1633350407186'
   const downArrow = 'https://ik.imagekit.io/funcboxImages/LandingPage_assets/downArrow_ERZrukLPOgq.svg?updatedAt=1633350406566'
-  const roadmap = 'https://ik.imagekit.io/funcboxImages/LandingPage_assets/roadmap_KPBKbYICZ19.svg?updatedAt=1633350423096'
+  const roadmap = 'https://ik.imagekit.io/funcboxImages/LandingPage_assets/roadmap_dQ8uqJcgYEn.png?updatedAt=1633358515221'
   const howWorks = 'https://ik.imagekit.io/funcboxImages/LandingPage_assets/howWorks_d9jnCExuqeK.png?updatedAt=1633350408220'
-  const logo = 'https://ik.imagekit.io/funcboxImages/LandingPage_assets/logo_48r9sJgkg.svg?updatedAt=1633350411013'
+  const logo = 'https://ik.imagekit.io/funcboxImages/LandingPage_assets/logo_OosTCu13D.png?updatedAt=1633358560424'
   const img1 = 'https://ik.imagekit.io/funcboxImages/LandingPage_assets/img1_oY6UgmjUV.png?updatedAt=1633350409016'
   const img2 = 'https://ik.imagekit.io/funcboxImages/LandingPage_assets/img2_WF1sZcUIzJu.png?updatedAt=1633350410095'
 
