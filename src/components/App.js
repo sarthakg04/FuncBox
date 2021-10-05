@@ -23,6 +23,7 @@ import AboutPage from './AboutPage/AboutPage';
 import SalesPage from './SalesPage/SalesPage';
 import MoleGame from './Games/WhackAMole/WhackAMole';
 import IncrediblesGame from './Games/IncrediblesGame/IncrediblesGame';
+import TeamsPage from './TeamsPage/TeamsPage';
 
 function App() {
 
@@ -46,7 +47,7 @@ function App() {
           <Route exact path="/CardGame" component={CardGame}/>
           <Route exact path="/SalesPage" component={SalesPage}/>
           <Route exact path="/CodeEditor" component={CodeEditor}/>
-
+          <Route exact path="/TeamsPage" component={TeamsPage} />
         </Switch>
       </div>
      </Router>

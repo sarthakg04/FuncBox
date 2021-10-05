@@ -1,7 +1,9 @@
 import React from 'react'
-import { useState } from 'react'
+import axios from 'axios'
+import { useState, useEffect } from 'react'
 
 import './Footer.css'
+import { Link } from 'react-router-dom'
 
 
 // import bell from "./assets/bell.png"
@@ -11,32 +13,49 @@ import './Footer.css'
 
 export default function Footer() {
 
-
+    
     
     const bell = "https://ik.imagekit.io/funcboxImages/Footer_assets/bell_gFHth6UrGbt.png?updatedAt=1633351576358"
     const fb = "https://ik.imagekit.io/funcboxImages/Footer_assets/fb_1loztYmLx.png?updatedAt=1633369897725"
     const linked = "https://ik.imagekit.io/funcboxImages/Footer_assets/linked_VElNZJlpu.png?updatedAt=1633369896020"
     const insta = "https://ik.imagekit.io/funcboxImages/Footer_assets/insta_ESr1g9XOwSQ.png?updatedAt=1633369896765"
 
+    
 
     const [getInTouchEmail,setGetInTouchEmail] = useState('');
 
 
-    const handleSubmit = () => {
-        alert(`We will reach you out at ${getInTouchEmail}`);
+    
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        // alert(`We will reach you out at ${getInTouchEmail}`);
+        const data = axios.get(`https://salty-escarpment-75223.herokuapp.com/email/${getInTouchEmail}`);
+        // console.log(data)
+        setGetInTouchEmail('')
     }
+
+    // useEffect(async () => {
+        
+
+    // },[]);
+
     return (
         <div>
             <div className="footer">
             <div className="getInTouch">
                 <p>Get in Touch</p>
                 <div className='input'>
-                <input type="email" name="email" onChange = { e => setGetInTouchEmail(e.target.value) }/>
-                <button onClick={handleSubmit}><img src={bell} alt="bell" /></button>
+                <form onSubmit={handleSubmit}>
+                    <input type="email" name="email" onChange = { e => setGetInTouchEmail(e.target.value) }/>
+                    <button type="submit"><img src={bell} alt="bell" /></button>
+                </form>
                 </div>
             </div>
             <div className="madeWith">
-                <p>Made With ❤️  by Team FuncBox </p>
+                <Link to='/TeamsPage'>
+                <p style={{textDecoration: "none", color:'white'}}>Made With ❤️  by Team FuncBox </p>
+                </Link>
             </div>
             <div className="links">
                 <div className="social">
@@ -53,6 +72,7 @@ export default function Footer() {
                 <div className="terms">
                 <ul>
                     <li>
+                    
                     <a href="#">Join our Team</a>
                     </li>
                     <li>

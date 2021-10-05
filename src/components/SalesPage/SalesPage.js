@@ -181,7 +181,7 @@ export default function SalesPage() {
                 <div className="black">
                 </div>
                 <div className="plan-cover">
-                    <h1>Delux</h1>
+                    <h1>Deluxe</h1>
                     <div className="price">
                     <p>Rs. 1199/-</p>
                     <p className="atc">Add to Cart <span><i className="fas fa-shopping-cart" /></span> </p>
