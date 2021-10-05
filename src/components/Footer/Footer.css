@@ -97,6 +97,13 @@ button {
 }
 
 @media (max-width: 600px) {
+  .Notification_btn {
+    position: relative;
+    left: -25%;
+    top: 4px;
+    cursor: pointer;
+  }
+
   .getInTouch {
     flex-direction: column;
     justify-content: center;
@@ -139,4 +146,11 @@ button {
 a {
   color: inherit; /* blue colors for links too */
   text-decoration: inherit; /* no underline */
+}
+
+.Notification_btn {
+  position: relative;
+  left: -10%;
+  top: 4px;
+  cursor: pointer;
 }
