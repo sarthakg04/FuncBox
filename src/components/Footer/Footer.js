@@ -29,7 +29,7 @@ export default function Footer() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         // alert(`We will reach you out at ${getInTouchEmail}`);
-        const data = axios.get(`https://fa37-2409-4064-4-d4fc-b983-6f0f-6df1-1f92.ngrok.io/email/${getInTouchEmail}`);
+        const data = axios.get(`https://salty-escarpment-75223.herokuapp.com/email/${getInTouchEmail}`);
         console.log(data)
     }
 
