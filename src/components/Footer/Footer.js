@@ -31,7 +31,8 @@ export default function Footer() {
         e.preventDefault()
         // alert(`We will reach you out at ${getInTouchEmail}`);
         const data = axios.get(`https://salty-escarpment-75223.herokuapp.com/email/${getInTouchEmail}`);
-        console.log(data)
+        // console.log(data)
+        setGetInTouchEmail('')
     }
 
     // useEffect(async () => {
@@ -53,7 +54,7 @@ export default function Footer() {
             </div>
             <div className="madeWith">
                 <Link to='/TeamsPage'>
-                <p>Made With ❤️  by Team FuncBox </p>
+                <p style={{textDecoration: "none", color:'white'}}>Made With ❤️  by Team FuncBox </p>
                 </Link>
             </div>
             <div className="links">
