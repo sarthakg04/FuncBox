@@ -46,10 +46,10 @@ export default function Footer() {
             <div className="getInTouch">
                 <p>Get in Touch</p>
                 <div className='input'>
-                <form onSubmit={handleSubmit}>
+                {/* <form onSubmit={handleSubmit}> */}
                     <input type="email" name="email" value={getInTouchEmail} onChange = { e => setGetInTouchEmail(e.target.value) }/>
-                    <button type="submit"><img src={bell} alt="bell" /></button>
-                </form>
+                    <button onClick={handleSubmit} className="Notification_btn" style={{background: `url(${bell}) no-repeat center`, minWidth:"30px", minHeight: "30px"}} type="submit"></button>
+                {/* </form> */}
                 </div>
             </div>
             <div className="madeWith">

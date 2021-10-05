@@ -128,7 +128,8 @@
   }
 
   .navigation .logo {
-    width: 175px !important;
+    width: 200px !important;
+    height: 79px !important;
   }
   .navigation .link a {
     margin-right: 20px;
