@@ -52,7 +52,9 @@ export default function Footer() {
                 </div>
             </div>
             <div className="madeWith">
+                <Link to='/TeamsPage'>
                 <p>Made With ❤️  by Team FuncBox </p>
+                </Link>
             </div>
             <div className="links">
                 <div className="social">
@@ -69,9 +71,8 @@ export default function Footer() {
                 <div className="terms">
                 <ul>
                     <li>
-                    <Link to='/TeamsPage'>
+                    
                     <a href="#">Join our Team</a>
-                    </Link>
                     </li>
                     <li>
                     <a href="#">Terms</a>
