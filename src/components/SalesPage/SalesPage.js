@@ -5,14 +5,23 @@ import './SalesPage.css'
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 
-import kids from './assets/kids.svg'
-import box from './assets/boxsvg.svg'
-import van from './assets/van.svg'
-import new_pic from './assets/new.svg'
-import check from './assets/check.svg'
-import house from './assets/house.svg'
+// import kids from './assets/kids.svg'
+// import box from './assets/boxsvg.svg'
+// import van from './assets/van.svg'
+// import new_pic from './assets/new.svg'
+// import check from './assets/check.svg'
+// import house from './assets/house.svg'
 
 export default function SalesPage() {
+
+    
+    const kids = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/kids_KxFxgItfQ.png?updatedAt=1633370064495'
+    const box = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/boxsvg_htn4YEPUA.png?updatedAt=1633370132694'
+    const van = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/van_7wcuQOH469p.png?updatedAt=1633370212059'
+    const new_pic = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/new_D67a6cI2D.png?updatedAt=1633370211173'
+    const check = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/check_WVyL7QyckNr.png?updatedAt=1633370210466'
+    const house = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/house_SKMIzZuL3.png?updatedAt=1633370327541'
+
     return (
             <div>
                 <Helmet>

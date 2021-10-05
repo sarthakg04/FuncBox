@@ -18,7 +18,6 @@ import BowlingGame from '../components/Games/BowlingGame/BowlingGame';
 import ClockGame from '../components/Games/ClockGame/ClockGame'
 import AlienGame from '../components/Games/AlienGame/AlienGame';
 import CardGame from '../components/Games/CardGame/cardGame';
-import ShopingPage from './ShopingPage/ShopingPage';
 import LandingPage from './LandingPage/LandingPage';
 import AboutPage from './AboutPage/AboutPage';
 import SalesPage from './SalesPage/SalesPage';
@@ -35,7 +34,6 @@ function App() {
           <Route exact path="/MissionMars" component={MissionMars} />
           <Route exact path="/MonkeyMultiplier" component={MonkeyMultiplier} />
           <Route exact path="/BowlingGame" component={BowlingGame}/>
-          <Route exact path="/ShopingPage" component={ShopingPage}/>
           <Route exact path="/ClockGame" component={ClockGame}/>
           <Route exact path="/AlienGame" component={AlienGame}/>
           <Route exact path="/AvengersGame" component={AvengersGame}/>

@@ -4,12 +4,20 @@ import { useState } from 'react'
 import './Footer.css'
 
 
-import bell from "./assets/bell.png"
-import fb from "./assets/fb.svg"
-import linked from "./assets/linked.svg"
-import insta from "./assets/insta.svg"
+// import bell from "./assets/bell.png"
+// import fb from "./assets/fb.svg"
+// import linked from "./assets/linked.svg"
+// import insta from "./assets/insta.svg"
 
 export default function Footer() {
+
+
+    
+    const bell = "https://ik.imagekit.io/funcboxImages/Footer_assets/bell_gFHth6UrGbt.png?updatedAt=1633351576358"
+    const fb = "https://ik.imagekit.io/funcboxImages/Footer_assets/fb_1loztYmLx.png?updatedAt=1633369897725"
+    const linked = "https://ik.imagekit.io/funcboxImages/Footer_assets/linked_VElNZJlpu.png?updatedAt=1633369896020"
+    const insta = "https://ik.imagekit.io/funcboxImages/Footer_assets/insta_ESr1g9XOwSQ.png?updatedAt=1633369896765"
+
 
     const [getInTouchEmail,setGetInTouchEmail] = useState('');
 
