@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 
 import './Footer.css'
+import { Link } from 'react-router-dom'
 
 
 // import bell from "./assets/bell.png"
@@ -68,7 +69,9 @@ export default function Footer() {
                 <div className="terms">
                 <ul>
                     <li>
+                    <Link to='/TeamsPage'>
                     <a href="#">Join our Team</a>
+                    </Link>
                     </li>
                     <li>
                     <a href="#">Terms</a>

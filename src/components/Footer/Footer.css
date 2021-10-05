@@ -33,7 +33,7 @@
   border: 0;
   outline: 0;
   margin: 8px;
-  width: 500px;
+  width: 500px !important;
   font-size: 20px;
   margin-left: 64px;
 }
@@ -82,7 +82,7 @@ button {
 
 @media (max-width: 1000px) {
   .getInTouch input {
-    width: 300px;
+    width: 300px !important;
   }
 
   .footer .social img {
@@ -92,7 +92,7 @@ button {
 
 @media (max-width: 767px) {
   .getInTouch input {
-    width: 50%;
+    width: 50% !important;
   }
 }
 
@@ -109,7 +109,7 @@ button {
 
   .getInTouch input {
     margin-left: 0;
-    width: 100%;
+    width: 100% !important;
     padding: 8px 64px 8px 32px;
   }
 
