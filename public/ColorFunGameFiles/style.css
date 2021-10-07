@@ -68,6 +68,9 @@ body {
   border-radius: 50%;
   border: 2px solid black;
 }
+.circle.filled {
+  background-color: black;
+}
 .flask_image {
   width: 90%;
 }

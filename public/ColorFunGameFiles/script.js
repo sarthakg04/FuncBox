@@ -119,11 +119,14 @@ function getOptions(color) {
 }
 function optionClick(e) {
   if (selected.length < 2) {
+    let circle = e.getElementsByClassName("circle")[0];
     let flask_card = e.getElementsByClassName("flask_card")[0];
     if (flask_card.classList.contains("active")) {
+      circle.classList.remove("filled");
       flask_card.classList.remove("active");
       selected = selected.filter((ele) => ele !== flask_card.classList[1]);
     } else {
+      circle.classList.add("filled");
       flask_card.classList.add("active");
       let flask_color = flask_card.classList[1];
       selected.push(flask_color);
@@ -157,6 +160,7 @@ function showCorrect() {
 function showWrong() {
   let options_div = document.getElementsByClassName("options")[0];
   let selected_options = options_div.getElementsByClassName("active");
+  let selected_circles = options_div.getElementsByClassName("filled");
   selected_options[0].classList.add("wrong");
   selected_options[1].classList.add("wrong");
   setTimeout(() => {
@@ -165,6 +169,8 @@ function showWrong() {
     selected_options[0].classList.remove("wrong");
     selected_options[1].classList.remove("active");
     selected_options[0].classList.remove("active");
+    selected_circles[1].classList.remove("filled");
+    selected_circles[0].classList.remove("filled");
   }, 1000);
 }
 function nextQuestion() {
