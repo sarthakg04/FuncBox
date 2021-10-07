@@ -10,14 +10,5 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
-}
-
-@media screen and (min-width: 480px) {
-  .TeamsImg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
+  width: 90%;
 }
