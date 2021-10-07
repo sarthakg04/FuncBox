@@ -22,6 +22,28 @@ let colorHex = {
   brown: "#663939",
   dark_green: "#125c10",
 };
+let flask_remote_images = {
+  red: "https://ik.imagekit.io/funcboxImages/ColorGame_assets/red_flask_tQ6wqfGadd.png?updatedAt=1633594985652",
+  blue: "https://ik.imagekit.io/funcboxImages/ColorGame_assets/blue_flask_58nVTmxtA2.png?updatedAt=1633594985656",
+  black:
+    "https://ik.imagekit.io/funcboxImages/ColorGame_assets/black_flask_u-iesk9Cqr.png?updatedAt=1633594985618",
+  orange:
+    "https://ik.imagekit.io/funcboxImages/ColorGame_assets/orange_flask_5133Za_fIrEJ.png?updatedAt=1633594985638",
+  pink: "https://ik.imagekit.io/funcboxImages/ColorGame_assets/pink_flask_Km6k1OkFvge0.png?updatedAt=1633594985620",
+  white:
+    "https://ik.imagekit.io/funcboxImages/ColorGame_assets/white_flask_m_CH-mQd8l.png?updatedAt=1633594985599",
+  brown:
+    "https://ik.imagekit.io/funcboxImages/ColorGame_assets/brown_flask_TaUIUCt05tkL.png?updatedAt=1633594985634",
+  dark_green:
+    "https://ik.imagekit.io/funcboxImages/ColorGame_assets/dark_green_flask_w2Rw4Dinw_.png?updatedAt=1633594985694",
+  green:
+    "https://ik.imagekit.io/funcboxImages/ColorGame_assets/green_flask_mwtkI7X5l9jA.png?updatedAt=1633594985643",
+  grey: "https://ik.imagekit.io/funcboxImages/ColorGame_assets/grey_flask_DigtzQD7ogoH.png?updatedAt=1633594985715",
+  yellow:
+    "https://ik.imagekit.io/funcboxImages/ColorGame_assets/yellow_flask_7C3y7aYOJzH.png?updatedAt=1633594985602",
+  purple:
+    "https://ik.imagekit.io/funcboxImages/ColorGame_assets/purple_flask_-lpDcfyQAoQK.png?updatedAt=1633594985631",
+};
 let flask_images = {
   red: "./ColorFunGameFiles/assets/red_flask.png",
   blue: "./ColorFunGameFiles/assets/blue_flask.png",
@@ -92,7 +114,9 @@ function getQuestionHTML(color) {
   return queshtml;
 }
 function getFlaskCard(color) {
-  let card = `<div class="flask_card ${color}" ><img class="flask_image" src=${flask_images[color]}></div>`;
+  let card = `<div class="flask_card ${color}" ><img class="flask_image" src=${
+    flask_remote_images[color] ?? flask_images[color]
+  }></div>`;
   return card;
 }
 
