@@ -25,6 +25,7 @@
 .getInTouch .input {
   display: flex;
   align-items: center;
+  margin-left: 10%;
 }
 
 .getInTouch input {
@@ -151,6 +152,13 @@ a {
 .Notification_btn {
   position: relative;
   left: -10%;
-  top: 4px;
   cursor: pointer;
 }
+
+@media (max-width: 425px) {
+  .Notification_btn {
+    left: -17%;
+    top: -1px;
+  }
+}
+
