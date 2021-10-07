@@ -49,6 +49,11 @@
   margin-top: 32px;
 }
 
+.madeWith a{
+  text-decoration: none;
+  color : white;
+}
+
 .footer .links {
   display: flex;
   padding: 32px;
