@@ -23,16 +23,18 @@ let colorHex = {
   dark_green: "#125c10",
 };
 let flask_images = {
-  red: "./ColorFunGameFiles/assets/red_flask.svg",
-  blue: "./ColorFunGameFiles/assets/blue_flask.svg",
-  black: "./ColorFunGameFiles/assets/black_flask.svg",
-  orange: "./ColorFunGameFiles/assets/orange_flask.svg",
-  pink: "./ColorFunGameFiles/assets/pink_flask.svg",
-  white: "./ColorFunGameFiles/assets/white_flask.svg",
-  brown: "./ColorFunGameFiles/assets/brown_flask.svg",
-  dark_green: "./ColorFunGameFiles/assets/dark_green_flask.svg",
-  grey: "./ColorFunGameFiles/assets/grey_flask.svg",
-  yellow: "./ColorFunGameFiles/assets/yellow_flask.svg",
+  red: "./ColorFunGameFiles/assets/red_flask.png",
+  blue: "./ColorFunGameFiles/assets/blue_flask.png",
+  black: "./ColorFunGameFiles/assets/black_flask.png",
+  orange: "./ColorFunGameFiles/assets/orange_flask.png",
+  pink: "./ColorFunGameFiles/assets/pink_flask.png",
+  white: "./ColorFunGameFiles/assets/white_flask.png",
+  brown: "./ColorFunGameFiles/assets/brown_flask.png",
+  dark_green: "./ColorFunGameFiles/assets/dark_green_flask.png",
+  green: "./ColorFunGameFiles/assets/green_flask.png",
+  grey: "./ColorFunGameFiles/assets/grey_flask.png",
+  yellow: "./ColorFunGameFiles/assets/yellow_flask.png",
+  purple: "./ColorFunGameFiles/assets/purple_flask.png",
 };
 
 let primary_colors = ["red", "blue", "yellow", "white", "black"];
@@ -61,7 +63,7 @@ function createBackground() {
 
 function fillBackground() {
   document.getElementsByClassName("container")[0].style.backgroundImage =
-    "url(./ColorFunGameFiles/assets/background.svg)";
+    "url(./ColorFunGameFiles/assets/background.png)";
 }
 
 function createQuestionCard() {
@@ -90,7 +92,7 @@ function getQuestionHTML(color) {
   return queshtml;
 }
 function getFlaskCard(color) {
-  let card = `<div class="flask_card ${color}" ><img class="flask_image" src="./ColorFunGameFiles/assets/${color}_flask.svg"></div>`;
+  let card = `<div class="flask_card ${color}" ><img class="flask_image" src=${flask_images[color]}></div>`;
   return card;
 }
 
