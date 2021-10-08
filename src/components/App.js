@@ -13,6 +13,7 @@ import BowlingGame from "../components/Games/BowlingGame/BowlingGame";
 import ClockGame from "../components/Games/ClockGame/ClockGame";
 import AlienGame from "../components/Games/AlienGame/AlienGame";
 import CardGame from "../components/Games/CardGame/cardGame";
+import TemperatureConversions from "../components/Games/TemperatureConversions/TemperatureConversions";
 import LandingPage from "./LandingPage/LandingPage";
 import AboutPage from "./AboutPage/AboutPage";
 import SalesPage from "./SalesPage/SalesPage";
@@ -36,6 +37,7 @@ function App() {
           <Route exact path="/MoleGame" component={MoleGame} />
           <Route exact path="/IncrediblesGame" component={IncrediblesGame} />
           <Route exact path="/ColorGame" component={ColorFun} />
+          <Route exact path="/TemperatureConversions" component={TemperatureConversions} />
           <Route exact path="/Login" component={Login} />
           <Route exact path="/Signup" component={Signup} />
           <Route exact path="/" component={LandingPage} />
