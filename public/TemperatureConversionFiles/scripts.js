@@ -1,6 +1,6 @@
 // Frontend functions
 // createGamepad()
-// fill()
+// fillBackground()
 // createInteractionPad()
 
 
@@ -22,7 +22,7 @@ function fillBackground() {
   function createInteractionPad(){
     container.innerHTML += `
     <div class="celsiusInput">
-    <input type="text" id="celsius" name="celsius">
+    <input type="number" id="celsius" name="celsius">
     <button id="orangeBtn" onClick="celsiusOutput()">
     Submit
     </button>
@@ -57,7 +57,7 @@ function fillBackground() {
     "url(https://ik.imagekit.io/funcboxImages/TemperatureConversions_assets/fahrenheit_Gvip4p9DhuR.png?updatedAt=1633682944599)";
     container.innerHTML = `
     <div class="fahrenheitInput">
-    <input type="text" id="fahrenheit" name="fahrenheit">
+    <input type="number" id="fahrenheit" name="fahrenheit">
     <button id="greenBtn" onClick="fahrenheitOutput()">
     Submit
     </button>
@@ -91,7 +91,7 @@ function fillBackground() {
     "url(https://ik.imagekit.io/funcboxImages/TemperatureConversions_assets/kelvin_nox2GCaZtp.png?updatedAt=1633682945276)";
     container.innerHTML = `
     <div class="kelvinInput">
-    <input type="text" id="kelvin" name="kelvin">
+    <input type="number" id="kelvin" name="kelvin">
     <button id="pinkBtn" onClick="kelvinOutput()">
     Submit
     </button>
@@ -124,7 +124,7 @@ function fillBackground() {
       "url(https://ik.imagekit.io/funcboxImages/TemperatureConversions_assets/celsius_jQ8DLWgS6.png?updatedAt=1633682943711)";
       container.innerHTML = `
       <div class="celsiusInput">
-      <input type="text" id="celsius" name="celsius">
+      <input type="number" id="celsius" name="celsius">
       <button id="orangeBtn" onClick="celsiusOutput()">
       Submit
       </button>
