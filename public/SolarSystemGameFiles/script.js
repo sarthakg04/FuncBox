@@ -23,6 +23,23 @@ let imageLinks = {
   uranus: `./SolarSystemGameFiles/assets/uranus.png`,
   neptune: `./SolarSystemGameFiles/assets/neptune.png`,
 };
+let imageRemoteLinks = {
+  background: `https://ik.imagekit.io/funcboxImages/SolarSystemGame_assets/background_8KmNg0hHq5W.png?updatedAt=1633756837255`,
+  orbits: `https://ik.imagekit.io/funcboxImages/SolarSystemGame_assets/orbits_XfU8h4tWL5.png?updatedAt=1633756837399`,
+  retry_icon: `https://ik.imagekit.io/funcboxImages/SolarSystemGame_assets/retry_icon_iePU8loMWtsh.png?updatedAt=1633756837267`,
+  endscreenbg: `https://ik.imagekit.io/funcboxImages/SolarSystemGame_assets/endscreenbg_KYbPM5EcTkyq.png?updatedAt=1633756837366`,
+  endscreenplanet: `https://ik.imagekit.io/funcboxImages/SolarSystemGame_assets/endscreenplanet_z_oO0apWerDS.png?updatedAt=1633756837356`,
+  endscreenship: `https://ik.imagekit.io/funcboxImages/SolarSystemGame_assets/endscreenship_9xz11Gax9m.png?updatedAt=1633756837363`,
+  sun: `https://ik.imagekit.io/funcboxImages/SolarSystemGame_assets/sun_9_FD60XjOG7.png?updatedAt=1633756837309`,
+  mercury: `https://ik.imagekit.io/funcboxImages/SolarSystemGame_assets/mercury_H43FFah9n.png?updatedAt=1633756837260`,
+  venus: `https://ik.imagekit.io/funcboxImages/SolarSystemGame_assets/venus_jm3a1nCw9zPl.png?updatedAt=1633756837311`,
+  earth: `https://ik.imagekit.io/funcboxImages/SolarSystemGame_assets/earth_QhuSVFUOV03I.png?updatedAt=1633756837358`,
+  mars: `https://ik.imagekit.io/funcboxImages/SolarSystemGame_assets/mars_oChTEe8elL.png?updatedAt=1633756837372`,
+  jupiter: `https://ik.imagekit.io/funcboxImages/SolarSystemGame_assets/jupiter_69vA_oPktf.png?updatedAt=1633756837377`,
+  saturn: `https://ik.imagekit.io/funcboxImages/SolarSystemGame_assets/saturn_7WcKydnx5tpO.png?updatedAt=1633756837409`,
+  uranus: `https://ik.imagekit.io/funcboxImages/SolarSystemGame_assets/uranus_fjaQOT5Q_.png?updatedAt=1633756837360`,
+  neptune: `https://ik.imagekit.io/funcboxImages/SolarSystemGame_assets/neptune_JSVNjzLcbk.png?updatedAt=1633756837384`,
+};
 
 let correctSequence = [
   "mercury",
@@ -55,19 +72,19 @@ function createBackground() {
 }
 function fillBackground() {
   let container = document.getElementById("container");
-  container.style.backgroundImage = `url(${imageLinks.background})`;
+  container.style.backgroundImage = `url(${imageRemoteLinks.background})`;
 }
 function createOrbits() {
   let orbitlayer = document.createElement("div");
   orbitlayer.className = "orbit_layer";
-  orbitlayer.innerHTML = `<img src="${imageLinks.orbits}">`;
+  orbitlayer.innerHTML = `<img src="${imageRemoteLinks.orbits}">`;
   document.getElementById("container").appendChild(orbitlayer);
   getPlanetPositions();
 }
 
 function createSun() {
   let sun = document.createElement("div");
-  sun.innerHTML = `<img src="${imageLinks.sun}">`;
+  sun.innerHTML = `<img src="${imageRemoteLinks.sun}">`;
   sun.className = "sun_layer";
   document.getElementById("container").appendChild(sun);
 }
@@ -107,7 +124,7 @@ function fillPlanets() {
 }
 
 function getPlanet(planetName) {
-  let planet = `<img id="${planetName}" onClick="planetClick(this)" class="planet thumb" src="${imageLinks[planetName]}" >`;
+  let planet = `<img id="${planetName}" onClick="planetClick(this)" class="planet thumb" src="${imageRemoteLinks[planetName]}" >`;
 
   let planetTray = document.getElementsByClassName("planet_tray")[0];
   let thumbnail = document.createElement("div");
@@ -176,14 +193,14 @@ function showGameEnd(correct) {
   }</h1>
   <p>${correct ? "" : "You did it wrong"}</p>
   <button class="retry_button" onClick="retry()">Retry <img class="retry_icon" src = "${
-    imageLinks.retry_icon
+    imageRemoteLinks.retry_icon
   }"></button>
   </div>`;
 
-  let endScreenPlanet = `<img class="endscreen_planet" src = "${imageLinks.endscreenplanet}">`;
-  let endScreenShip = `<img class="endscreen_ship" src = "${imageLinks.endscreenship}">`;
+  let endScreenPlanet = `<img class="endscreen_planet" src = "${imageRemoteLinks.endscreenplanet}">`;
+  let endScreenShip = `<img class="endscreen_ship" src = "${imageRemoteLinks.endscreenship}">`;
   endScreen.innerHTML = text + endScreenPlanet + endScreenShip;
-  endScreen.style.backgroundImage = `url(${imageLinks.endscreenbg})`;
+  endScreen.style.backgroundImage = `url(${imageRemoteLinks.endscreenbg})`;
   document.body.appendChild(endScreen);
 }
 function retry() {
