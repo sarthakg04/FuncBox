@@ -13,6 +13,7 @@ import BowlingGame from "../components/Games/BowlingGame/BowlingGame";
 import ClockGame from "../components/Games/ClockGame/ClockGame";
 import AlienGame from "../components/Games/AlienGame/AlienGame";
 import CardGame from "../components/Games/CardGame/cardGame";
+import TemperatureConversions from "../components/Games/TemperatureConversions/TemperatureConversions";
 import LandingPage from "./LandingPage/LandingPage";
 import AboutPage from "./AboutPage/AboutPage";
 import SalesPage from "./SalesPage/SalesPage";
@@ -20,6 +21,8 @@ import MoleGame from "./Games/WhackAMole/WhackAMole";
 import IncrediblesGame from "./Games/IncrediblesGame/IncrediblesGame";
 import TeamsPage from "./TeamsPage/TeamsPage";
 import ColorFun from "./Games/ColorFun/ColorFun";
+import MySolarSystem from "./Games/MySolarSystem/MySolarSystem";
+import LetsMakeItRain from './Games/LetsMakeItRain/LetsMakeItRain';
 
 function App() {
   return (
@@ -29,6 +32,8 @@ function App() {
           <Route exact path="/AngryBirds" component={AngryBirds} />
           <Route exact path="/MissionMars" component={MissionMars} />
           <Route exact path="/MonkeyMultiplier" component={MonkeyMultiplier} />
+          
+          <Route exact path="/LetsMakeItRain" component={LetsMakeItRain} />
           <Route exact path="/BowlingGame" component={BowlingGame} />
           <Route exact path="/ClockGame" component={ClockGame} />
           <Route exact path="/AlienGame" component={AlienGame} />
@@ -36,6 +41,8 @@ function App() {
           <Route exact path="/MoleGame" component={MoleGame} />
           <Route exact path="/IncrediblesGame" component={IncrediblesGame} />
           <Route exact path="/ColorGame" component={ColorFun} />
+          <Route exact path="/SolarGame" component={MySolarSystem} />
+          <Route exact path="/TemperatureConversions" component={TemperatureConversions} />
           <Route exact path="/Login" component={Login} />
           <Route exact path="/Signup" component={Signup} />
           <Route exact path="/" component={LandingPage} />
