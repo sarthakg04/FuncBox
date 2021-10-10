@@ -22,6 +22,7 @@ import IncrediblesGame from "./Games/IncrediblesGame/IncrediblesGame";
 import TeamsPage from "./TeamsPage/TeamsPage";
 import ColorFun from "./Games/ColorFun/ColorFun";
 import MySolarSystem from "./Games/MySolarSystem/MySolarSystem";
+import LetsMakeItRain from './Games/LetsMakeItRain/LetsMakeItRain';
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
           <Route exact path="/AngryBirds" component={AngryBirds} />
           <Route exact path="/MissionMars" component={MissionMars} />
           <Route exact path="/MonkeyMultiplier" component={MonkeyMultiplier} />
+          
+          <Route exact path="/LetsMakeItRain" component={LetsMakeItRain} />
           <Route exact path="/BowlingGame" component={BowlingGame} />
           <Route exact path="/ClockGame" component={ClockGame} />
           <Route exact path="/AlienGame" component={AlienGame} />

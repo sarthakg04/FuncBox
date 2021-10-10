@@ -1,0 +1,195 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.Phone {
+  /* margin: 0 auto 0 auto; */
+  /* border: 1px solid black; */
+  height: 535px;
+  width: 400px;
+  /* margin: 0; */
+  background-image: url('./assets/bg.png');
+}
+
+.Phone_rain_bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url('./assets/bg.png');
+}
+
+.GamePad {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  width: 287px;
+  border: 1px solid black;
+  margin: 0 auto 0 auto;
+  box-sizing: border-box;
+}
+
+.drop_grid {
+  position: relative;
+  top: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 55px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+}
+
+.drop_grid div {
+  height: 67px;
+  width: 55px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+}
+
+.drop_bg {
+  background: url('./assets/drop.png') no-repeat left;
+}
+
+.InteractionPad {
+  position: relative;
+  left: 35%;
+  margin-top: 10px;
+  width: fit-content;
+}
+
+.top_arrow {
+  background: url('./assets/top_arrow.png');
+  height: 50px;
+  width: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+.bottom_arrow {
+  background: url('./assets/bottom_arrow.png');
+  height: 50px;
+  width: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+.sun {
+  margin-left: auto;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  background: url('./assets/sun.png');
+  height: 171px;
+  width: 153px;
+}
+
+.rain {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  height: 181px;
+  width: 241px;
+  background: url('./assets/rain.png');
+}
+
+.rays_list {
+  position: absolute;
+}
+
+.ray_grid {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  height: 20px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+}
+
+.ray_1_grid {
+  /* 3 */
+  width: 100px;
+  top: 110px;
+  margin-left: 60px;
+  transform: rotate(-25deg);
+}
+
+.ray_2_grid {
+  /* 4 */
+  width: 130px;
+  top: 160px;
+  margin-left: 52px;
+  transform: rotate(-40deg);
+}
+
+.ray_3_grid {
+  /* 6 */
+  width: 190px;
+  top: 200px;
+  margin-left: 40px;
+  transform: rotate(-45deg);
+}
+
+.ray_4_grid {
+  /* 8 */
+  width: 250px;
+  top: 250px;
+  margin-left: 25px;
+  transform: rotate(-50deg);
+}
+
+.ray_grid div {
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  width: 30px;
+}
+
+.ray_bg {
+  background: url('./assets/ray.png') no-repeat center;
+}
+
+.temperature {
+  height: 150px;
+  width: 72px;
+  position: absolute;
+  top: 230px;
+  left: 240px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  transform: rotate(-20deg);
+}
+
+.temp_10 {
+  background: url('./assets/10.png');
+}
+.temp_20 {
+  background: url('./assets/20.png');
+}
+.temp_30 {
+  background: url('./assets/30.png');
+}
+.temp_40 {
+  background: url('./assets/40.png');
+}
+.temp_50 {
+  background: url('./assets/50.png');
+}
+.temp_60 {
+  background: url('./assets/60.png');
+}
+.temp_70 {
+  background: url('./assets/70.png');
+}
+.temp_80 {
+  background: url('./assets/80.png');
+}
+.temp_90 {
+  background: url('./assets/90.png');
+}
+.temp_100 {
+  background: url('./assets/100.png');
+}
+
+.restart_btn {
+  height: 27px;
+  width: 27px;
+  background: url('./assets/restart.png');
+  border: none;
+}
