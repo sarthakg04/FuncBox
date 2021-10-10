@@ -1,3 +1,12 @@
+// Frontend Functions for testing
+// fill()
+// createGamePad()
+// createDrop()
+// createSun()
+// generateRays()
+// createInteractionPad()
+
+
 var Phone
 var GamePad
 var drop_grid
@@ -5,7 +14,10 @@ var sun
 var rays_list
 var temperature
 var InteractionPad
-// original
+
+
+// original script var
+
 var current_drop_position = 0
 
 var current_ray1_position = 2
@@ -25,7 +37,8 @@ var rays_caught = 0
 
 var temperature
 
-// create Phone div
+// Frontend Functions
+
 function fill(){
     Phone = document.createElement('div')
     Phone.classList.add('Phone')

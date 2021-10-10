@@ -9,12 +9,12 @@ body {
   height: 535px;
   width: 400px;
   /* margin: 0; */
-  background-image: url('./assets/bg.png');
+  background-image: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/bg_mvaxzFGiivV.png?updatedAt=1633874665554');
 }
 
 .Phone_rain_bg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
-    url('./assets/bg.png');
+    url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/bg_mvaxzFGiivV.png?updatedAt=1633874665554');
 }
 
 .GamePad {
@@ -46,7 +46,8 @@ body {
 }
 
 .drop_bg {
-  background: url('./assets/drop.png') no-repeat left;
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/drop_5U7ZuQKhq0P.png?updatedAt=1633874667533')
+    no-repeat left;
 }
 
 .InteractionPad {
@@ -57,7 +58,7 @@ body {
 }
 
 .top_arrow {
-  background: url('./assets/top_arrow.png');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/top_arrow_TPJjyylOHsY.png?updatedAt=1633874672848');
   height: 50px;
   width: 50px;
   border: none;
@@ -65,7 +66,7 @@ body {
 }
 
 .bottom_arrow {
-  background: url('./assets/bottom_arrow.png');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/bottom_arrow_rC6MNTBNZ.png?updatedAt=1633874666533');
   height: 50px;
   width: 50px;
   border: none;
@@ -76,7 +77,7 @@ body {
   margin-left: auto;
   /* border: 1px solid black;
   box-sizing: border-box; */
-  background: url('./assets/sun.png');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/sun_8X0Vdv6Iv.png?updatedAt=1633874671909');
   height: 171px;
   width: 153px;
 }
@@ -87,7 +88,7 @@ body {
   margin-right: auto;
   height: 181px;
   width: 241px;
-  background: url('./assets/rain.png');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/rain_MNJ2H6D29.png?updatedAt=1633874668831');
 }
 
 .rays_list {
@@ -142,7 +143,8 @@ body {
 }
 
 .ray_bg {
-  background: url('./assets/ray.png') no-repeat center;
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/ray_YT-bO0kfYbx.png?updatedAt=1633874669596')
+    no-repeat center;
 }
 
 .temperature {
@@ -157,34 +159,34 @@ body {
 }
 
 .temp_10 {
-  background: url('./assets/10.png');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/10_b-Yp0CaMy.png?updatedAt=1633874656533');
 }
 .temp_20 {
-  background: url('./assets/20.png');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/20_PCuSFtKnoJ-.png?updatedAt=1633874656736');
 }
 .temp_30 {
-  background: url('./assets/30.png');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/30_c3x7qxB4h.png?updatedAt=1633874657606');
 }
 .temp_40 {
-  background: url('./assets/40.png');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/40_UnMOnDN7o.png?updatedAt=1633874658551');
 }
 .temp_50 {
-  background: url('./assets/50.png');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/50__jZKlrVat.png?updatedAt=1633874659413');
 }
 .temp_60 {
-  background: url('./assets/60.png');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/60_WZdpVWSEP.png?updatedAt=1633874660762');
 }
 .temp_70 {
-  background: url('./assets/70.png');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/70_FFtjnYjTV.png?updatedAt=1633874662032');
 }
 .temp_80 {
-  background: url('./assets/80.png');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/80_ask2y3l6C.png?updatedAt=1633874662617');
 }
 .temp_90 {
-  background: url('./assets/90.png');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/90_fSEjDpWfC9A.png?updatedAt=1633874663483');
 }
 .temp_100 {
-  background: url('./assets/100.png');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/100_RPVvXkDN1.png?updatedAt=1633874664495');
 }
 
 .restart_btn {
