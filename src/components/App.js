@@ -22,7 +22,8 @@ import IncrediblesGame from "./Games/IncrediblesGame/IncrediblesGame";
 import TeamsPage from "./TeamsPage/TeamsPage";
 import ColorFun from "./Games/ColorFun/ColorFun";
 import MySolarSystem from "./Games/MySolarSystem/MySolarSystem";
-import LetsMakeItRain from './Games/LetsMakeItRain/LetsMakeItRain';
+import LetsMakeItRain from "./Games/LetsMakeItRain/LetsMakeItRain";
+import WelcomePage from "./WelcomePage/WelcomePage";
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
           <Route exact path="/AngryBirds" component={AngryBirds} />
           <Route exact path="/MissionMars" component={MissionMars} />
           <Route exact path="/MonkeyMultiplier" component={MonkeyMultiplier} />
-          
+
           <Route exact path="/LetsMakeItRain" component={LetsMakeItRain} />
           <Route exact path="/BowlingGame" component={BowlingGame} />
           <Route exact path="/ClockGame" component={ClockGame} />
@@ -42,11 +43,16 @@ function App() {
           <Route exact path="/IncrediblesGame" component={IncrediblesGame} />
           <Route exact path="/ColorGame" component={ColorFun} />
           <Route exact path="/SolarGame" component={MySolarSystem} />
-          <Route exact path="/TemperatureConversions" component={TemperatureConversions} />
+          <Route
+            exact
+            path="/TemperatureConversions"
+            component={TemperatureConversions}
+          />
           <Route exact path="/Login" component={Login} />
           <Route exact path="/Signup" component={Signup} />
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/AboutPage" component={AboutPage} />
+          <Route exact path="/Welcome" component={WelcomePage} />
           <Route exact path="/CardGame" component={CardGame} />
           <Route exact path="/SalesPage" component={SalesPage} />
           <Route exact path="/CodeEditor" component={CodeEditor} />
