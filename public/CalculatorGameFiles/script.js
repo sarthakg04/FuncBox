@@ -86,6 +86,9 @@ function createKeypad() {
   let equal_btn = createKey("=");
   equal_btn.onclick = () => {
     let answer = eval(inputExpression);
+    if (!Number.isInteger(answer)) {
+      answer = answer.toFixed(2);
+    }
     inputExpression = "";
     document.getElementsByClassName("input_field")[0].value = inputExpression;
     document.getElementsByClassName("output_field")[0].value = answer;
