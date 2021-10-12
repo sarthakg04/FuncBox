@@ -1,3 +1,11 @@
+//Frontend Functions
+// createBackground()
+// setTheme('green')
+// fillBackground()
+// createOutputField()
+// createKeypad()
+// createInputField()
+
 let currentTheme = "orange";
 const themes = {
   purple: {
