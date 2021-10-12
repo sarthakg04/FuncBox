@@ -159,34 +159,44 @@ body {
 }
 
 .temp_10 {
-  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/10_TBQZ5lupQ.png?updatedAt=1634019442154');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/10_TBQZ5lupQ.png?updatedAt=1634019442154')
+    no-repeat center;
 }
 .temp_20 {
-  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/20_NhMH1bywJ.png?updatedAt=1634019442854');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/20_NhMH1bywJ.png?updatedAt=1634019442854')
+    no-repeat center;
 }
 .temp_30 {
-  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/30_xs1xFKElh.png?updatedAt=1634019443652');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/30_xs1xFKElh.png?updatedAt=1634019443652')
+    no-repeat center;
 }
 .temp_40 {
-  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/40_KOpmP_oNdMT5.png?updatedAt=1634019444479');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/40_KOpmP_oNdMT5.png?updatedAt=1634019444479')
+    no-repeat center;
 }
 .temp_50 {
-  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/50_VrhUQwlkuDK.png?updatedAt=1634019445311');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/50_VrhUQwlkuDK.png?updatedAt=1634019445311')
+    no-repeat center;
 }
 .temp_60 {
-  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/60_KytEGI4DB_GA.png?updatedAt=1634019446141');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/60_KytEGI4DB_GA.png?updatedAt=1634019446141')
+    no-repeat center;
 }
 .temp_70 {
-  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/70_66d5pTsSu3l.png?updatedAt=1634019446956');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/70_66d5pTsSu3l.png?updatedAt=1634019446956')
+    no-repeat center;
 }
 .temp_80 {
-  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/80_k8L84XfIs.png?updatedAt=1634019447848');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/80_k8L84XfIs.png?updatedAt=1634019447848')
+    no-repeat center;
 }
 .temp_90 {
-  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/90_fIXiM1nMnPp.png?updatedAt=1634019448591');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/90_fIXiM1nMnPp.png?updatedAt=1634019448591')
+    no-repeat center;
 }
 .temp_100 {
-  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/100_gbU985QzO.png?updatedAt=1634019449402');
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/100_gbU985QzO.png?updatedAt=1634019449402')
+    no-repeat center;
 }
 
 .restart_btn {
