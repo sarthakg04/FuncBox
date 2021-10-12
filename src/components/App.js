@@ -24,6 +24,7 @@ import ColorFun from "./Games/ColorFun/ColorFun";
 import MySolarSystem from "./Games/MySolarSystem/MySolarSystem";
 import LetsMakeItRain from "./Games/LetsMakeItRain/LetsMakeItRain";
 import WelcomePage from "./WelcomePage/WelcomePage";
+import Calculator from "./Games/Calculator/Calculator";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Route exact path="/IncrediblesGame" component={IncrediblesGame} />
           <Route exact path="/ColorGame" component={ColorFun} />
           <Route exact path="/SolarGame" component={MySolarSystem} />
+          <Route exact path="/Calculator" component={Calculator} />
           <Route
             exact
             path="/TemperatureConversions"
