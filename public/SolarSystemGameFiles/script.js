@@ -113,14 +113,11 @@ function createPlanetTray() {
   document.getElementById("container").appendChild(inventory);
 }
 function fillPlanets() {
-  getPlanet("mercury");
-  getPlanet("venus");
-  getPlanet("earth");
-  getPlanet("mars");
-  getPlanet("jupiter");
-  getPlanet("saturn");
-  getPlanet("uranus");
-  getPlanet("neptune");
+  let planets = [...correctSequence];
+  planets.sort(() => 0.5 - Math.random());
+  planets.forEach((planet) => {
+    getPlanet(planet);
+  });
 }
 
 function getPlanet(planetName) {
