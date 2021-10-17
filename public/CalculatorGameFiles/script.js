@@ -34,6 +34,15 @@ const imageLinks = {
   "/": "./CalculatorGameFiles/assets/divide.png",
   "=": "./CalculatorGameFiles/assets/equals.png",
 };
+const imageRemoteLinks = {
+  background:
+    "https://ik.imagekit.io/funcboxImages/Calculator_assets/background_ak9L3a08Za.png?updatedAt=1634455568937",
+  "+": "https://ik.imagekit.io/funcboxImages/Calculator_assets/plus_BEPUAwKiAq.png?updatedAt=1634455568721",
+  "-": "https://ik.imagekit.io/funcboxImages/Calculator_assets/minus_VN_sFHgDjr_.png?updatedAt=1634455568758",
+  "*": "https://ik.imagekit.io/funcboxImages/Calculator_assets/multiply_e3XgD-2Yxw.png?updatedAt=1634455568782",
+  "/": "https://ik.imagekit.io/funcboxImages/Calculator_assets/divide_Dkx949na4.png?updatedAt=1634455568723",
+  "=": "https://ik.imagekit.io/funcboxImages/Calculator_assets/equals_g3-6cqI-KQvA.png?updatedAt=1634455568723",
+};
 let inputExpression = "";
 function createBackground() {
   let container = document.createElement("div");
@@ -42,7 +51,7 @@ function createBackground() {
   document.body.appendChild(container);
   let mainContainer = document.createElement("div");
   mainContainer.classList.add("main_container");
-  mainContainer.style.backgroundImage = `url("${imageLinks.background}")`;
+  mainContainer.style.backgroundImage = `url("${imageRemoteLinks.background}")`;
   container.appendChild(mainContainer);
 }
 function setTheme(theme) {
@@ -100,7 +109,7 @@ function createKeypad() {
 function createKey(ch) {
   let image = "";
   if ("+=-*/".indexOf(ch) > -1) {
-    image = imageLinks[ch];
+    image = imageRemoteLinks[ch];
   }
   let key = document.createElement("button");
   key.classList.add("key");
