@@ -273,6 +273,12 @@ function ScanObject() {
     document.getElementById('cc').classList.toggle('active')
     setTimeout(()=>{
     document.querySelectorAll('.grid div')[currentRoverPosition].classList.remove('scanning')
+    if( document.querySelectorAll('.grid div')[currentRoverPosition].classList.contains('goodrocks') ){ 
+      document.querySelectorAll('.grid div')[currentRoverPosition].classList.add('goodscan')
+    }
+    else{
+      document.querySelectorAll('.grid div')[currentRoverPosition].classList.add('badscan')
+    }
     document.querySelectorAll('.grid div')[currentRoverPosition].classList.add('scanned')
       document.getElementById('cc').classList.toggle('active')
     // upButton.disabled = false;
