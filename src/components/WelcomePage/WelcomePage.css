@@ -122,11 +122,22 @@
 .home_btn {
   margin: 40px;
 }
+#small_screen_msg {
+  display: none;
+  font-size: 20px;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  z-index: 50;
+}
 @media screen and (max-width: 1100px) {
   .ipad_container {
     display: none;
   }
   .background {
     width: min(60%, 500px);
+  }
+  #small_screen_msg {
+    display: unset;
   }
 }

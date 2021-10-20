@@ -82,6 +82,9 @@ function WelcomePage() {
             />
             <p>Welcome</p>
             <p>{user.name}</p>
+            <p id="small_screen_msg">
+              To get access to the code editor. Please join from a pc or laptop
+            </p>
           </div>
           <div className="background">
             <img
