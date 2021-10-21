@@ -132,15 +132,15 @@ body {
 }
 
 .edna_basketball {
-  background-image: url('./assets/fire.gif'), url('./assets/edna.svg');
-  background-size: 50px 100px;
+  background-image: url('./assets/edna.svg');
+  /* background-size: 50px 100px; */
 }
 
 .GameDisplay {
   background: url('./assets/GameOver.svg') no-repeat center;
   position: absolute;
   top: 25%;
-  left: 8%;
+  left: 28%;
   height: 150px;
   width: 180px;
   display: none;
