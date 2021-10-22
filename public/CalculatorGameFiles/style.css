@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Risque&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Risque", cursive;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+input {
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  /* border: solid black 1px; */
+  margin: auto;
+  position: relative;
+  /* background-image: url('../MissionMarsFiles/assets/backgrounds/Frame.png'); */
+
+  padding-top: 1px;
+  background-size: cover;
+  position: relative;
+  /* background: red; */
+}
+.main_container {
+  width: min(100vw, 400px);
+  height: min(100vh, 535px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+.output_field {
+  width: 80%;
+  height: 20%;
+  margin: 10px;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 60px;
+  font-family: "Orbitron", sans-serif;
+  border-width: 10px;
+  border: 10px solid white;
+  text-align: right;
+  color: black;
+}
+.keypad {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 10px;
+
+  flex: 0.7;
+}
+.key {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  border-radius: 10px;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.782);
+  width: 100%;
+  color: #790875;
+}
+.key > img {
+  width: 70%;
+}
+.input_label {
+  font-family: "Finger Paint", cursive;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px 0px;
+  border: 3px solid white;
+}
+.input_field {
+  border-radius: 20px;
+  width: 80%;
+  height: 8%;
+  border: 5px solid;
+  padding: 5px 30px;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}

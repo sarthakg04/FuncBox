@@ -8,13 +8,16 @@ function createGamepad() {
     document.body.appendChild(gamePadd);
     gamePad = document.getElementById('GamePad')
 }
-function fill(background) {
-  document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(FuncBox/AlienGameFiles/assets/backgrounds/back.png)';
+// function fill(background) {
+//   document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(FuncBox/AlienGameFiles/assets/backgrounds/back.png)';
+// }
+function fill() {
+  let phone = document.querySelector('.GamePad')
 }
 function createInteractionPad(){
   gamePad.innerHTML += `
   <div class="game">
-  <img  id="alien" src="FuncBox/AlienGameFiles/assets/images/left.svg">
+  <div id="alien"></div>
   <div class="controllers" id="control">
   <button id="playButton" onclick="ani()" >Play</button>
   </div>

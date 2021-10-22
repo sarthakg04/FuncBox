@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap");
+.welcome_container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  display: flex;
+  background: transparent;
+  overflow: hidden;
+}
+.avatar_container {
+  flex: 1;
+  display: flex;
+  /* background-color: blue; */
+  place-items: center;
+  justify-content: center;
+}
+.ipad_container {
+  flex: 1;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+
+  /* background-color: brown; */
+}
+.ipad {
+  width: 462px;
+  height: 663px;
+  z-index: 0;
+  position: relative;
+}
+.avatar {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  position: relative;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+}
+.avatar_img {
+  padding: 20px;
+  background-color: #b4d1c4;
+  border-radius: 50%;
+}
+.overlay {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+.background {
+  position: absolute;
+  width: 60vmin;
+  min-width: 400px;
+  bottom: 5px;
+  left: 5px;
+}
+.background > img {
+  width: 30%;
+}
+.ironman {
+  margin: 0px -60px;
+  z-index: 5;
+}
+.blackp {
+  z-index: 10;
+}
+.ipad_screen {
+  width: 400px;
+  height: 535px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  top: 63px;
+  left: 30px;
+}
+.logo_div {
+  margin: 30px 0px;
+  text-align: center;
+}
+.thumb_image {
+  overflow: hidden;
+  width: 55px;
+  height: 55px;
+  border-radius: 20px;
+}
+.thumb_image > img {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.game_thumbnails {
+  margin-top: 20px;
+  width: 70%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 25px;
+}
+.thumbnail {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  width: 85px;
+  border-radius: 10px;
+  padding: 5px;
+}
+.thumbnail:hover {
+  background-color: rgb(201, 199, 199);
+}
+.game_title {
+  width: fit-content;
+  font-size: 12px;
+  font-family: "Bubblegum Sans", cursive;
+}
+.home_btn {
+  margin: 40px;
+}
+#small_screen_msg {
+  display: none;
+  font-size: 20px;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  z-index: 50;
+}
+@media screen and (max-width: 1100px) {
+  .ipad_container {
+    display: none;
+  }
+  .background {
+    width: min(60%, 500px);
+  }
+  #small_screen_msg {
+    display: unset;
+  }
+}

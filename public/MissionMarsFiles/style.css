@@ -32,10 +32,9 @@ body {
   font-weight: 500;
   display: inline-block;
   margin-left: 8px;
-
 }
 
-.score-div{
+.score-div {
   display: flex;
   align-items: center;
 }
@@ -44,10 +43,10 @@ body {
   margin-right: 8px;
 }
 
-.score h3{
+.score h3 {
   margin: 0;
   font-weight: 500;
-  color : white;
+  color: white;
 }
 
 .grid {
@@ -106,8 +105,16 @@ body {
 }
 
 .scanned {
-  background-color: green;
+  /* background-color: green; */
   border-radius: 10px;
+}
+
+.goodscan {
+  background-color: green;
+}
+
+.badscan {
+  background-color: red;
 }
 
 .scanning {
@@ -117,7 +124,7 @@ body {
 
 .controller-container {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   margin: 0 8px;
 }
@@ -130,7 +137,6 @@ body {
 
 .arrow-keys {
   text-align: center;
-
 }
 
 .arrow-keys img {
@@ -138,14 +144,14 @@ body {
   cursor: pointer;
 }
 
-.left-right{
+.left-right {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: -6px;
 }
 
-.left-right .middle{
+.left-right .middle {
   width: 15px;
   margin: 3px;
 }
@@ -153,7 +159,7 @@ body {
 .Scan {
   margin-top: -14px;
   margin-left: 16px;
-  background: #2BA002;
+  background: #2ba002;
   height: 60px;
   width: 60px;
   color: black;
@@ -161,7 +167,6 @@ body {
   border: 3px solid white;
   font-weight: 500;
   transition: 0.5s;
-
 }
 
 .Scan:active,
@@ -170,13 +175,13 @@ body {
 }
 
 .Scan.active {
-  background: #36D100;
+  background: #36d100;
   cursor: pointer;
 }
 
-.restartBtn{
+.restartBtn {
   position: absolute;
-  left : 10px;
+  left: 10px;
   bottom: 10px;
   width: 30px;
   cursor: pointer;
