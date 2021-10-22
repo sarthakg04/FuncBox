@@ -48,11 +48,7 @@ function App() {
           <Route exact path="/ColorGame" component={ColorFun} />
           <Route exact path="/SolarGame" component={MySolarSystem} />
           <Route exact path="/Calculator" component={Calculator} />
-          <Route
-            exact
-            path="/TemperatureConversions"
-            component={TemperatureConversions}
-          />
+          <Route exact path="/TemperatureConversions" component={TemperatureConversions}/>
           <Route exact path="/Login" component={Login} />
           <Route exact path="/Signup" component={Signup} />
           <Route exact path="/" component={LandingPage} />
