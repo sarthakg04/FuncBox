@@ -25,6 +25,7 @@ import MySolarSystem from "./Games/MySolarSystem/MySolarSystem";
 import LetsMakeItRain from "./Games/LetsMakeItRain/LetsMakeItRain";
 import WelcomePage from "./WelcomePage/WelcomePage";
 import Calculator from "./Games/Calculator/Calculator";
+import UserNavbar from "./UserNavbar/UserNavbar";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route exact path="/AngryBirds" component={AngryBirds} />
           <Route exact path="/MissionMars" component={MissionMars} />
           <Route exact path="/MonkeyMultiplier" component={MonkeyMultiplier} />
+          <Route exact path="/UserNavbar" component={UserNavbar} />
 
           <Route exact path="/LetsMakeItRain" component={LetsMakeItRain} />
           <Route exact path="/BowlingGame" component={BowlingGame} />
