@@ -26,6 +26,7 @@ import LetsMakeItRain from "./Games/LetsMakeItRain/LetsMakeItRain";
 import WelcomePage from "./WelcomePage/WelcomePage";
 import Calculator from "./Games/Calculator/Calculator";
 import UserNavbar from "./UserNavbar/UserNavbar";
+import EditProfile from "./Profile/EditProfile"
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
           <Route exact path="/SalesPage" component={SalesPage} />
           <Route exact path="/CodeEditor" component={CodeEditor} />
           <Route exact path="/TeamsPage" component={TeamsPage} />
+          <Route exact path="/EditProfile" component={EditProfile} />
         </Switch>
       </div>
     </Router>
