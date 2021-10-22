@@ -18,6 +18,12 @@ import card4 from './assets/card4.svg';
 import card5 from './assets/card5.svg';
 import card6 from './assets/card6.svg';
 
+
+import { setAuth, 
+    // setUser
+ } from '../../auth/authslice';
+import { useDispatch } from 'react-redux';
+
 export default function Login() {
 
 
@@ -59,6 +65,8 @@ export default function Login() {
         password: "Password",
     });
 
+    const dispatch = useDispatch();
+
     const handleChange = (e) => {
         const name = e.target.name;
         const value = e.target.value;
@@ -68,10 +76,13 @@ export default function Login() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        // dispatch(setUser({ username: details.username, parseRes.token }));
+        dispatch(setAuth({ isAuthenticated: true }));
         console.log(details)
     };
 
     useEffect(() => {
+
         const interval = setInterval(()=>{
         next()
         },2500);
