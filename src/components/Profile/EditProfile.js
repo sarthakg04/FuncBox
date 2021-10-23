@@ -25,7 +25,7 @@ export default function EditProfile(props){
   const [add , setAdd] = useState('test');
   const [dob , setDob] = useState('2021-10-21');
   const [avatar , setAvatar] = useState(claw);
-  const [std , setClass] = useState(3);
+  const [std , setStd] = useState(3);
 
   function changeFName(e){
     setFname(e.target.value);
@@ -53,50 +53,50 @@ export default function EditProfile(props){
   }
 
   function changeStd(e){
-    setClass(e.target.value)
+    setStd(e.target.value)
   }
 
   return(
-    <div class="profile__container">
-      <div class="profile__heading">
+    <div className="profile__container">
+      <div className="profile__heading">
         <p>Your Profile</p>
       </div>
-      <div class="container">
-        <div class="left__container">
-          <div class="names">
-            <div class="fname">
+      <div className="container">
+        <div className="left__container">
+          <div className="names">
+            <div className="fname">
               <p>First Name</p>
               <input type="text" name="fname" value={fname} onChange = {changeFName}/>
             </div>
-            <div class="lname">
+            <div className="lname">
               <p>Last Name</p>
               <input type="text" name="lname" value={lname} onChange = {changeLName}/>
             </div>
           </div>
 
-          <div class="email">
+          <div className="email">
             <p>E-mail</p>
             <input type="text" name="email" value={email} onChange = {changeEmail}/>
           </div>
 
 
-          <div class="number">
+          <div className="number">
             <p>Phone Number</p>
             <input type="number" name="phone" value={number} onChange = {changePhoneNumber}/>
           </div>
-          <div class="address">
+          <div className="address">
             <p>Address</p>
             <textarea name="add1" rows="8" cols="80" onChange={changeAdd}>{add}</textarea>
           </div>
 
-          <div class="birth">
+          <div className="birth">
             <p>Date Of Birth</p>
             <input type="date" name="dob" value={dob} id="dob" onChange={changeDob}/>
           </div>
 
-          <div class="standard">
+          <div className="standard">
             <p>Standard</p>
-            <select class="" name="standard" id="std" value={std} onChange={changeStd}>
+            <select className="" name="standard" id="std" value={std} onChange={changeStd}>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -107,16 +107,16 @@ export default function EditProfile(props){
               <option value="8">8</option>
             </select>
           </div>
-          <div class="buttons">
-            <a href="javascript:void(0)" class="btn" on>Update Profile</a>
-            <a href="/changePass" class="btn">Change Password</a>
+          <div className="buttons">
+            <a href="javascript:void(0)" className="btn" on>Update Profile</a>
+            <a href="/changePass" className="btn">Change Password</a>
           </div>
         </div>
-        <div class="right__container">
-          <img src={avatar} alt="" class="avatar__h"/>
+        <div className="right__container">
+          <img src={avatar} alt="" className="avatar__h"/>
           <p>Update Avatar</p>
-          <div class="avatars">
-            
+          <div className="avatars">
+
             {/*<img src={dog} alt="" onClick={setAvatar(dog)}/>
             <img src={crocodile} alt="" onClick={setAvatar(crocodile)}/>
             <img src={edu2} alt="" onClick={setAvatar(edu2)}/>
