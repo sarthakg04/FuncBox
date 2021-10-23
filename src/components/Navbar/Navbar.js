@@ -55,7 +55,7 @@ export default function Navbar(props) {
 
                 <Link to="/">
                 <a href="#">
-                    <img src={home_check ? home_current : home} alt="home" />
+                    <img className='home_image' src={home_check ? home_current : home} alt="home" />
                     <p>Home</p>
                 </a>
                 </Link>

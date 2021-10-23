@@ -148,9 +148,17 @@
   .navigation {
     padding: 0 16px;
   }
+
   .navigation .logo {
-    width: 120px;
+    width: 100px !important;
+    height: 39.5px !important;
   }
+
+  .navigation .home_image {
+    width: 100px !important;
+    height: 39.5px !important;
+  }
+
   .navigation .link {
     display: none;
   }
