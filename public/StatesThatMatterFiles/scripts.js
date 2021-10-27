@@ -12,7 +12,7 @@ function createGamepad() {
   
   function fillBackground() {
     document.getElementsByClassName("container")[0].style.backgroundImage =
-      "url(https://ik.imagekit.io/funcboxImages/MotuPatlu_assets/background_Cd--9nmmIDu.png?updatedAt=1635330378178)";
+      "url(https://ik.imagekit.io/funcboxImages/StatesofMatter_assets/sombackground_6uUGV8EAI3W.png?updatedAt=1635364137886)";
     console.log("background created");
   }
   

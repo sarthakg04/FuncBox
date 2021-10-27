@@ -24,6 +24,7 @@ import ColorFun from "./Games/ColorFun/ColorFun";
 import MySolarSystem from "./Games/MySolarSystem/MySolarSystem";
 import LetsMakeItRain from "./Games/LetsMakeItRain/LetsMakeItRain";
 import MotuPatlu from "./Games/MotuPatlu/MotuPatlu";
+import StatesThatMatter from "./Games/StatesThatMatter/StatesThatMatter";
 import WelcomePage from "./WelcomePage/WelcomePage";
 import Calculator from "./Games/Calculator/Calculator";
 import UserNavbar from "./UserNavbar/UserNavbar";
@@ -51,6 +52,8 @@ function App() {
           <Route exact path="/TemperatureConversions" component={TemperatureConversions}/>
           <Route exact path="/CardGame" component={CardGame} />
           <Route exact path="/MotuPatlu" component={MotuPatlu} />
+          <Route exact path="/StatesThatMatter" component={StatesThatMatter} />
+
 
 
 
