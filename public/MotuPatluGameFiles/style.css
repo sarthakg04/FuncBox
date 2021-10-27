@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 400px;
+    height: 535px;
+    margin: auto;
+    position: relative;
+    padding-top: 1px;
+    background-size: cover;
+    font-family: 'Finger Paint', cursive;
+  }
+
+  #orangeBtn {
+    position: absolute;
+    margin-top:48vh;
+    margin-left:4vw;
+    width: 15vw;
+    height: 5vh;
+    background: rgb(255,172,74,0);
+    border-radius: 37px;
+    border: none;
+    color: rgb(88, 81, 81);
+    font-size: 10px;
+    font-family: 'Finger Paint', cursive;
+  }
+  #distance{
+    width: 28vw;
+    height: 6vh;
+    border:3px black;
+    border-style: solid;
+    margin-left:12vw;
+    margin-top:55vh;
+  }
+  #time{
+    width: 24vw;
+    height: 6vh;
+    border:black 3px;
+    border-style: solid;
+    margin-left:5vw;
+    margin-top:55vh;
+  }
+.speed{
+    position: relative;
+    margin-top: 28vh;
+    margin-left:27vw ;
+}

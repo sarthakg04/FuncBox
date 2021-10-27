@@ -3,7 +3,7 @@
 // fillBackground()
 // createInteractionPad()
 
-function createBackground() {
+function createGamepad() {
   let container = document.createElement("DIV");
   container.classList.add("container");
   container.id = "container";
