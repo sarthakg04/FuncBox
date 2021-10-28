@@ -7,7 +7,7 @@
 .navigation {
   display: flex;
   justify-content: space-between;
-  padding: 0px 32px;
+  padding: 20px 32px 0 32px;
 }
 
 .navigation .link {
