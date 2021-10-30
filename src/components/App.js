@@ -14,6 +14,7 @@ import ClockGame from "../components/Games/ClockGame/ClockGame";
 import AlienGame from "../components/Games/AlienGame/AlienGame";
 import CardGame from "../components/Games/CardGame/cardGame";
 import TemperatureConversions from "../components/Games/TemperatureConversions/TemperatureConversions";
+import PollutoFree from "../components/Games/PollutoFree/PollutoFree";
 import LandingPage from "./LandingPage/LandingPage";
 import AboutPage from "./AboutPage/AboutPage";
 import SalesPage from "./SalesPage/SalesPage";
@@ -50,16 +51,17 @@ function App() {
           <Route exact path="/ColorGame" component={ColorFun} />
           <Route exact path="/SolarGame" component={MySolarSystem} />
           <Route exact path="/Calculator" component={Calculator} />
-          <Route exact path="/TemperatureConversions" component={TemperatureConversions}/>
+          <Route
+            exact
+            path="/TemperatureConversions"
+            component={TemperatureConversions}
+          />
           <Route exact path="/CardGame" component={CardGame} />
           <Route exact path="/MotuPatlu" component={MotuPatlu} />
           <Route exact path="/StatesThatMatter" component={StatesThatMatter} />
 
-
           <Route exact path="/Privacy" component={Privacy} />
-
-
-
+          <Route exact path="/PollutoFree" component={PollutoFree} />
 
           <Route exact path="/UserNavbar" component={UserNavbar} />
           <Route exact path="/Login" component={Login} />
