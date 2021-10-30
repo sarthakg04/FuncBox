@@ -30,6 +30,7 @@ import Calculator from "./Games/Calculator/Calculator";
 import UserNavbar from "./UserNavbar/UserNavbar";
 import EditProfile from "./Profile/EditProfile";
 import ForgotPass from "./ForgotPass/Forgot";
+import Privacy from "./Privacy/Privacy";
 
 function App() {
   return (
@@ -54,6 +55,8 @@ function App() {
           <Route exact path="/MotuPatlu" component={MotuPatlu} />
           <Route exact path="/StatesThatMatter" component={StatesThatMatter} />
 
+
+          <Route exact path="/Privacy" component={Privacy} />
 
 
 
