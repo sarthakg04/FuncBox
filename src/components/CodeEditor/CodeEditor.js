@@ -20,7 +20,7 @@ export default function CodeEditor() {
       console.log('Hello');
     }
     useEffect(()=>{
-      QRCode.toDataURL('https://funcbox.in/preview/'+userName+"/"+gameId).then(setQrSrc);
+      QRCode.toDataURL('https://funcbox.in/'+userName+"+"+gameId).then(setQrSrc);
 
 
 

@@ -1,12 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import Editor from '../../Editor/Editor';
 import Frame from '../../Frame/Frame';
 import useLocalStorage from '../../../hooks/useLocalStorage';
+import QRCode from 'qrcode';
 
 export default function WhackAMole() {
-    const [js, setJs] = useLocalStorage('js', '')
-    const [srcDoc, setSrcDoc] = useState('')
+  const [js, setJs] = useLocalStorage('js', '')
+  const [srcDoc, setSrcDoc] = useState('')
+  const [userName , setUserName] = useState('nishant');
+  const [gameId , setGameId] = useState('WhackAMole');
+  const [qrSrc , setQrSrc] = useState('');
+  function toggleQr(){
+    document.getElementById('qr').classList.toggle('active');
+  }
+  useEffect(()=>{
+    QRCode.toDataURL('https://funcbox.in/'+userName+"+"+gameId).then(setQrSrc);
 
+
+
+  },[]);
     function updateCode(){
         setSrcDoc(`
             <!DOCTYPE html>
@@ -22,8 +34,8 @@ export default function WhackAMole() {
             </head>
 
             <body>
-                <script src='FuncBox/WhackAMole/script.js'></script>
-                <script src='./WhackAMole/script.js'></script>
+                <script src='FuncBox/${gameId}/script.js'></script>
+                <script src='./${gameId}/script.js'></script>
                 <script>${ js }</script>
             </body>
 
@@ -31,7 +43,6 @@ export default function WhackAMole() {
 
         `)
     }
-
 
     return (
       <div>
@@ -61,6 +72,19 @@ export default function WhackAMole() {
                   /> */}
               </div>
           </div>
+          </div>
+          <div className="qr_body" id="qr">
+            <div className="qr_container">
+              <div className="heading">
+                <h1>Scan to Share</h1>
+              </div>
+              <div className="qr_code">
+                <img src={qrSrc} alt="" />
+              </div>
+              <a href="javascript:void(0)" className="closeQr" onClick={toggleQr}>
+                Close
+              </a>
+            </div>
           </div>
       </div>
       </div>

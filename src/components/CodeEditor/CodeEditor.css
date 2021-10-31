@@ -143,6 +143,7 @@
   opacity: 0;
   visibility: hidden;
   transition: 0.5s;
+  z-index: 5;
 
 }
 
