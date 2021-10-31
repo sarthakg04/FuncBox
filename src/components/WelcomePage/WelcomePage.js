@@ -1,11 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import "./WelcomePage.css";
 function WelcomePage() {
-  const user = {
-    name: "Aryan",
-  };
+  const username = useSelector((state) => state.auth.username);
 
   const games = [
     {
@@ -81,7 +80,7 @@ function WelcomePage() {
               alt=""
             />
             <p>Welcome</p>
-            <p>{user.name}</p>
+            <p>{username}</p>
             <p id="small_screen_msg">
               To get access to the code editor. Please join from a pc or laptop
             </p>
