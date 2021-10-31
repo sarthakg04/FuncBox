@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../UserNavbar/UserNavbar";
+import Navbar from "../Navbar/Navbar";
 import "./WelcomePage.css";
 function WelcomePage() {
   const user = {

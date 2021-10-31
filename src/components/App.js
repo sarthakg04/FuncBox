@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
+import { useDispatch, useSelector } from "react-redux";
+import { setAuth, setUser } from "../auth/authslice";
 import AngryBirds from "../components/Games/AngryBirds/AngryBirds";
 import MissionMars from "../components/Games/MissionMars/MissionMars";
 import AvengersGame from "./Games/AvengersGame/AvengersGame";
@@ -34,6 +35,31 @@ import ForgotPass from "./ForgotPass/Forgot";
 import Privacy from "./Privacy/Privacy";
 
 function App() {
+  const dispatch = useDispatch();
+
+  const isAuth = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/auth/verify", {
+        method: "GET",
+        headers: { token: localStorage.token },
+      });
+
+      const parseRes = await response.json();
+
+      console.log(parseRes);
+      if (parseRes === true) {
+        dispatch(setAuth({ isAuthenticated: true }));
+        dispatch(setUser({ username: "John Doe" }));
+      } else {
+        dispatch(setAuth({ isAuthenticated: false }));
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+  useEffect(() => {
+    isAuth();
+  }, []);
   return (
     <Router>
       <div className="App">
