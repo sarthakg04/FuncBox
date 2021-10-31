@@ -86,7 +86,6 @@ function App() {
           <Route exact path="/MotuPatlu" component={MotuPatlu} />
           <Route exact path="/StatesThatMatter" component={StatesThatMatter} />
 
-          <Route exact path="/Privacy" component={Privacy} />
           <Route exact path="/PollutoFree" component={PollutoFree} />
 
           <Route exact path="/UserNavbar" component={UserNavbar} />
@@ -100,6 +99,7 @@ function App() {
           <Route exact path="/TeamsPage" component={TeamsPage} />
           <Route exact path="/EditProfile" component={EditProfile} />
           <Route exact path="/ForgotPass" component={ForgotPass} />
+          <Route exact path="/Privacy" component={Privacy} />
         </Switch>
       </div>
     </Router>

@@ -11,6 +11,8 @@ import save from '../CodeEditor/assets/save.svg'
 import share from '../CodeEditor/assets/share.svg'
 import stamp from '../CodeEditor/assets/stamp.svg'
 
+
+
 export default function Editor(props) {
   const {
     language,
@@ -21,6 +23,11 @@ export default function Editor(props) {
   const [open, setOpen] = useState(true)
   function handleChange(editor, data, value) {
     onChange(value)
+  }
+
+  function toggleQr(){
+    document.getElementById('qr').classList.toggle('active');
+    console.log('Hello');
   }
   return (
     <div className="code__editor">
@@ -46,10 +53,10 @@ export default function Editor(props) {
           <a href="#">
             <img src={save} alt="" />
           </a>
-          <a href="#">
-            <img src={share} alt="" />
+          <a href="javascript:void(0)">
+            <img src={share} alt="" onClick={toggleQr}/>
           </a>
-          <a href="#">
+          <a href="javascript:void(0)">
             <img src={stamp} alt="" />
           </a>
         </div>

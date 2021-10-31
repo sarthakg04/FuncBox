@@ -1,14 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import Editor from '../Editor/Editor'
 import Frame from '../Frame/Frame'
 import useLocalStorage from '../../hooks/useLocalStorage'
+import QRCode from 'qrcode';
 import Navbar from '../Navbar/Navbar'
 import './CodeEditor.css'
+
+
 
 
 export default function CodeEditor() {
     const [js, setJs] = useLocalStorage('js', '')
     const [srcDoc, setSrcDoc] = useState('')
+    const [userName , setUserName] = useState('nishant');
+    const [gameId , setGameId] = useState('3');
+    const [qrSrc , setQrSrc] = useState('');
+    function toggleQr(){
+      document.getElementById('qr').classList.toggle('active');
+      console.log('Hello');
+    }
+    useEffect(()=>{
+      QRCode.toDataURL('https://funcbox.in/preview/'+userName+"/"+gameId).then(setQrSrc);
+
+
+
+    },[]);
 
     function updateCode(){
         setSrcDoc(`
@@ -29,6 +45,8 @@ export default function CodeEditor() {
         `)
     }
 
+
+
     return (
         <div>
               <div className="main__container">
@@ -40,6 +58,7 @@ export default function CodeEditor() {
                     updateCode = {updateCode}
 
                 />
+
               <div className="preview">
                 <div class="heading">
                 <p>Preview</p>
@@ -58,7 +77,21 @@ export default function CodeEditor() {
                     </div>
                 </div>
                 </div>
+                <div className="qr_body" id="qr">
+                  <div className="qr_container">
+                    <div className="heading">
+                      <h1>Scan to Share</h1>
+                    </div>
+                    <div className="qr_code">
+                      <img src={qrSrc} alt="" />
+                    </div>
+                    <a href="javascript:void(0)" className="closeQr" onClick={toggleQr}>
+                      Close
+                    </a>
+                  </div>
+                </div>
             </div>
+
         </div>
     )
 }
