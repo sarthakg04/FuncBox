@@ -1,9 +1,14 @@
 import React from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import "./WelcomePage.css";
 function WelcomePage() {
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  
+  useEffect(() => {}, [isAuthenticated]);
+
   const username = useSelector((state) => state.auth.username);
 
   const games = [

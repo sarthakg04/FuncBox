@@ -11,7 +11,7 @@ import card3 from "./assets/card3.svg";
 import card4 from "./assets/card4.svg";
 import card5 from "./assets/card5.svg";
 import card6 from "./assets/card6.svg";
-
+import useAuth from "../../hooks/useAuth";
 import {
   setAuth,
   setUser,
@@ -23,7 +23,7 @@ export default function Login() {
   const history = useHistory();
   let cardPosion = [0, 1, 2, 3, 4, 5, 6];
   let images = document.getElementsByClassName("item");
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const { isAuthenticated } = useAuth();
 
   useEffect(() => {
     if (isAuthenticated) {

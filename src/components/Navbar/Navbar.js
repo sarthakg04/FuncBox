@@ -19,15 +19,17 @@ import shop from "./assets/shop.png";
 import shop_current from "./assets/shop_current.png";
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-
+import useAuth from "../../hooks/useAuth";
 import { useDispatch, useSelector } from "react-redux";
 import { setAuth, setUser } from "../../auth/authslice";
 
 export default function Navbar(props) {
   const history = useHistory();
   const dispatch = useDispatch();
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
-  const username = useSelector((state) => state.auth.username);
+  // const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  // const username = useSelector((state) => state.auth.username);
+  const { isAuthenticated, username } = useAuth();
+
   // const about = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/about_Kyi50psMa.png?updatedAt=1633368974643'
   // const about_current = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/about_current_ZVYrXtG6O.png?updatedAt=1633351778318'
   // const home = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/home_TNxeUkAI2oj.png?updatedAt=1633369073852'
@@ -49,6 +51,11 @@ export default function Navbar(props) {
     localStorage.removeItem("token");
     history.push("/login");
   };
+
+  const shortName = (name) => {
+    return name.substring(0, name.indexOf(" "));
+  };
+
   return (
     <div>
       <div className="navigation">
@@ -78,7 +85,7 @@ export default function Navbar(props) {
           </Link>
           {isAuthenticated ? (
             <div className="dropdown">
-              <button class="dropbtn">{username}🔽</button>
+              <button class="dropbtn">{shortName(username)}🔽</button>
               <div class="dropdown-content">
                 <Link to="#">Edit Profile</Link>
                 <Link to="#">Purchase</Link>
@@ -115,7 +122,7 @@ export default function Navbar(props) {
         </Link>
         {isAuthenticated ? (
           <div className="dropdown">
-            <button class="dropbtn">{username}🔽</button>
+            <button class="dropbtn">{shortName(username)}🔽</button>
             <div class="dropdown-content">
               <Link to="#">Edit Profile</Link>
               <Link to="#">Purchase</Link>
