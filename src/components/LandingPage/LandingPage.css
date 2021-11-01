@@ -112,6 +112,9 @@
   display: block;
   margin-top: 32px;
 }
+.roadMap_mobile {
+  display: none;
+}
 
 @media (max-width: 1130px) {
   .landingPage__main .hero__image img {
@@ -245,5 +248,16 @@
   }
   .roadMap > img {
     display: none;
+  }
+  .roadMap_mobile {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    padding: 10px;
+    align-items: center;
+  }
+  .roadMap_mobile > img {
+    margin: 30px 0px;
+    width: 80%;
   }
 }
