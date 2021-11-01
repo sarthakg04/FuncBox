@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,500;1,600;1,700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
-
 
 .landingPage__main .hero__image {
   text-align: center;
@@ -41,7 +40,6 @@
 }
 
 .landingPage__main .details .info {
-
   font-style: normal;
   font-weight: normal;
   margin-left: 8vw;
@@ -115,50 +113,46 @@
   margin-top: 32px;
 }
 
-
-@media (max-width : 1130px) {
-
-  .landingPage__main .hero__image img{
+@media (max-width: 1130px) {
+  .landingPage__main .hero__image img {
     width: 68%;
   }
 
-  .landingPage__main .roadMap img{
+  .landingPage__main .roadMap img {
     width: 90%;
   }
-  .landingPage__main .details{
+  .landingPage__main .details {
     padding-left: 0;
     width: 90%;
   }
-  .landingPage__main .details .info{
+  .landingPage__main .details .info {
     font-size: 22px;
   }
 
-  .landingPage__main .how__works img{
+  .landingPage__main .how__works img {
     width: 85%;
   }
 }
 
-
-@media (max-width : 1000px) {
-  .landingPage__main .roadMap{
+@media (max-width: 1000px) {
+  .landingPage__main .roadMap {
     margin: 64px 16px 64px 32px;
   }
-  .landingPage__main .roadMap img{
+  .landingPage__main .roadMap img {
     width: 100%;
   }
 
-  .landingPage__main .details{
+  .landingPage__main .details {
     margin: 0;
     margin-bottom: 64px;
   }
 
-  .landingPage__main .how__works{
+  .landingPage__main .how__works {
     padding: 32px;
   }
 
-
   .landingPage__main .individuals,
-  .landingPage__main .schools{
+  .landingPage__main .schools {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
@@ -167,37 +161,35 @@
     margin-bottom: 32px;
   }
 
-  .landingPage__main .individuals .left__container img{
+  .landingPage__main .individuals .left__container img {
     width: 60%;
   }
-  .landingPage__main .individuals .right__container{
+  .landingPage__main .individuals .right__container {
     margin: auto;
     width: 60%;
     margin-top: -10px;
   }
 
-  .landingPage__main .schools .left__container{
+  .landingPage__main .schools .left__container {
     grid-row: 2/3;
     margin: auto;
     width: 60%;
     margin-top: -10px;
   }
-  .landingPage__main .schools .right__container img{
+  .landingPage__main .schools .right__container img {
     width: 60%;
     margin-left: 0;
   }
-
 }
 
-
-@media (max-width : 767px) {
-  .landingPage__main .hero__image img{
+@media (max-width: 767px) {
+  .landingPage__main .hero__image img {
     width: 90%;
     text-align: left;
     margin-left: -72px;
   }
 
-  .landingPage__main .details{
+  .landingPage__main .details {
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
@@ -207,40 +199,51 @@
     margin-bottom: 64px;
   }
 
-  .landingPage__main .details .info{
+  .landingPage__main .details .info {
     margin-left: 0;
   }
 
-  .landingPage__main .details .logo{
+  .landingPage__main .details .logo {
     grid-row: 1/2;
     margin-bottom: 16px;
   }
 
-  .landingPage__main .how__works{
+  .landingPage__main .how__works {
     padding: 16px 8px;
   }
-  .landingPage__main .how__works img{
+  .landingPage__main .how__works img {
     width: 95%;
   }
 
   .landingPage__main .individuals .left__container img,
   .landingPage__main .individuals .right__container,
   .landingPage__main .schools .left__container,
-  .landingPage__main .schools .right__container img{
+  .landingPage__main .schools .right__container img {
     width: 80%;
   }
-
 }
 
-@media (max-width : 600px) {
-  .landingPage__main .hero__image img{
+@media (max-width: 600px) {
+  .landingPage__main .hero__image img {
     width: 95%;
     margin-left: 0;
   }
 
-  .landingPage__main .hero__section .downArrow img{
+  .landingPage__main .hero__section .downArrow img {
     display: none;
   }
-
-
+  .hero__section {
+    height: 90vh;
+    display: flex;
+    place-items: center;
+    justify-items: center;
+  }
+  .roadMap {
+    width: 100%;
+    height: fit-content;
+    margin: 2px !important;
+  }
+  .roadMap > img {
+    display: none;
+  }
 }

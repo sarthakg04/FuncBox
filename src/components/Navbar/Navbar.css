@@ -1,22 +1,26 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .navigation {
   display: flex;
   justify-content: space-between;
   padding: 20px 32px 0 32px;
+  align-items: center;
+  height: 10vh;
+  background-color: white;
 }
 
 .navigation .link {
   display: flex;
+  height: 100%;
 }
 
 .navigation .logo {
-  width: 200px;
-  height: 79px;
+  /* width: 200px; */
+  height: 100%;
 }
 
 .navigation .link a,
@@ -25,7 +29,7 @@
   text-decoration: none;
   font-size: 14px;
   color: #6e6e6e;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   margin-right: 32px;
 }
 
@@ -59,7 +63,7 @@
   border-bottom: 2px solid white;
   display: flex;
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,6 +124,9 @@
   color: white;
   text-decoration: none;
 }
+.mobile__links {
+  display: none;
+}
 
 @media (max-width: 1000px) {
   .navigation {
@@ -150,8 +157,8 @@
   }
 
   .navigation .logo {
-    width: 100px !important;
-    height: 39.5px !important;
+    /* width: 100px !important; */
+    height: 100% !important;
   }
 
   .navigation .home_image {
@@ -169,6 +176,9 @@
 
   .getInTouch input {
     width: 50%;
+  }
+  .mobile__links.active {
+    display: flex;
   }
 }
 

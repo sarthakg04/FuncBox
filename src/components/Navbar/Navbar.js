@@ -115,12 +115,14 @@ export default function Navbar(props) {
         </Link>
         {isAuthenticated ? (
           <div className="dropdown">
-            <button class="dropbtn">🔽</button>
+            <button class="dropbtn">{username}🔽</button>
             <div class="dropdown-content">
-              <Link href="#">Edit Profile</Link>
-              <Link href="#">Purchase</Link>
-              <Link href="#">Change password</Link>
-              <Link onClick={handleLogout}>Logout</Link>
+              <Link to="#">Edit Profile</Link>
+              <Link to="#">Purchase</Link>
+              <Link to="#">Change password</Link>
+              <Link to="#" onClick={handleLogout}>
+                Logout
+              </Link>
             </div>
           </div>
         ) : (

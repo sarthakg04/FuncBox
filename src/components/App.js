@@ -53,10 +53,7 @@ function App() {
         dispatch(setAuth({ isAuthenticated: true }));
         dispatch(
           setUser({
-            username:
-              parseRes.userDetails[0].fname +
-              " " +
-              parseRes.userDetails[0].lname,
+            username: parseRes.userDetails[0].fname,
           })
         );
       } else {
