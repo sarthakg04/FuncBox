@@ -14,6 +14,7 @@ import card6 from "./assets/card6.svg";
 
 import {
   setAuth,
+  setUser,
   // setUser
 } from "../../auth/authslice";
 import { useDispatch, useSelector } from "react-redux";
@@ -83,16 +84,32 @@ export default function Login() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
+        data: "all",
       });
 
       const parseRes = await response.json();
 
       if (parseRes.token) {
-        console.log();
+        console.log(parseRes.token);
+        const data = await fetch("http://localhost:5000/auth/verify", {
+          method: "GET",
+          headers: { token: parseRes.token, data: "all" },
+        });
+        const verifyres = await data.json();
+
+        console.log(verifyres);
         localStorage.setItem("token", parseRes.token);
 
         dispatch(setAuth({ isAuthenticated: true }));
-        
+        dispatch(
+          setUser({
+            username:
+              verifyres.userDetails[0].fname +
+              " " +
+              verifyres.userDetails[0].lname,
+          })
+        );
+
         // history.goBack();
       } else {
         console.error(parseRes);
@@ -101,6 +118,7 @@ export default function Login() {
       }
     } catch (err) {
       setAuth({ isAuthenticated: false });
+      setUser({ username: "" });
     }
   };
 

@@ -33,7 +33,7 @@ import UserNavbar from "./UserNavbar/UserNavbar";
 import EditProfile from "./Profile/EditProfile";
 import ForgotPass from "./ForgotPass/Forgot";
 import Privacy from "./Privacy/Privacy";
-import Preview from "./Preview/Preview"
+import Preview from "./Preview/Preview";
 
 function App() {
   const dispatch = useDispatch();
@@ -42,15 +42,23 @@ function App() {
     try {
       const response = await fetch("http://localhost:5000/auth/verify", {
         method: "GET",
-        headers: { token: localStorage.token },
+        headers: { token: localStorage.token, data: "all" },
       });
 
       const parseRes = await response.json();
 
       console.log(parseRes);
-      if (parseRes === true) {
+      if (parseRes.isAuthorized === true) {
+        console.log("Authenticated from verify");
         dispatch(setAuth({ isAuthenticated: true }));
-        dispatch(setUser({ username: "John Doe" }));
+        dispatch(
+          setUser({
+            username:
+              parseRes.userDetails[0].fname +
+              " " +
+              parseRes.userDetails[0].lname,
+          })
+        );
       } else {
         dispatch(setAuth({ isAuthenticated: false }));
       }
