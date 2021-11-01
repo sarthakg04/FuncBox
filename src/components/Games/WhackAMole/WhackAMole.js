@@ -29,13 +29,13 @@ export default function WhackAMole() {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <meta http-equiv="X-UA-Compatible" content="ie=edge">
                 <title>Whack A Mole</title>
-                <link rel="stylesheet" href="FuncBox/WhackAMole/style.css">
-                <link rel="stylesheet" href="./WhackAMole/style.css">
+                <link rel="stylesheet" href="FuncBox/WhackAMoleFiles/style.css">
+                <link rel="stylesheet" href="./WhackAMoleFiles/style.css">
             </head>
 
             <body>
-                <script src='FuncBox/${gameId}/script.js'></script>
-                <script src='./${gameId}/script.js'></script>
+                <script src='FuncBox/${gameId}Files/script.js'></script>
+                <script src='./${gameId}Files/script.js'></script>
                 <script>${ js }</script>
             </body>
 

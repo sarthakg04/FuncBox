@@ -24,7 +24,7 @@ function createGamepad(){
 }
 
 function fill(){
-  document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(./WhackAMole/assets/background.svg)';
+  document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(./WhackAMoleFiles/assets/background.svg)';
 }
 
 function createScore(){
@@ -42,8 +42,8 @@ function createGrid(){
   for(let i = 0; i<9 ; i++){
     grid.innerHTML += `
     <div class="element"  onclick="hit(${i})">
-      <img class="mole" src="./WhackAMole/assets/hole.svg" alt="">
-      <img class="hammer" src="./WhackAMole/assets/hammer.svg" alt="">
+      <img class="mole" src="./WhackAMoleFiles/assets/hole.svg" alt="">
+      <img class="hammer" src="./WhackAMoleFiles/assets/hammer.svg" alt="">
     </div>
     `;
   }
@@ -53,13 +53,13 @@ function createLife(){
   document.getElementsByClassName('GamePad')[0].innerHTML +=`
   <div class="lifes">
     <div class="life">
-      <img class="life__icon" src="./WhackAMole/assets/heart.svg" alt="">
+      <img class="life__icon" src="./WhackAMoleFiles/assets/heart.svg" alt="">
     </div>
     <div class="life">
-      <img class="life__icon" src="./WhackAMole/assets/heart.svg" alt="">
+      <img class="life__icon" src="./WhackAMoleFiles/assets/heart.svg" alt="">
     </div>
     <div class="life">
-      <img class="life__icon" src="./WhackAMole/assets/heart.svg" alt="">
+      <img class="life__icon" src="./WhackAMoleFiles/assets/heart.svg" alt="">
     </div>
   </div>
   `;
@@ -92,14 +92,14 @@ function hit(pos){
   if(molesArray.indexOf(pos) != -1){
   lastRemoved = pos;
   document.getElementsByClassName('element')[pos].classList.remove('active');
-  document.getElementsByClassName('mole')[pos].src = './WhackAMole/assets/hole.svg';
+  document.getElementsByClassName('mole')[pos].src = './WhackAMoleFiles/assets/hole.svg';
   let index = molesArray.indexOf(pos);
   molesArray.splice(index,1);
   score +=1;
   document.getElementById('score').innerHTML =  score;
   }
   else {
-    document.getElementsByClassName('life__icon')[life].src = './WhackAMole/assets/brokenHeart.svg';
+    document.getElementsByClassName('life__icon')[life].src = './WhackAMoleFiles/assets/brokenHeart.svg';
     life +=1;
     if(life == 3){
       clearInterval(interval);
@@ -126,7 +126,7 @@ function start(){
       let pos = molesArray[0];
       molesArray.splice(0,1);
       document.getElementsByClassName('element')[pos].classList.remove('active');
-      document.getElementsByClassName('mole')[pos].src = './WhackAMole/assets/hole.svg';
+      document.getElementsByClassName('mole')[pos].src = './WhackAMoleFiles/assets/hole.svg';
       lastRemoved = pos;
     }
   while(innerFlag !=1){
@@ -136,7 +136,7 @@ function start(){
       molesArray.push(position);
       innerFlag = 1;
       document.getElementsByClassName('element')[position].classList.add('active');
-      document.getElementsByClassName('mole')[position].src = './WhackAMole/assets/mole.svg';
+      document.getElementsByClassName('mole')[position].src = './WhackAMoleFiles/assets/mole.svg';
     }
   }
   innerFlag = 0;
@@ -152,7 +152,7 @@ function restart(){
   document.getElementsByClassName('restart')[0].classList.remove('active');
   molesArray.forEach((pos, i) => {
     document.getElementsByClassName('element')[pos].classList.remove('active');
-    document.getElementsByClassName('mole')[pos].src = './WhackAMole/assets/hole.svg';
+    document.getElementsByClassName('mole')[pos].src = './WhackAMoleFiles/assets/hole.svg';
   });
   molesArray = [];
   gameOver = 0;
@@ -160,7 +160,7 @@ function restart(){
   document.getElementById('score').innerHTML = score;
   while(life!=0){
     life -=1;
-    document.getElementsByClassName('life__icon')[life].src = './WhackAMole/assets/heart.svg';
+    document.getElementsByClassName('life__icon')[life].src = './WhackAMoleFiles/assets/heart.svg';
   }
   start();
 }

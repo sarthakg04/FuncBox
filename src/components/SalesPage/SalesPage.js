@@ -14,7 +14,7 @@ import Footer from '../Footer/Footer'
 
 export default function SalesPage() {
 
-    
+
     const kids = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/kids_KxFxgItfQ.png?updatedAt=1633370064495'
     const box = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/boxsvg_htn4YEPUA.png?updatedAt=1633370132694'
     const van = 'https://ik.imagekit.io/funcboxImages/SalesPage_assets/van_7wcuQOH469p.png?updatedAt=1633370212059'
@@ -34,20 +34,20 @@ export default function SalesPage() {
                       name="keywords"
                       content="Coding for kids, ELearning, FuncBox, Coding, programming, STEM, Kids, Children, Buy Funcbox"
                     />
-                    <meta 
-                      name="robots" 
+                    <meta
+                      name="robots"
                       content="index, follow"
                     />
-                    <meta 
-                      http-equiv="Content-Type" 
+                    <meta
+                      http-equiv="Content-Type"
                       content="text/html; charset=utf-8"
                     />
-                    <meta 
-                      name="language" 
+                    <meta
+                      name="language"
                       content="English"
                     />
-                    <meta 
-                      name="author" 
+                    <meta
+                      name="author"
                       content="Team Funcbox"
                     />
                 </Helmet>
@@ -136,7 +136,7 @@ export default function SalesPage() {
                 <div className="plan-cover">
                     <h1>Basic</h1>
                     <div className="price">
-                    <p>Rs. 799/-</p>
+                    <p>Rs. 999/-</p>
                     <p className="atc">Add to Cart <span><i className="fas fa-shopping-cart" /></span> </p>
                     </div>
                 </div>
@@ -183,7 +183,7 @@ export default function SalesPage() {
                 <div className="plan-cover">
                     <h1>Deluxe</h1>
                     <div className="price">
-                    <p>Rs. 1199/-</p>
+                    <p>Rs. 1499/-</p>
                     <p className="atc">Add to Cart <span><i className="fas fa-shopping-cart" /></span> </p>
                     </div>
                 </div>
@@ -236,7 +236,7 @@ export default function SalesPage() {
                 <div className="plan-cover">
                     <h1>Premium</h1>
                     <div className="price">
-                    <p>Rs. 1499/-</p>
+                    <p>Rs. 1999/-</p>
                     <p className="atc">Add to Cart <span><i className="fas fa-shopping-cart" /></span> </p>
                     </div>
                 </div>
