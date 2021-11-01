@@ -34,6 +34,7 @@ import EditProfile from "./Profile/EditProfile";
 import ForgotPass from "./ForgotPass/Forgot";
 import Privacy from "./Privacy/Privacy";
 import Preview from "./Preview/Preview";
+import HitIt from "./Games/HitIt/HitIt";
 
 function App() {
   const dispatch = useDispatch();
@@ -86,6 +87,7 @@ function App() {
           <Route exact path="/ColorGame" component={ColorFun} />
           <Route exact path="/SolarGame" component={MySolarSystem} />
           <Route exact path="/Calculator" component={Calculator} />
+
           <Route
             exact
             path="/TemperatureConversions"
@@ -94,7 +96,7 @@ function App() {
           <Route exact path="/CardGame" component={CardGame} />
           <Route exact path="/MotuPatlu" component={MotuPatlu} />
           <Route exact path="/StatesThatMatter" component={StatesThatMatter} />
-
+          <Route exact path="/HitIt" component={HitIt} />
           <Route exact path="/PollutoFree" component={PollutoFree} />
 
           <Route exact path="/UserNavbar" component={UserNavbar} />
