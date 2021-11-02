@@ -3,6 +3,7 @@ import Editor from '../../Editor/Editor';
 import Frame from '../../Frame/Frame';
 import useLocalStorage from '../../../hooks/useLocalStorage';
 import QRCode from 'qrcode';
+import {filepath} from "../../../names";
 
 export default function WhackAMole() {
   const [js, setJs] = useLocalStorage('js', '')
@@ -19,6 +20,7 @@ export default function WhackAMole() {
 
 
   },[]);
+  const id = filepath[1];
     function updateCode(){
         setSrcDoc(`
             <!DOCTYPE html>
@@ -30,7 +32,7 @@ export default function WhackAMole() {
                 <meta http-equiv="X-UA-Compatible" content="ie=edge">
                 <title>Whack A Mole</title>
                 <link rel="stylesheet" href="FuncBox/WhackAMoleFiles/style.css">
-                <link rel="stylesheet" href="./WhackAMoleFiles/style.css">
+                <link rel="stylesheet" href="${id}style.css">
             </head>
 
             <body>

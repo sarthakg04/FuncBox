@@ -4,9 +4,12 @@ import Frame from '../../Frame/Frame';
 import useLocalStorage from '../../../hooks/useLocalStorage';
 import Navbar from '../../Navbar/Navbar';
 
+import {filepath} from "../../../names";
+
 const AngryBirds = () => {
     const [js, setJs] = useLocalStorage('js', '')
     const [srcDoc, setSrcDoc] = useState('')
+    const id = filepath[1];
 
     function updateCode(){
         setSrcDoc(`
@@ -16,7 +19,7 @@ const AngryBirds = () => {
                 <meta charset="UTF-8">
                 <title>Document</title>
                 <link rel="stylesheet" href="FuncBox/AngryBirds/style.css">
-                <link rel="stylesheet" href="./AngryBirds/style.css">
+                <link rel="stylesheet" href="${id}style.css">
             </head>
             <body>
             </body>

@@ -25,7 +25,7 @@ export default function ColorFun() {
   }, []);
   function updateCode() {
     setSrcDoc(`
-            
+
             <html>
 
             <head>
@@ -57,7 +57,7 @@ export default function ColorFun() {
           value={js}
           onChange={setJs}
           updateCode={updateCode}
-          gid={gid}
+          gid={11}
         />
         <div className="preview">
           <div class="heading">

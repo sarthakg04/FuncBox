@@ -46,6 +46,7 @@ export default function Preview(props) {
     }
 
     useEffect(()=>{
+
       updateCode()
     },[])
 
