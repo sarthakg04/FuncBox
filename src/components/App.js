@@ -32,7 +32,6 @@ import Calculator from "./Games/Calculator/Calculator";
 import UserNavbar from "./UserNavbar/UserNavbar";
 import EditProfile from "./Profile/EditProfile";
 import ForgotPass from "./ForgotPass/Forgot";
-import Privacy from "./Privacy/Privacy";
 import Preview from "./Preview/Preview";
 import HitIt from "./Games/HitIt/HitIt";
 
@@ -110,7 +109,6 @@ function App() {
           <Route exact path="/TeamsPage" component={TeamsPage} />
           <Route exact path="/EditProfile" component={EditProfile} />
           <Route exact path="/ForgotPass" component={ForgotPass} />
-          <Route exact path="/Privacy" component={Privacy} />
           <Route exact path="/:code" component={Preview} />
         </Switch>
       </div>

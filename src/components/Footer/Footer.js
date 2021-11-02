@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 
 import './Footer.css'
 import { Link } from 'react-router-dom'
@@ -70,18 +71,25 @@ export default function Footer() {
                 </a>
                 </div>
                 <div className="terms">
+                    
                 <ul>
                     <li>
-
                     <a href="#">Join our Team</a>
                     </li>
                     <li>
-                    <a href="#">Terms</a>
+                    <a href="./terms.html">Terms</a>
                     </li>
                     <li>
-                    <a href="#">Privacy</a>
+                    <a href="./privacy.html">Privacy</a>
                     </li>
                 </ul>
+                <span id="siteseal">
+                    <Helmet>
+                        <script async type="text/javascript"
+                            src="https://seal.godaddy.com/getSeal?sealID=g4QjFCxgWT2ns8fm4KzgPfb5AIRIOBSTjFrWU0RRdYfvHVh00dDCaC7I0B5W">
+                        </script>
+                    </Helmet>
+                    </span>
                 </div>
             </div>
             </div>
