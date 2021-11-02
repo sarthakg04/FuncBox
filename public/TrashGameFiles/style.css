@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap');
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.GamePad {
+  width: 400px;
+  height: 535px;
+  /* border: solid black 1px; */
+  margin: auto;
+  position: relative;
+  /* background-image: url('../MissionMarsFiles/assets/backgrounds/Frame.png'); */
+
+  padding-top: 1px;
+  background: url('./assets/background.png');
+  /* background-position: center; */
+  background-size: cover;
+  position: relative;
+  /* background: red; */
+}
+
+.dispenser , .garbage{
+  position: absolute;
+  top : 10px;
+  text-align: center;
+
+}
+
+.dispenser{
+  z-index: 2;
+}
+
+.garbage{
+  top:70px;
+}
+
+.garbage img{
+  width: 20px;
+}
+
+.garbage img.banana{
+  width: 55px;
+}
+
+.dispenser img{
+  width: 100px;
+}
+
+.center{
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+.left{
+  left : 15%;
+  transform: none;
+  transition: 0.5s;
+  transform: translateX(-50%);
+}
+
+.right{
+  left: 85%;
+  transform: none;
+  transition: 0.5s;
+  transform: translateX(-50%);
+}
+
+.garbage.drop{
+  top : 53%;
+  transition: 1s ease;
+}
+
+.dustbins{
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(3 , minmax(0,1fr));
+  justify-content: center;
+  align-items: top;
+  text-align: center;
+  margin-top: 60%;
+  z-index: 3;
+  position: relative;
+}
+
+.dustbin img{
+  width: 80%;
+}
+
+.interactionPad{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+.lifes{
+  display: flex;
+  justify-content: space-between;
+}
+
+.lifes img{
+  width: 25px;
+  margin-right: 8px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons a{
+  color : white;
+  font-weight: bold;
+  font-size: 18px;
+  background: red;
+  display: inline-block;
+  margin-right: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.gameOver{
+  text-align: center;
+  margin-top: 20%;
+}
+
+.gameOver p{
+  margin-bottom: 16px;
+  font-size: 36px;
+}
+
+.gameOver img{
+  width: 80%;
+  cursor: pointer;
+}

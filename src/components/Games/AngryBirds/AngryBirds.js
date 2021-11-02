@@ -19,7 +19,7 @@ const AngryBirds = () => {
                 <meta charset="UTF-8">
                 <title>Document</title>
                 <link rel="stylesheet" href="FuncBox/AngryBirds/style.css">
-                <link rel="stylesheet" href="${id}style.css">
+                <link rel="stylesheet" href="./AngryBirds/style.css">
             </head>
             <body>
             </body>

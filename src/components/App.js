@@ -34,6 +34,7 @@ import EditProfile from "./Profile/EditProfile";
 import ForgotPass from "./ForgotPass/Forgot";
 import Preview from "./Preview/Preview";
 import HitIt from "./Games/HitIt/HitIt";
+import TrashGame from "./Games/TrashGame/TrashGame"
 
 function App() {
   const dispatch = useDispatch();
@@ -97,6 +98,7 @@ function App() {
           <Route exact path="/StatesThatMatter" component={StatesThatMatter} />
           <Route exact path="/HitIt" component={HitIt} />
           <Route exact path="/PollutoFree" component={PollutoFree} />
+          <Route exact path="/TrashGame" component={TrashGame} />
 
           <Route exact path="/UserNavbar" component={UserNavbar} />
           <Route exact path="/Login" component={Login} />
@@ -110,6 +112,7 @@ function App() {
           <Route exact path="/EditProfile" component={EditProfile} />
           <Route exact path="/ForgotPass" component={ForgotPass} />
           <Route exact path="/:code" component={Preview} />
+
         </Switch>
       </div>
     </Router>
