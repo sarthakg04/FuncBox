@@ -10,16 +10,34 @@ import RunBtn from "../CodeEditor/assets/RunBtn.svg";
 import save from "../CodeEditor/assets/save.svg";
 import share from "../CodeEditor/assets/share.svg";
 import stamp from "../CodeEditor/assets/stamp.svg";
-import { hash } from "../Hasher/Hasher";
+import { hash } from "../../features/hasher";
+
 export default function Editor(props) {
-  const { language, displayName, value, onChange } = props;
+  const { language, displayName, value, onChange, gid } = props;
   const [open, setOpen] = useState(true);
   function handleChange(editor, data, value) {
     onChange(value);
   }
 
   function saveCode() {
-    console.log(hash(value));
+    if (gid !== -1) {
+      console.log(hash(value));
+      const hashedCode = hash(value);
+      fetch("http://localhost:5000/codesave/save", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          token: localStorage.token,
+        },
+        body: JSON.stringify({
+          gid: gid,
+          uid: 17,
+          code: hashedCode,
+        }),
+      });
+    } else {
+      console.error("Error game not found");
+    }
   }
   function toggleQr() {
     document.getElementById("qr").classList.toggle("active");

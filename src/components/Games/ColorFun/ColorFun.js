@@ -1,12 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Editor from "../../Editor/Editor";
 import Frame from "../../Frame/Frame";
 import useLocalStorage from "../../../hooks/useLocalStorage";
-
+import { getGameId } from "../../../features/gamesList";
 export default function ColorFun() {
   const [js, setJs] = useLocalStorage("js", "");
   const [srcDoc, setSrcDoc] = useState("");
 
+  const [gid, setGid] = useState(-1);
+  useEffect(() => {
+    var data = "";
+    const asyncFunc = async () => {
+      data = await getGameId("ColorGame");
+      console.log(data);
+      if (data.error) {
+        console.log(data.error);
+      } else {
+        console.log("gid " + data.gid);
+        setGid(data.gid);
+      }
+    };
+
+    asyncFunc();
+  }, []);
   function updateCode() {
     setSrcDoc(`
             
@@ -41,6 +57,7 @@ export default function ColorFun() {
           value={js}
           onChange={setJs}
           updateCode={updateCode}
+          gid={gid}
         />
         <div className="preview">
           <div class="heading">
