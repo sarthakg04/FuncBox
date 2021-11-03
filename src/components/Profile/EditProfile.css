@@ -1,25 +1,23 @@
 .profile__container * {
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
-
+  font-family: "Lato", sans-serif;
 }
 
-.profile__container{
-  background: #EEEEEE;
+.profile__container {
+  background: #eeeeee;
   padding: 32px;
-    min-height: 93vh;
+  min-height: 93vh;
 }
 
-.profile__container .container{
+.profile__container .container {
   display: grid;
-  grid-template-columns: 1fr 1fr ;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 10vw;
 }
 
-
-.profile__container .profile__heading{
-  color: #3d4372!important;
+.profile__container .profile__heading {
+  color: #3d4372 !important;
   border-bottom: 4px solid #f06f38;
   display: inline-block;
   padding: 8px;
@@ -27,22 +25,24 @@
   margin-bottom: 24px;
 }
 
-.profile__container .container div{
+.profile__container .container div {
   margin-bottom: 16px;
 }
 
-.profile__container input , .profile__container textarea , .profile__container select{
-  background: #EEEEEE;
+.profile__container input,
+.profile__container textarea,
+.profile__container select {
+  background: #eeeeee;
   padding: 8px;
-  border : 1px solid #787878;
+  border: 1px solid #787878;
   border-radius: 2px;
   width: 75%;
-  color : #787878;
+  color: #787878;
 }
 
-.profile__container .container p{
+.profile__container .container p {
   margin-bottom: 4px;
-  color : #787878;
+  color: #787878;
 }
 
 .profile__container .names {
@@ -51,25 +51,26 @@
   grid-gap: 32px;
 }
 
-
-.profile__container .btn{
+.profile__container .btn {
   display: inline-block;
   margin-top: 16px;
   border-radius: 8px;
   background: #f06f38;
   padding: 8px;
-  color : white;
+  color: white;
   text-decoration: none;
   font-weight: bold;
   width: 30%;
   text-align: center;
+  font-size: 15px;
+  cursor: pointer;
 }
 
-.profile__container .buttons .btn{
+.profile__container .buttons .btn {
   margin-right: 8px;
 }
 
-.profile__container .right__container{
+.profile__container .right__container {
   justify-content: flex-start;
   align-items: center;
   display: flex;
@@ -80,19 +81,18 @@
   font-size: 24px;
 }
 
-.profile__container .right__container .avatar__h{
+.profile__container .right__container .avatar__h {
   width: 25%;
   margin-bottom: 16px;
 }
 
-.profile__container .right__container .avatars{
+.profile__container .right__container .avatars {
   margin-top: 32px;
   display: grid;
   grid-gap: 32px;
-  grid-template-columns: repeat(3, minmax(0,1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-
-.profile__container .right__container .avatars img{
+.profile__container .right__container .avatars img {
   cursor: pointer;
 }

@@ -87,7 +87,7 @@ export default function Navbar(props) {
             <div className="dropdown">
               <button class="dropbtn">{shortName(username)}🔽</button>
               <div class="dropdown-content">
-                <Link to="#">Edit Profile</Link>
+                <Link to="/editprofile">Edit Profile</Link>
                 <Link to="#">Purchase</Link>
                 <Link to="#">Change password</Link>
                 <Link to="#" onClick={handleLogout}>

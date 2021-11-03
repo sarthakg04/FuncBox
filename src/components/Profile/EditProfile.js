@@ -14,6 +14,8 @@ import studying from "./assets/studying.png";
 import tiger1 from "./assets/tiger1.png";
 import tiger2 from "./assets/tiger2.png";
 import dog from "./assets/dog.png";
+import { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 // const { fname, lname, caddress, pincode, age, dob, std, phone } = req.body;
 
@@ -21,11 +23,60 @@ export default function EditProfile(props) {
   const [fname, setFname] = useState("nishant");
   const [lname, setLname] = useState("raj");
   const [email, setEmail] = useState("test@gmail.com");
-  const [number, setNumber] = useState("91789788854");
+  const [number, setNumber] = useState("");
   const [add, setAdd] = useState("test");
   const [dob, setDob] = useState("2021-10-21");
   const [avatar, setAvatar] = useState(claw);
   const [std, setStd] = useState(3);
+  const history = useHistory();
+
+  useEffect(() => {
+    async function getData() {
+      const res = await fetch("http://localhost:5000/editprofile/edit", {
+        method: "GET",
+        headers: { token: localStorage.token },
+      });
+      const data = await res.json();
+      const userData = data[0];
+      console.log(userData);
+
+      setFname(userData.fname || "");
+      setLname(userData.lname || "");
+      setEmail(userData.email || "");
+      setNumber(userData.phone || "+91");
+      const d = new Date().toISOString();
+      setDob(userData.dob || d.substring(0, d.indexOf("T")));
+      setAdd(userData.caddress || "");
+      setStd(userData.class || 1);
+    }
+    getData();
+  }, []);
+
+  async function updateProfile() {
+    const reqBody = {
+      fname: fname,
+      lname: lname,
+      email: email,
+      phone: number,
+      caddress: add,
+      dob: dob,
+      std: std,
+    };
+    console.log(reqBody);
+    const res = await fetch("http://localhost:5000/editprofile/edit", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        token: localStorage.token,
+      },
+      body: JSON.stringify(reqBody),
+    });
+    const data = await res.json();
+    if (data === "updated") {
+      alert("Your Account is updated");
+      history.push("/Welcome");
+    }
+  }
 
   function changeFName(e) {
     setFname(e.target.value);
@@ -45,7 +96,7 @@ export default function EditProfile(props) {
   }
 
   function changeAdd(e) {
-    setAdd(e.target.innerHTML);
+    setAdd(e.target.value);
   }
 
   function changeDob(e) {
@@ -97,7 +148,8 @@ export default function EditProfile(props) {
           <div className="number">
             <p>Phone Number</p>
             <input
-              type="number"
+              type="text"
+              inputMode="numeric"
               name="phone"
               value={number}
               onChange={changePhoneNumber}
@@ -105,9 +157,13 @@ export default function EditProfile(props) {
           </div>
           <div className="address">
             <p>Address</p>
-            <textarea name="add1" rows="8" cols="80" onChange={changeAdd}>
-              {add}
-            </textarea>
+            <textarea
+              name="add1"
+              rows="8"
+              cols="80"
+              onChange={changeAdd}
+              value={add}
+            ></textarea>
           </div>
 
           <div className="birth">
@@ -141,9 +197,9 @@ export default function EditProfile(props) {
             </select>
           </div>
           <div className="buttons">
-            <a href="javascript:void(0)" className="btn" on>
+            <button className="btn" onClick={updateProfile}>
               Update Profile
-            </a>
+            </button>
             <a href="/changePass" className="btn">
               Change Password
             </a>

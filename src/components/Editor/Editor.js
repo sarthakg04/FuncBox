@@ -19,11 +19,11 @@ export default function Editor(props) {
     onChange(value);
   }
 
-  function saveCode() {
+  async function saveCode() {
     if (gid !== -1) {
       console.log(hash(value));
       const hashedCode = hash(value);
-      fetch("http://localhost:5000/codesave/save", {
+      const res = await fetch("http://localhost:5000/codesave/save", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -35,6 +35,11 @@ export default function Editor(props) {
           code: hashedCode,
         }),
       });
+      const response = await res.json();
+      if (response === "saved") {
+        alert("Your Code is saved");
+      }
+      console.log(response);
     } else {
       console.error("Error game not found");
     }
