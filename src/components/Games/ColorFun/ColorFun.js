@@ -15,8 +15,10 @@ export default function ColorFun() {
     document.getElementById("qr").classList.toggle("active");
   }
   useEffect(() => {
-    QRCode.toDataURL("https://funcbox.in/" + token + "+" + gid).then(setQrSrc);
-  }, []);
+    QRCode.toDataURL(
+      "https://localhost:3000/" + localStorage.token + "+" + gid
+    ).then(setQrSrc);
+  }, [token, gid]);
   useEffect(() => {
     var data = "";
     const asyncFunc = async () => {
@@ -104,3 +106,6 @@ export default function ColorFun() {
     </div>
   );
 }
+//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic2F5YXIxMjNAZ21haWwuY29tIiwiaWF0IjoxNjM1OTMyMzMyfQ.dvT7QVni-6MLWsTn3Jn9HvIIiMf16w-AgHwM5cHMcsQ
+//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic2F5YXIxMjNAZ21haWwuY29tIiwiaWF0IjoxNjM1OTMyMzU4fQ.VyUn9eN5FN7d5Zv052rqcjTkuyvEFzfSuTyNIaBe1Gg
+//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoic2F5YXIxMjNAZ21haWwuY29tIiwiaWF0IjoxNjM1OTMyNTAxfQ.jOdJyFoDy3q5_3c57Q8OWqflezWGwgK_VlGzRViZrOo
