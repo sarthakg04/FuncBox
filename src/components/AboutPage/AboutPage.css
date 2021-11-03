@@ -5,14 +5,13 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-
 .aboutPage__main .howWeWork {
   text-align: center;
   margin: 32px;
 }
 
-.aboutPage__main .hero__section .about_heading{
-  background-color: #F5F5F5;
+.aboutPage__main .hero__section .about_heading {
+  background-color: #f5f5f5;
   padding: 16px;
   text-align: center;
   margin-bottom: -70px;
@@ -49,7 +48,6 @@
 }
 
 .aboutPage__main .faqs {
-
   margin: 64px;
   font-size: 28px;
   font-weight: 300;
@@ -60,9 +58,9 @@
   margin-bottom: 32px;
 }
 
-.aboutPage__main .faqs .faq__heading{
+.aboutPage__main .faqs .faq__heading {
   text-align: center;
-  margin-bottom:32px;
+  margin-bottom: 32px;
 }
 
 .aboutPage__main .faqs p {
@@ -70,61 +68,73 @@
   margin-bottom: 16px;
 }
 
-.question{
+.question {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.question i.active{
+.question i.active {
   transform: rotate(180deg);
   transition: 0.5s;
 }
 
-.question i{
+.question i {
   transform: none;
   transition: 0.5s;
 }
 
-.answer{
+.answer {
   max-height: 0;
   overflow: hidden;
   transition: 0.5s;
 }
 
-
-@media (max-width : 767px) {
-  .aboutPage__main .roadMap img{
+@media (max-width: 767px) {
+  .aboutPage__main .roadMap img {
     width: 95%;
   }
 }
 
-@media (max-width : 550px) {
-  .aboutPage__main .howWeWork h1{
+@media (max-width: 600px) {
+  .aboutPage__main .hero__section .about_heading {
+    /* background-color: red; */
+    width: 90%;
+  }
+
+  .aboutPage__main .hero__section {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+}
+
+@media (max-width: 550px) {
+  .aboutPage__main .howWeWork h1 {
     font-size: 40px;
   }
-  .aboutPage__main .faqs{
+  .aboutPage__main .faqs {
     margin: 64px 16px;
   }
 
-  .aboutPage__main .hero__section .about_heading{
+  .aboutPage__main .hero__section .about_heading {
     margin-bottom: -4%;
   }
 
-  .aboutPage__main .faqs .faq__heading{
+  .aboutPage__main .faqs .faq__heading {
     font-size: 18px;
   }
 
-  .aboutPage__main .faqs .faq .question{
+  .aboutPage__main .faqs .faq .question {
     margin-bottom: 16px;
   }
-  .aboutPage__main .faqs .faq p{
+  .aboutPage__main .faqs .faq p {
     font-size: 18px;
     margin-bottom: 0;
   }
 
-  .aboutPage__main .faqs .faq i{
+  .aboutPage__main .faqs .faq i {
     font-size: 18px;
   }
 }
