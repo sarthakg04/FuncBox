@@ -34,7 +34,8 @@ import EditProfile from "./Profile/EditProfile";
 import ForgotPass from "./ForgotPass/Forgot";
 import Preview from "./Preview/Preview";
 import HitIt from "./Games/HitIt/HitIt";
-import TrashGame from "./Games/TrashGame/TrashGame"
+import TrashGame from "./Games/TrashGame/TrashGame";
+import CashierGame from "./Games/CashierGame/CashierGame";
 
 function App() {
   const dispatch = useDispatch();
@@ -87,6 +88,9 @@ function App() {
           <Route exact path="/ColorGame" component={ColorFun} />
           <Route exact path="/SolarGame" component={MySolarSystem} />
           <Route exact path="/Calculator" component={Calculator} />
+
+          
+          <Route exact path="/CashierGame" component={CashierGame} />
 
           <Route
             exact
