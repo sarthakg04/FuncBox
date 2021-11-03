@@ -1,3 +1,8 @@
+// fillBackground()
+// createGamePad()
+// createInteractionPad()
+// createItems()
+
 let Item_1_price = 700
 let amount_added = 0
 let cash_values = [ 100, 50, 200, 500, 20, 10, 5, 2, 1 ]
