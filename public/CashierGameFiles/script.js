@@ -129,7 +129,7 @@ function Next() {
 
 function Reset() {
     amount_added = 0
-    amount_div.innerHTML = 0
+    amount_div.innerHTML = '₹'+ 0
 }
 
 function Refresh() {
