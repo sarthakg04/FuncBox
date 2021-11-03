@@ -108,6 +108,10 @@
     flex-direction: column;
     height: fit-content;
   }
+
+  .aboutPage__main .roadMap img {
+    display: block !important;
+  }
 }
 
 @media (max-width: 550px) {
