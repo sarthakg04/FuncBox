@@ -2,6 +2,7 @@
 // createGamePad()
 // createInteractionPad()
 // createItems()
+// createGameFinish()
 
 let Item_1_price = 700
 let amount_added = 0
@@ -22,6 +23,8 @@ const item_prices = [ 449, 387, 273, 35, 195, 385, 29, 75, 165, 200, 135, 125, 9
 let Phone = document.createElement('div')
 let GamePad = document.createElement('div')
 let InteractionPad = document.createElement('div')
+let GameOver = document.createElement('div')
+let Winner = document.createElement('div')
 
 
 function fillBackground() {
@@ -96,6 +99,17 @@ function createItems() {
 
 }
 
+function createGameFinish() {
+    GameOver.classList.add('GameOver')
+    Winner.classList.add('Winner')
+
+    
+    Phone.appendChild(Winner)
+    Phone.appendChild(GameOver)
+}
+
+// Backend Functions
+
 function generateRandomRecievedCash( item_cost ) {
     return (item_cost + Math.floor(Math.random() * item_cost) + 1)
 }
@@ -106,7 +120,7 @@ function Next() {
 
         if(item_number === 17 )
         {
-            alert('Winner!')
+            Winner.style.display = 'block'
             return
         }
         item_number++
@@ -123,7 +137,7 @@ function Next() {
 
     }
     else{
-        alert('Game Over')
+        GameOver.style.display = 'block'
         let interaction_btns = document.querySelectorAll('.buttons')
         // console.log(interaction_btns[0])
         for( i=0; i<interaction_btns.length; i++){

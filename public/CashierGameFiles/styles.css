@@ -68,11 +68,43 @@ body {
 }
 .InteractionPad {
   position: relative;
-  top: 155px;
-  left: 100px;
-  width: 200px;
+  top: 140px;
+  left: 60px;
+  width: 250px;
+  /* border: 1px solid white; */
 }
 
+.reset {
+  background-color: green;
+  height: 50px;
+  width: 70px;
+  border-radius: 5px;
+  border: transparent;
+  color: white;
+  font-size: medium;
+
+  border: 1px solid black;
+}
+.next {
+  background-color: green;
+  height: 50px;
+  width: 70px;
+  border-radius: 5px;
+  border: transparent;
+  color: white;
+  font-size: medium;
+  border: 1px solid black;
+}
+.refresh {
+  background-color: green;
+  height: 50px;
+  width: 70px;
+  border-radius: 5px;
+  border: transparent;
+  color: white;
+  font-size: medium;
+  border: 1px solid black;
+}
 .item {
   position: relative;
   top: 35px;
@@ -82,6 +114,32 @@ body {
   /* border: 1px solid white; */
   box-sizing: border-box;
   display: inline-block;
+}
+
+.GameOver {
+  background: url(./assets/GameOver.png) no-repeat center;
+  position: absolute;
+  top: 200px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
+  width: 200px;
+  display: none;
+}
+
+.Winner {
+  background: url(./assets/GameOver.png) no-repeat center;
+  position: absolute;
+  top: 200px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
+  width: 200px;
+  display: none;
 }
 
 .item_bg {
