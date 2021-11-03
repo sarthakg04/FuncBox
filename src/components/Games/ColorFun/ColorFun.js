@@ -3,11 +3,20 @@ import Editor from "../../Editor/Editor";
 import Frame from "../../Frame/Frame";
 import useLocalStorage from "../../../hooks/useLocalStorage";
 import { getGameId } from "../../../features/gamesList";
+import QRCode from "qrcode";
+import { filepath } from "../../../gameFilePath";
 export default function ColorFun() {
   const [js, setJs] = useLocalStorage("js", "");
   const [srcDoc, setSrcDoc] = useState("");
-
+  const [token, setToken] = useState("");
   const [gid, setGid] = useState(-1);
+  const [qrSrc, setQrSrc] = useState("");
+  function toggleQr() {
+    document.getElementById("qr").classList.toggle("active");
+  }
+  useEffect(() => {
+    QRCode.toDataURL("https://funcbox.in/" + token + "+" + gid).then(setQrSrc);
+  }, []);
   useEffect(() => {
     var data = "";
     const asyncFunc = async () => {
@@ -23,6 +32,7 @@ export default function ColorFun() {
 
     asyncFunc();
   }, []);
+
   function updateCode() {
     setSrcDoc(`
 
@@ -75,6 +85,19 @@ export default function ColorFun() {
                       height="100%"
                   /> */}
             </div>
+          </div>
+        </div>
+        <div className="qr_body" id="qr">
+          <div className="qr_container">
+            <div className="heading">
+              <h1>Scan to Share</h1>
+            </div>
+            <div className="qr_code">
+              <img src={qrSrc} alt="" />
+            </div>
+            <a href="javascript:void(0)" className="closeQr" onClick={toggleQr}>
+              Close
+            </a>
           </div>
         </div>
       </div>
