@@ -103,6 +103,7 @@ export default function Login() {
         dispatch(setAuth({ isAuthenticated: true }));
         dispatch(
           setUser({
+            userid: verifyres.userDetails[0].id,
             username:
               verifyres.userDetails[0].fname +
               " " +

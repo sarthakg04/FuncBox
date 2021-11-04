@@ -3,12 +3,13 @@ import { filepath } from "../../gameFilePath";
 import Frame from "../Frame/Frame";
 import { getGameId } from "../../features/gamesList";
 import { unhash } from "../../features/hasher";
+import useAuth from "../../hooks/useAuth";
 export default function Preview(props) {
   const [js, setJs] = useState("");
   const code = props.match.params.code.split("+");
 
   const [srcDoc, setSrcDoc] = useState("");
-  const [token, setToken] = useState(code[0]);
+  const [userid, setUserId] = useState(code[0]);
   const [gid, setGid] = useState(code[1]);
   const path = filepath[gid];
   useEffect(() => {
@@ -28,21 +29,21 @@ export default function Preview(props) {
   }, []);
   useEffect(() => {
     const getSavedCode = async () => {
-      const res = await fetch(`http://localhost:5000/codesave/save/${gid}`, {
-        method: "GET",
-        headers: {
-          token: token,
-        },
-      });
+      const res = await fetch(
+        `http://localhost:5000/codesave/save/${userid}/game/${gid}`,
+        {
+          method: "GET",
+        }
+      );
       const data = await res.json();
       const len = data.length - 1;
       console.log(unhash(data[len].code));
       setJs(unhash(data[len].code));
     };
-    if (gid > -1) {
+    if (gid > -1 && userid !== "") {
       getSavedCode();
     }
-  }, [gid]);
+  }, [userid, gid]);
   function updateCode() {
     setSrcDoc(`
           <!DOCTYPE html>

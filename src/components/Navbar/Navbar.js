@@ -47,7 +47,7 @@ export default function Navbar(props) {
   }
   const handleLogout = () => {
     dispatch(setAuth({ isAuthenticated: false }));
-    dispatch(setUser({ username: "" }));
+    dispatch(setUser({ username: "", userid: "" }));
     localStorage.removeItem("token");
     history.push("/login");
   };
