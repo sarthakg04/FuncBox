@@ -36,7 +36,7 @@ import Preview from "./Preview/Preview";
 import HitIt from "./Games/HitIt/HitIt";
 import TrashGame from "./Games/TrashGame/TrashGame";
 import CashierGame from "./Games/CashierGame/CashierGame";
-import RecycleIt from "./Games/RecycleIt/RecycleIt"
+import RecycleIt from "./Games/RecycleIt/RecycleIt";
 
 function App() {
   const dispatch = useDispatch();
@@ -60,6 +60,7 @@ function App() {
               parseRes.userDetails[0].fname +
               " " +
               parseRes.userDetails[0].lname,
+            userid: parseRes.userDetails[0].id,
           })
         );
       } else {
@@ -90,7 +91,6 @@ function App() {
           <Route exact path="/SolarGame" component={MySolarSystem} />
           <Route exact path="/Calculator" component={Calculator} />
 
-
           <Route exact path="/CashierGame" component={CashierGame} />
 
           <Route
@@ -104,7 +104,7 @@ function App() {
           <Route exact path="/HitIt" component={HitIt} />
           <Route exact path="/PollutoFree" component={PollutoFree} />
           <Route exact path="/TrashGame" component={TrashGame} />
-            <Route exact path="/RecycleIt" component={RecycleIt} />
+          <Route exact path="/RecycleIt" component={RecycleIt} />
 
           <Route exact path="/UserNavbar" component={UserNavbar} />
           <Route exact path="/Login" component={Login} />
@@ -118,7 +118,6 @@ function App() {
           <Route exact path="/EditProfile" component={EditProfile} />
           <Route exact path="/ForgotPass" component={ForgotPass} />
           <Route exact path="/:code" component={Preview} />
-
         </Switch>
       </div>
     </Router>

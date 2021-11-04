@@ -86,7 +86,12 @@ export default function Signup() {
       if (parseRes.token) {
         localStorage.setItem("token", parseRes.token);
         dispatch(setAuth({ isAuthenticated: true }));
-        dispatch(setUser({ username: details.fName + " " + details.lName }));
+        dispatch(
+          setUser({
+            username: details.fName + " " + details.lName,
+            userid: parseRes.userid,
+          })
+        );
         history.push("/Welcome");
       } else {
         console.log(parseRes);
