@@ -281,14 +281,14 @@ function checkTemp(){
         top_btn.disabled = true
         var bottom_btn = document.querySelector('.bottom_arrow')
         bottom_btn.disabled = true
-        clearInterval(ray_1_MovementId_1)
-        clearInterval(ray_1_MovementId_2)
-        clearInterval(ray_2_MovementId_1)
-        clearInterval(ray_2_MovementId_2)
-        clearInterval(ray_3_MovementId_1)
-        clearInterval(ray_3_MovementId_2)
-        clearInterval(ray_4_MovementId_1)
-        clearInterval(ray_4_MovementId_2)
+        clearTimeout(ray_1_MovementId_1)
+        clearTimeout(ray_1_MovementId_2)
+        clearTimeout(ray_2_MovementId_1)
+        clearTimeout(ray_2_MovementId_2)
+        clearTimeout(ray_3_MovementId_1)
+        clearTimeout(ray_3_MovementId_2)
+        clearTimeout(ray_4_MovementId_1)
+        clearTimeout(ray_4_MovementId_2)
         var rays_list = document.querySelector('.rays_list')
         rays_list.style.display = 'none'
     }
