@@ -35,8 +35,10 @@ export default function EditProfile(props) {
       const res = await fetch("http://localhost:5000/editprofile/edit", {
         method: "GET",
         headers: { token: localStorage.token },
+        content : 'include'
       });
       const data = await res.json();
+
       const userData = data[0];
       console.log(userData);
 
@@ -72,6 +74,7 @@ export default function EditProfile(props) {
       body: JSON.stringify(reqBody),
     });
     const data = await res.json();
+    
     if (data === "updated") {
       alert("Your Account is updated");
       history.push("/Welcome");

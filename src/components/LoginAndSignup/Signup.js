@@ -79,6 +79,7 @@ export default function Signup() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
+        credentials : 'include',
       });
 
       const parseRes = await response.json();

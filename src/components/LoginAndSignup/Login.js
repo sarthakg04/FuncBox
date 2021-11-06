@@ -15,11 +15,15 @@ import useAuth from "../../hooks/useAuth";
 import {
   setAuth,
   setUser,
+  setToken
   // setUser
 } from "../../auth/authslice";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Login() {
+  const token = useSelector((state) =>{
+    return state.token
+  })
   const history = useHistory();
   let cardPosion = [0, 1, 2, 3, 4, 5, 6];
   let images = document.getElementsByClassName("item");
@@ -85,21 +89,24 @@ export default function Login() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
         data: "all",
+        credentials: 'include',
       });
-
+      console.log(response.headers.token);
       const parseRes = await response.json();
-
       if (parseRes.token) {
         console.log(parseRes.token);
         const data = await fetch("http://localhost:5000/auth/verify", {
           method: "GET",
-          headers: { token: parseRes.token, data: "all" },
+          headers: { token: "Bearer "+ parseRes.token, data: "all" },
+          credentials: 'include',
         });
         const verifyres = await data.json();
 
         console.log(verifyres);
-        localStorage.setItem("token", parseRes.token);
+        localStorage.setItem("token", "Bearer "+parseRes.token);
+        dispatch(setToken({token : "Bearer "+parseRes.token}))
 
+        console.log(token);
         dispatch(setAuth({ isAuthenticated: true }));
         dispatch(
           setUser({
@@ -118,6 +125,7 @@ export default function Login() {
         //   resetInputValue();
       }
     } catch (err) {
+      console.log("Error : "+err);
       setAuth({ isAuthenticated: false });
       setUser({ username: "" });
     }

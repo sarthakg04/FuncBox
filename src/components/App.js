@@ -40,17 +40,18 @@ import RecycleIt from "./Games/RecycleIt/RecycleIt";
 
 function App() {
   const dispatch = useDispatch();
-
   const isAuth = async () => {
     try {
       const response = await fetch("http://localhost:5000/auth/verify", {
         method: "GET",
+        credentials : 'include',
         headers: { token: localStorage.token, data: "all" },
       });
 
       const parseRes = await response.json();
 
       console.log(parseRes);
+      localStorage.setItem("token", "Bearer "+parseRes.token);
       if (parseRes.isAuthorized === true) {
         console.log("Authenticated from verify");
         dispatch(setAuth({ isAuthenticated: true }));
