@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { setAuth, setUser } from "../auth/authslice";
+import { setAuth, setUser , setToken} from "../auth/authslice";
 import AngryBirds from "../components/Games/AngryBirds/AngryBirds";
 import MissionMars from "../components/Games/MissionMars/MissionMars";
 import AvengersGame from "./Games/AvengersGame/AvengersGame";
@@ -37,21 +37,22 @@ import HitIt from "./Games/HitIt/HitIt";
 import TrashGame from "./Games/TrashGame/TrashGame";
 import CashierGame from "./Games/CashierGame/CashierGame";
 import RecycleIt from "./Games/RecycleIt/RecycleIt";
+import useAuth from "../hooks/useAuth"
 
 function App() {
   const dispatch = useDispatch();
+  const { token } = useAuth();
   const isAuth = async () => {
     try {
       const response = await fetch("http://localhost:5000/auth/verify", {
-        method: "GET",
         credentials : 'include',
-        headers: { token: localStorage.token, data: "all" },
+        method: "GET",
+        headers: { token : token , data: "all" },
       });
 
       const parseRes = await response.json();
 
       console.log(parseRes);
-      localStorage.setItem("token", "Bearer "+parseRes.token);
       if (parseRes.isAuthorized === true) {
         console.log("Authenticated from verify");
         dispatch(setAuth({ isAuthenticated: true }));
@@ -64,8 +65,10 @@ function App() {
             userid: parseRes.userDetails[0].id,
           })
         );
+        dispatch(setToken({token : "Bearer "+parseRes.token}))
       } else {
         dispatch(setAuth({ isAuthenticated: false }));
+        dispatch(setToken({token : " "}))
       }
     } catch (error) {
       console.error(error.message);

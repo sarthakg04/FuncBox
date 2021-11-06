@@ -6,7 +6,8 @@ import Navbar from "../Navbar/Navbar";
 import "./WelcomePage.css";
 function WelcomePage() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
-  
+  const token = useSelector((state)=>state.auth.token);
+
   useEffect(() => {}, [isAuthenticated]);
 
   const username = useSelector((state) => state.auth.username);

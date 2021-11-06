@@ -16,10 +16,19 @@ import tiger2 from "./assets/tiger2.png";
 import dog from "./assets/dog.png";
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import {
+  setAuth,
+  setUser,
+  setToken
+  // setUser
+} from "../../auth/authslice";
+import { useDispatch, useSelector } from "react-redux";
 
 // const { fname, lname, caddress, pincode, age, dob, std, phone } = req.body;
 
 export default function EditProfile(props) {
+  const {token} = useAuth();
   const [fname, setFname] = useState("nishant");
   const [lname, setLname] = useState("raj");
   const [email, setEmail] = useState("test@gmail.com");
@@ -29,18 +38,20 @@ export default function EditProfile(props) {
   const [avatar, setAvatar] = useState(claw);
   const [std, setStd] = useState(3);
   const history = useHistory();
-
+  const dispatch = useDispatch();
   useEffect(() => {
     async function getData() {
+      console.log(token);
       const res = await fetch("http://localhost:5000/editprofile/edit", {
+        credentials: 'include',
         method: "GET",
-        headers: { token: localStorage.token },
-        content : 'include'
+        headers: { token: token },
       });
       const data = await res.json();
+      console.log(data);
 
-      const userData = data[0];
-      console.log(userData);
+      const userData = data[0][0];
+      dispatch(setToken({token : "Bearer "+data[1].token}))
 
       setFname(userData.fname || "");
       setLname(userData.lname || "");
@@ -74,7 +85,7 @@ export default function EditProfile(props) {
       body: JSON.stringify(reqBody),
     });
     const data = await res.json();
-    
+
     if (data === "updated") {
       alert("Your Account is updated");
       history.push("/Welcome");

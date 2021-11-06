@@ -21,13 +21,11 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Login() {
-  const token = useSelector((state) =>{
-    return state.token
-  })
+
   const history = useHistory();
   let cardPosion = [0, 1, 2, 3, 4, 5, 6];
   let images = document.getElementsByClassName("item");
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated , token } = useAuth();
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -85,28 +83,27 @@ export default function Login() {
     try {
       const body = { email: details.username, password: details.password };
       const response = await fetch("http://localhost:5000/auth/login", {
+        credentials: 'include',
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
         data: "all",
-        credentials: 'include',
       });
       console.log(response.headers.token);
       const parseRes = await response.json();
       if (parseRes.token) {
         console.log(parseRes.token);
         const data = await fetch("http://localhost:5000/auth/verify", {
-          method: "GET",
-          headers: { token: "Bearer "+ parseRes.token, data: "all" },
           credentials: 'include',
+          method: "GET",
+          headers: { token: token, data: "all" },
         });
         const verifyres = await data.json();
 
         console.log(verifyres);
-        localStorage.setItem("token", "Bearer "+parseRes.token);
         dispatch(setToken({token : "Bearer "+parseRes.token}))
 
-        console.log(token);
+
         dispatch(setAuth({ isAuthenticated: true }));
         dispatch(
           setUser({
@@ -128,6 +125,7 @@ export default function Login() {
       console.log("Error : "+err);
       setAuth({ isAuthenticated: false });
       setUser({ username: "" });
+      setToken({token : ""})
     }
   };
 
