@@ -1,3 +1,10 @@
+// Frontend Functions for Test
+// createBackground1()
+// createRays()
+// createCloud()
+// createPlant1()
+// createInteractionPad1()
+
 let Phone
 let GamePad
 let rays_grid 
@@ -161,30 +168,6 @@ function createInteractionPad1() {
     `
     Phone.appendChild(InteractionPad)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
