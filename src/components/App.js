@@ -36,8 +36,9 @@ import Preview from "./Preview/Preview";
 import HitIt from "./Games/HitIt/HitIt";
 import TrashGame from "./Games/TrashGame/TrashGame";
 import CashierGame from "./Games/CashierGame/CashierGame";
+import Photosynthesis from "./Games/PhotosynthesisGame/Photosynthesis";
 import RecycleIt from "./Games/RecycleIt/RecycleIt";
-import useAuth from "../hooks/useAuth"
+import useAuth from "../hooks/useAuth";
 
 function App() {
   const dispatch = useDispatch();
@@ -96,6 +97,7 @@ function App() {
           <Route exact path="/Calculator" component={Calculator} />
 
           <Route exact path="/CashierGame" component={CashierGame} />
+          <Route exact path="/Photosynthesis" component={Photosynthesis} />
 
           <Route
             exact

@@ -1,0 +1,220 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.Phone {
+  margin: 0 auto 0 auto;
+  border: 1px solid black;
+  box-sizing: border-box;
+  height: 535px;
+  width: 400px;
+  /* margin: 0; */
+  background-image: url('./assets/bg.png');
+}
+
+.ray_grid {
+  height: 30px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  position: fixed;
+  right: 0;
+  margin: auto;
+}
+
+.ray_1_grid {
+  left: 0px;
+  width: 230px;
+  top: 130px;
+  transform: rotate(-40deg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ray_2_grid {
+  left: 45px;
+  width: 240px;
+  top: 165px;
+  transform: rotate(-45deg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ray_3_grid {
+  left: 100px;
+  width: 240px;
+  top: 190px;
+  transform: rotate(-50deg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ray_4_grid {
+  left: 160px;
+  width: 260px;
+  top: 225px;
+  transform: rotate(-55deg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ray_div {
+  width: 43px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+}
+
+.cloud_grid {
+  width: 220px;
+  height: 30px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  position: fixed;
+  right: 0;
+  left: 20px;
+  top: 200px;
+  margin: auto;
+  display: flex;
+}
+
+.cloud_div {
+  width: 55px;
+  height: 30px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+}
+
+.ray_bg {
+  background: url('./assets/ray_bg.png') no-repeat center;
+}
+
+.cloud_bg {
+  background: url('./assets/cloud_bg.png') no-repeat center;
+}
+
+.plant {
+  width: 81px;
+  height: 130px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  position: fixed;
+  right: 0;
+  left: 220px;
+  top: 270px;
+  margin: auto;
+  background: url('./assets/plant_bg.png') no-repeat center;
+}
+
+.normal_plant {
+  background: url('./assets/plant_bg.png') no-repeat center;
+}
+
+.happy_plant {
+  background: url('./assets/happy_plant.png') no-repeat center;
+}
+
+.InteractionPad {
+  height: 30px;
+  width: 100px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  position: relative;
+  top: 450px;
+  left: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.fill_space {
+  width: 180px;
+  height: 89.5px;
+  position: fixed;
+  right: 0;
+  left: 220px;
+  top: 400px;
+  margin: auto;
+  /* border: 1px solid red; */
+  /* background-color: #6c481c; */
+
+  background: linear-gradient(to bottom, #6c481c 0%, #6c481c 100%);
+  border-bottom-right-radius: 89.5px;
+  border-bottom-left-radius: 89.5px;
+  box-sizing: border-box;
+}
+
+.fill_space_0 {
+  background: linear-gradient(to bottom, #6c481c 0%, #6c481c 100%);
+  transition: all 0.3s ease-in-out;
+}
+
+.fill_space_2 {
+  background: linear-gradient(
+    to bottom,
+    #6c481c 0%,
+    #6c481c 80%,
+    blue 80%,
+    blue 100%
+  );
+  transition: all 0.3s ease-in-out;
+}
+
+.fill_space_4 {
+  background: linear-gradient(
+    to bottom,
+    #6c481c 0%,
+    #6c481c 60%,
+    blue 60%,
+    blue 100%
+  );
+  transition: all 0.3s ease-in-out;
+}
+
+.fill_space_6 {
+  background: linear-gradient(
+    to bottom,
+    #6c481c 0%,
+    #6c481c 40%,
+    blue 40%,
+    blue 100%
+  );
+}
+
+.fill_space_8 {
+  background: linear-gradient(
+    to bottom,
+    #6c481c 0%,
+    #6c481c 20%,
+    blue 20%,
+    blue 100%
+  );
+}
+
+.fill_space_10 {
+  background: linear-gradient(to bottom, blue 0%, blue 100%);
+}
+
+.Winner {
+  /* background-color: #8f58a5; */
+  padding: 5px;
+  /* border: 1px solid black; */
+  /* border-radius: 5px; */
+  /* box-shadow: 2px 2px 1px grey; */
+
+  background: #8f58a5;
+  border: 3px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  color: white;
+  width: 100px;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  text-align: center;
+  display: none;
+}
