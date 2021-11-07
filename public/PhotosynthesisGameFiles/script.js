@@ -318,9 +318,7 @@ function check() {
         let Winner = document.querySelector('.Winner')
         Winner.style.display = 'block'
         clearTimeout(ray_1_MovementId_1)
-        console.log('1')
         clearTimeout(ray_1_MovementId_2)
-        console.log('2')
         clearTimeout(ray_2_MovementId_1)
         clearTimeout(ray_2_MovementId_2)
         clearTimeout(ray_3_MovementId_1)
@@ -329,7 +327,7 @@ function check() {
         clearTimeout(ray_4_MovementId_2)
         let rays_grid = document.querySelector('.rays_grid')
         rays_grid.style.display = 'none'
-        plant_div.classList.remove('normal_plant')
-        plant_div.classList.add('happy_plant')
+        plant.classList.remove('normal_plant')
+        plant.classList.add('happy_plant')
     }
 }
