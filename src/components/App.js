@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { setAuth, setUser , setToken} from "../auth/authslice";
+import { setAuth, setUser, setToken } from "../auth/authslice";
 import AngryBirds from "../components/Games/AngryBirds/AngryBirds";
 import MissionMars from "../components/Games/MissionMars/MissionMars";
 import AvengersGame from "./Games/AvengersGame/AvengersGame";
@@ -39,6 +39,8 @@ import CashierGame from "./Games/CashierGame/CashierGame";
 import Photosynthesis from "./Games/PhotosynthesisGame/Photosynthesis";
 import RecycleIt from "./Games/RecycleIt/RecycleIt";
 import useAuth from "../hooks/useAuth";
+import FlippableCard from "./FlippableCard/FlippableCard";
+import Container from "./FlippableCard/Container";
 
 function App() {
   const dispatch = useDispatch();
@@ -46,9 +48,9 @@ function App() {
   const isAuth = async () => {
     try {
       const response = await fetch("http://localhost:5000/auth/verify", {
-        credentials : 'include',
+        credentials: "include",
         method: "GET",
-        headers: { token : token , data: "all" },
+        headers: { token: token, data: "all" },
       });
 
       const parseRes = await response.json();
@@ -66,10 +68,10 @@ function App() {
             userid: parseRes.userDetails[0].id,
           })
         );
-        dispatch(setToken({token : "Bearer "+parseRes.token}))
+        dispatch(setToken({ token: "Bearer " + parseRes.token }));
       } else {
         dispatch(setAuth({ isAuthenticated: false }));
-        dispatch(setToken({token : " "}))
+        dispatch(setToken({ token: " " }));
       }
     } catch (error) {
       console.error(error.message);
@@ -123,6 +125,7 @@ function App() {
           <Route exact path="/TeamsPage" component={TeamsPage} />
           <Route exact path="/EditProfile" component={EditProfile} />
           <Route exact path="/ForgotPass" component={ForgotPass} />
+          <Route exact path="/flippable" component={Container} />
           <Route exact path="/:code" component={Preview} />
         </Switch>
       </div>
