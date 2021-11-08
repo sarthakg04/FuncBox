@@ -69,8 +69,14 @@ export default function SalesPage() {
     rzp1.open();
   };
   const handlePurchase = (planName) => {
-    setPlan(planName);
-    setModalOpen(true);
+    if (plan === "") {
+      setPlan(planName);
+      setModalOpen(true);
+    } else {
+      alert(
+        "You have already chosen a plan. Refresh the page to reset selection"
+      );
+    }
   };
 
   return (
