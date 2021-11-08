@@ -41,6 +41,7 @@ import RecycleIt from "./Games/RecycleIt/RecycleIt";
 import useAuth from "../hooks/useAuth";
 import FlippableCard from "./FlippableCard/FlippableCard";
 import Container from "./FlippableCard/Container";
+import Butterfly from "./Games/LifeCycleOfButterfly/LifeCycleOfButterFly";
 
 function App() {
   const dispatch = useDispatch();
@@ -113,6 +114,7 @@ function App() {
           <Route exact path="/PollutoFree" component={PollutoFree} />
           <Route exact path="/TrashGame" component={TrashGame} />
           <Route exact path="/RecycleIt" component={RecycleIt} />
+          <Route exact path="/butterflyGame" component={Butterfly} />
 
           <Route exact path="/UserNavbar" component={UserNavbar} />
           <Route exact path="/Login" component={Login} />
