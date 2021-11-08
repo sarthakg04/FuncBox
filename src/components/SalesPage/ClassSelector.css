@@ -1,0 +1,19 @@
+.class_selection_modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1000;
+}
+.submit_class_button {
+  padding: 10px;
+  margin: 20px;
+  background-color: aqua;
+}

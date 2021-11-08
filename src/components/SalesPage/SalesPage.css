@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,500;1,600;1,700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
-
-
-
 
 .salesPage__main .hero__section {
   border-radius: 16px;
@@ -18,9 +15,8 @@
   margin: 12vh 10vw 12vh 64px;
 }
 
-
-.salesPage__main .hero__section i{
-  color : #f49365;
+.salesPage__main .hero__section i {
+  color: #f49365;
 }
 
 .salesPage__main .hero__section .left__section {
@@ -94,8 +90,6 @@
   margin-bottom: 32px;
 }
 
-
-
 .salesPage__main .prices {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -129,7 +123,7 @@
   padding-left: 24px;
 }
 
-.salesPage__main .plan .details ul li{
+.salesPage__main .plan .details ul li {
   margin-bottom: 8px;
 }
 
@@ -150,13 +144,12 @@
   margin-bottom: 0;
 }
 
-
-.salesPage__main .marquee{
+.salesPage__main .marquee {
   width: 60%;
   margin: auto;
 }
 
-.salesPage__main marquee{
+.salesPage__main marquee {
   width: 100%;
   height: 100px;
 }
@@ -165,7 +158,7 @@
   text-align: right;
 }
 
-.salesPage__main .plan-details .heading h2{
+.salesPage__main .plan-details .heading h2 {
   font-weight: normal;
   font-size: 28px;
 }
@@ -196,7 +189,7 @@
   border-radius: 0 0 12px 12px;
 }
 
-.salesPage__main .plan-cover h1{
+.salesPage__main .plan-cover h1 {
   font-weight: normal;
   font-size: 53px;
 }
@@ -269,32 +262,41 @@
   color: #00b2ff;
   margin-top: 8vh;
 }
+.class_selection_overlay {
+  width: 100vw;
+  height: 100vh;
 
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(128, 128, 128, 0.6);
+  z-index: 900;
+}
 
-@media (max-width : 1100px) {
-  .salesPage__main .prices{
+@media (max-width: 1100px) {
+  .salesPage__main .prices {
     margin: 32px 5% 34px;
   }
 
-  .hero__section .left__section img{
+  .hero__section .left__section img {
     position: relative;
-    left : 10%;
+    left: 10%;
     transform: translate(0%, -50%);
     width: 100%;
   }
 
-  .salesPage__main .for__school .content{
+  .salesPage__main .for__school .content {
     display: grid;
-    grid-template-columns: minmax(0,1fr);
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  .salesPage__main .for__school .content img{
+  .salesPage__main .for__school .content img {
     width: 50%;
     margin: auto;
     border-radius: 8px;
   }
 
-  .salesPage__main .for__school .contentt{
+  .salesPage__main .for__school .contentt {
     margin-left: 0;
     width: 60%;
     margin: auto;
@@ -302,8 +304,8 @@
   }
 }
 
-@media (max-width : 1023px) {
-  .salesPage__main .hero__section{
+@media (max-width: 1023px) {
+  .salesPage__main .hero__section {
     grid-template-columns: 1fr;
   }
 
@@ -311,9 +313,9 @@
     text-align: center;
   }
 
-  .hero__section .left__section img{
+  .hero__section .left__section img {
     position: relative;
-    left : 0%;
+    left: 0%;
     top: 0;
     transform: none;
     width: 50%;
@@ -321,9 +323,8 @@
   }
 }
 
-
-@media (max-width : 850px) {
-  .salesPage__main .prices__heading p{
+@media (max-width: 850px) {
+  .salesPage__main .prices__heading p {
     margin: 16px;
   }
 
@@ -334,7 +335,7 @@
   }
 }
 
-@media (max-width : 767px) {
+@media (max-width: 767px) {
   .salesPage__main .features {
     flex-direction: column;
   }
@@ -343,48 +344,47 @@
     margin-bottom: 16px;
   }
 
-  .salesPage__main .for__school .content{
+  .salesPage__main .for__school .content {
     margin: 32px auto;
   }
 }
 
-@media (max-width : 500px) {
-  .salesPage__main .hero__section{
+@media (max-width: 500px) {
+  .salesPage__main .hero__section {
     width: 90%;
     margin: 32px auto;
   }
 
-  .salesPage__main .hero__section .right__section{
+  .salesPage__main .hero__section .right__section {
     padding: 32px;
   }
 
-  .hero__section .left__section img{
+  .hero__section .left__section img {
     width: 75%;
   }
 
-  .salesPage__main .prices{
+  .salesPage__main .prices {
     width: 85%;
   }
 
-
-  .salesPage__main .for__school .content img{
+  .salesPage__main .for__school .content img {
     width: 90%;
     margin: auto;
     border-radius: 8px;
   }
 
-  .salesPage__main .for__school .contentt{
+  .salesPage__main .for__school .contentt {
     margin-left: 0;
     width: 80%;
     margin: auto;
     margin-top: -3%;
   }
 
-  .salesPage__main .for__school .content{
+  .salesPage__main .for__school .content {
     margin: 32px auto;
   }
 
-  .salesPage__main .plan-cover h1{
+  .salesPage__main .plan-cover h1 {
     font-weight: normal;
     font-size: 40px;
   }

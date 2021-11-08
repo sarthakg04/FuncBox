@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 
 import "./SalesPage.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-
+import ClassSelector from "./ClassSelector";
 // import kids from './assets/kids.svg'
 // import box from './assets/boxsvg.svg'
 // import van from './assets/van.svg'
@@ -13,6 +13,8 @@ import Footer from "../Footer/Footer";
 // import house from './assets/house.svg'
 
 export default function SalesPage() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [plan, setPlan] = useState("");
   const kids =
     "https://ik.imagekit.io/funcboxImages/SalesPage_assets/kids_KxFxgItfQ.png?updatedAt=1633370064495";
   const box =
@@ -26,6 +28,12 @@ export default function SalesPage() {
   const house =
     "https://ik.imagekit.io/funcboxImages/SalesPage_assets/house_SKMIzZuL3.png?updatedAt=1633370327541";
 
+  const [std, setStd] = useState("-1");
+  useEffect(() => {
+    if (std !== "-1" && plan !== "") {
+      console.log("Plane name: ", plan, "\nClass : ", std);
+    }
+  }, [std, plan]);
   const displayRazorPay = async () => {
     const data = await fetch("http://localhost:5000/payment/pay", {
       method: "POST",
@@ -60,6 +68,11 @@ export default function SalesPage() {
     const rzp1 = new window.Razorpay(options);
     rzp1.open();
   };
+  const handlePurchase = (planName) => {
+    setPlan(planName);
+    setModalOpen(true);
+  };
+
   return (
     <div>
       <Helmet>
@@ -166,7 +179,9 @@ export default function SalesPage() {
                   <button
                     // className="atc"
                     type="submit"
-                    onClick={displayRazorPay}
+                    onClick={() => {
+                      handlePurchase("basic");
+                    }}
                   >
                     Purchase
                     <span>
@@ -205,7 +220,9 @@ export default function SalesPage() {
                   <button
                     // className="atc"
                     type="submit"
-                    onClick={displayRazorPay}
+                    onClick={() => {
+                      handlePurchase("deluxe");
+                    }}
                   >
                     Purchase
                     <span>
@@ -245,7 +262,9 @@ export default function SalesPage() {
                   <button
                     // className="atc"
                     type="submit"
-                    onClick={displayRazorPay}
+                    onClick={() => {
+                      handlePurchase("premium");
+                    }}
                   >
                     Purchase
                     <span>
@@ -278,6 +297,22 @@ export default function SalesPage() {
         </div>
         <Footer />
       </div>
+      {modalOpen && (
+        <>
+          <div
+            className="class_selection_overlay"
+            onClick={() => {
+              setModalOpen(false);
+            }}
+          ></div>
+          <ClassSelector
+            onSubmit={(val) => {
+              setStd(val);
+              setModalOpen(false);
+            }}
+          />
+        </>
+      )}
     </div>
   );
 }
