@@ -1,9 +1,11 @@
-// Frontend Functions for Test
+// Frontend Functions for Test for Game 1
 // createBackground1()
 // createRays()
 // createCloud()
 // createPlant1()
 // createInteractionPad1()
+
+// Frontend Functions for Test for Game 2
 
 let Phone
 let GamePad
@@ -47,11 +49,12 @@ let ray_2_current_postion = 4
 let ray_3_current_postion = 4
 let ray_4_current_postion = 5
 
-// Frontend functions
+// Frontend functions Game 1
 
 function createBackground1() {
     Phone = document.createElement('div')
     Phone.classList.add('Phone')
+    Phone.classList.add('Phone_Game_1_bg')
     GamePad = document.createElement('div')    
     GamePad.classList.add('GamePad')
     document.body.appendChild(Phone)
@@ -169,9 +172,106 @@ function createInteractionPad1() {
     Phone.appendChild(InteractionPad)
 }
 
+// Game 2 part
 
 
-// Backend Functions
+let current__shooter__position = 0
+let current__bullet__position = 0
+let shoot__count = 0
+let hit__count = 0
+
+let clouds__grid
+let shooter__grid
+let InteractionPad__2
+
+
+let InteractonPad__btns
+
+
+
+let clouds__grid__squares
+
+let shooter__grid__squares
+
+
+// Frontend functions Game 1
+
+function createBackground2() {
+    Phone = document.createElement('div')
+    Phone.classList.add('Phone')
+    Phone.classList.add('Phone_Game_2_bg')
+    GamePad = document.createElement('div')    
+    GamePad.classList.add('GamePad__2')
+    document.body.appendChild(Phone)
+    Phone.appendChild(GamePad)
+}
+
+function createClouds2(){
+    clouds__grid = document.createElement('div')
+    clouds__grid.classList.add('clouds__grid')
+
+    
+    for(i=0;i<15;i++){
+        let cloud__div = document.createElement('div')
+        cloud__div.classList.add('cloud__div')
+        if(i<9){
+            cloud__div.classList.add('cloud__bg')
+        }
+
+        clouds__grid.appendChild(cloud__div)
+    }
+
+    GamePad.appendChild(clouds__grid)
+}
+
+function createShooter2(){
+    shooter__grid = document.createElement('div')
+    shooter__grid.classList.add('shooter__grid')
+    
+    for(i=0;i<3;i++){
+        let shooter__div = document.createElement('div')
+        shooter__div.classList.add('shooter__div')
+
+        shooter__grid.appendChild(shooter__div)
+    }
+
+    GamePad.appendChild(shooter__grid)
+
+    
+
+    clouds__grid__squares = Array.from(document.querySelectorAll('.clouds__grid div'))
+
+    shooter__grid__squares = Array.from(document.querySelectorAll('.shooter__grid div'))
+
+    
+    shooter__grid__squares[current__shooter__position].classList.add('shooter__bg')
+
+}
+
+
+function createInteractionPad2() {
+    InteractionPad__2 = document.createElement('div')
+    InteractionPad__2.classList.add('InteractionPad__2')
+    InteractionPad__2.innerHTML +=`
+        <button onclick="Move__left()" class="buttons__2 left__btn">Left</button>
+        <button onclick="Move__right()" class="buttons__2 right__btn">Right</button>
+        <button onclick="Shoot()" class="buttons__2 shoot__btn">Shoot</button>
+        <button onclick="window.location.reload()" class="restart__btn">Restart</button>
+    `
+    Phone.appendChild(InteractionPad__2)
+
+    let GameOver__2 = document.createElement('div')
+    GameOver__2.classList.add('GameOver__2')
+    Phone.appendChild(GameOver__2)
+
+    let WellDone__2 = document.createElement('div')
+    WellDone__2.classList.add('WellDone__2')
+    WellDone__2.innerHTML = 'Well Done!'
+    Phone.appendChild(WellDone__2)
+
+}
+
+// Backend Functions of Game 1
 
 
 function ray_1_move(){
@@ -329,5 +429,110 @@ function check() {
         rays_grid.style.display = 'none'
         plant.classList.remove('normal_plant')
         plant.classList.add('happy_plant')
+    }
+}
+
+
+
+
+// Backend function of Game 2
+
+
+function Move__left(){
+    if( current__shooter__position > 0 ){
+        shooter__grid__squares[current__shooter__position].classList.remove('shooter__bg')
+        current__shooter__position--
+        shooter__grid__squares[current__shooter__position].classList.add('shooter__bg')
+    }
+}
+
+function Move__right(){
+    if( current__shooter__position < 2 ){
+        shooter__grid__squares[current__shooter__position].classList.remove('shooter__bg')
+        current__shooter__position++
+        shooter__grid__squares[current__shooter__position].classList.add('shooter__bg')
+    }
+}
+
+function Shoot(){
+    
+    if( shoot__count <= 10 ){
+        
+        clouds__grid__squares[current__bullet__position].classList.remove('bullet__bg')
+
+
+        if( current__bullet__position === 0 ){
+            current__bullet__position = current__shooter__position + 12
+            shoot__count++
+            
+        }
+        else{
+            current__bullet__position = current__bullet__position - 3
+        }
+
+        if( clouds__grid__squares[current__bullet__position].classList.contains('cloud__bg') ){
+            clouds__grid__squares[current__bullet__position].classList.remove('cloud__bg')
+            hit__count++
+            if( hit__count === 9 ){
+
+                clouds__grid__squares[current__bullet__position].classList.remove('bullet__bg')
+
+                console.log("Game Over!")
+                let WellDone__2 = document.querySelector('.WellDone__2')
+
+                WellDone__2.style.display = 'block'
+
+                InteractonPad__btns = document.querySelectorAll('.buttons__2')
+                
+                for( i=0; i<InteractonPad__btns.length; i++){
+                    InteractonPad__btns[i].disabled = true
+                }
+
+            }
+            current__bullet__position = 0
+            return
+        }
+
+        if( current__bullet__position === 0 || current__bullet__position === 1 || current__bullet__position === 2 ){
+            
+            clouds__grid__squares[current__bullet__position].classList.add('bullet__bg')
+            
+            setTimeout(function() {
+                
+                clouds__grid__squares[current__bullet__position].classList.remove('bullet__bg')
+                
+                current__bullet__position = 0
+
+            }, 30);
+            
+            return
+        }
+
+        if( shoot__count != 11){
+            clouds__grid__squares[current__bullet__position].classList.add('bullet__bg')
+        }
+        
+        let shoot_id_1 = setTimeout( Shoot, 30 )
+        
+    }
+    else{
+        Finish__()
+    }
+
+}
+
+function Finish__() {
+
+    clouds__grid__squares[current__bullet__position].classList.remove('bullet__bg')
+
+    console.log("Game Over!")
+    let GameOver__2 = document.querySelector('.GameOver__2')
+
+    GameOver__2.style.display = 'block'
+
+    InteractonPad__btns = document.querySelectorAll('.buttons__2')
+    
+    for( i=0; i<InteractonPad__btns.length; i++){
+        InteractonPad__btns[i].disabled = true
     }
 }
