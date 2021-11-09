@@ -31,12 +31,11 @@
 
 .landingPage__main .details {
   width: 70%;
-  margin: auto;
+  margin: 100px auto;
   display: grid;
   grid-template-columns: 5fr 3fr;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 64px;
 }
 
 .landingPage__main .details .info {
@@ -147,7 +146,7 @@
 
   .landingPage__main .details {
     margin: 0;
-    margin-bottom: 64px;
+    margin-bottom: 10px;
   }
 
   .landingPage__main .how__works {
@@ -187,7 +186,7 @@
 
 @media (max-width: 767px) {
   .landingPage__main .hero__image img {
-    width: 90%;
+    width: 100%;
     text-align: left;
     margin-left: -72px;
   }
@@ -199,7 +198,7 @@
     text-align: center;
     width: 95%;
     margin: auto;
-    margin-bottom: 64px;
+    margin-bottom: 10px;
   }
 
   .landingPage__main .details .info {
@@ -236,7 +235,7 @@
     display: none;
   }
   .hero__section {
-    height: 90vh;
+    height: 52vh;
     display: flex;
     place-items: center;
     justify-items: center;

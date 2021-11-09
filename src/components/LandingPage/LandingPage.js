@@ -28,7 +28,7 @@ export default function LandingPage() {
   const img2 =
     "https://ik.imagekit.io/funcboxImages/LandingPage_assets/img2_WF1sZcUIzJu.png?updatedAt=1633350410095";
   const roadmap_pic1 =
-    "https://ik.imagekit.io/funcboxImages/LandingPage_assets/roadmap1_6CJucCRQpqO.png?updatedAt=1635786547333";
+    "https://ik.imagekit.io/funcboxImages/LandingPage_assets/Group_236_dxE9XupeRdb.png?updatedAt=1636468991313";
   const roadmap_pic2 =
     "https://ik.imagekit.io/funcboxImages/LandingPage_assets/Group_246_HHLbr4Ze-.png?updatedAt=1635786706331";
   const roadmap_pic3 =
@@ -62,6 +62,19 @@ export default function LandingPage() {
             <img src={downArrow} alt="" />
           </div>
         </div>
+        <div className="details">
+          <div className="info">
+            <strong>
+              Introduce your child to the world of Creative Thinking and Logic
+              Building
+            </strong>
+          </div>
+
+          <div className="logo">
+            <img src={logo} alt="" />
+          </div>
+        </div>
+
         <div className="roadMap">
           <img src={roadmap} alt="" />
         </div>
