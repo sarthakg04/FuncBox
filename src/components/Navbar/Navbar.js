@@ -74,10 +74,8 @@ export default function Navbar(props) {
             <p>Home</p>
           </Link>
           <Link to="/AboutPage">
-            <a href="#">
-              <img src={about_check ? about_current : about} alt="about" />
-              <p>About</p>
-            </a>
+            <img src={about_check ? about_current : about} alt="about" />
+            <p>About</p>
           </Link>
           <Link to="/SalesPage">
             <img src={shop_check ? shop_current : shop} alt="shop" />
