@@ -6,6 +6,10 @@
 // createInteractionPad1()
 
 // Frontend Functions for Test for Game 2
+// createBackground2()
+// createClouds2()
+// createShooter2()
+// createInteractionPad2()
 
 let Phone
 let GamePad
