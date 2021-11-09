@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
+import useAuth from "../../hooks/useAuth";
 
 import "./SalesPage.css";
 import Navbar from "../Navbar/Navbar";
@@ -13,6 +14,7 @@ import ClassSelector from "./ClassSelector";
 // import house from './assets/house.svg'
 
 export default function SalesPage() {
+  const { token } = useAuth();
   const [modalOpen, setModalOpen] = useState(false);
   const [plan, setPlan] = useState("");
   const kids =
@@ -32,41 +34,53 @@ export default function SalesPage() {
   useEffect(() => {
     if (std !== "-1" && plan !== "") {
       console.log("Plane name: ", plan, "\nClass : ", std);
+      displayRazorPay();
     }
   }, [std, plan]);
   const displayRazorPay = async () => {
+    console.log("inside razorpay api" + plan, std);
+    console.log("token" + token);
+    const body = { plan: plan, std: std };
+    console.log(body);
     const data = await fetch("http://localhost:5000/payment/pay", {
+      credentials: "include",
       method: "POST",
+      headers: { "Content-Type": "application/json", token: token },
+      body: JSON.stringify(body),
     });
 
     const parseData = await data.json();
 
     console.log(parseData);
 
-    var options = {
-      key: "rzp_test_xl8JnNRauFfJS8",
-      currency: parseData.currency,
-      amount: parseData.amount.toString(),
-      order_id: parseData.id,
-      name: "Func Box",
-      description: "Test Transaction",
-      image:
-        "https://ik.imagekit.io/funcboxImages/Navbar_assets/logo_fABtRefL6.png?updatedAt=1633358637425",
-      handler: function (response) {
-        alert(response.razorpay_payment_id);
-        alert(response.razorpay_order_id);
-        alert(response.razorpay_signature);
-      },
-      prefill: {},
-      notes: {
-        address: "Razorpay Corporate Office",
-      },
-      theme: {
-        color: "#3399cc",
-      },
-    };
-    const rzp1 = new window.Razorpay(options);
-    rzp1.open();
+    if (parseData.id) {
+      var options = {
+        key: "rzp_test_xl8JnNRauFfJS8",
+        currency: parseData.currency,
+        amount: parseData.amount.toString(),
+        order_id: parseData.id,
+        name: "Func Box",
+        description: "Test Transaction",
+        image:
+          "https://ik.imagekit.io/funcboxImages/Navbar_assets/logo_fABtRefL6.png?updatedAt=1633358637425",
+        handler: function (response) {
+          alert(response.razorpay_payment_id);
+          alert(response.razorpay_order_id);
+          alert(response.razorpay_signature);
+        },
+        prefill: {},
+        notes: {
+          address: "Razorpay Corporate Office",
+        },
+        theme: {
+          color: "#c69055",
+        },
+      };
+      const rzp1 = new window.Razorpay(options);
+      rzp1.open();
+    } else {
+      alert("Please Login to Continue");
+    }
   };
   const handlePurchase = (planName) => {
     if (plan === "") {
