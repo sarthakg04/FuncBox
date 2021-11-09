@@ -3,7 +3,7 @@ import VideoEmbed from "./VideoEmbed";
 function Example() {
   return (
     <div>
-      <VideoEmbed title="FuncBox" color="#fff">
+      <VideoEmbed title="FuncBox" color="#f23" backgroundColor="#345">
         <iframe
           width="560"
           height="315"
