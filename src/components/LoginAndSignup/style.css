@@ -21,6 +21,7 @@
   -o-background-size: cover;
   background-size: cover;
   position: relative;
+  margin-left: 32px;
   /* min-height: 85vh; */
 }
 
@@ -165,6 +166,44 @@ circular__carosel */
   top: 45%;
   left: 60%;
   z-index: 5;
+}
+
+@media (max-width : 1023px) {
+  .signup__container{
+    grid-template-columns: minmax(0 , 1.25fr) 1fr;
+  }
+  .signup__container .carousel li img {
+    width: 150px;
+  }
+  .signup__container .carousel li.active img{
+    width: 220px;
+  }
+
+  .login__signup{
+    padding: 32px;
+  }
+}
+
+
+@media (max-width : 767px) {
+    .circular__carosel{
+      display: none;
+    }
+
+    .signup__container{
+      grid-template-columns: 1fr;
+    }
+
+    .login__signup{
+      padding: 64px;
+      min-height: 80vh;
+    }
+}
+
+@media (max-width : 424px) {
+  .login__signup{
+    padding: 64px 16px;
+  }
 }
 
 /* .car-wrapper{

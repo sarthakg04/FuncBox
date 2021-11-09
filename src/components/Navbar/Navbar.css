@@ -179,6 +179,7 @@
   }
   .mobile__links.active {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
