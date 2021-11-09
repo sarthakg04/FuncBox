@@ -84,7 +84,7 @@ export default function LandingPage() {
           <img src={roadmap_pic3} alt="" />
           <img src={roadmap_pic4} alt="" />
         </div>
-        <div className="details">
+        {/* <div className="details">
           <div className="info">
             <p>
               Introduce your child to the world of Creative Thinking and Logic
@@ -94,7 +94,7 @@ export default function LandingPage() {
           <div className="logo">
             <img src={logo} alt="" />
           </div>
-        </div>
+        </div> */}
         <div className="how__works">
           <img src={howWorks} alt="" />
         </div>
