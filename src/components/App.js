@@ -42,6 +42,7 @@ import useAuth from "../hooks/useAuth";
 import FlippableCard from "./FlippableCard/FlippableCard";
 import Container from "./FlippableCard/Container";
 import Butterfly from "./Games/LifeCycleOfButterfly/LifeCycleOfButterFly";
+import Example from "./VideoEmbed/Example";
 
 function App() {
   const dispatch = useDispatch();
@@ -128,6 +129,7 @@ function App() {
           <Route exact path="/EditProfile" component={EditProfile} />
           <Route exact path="/ForgotPass" component={ForgotPass} />
           <Route exact path="/flippable" component={Container} />
+          <Route exact path="/VideoEmbed" component={Example} />
           <Route exact path="/:code" component={Preview} />
         </Switch>
       </div>

@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,500;1,600;1,700&display=swap");
+.video_embed {
+  margin: 5px;
+  width: fit-content;
+  padding: 10px;
+  background-color: black;
+  border-radius: 20px;
+}
+.video_embed > * {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
