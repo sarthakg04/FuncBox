@@ -31,7 +31,7 @@ export default function Footer() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         // alert(`We will reach you out at ${getInTouchEmail}`);
-        const {data} = await axios.get(`http://localhost:5000/email/${getInTouchEmail}`);
+        const {data} = await axios.get(`https://server.funcbox.in/email/${getInTouchEmail}`);
         console.log(data)
         setGetInTouchEmail('')
     }

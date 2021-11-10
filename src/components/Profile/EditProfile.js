@@ -42,7 +42,7 @@ export default function EditProfile(props) {
   useEffect(() => {
     async function getData() {
       console.log(token);
-      const res = await fetch("http://localhost:5000/editprofile/edit", {
+      const res = await fetch("https://server.funcbox.in/editprofile/edit", {
         credentials: 'include',
         method: "GET",
         headers: { token: token },

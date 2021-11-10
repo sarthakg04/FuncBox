@@ -49,7 +49,7 @@ function App() {
   const { token } = useAuth();
   const isAuth = async () => {
     try {
-      const response = await fetch("http://localhost:5000/auth/verify", {
+      const response = await fetch("https://server.funcbox.in/auth/verify", {
         credentials: "include",
         method: "GET",
         headers: { token: token, data: "all" },

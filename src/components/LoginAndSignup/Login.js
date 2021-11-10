@@ -82,9 +82,10 @@ export default function Login() {
     // dispatch(setUser({ username: details.username, parseRes.token }));
     try {
       const body = { email: details.username, password: details.password };
-      const response = await fetch("http://localhost:5000/auth/login", {
+      const response = await fetch("https://server.funcbox.in/auth/login", {
         credentials: 'include',
         method: "POST",
+        mode : 'cors',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
         data: "all",
@@ -93,9 +94,10 @@ export default function Login() {
       const parseRes = await response.json();
       if (parseRes.token) {
         console.log(parseRes.token);
-        const data = await fetch("http://localhost:5000/auth/verify", {
+        const data = await fetch("https://server.funcbox.in/auth/verify", {
           credentials: 'include',
           method: "GET",
+          mode : 'cors',
           headers: { token: token, data: "all" },
         });
         const verifyres = await data.json();
