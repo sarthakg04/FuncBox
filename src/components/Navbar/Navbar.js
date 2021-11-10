@@ -45,11 +45,15 @@ export default function Navbar(props) {
   function toggleNav() {
     document.getElementById("mobile__links").classList.toggle("active");
   }
-  const handleLogout = () => {
-    dispatch(setAuth({ isAuthenticated: false }));
-    dispatch(setUser({ username: "", userid: "" }));
-    localStorage.removeItem("token");
-    history.push("/login");
+  const handleLogout = async () => {
+     dispatch(setAuth({ isAuthenticated: false }));
+     dispatch(setUser({ username: "", userid: "" }));
+
+    const res = await  fetch("https://server.funcbox.in/logout",{
+      credentials: 'include',
+      method : 'GET'
+    })
+    history.push("/");
   };
 
   const shortName = (name) => {

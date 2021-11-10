@@ -42,7 +42,7 @@ export default function SalesPage() {
     console.log("token" + token);
     const body = { plan: plan, std: std };
     console.log(body);
-    const data = await fetch("http://localhost:5000/payment/pay", {
+    const data = await fetch("https://server.funcbox.in/payment/pay", {
       credentials: "include",
       method: "POST",
       headers: { "Content-Type": "application/json", token: token },
