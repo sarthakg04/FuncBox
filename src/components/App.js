@@ -128,7 +128,7 @@ function App() {
           <Route exact path="/TeamsPage" component={TeamsPage} />
           <Route exact path="/EditProfile" component={EditProfile} />
           <Route exact path="/ForgotPass" component={ForgotPass} />
-          <Route exact path="/flippable" component={Container} />
+          {/* <Route exact path="/flippable" component={Container} /> */}
           <Route exact path="/VideoEmbed" component={Example} />
           <Route exact path="/:code" component={Preview} />
         </Switch>

@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import "./LandingPage.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import Container from "../FlippableCard/Container";
 
 // import downArrow from './assets/downArrow.svg'
 // import roadmap from './assets/roadmap.svg'
@@ -98,10 +99,12 @@ export default function LandingPage() {
         <div className="how__works">
           <img src={howWorks} alt="" />
         </div>
+        <Container />
         <div className="individuals">
           <div className="left__container">
             <img src={img1} alt="" />
           </div>
+
           <div className="right__container">
             <h1>For Individuals</h1>
             <p>
