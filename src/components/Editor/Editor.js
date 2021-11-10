@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "codemirror/lib/codemirror.css";
 import "codemirror/theme/material.css";
 import "codemirror/mode/xml/xml";
@@ -11,14 +11,18 @@ import save from "../CodeEditor/assets/save.svg";
 import share from "../CodeEditor/assets/share.svg";
 import stamp from "../CodeEditor/assets/stamp.svg";
 import { hash } from "../../features/hasher";
+import useAuth from "../../hooks/useAuth";
 
 export default function Editor(props) {
   const { language, displayName, value, onChange, gid } = props;
   const [open, setOpen] = useState(true);
+  const { token, userid } = useAuth();
   function handleChange(editor, data, value) {
     onChange(value);
   }
-
+  useEffect(() => {
+    console.log(userid);
+  }, [userid]);
   async function saveCode() {
     if (gid !== -1) {
       console.log(hash(value));
@@ -27,11 +31,12 @@ export default function Editor(props) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          token: localStorage.token,
+          credentials: "include",
+          token: token,
         },
         body: JSON.stringify({
           gid: gid,
-          uid: 17,
+          uid: userid,
           code: hashedCode,
         }),
       });
