@@ -41,7 +41,7 @@ export default function Editor(props) {
         }),
       });
       const response = await res.json();
-      if (response === "saved") {
+      if (response.message === "saved") {
         alert("Your Code is saved");
       }
       console.log(response);
