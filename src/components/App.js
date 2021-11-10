@@ -48,39 +48,42 @@ import ServerTest from "./ServerTest";
 function App() {
   const dispatch = useDispatch();
   const { token } = useAuth();
-  const isAuth = async () => {
-    try {
-      const response = await fetch("https://server.funcbox.in/auth/verify", {
-        credentials: "include",
-        method: "GET",
-        headers: { token: token, data: "all" },
-      });
 
-      const parseRes = await response.json();
-
-      console.log(parseRes);
-      if (parseRes.isAuthorized === true) {
-        console.log("Authenticated from verify");
-        dispatch(setAuth({ isAuthenticated: true }));
-        dispatch(
-          setUser({
-            username:
-              parseRes.userDetails[0].fname +
-              " " +
-              parseRes.userDetails[0].lname,
-            userid: parseRes.userDetails[0].id,
-          })
-        );
-        dispatch(setToken({ token: "Bearer " + parseRes.token }));
-      } else {
-        dispatch(setAuth({ isAuthenticated: false }));
-        dispatch(setToken({ token: " " }));
-      }
-    } catch (error) {
-      console.error(error.message);
-    }
-  };
   useEffect(() => {
+    const isAuth = async () => {
+      try {
+        const response = await fetch("https://server.funcbox.in/auth/verify", {
+          credentials: "include",
+
+          method: "GET",
+          headers: { token: token, data: "all" },
+        });
+
+        const parseRes = await response.json();
+
+        console.log(parseRes);
+        if (parseRes.isAuthorized === true) {
+          console.log("Authenticated from verify");
+          dispatch(setAuth({ isAuthenticated: true }));
+          dispatch(
+            setUser({
+              username:
+                parseRes.userDetails[0].fname +
+                " " +
+                parseRes.userDetails[0].lname,
+              userid: parseRes.userDetails[0].id,
+            })
+          );
+          dispatch(setToken({ token: "Bearer " + parseRes.token }));
+        } else {
+          dispatch(setAuth({ isAuthenticated: false }));
+          dispatch(setToken({ token: " " }));
+        }
+      } catch (error) {
+        console.error(error.message);
+      }
+    };
+
     isAuth();
   }, []);
   return (

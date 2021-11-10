@@ -85,19 +85,19 @@ export default function Login() {
       const response = await fetch("https://server.funcbox.in/auth/login", {
         credentials: 'include',
         method: "POST",
-        mode : 'cors',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
         data: "all",
       });
       console.log(response.headers.token);
       const parseRes = await response.json();
+      console.log(parseRes);
       if (parseRes.token) {
         console.log(parseRes.token);
+          dispatch(setToken({token : "Bearer "+parseRes.token}))
         const data = await fetch("https://server.funcbox.in/auth/verify", {
           credentials: 'include',
           method: "GET",
-          mode : 'cors',
           headers: { token: token, data: "all" },
         });
         const verifyres = await data.json();
