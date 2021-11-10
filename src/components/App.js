@@ -43,6 +43,7 @@ import FlippableCard from "./FlippableCard/FlippableCard";
 import Container from "./FlippableCard/Container";
 import Butterfly from "./Games/LifeCycleOfButterfly/LifeCycleOfButterFly";
 import Example from "./VideoEmbed/Example";
+import ServerTest from "./ServerTest";
 
 function App() {
   const dispatch = useDispatch();
@@ -130,6 +131,7 @@ function App() {
           <Route exact path="/ForgotPass" component={ForgotPass} />
           {/* <Route exact path="/flippable" component={Container} /> */}
           <Route exact path="/VideoEmbed" component={Example} />
+          <Route exact path="/test" component={ServerTest} />
           <Route exact path="/:code" component={Preview} />
         </Switch>
       </div>
