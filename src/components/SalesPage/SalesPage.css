@@ -6,9 +6,12 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.background__img {
+  z-index: -1;
+}
 .salesPage__main .hero__section {
   border-radius: 16px;
-  background: #fffae7;
+  background: #ddd3abb9;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 32px;
@@ -38,10 +41,11 @@
 
 .salesPage__main .hero__section .right__section img {
   position: absolute;
+  z-index: -1;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 45%;
+  width: min(65%, 560px);
 }
 
 .salesPage__main .hero__section .right__section .title {

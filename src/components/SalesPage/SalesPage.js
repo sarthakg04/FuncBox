@@ -19,6 +19,8 @@ export default function SalesPage() {
   const [plan, setPlan] = useState("");
   const kids =
     "https://ik.imagekit.io/funcboxImages/SalesPage_assets/kids_KxFxgItfQ.png?updatedAt=1633370064495";
+  const box2 =
+    "https://ik.imagekit.io/funcboxImages/SalesPage_assets/box_image-removebg-preview_cF9UpW3ZWu7.png?updatedAt=1636629342285";
   const box =
     "https://ik.imagekit.io/funcboxImages/SalesPage_assets/boxsvg_htn4YEPUA.png?updatedAt=1633370132694";
   const van =
@@ -118,7 +120,7 @@ export default function SalesPage() {
           </div>
           <div className="right__section">
             <i className="fa-solid fa-cart-shopping" />
-            <img src={box} alt="box" className="background__img" />
+            <img src={box2} alt="box" className="background__img" />
             <div className="content">
               <p className="title">
                 FuncBox is a box full of surprises which will teach you
