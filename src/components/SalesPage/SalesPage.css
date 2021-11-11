@@ -45,7 +45,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: min(65%, 560px);
+  width: 45%;
 }
 
 .salesPage__main .hero__section .right__section .title {
@@ -281,7 +281,9 @@
   .salesPage__main .prices {
     margin: 32px 5% 34px;
   }
-
+  .salesPage__main .hero__section .right__section img {
+    width: 60%;
+  }
   .hero__section .left__section img {
     position: relative;
     left: 10%;
@@ -305,6 +307,9 @@
     width: 60%;
     margin: auto;
     margin-top: -3%;
+  }
+  .background__img {
+    width: 50%;
   }
 }
 
