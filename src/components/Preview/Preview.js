@@ -30,7 +30,11 @@ export default function Preview(props) {
   useEffect(() => {
     const getSavedCode = async () => {
       const res = await fetch(
-        `http://localhost:5000/codesave/save/${userid}/game/${gid}`,
+        `${
+          process.env.NODE_ENV === "production"
+            ? "https://server.funcbox.in"
+            : "http://localhost:5000"
+        }/codesave/save/${userid}/game/${gid}`,
         {
           method: "GET",
         }

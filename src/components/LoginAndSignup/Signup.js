@@ -75,12 +75,19 @@ export default function Signup() {
     e.preventDefault();
     try {
       const body = { email, fName, lName, standard, password, confirmPassword };
-      const response = await fetch("http://localhost:5000/auth/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
-        credentials : 'include',
-      });
+      const response = await fetch(
+        `${
+          process.env.NODE_ENV === "production"
+            ? "https://server.funcbox.in"
+            : "http://localhost:5000"
+        }/auth/register`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+          credentials: "include",
+        }
+      );
 
       const parseRes = await response.json();
 
