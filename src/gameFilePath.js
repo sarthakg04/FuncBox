@@ -13,5 +13,6 @@ module.exports = {
     11: "ColorFunGameFiles",
     12: "SolarSystemGameFiles",
     13: "TemperatureConversionFiles",
+    25: "AnimalHomeGameFiles",
   },
 };

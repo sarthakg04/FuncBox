@@ -1,19 +1,32 @@
+# Game Dev Guide
+
+## Step 1: Setting up the Game
+
+- Add the Game to the games db through admin panel if not already added
+- In the `public`folder add a folder with the naming convention `<game-name>GameFiles`
+- Open the `gameFilePath.js` file and in the `filepath` json put the name of the folder that you created in the `public` directory corresponding to a number which is not used already(_preferably the `game id` that you can get from the games page in the admin_panel_).
+- In the `src/components/Games` folder create a folder for the game and create a `.js` file (Example : `"CalculatorGame/CalculatorGame.js"`)
+- Copy this piece of code into the `.js` file\
+  Change the `<game-name>` to the **name of the game that you put in the database through admin panel**
+  Change `<game-num>` with the number used to store the game file name in the `gameFilePath.js` file
+
+```
 import React, { useState, useEffect } from "react";
 import Editor from "../../Editor/Editor";
 import Frame from "../../Frame/Frame";
 import useLocalStorage from "../../../hooks/useLocalStorage";
-import gamesList, { getGameId } from "../../../features/gamesList";
+import { getGameId } from "../../../features/gamesList";
 import QRCode from "qrcode";
 import { filepath } from "../../../gameFilePath";
 import useAuth from "../../../hooks/useAuth";
-export default function ColorFun() {
+export default function <file-name>() {
   const [js, setJs] = useLocalStorage("js", "");
   const [srcDoc, setSrcDoc] = useState("");
   const [token, setToken] = useState("");
   const [gid, setGid] = useState(-1);
   const [qrSrc, setQrSrc] = useState("");
   const { userid } = useAuth();
-  const gamePath = filepath[11];
+  const gamePath = filepath[<game-num>];
   function toggleQr() {
     document.getElementById("qr").classList.toggle("active");
   }
@@ -25,7 +38,7 @@ export default function ColorFun() {
   useEffect(() => {
     var data = "";
     const asyncFunc = async () => {
-      data = await getGameId("ColorGame");
+      data = await getGameId("<game-name>");
       console.log(data);
       if (data.error) {
         console.log(data.error);
@@ -59,7 +72,6 @@ export default function ColorFun() {
             </body>
 
             </html>
-
         `);
   }
 
@@ -109,3 +121,23 @@ export default function ColorFun() {
     </div>
   );
 }
+
+```
+
+- In the `App.js` file:
+  - import the component that you created in the `src/components` directory
+  - inside the `Router` add a `Route Component` \
+    Example: `<Route path="/<game-url>" conponent={<component-name>}/>`
+- Now make sure your game can be visited on the route you created(make sure to start the local server)
+
+## Step 2 : Coding the game
+
+- Inside the folder that you created in the `public` directory create these files or folders
+
+  - `script.js`
+  - `style.css`
+  - `assets` folder
+
+- Start writing your **code** in the the `script.js`
+- Write **styles** in `style.css`
+- **Images** should be kept in `imagekit.io` in `.png` format
