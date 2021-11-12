@@ -20,7 +20,7 @@ import useAuth from "../../hooks/useAuth";
 import {
   setAuth,
   setUser,
-  setToken
+  setToken,
   // setUser
 } from "../../auth/authslice";
 import { useDispatch, useSelector } from "react-redux";
@@ -28,7 +28,7 @@ import { useDispatch, useSelector } from "react-redux";
 // const { fname, lname, caddress, pincode, age, dob, std, phone } = req.body;
 
 export default function EditProfile(props) {
-  const {token} = useAuth();
+  const { token } = useAuth();
   const [fname, setFname] = useState("nishant");
   const [lname, setLname] = useState("raj");
   const [email, setEmail] = useState("test@gmail.com");
@@ -42,16 +42,23 @@ export default function EditProfile(props) {
   useEffect(() => {
     async function getData() {
       console.log(token);
-      const res = await fetch("https://server.funcbox.in/editprofile/edit", {
-        credentials: 'include',
-        method: "GET",
-        headers: { token: token },
-      });
+      const res = await fetch(
+        `${
+          process.env.NODE_ENV === "production"
+            ? "https://server.funcbox.in"
+            : "http://localhost:5000"
+        }/editprofile/edit`,
+        {
+          credentials: "include",
+          method: "GET",
+          headers: { token: token },
+        }
+      );
       const data = await res.json();
       console.log(data);
 
       const userData = data[0][0];
-      dispatch(setToken({token : "Bearer "+data[1].token}))
+      dispatch(setToken({ token: "Bearer " + data[1].token }));
 
       setFname(userData.fname || "");
       setLname(userData.lname || "");
@@ -76,14 +83,21 @@ export default function EditProfile(props) {
       std: std,
     };
     console.log(reqBody);
-    const res = await fetch("http://localhost:5000/editprofile/edit", {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        token: localStorage.token,
-      },
-      body: JSON.stringify(reqBody),
-    });
+    const res = await fetch(
+      `${
+        process.env.NODE_ENV === "production"
+          ? "https://server.funcbox.in"
+          : "http://localhost:5000"
+      }/editprofile/edit`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          token: token,
+        },
+        body: JSON.stringify(reqBody),
+      }
+    );
     const data = await res.json();
 
     if (data === "updated") {

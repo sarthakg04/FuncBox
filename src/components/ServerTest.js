@@ -5,7 +5,13 @@ function ServerTest() {
     <div>
       <button
         onClick={async () => {
-          const res = await fetch("https://server.funcbox.in/");
+          const res = await fetch(
+            `${
+              process.env.NODE_ENV === "production"
+                ? "https://server.funcbox.in"
+                : "http://localhost:5000"
+            }`
+          );
           const data = await res.json();
           console.log(data);
         }}

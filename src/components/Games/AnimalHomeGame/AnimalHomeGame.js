@@ -2,18 +2,18 @@ import React, { useState, useEffect } from "react";
 import Editor from "../../Editor/Editor";
 import Frame from "../../Frame/Frame";
 import useLocalStorage from "../../../hooks/useLocalStorage";
-import gamesList, { getGameId } from "../../../features/gamesList";
+import { getGameId } from "../../../features/gamesList";
 import QRCode from "qrcode";
 import { filepath } from "../../../gameFilePath";
 import useAuth from "../../../hooks/useAuth";
-export default function ColorFun() {
+export default function AnimalHomeGame() {
   const [js, setJs] = useLocalStorage("js", "");
   const [srcDoc, setSrcDoc] = useState("");
   const [token, setToken] = useState("");
   const [gid, setGid] = useState(-1);
   const [qrSrc, setQrSrc] = useState("");
   const { userid } = useAuth();
-  const gamePath = filepath[11];
+  const gamePath = filepath[25];
   function toggleQr() {
     document.getElementById("qr").classList.toggle("active");
   }
@@ -25,7 +25,7 @@ export default function ColorFun() {
   useEffect(() => {
     var data = "";
     const asyncFunc = async () => {
-      data = await getGameId("ColorGame");
+      data = await getGameId("AnimalHomeGame");
       console.log(data);
       if (data.error) {
         console.log(data.error);
@@ -41,24 +41,24 @@ export default function ColorFun() {
   function updateCode() {
     setSrcDoc(`
 
-            <html>
+    <html>
 
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                <title>Whack A Mole</title>
-                <link rel="stylesheet" href="/${gamePath}/style.css"}>
-                <link rel="stylesheet" href="./${gamePath}/style.css">
-            </head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Whack A Mole</title>
+        <link rel="stylesheet" href="/${gamePath}/style.css"}>
+        <link rel="stylesheet" href="./${gamePath}/style.css">
+    </head>
 
-            <body>
-                <script src='/${gamePath}/script.js'></script>
-                <script src='./${gamePath}/script.js'></script>
-                <script>${js}</script>
-            </body>
+    <body>
+        <script src='/${gamePath}/script.js'></script>
+        <script src='./${gamePath}/script.js'></script>
+        <script>${js}</script>
+    </body>
 
-            </html>
+    </html>
 
         `);
   }

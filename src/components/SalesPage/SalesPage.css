@@ -6,9 +6,12 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.background__img {
+  z-index: -1;
+}
 .salesPage__main .hero__section {
   border-radius: 16px;
-  background: #fffae7;
+  background: #ddd3abb9;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 32px;
@@ -38,6 +41,7 @@
 
 .salesPage__main .hero__section .right__section img {
   position: absolute;
+  z-index: -1;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -277,7 +281,9 @@
   .salesPage__main .prices {
     margin: 32px 5% 34px;
   }
-
+  .salesPage__main .hero__section .right__section img {
+    width: 60%;
+  }
   .hero__section .left__section img {
     position: relative;
     left: 10%;
@@ -301,6 +307,9 @@
     width: 60%;
     margin: auto;
     margin-top: -3%;
+  }
+  .background__img {
+    width: 50%;
   }
 }
 

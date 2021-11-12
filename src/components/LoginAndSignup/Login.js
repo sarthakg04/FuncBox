@@ -15,17 +15,16 @@ import useAuth from "../../hooks/useAuth";
 import {
   setAuth,
   setUser,
-  setToken
+  setToken,
   // setUser
 } from "../../auth/authslice";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Login() {
-
   const history = useHistory();
   let cardPosion = [0, 1, 2, 3, 4, 5, 6];
   let images = document.getElementsByClassName("item");
-  const { isAuthenticated , token } = useAuth();
+  const { isAuthenticated, token } = useAuth();
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -82,29 +81,42 @@ export default function Login() {
     // dispatch(setUser({ username: details.username, parseRes.token }));
     try {
       const body = { email: details.username, password: details.password };
-      const response = await fetch("https://server.funcbox.in/auth/login", {
-        credentials: 'include',
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
-        data: "all",
-      });
+      const response = await fetch(
+        `${
+          process.env.NODE_ENV === "production"
+            ? "https://server.funcbox.in"
+            : "http://localhost:5000"
+        }/auth/login`,
+        {
+          credentials: "include",
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+          data: "all",
+        }
+      );
       console.log(response.headers.token);
       const parseRes = await response.json();
       console.log(parseRes);
       if (parseRes.token) {
         console.log(parseRes.token);
-          dispatch(setToken({token : "Bearer "+parseRes.token}))
-        const data = await fetch("https://server.funcbox.in/auth/verify", {
-          credentials: 'include',
-          method: "GET",
-          headers: { token: token, data: "all" },
-        });
+        dispatch(setToken({ token: "Bearer " + parseRes.token }));
+        const data = await fetch(
+          `${
+            process.env.NODE_ENV === "production"
+              ? "https://server.funcbox.in"
+              : "http://localhost:5000"
+          }/auth/verify`,
+          {
+            credentials: "include",
+            method: "GET",
+            headers: { token: token, data: "all" },
+          }
+        );
         const verifyres = await data.json();
 
         console.log(verifyres);
-        dispatch(setToken({token : "Bearer "+parseRes.token}))
-
+        dispatch(setToken({ token: "Bearer " + parseRes.token }));
 
         dispatch(setAuth({ isAuthenticated: true }));
         dispatch(
@@ -124,10 +136,10 @@ export default function Login() {
         //   resetInputValue();
       }
     } catch (err) {
-      console.log("Error : "+err);
+      console.log("Error : " + err);
       setAuth({ isAuthenticated: false });
       setUser({ username: "" });
-      setToken({token : ""})
+      setToken({ token: "" });
     }
   };
 
