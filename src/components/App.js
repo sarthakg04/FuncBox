@@ -44,6 +44,8 @@ import Container from "./FlippableCard/Container";
 import Butterfly from "./Games/LifeCycleOfButterfly/LifeCycleOfButterFly";
 import Example from "./VideoEmbed/Example";
 import ServerTest from "./ServerTest";
+import Zombie from "./Games/ZombieGame/ZombieGame";
+
 
 function App() {
   const dispatch = useDispatch();
@@ -120,6 +122,7 @@ function App() {
           <Route exact path="/TrashGame" component={TrashGame} />
           <Route exact path="/RecycleIt" component={RecycleIt} />
           <Route exact path="/butterflyGame" component={Butterfly} />
+          <Route exact path="/ZombieGame" component={Zombie} />
 
           <Route exact path="/UserNavbar" component={UserNavbar} />
           <Route exact path="/Login" component={Login} />
