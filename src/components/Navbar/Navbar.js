@@ -21,7 +21,7 @@ import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { useDispatch, useSelector } from "react-redux";
-import { setAuth, setUser } from "../../auth/authslice";
+import { setAuth, setToken, setUser } from "../../auth/authslice";
 
 export default function Navbar(props) {
   const history = useHistory();
@@ -48,7 +48,7 @@ export default function Navbar(props) {
   const handleLogout = async () => {
     dispatch(setAuth({ isAuthenticated: false }));
     dispatch(setUser({ username: "", userid: "" }));
-
+    dispatch(setToken({ token: "" }));
     const res = await fetch(
       `${
         process.env.NODE_ENV === "production"
