@@ -12,9 +12,19 @@ function createGamepad(){
   gamePad = document.getElementById('GamePad')
 }
 
+function createScore(){
+  document.getElementsByClassName('GamePad')[0].innerHTML +=`
+  <div class="score">
+  <h3>Score : <span id="score"> 0</span> </h3>
+  </div>`;
+
+}
 
 function createContainer(){
   document.getElementsByClassName('GamePad')[0].innerHTML +=`
+  <audio src="./ZombieGameFiles/assets/laser.mpeg" id="sound">
+
+  </audio>
   <div class="zombie__container" id="zContainer">
   <img src="./ZombieGameFiles/assets/zombieLeft.png" alt="" class="left zombie lleg">
     <img src="./ZombieGameFiles/assets/zombieLeft.png" alt="" class="center zombie lleg">
@@ -53,7 +63,7 @@ let zombieArray = [0 , 0 , 0];
 let zombieSize = [55, 55 ,55];
 
 let totalzombie = 0
-
+let score = 0;
 // 80px down
 
 function shootLeft(){
@@ -84,6 +94,7 @@ function shootRight(){
 let time = 700;
 
 function gameOver(){
+  score = 0;
   clearInterval(gen);
   document.getElementById('over').classList.add('active');
 }
@@ -156,10 +167,12 @@ function shootCenter(){
   else{
     index = 2;
   }
-
   document.getElementsByClassName('zombie')[index].style.opacity =0;
+  document.getElementById('sound').play();
   zombieArray[index] = 140;
   zombieSize[index] = 55;
+  score +=10;
+  document.getElementById('score').innerHTML = score;
 }
 
 

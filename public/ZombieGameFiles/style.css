@@ -28,6 +28,13 @@ body {
   /* background: red; */
 }
 
+.score{
+  color : white;
+  padding: 8px;
+  position: absolute;
+  right: 10px;
+}
+
 .zombie__container{
   position: relative;
   height: 367px;

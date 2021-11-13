@@ -31,7 +31,7 @@ export default function WhackAMole() {
                 <meta http-equiv="X-UA-Compatible" content="ie=edge">
                 <title>Whack A Mole</title>
                 <link rel="stylesheet" href="FuncBox/WhackAMoleFiles/style.css">
-                <link rel="stylesheet" href="${id}style.css">
+                <link rel="stylesheet" href="./${gameId}Files/style.css">
             </head>
 
             <body>

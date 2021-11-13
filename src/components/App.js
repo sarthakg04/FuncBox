@@ -44,13 +44,9 @@ import Container from "./FlippableCard/Container";
 import Butterfly from "./Games/LifeCycleOfButterfly/LifeCycleOfButterFly";
 import Example from "./VideoEmbed/Example";
 import ServerTest from "./ServerTest";
-<<<<<<< HEAD
 import Zombie from "./Games/ZombieGame/ZombieGame";
-
-||||||| 075f210
-=======
 import AnimalHomeGame from "./Games/AnimalHomeGame/AnimalHomeGame";
->>>>>>> 3f4d8db925773b475328791edf78a2a893b7b49d
+
 
 function App() {
   const dispatch = useDispatch();
@@ -137,7 +133,7 @@ function App() {
           <Route exact path="/ZombieGame" component={Zombie} />
           <Route exact path="/animalhome" component={AnimalHomeGame} />
 
-        
+
           <Route exact path="/UserNavbar" component={UserNavbar} />
           <Route exact path="/Login" component={Login} />
           <Route exact path="/Signup" component={Signup} />

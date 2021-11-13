@@ -29,6 +29,9 @@ function fill(){
 
 function createScore(){
   document.getElementsByClassName('GamePad')[0].innerHTML +=`
+  <audio src="./WhackAMoleFiles/assets/hit.mpeg" id="sound">
+
+  </audio>
   <div class="score">
     <h3>Score</h3>
     <h3 id="score">0</h3>
@@ -84,7 +87,7 @@ function createInteractionPad(){
 
 function hit(pos){
   if(gameOver !=1){
-
+  document.getElementById('sound').play();
   if(flag != 1){
   flag = 1;
   let element = document.getElementsByClassName('element')[pos];
@@ -131,7 +134,7 @@ function start(){
     }
   while(innerFlag !=1){
     let position = parseInt(Math.random()*9);
-    console.log(molesArray);
+    
     if((!molesArray.includes(position)) && position != lastRemoved){
       molesArray.push(position);
       innerFlag = 1;
@@ -140,7 +143,7 @@ function start(){
     }
   }
   innerFlag = 0;
-  console.log('Yes');
+
 },600);
 }
 
