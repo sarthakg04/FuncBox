@@ -4,7 +4,7 @@ import Frame from '../../Frame/Frame';
 import useLocalStorage from '../../../hooks/useLocalStorage';
 import QRCode from 'qrcode';
 
-export default function HitIt() {
+export default function ButterFly() {
   const [js, setJs] = useLocalStorage('js', '')
   const [srcDoc, setSrcDoc] = useState('')
   const [userName , setUserName] = useState('nishant');

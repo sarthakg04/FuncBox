@@ -6,14 +6,14 @@ import { getGameId } from "../../../features/gamesList";
 import QRCode from "qrcode";
 import { filepath } from "../../../gameFilePath";
 import useAuth from "../../../hooks/useAuth";
-export default function ZombieGame() {
+export default function DecimalGame() {
   const [js, setJs] = useLocalStorage("js", "");
   const [srcDoc, setSrcDoc] = useState("");
   const [token, setToken] = useState("");
   const [gid, setGid] = useState(-1);
   const [qrSrc, setQrSrc] = useState("");
   const { userid } = useAuth();
-  const gamePath = filepath[26];
+  const gamePath = filepath[27];
   function toggleQr() {
     document.getElementById("qr").classList.toggle("active");
   }

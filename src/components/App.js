@@ -46,7 +46,7 @@ import Example from "./VideoEmbed/Example";
 import ServerTest from "./ServerTest";
 import Zombie from "./Games/ZombieGame/ZombieGame";
 import AnimalHomeGame from "./Games/AnimalHomeGame/AnimalHomeGame";
-
+import Decimal from "./Games/DecimalGame/DecimalGame";
 
 function App() {
   const dispatch = useDispatch();
@@ -131,6 +131,7 @@ function App() {
           <Route exact path="/RecycleIt" component={RecycleIt} />
           <Route exact path="/butterflyGame" component={Butterfly} />
           <Route exact path="/ZombieGame" component={Zombie} />
+          <Route exact path="/DecimalGame" component={Decimal} />
           <Route exact path="/animalhome" component={AnimalHomeGame} />
 
 

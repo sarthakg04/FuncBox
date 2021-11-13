@@ -14,5 +14,7 @@ module.exports = {
     12: "SolarSystemGameFiles",
     13: "TemperatureConversionFiles",
     25: "AnimalHomeGameFiles",
+    26: "ZombieGameFiles",
+    27: "DecimalGameFiles"
   },
 };
