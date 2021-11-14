@@ -16,7 +16,7 @@ function GameContainer({ gid }) {
   const [srcDoc, setSrcDoc] = useState("");
   const { isAuthenticated, token, userid } = useAuth();
   const [gAccess, setGAccess] = useState(false);
-
+  const [loading, setLoading] = useState(true);
   const [qrSrc, setQrSrc] = useState("");
   const dispatch = useDispatch();
   const gamePath = filepath[gid];
@@ -51,6 +51,39 @@ function GameContainer({ gid }) {
         `);
   }
   useEffect(() => {
+    async function checkGameAccess() {
+      const gres = await fetch(
+        `${
+          process.env.NODE_ENV === "production"
+            ? "https://server.funcbox.in"
+            : "http://localhost:5000"
+        }/gameAccess`,
+        {
+          method: "GET",
+          credentials: "include",
+          headers: {
+            token: token,
+            gid: gid,
+          },
+        }
+      );
+      const gaccess = await gres.json();
+      console.log("gAccess = ", gaccess);
+      if (gaccess === "Not Authorize 1") {
+        history.push("/login");
+      }
+      if (gaccess) {
+        setLoading(false);
+      }
+      dispatch(setToken({ token: "Bearer " + gaccess.token }));
+      if (gaccess.token && gaccess.gAcess === false) {
+        history.push("/");
+        alert("You are not allowed to access this game");
+      }
+      setGAccess(gaccess.gAcess);
+      console.log(gaccess);
+    }
+    checkGameAccess();
     const getSavedCode = async () => {
       const res = await fetch(
         `${
@@ -72,34 +105,13 @@ function GameContainer({ gid }) {
       getSavedCode();
     }
 
-    async function checkGameAccess() {
-      const gres = await fetch(
-        `${
-          process.env.NODE_ENV === "production"
-            ? "https://server.funcbox.in"
-            : "http://localhost:5000"
-        }/gameAccess`,
-        {
-          method: "GET",
-          credentials: "include",
-          headers: {
-            token: token,
-            gid: gid,
-          },
-        }
-      );
-      const gaccess = await gres.json();
-      dispatch(setToken({ token: "Bearer " + gaccess.token }));
-      setGAccess(gaccess.gAcess);
-      console.log(gaccess);
-    }
-    if (isAuthenticated) checkGameAccess();
-
     QRCode.toDataURL("http://localhost:3000/" + userid + "+" + gid).then(
       setQrSrc
     );
   }, [userid]);
-  return !gAccess || !isAuthenticated ? (
+  return loading ? (
+    <div> Loading ...</div>
+  ) : !gAccess || !isAuthenticated ? (
     <div>
       <GameUnAuthorized />
     </div>
