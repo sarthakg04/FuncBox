@@ -10,23 +10,21 @@ import { setToken } from "../../../auth/authslice";
 import useAuth from "../../../hooks/useAuth";
 import { unhash } from "../../../features/hasher";
 import { useHistory } from "react-router-dom";
+import GameUnAuthorized from "../../GameUnAuthorized/GameUnAuthorized";
 export default function ColorFun() {
   const [js, setJs] = useState();
   const [srcDoc, setSrcDoc] = useState("");
-  const { isAuthenticated, token } = useAuth();
-  const [gAccess, setGAccess] = useState(true);
+  const { isAuthenticated, token, userid } = useAuth();
+  const [gAccess, setGAccess] = useState(false);
   const [gid, setGid] = useState(-1);
   const [qrSrc, setQrSrc] = useState("");
-  const { userid } = useAuth();
   const dispatch = useDispatch();
   const gamePath = filepath[11];
   const history = useHistory();
   function toggleQr() {
     document.getElementById("qr").classList.toggle("active");
   }
-  useEffect(() => {
-    setGAccess(isAuthenticated);
-  }, [isAuthenticated]);
+
   useEffect(() => {
     const getSavedCode = async () => {
       const res = await fetch(
@@ -40,9 +38,10 @@ export default function ColorFun() {
         }
       );
       const data = await res.json();
-      const len = data.length - 1;
-      console.log(unhash(data[len].code));
-      setJs(unhash(data[len].code));
+      if (data) {
+        const len = data.length - 1;
+        if (len > 0) setJs(unhash(data[len].code));
+      }
     };
     if (gid > -1 && userid !== "") {
       getSavedCode();
@@ -116,8 +115,10 @@ export default function ColorFun() {
         `);
   }
 
-  return !gAccess ? (
-    <div> Not authorized</div>
+  return !gAccess || !isAuthenticated ? (
+    <div>
+      <GameUnAuthorized />
+    </div>
   ) : (
     <div>
       <div className="main__container">
