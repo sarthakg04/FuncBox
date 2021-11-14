@@ -4,18 +4,16 @@
 
 - Add the Game to the games db through admin panel if not already added
 - In the `public`folder add a folder with the naming convention `<game-name>GameFiles`
-- Open the `gameFilePath.js` file and in the `filepath` json put the name of the folder that you created in the `public` directory corresponding to a number which is not used already(_preferably the `game id` that you can get from the games page in the admin_panel_).
+- Open the `gameFilePath.js` file and in the `filepath` json put the name of the folder that you created in the `public` directory corresponding to the game id that is available in the games page in admin panel
 - In the `src/components/Games` folder create a folder for the game and create a `.js` file (Example : `"CalculatorGame/CalculatorGame.js"`)
-- Copy this piece of code into the `.js` file\
+- Copy this piece of code into the `.js` file
   Change the `<game-name>` to the **name of the game that you put in the database through admin panel**
-  Change `<game-num>` with the number used to store the game file name in the `gameFilePath.js` file
+  Change `<game-id>` with the game id 
 
 ```
 import React, { useState, useEffect } from "react";
 import Editor from "../../Editor/Editor";
 import Frame from "../../Frame/Frame";
-import useLocalStorage from "../../../hooks/useLocalStorage";
-import gamesList, { getGameId } from "../../../features/gamesList";
 import QRCode from "qrcode";
 import { filepath } from "../../../gameFilePath";
 import { useDispatch } from "react-redux";
@@ -24,16 +22,18 @@ import useAuth from "../../../hooks/useAuth";
 import { unhash } from "../../../features/hasher";
 import { useHistory } from "react-router-dom";
 import GameUnAuthorized from "../../GameUnAuthorized/GameUnAuthorized";
-export default function <file-name>() {
+export default function <filr-name>() {
   const [js, setJs] = useState();
   const [srcDoc, setSrcDoc] = useState("");
   const { isAuthenticated, token, userid } = useAuth();
   const [gAccess, setGAccess] = useState(false);
-  const [gid, setGid] = useState(-1);
+  const gid = <game-id>;
   const [qrSrc, setQrSrc] = useState("");
   const dispatch = useDispatch();
-  const gamePath = filepath[<game-num>];
+  const gamePath = filepath[gid];
   const history = useHistory();
+
+
   function toggleQr() {
     document.getElementById("qr").classList.toggle("active");
   }
@@ -86,22 +86,7 @@ export default function <file-name>() {
     QRCode.toDataURL("http://localhost:3000/" + userid + "+" + gid).then(
       setQrSrc
     );
-  }, [userid, gid]);
-  useEffect(() => {
-    var data = "";
-    const asyncFunc = async () => {
-      data = await getGameId("<game-name>");
-      console.log(data);
-      if (data.error) {
-        console.log(data.error);
-      } else {
-        console.log("gid " + data.gid);
-        setGid(data.gid);
-      }
-    };
-
-    asyncFunc();
-  }, []);
+  }, [userid]);
 
   function updateCode() {
     setSrcDoc(`

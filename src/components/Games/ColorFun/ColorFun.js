@@ -16,11 +16,12 @@ export default function ColorFun() {
   const [srcDoc, setSrcDoc] = useState("");
   const { isAuthenticated, token, userid } = useAuth();
   const [gAccess, setGAccess] = useState(false);
-  const [gid, setGid] = useState(-1);
+  const gid = 11;
   const [qrSrc, setQrSrc] = useState("");
   const dispatch = useDispatch();
-  const gamePath = filepath[11];
+  const gamePath = filepath[gid];
   const history = useHistory();
+
   function toggleQr() {
     document.getElementById("qr").classList.toggle("active");
   }
@@ -73,22 +74,7 @@ export default function ColorFun() {
     QRCode.toDataURL("http://localhost:3000/" + userid + "+" + gid).then(
       setQrSrc
     );
-  }, [userid, gid]);
-  useEffect(() => {
-    var data = "";
-    const asyncFunc = async () => {
-      data = await getGameId("ColorGame");
-      console.log(data);
-      if (data.error) {
-        console.log(data.error);
-      } else {
-        console.log("gid " + data.gid);
-        setGid(data.gid);
-      }
-    };
-
-    asyncFunc();
-  }, []);
+  }, [userid]);
 
   function updateCode() {
     setSrcDoc(`
@@ -99,7 +85,7 @@ export default function ColorFun() {
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                <title>Whack A Mole</title>
+                <title>Color Fun</title>
                 <link rel="stylesheet" href="/${gamePath}/style.css"}>
                 <link rel="stylesheet" href="./${gamePath}/style.css">
             </head>
