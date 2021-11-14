@@ -105,7 +105,7 @@ function GameContainer({ gid }) {
       getSavedCode();
     }
 
-    QRCode.toDataURL("http://localhost:3000/" + userid + "+" + gid).then(
+    QRCode.toDataURL("https://www.funcbox.in/" + userid + "+" + gid).then(
       setQrSrc
     );
   }, [userid]);

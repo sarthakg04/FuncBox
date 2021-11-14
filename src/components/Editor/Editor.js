@@ -20,6 +20,7 @@ export default function Editor(props) {
   function handleChange(editor, data, value) {
     onChange(value);
   }
+  //"http://localhost:5000/codesave/save"
   useEffect(() => {
     console.log(userid);
   }, [userid]);
@@ -27,19 +28,26 @@ export default function Editor(props) {
     if (gid !== -1) {
       console.log(hash(value));
       const hashedCode = hash(value);
-      const res = await fetch("http://localhost:5000/codesave/save", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          credentials: "include",
-          token: token,
-        },
-        body: JSON.stringify({
-          gid: gid,
-          uid: userid,
-          code: hashedCode,
-        }),
-      });
+      const res = await fetch(
+        `${
+          process.env.NODE_ENV === "production"
+            ? "https://server.funcbox.in"
+            : "http://localhost:5000"
+        }/codesave/save`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            credentials: "include",
+            token: token,
+          },
+          body: JSON.stringify({
+            gid: gid,
+            uid: userid,
+            code: hashedCode,
+          }),
+        }
+      );
       const response = await res.json();
       if (response.message === "saved") {
         alert("Your Code is saved");

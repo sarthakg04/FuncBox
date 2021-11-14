@@ -19,7 +19,7 @@ import card5 from "./assets/card5.svg";
 import card6 from "./assets/card6.svg";
 import { parse } from "qs";
 import { useDispatch, useSelector } from "react-redux";
-import { setAuth, setUser } from "../../auth/authslice";
+import { setAuth, setToken, setUser } from "../../auth/authslice";
 
 export default function Signup() {
   let cardPosion = [0, 1, 2, 3, 4, 5, 6];
@@ -92,7 +92,6 @@ export default function Signup() {
       const parseRes = await response.json();
 
       if (parseRes.token) {
-        localStorage.setItem("token", parseRes.token);
         dispatch(setAuth({ isAuthenticated: true }));
         dispatch(
           setUser({
@@ -100,6 +99,7 @@ export default function Signup() {
             userid: parseRes.userid,
           })
         );
+        dispatch(setToken({ token: parseRes.token }));
         history.push("/Welcome");
       } else {
         console.log(parseRes);
