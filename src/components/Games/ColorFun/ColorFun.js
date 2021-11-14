@@ -5,19 +5,72 @@ import useLocalStorage from "../../../hooks/useLocalStorage";
 import gamesList, { getGameId } from "../../../features/gamesList";
 import QRCode from "qrcode";
 import { filepath } from "../../../gameFilePath";
+import { useDispatch } from "react-redux";
+import { setToken } from "../../../auth/authslice";
 import useAuth from "../../../hooks/useAuth";
+import { unhash } from "../../../features/hasher";
+import { useHistory } from "react-router-dom";
 export default function ColorFun() {
-  const [js, setJs] = useLocalStorage("js", "");
+  const [js, setJs] = useState();
   const [srcDoc, setSrcDoc] = useState("");
-  const [token, setToken] = useState("");
+  const { isAuthenticated, token } = useAuth();
+  const [gAccess, setGAccess] = useState(true);
   const [gid, setGid] = useState(-1);
   const [qrSrc, setQrSrc] = useState("");
   const { userid } = useAuth();
+  const dispatch = useDispatch();
   const gamePath = filepath[11];
+  const history = useHistory();
   function toggleQr() {
     document.getElementById("qr").classList.toggle("active");
   }
   useEffect(() => {
+    setGAccess(isAuthenticated);
+  }, [isAuthenticated]);
+  useEffect(() => {
+    const getSavedCode = async () => {
+      const res = await fetch(
+        `${
+          process.env.NODE_ENV === "production"
+            ? "https://server.funcbox.in"
+            : "http://localhost:5000"
+        }/codesave/save/${userid}/game/${gid}`,
+        {
+          method: "GET",
+        }
+      );
+      const data = await res.json();
+      const len = data.length - 1;
+      console.log(unhash(data[len].code));
+      setJs(unhash(data[len].code));
+    };
+    if (gid > -1 && userid !== "") {
+      getSavedCode();
+    }
+
+    async function checkGameAccess() {
+      const gres = await fetch(
+        `${
+          process.env.NODE_ENV === "production"
+            ? "https://server.funcbox.in"
+            : "http://localhost:5000"
+        }/gameAccess`,
+        {
+          method: "GET",
+          credentials: "include",
+          headers: {
+            token: token,
+            gid: gid,
+          },
+        }
+      );
+      const gaccess = await gres.json();
+      dispatch(setToken({ token: "Bearer " + gaccess.token }));
+      setGAccess(gaccess.gAcess);
+      console.log(gaccess);
+    }
+    if (isAuthenticated) checkGameAccess();
+
     QRCode.toDataURL("http://localhost:3000/" + userid + "+" + gid).then(
       setQrSrc
     );
@@ -63,7 +116,9 @@ export default function ColorFun() {
         `);
   }
 
-  return (
+  return !gAccess ? (
+    <div> Not authorized</div>
+  ) : (
     <div>
       <div className="main__container">
         <Editor
