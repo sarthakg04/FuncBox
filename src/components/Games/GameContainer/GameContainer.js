@@ -73,7 +73,6 @@ function GameContainer({ gid }) {
         history.push("/login");
       }
       if (gaccess) {
-        setLoading(false);
       }
       dispatch(setToken({ token: "Bearer " + gaccess.token }));
       if (gaccess.token && gaccess.gAcess === false) {
@@ -100,6 +99,7 @@ function GameContainer({ gid }) {
         const len = data.length - 1;
         if (len > 0) setJs(unhash(data[len].code));
       }
+      setLoading(false);
     };
     if (gid > -1 && userid !== "") {
       getSavedCode();
@@ -111,10 +111,6 @@ function GameContainer({ gid }) {
   }, [userid]);
   return loading ? (
     <div> Loading ...</div>
-  ) : !gAccess || !isAuthenticated ? (
-    <div>
-      <GameUnAuthorized />
-    </div>
   ) : (
     <div className="main__container">
       <Editor
