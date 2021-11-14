@@ -9,10 +9,10 @@ import useAuth from "../../../hooks/useAuth";
 export default function ZombieGame() {
   const [js, setJs] = useLocalStorage("js", "");
   const [srcDoc, setSrcDoc] = useState("");
-  const [token, setToken] = useState("");
+  const [tokenn, setToken] = useState("");
   const [gid, setGid] = useState(-1);
   const [qrSrc, setQrSrc] = useState("");
-  const { userid } = useAuth();
+  const { userid , token } = useAuth();
   const gamePath = filepath[26];
   function toggleQr() {
     document.getElementById("qr").classList.toggle("active");
@@ -23,19 +23,17 @@ export default function ZombieGame() {
     );
   }, [userid, gid]);
   useEffect(() => {
-    var data = "";
-    const asyncFunc = async () => {
-      data = await getGameId("");
-      console.log(data);
-      if (data.error) {
-        console.log(data.error);
-      } else {
-        console.log("gid " + data.gid);
-        setGid(data.gid);
-      }
-    };
+    const reqFunction = async () =>{
+    const res = await fetch("http://localhost:5000/gameAccess", {
+      credentials : "include",
+      method: "GET",
+      headers: { token: token}
+    });
+    console.log("Log from useEffect");
+    console.log(await res.json());
+  }
 
-    asyncFunc();
+  reqFunction();
   }, []);
 
   function updateCode() {
