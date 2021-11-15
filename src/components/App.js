@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { setAuth, setUser, setToken } from "../auth/authslice";
 import AngryBirds from "../components/Games/AngryBirds/AngryBirds";
 import MissionMars from "../components/Games/MissionMars/MissionMars";
@@ -51,7 +53,7 @@ import Decimal from "./Games/DecimalGame/DecimalGame";
 function App() {
   const dispatch = useDispatch();
   const { token } = useAuth();
-
+  toast.configure();
   useEffect(() => {
     const isAuth = async () => {
       try {
@@ -99,6 +101,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <ToastContainer position="top-left" />
         <Switch>
           <Route exact path="/AngryBirds" component={AngryBirds} />
           <Route exact path="/MissionMars" component={MissionMars} />

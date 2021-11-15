@@ -22,6 +22,7 @@ import { useHistory } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { useDispatch, useSelector } from "react-redux";
 import { setAuth, setToken, setUser } from "../../auth/authslice";
+import { toast } from "react-toastify";
 
 export default function Navbar(props) {
   const history = useHistory();
@@ -60,6 +61,7 @@ export default function Navbar(props) {
         method: "GET",
       }
     );
+    toast.success("You are logged out");
     history.push("/");
   };
 

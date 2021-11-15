@@ -12,6 +12,7 @@ import share from "../CodeEditor/assets/share.svg";
 import stamp from "../CodeEditor/assets/stamp.svg";
 import { hash } from "../../features/hasher";
 import useAuth from "../../hooks/useAuth";
+import { toast } from "react-toastify";
 
 export default function Editor(props) {
   const { language, displayName, value, onChange, gid } = props;
@@ -49,12 +50,26 @@ export default function Editor(props) {
         }
       );
       const response = await res.json();
-      if (response.message === "saved") {
-        alert("Your Code is saved");
+      if (!res) {
+        toast.error("Server error");
       }
-      console.log(response);
+      if (response.message === "saved") {
+        toast.success("Your Code is saved", {
+          pauseOnHover: false,
+          pauseOnFocusLoss: false,
+        });
+      } else {
+        toast.error(response.message, {
+          pauseOnFocusLoss: false,
+          pauseOnHover: false,
+        });
+      }
     } else {
       console.error("Error game not found");
+      toast.error("Game not Found", {
+        pauseOnFocusLoss: false,
+        pauseOnHover: false,
+      });
     }
   }
   function toggleQr() {

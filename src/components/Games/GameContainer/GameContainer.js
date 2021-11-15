@@ -11,6 +11,7 @@ import useAuth from "../../../hooks/useAuth";
 import { unhash } from "../../../features/hasher";
 import { useHistory } from "react-router-dom";
 import GameUnAuthorized from "../../GameUnAuthorized/GameUnAuthorized";
+import { toast } from "react-toastify";
 function GameContainer({ gid }) {
   const [js, setJs] = useState();
   const [srcDoc, setSrcDoc] = useState("");
@@ -70,14 +71,16 @@ function GameContainer({ gid }) {
       const gaccess = await gres.json();
       console.log("gAccess = ", gaccess);
       if (gaccess === "Not Authorize 1") {
+        toast.error("You are not logged in!", { pauseOnHover: false });
         history.push("/login");
       }
-      if (gaccess) {
-      }
+
       dispatch(setToken({ token: "Bearer " + gaccess.token }));
       if (gaccess.token && gaccess.gAcess === false) {
+        toast.error("You are not allowed to access this game", {
+          pauseOnHover: false,
+        });
         history.push("/");
-        alert("You are not allowed to access this game");
       }
       setGAccess(gaccess.gAcess);
       console.log(gaccess);
@@ -105,9 +108,16 @@ function GameContainer({ gid }) {
       getSavedCode();
     }
 
-    QRCode.toDataURL("https://www.funcbox.in/" + userid + "+" + gid).then(
-      setQrSrc
-    );
+    QRCode.toDataURL(
+      `${
+        process.env.NODE_ENV === "development"
+          ? "http://localhost:3000"
+          : "https://www.funcbox.in"
+      }` +
+        userid +
+        "+" +
+        gid
+    ).then(setQrSrc);
   }, [userid]);
   return loading ? (
     <div> Loading ...</div>

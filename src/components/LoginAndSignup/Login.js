@@ -19,6 +19,7 @@ import {
   // setUser
 } from "../../auth/authslice";
 import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 export default function Login() {
   const history = useHistory();
@@ -29,6 +30,7 @@ export default function Login() {
   useEffect(() => {
     if (isAuthenticated) {
       console.log("Authenticated");
+      toast.success("You are logged in");
       history.push("/Welcome");
     } else {
       console.log("Not authenticated");
@@ -95,11 +97,10 @@ export default function Login() {
           data: "all",
         }
       );
-      console.log(response.headers.token);
+
       const parseRes = await response.json();
-      console.log(parseRes);
+
       if (parseRes.token) {
-        console.log(parseRes.token);
         dispatch(setToken({ token: "Bearer " + parseRes.token }));
         const data = await fetch(
           `${
@@ -131,8 +132,7 @@ export default function Login() {
 
         // history.goBack();
       } else {
-        console.error(parseRes);
-        //   toast.error(parseRes);
+        toast.error(parseRes);
         //   resetInputValue();
       }
     } catch (err) {
