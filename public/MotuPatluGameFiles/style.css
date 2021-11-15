@@ -8,7 +8,14 @@
     margin: 0;
     padding: 0;
   }
-  
+  #cartoon{
+    position:absolute;
+    margin-top:32vh;
+    margin-left:5vw;
+    width:300px;
+    height:300px;
+    background-size: cover;
+  }
   .container {
     width: 400px;
     height: 535px;
@@ -19,37 +26,45 @@
     font-family: 'Finger Paint', cursive;
   }
 
-  #orangeBtn {
+  #button1 {
     position: absolute;
-    margin-top:48vh;
-    margin-left:4vw;
+    margin-top:83vh;
+    margin-left:73vw;
     width: 15vw;
     height: 5vh;
     background: rgb(255,172,74,0);
     border-radius: 37px;
+    font-weight: 600;
     border: none;
     color: rgb(88, 81, 81);
     font-size: 10px;
     font-family: 'Finger Paint', cursive;
+    display:none;
   }
-  #distance{
-    width: 28vw;
+  #inpdistance{
+    position: absolute;
+    width: 30vw;
     height: 6vh;
-    border:3px black;
+    border:1px black;
     border-style: solid;
-    margin-left:12vw;
-    margin-top:55vh;
+    margin-left:10vw;
+    margin-top:90vh;
+    border-radius: 20px;
+    padding: 15px;
   }
-  #time{
-    width: 24vw;
+  #inptime{
+    padding: 15px;
+    position: absolute;
+    width: 30vw;
     height: 6vh;
-    border:black 3px;
+    border:black 1px;
     border-style: solid;
-    margin-left:5vw;
-    margin-top:55vh;
+    margin-left:40vw;
+    margin-top:90vh;
+    border-radius: 20px;
   }
 .speed{
-    position: relative;
-    margin-top: 28vh;
+    position: absolute;
+    margin-top: 28.5vh;
     margin-left:27vw ;
 }

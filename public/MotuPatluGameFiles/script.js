@@ -1,7 +1,35 @@
-// Frontend functions
-// createGamepad()
-// fillBackground()
-// createInteractionPad()
+//FrontEnd Function
+// createGamepad();
+// createInteractionPad();
+// fillBackground(samosashop);
+// AddChar(motupatlu);
+// function CalculateSpeed()
+// {
+// 	let distance=input('distance');
+// 	let time=input('time');
+// 	var speed;
+// 	speed=distance/time;
+// 	print(speed);
+// }
+
+
+
+
+
+
+let bheemchutki="https://ik.imagekit.io/funcboxImages/MotuPatlu_assets/Group_293_YskAbsU7h1d.png?updatedAt=1637005053639";
+let motupatlu="https://ik.imagekit.io/funcboxImages/MotuPatlu_assets/Group_203__1__trS4-5wvbd5.png?updatedAt=1637005043573";
+let laddushop="https://ik.imagekit.io/funcboxImages/MotuPatlu_assets/Group_295__3__mCVBtvJAvuE.png?updatedAt=1637005115522";
+let samosashop="https://ik.imagekit.io/funcboxImages/MotuPatlu_assets/A4_-_453__1__PePqf5gcG2o.png?updatedAt=1637005899298";
+
+
+
+
+function input(variable1)
+{
+  return(document.getElementById('inp'+String(variable1)).value);
+}
+
 
 function createGamepad() {
     let container = document.createElement("DIV");
@@ -10,29 +38,34 @@ function createGamepad() {
     document.body.appendChild(container);
   }
   
-  function fillBackground() {
+  function fillBackground(back) {
     document.getElementsByClassName("container")[0].style.backgroundImage =
-      "url(https://ik.imagekit.io/funcboxImages/MotuPatlu_assets/background_Cd--9nmmIDu.png?updatedAt=1635330378178)";
-    console.log("background created");
+      "url("+back+")";
+    console.log("background added");
   }
   
   function createInteractionPad() {
     container.innerHTML += `
+      <div id="cartoon">
+      </div>
       <div class="speed">
       <p id="speedoutput">
       Speed: 
       <p>
       </div>
-      <input type="number" id="distance" name="distance" placeholder="Distance (Km)"/>
-      <input type="number" id="time" name="time" placeholder="Time (Hr)"/>
-      <input type="submit" id="orangeBtn" onClick="SpeedOutput()"/>
+      <input type="number" id="inpdistance"  placeholder="Distance (Km)"/>
+      <input type="number" id="inptime"  placeholder="Time (Hr)"/>
+      <input type="submit" id="button1" onclick="CalculateSpeed()"/>
       `;
   }
   
-  function SpeedOutput() {
-    var inputVal1 = document.getElementById("distance").value;
-    var inputVal2 = document.getElementById("time").value;
-    document.getElementById("speedoutput").innerHTML ='Speed: '+ inputVal1/inputVal2 +' Km/hr';
-  }
 
-  
+  function AddChar(temp){
+    document.getElementById("cartoon").style.backgroundImage =
+        "url("+temp+")";
+      console.log("character added");
+  }
+  function print(variable)
+{ 
+  document.getElementById("speedoutput").innerHTML = variable +' Km/hr';
+}
