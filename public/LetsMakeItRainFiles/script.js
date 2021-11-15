@@ -78,7 +78,7 @@ function generateRays(){
     GamePad.appendChild(rays_list)
     rays_grid_fill()
 
-    
+
     ray_1_MovementId_1 = setTimeout(ray_1_Move,1000)
     ray_2_MovementId_1 = setTimeout(ray_2_Move,1000)
     ray_3_MovementId_1 = setTimeout(ray_3_Move,1000)
@@ -139,7 +139,7 @@ function rays_grid_fill(){
         ray_4_grid.appendChild(ray_div)
     }
 
-    
+
     ray_1_grid_squares = Array.from(document.querySelectorAll('.ray_1_grid div'))
     ray_2_grid_squares = Array.from(document.querySelectorAll('.ray_2_grid div'))
     ray_3_grid_squares = Array.from(document.querySelectorAll('.ray_3_grid div'))
@@ -245,7 +245,7 @@ function ray_4_Move(){
         current_ray4_position = 7
     }
     ray_4_grid_squares[current_ray4_position].classList.add('ray_bg')
-    
+
     if(current_ray4_position === 0){
         if( current_drop_position === 3 ) {
             rays_caught++
@@ -264,7 +264,7 @@ function ray_4_Move(){
 
 function checkTemp(){
     temperature = document.querySelector('.temperature')
-    
+
     for(i=2,k=10;i<=20;i=i+2,k=k+10){
         var className = `temp_${k}`
         if(rays_caught === i){
