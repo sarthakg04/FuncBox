@@ -28,19 +28,26 @@ export default function Editor(props) {
     if (gid !== -1) {
       console.log(hash(value));
       const hashedCode = hash(value);
-      const res = await fetch(`https://server.funcbox.in/codesave/save`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          credentials: "include",
-          token: token,
-        },
-        body: JSON.stringify({
-          gid: gid,
-          uid: userid,
-          code: hashedCode,
-        }),
-      });
+      const res = await fetch(
+        `${
+          process.env.NODE_ENV === "development"
+            ? "http://localhost:5000"
+            : "https://server.funcbox.in"
+        }/codesave/save`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            credentials: "include",
+            token: token,
+          },
+          body: JSON.stringify({
+            gid: gid,
+            uid: userid,
+            code: hashedCode,
+          }),
+        }
+      );
       const response = await res.json();
       if (response.message === "saved") {
         alert("Your Code is saved");

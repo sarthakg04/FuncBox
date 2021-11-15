@@ -49,10 +49,17 @@ export default function Navbar(props) {
     dispatch(setAuth({ isAuthenticated: false }));
     dispatch(setUser({ username: "", userid: "" }));
     dispatch(setToken({ token: "" }));
-    const res = await fetch(`https://server.funcbox.in/logout`, {
-      credentials: "include",
-      method: "GET",
-    });
+    const res = await fetch(
+      `${
+        process.env.NODE_ENV === "development"
+          ? "http://localhost:5000"
+          : "https://server.funcbox.in"
+      }/logout`,
+      {
+        credentials: "include",
+        method: "GET",
+      }
+    );
     history.push("/");
   };
 

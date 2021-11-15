@@ -81,24 +81,38 @@ export default function Login() {
     // dispatch(setUser({ username: details.username, parseRes.token }));
     try {
       const body = { email: details.username, password: details.password };
-      const response = await fetch(`https://server.funcbox.in/auth/login`, {
-        credentials: "include",
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
-        data: "all",
-      });
+      const response = await fetch(
+        `${
+          process.env.NODE_ENV === "development"
+            ? "http://localhost:5000"
+            : "https://server.funcbox.in"
+        }/auth/login`,
+        {
+          credentials: "include",
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+          data: "all",
+        }
+      );
       console.log(response.headers.token);
       const parseRes = await response.json();
       console.log(parseRes);
       if (parseRes.token) {
         console.log(parseRes.token);
         dispatch(setToken({ token: "Bearer " + parseRes.token }));
-        const data = await fetch(`https://server.funcbox.in/auth/verify`, {
-          credentials: "include",
-          method: "GET",
-          headers: { token: token, data: "all" },
-        });
+        const data = await fetch(
+          `${
+            process.env.NODE_ENV === "development"
+              ? "http://localhost:5000"
+              : "https://server.funcbox.in"
+          }/auth/verify`,
+          {
+            credentials: "include",
+            method: "GET",
+            headers: { token: token, data: "all" },
+          }
+        );
         const verifyres = await data.json();
 
         console.log(verifyres);

@@ -44,12 +44,19 @@ export default function SalesPage() {
     console.log("token" + token);
     const body = { plan: plan, std: std };
     console.log(body);
-    const data = await fetch("https://server.funcbox.in/payment/pay", {
-      credentials: "include",
-      method: "POST",
-      headers: { "Content-Type": "application/json", token: token },
-      body: JSON.stringify(body),
-    });
+    const data = await fetch(
+      `${
+        process.env.NODE_ENV === "development"
+          ? "http://localhost:5000"
+          : "https://server.funcbox.in"
+      }/payment/pay`,
+      {
+        credentials: "include",
+        method: "POST",
+        headers: { "Content-Type": "application/json", token: token },
+        body: JSON.stringify(body),
+      }
+    );
 
     const parseData = await data.json();
 
@@ -57,12 +64,12 @@ export default function SalesPage() {
 
     if (parseData.id) {
       var options = {
-        key: "rzp_test_xl8JnNRauFfJS8",
+        key: "rzp_live_hjDdWqkxQphAzS",
         currency: parseData.currency,
         amount: parseData.amount.toString(),
         order_id: parseData.id,
-        name: "Func Box",
-        description: "Test Transaction",
+        name: "FuncBox",
+        description: "Payment to FuncBox",
         image:
           "https://ik.imagekit.io/funcboxImages/Navbar_assets/logo_fABtRefL6.png?updatedAt=1633358637425",
         handler: function (response) {

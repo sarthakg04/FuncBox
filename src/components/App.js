@@ -55,12 +55,19 @@ function App() {
   useEffect(() => {
     const isAuth = async () => {
       try {
-        const response = await fetch(`https://server.funcbox.in/auth/verify`, {
-          credentials: "include",
+        const response = await fetch(
+          `${
+            process.env.NODE_ENV === "development"
+              ? "http://localhost:5000"
+              : "https://server.funcbox.in"
+          }/auth/verify`,
+          {
+            credentials: "include",
 
-          method: "GET",
-          headers: { token: token, data: "all" },
-        });
+            method: "GET",
+            headers: { token: token, data: "all" },
+          }
+        );
 
         const parseRes = await response.json();
 

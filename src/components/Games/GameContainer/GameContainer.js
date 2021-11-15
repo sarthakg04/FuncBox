@@ -52,14 +52,21 @@ function GameContainer({ gid }) {
   }
   useEffect(() => {
     async function checkGameAccess() {
-      const gres = await fetch(`https://server.funcbox.in/gameAccess`, {
-        method: "GET",
-        credentials: "include",
-        headers: {
-          token: token,
-          gid: gid,
-        },
-      });
+      const gres = await fetch(
+        `${
+          process.env.NODE_ENV === "development"
+            ? "http://localhost:5000"
+            : "https://server.funcbox.in"
+        }/gameAccess`,
+        {
+          method: "GET",
+          credentials: "include",
+          headers: {
+            token: token,
+            gid: gid,
+          },
+        }
+      );
       const gaccess = await gres.json();
       console.log("gAccess = ", gaccess);
       if (gaccess === "Not Authorize 1") {
@@ -78,7 +85,11 @@ function GameContainer({ gid }) {
     checkGameAccess();
     const getSavedCode = async () => {
       const res = await fetch(
-        `https://server.funcbox.in/codesave/save/${userid}/game/${gid}`,
+        `${
+          process.env.NODE_ENV === "development"
+            ? "http://localhost:5000"
+            : "https://server.funcbox.in"
+        }/codesave/save/${userid}/game/${gid}`,
         {
           method: "GET",
         }
