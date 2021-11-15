@@ -49,6 +49,7 @@ import ServerTest from "./ServerTest";
 import Zombie from "./Games/ZombieGame/ZombieGame";
 import AnimalHomeGame from "./Games/AnimalHomeGame/AnimalHomeGame";
 import Decimal from "./Games/DecimalGame/DecimalGame";
+import SubscriptionPage from "./Subscriptions/SubscriptionPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -148,6 +149,7 @@ function App() {
           <Route exact path="/TeamsPage" component={TeamsPage} />
           <Route exact path="/EditProfile" component={EditProfile} />
           <Route exact path="/ForgotPass" component={ForgotPass} />
+          <Route exact path="/subscriptions" component={SubscriptionPage} />
           {/* <Route exact path="/flippable" component={Container} /> */}
           <Route exact path="/VideoEmbed" component={Example} />
           <Route exact path="/test" component={ServerTest} />
