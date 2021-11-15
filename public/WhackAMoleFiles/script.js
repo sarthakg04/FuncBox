@@ -134,7 +134,7 @@ function start(){
     }
   while(innerFlag !=1){
     let position = parseInt(Math.random()*9);
-    
+
     if((!molesArray.includes(position)) && position != lastRemoved){
       molesArray.push(position);
       innerFlag = 1;

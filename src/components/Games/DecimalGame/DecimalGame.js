@@ -13,7 +13,7 @@ export default function DecimalGame() {
   const [gid, setGid] = useState(-1);
   const [qrSrc, setQrSrc] = useState("");
   const { userid } = useAuth();
-  const gamePath = filepath[27];
+  const gamePath = filepath[26];
   function toggleQr() {
     document.getElementById("qr").classList.toggle("active");
   }

@@ -5,7 +5,7 @@
 // createBaskets();
 // createBasketBall();
 // createResult();
-//startGame();
+// startGame();
 
 
 let denomArray = [1000 ,100 , 10];

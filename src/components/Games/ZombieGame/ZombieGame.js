@@ -13,7 +13,7 @@ export default function ZombieGame() {
   const [gid, setGid] = useState(-1);
   const [qrSrc, setQrSrc] = useState("");
   const { userid , token } = useAuth();
-  const gamePath = filepath[26];
+  const gamePath = filepath[27];
   function toggleQr() {
     document.getElementById("qr").classList.toggle("active");
   }
