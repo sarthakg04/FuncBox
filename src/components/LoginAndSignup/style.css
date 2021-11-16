@@ -8,10 +8,14 @@
 
 .signup__container {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) 1fr;
+
+  /* Original */
+  /* grid-template-columns: minmax(0, 1.5fr) 1fr; */
   background: #edeeef;
   min-height: 88vh;
 
+  /* Added extra */
+  grid-template-columns: 1fr;
 }
 
 .circular__carosel {
@@ -22,11 +26,16 @@
   background-size: cover;
   position: relative;
   margin-left: 32px;
+
+  /* Added extra */
+  display: none;
   /* min-height: 85vh; */
 }
 
 .login__signup {
   padding: 64px;
+  /* Added Extra */
+  min-height: 80vh;
 }
 
 .signup__container .title {
@@ -102,8 +111,7 @@
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
-  border : 1px solid #f06f38;
-
+  border: 1px solid #f06f38;
 }
 
 /*
@@ -168,40 +176,39 @@ circular__carosel */
   z-index: 5;
 }
 
-@media (max-width : 1023px) {
-  .signup__container{
-    grid-template-columns: minmax(0 , 1.25fr) 1fr;
+@media (max-width: 1023px) {
+  .signup__container {
+    grid-template-columns: minmax(0, 1.25fr) 1fr;
   }
   .signup__container .carousel li img {
     width: 150px;
   }
-  .signup__container .carousel li.active img{
+  .signup__container .carousel li.active img {
     width: 220px;
   }
 
-  .login__signup{
+  .login__signup {
     padding: 32px;
   }
 }
 
+@media (max-width: 767px) {
+  .circular__carosel {
+    display: none;
+  }
 
-@media (max-width : 767px) {
-    .circular__carosel{
-      display: none;
-    }
+  .signup__container {
+    grid-template-columns: 1fr;
+  }
 
-    .signup__container{
-      grid-template-columns: 1fr;
-    }
-
-    .login__signup{
-      padding: 64px;
-      min-height: 80vh;
-    }
+  .login__signup {
+    padding: 64px;
+    min-height: 80vh;
+  }
 }
 
-@media (max-width : 424px) {
-  .login__signup{
+@media (max-width: 424px) {
+  .login__signup {
     padding: 64px 16px;
   }
 }

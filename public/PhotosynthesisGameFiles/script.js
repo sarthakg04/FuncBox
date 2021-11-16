@@ -11,6 +11,13 @@
 // createShooter2()
 // createInteractionPad2()
 
+
+// Frontend Functions for Test for Game 3
+// createBackground3()
+// createClouds2()
+// createShooter2()
+// createInteractionPad3()
+
 let Phone
 let GamePad
 let rays_grid 
@@ -272,6 +279,97 @@ function createInteractionPad2() {
     WellDone__2.classList.add('WellDone__2')
     WellDone__2.innerHTML = 'Well Done!'
     Phone.appendChild(WellDone__2)
+
+}
+
+// Game 3 part
+
+let bubbles___grid
+
+let random_places = randomUniqueNum( 43, 30)
+let gas_bg = ['co2_bg', 'o2_bg']
+let co2_count = 0
+let co2_hit = 0
+
+let Start_btn
+let Timer
+
+
+let Time = 0
+
+let buttons___squares
+
+let InteractionPad___3
+
+function createBackground3() {
+    Phone = document.createElement('div')
+    Phone.classList.add('Phone')
+    Phone.classList.add('Phone___bg___3')
+    GamePad = document.createElement('div')
+    GamePad.classList.add('GamePad___3')
+    document.body.appendChild(Phone)
+    Phone.appendChild(GamePad)
+}
+
+function createBubbles(){
+    bubbles___grid = document.createElement('div')
+    bubbles___grid.classList.add('bubbles___grid')
+        
+    // creating the bubbles
+    for( i=0; i<42; i++){
+        let bubble_button = document.createElement('button')
+        bubble_button.classList.add(`${i}_btn`)
+        bubble_button.disabled = true
+        if( random_places.includes(i)  ){
+            if( co2_count < 15 ){
+                let temp__1 = Math.floor(Math.random() * 2)
+                bubble_button.classList.add(`${gas_bg[temp__1]}`)
+                if( temp__1 === 0 ) {
+                    co2_count++
+                }
+            }
+            else{
+                bubble_button.classList.add(`${gas_bg[1]}`)
+            }
+        }
+        bubble_button.onclick = function () {
+            if(bubble_button.classList.contains('co2_bg')){
+                co2_hit++
+                // console.log(co2_hit)
+                bubble_button.classList.remove('co2_bg')
+                bubble_button.classList.add('co2_active_bg')
+                bubble_button.disabled = true
+            }
+        };
+        bubbles___grid.appendChild(bubble_button)
+
+    }
+
+    GamePad.appendChild(bubbles___grid)
+
+    buttons___squares = Array.from(document.querySelectorAll('.bubbles___grid button'))
+
+    for(i=0;i<42;i++){
+        if(!random_places.includes(i)){
+
+            buttons___squares[i].style.background = 'transparent'
+        }
+    }
+}
+
+function createInteractionPad3(){
+    InteractionPad___3 = document.createElement('div')
+    InteractionPad___3.classList.add('InteractionPad___3')
+
+    InteractionPad___3.innerHTML +=`
+        <button onclick="Start()" class="Start_btn">Start</button>
+        <div class="Timer">Timer</div>
+        <button onclick="window.location.reload()" class="restart__btn">Restart</button>
+    `
+
+    Phone.appendChild(InteractionPad___3)
+    
+    Timer = document.querySelector('.Timer')
 
 }
 
@@ -539,4 +637,94 @@ function Finish__() {
     for( i=0; i<InteractonPad__btns.length; i++){
         InteractonPad__btns[i].disabled = true
     }
+}
+
+// Backend functions for Game 3
+
+// Function to generate random unique numbers
+function randomUniqueNum(range, outputCount) {
+
+  let arr = []
+  for (let i = 1; i <= range; i++) {
+    arr.push(i)
+  }
+
+  let result = [];
+
+  for (let i = 1; i <= outputCount; i++) {
+    const random = Math.floor(Math.random() * (range - i));
+    result.push(arr[random]);
+    arr[random] = arr[range - i];
+  }
+
+  return result;
+}
+
+
+
+function Start(){
+    
+    Time_id_1 = setTimeout(function() {
+        
+
+        if( Time === 0 ){
+            // console.log(Time)
+            
+            Timer.innerHTML = `${10 - Time}`
+            
+            for(i=0;i<42;i++){
+
+                // console.log(buttons___squares[i])
+
+                if(random_places.includes(i)){
+                    // console.log(buttons___squares[i].disabled)
+                    buttons___squares[i].disabled = false
+                }
+            }
+
+        }
+
+        Time++
+        // console.log(Time)
+        Timer.innerHTML = `${10 - Time}`
+
+        if( Time < 10 ){
+            setTimeout(Start, 1000)
+        }
+        else{
+
+            for(i=0;i<42;i++){
+
+                // console.log(buttons___squares[i])
+
+                if(random_places.includes(i)){
+                    // console.log(buttons___squares[i].disabled)
+                    buttons___squares[i].disabled = true
+                }
+            }
+
+            Start_btn = document.querySelector('.Start_btn')
+            Start_btn.disabled = true
+
+            // bubbles___grid.style.display = 'none'
+            if( co2_hit === co2_count ){
+                Time = 0
+                // console.log('Winner!')
+                bubbles___grid.style.display = 'none'
+                Phone.classList.remove('Phone___bg___3')
+                Phone.classList.add('Phone___bg___3__happy')
+
+            }
+            else{
+                Time = 0
+                // console.log('Game Over!')
+                
+                bubbles___grid.style.display = 'none'
+                let GameOver__2 = document.createElement('div')
+                GameOver__2.classList.add('GameOver__2')
+                GameOver__2.style.display = 'block'
+                Phone.appendChild(GameOver__2)
+            }
+        }
+    }, 1000);
 }

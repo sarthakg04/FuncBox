@@ -227,21 +227,6 @@ body {
 
 /* Game 2 CSS  */
 
-body {
-  padding: 0;
-  margin: 0;
-}
-
-.Phone {
-  margin: 0 auto 0 auto;
-  border: 1px solid black;
-  box-sizing: border-box;
-  height: 535px;
-  width: 400px;
-  /* margin: 0; */
-  background-image: url('./assets/bg__2.png');
-}
-
 .Phone_Game_2_bg {
   background-image: url('./assets/bg__2.png');
 }
@@ -352,4 +337,63 @@ body {
   text-align: center;
   font-size: 30px;
   display: none;
+}
+
+/* Game 3 CSS */
+
+.Phone___bg___3 {
+  background-image: url('./assets/bg___3.png');
+}
+
+.Phone___bg___3__happy {
+  background-image: url('./assets/Game___3___happybg.png');
+}
+
+.bubbles___grid {
+  width: 300px;
+  height: 350px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  /* background: blue; */
+}
+
+.bubbles___grid button {
+  width: 49px;
+  height: 50px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  border: none;
+  /* background: blue; */
+}
+
+.co2_bg {
+  background: url('./assets/co2.png') no-repeat center;
+}
+
+.o2_bg {
+  background: url('./assets/o2.png') no-repeat center;
+}
+
+.co2_active_bg {
+  background: url('./assets/co2_active.png') no-repeat center;
+}
+
+.Timer {
+  background-color: black;
+  width: fit-content;
+  padding: 10px;
+  height: 30px;
+  color: white;
+  font-size: 20px;
+}
+
+.InteractionPad___3 {
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: flex;
+  width: fit-content;
+  margin: 100px auto;
 }
