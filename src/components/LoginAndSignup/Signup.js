@@ -20,12 +20,14 @@ import card6 from "./assets/card6.svg";
 import { parse } from "qs";
 import { useDispatch, useSelector } from "react-redux";
 import { setAuth, setToken, setUser } from "../../auth/authslice";
+import { toast } from "react-toastify";
 
 export default function Signup() {
   let cardPosion = [0, 1, 2, 3, 4, 5, 6];
   let images = document.getElementsByClassName("item");
   const dispatch = useDispatch();
   const history = useHistory();
+  const apiurl = process.env.REACT_APP_API_URL;
   function next() {
     let length = cardPosion.length;
     let temp = cardPosion[length - 1];
@@ -78,7 +80,7 @@ export default function Signup() {
       const response = await fetch(
         `${
           process.env.NODE_ENV === "production"
-            ? "https://server.funcbox.in"
+            ? apiurl
             : "http://localhost:5000"
         }/auth/register`,
         {
@@ -90,7 +92,7 @@ export default function Signup() {
       );
 
       const parseRes = await response.json();
-
+      console.log("conosle" + parseRes);
       if (parseRes.token) {
         dispatch(setAuth({ isAuthenticated: true }));
         dispatch(
@@ -100,9 +102,10 @@ export default function Signup() {
           })
         );
         dispatch(setToken({ token: parseRes.token }));
+        toast.success("You are ready to go");
         history.push("/Welcome");
       } else {
-        console.log(parseRes);
+        toast.error(parseRes);
       }
     } catch (err) {
       console.log(err.message);

@@ -39,13 +39,14 @@ export default function EditProfile(props) {
   const [std, setStd] = useState(3);
   const history = useHistory();
   const dispatch = useDispatch();
+  const apiurl = process.env.REACT_APP_API_URL;
   useEffect(() => {
     async function getData() {
       console.log(token);
       const res = await fetch(
         `${
           process.env.NODE_ENV === "production"
-            ? "https://server.funcbox.in"
+            ? apiurl
             : "http://localhost:5000"
         }/editprofile/edit`,
         {
@@ -85,9 +86,7 @@ export default function EditProfile(props) {
     console.log(reqBody);
     const res = await fetch(
       `${
-        process.env.NODE_ENV === "production"
-          ? "https://server.funcbox.in"
-          : "http://localhost:5000"
+        process.env.NODE_ENV === "production" ? apiurl : "http://localhost:5000"
       }/editprofile/edit`,
       {
         method: "PUT",

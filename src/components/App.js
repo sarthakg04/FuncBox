@@ -54,6 +54,7 @@ import SubscriptionPage from "./Subscriptions/SubscriptionPage";
 function App() {
   const dispatch = useDispatch();
   const { token } = useAuth();
+  const apiurl = process.env.REACT_APP_API_URL;
   toast.configure();
   useEffect(() => {
     const isAuth = async () => {
@@ -61,7 +62,7 @@ function App() {
         const response = await fetch(
           `${
             process.env.NODE_ENV === "development"
-              ? "http://localhost:5000"
+              ? apiurl
               : "https://server.funcbox.in"
           }/auth/verify`,
           {

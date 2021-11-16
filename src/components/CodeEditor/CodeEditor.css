@@ -2,85 +2,81 @@
   background-color: white;
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap");
 
-
-.main__container *{
-  margin : 0;
+.main__container * {
+  margin: 0;
   padding: 0;
-  font-family: 'Bubblegum Sans', cursive !important;
+  font-family: "Bubblegum Sans", cursive !important;
 }
 
-
-.main__container{
+.main__container {
   display: grid;
-  grid-template-columns: repeat(2 , minmax(0,1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   min-height: 100vh;
-  background: url('./assets/background.jpeg');
+  background: url("./assets/background.jpeg");
   background-size: cover;
   background-position: center;
   padding-top: 32px;
   padding: 0 0 0 10%;
 }
 
-.heading{
+.heading {
   margin-top: 32px;
   margin-bottom: 32px;
   display: flex;
   justify-content: center;
 }
 
-.heading p{
-  background-color: #F06F38;
+.heading p {
+  background-color: #f06f38;
   padding: 16px;
-  color : white;
+  color: white;
   font-size: 28px;
   border-radius: 20px;
 }
 
-
-.CodeMirror{
+.CodeMirror {
   border-radius: 40px;
 }
 
-.CodeMirror-scroll{
-  overflow-x: hidden!important;
-  overflow-y: scroll!important;
+.CodeMirror-scroll {
+  overflow-x: hidden !important;
+  overflow-y: scroll !important;
 }
 
-
-.CodeMirror-gutter{
-  background: #F06F38;
+.CodeMirror-gutter {
+  background: #f06f38;
   padding: 16px;
   text-align: center;
 }
 
-.CodeMirror-linenumber{
-  color : white;
+.CodeMirror-linenumber {
+  color: white;
   font-size: 28px;
-
 }
 
-.CodeMirror-wrap pre.CodeMirror-line, .CodeMirror-wrap pre.CodeMirror-line-like{
+.CodeMirror-wrap pre.CodeMirror-line,
+.CodeMirror-wrap pre.CodeMirror-line-like {
   font-size: 28px;
   padding-left: 40px;
   padding-bottom: 8px;
-  border-bottom:  1px solid #F06F38;
+  border-bottom: 1px solid #f06f38;
 }
 
-.CodeMirror-sizer{
+.CodeMirror-sizer {
   padding-top: 8px;
-  padding-bottom: 16px!important;
+  padding-bottom: 16px !important;
 }
 
-.main__container .icons{
+.main__container .icons {
   margin-top: 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.icons .play img{
+.icons .play img {
   width: 150px;
   margin-left: 32px;
 }
@@ -90,7 +86,7 @@
   justify-content: space-between;
 }
 
-.icons .other__icons img{
+.icons .other__icons img {
   width: 45px;
   margin-right: 16px;
 }
@@ -130,12 +126,11 @@
   top: 9.5%;
 }
 
-
-.qr_body{
+.qr_body {
   position: absolute;
   left: 50%;
-  top : 50%;
-  transform: translate(-50% , -50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   max-width: 300px;
   width: 100%;
@@ -143,17 +138,16 @@
   opacity: 0;
   visibility: hidden;
   transition: 0.5s;
-  z-index: 5;
-
+  z-index: 10;
 }
 
-.qr_body.active{
+.qr_body.active {
   opacity: 1;
   visibility: visible;
   transition: 0.5s;
 }
 
-.qr_container{
+.qr_container {
   background: white;
   padding: 32px;
   padding-top: 1px;
@@ -161,30 +155,30 @@
   text-align: center;
 }
 
-.qr_container .heading{
+.qr_container .heading {
   text-align: center;
   margin-bottom: 8px;
 }
 
-.qr_container .heading h1{
+.qr_container .heading h1 {
   font-size: 20px;
 }
 
-.qr_container .qr_code{
+.qr_container .qr_code {
   margin-bottom: 8px;
 }
 
-.qr_container .closeQr{
+.qr_container .closeQr {
   padding: 8px 16px;
-  color : white;
-  border : 1px solid #F06F38;
-  background: #F06F38;
+  color: white;
+  border: 1px solid #f06f38;
+  background: #f06f38;
   border-radius: 8px;
   transition: 0.5s;
 }
 
-.qr_container .closeQr:hover{
-  color : #F06F38;
+.qr_container .closeQr:hover {
+  color: #f06f38;
   background: white;
   transition: 0.5s;
 }
