@@ -2,6 +2,9 @@
 // fill()
 // createScore()
 // createGamePad()
+// for( i = 0; i < 35; i++ ) {
+//     drawGrid()
+// }
 // createPlancks()
 // createElements()
 // createInteractionPad()
@@ -15,6 +18,8 @@ document.body.appendChild(Phone)
 let planckArray = randomUniqueNum(33,9)
 
 let currentBirdPosition = 34
+
+let grid
 
 function fill() {
     let phone = document.querySelector('.Phone')
@@ -36,8 +41,12 @@ function createGamePad() {
     Phone.appendChild(gamePad)
     gamePad.appendChild(Grid)
     
-    drawGrid()
+    grid = document.querySelector('.grid')
+
+    // drawGrid()
 }
+
+
 
 function createPlancks() {
     
@@ -77,11 +86,11 @@ function createInteractionPad() {
 
 // Creating the Grid
 function drawGrid() {
-    const grid = document.querySelector('.grid')
-    for( i = 0; i < 35; i++ ) {
+    // grid = document.querySelector('.grid')
+    // for( i = 0; i < 35; i++ ) {
         const square = document.createElement('div')
         grid.appendChild(square)
-    }
+    // }
 }
 
 // Function to generate random unique numbers
@@ -263,7 +272,13 @@ function Hit() {
             hitBtn.disabled = true
             if( Score === Finish ) {
                 const hitted = document.createElement('div')
-                hitted.classList.add('hitted')
+                if(squares[currentBirdPosition].classList.contains('pig-check')){
+                    console.log('bad-hit')
+                    hitted.classList.add('bad_hitted')
+                }
+                else{
+                    hitted.classList.add('hitted')
+                }
                 squares[currentBirdPosition].appendChild(hitted)
                 squares[currentBirdPosition].classList.add('hitted-check')
                 scoreSpan.innerHTML = "Perfect Win : "+ Score+"/"+3
@@ -271,7 +286,13 @@ function Hit() {
             }
             else{
                 const hitted = document.createElement('div')
-                hitted.classList.add('hitted')
+                if(squares[currentBirdPosition].classList.contains('pig-check')){
+                    console.log('bad-hit')
+                    hitted.classList.add('bad_hitted')
+                }
+                else{
+                    hitted.classList.add('hitted')
+                }
                 squares[currentBirdPosition].appendChild(hitted)
                 squares[currentBirdPosition].classList.add('hitted-check')
                 scoreSpan.innerHTML = "Game Over! Score : "+ Score+"/"+3
@@ -284,7 +305,13 @@ function Hit() {
 
     }
     const hitted = document.createElement('div')
-    hitted.classList.add('hitted')
+    if(squares[currentBirdPosition].classList.contains('pig-check')){
+        console.log('bad-hit')
+        hitted.classList.add('bad_hitted')
+    }
+    else{
+        hitted.classList.add('hitted')
+    }
     squares[currentBirdPosition].appendChild(hitted)
     squares[currentBirdPosition].classList.add('hitted-check')
     hitBtn.disabled = true
