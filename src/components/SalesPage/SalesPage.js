@@ -17,6 +17,7 @@ export default function SalesPage() {
   const { token } = useAuth();
   const [modalOpen, setModalOpen] = useState(false);
   const [plan, setPlan] = useState("");
+  const apiurl = process.env.REACT_APP_API_URL;
   const kids =
     "https://ik.imagekit.io/funcboxImages/SalesPage_assets/kids_KxFxgItfQ.png?updatedAt=1633370064495";
   const box2 =
@@ -47,7 +48,7 @@ export default function SalesPage() {
     const data = await fetch(
       `${
         process.env.NODE_ENV === "development"
-          ? "http://localhost:5000"
+          ? apiurl
           : "https://server.funcbox.in"
       }/payment/pay`,
       {

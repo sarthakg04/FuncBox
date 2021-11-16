@@ -18,6 +18,7 @@ export default function Editor(props) {
   const { language, displayName, value, onChange, gid } = props;
   const [open, setOpen] = useState(true);
   const { token, userid } = useAuth();
+  const apiurl = process.env.REACT_APP_API_URL;
   function handleChange(editor, data, value) {
     onChange(value);
   }
@@ -28,18 +29,20 @@ export default function Editor(props) {
   async function saveCode() {
     if (gid !== -1) {
       console.log(hash(value));
+      console.log("Token : " + token);
       const hashedCode = hash(value);
       const res = await fetch(
         `${
           process.env.NODE_ENV === "development"
-            ? "http://localhost:5000"
+            ? apiurl
             : "https://server.funcbox.in"
         }/codesave/save`,
         {
+          credentials: "include",
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            credentials: "include",
+
             token: token,
           },
           body: JSON.stringify({

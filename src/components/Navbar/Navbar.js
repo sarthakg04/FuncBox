@@ -27,6 +27,7 @@ import { toast } from "react-toastify";
 export default function Navbar(props) {
   const history = useHistory();
   const dispatch = useDispatch();
+  const apiurl = process.env.REACT_APP_API_URL;
   // const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   // const username = useSelector((state) => state.auth.username);
   const { isAuthenticated, username } = useAuth();
@@ -53,7 +54,7 @@ export default function Navbar(props) {
     const res = await fetch(
       `${
         process.env.NODE_ENV === "development"
-          ? "http://localhost:5000"
+          ? apiurl
           : "https://server.funcbox.in"
       }/logout`,
       {
@@ -99,7 +100,7 @@ export default function Navbar(props) {
               <button class="dropbtn">{shortName(username)}🔽</button>
               <div class="dropdown-content">
                 <Link to="/editprofile">Edit Profile</Link>
-                <Link to="#">Purchase</Link>
+                <Link to="/subscriptions">Purchases</Link>
                 <Link to="#">Change password</Link>
                 <Link to="#" onClick={handleLogout}>
                   Logout
@@ -135,8 +136,8 @@ export default function Navbar(props) {
           <div className="dropdown">
             <button class="dropbtn">{shortName(username)}🔽</button>
             <div class="dropdown-content">
-              <Link to="#">Edit Profile</Link>
-              <Link to="#">Purchase</Link>
+              <Link to="/editprofile">Edit Profile</Link>
+              <Link to="/subscriptions">Purchase</Link>
               <Link to="#">Change password</Link>
               <Link to="#" onClick={handleLogout}>
                 Logout

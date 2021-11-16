@@ -12,13 +12,13 @@ export default function Preview(props) {
   const [userid, setUserId] = useState(code[0]);
   const [gid, setGid] = useState(code[1]);
   const path = filepath[gid];
-
+  const apiurl = process.env.REACT_APP_API_URL;
   useEffect(() => {
     const getSavedCode = async () => {
       const res = await fetch(
         `${
           process.env.NODE_ENV === "development"
-            ? "http://localhost:5000"
+            ? apiurl
             : "https://server.funcbox.in"
         }/codesave/save/${userid}/game/${gid}`,
         {

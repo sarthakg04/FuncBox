@@ -22,7 +22,7 @@ function GameContainer({ gid }) {
   const dispatch = useDispatch();
   const gamePath = filepath[gid];
   const history = useHistory();
-
+  const apiurl = process.env.REACT_APP_API_URL;
   function toggleQr() {
     document.getElementById("qr").classList.toggle("active");
   }
@@ -56,7 +56,7 @@ function GameContainer({ gid }) {
       const gres = await fetch(
         `${
           process.env.NODE_ENV === "development"
-            ? "http://localhost:5000"
+            ? apiurl
             : "https://server.funcbox.in"
         }/gameAccess`,
         {
@@ -90,7 +90,7 @@ function GameContainer({ gid }) {
       const res = await fetch(
         `${
           process.env.NODE_ENV === "development"
-            ? "http://localhost:5000"
+            ? apiurl
             : "https://server.funcbox.in"
         }/codesave/save/${userid}/game/${gid}`,
         {
@@ -111,8 +111,8 @@ function GameContainer({ gid }) {
     QRCode.toDataURL(
       `${
         process.env.NODE_ENV === "development"
-          ? "http://localhost:3000"
-          : "https://www.funcbox.in"
+          ? "http://localhost:3000/"
+          : "https://www.funcbox.in/"
       }` +
         userid +
         "+" +

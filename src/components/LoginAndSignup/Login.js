@@ -26,7 +26,8 @@ export default function Login() {
   let cardPosion = [0, 1, 2, 3, 4, 5, 6];
   let images = document.getElementsByClassName("item");
   const { isAuthenticated, token } = useAuth();
-
+  const apiurl = process.env.REACT_APP_API_URL;
+  
   useEffect(() => {
     if (isAuthenticated) {
       console.log("Authenticated");
@@ -86,7 +87,7 @@ export default function Login() {
       const response = await fetch(
         `${
           process.env.NODE_ENV === "development"
-            ? "http://localhost:5000"
+            ? apiurl
             : "https://server.funcbox.in"
         }/auth/login`,
         {
@@ -105,7 +106,7 @@ export default function Login() {
         const data = await fetch(
           `${
             process.env.NODE_ENV === "development"
-              ? "http://localhost:5000"
+              ? apiurl
               : "https://server.funcbox.in"
           }/auth/verify`,
           {
