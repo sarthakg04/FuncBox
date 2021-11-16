@@ -30,7 +30,7 @@ function KeepSayingHello(){
 function ani1(){
   let i=0;
   let elem = document.getElementById('alien');
-  const dem = elem.getBoundingClientRect();  
+  const dem = elem.getBoundingClientRect();
   for(i=dem.top;i<400;i++){
     elem.style.marginTop = i + "px"; 
     KeepSayingHello();

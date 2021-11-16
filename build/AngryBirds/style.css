@@ -56,6 +56,14 @@ body {
   top: 20%;
 }
 
+.bad_hitted {
+  background-color: red;
+  border-radius: 50%;
+  /* position: absolute;
+  left: 30%;
+  top: 20%; */
+}
+
 .bird_planck {
   background: url('./assets/bird_planck.svg') no-repeat;
   background-position: center bottom;
