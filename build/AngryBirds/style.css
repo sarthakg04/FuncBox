@@ -1,0 +1,123 @@
+.Phone {
+  border: 1px solid black;
+  height: 533px;
+  width: 396px;
+  margin: 0;
+  background-image: url('./assets/Background.svg');
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  width: 287px;
+  /* border: 1px solid black; */
+  margin: 35px auto 0 auto;
+}
+
+.grid div {
+  height: 55px;
+  width: 55px;
+  /* border: 1px solid black; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.planck {
+  background: url('./assets/planck.svg') no-repeat;
+  background-position: center bottom;
+  /* position: fixed;
+  z-index: 0;
+  width: 55px; */
+}
+
+.hitBtn {
+  height: 40px;
+  width: 40px;
+  /* background: url('./assets/right.svg') no-repeat center; */
+  /* background-size: 40px 40px; */
+  border: none;
+  outline: none;
+  position: relative;
+  top: -10px;
+  font-size: 30px;
+  background-color: transparent;
+}
+.hitted {
+  background: url('./assets/hitted.svg') no-repeat;
+  position: absolute;
+  left: 30%;
+  top: 20%;
+}
+
+.bird_planck {
+  background: url('./assets/bird_planck.svg') no-repeat;
+  background-position: center bottom;
+}
+
+.pig_planck {
+  background: url('./assets/pig_planck.svg') no-repeat;
+  background-position: center bottom;
+}
+
+.box_planck {
+  background: url('./assets/box_planck.svg') no-repeat;
+  background-position: center bottom;
+}
+
+.bird_pig_planck {
+  background: url('./assets/bird_pig_planck.svg') no-repeat;
+  background-position: center bottom;
+}
+
+.bird_box_planck {
+  background: url('./assets/bird_box_planck.svg') no-repeat;
+  background-position: center bottom;
+}
+
+.Score {
+  background-color: black;
+  color: white;
+  /* line-height: 20px; */
+}
+
+.Star_img_angryBirds {
+  vertical-align: middle;
+}
+
+.ControlPad {
+  margin: 25px 0 0 130px;
+}
+
+.left_btn {
+  /* border-radius: 50%; */
+  height: 40px;
+  width: 40px;
+  background: url('./assets/left.svg') no-repeat center;
+  background-size: 40px 40px;
+  border: none;
+  outline: none;
+}
+.restart_btn {
+  /* border-radius: 50%; */
+  height: 40px;
+  width: 40px;
+  background: url('./assets/restart.svg') no-repeat center;
+  border: none;
+  outline: none;
+}
+.right_btn {
+  /* border-radius: 50%; */
+  height: 40px;
+  width: 40px;
+  background: url('./assets/right.svg') no-repeat center;
+  background-size: 40px 40px;
+  border: none;
+  outline: none;
+}

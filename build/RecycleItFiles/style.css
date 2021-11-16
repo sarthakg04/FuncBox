@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Lakki+Reddy&family=Roboto:wght@400;700&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.GamePad {
+  width: 400px;
+  height: 535px;
+  /* border: solid black 1px; */
+  margin: auto;
+  position: relative;
+  /* background-image: url('../MissionMarsFiles/assets/backgrounds/Frame.png'); */
+
+  padding-top: 1px;
+  /* background-position: center; */
+  background-size: cover;
+  position: relative;
+  /* background: red; */
+}
+
+.heading{
+  margin-left: 8px;
+}
+
+
+.heading li{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+.score {
+  text-align: center;
+  width: 20%;
+  margin-left: auto;
+  margin-right: 0;
+  position: relative;
+  text-align: center;
+}
+
+
+.score p{
+  position: relative;
+  z-index: 3;
+  padding-top: 16px;
+  font-family: 'Lakki Reddy', cursive;
+}
+
+.score img{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+}
+
+.dustbin{
+  text-align: center;
+}
+
+.dustbin img{
+  width: 160px;
+}
+
+.garbage__container{
+  display: grid;
+  grid-template-columns: repeat(3 , minmax(0,1fr));
+  grid-gap: 8px;
+}
+
+.garbage{
+  text-align: center;
+  height: 81px;
+}
+
+
+.garbage img{
+  width: 75px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.drop{
+  position: absolute;
+  top : 65px;
+  left : 42%;
+  transition: 0.5s;
+}
+
+.wrong__container * , .right__container *{
+  color : white;
+  font-family: 'Allerta Stencil', sans-serif;
+  margin-bottom: 8px;
+}
+
+.wrong__container , .right__container {
+  background: #BC272A;
+  position: absolute;
+  border-radius: 16px;
+  left: 50%;
+  top:50%;
+  transform: translate(-50% ,-50%);
+  padding: 32px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.right__container{
+  background: #00A24C;
+}
+
+.wrong__container.active , .right__container.active{
+  transition: 0.5s;
+  opacity: 1;
+  visibility: visible;
+}

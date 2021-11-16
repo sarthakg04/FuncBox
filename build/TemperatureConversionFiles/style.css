@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 400px;
+    height: 535px;
+    margin: auto;
+    position: relative;
+    padding-top: 1px;
+    background-size: cover;
+    font-family: 'Finger Paint', cursive;
+  }
+
+  #orangeBtn {
+    width: 150px;
+    height: 50px;
+    margin-left: 125px;
+    margin-top: 100px;
+    background: #FFAC4A;
+    border-radius: 37px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Finger Paint', cursive;
+  }
+
+  #greenBtn {
+    width: 150px;
+    height: 50px;
+    margin-left: 125px;
+    margin-top: 100px;
+    background: #68FBE9;
+    border-radius: 37px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Finger Paint', cursive;
+  }
+
+  #pinkBtn {
+    width: 150px;
+    height: 50px;
+    margin-left: 125px;
+    margin-top: 100px;
+    background: #E1828E;
+    border-radius: 37px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Finger Paint', cursive;
+  }
+
+  #celsius {
+    width: 90px;
+    height: 32px;
+    margin-left: 51px;
+    margin-top: 330px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    text-align:center;
+  }
+
+  #fahrenheit {
+    width: 90px;
+    height: 32px;
+    margin-left: 50px;
+    margin-top: 340px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    text-align:center;
+  }
+
+  #kelvin {
+    width: 85px;
+    height: 27px;
+    margin-left: 52px;
+    margin-top: 348px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    text-align:center;
+  }
+
+
+  #CtoF {
+      margin-left: 62px;
+      margin-top: 160px;
+      font-size: 20px;
+      color: white;
+  }
+  #CtoK {
+    color: white;
+    margin-left: 63px;
+    margin-top: 255px;
+    font-size: 20px;
+  }
+
+
+
+#FtoC {
+    margin-left: 75px;
+    margin-top: 165px;
+    font-size: 20px;
+    color: white;
+}
+#FtoK {
+  color: white;
+  margin-left: 80px;
+  margin-top: 245px;
+  font-size: 20px;
+}
+
+
+#KtoF {
+    margin-left: 62px;
+    margin-top: 155px;
+    font-size: 20px;
+    color: white;
+}
+#KtoC {
+    color: white;
+    margin-left: 80px;
+    margin-top: 265px;
+    font-size: 20px;
+  }
+
+#pinkNext {
+    width: 80px;
+    height: 30px;
+    margin-left: 175px;
+    margin-top: 0px;
+    background: #E1828E;
+    border-radius: 37px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-family: 'Finger Paint', cursive;
+  }
+
+  #orangeNext {
+    width: 80px;
+    height: 30px;
+    margin-left: 180px;
+    margin-top: 0px;
+    background: #FFAC4A;
+    border-radius: 37px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-family: 'Finger Paint', cursive;
+  }
