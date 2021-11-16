@@ -136,9 +136,9 @@ function generateRandomRecievedCash( item_cost ) {
 
 
 function ImplementLogic() {
-    if( amount_added === ( recieved - item_prices[item_number] )){
+    if( Logic ){
 
-        if(item_number === 19 )
+        if(item_number === item_prices.length - 1 )
         {
             Winner.style.display = 'block'
             return
