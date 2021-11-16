@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+}
+
+.game__container {
+  position: relative;
+  background: url('assets/sorry1.svg');
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: 535px;
+}
+
+.contentContainer {
+  position: absolute;
+  color: white;
+  max-width: 250px;
+}
