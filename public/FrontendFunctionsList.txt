@@ -34,6 +34,9 @@ AngryBirds:
 fill()
 createScore()
 createGamePad()
+for( i = 0; i < 35; i++ ) {
+    drawGrid()
+}
 createPlancks()
 createElements()
 createInteractionPad()
@@ -49,3 +52,21 @@ createMonkey()
 generateMultiples()
 createInteractionPad()
 createGameOver()
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+CashierGame:
+-----------------------
+fillBackground()
+let items = [
+    'item_1', 'item_2', 'item_3', 
+    'item_4', 'item_5', 'item_6', 'item_7', 
+    'item_8', 'item_9', 'item_10', 'item_11', 
+    'item_12', 'item_13', 'item_14', 'item_15', 
+    'item_16', 'item_17', 'item_18', 'item_19', 'item_20'
+]
+let item_prices = [ 449, 387, 273, 35, 195, 385, 29, 75, 165, 200, 135, 125, 99, 125, 399, 120, 45, 57, 88, 100 ]
+createGamePad()
+createInteractionPad()
+createItems()
+createGameFinish()

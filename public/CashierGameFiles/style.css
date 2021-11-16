@@ -142,57 +142,65 @@ body {
   display: none;
 }
 
-.item_bg {
-  background: url(./assets/item.png) no-repeat center;
-}
-.item_1_bg {
-  background: url(./assets/item_1.png) no-repeat center;
-}
-.item_2_bg {
-  background: url(./assets/item_2.png) no-repeat center;
-}
-.item_3_bg {
-  background: url(./assets/item_3.png) no-repeat center;
-}
-.item_4_bg {
-  background: url(./assets/item_4.png) no-repeat center;
-}
-.item_5_bg {
-  background: url(./assets/item_5.png) no-repeat center;
-}
-.item_6_bg {
-  background: url(./assets/item_6.png) no-repeat center;
-}
-.item_7_bg {
-  background: url(./assets/item_7.png) no-repeat center;
-}
-.item_8_bg {
-  background: url(./assets/item_8.png) no-repeat center;
-}
-.item_9_bg {
-  background: url(./assets/item_9.png) no-repeat center;
-}
-.item_10_bg {
-  background: url(./assets/item_10.png) no-repeat center;
-}
-.item_11_bg {
-  background: url(./assets/item_11.png) no-repeat center;
-}
-.item_12_bg {
-  background: url(./assets/item_12.png) no-repeat center;
-}
-.item_13_bg {
-  background: url(./assets/item_13.png) no-repeat center;
-}
-.item_14_bg {
+.item_1 {
   background: url(./assets/item_14.png) no-repeat center;
 }
-.item_15_bg {
+.item_2 {
   background: url(./assets/item_15.png) no-repeat center;
 }
-.item_16_bg {
+.item_3 {
   background: url(./assets/item_16.png) no-repeat center;
 }
-.item_17_bg {
+.item_4 {
   background: url(./assets/item_17.png) no-repeat center;
+}
+.item_5 {
+  background: url(./assets/item_13.png) no-repeat center;
+}
+.item_6 {
+  background: url(./assets/item_11.png) no-repeat center;
+}
+.item_7 {
+  background: url(./assets/item_12.png) no-repeat center;
+}
+.item_8 {
+  background: url(./assets/item_10.png) no-repeat center;
+}
+.item_9 {
+  background: url(./assets/item_9.png) no-repeat center;
+}
+.item_10 {
+  background: url(./assets/item_8.png) no-repeat center;
+}
+.item_11 {
+  background: url(./assets/item_5.png) no-repeat center;
+}
+.item_12 {
+  background: url(./assets/item_7.png) no-repeat center;
+}
+.item_13 {
+  background: url(./assets/item_4.png) no-repeat center;
+}
+.item_14 {
+  background: url(./assets/item_6.png) no-repeat center;
+}
+.item_15 {
+  background: url(./assets/item_3.png) no-repeat center;
+}
+.item_16 {
+  background: url(./assets/item_2.png) no-repeat center;
+}
+.item_17 {
+  background: url(./assets/item_1.png) no-repeat center;
+}
+.item_18 {
+  background: url(./assets/item_18.png) no-repeat center;
+}
+
+.item_19 {
+  background: url(./assets/item_19.png) no-repeat center;
+}
+
+.item_20 {
+  background: url(./assets/item_20.png) no-repeat center;
 }
