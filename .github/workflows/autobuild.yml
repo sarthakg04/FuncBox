@@ -1,0 +1,19 @@
+name: Auto Build on Push
+
+on:
+  push:
+    branches: [production]
+
+jobs:
+  build:
+    env:
+      GENERATE_SOURCEMAP: false
+      NODE_ENV: production
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@production
+      - uses: actions/setup-node@production
+        with:
+        node-version: 12
+      - run: npm ci
+      - run: npm run build
