@@ -17,7 +17,7 @@ function GameContainer({ gid }) {
   const [srcDoc, setSrcDoc] = useState("");
   const { isAuthenticated, token, userid } = useAuth();
   const [gAccess, setGAccess] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [qrSrc, setQrSrc] = useState("");
   const dispatch = useDispatch();
   const gamePath = filepath[gid];
@@ -68,6 +68,12 @@ function GameContainer({ gid }) {
           },
         }
       );
+      if (!gres) {
+        toast.error("Server Error");
+        history.push("/");
+      } else {
+        console.log(gres);
+      }
       const gaccess = await gres.json();
       console.log("gAccess = ", gaccess);
       if (gaccess === "Not Authorize 1") {
@@ -86,6 +92,7 @@ function GameContainer({ gid }) {
       console.log(gaccess);
     }
     checkGameAccess();
+
     const getSavedCode = async () => {
       const res = await fetch(
         `${
