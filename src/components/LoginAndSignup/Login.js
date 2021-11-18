@@ -27,7 +27,7 @@ export default function Login() {
   let images = document.getElementsByClassName("item");
   const { isAuthenticated, token } = useAuth();
   const apiurl = process.env.REACT_APP_API_URL;
-  
+
   useEffect(() => {
     if (isAuthenticated) {
       console.log("Authenticated");
@@ -100,7 +100,7 @@ export default function Login() {
       );
 
       const parseRes = await response.json();
-
+      console.log(parseRes);
       if (parseRes.token) {
         dispatch(setToken({ token: "Bearer " + parseRes.token }));
         const data = await fetch(
