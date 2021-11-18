@@ -21,8 +21,8 @@ jobs:
       - name: sync files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          server: ftp.funcbox.in
+          username: funcbox_admin
+          password: FuncBox123*
           local-dir: ./build/
           server-dir: public_html/
