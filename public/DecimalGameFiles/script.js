@@ -5,6 +5,10 @@
 // createBaskets();
 // createBasketBall();
 // createResult();
+// function gameSpeed(){
+//   speed =1000;
+// }
+// gameSpeed();
 // startGame();
 
 
@@ -15,6 +19,7 @@ let index;
 let ans;
 let pointer = 0;
 let movePointer;
+let speed = 1000;
 
 
 function createGamepad(){
@@ -98,7 +103,7 @@ function startGame(){
     }
     document.getElementsByClassName('indicator')[pointer].classList.add('active');
 
-  },1000);
+  },speed);
   genQuestion();
 }
 

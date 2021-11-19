@@ -5,14 +5,26 @@
 // createGrid();
 // createLife();
 // createInteractionPad();
+// function setSpeed(){
+//   speed = 600;
+// }
+//
+// function setAwardPenalty(){
+//   award =4;
+//   penalty = 1;
+// }
+//
+// setSpeed()
+// setAwardPenalty();
 
 let flag = 0;
 let life = 0;
 let molesArray = [];
 let lastRemoved = -1;
-let score = 0,
-  interval;
-let gameOver = 0;
+let score = 0, interval;
+let gameOver = 1;
+let speed = 600;
+let award =4,penalty=1;
 
 function createGamepad() {
   let gamePadd = document.createElement("DIV");
@@ -22,9 +34,11 @@ function createGamepad() {
   gamePad = document.getElementById("GamePad");
 }
 
-function fill() {
-  document.getElementsByClassName("GamePad")[0].style.backgroundImage =
-    "url(./WhackAMoleFiles/assets/background.svg)";
+function fill(background){
+  if(!background){
+    background = 'background1'
+  }
+  document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(./WhackAMoleFiles/assets/'+background+'.png)';
 }
 
 function createScore() {
@@ -86,56 +100,55 @@ function createInteractionPad() {
   `;
 }
 
-function hit(pos) {
-  if (gameOver != 1) {
-    document.getElementById("sound").play();
-    if (flag != 1) {
-      flag = 1;
-      let element = document.getElementsByClassName("element")[pos];
-      element.classList.add("hit");
-      if (molesArray.indexOf(pos) != -1) {
-        lastRemoved = pos;
-        document
-          .getElementsByClassName("element")
-          [pos].classList.remove("active");
-        document.getElementsByClassName("mole")[pos].src =
-          "./WhackAMoleFiles/assets/hole.svg";
-        let index = molesArray.indexOf(pos);
-        molesArray.splice(index, 1);
-        score += 1;
-        document.getElementById("score").innerHTML = score;
-      } else {
-        document.getElementsByClassName("life__icon")[life].src =
-          "./WhackAMoleFiles/assets/brokenHeart.svg";
-        life += 1;
-        if (life == 3) {
-          clearInterval(interval);
-          gameOver = 1;
-          document.getElementsByClassName("restart")[0].classList.add("active");
-        }
-      }
-      setTimeout(() => {
-        element.classList.remove("hit");
-        flag = 0;
-      }, 300);
+
+function hit(pos){
+  if(gameOver !=1){
+  document.getElementById('sound').play();
+  if(flag != 1){
+  flag = 1;
+  let element = document.getElementsByClassName('element')[pos];
+  element.classList.add('hit');
+  if(molesArray.indexOf(pos) != -1){
+  lastRemoved = pos;
+  document.getElementsByClassName('element')[pos].classList.remove('active');
+  document.getElementsByClassName('mole')[pos].src = './WhackAMoleFiles/assets/hole.svg';
+  let index = molesArray.indexOf(pos);
+  molesArray.splice(index,1);
+  score +=award;
+  document.getElementById('score').innerHTML =  score;
+  }
+  else {
+    document.getElementsByClassName('life__icon')[life].src = './WhackAMoleFiles/assets/brokenHeart.svg';
+    life +=1;
+    if(life == 3){
+      clearInterval(interval);
+      gameOver = 1;
+      document.getElementsByClassName('restart')[0].classList.add('active');
     }
   }
 }
 
-function start() {
-  document.getElementsByClassName("start")[0].classList.remove("active");
-  document.getElementsByClassName("stop")[0].classList.add("active");
-  interval = setInterval(() => {
+
+function start(){
+    gameOver =0;
+    document.getElementsByClassName('start')[0].classList.remove('active');
+      document.getElementsByClassName('stop')[0].classList.add('active');
+    interval = setInterval(()=>{
     let innerFlag = 0;
     if (molesArray.length >= 3) {
       let pos = molesArray[0];
-      molesArray.splice(0, 1);
-      document
-        .getElementsByClassName("element")
-        [pos].classList.remove("active");
-      document.getElementsByClassName("mole")[pos].src =
-        "./WhackAMoleFiles/assets/hole.svg";
+      molesArray.splice(0,1);
+
       lastRemoved = pos;
+      score -=penalty;
+      document.getElementById('score').innerHTML =  score;
+      if(score < -19){
+        clearInterval(interval);
+        gameOver = 1;
+        document.getElementsByClassName('restart')[0].classList.add('active');
+      }
+      document.getElementsByClassName('element')[pos].classList.remove('active');
+      document.getElementsByClassName('mole')[pos].src = './WhackAMoleFiles/assets/hole.svg';
     }
     while (innerFlag != 1) {
       let position = parseInt(Math.random() * 9);
@@ -150,11 +163,15 @@ function start() {
           "./WhackAMoleFiles/assets/mole.svg";
       }
     }
-    innerFlag = 0;
-  }, 600);
+  }
+  innerFlag = 0;
+
+},speed);
 }
 
-function restart() {
+
+
+function restart(){
   clearInterval(interval);
   document.getElementsByClassName("restart")[0].classList.remove("active");
   molesArray.forEach((pos, i) => {

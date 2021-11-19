@@ -68,13 +68,17 @@ function GameContainer({ gid }) {
           },
         }
       );
-      if (!gres) {
-        toast.error("Server Error");
-        history.push("/");
-      } else {
-        console.log(gres);
-      }
+        if (!gres) {
+          toast.error("Server Error");
+          history.push("/");
+        } else {
+          console.log(gres);
+        }
       const gaccess = await gres.json();
+      // let gaccess = {
+      //   token: "token",
+      //   gAcess : true
+      // }
       console.log("gAccess = ", gaccess);
       if (gaccess === "Not Authorize 1") {
         toast.error("You are not logged in!", { pauseOnHover: false });
