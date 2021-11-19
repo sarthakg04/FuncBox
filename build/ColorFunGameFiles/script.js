@@ -1,4 +1,13 @@
 // Functions
+// let questions = [
+//   "orange",
+//   "green",
+//   "purple",
+//   "pink",
+//   "grey",
+//   "brown",
+//   "dark_green",
+// ];
 // createBackground()
 // fillBackground()
 // createQuestionCard()
@@ -60,7 +69,9 @@ let flask_images = {
 };
 
 let primary_colors = ["red", "blue", "yellow", "white", "black"];
-let secondary_colors = [
+
+let colors = [
+  ...primary_colors,
   "orange",
   "green",
   "purple",
@@ -69,13 +80,12 @@ let secondary_colors = [
   "brown",
   "dark_green",
 ];
-let colors = [...primary_colors, ...secondary_colors];
 
 let selected = [];
-shuffle(secondary_colors);
+// shuffle(questions);
 
 let currentQnum = 0;
-let currentQuestion = secondary_colors[currentQnum];
+let currentQuestion = "";
 function createBackground() {
   let container = document.createElement("DIV");
   container.classList.add("container");
@@ -95,6 +105,7 @@ function createQuestionCard() {
 }
 
 function setQuestions() {
+  currentQuestion = questions[currentQnum];
   let qcard = document.getElementsByClassName("question_card")[0];
   qcard.innerHTML = getQuestionHTML(currentQuestion);
 }
@@ -200,11 +211,11 @@ function showWrong() {
   }, 1000);
 }
 function nextQuestion() {
-  if (currentQnum === secondary_colors.length - 1) {
+  if (currentQnum === questions.length - 1) {
     endGame();
   } else {
     currentQnum++;
-    currentQuestion = secondary_colors[currentQnum];
+    currentQuestion = questions[currentQnum];
     selected = [];
     setQuestions();
   }
@@ -223,7 +234,7 @@ function createEndGameCard() {
 }
 function restart() {
   currentQnum = 0;
-  currentQuestion = secondary_colors[currentQnum];
+  currentQuestion = questions[currentQnum];
   selected = [];
   createQuestionCard();
   setQuestions();

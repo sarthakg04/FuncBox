@@ -99,6 +99,7 @@ export default function Navbar(props) {
             <div className="dropdown">
               <button class="dropbtn">{shortName(username)}🔽</button>
               <div class="dropdown-content">
+                <Link to="/welcome">Dashboard</Link>
                 <Link to="/editprofile">Edit Profile</Link>
                 <Link to="/subscriptions">Purchases</Link>
                 <Link to="#">Change password</Link>
