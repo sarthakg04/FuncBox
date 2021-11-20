@@ -1,10 +1,24 @@
-// Frontend Functions
+// function fillPlanets() {
+//   let planets = [
+//     "uranus",
+//     "earth",
+//     "venus",
+//     "jupiter",
+//     "mars",
+//     "saturn",
+//     "mercury",
+//     "neptune",
+//   ];
+// planets.forEach((planet) => {
+//   getPlanet(planet);
+// });
+// }
 // createBackground()
 // fillBackground()
 // createOrbits()
-// createSun()
 // createPlanetTray()
 // fillPlanets()
+// createSun()
 
 let imageLinks = {
   background: `./SolarSystemGameFiles/assets/background.png`,
@@ -115,13 +129,22 @@ function createPlanetTray() {
   inventory.appendChild(submit);
   document.getElementById("container").appendChild(inventory);
 }
-function fillPlanets() {
-  let planets = [...correctSequence];
-  planets.sort(() => 0.5 - Math.random());
-  planets.forEach((planet) => {
-    getPlanet(planet);
-  });
-}
+// function fillPlanets() {
+//   let planets = [
+//     "mercury",
+//     "venus",
+//     "earth",
+//     "mars",
+//     "jupiter",
+//     "saturn",
+//     "uranus",
+//     "neptune",
+//   ];
+//   // planets.sort(() => 0.5 - Math.random());
+// planets.forEach((planet) => {
+//   getPlanet(planet);
+// });
+// }
 
 function getPlanet(planetName) {
   let planet = `<img id="${planetName}" onClick="planetClick(this)" class="planet thumb" src="${imageRemoteLinks[planetName]}" >`;
