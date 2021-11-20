@@ -13,6 +13,7 @@ import Signup from "../components/LoginAndSignup/Signup";
 import CodeEditor from "../components/CodeEditor/CodeEditor";
 import FuncBoxx from "./FuncBoxx/FuncBoxx";
 import BowlingGame from "../components/Games/BowlingGame/BowlingGame";
+import FlappyGame from  "../components/Games/FlappyGame/FlappyGame";
 import ClockGame from "../components/Games/ClockGame/ClockGame";
 import AlienGame from "../components/Games/AlienGame/AlienGame";
 import CardGame from "../components/Games/CardGame/cardGame";
@@ -118,7 +119,7 @@ function App() {
           <Route exact path="/ColorGame" component={ColorFun} />
           <Route exact path="/SolarGame" component={MySolarSystem} />
           <Route exact path="/Calculator" component={Calculator} />
-
+          <Route exact path="/FlappyGame" component={FlappyGame} />
           <Route exact path="/CashierGame" component={CashierGame} />
           <Route exact path="/Photosynthesis" component={Photosynthesis} />
 
