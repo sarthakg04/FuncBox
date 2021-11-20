@@ -1,10 +1,11 @@
 // Frontend Functions
 // createGamepad();
-// fill();
+// fill('background2');
 // createScore();
-//hammer = 'hammer1'
 // createGrid();
 // createLife();
+// mole = 'mole2';
+// hammer = 'hammer2';
 // createInteractionPad();
 // function setSpeed(){
 //   speed = 600;
@@ -14,29 +15,29 @@
 //   award =4;
 //   penalty = 1;
 // }
-// function setMole(){
-//   mole = 'mole2';
-// }
+//
 // setSpeed()
 // setAwardPenalty();
 
-let flag = 0;
-let life = 0;
+
+
+let flag =0;
+let life = 0
 let molesArray = [];
 let lastRemoved = -1;
 let score = 0, interval;
 let gameOver = 1;
 let speed = 600;
 let award =4,penalty=1;
-let mole = 'mole1';
-let hammer = 'hammer1';
+let mole = 'mole1' ;
+let hammer = 'hammer3';
 
-function createGamepad() {
-  let gamePadd = document.createElement("DIV");
-  gamePadd.classList.add("GamePad");
-  gamePadd.id = "GamePad";
+function createGamepad(){
+  let gamePadd = document.createElement('DIV')
+  gamePadd.classList.add('GamePad')
+  gamePadd.id = 'GamePad'
   document.body.appendChild(gamePadd);
-  gamePad = document.getElementById("GamePad");
+  gamePad = document.getElementById('GamePad')
 }
 
 function fill(background){
@@ -46,8 +47,8 @@ function fill(background){
   document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(./WhackAMoleFiles/assets/'+background+'.png)';
 }
 
-function createScore() {
-  document.getElementsByClassName("GamePad")[0].innerHTML += `
+function createScore(){
+  document.getElementsByClassName('GamePad')[0].innerHTML +=`
   <audio src="./WhackAMoleFiles/assets/hit.mpeg" id="sound">
 
   </audio>
@@ -59,7 +60,6 @@ function createScore() {
 }
 
 function createGrid(){
-
   document.getElementsByClassName('GamePad')[0].innerHTML += `<div class="grid"></div>`;
   let grid = document.getElementsByClassName('grid')[0];
   for(let i = 0; i<9 ; i++){
@@ -72,8 +72,8 @@ function createGrid(){
   }
 }
 
-function createLife() {
-  document.getElementsByClassName("GamePad")[0].innerHTML += `
+function createLife(){
+  document.getElementsByClassName('GamePad')[0].innerHTML +=`
   <div class="lifes">
     <div class="life">
       <img class="life__icon" src="./WhackAMoleFiles/assets/heart.svg" alt="">
@@ -88,8 +88,8 @@ function createLife() {
   `;
 }
 
-function createInteractionPad() {
-  document.getElementsByClassName("GamePad")[0].innerHTML += `
+function createInteractionPad(){
+  document.getElementsByClassName('GamePad')[0].innerHTML +=`
   <div class="restart" onclick="restart()">
     <h3>Try Again!</h3>
   </div>
@@ -130,7 +130,14 @@ function hit(pos){
       document.getElementsByClassName('restart')[0].classList.add('active');
     }
   }
+  setTimeout(()=>{
+    element.classList.remove('hit');
+    flag = 0;
+  },300);
 }
+}
+}
+
 
 
 function start(){
@@ -139,7 +146,7 @@ function start(){
       document.getElementsByClassName('stop')[0].classList.add('active');
     interval = setInterval(()=>{
     let innerFlag = 0;
-    if (molesArray.length >= 3) {
+    if(molesArray.length >=3){
       let pos = molesArray[0];
       molesArray.splice(0,1);
 
@@ -173,20 +180,18 @@ function start(){
 
 function restart(){
   clearInterval(interval);
-  document.getElementsByClassName("restart")[0].classList.remove("active");
+  document.getElementsByClassName('restart')[0].classList.remove('active');
   molesArray.forEach((pos, i) => {
-    document.getElementsByClassName("element")[pos].classList.remove("active");
-    document.getElementsByClassName("mole")[pos].src =
-      "./WhackAMoleFiles/assets/hole.svg";
+    document.getElementsByClassName('element')[pos].classList.remove('active');
+    document.getElementsByClassName('mole')[pos].src = './WhackAMoleFiles/assets/hole.svg';
   });
   molesArray = [];
   gameOver = 0;
   score = 0;
-  document.getElementById("score").innerHTML = score;
-  while (life != 0) {
-    life -= 1;
-    document.getElementsByClassName("life__icon")[life].src =
-      "./WhackAMoleFiles/assets/heart.svg";
+  document.getElementById('score').innerHTML = score;
+  while(life!=0){
+    life -=1;
+    document.getElementsByClassName('life__icon')[life].src = './WhackAMoleFiles/assets/heart.svg';
   }
   start();
 }
