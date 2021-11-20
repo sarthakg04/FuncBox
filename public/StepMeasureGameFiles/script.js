@@ -1,3 +1,16 @@
+// fillBackground()
+// let units = ['mm', 'cm', 'dm', 'm', 'dam', 'hm', 'km']
+// createInputBox()
+// createSubmitButton()
+// setCat()
+// for(i=0;i<units.length;i++){
+//     createStep()
+// }
+// showValue()
+// createInteractionPad()
+// createRefreshButton()
+
+
 let Phone = document.createElement('div')
 let GamePad = document.createElement('div')
 let Input_box = document.createElement('div')
@@ -5,13 +18,12 @@ let submit_btn = document.createElement('button')
 let step_div = document.createElement('div')
 let Value = document.createElement('div')
 let InteractionPad = document.createElement('div')
+let cat_bg = document.createElement('div')
 
 
-let units = ['mm', 'cm', 'dm', 'm', 'dam', 'hm', 'km']
+// let units = ['mm', 'cm', 'dm', 'm', 'dam', 'hm', 'km']
 
-// alert(' kjnd')
 
-console.log('Hi')
 
 function fillBackground(){
     Phone.classList.add('Phone')
@@ -25,13 +37,19 @@ function createInputBox(){
     Input_box.innerHTML +=`
     <h3 class="enter_number">Enter a number</h3>
     <input id="input_number" min="0" value="00.00" class="input_number" type="number" step="0.01">
-    <select id="units_input">`
+    `
+
+
+    let temp_2 = document.createElement('select')
+    temp_2.id = 'units_input'
+
+    Input_box.appendChild(temp_2)
 
     for(i=0;i<units.length;i++){
-        let temp = `<option value="${units[i]}">${units[i]}</option>`
-        Input_box.innerHTML += temp
+        temp_2.innerHTML += `<option value="${units[i]}">${units[i]}</option>`
     }
-    Input_box.innerHTML += '</select>'
+
+    
     
     GamePad.appendChild(Input_box)
 }
@@ -43,7 +61,15 @@ function createSubmitButton(){
     GamePad.appendChild(submit_btn)
 
     step_div.classList.add('step_div')
+    
+    GamePad.appendChild(step_div)
 
+}
+
+
+function setCat(){
+    cat_bg.classList.add('cat_bg')
+    GamePad.appendChild(cat_bg)
 }
 
 // for(i=0;i<units.length;i++){
@@ -51,9 +77,12 @@ function createSubmitButton(){
 // }
 
 
+
 function showValue(){
     Value.classList.add('Value')
     Value.innerHTML = '00.00'
+
+    GamePad.appendChild(Value)
 }
 
 function createInteractionPad(){
@@ -62,11 +91,12 @@ function createInteractionPad(){
     <button onclick="Up()" class="up"></button><br>
     <button onclick="Down()" class="down"></button>
     `
+    Phone.appendChild(InteractionPad)
 }
 
 function createRefreshButton(){
     Phone.innerHTML +=`
-    <div onclick="window.location.reload()" class="restart">Reset <img style="vertical-align:middle" src="./assets/refresh.png" alt="restart"></div>
+    <div onclick="window.location.reload()" class="restart">Reset <img class="refresh_image" alt="restart"></div>
     `
 }
 
@@ -86,6 +116,7 @@ let temp = 1
 
 
 function createStep(){
+
     let new_step = document.createElement('div')
     new_step.classList.add('step')
     new_step.classList.add(`step_${i}`)
@@ -104,11 +135,16 @@ function Up(){
         current_cat_top -= 20
         current_cat_left -= 110
         cat_bg.style.top = current_cat_top + 'px'
+        console.log(cat_bg.style.top)
         cat_bg.style.right = current_cat_left + 'px'
+        console.log(cat_bg.style.right)
         cat_bg.style.transform = 'scaleX(1)'
+        
     }
     step = Math.abs(( current_cat_top - 310 ) / 20 )
-    // console.log(step)
+    // console.log('up')
+
+    console.log(current_cat_top)
 
     for( i=0;i<step;i++){
         temp = temp * 10
@@ -116,6 +152,8 @@ function Up(){
 
     // console.log(measure_in_mm,temp)
     Value.innerHTML = measure_in_mm/temp
+
+    console.log(Value)
 
     temp = 1
 
@@ -131,7 +169,7 @@ function Down(){
         cat_bg.style.transform = 'scaleX(-1)'
     }
     step = Math.abs(( current_cat_top - 310 ) / 20 )
-    // console.log(step)
+    console.log('down')
 
     
     for( i=0;i<step;i++){
