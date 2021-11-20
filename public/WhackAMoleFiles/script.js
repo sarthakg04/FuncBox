@@ -2,10 +2,10 @@
 // createGamepad();
 // fill('background2');
 // createScore();
+// hammer = 'hammer2';
 // createGrid();
 // createLife();
 // mole = 'mole2';
-// hammer = 'hammer2';
 // createInteractionPad();
 // function setSpeed(){
 //   speed = 600;
@@ -18,6 +18,24 @@
 //
 // setSpeed()
 // setAwardPenalty();
+//
+// function checkHit(hit){
+//   //This function is called by our game engine whenever you hit or miss.
+//
+//   //hit is a local variable.
+//   //Local variable are those variables whose lifeline is within that Function
+//
+//   //hit is a boolean type variable. A boolen is a variable whose value can be
+//   //either true or false
+//
+//   if(hit == true){
+//     score+=award
+//   }
+//   else{
+//     score -= penalty
+//   }
+// }
+
 
 
 
@@ -30,7 +48,7 @@ let gameOver = 1;
 let speed = 600;
 let award =4,penalty=1;
 let mole = 'mole1' ;
-let hammer = 'hammer3';
+let hammer = 'hammer1';
 
 function createGamepad(){
   let gamePadd = document.createElement('DIV')
@@ -49,9 +67,8 @@ function fill(background){
 
 function createScore(){
   document.getElementsByClassName('GamePad')[0].innerHTML +=`
-  <audio src="./WhackAMoleFiles/assets/hit.mpeg" id="sound">
-
-  </audio>
+  <audio src="./WhackAMoleFiles/assets/hit.mpeg" id="sound"></audio>
+  <audio src="./WhackAMoleFiles/assets/miss.mpeg" id="soundMiss"></audio>
   <div class="score">
     <h3>Score</h3>
     <h3 id="score">0</h3>
@@ -105,9 +122,15 @@ function createInteractionPad(){
 }
 
 
+
+
+
+function resultHit(){
+
+}
+
 function hit(pos){
   if(gameOver !=1){
-  document.getElementById('sound').play();
   if(flag != 1){
   flag = 1;
   let element = document.getElementsByClassName('element')[pos];
@@ -118,12 +141,14 @@ function hit(pos){
   document.getElementsByClassName('mole')[pos].src = './WhackAMoleFiles/assets/hole.svg';
   let index = molesArray.indexOf(pos);
   molesArray.splice(index,1);
-  score +=award;
+  document.getElementById('sound').play();
+  checkHit(true);
   document.getElementById('score').innerHTML =  score;
   }
   else {
     document.getElementsByClassName('life__icon')[life].src = './WhackAMoleFiles/assets/brokenHeart.svg';
     life +=1;
+    document.getElementById('soundMiss').play();
     if(life == 3){
       clearInterval(interval);
       gameOver = 1;
@@ -151,7 +176,7 @@ function start(){
       molesArray.splice(0,1);
 
       lastRemoved = pos;
-      score -=penalty;
+      checkHit(false);
       document.getElementById('score').innerHTML =  score;
       if(score < -19){
         clearInterval(interval);
