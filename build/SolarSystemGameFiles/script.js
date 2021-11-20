@@ -1,10 +1,24 @@
-// Frontend Functions
+// function fillPlanets() {
+//   let planets = [
+//     "uranus",
+//     "earth",
+//     "venus",
+//     "jupiter",
+//     "mars",
+//     "saturn",
+//     "mercury",
+//     "neptune",
+//   ];
+// planets.forEach((planet) => {
+//   getPlanet(planet);
+// });
+// }
 // createBackground()
 // fillBackground()
 // createOrbits()
-// createSun()
 // createPlanetTray()
 // fillPlanets()
+// createSun()
 
 let imageLinks = {
   background: `./SolarSystemGameFiles/assets/background.png`,
@@ -62,6 +76,7 @@ let planetPositions = [
   { x: "70px", y: "505px" },
 ];
 let placedPlanets = new Array(8);
+let numPlaced = 0;
 placedPlanets.fill("");
 let activePos = -1;
 function createBackground() {
@@ -99,26 +114,37 @@ function createPlanetTray() {
 
   submit.innerText = "Submit";
   submit.onclick = () => {
-    let correct = placedPlanets.length === correctSequence.length;
+    if (numPlaced > 0) {
+      let correct = placedPlanets.length === correctSequence.length;
 
-    placedPlanets.forEach((ele, i) => {
-      if (ele !== correctSequence[i]) {
-        correct = false;
-      }
-    });
-    showGameEnd(correct);
+      placedPlanets.forEach((ele, i) => {
+        if (ele !== correctSequence[i]) {
+          correct = false;
+        }
+      });
+      showGameEnd(correct);
+    }
   };
   inventory.appendChild(planetTray);
   inventory.appendChild(submit);
   document.getElementById("container").appendChild(inventory);
 }
-function fillPlanets() {
-  let planets = [...correctSequence];
-  planets.sort(() => 0.5 - Math.random());
-  planets.forEach((planet) => {
-    getPlanet(planet);
-  });
-}
+// function fillPlanets() {
+//   let planets = [
+//     "mercury",
+//     "venus",
+//     "earth",
+//     "mars",
+//     "jupiter",
+//     "saturn",
+//     "uranus",
+//     "neptune",
+//   ];
+//   // planets.sort(() => 0.5 - Math.random());
+// planets.forEach((planet) => {
+//   getPlanet(planet);
+// });
+// }
 
 function getPlanet(planetName) {
   let planet = `<img id="${planetName}" onClick="planetClick(this)" class="planet thumb" src="${imageRemoteLinks[planetName]}" >`;
@@ -159,6 +185,7 @@ function planetClick(e) {
     e.remove();
     document.getElementById(planetName).style.visibility = "unset";
     placedPlanets[activePos] = "";
+    numPlaced -= 1;
   } else {
     if (activePos !== -1) {
       let active_handle = document.getElementsByClassName("active_handle")[0];
@@ -175,8 +202,14 @@ function planetClick(e) {
 
       active_handle.classList.remove("active_handle");
       placedPlanets[activePos] = planetName;
+      numPlaced += 1;
       activePos = -1;
     }
+  }
+  if (numPlaced <= 0) {
+    document.getElementsByClassName("submit_button")[0].disabled = true;
+  } else {
+    document.getElementsByClassName("submit_button")[0].disabled = false;
   }
 }
 function showGameEnd(correct) {
