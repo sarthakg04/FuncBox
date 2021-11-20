@@ -2,6 +2,7 @@
 // createGamepad();
 // fill();
 // createScore();
+//hammer = 'hammer1'
 // createGrid();
 // createLife();
 // createInteractionPad();
@@ -13,7 +14,9 @@
 //   award =4;
 //   penalty = 1;
 // }
-//
+// function setMole(){
+//   mole = 'mole2';
+// }
 // setSpeed()
 // setAwardPenalty();
 
@@ -27,6 +30,8 @@ let score = 0, interval;
 let gameOver = 1;
 let speed = 600;
 let award =4,penalty=1;
+let mole = 'mole1';
+let hammer = 'hammer1';
 
 function createGamepad(){
   let gamePadd = document.createElement('DIV')
@@ -56,13 +61,14 @@ function createScore(){
 }
 
 function createGrid(){
+
   document.getElementsByClassName('GamePad')[0].innerHTML += `<div class="grid"></div>`;
   let grid = document.getElementsByClassName('grid')[0];
   for(let i = 0; i<9 ; i++){
     grid.innerHTML += `
     <div class="element"  onclick="hit(${i})">
       <img class="mole" src="./WhackAMoleFiles/assets/hole.svg" alt="">
-      <img class="hammer" src="./WhackAMoleFiles/assets/hammer.svg" alt="">
+      <img class="hammer" src="./WhackAMoleFiles/assets/${hammer}.png" alt="">
     </div>
     `;
   }
@@ -164,7 +170,7 @@ function start(){
       molesArray.push(position);
       innerFlag = 1;
       document.getElementsByClassName('element')[position].classList.add('active');
-      document.getElementsByClassName('mole')[position].src = './WhackAMoleFiles/assets/mole.svg';
+      document.getElementsByClassName('mole')[position].src = './WhackAMoleFiles/assets/'+mole+'.png';
     }
   }
   innerFlag = 0;
