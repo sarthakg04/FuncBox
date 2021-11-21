@@ -100,7 +100,7 @@ export default function Login() {
       );
 
       const parseRes = await response.json();
-      console.log(parseRes);
+      // console.log(parseRes);
       if (parseRes.token) {
         dispatch(setToken({ token: "Bearer " + parseRes.token }));
         const data = await fetch(
@@ -117,7 +117,7 @@ export default function Login() {
         );
         const verifyres = await data.json();
 
-        console.log(verifyres);
+        // console.log(verifyres);
         dispatch(setToken({ token: "Bearer " + parseRes.token }));
 
         dispatch(setAuth({ isAuthenticated: true }));

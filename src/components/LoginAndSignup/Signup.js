@@ -92,7 +92,7 @@ export default function Signup() {
       );
 
       const parseRes = await response.json();
-      console.log("conosle" + parseRes);
+      // console.log("conosle" + parseRes);
       if (parseRes.token) {
         dispatch(setAuth({ isAuthenticated: true }));
         dispatch(

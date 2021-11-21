@@ -24,12 +24,12 @@ export default function Editor(props) {
   }
   //"http://localhost:5000/codesave/save"
   useEffect(() => {
-    console.log(userid);
+    // console.log(userid);
   }, [userid]);
   async function saveCode() {
     if (gid !== -1) {
-      console.log(hash(value));
-      console.log("Token : " + token);
+      // console.log(hash(value));
+      // console.log("Token : " + token);
       const hashedCode = hash(value);
       const res = await fetch(
         `${
@@ -77,7 +77,7 @@ export default function Editor(props) {
   }
   function toggleQr() {
     document.getElementById("qr").classList.toggle("active");
-    console.log("Hello");
+    // console.log("Hello");
   }
   return (
     <div className="code__editor">
