@@ -51,6 +51,8 @@ import Zombie from "./Games/ZombieGame/ZombieGame";
 import AnimalHomeGame from "./Games/AnimalHomeGame/AnimalHomeGame";
 import Decimal from "./Games/DecimalGame/DecimalGame";
 import SubscriptionPage from "./Subscriptions/SubscriptionPage";
+import StepMeasure from "./Games/StepMeasureGame/StepMeasure";
+
 
 function App() {
   const dispatch = useDispatch();
@@ -109,6 +111,7 @@ function App() {
           <Route exact path="/AngryBirds" component={AngryBirds} />
           <Route exact path="/MissionMars" component={MissionMars} />
           <Route exact path="/MonkeyMultiplier" component={MonkeyMultiplier} />
+          <Route exact path="/StepMeasure" component={StepMeasure} />
           <Route exact path="/LetsMakeItRain" component={LetsMakeItRain} />
           <Route exact path="/BowlingGame" component={BowlingGame} />
           <Route exact path="/ClockGame" component={ClockGame} />

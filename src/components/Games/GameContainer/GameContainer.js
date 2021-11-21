@@ -68,68 +68,69 @@ function GameContainer({ gid }) {
           },
         }
       );
-      //   if (!gres) {
-      //     toast.error("Server Error");
-      //     history.push("/");
-      //   } else {
-      //     console.log(gres);
-      //   }
-      // const gaccess = await gres.json();
-      let gaccess = {
-        token: "token",
-        gAcess : true
-      }
+        if (!gres) {
+          toast.error("Server Error");
+          history.push("/");
+        } else {
+          console.log(gres);
+        }
+      const gaccess = await gres.json();
+      // let gaccess = {
+      //   token: "token",
+      //   gAcess : true
+      // }
       console.log("gAccess = ", gaccess);
       if (gaccess === "Not Authorize 1") {
         toast.error("You are not logged in!", { pauseOnHover: false });
         history.push("/login");
       }
 
-      dispatch(setToken({ token: "Bearer " + gaccess.token }));
-      if (gaccess.token && gaccess.gAcess === false) {
-        toast.error("You are not allowed to access this game", {
-          pauseOnHover: false,
-        });
-        history.push("/");
-      }
-      setGAccess(gaccess.gAcess);
-      console.log(gaccess);
-    }
-    checkGameAccess();
 
-    const getSavedCode = async () => {
-      const res = await fetch(
-        `${
-          process.env.NODE_ENV === "development"
-            ? apiurl
-            : "https://server.funcbox.in"
-        }/codesave/save/${userid}/game/${gid}`,
-        {
-          method: "GET",
-        }
-      );
-      const data = await res.json();
-      if (data) {
-        const len = data.length - 1;
-        if (len > 0) setJs(unhash(data[len].code));
-      }
-      setLoading(false);
-    };
-    if (gid > -1 && userid !== "") {
-      getSavedCode();
-    }
+  //     dispatch(setToken({ token: "Bearer " + gaccess.token }));
+  //     if (gaccess.token && gaccess.gAcess === false) {
+  //       toast.error("You are not allowed to access this game", {
+  //         pauseOnHover: false,
+  //       });
+  //       history.push("/");
+  //     }
+  //     setGAccess(gaccess.gAcess);
+  //     console.log(gaccess);
+  //   }
+  //   checkGameAccess();
 
-    QRCode.toDataURL(
-      `${
-        process.env.NODE_ENV === "development"
-          ? "http://localhost:3000/"
-          : "https://www.funcbox.in/"
-      }` +
-        userid +
-        "+" +
-        gid
-    ).then(setQrSrc);
-  }, [userid]);
+  //   const getSavedCode = async () => {
+  //     const res = await fetch(
+  //       `${
+  //         process.env.NODE_ENV === "development"
+  //           ? apiurl
+  //           : "https://server.funcbox.in"
+  //       }/codesave/save/${userid}/game/${gid}`,
+  //       {
+  //         method: "GET",
+  //       }
+  //     );
+  //     const data = await res.json();
+  //     if (data) {
+  //       const len = data.length - 1;
+  //       if (len > 0) setJs(unhash(data[len].code));
+  //     }
+  //     setLoading(false);
+  //   };
+  //   if (gid > -1 && userid !== "") {
+  //     getSavedCode();
+  //   }
+
+  //   QRCode.toDataURL(
+  //     `${
+  //       process.env.NODE_ENV === "development"
+  //         ? "http://localhost:3000/"
+  //         : "https://www.funcbox.in/"
+  //     }` +
+  //       userid +
+  //       "+" +
+  //       gid
+  //   ).then(setQrSrc);
+  // }, [userid]);
   return loading ? (
     <div> Loading ...</div>
   ) : (

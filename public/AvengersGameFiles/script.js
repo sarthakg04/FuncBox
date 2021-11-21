@@ -1,5 +1,4 @@
 //Frontend Functions for testing
-
 // var background = 'forest' or 'space' or 'galaxy'
 // createBackground()
 // createGrid()
@@ -15,7 +14,6 @@
 //         GameOver()
 //     }
 // }
-
 
 
 // Initializing variables
@@ -47,7 +45,7 @@ let Time_taken = 0
 function createBackground(){
     Phone.classList.add('Phone')
     Phone.classList.add(background+'_bg')
-    document.body.appendChild(Phone)
+
 
     timer = document.createElement('div')
     timer.classList.add('timer')
