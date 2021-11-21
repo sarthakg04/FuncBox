@@ -1,5 +1,6 @@
 
 
+
 Fronend Functionsfor Games:
 
 -----------------------------------------------------------------------------------------------------------------------------
@@ -66,7 +67,37 @@ let items = [
     'item_16', 'item_17', 'item_18', 'item_19', 'item_20'
 ]
 let item_prices = [ 449, 387, 273, 35, 195, 385, 29, 75, 165, 200, 135, 125, 99, 125, 399, 120, 45, 57, 88, 100 ]
+
+let Logic = false
 createGamePad()
 createInteractionPad()
 createItems()
 createGameFinish()
+function CheckLogic(){
+    if( amount_added === ( recieved - item_prices[item_number] ) ){
+        Logic = true
+    }
+    else{
+        Logic = false
+    }
+    ImplementLogic()
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+LetsMakeItRainGame:
+-----------------------
+
+fillBackground()
+createGamePad()
+createDropPath()
+for(i=0;i<4;i++){
+    drawDropPath()
+}
+setDrop()
+createSun()
+generateRays()
+createInteractionPad()
+function onHit(){
+    rays_caught++
+}
