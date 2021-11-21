@@ -51,39 +51,40 @@ function GameContainer({ gid }) {
 
         `);
   }
-  // useEffect(() => {
-  //   async function checkGameAccess() {
-  //     const gres = await fetch(
-  //       `${
-  //         process.env.NODE_ENV === "development"
-  //           ? apiurl
-  //           : "https://server.funcbox.in"
-  //       }/gameAccess`,
-  //       {
-  //         method: "GET",
-  //         credentials: "include",
-  //         headers: {
-  //           token: token,
-  //           gid: gid,
-  //         },
-  //       }
-  //     );
-  //       if (!gres) {
-  //         toast.error("Server Error");
-  //         history.push("/");
-  //       } else {
-  //         console.log(gres);
-  //       }
-  //     const gaccess = await gres.json();
-  //     // let gaccess = {
-  //     //   token: "token",
-  //     //   gAcess : true
-  //     // }
-  //     console.log("gAccess = ", gaccess);
-  //     if (gaccess === "Not Authorize 1") {
-  //       toast.error("You are not logged in!", { pauseOnHover: false });
-  //       history.push("/login");
-  //     }
+  useEffect(() => {
+    async function checkGameAccess() {
+      const gres = await fetch(
+        `${
+          process.env.NODE_ENV === "development"
+            ? apiurl
+            : "https://server.funcbox.in"
+        }/gameAccess`,
+        {
+          method: "GET",
+          credentials: "include",
+          headers: {
+            token: token,
+            gid: gid,
+          },
+        }
+      );
+        if (!gres) {
+          toast.error("Server Error");
+          history.push("/");
+        } else {
+          console.log(gres);
+        }
+      const gaccess = await gres.json();
+      // let gaccess = {
+      //   token: "token",
+      //   gAcess : true
+      // }
+      console.log("gAccess = ", gaccess);
+      if (gaccess === "Not Authorize 1") {
+        toast.error("You are not logged in!", { pauseOnHover: false });
+        history.push("/login");
+      }
+
 
   //     dispatch(setToken({ token: "Bearer " + gaccess.token }));
   //     if (gaccess.token && gaccess.gAcess === false) {

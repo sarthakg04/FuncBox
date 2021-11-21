@@ -27,6 +27,7 @@ module.exports = {
     36: "RecycleItFiles",
     37: "StatesThatMatterFiles",
     38: "TrashGameFiles",
-    39: "StepMeasureGameFiles"
+    39: "FlappyGameFiles"
+    40: "StepMeasureGameFiles"
   },
 };

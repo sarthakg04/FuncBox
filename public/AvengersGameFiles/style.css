@@ -7,7 +7,19 @@ body {
   height: 535px;
   width: 400px;
   margin: 0;
+  /* background-image: url('./assets/bg.svg'); */
+}
+
+.space_bg {
   background-image: url('./assets/bg.svg');
+}
+
+.forest_bg {
+  background-image: url('./assets/forest_bg.png');
+}
+
+.galaxy_bg {
+  background-image: url('./assets/galaxy_bg.png');
 }
 
 .box {
@@ -74,8 +86,24 @@ body {
   background: url('./assets/loki.svg') no-repeat center;
 }
 
+.thanos_bg {
+  background: url('./assets/thanos.png') no-repeat center;
+}
+
+.redskull_bg {
+  background: url('./assets/redskull.png') no-repeat center;
+}
+
 .ironman_bg {
   background: url('./assets/ironman.svg') no-repeat center;
+}
+
+.captainamerica_bg {
+  background: url('./assets/captainamerica.png') no-repeat center;
+}
+
+.spiderman_bg {
+  background: url('./assets/spiderman.png') no-repeat center;
 }
 
 .fireball_bg {
@@ -134,18 +162,24 @@ body {
   background-size: 50px 100px;
 }
 
+.spiderman_fireball {
+  background-image: url('./assets/fire.gif'), url('./assets/spiderman.png');
+  background-size: 50px 100px;
+}
+
+.captainamerica_fireball {
+  background-image: url('./assets/fire.gif'), url('./assets/captainamerica.png');
+  background-size: 50px 100px;
+}
+
 .timer {
-  display: none;
-
-  background-color: black;
-  color: white;
-
   position: fixed;
   right: 0;
   left: 0;
   top: 100px;
   margin: auto;
-
+  color: white;
+  background-color: black;
   width: fit-content;
-  padding: 5px;
+  font-size: 40px;
 }
