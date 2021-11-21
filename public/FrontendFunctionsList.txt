@@ -21,12 +21,21 @@ createRestartButton()
 
 Avengers:
 -----------------------
+var background = 'forest' or 'space' or 'galaxy'
 createBackground()
 createGrid()
+var villan = 'thanos' or 'loki' or 'redskull'
+var hero = 'spiderman' or 'captainamerica' or 'ironman'
 createCharacters()
+var Speed = 0.5
 LokiMovement()
 createInteractionPad()
 createFinish()
+function CheckLogic(){
+    if( fireball_position === current_ironman_position ){
+        GameOver()
+    }
+}
 
 -----------------------------------------------------------------------------------------------------------------------------
 
