@@ -1,31 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.19849ce7.chunk.css",
-    "main.js": "/static/js/main.437e98a4.chunk.js",
+    "main.css": "/static/css/main.68c2b678.chunk.css",
+    "main.js": "/static/js/main.5e1cde01.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.746537b1.js",
     "static/css/2.f6db430a.chunk.css": "/static/css/2.f6db430a.chunk.css",
-    "static/js/2.e4d3a2c1.chunk.js": "/static/js/2.e4d3a2c1.chunk.js",
+    "static/js/2.3edf8a63.chunk.js": "/static/js/2.3edf8a63.chunk.js",
     "index.html": "/index.html",
-    "static/js/2.e4d3a2c1.chunk.js.LICENSE.txt": "/static/js/2.e4d3a2c1.chunk.js.LICENSE.txt",
-    "static/media/RunBtn.42c18a36.svg": "/static/media/RunBtn.42c18a36.svg",
-    "static/media/CodeEditor.css": "/static/media/ipad-2.138606fb.svg",
-    "static/media/card2.c1bca126.svg": "/static/media/card2.c1bca126.svg",
-    "static/media/card3.1388fe73.svg": "/static/media/card3.1388fe73.svg",
-    "static/media/card4.f9081922.svg": "/static/media/card4.f9081922.svg",
-    "static/media/card5.bf103122.svg": "/static/media/card5.bf103122.svg",
-    "static/media/card6.324274cb.svg": "/static/media/card6.324274cb.svg",
-    "static/media/claw.23a2595b.svg": "/static/media/claw.23a2595b.svg",
-    "static/media/loginBg.f97716e6.svg": "/static/media/loginBg.f97716e6.svg",
-    "static/media/marvelCard.b41492b5.svg": "/static/media/marvelCard.b41492b5.svg",
-    "static/media/save.be588706.svg": "/static/media/save.be588706.svg",
-    "static/media/share.667d42f6.svg": "/static/media/share.667d42f6.svg",
-    "static/media/stamp.60dbab0d.svg": "/static/media/stamp.60dbab0d.svg"
+    "static/js/2.3edf8a63.chunk.js.LICENSE.txt": "/static/js/2.3edf8a63.chunk.js.LICENSE.txt",
+    "static/media/RunBtn.e9e71c14.svg": "/static/media/RunBtn.e9e71c14.svg",
+    "static/media/CodeEditor.css": "/static/media/ipad-2.7a3d13ad.svg",
+    "static/media/card2.bd978b22.svg": "/static/media/card2.bd978b22.svg",
+    "static/media/card3.8467a7ec.svg": "/static/media/card3.8467a7ec.svg",
+    "static/media/card4.09f322b9.svg": "/static/media/card4.09f322b9.svg",
+    "static/media/card5.03ba9559.svg": "/static/media/card5.03ba9559.svg",
+    "static/media/card6.9ecbd859.svg": "/static/media/card6.9ecbd859.svg",
+    "static/media/claw.0194c264.svg": "/static/media/claw.0194c264.svg",
+    "static/media/loginBg.79f4e73a.svg": "/static/media/loginBg.79f4e73a.svg",
+    "static/media/marvelCard.89408989.svg": "/static/media/marvelCard.89408989.svg",
+    "static/media/save.9f363663.svg": "/static/media/save.9f363663.svg",
+    "static/media/share.d4d8167e.svg": "/static/media/share.d4d8167e.svg",
+    "static/media/stamp.af4a500a.svg": "/static/media/stamp.af4a500a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.746537b1.js",
     "static/css/2.f6db430a.chunk.css",
-    "static/js/2.e4d3a2c1.chunk.js",
-    "static/css/main.19849ce7.chunk.css",
-    "static/js/main.437e98a4.chunk.js"
+    "static/js/2.3edf8a63.chunk.js",
+    "static/css/main.68c2b678.chunk.css",
+    "static/js/main.5e1cde01.chunk.js"
   ]
 }
