@@ -1,9 +1,12 @@
-// let animals = ['lion','fish','horse','penguin','chicken','elephant','cheetah','birds','dog','bees']
-// let animalSounds = ['lion sound','fish sound','horse sound','penguin sound','chicken sound','elephant sound','cheetah sound','birds sound','dog sound','bees sound']
+// let animals = ['lion_den','fish_ocean','horse_stable','penguin_waddle','chicken_coop','elephant_jungle','cheetah_trees','birds_nest','dog_kennel','bees_beehive']
 // createBackground()
 // createArrowKeys()
 // setCards()
 // createSoundButton()
+
+
+let animalSounds = ['lion sound','fish sound','horse sound','penguin sound','chicken sound','elephant sound','cheetah sound','birds sound','dog sound','bees sound']
+
 var audio = null;
 const imageLinks = {
   right_arrow:
@@ -62,52 +65,52 @@ function createBackground() {
 
   cards = [
     {
-      name: animals[0],
+      name: animals[0].split('_')[0],
       image_src:
         "https://ik.imagekit.io/funcboxImages/AnimalHomeGame_assets/lion_0EwGYUevBmD.png?updatedAt=1636646808307",
     },
     {
-      name: animals[1],
+      name: animals[1].split('_')[0],
       image_src:
         "https://ik.imagekit.io/funcboxImages/AnimalHomeGame_assets/fish_eV4C4b4Vl.png?updatedAt=1636646903361",
     },
     {
-      name: animals[2],
+      name: animals[2].split('_')[0],
       image_src:
         "https://ik.imagekit.io/funcboxImages/AnimalHomeGame_assets/horse_4-SwdFpu04w.png?updatedAt=1636650144789",
     },
     {
-      name: animals[3],
+      name: animals[3].split('_')[0],
       image_src:
         "https://ik.imagekit.io/funcboxImages/AnimalHomeGame_assets/penguin_hmf7vinI20My.png?updatedAt=1636650701330",
     },
     {
-      name: animals[4],
+      name: animals[4].split('_')[0],
       image_src:
         "https://ik.imagekit.io/funcboxImages/AnimalHomeGame_assets/chicken_kXwJgKC7Yn7u.png?updatedAt=1636650701251",
     },
     {
-      name: animals[5],
+      name: animals[5].split('_')[0],
       image_src:
         "https://ik.imagekit.io/funcboxImages/AnimalHomeGame_assets/elephant_JIehWvKK0QnJ.png?updatedAt=1636650701211",
     },
     {
-      name: animals[6],
+      name: animals[6].split('_')[0],
       image_src:
         "https://ik.imagekit.io/funcboxImages/AnimalHomeGame_assets/cheetah_2T_fDo-BYl.png?updatedAt=1636650701219",
     },
     {
-      name: animals[7],
+      name: animals[7].split('_')[0],
       image_src:
         "https://ik.imagekit.io/funcboxImages/AnimalHomeGame_assets/birds_dtVBgCLxzk.png?updatedAt=1636650701212",
     },
     {
-      name: animals[8],
+      name: animals[8].split('_')[0],
       image_src:
         "https://ik.imagekit.io/funcboxImages/AnimalHomeGame_assets/dog_jsstZ-ftIc.png?updatedAt=1636650701137",
     },
     {
-      name: animals[9],
+      name: animals[9].split('_')[0],
       image_src:
         "https://ik.imagekit.io/funcboxImages/AnimalHomeGame_assets/bees_gPuPeIML-LzF.png?updatedAt=1636650700953",
     },
