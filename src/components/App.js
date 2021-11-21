@@ -78,7 +78,7 @@ function App() {
 
         const parseRes = await response.json();
 
-        console.log(parseRes);
+        // console.log(parseRes);
         if (parseRes.isAuthorized === true) {
           console.log("Authenticated from verify");
           dispatch(setAuth({ isAuthenticated: true }));

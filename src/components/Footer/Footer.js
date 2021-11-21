@@ -33,7 +33,7 @@ export default function Footer() {
           : "http://localhost:5000"
       }/email/${getInTouchEmail}`
     );
-    console.log(data);
+    // console.log(data);
     setGetInTouchEmail("");
   };
 
