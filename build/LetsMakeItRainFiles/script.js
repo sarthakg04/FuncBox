@@ -1,11 +1,20 @@
+
 // Frontend Functions for testing
-// fill()
+// fillBackground()
 // createGamePad()
-// createDrop()
+// createDropPath()
+// for(i=0;i<4;i++){
+//     drawDropPath()
+// }
+// setDrop()
 // createSun()
 // generateRays()
 // createInteractionPad()
+// function onHit(){
+//     rays_caught++
+// }
 
+var temparature
 
 var Phone
 var GamePad
@@ -39,7 +48,7 @@ var temperature
 
 // Frontend Functions
 
-function fill(){
+function fillBackground(){
     Phone = document.createElement('div')
     Phone.classList.add('Phone')
     Phone.classList.add('Phone')
@@ -52,14 +61,23 @@ function createGamePad(){
     Phone.appendChild(GamePad)
 }
 
-function createDrop(){
+function createDropPath(){
     drop_grid = document.createElement('div')
     drop_grid.classList.add('drop_grid')
     GamePad.appendChild(drop_grid)
-    drawDropGrid()
+}
+
+// for(i=0;i<4;i++){
+//     drawDropPath()
+// }
+function setDrop(){
+    
+    drop_grid_squares = Array.from(document.querySelectorAll('.drop_grid div'))
+    drop_grid_squares[current_drop_position].classList.add('drop_bg')
 }
 
 function createSun(){
+
     sun = document.createElement('div')
     sun.classList.add('sun')
     GamePad.appendChild(sun)
@@ -102,15 +120,11 @@ function createInteractionPad(){
 
 // Backend
 
-function drawDropGrid(){
-    // var drop_grid = document.querySelector('.drop_grid')
-    for(i=0;i<4;i++){
-        drop_grid_div = document.createElement('div')
-        drop_grid.appendChild(drop_grid_div)
-    }
+function drawDropPath(){
 
-    drop_grid_squares = Array.from(document.querySelectorAll('.drop_grid div'))
-    drop_grid_squares[current_drop_position].classList.add('drop_bg')
+    // var drop_grid = document.querySelector('.drop_grid')
+    drop_grid_div = document.createElement('div')
+    drop_grid.appendChild(drop_grid_div)
 }
 
 function rays_grid_fill(){
@@ -169,10 +183,10 @@ function ray_1_Move(){
 
     if(current_ray1_position === 0){
         if( current_drop_position === 0 ) {
-            rays_caught++
+            onHit()
             // temparature = document.querySelector('.temparature')
             checkTemp()
-            if(rays_caught === 20){
+            if(rays_caught >= 20){
                 return
             }
         }
@@ -196,9 +210,9 @@ function ray_2_Move(){
 
     if(current_ray2_position === 0){
         if( current_drop_position === 1 ) {
-            rays_caught++
+            onHit()
             checkTemp()
-            if(rays_caught === 20){
+            if(rays_caught >= 20){
                 return
             }
         }
@@ -222,9 +236,9 @@ function ray_3_Move(){
 
     if(current_ray3_position === 0){
         if( current_drop_position === 2 ) {
-            rays_caught++
+            onHit()
             checkTemp()
-            if(rays_caught === 20){
+            if(rays_caught >= 20){
                 return
             }
         }
@@ -248,9 +262,9 @@ function ray_4_Move(){
 
     if(current_ray4_position === 0){
         if( current_drop_position === 3 ) {
-            rays_caught++
+            onHit()
             checkTemp()
-            if(rays_caught === 20){
+            if(rays_caught >= 20){
                 return
             }
         }
@@ -261,17 +275,15 @@ function ray_4_Move(){
 
 
 
-
 function checkTemp(){
     temperature = document.querySelector('.temperature')
 
-    for(i=2,k=10;i<=20;i=i+2,k=k+10){
-        var className = `temp_${k}`
-        if(rays_caught === i){
-            temperature.classList.add(className)
-        }
-    }
-    if(temperature.classList.contains('temp_100')){
+    var className = `temp_${rays_caught*10}`
+    temperature.classList.add(className)
+
+    if(temperature.classList.contains('temp_100') || rays_caught >= 20 ){
+        
+        temperature.classList.add('temp_100')
         var sun = document.querySelector('.sun')
         sun.classList.remove('sun')
         sun.classList.add('rain')
