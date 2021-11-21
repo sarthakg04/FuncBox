@@ -110,3 +110,14 @@ createInteractionPad()
 function onHit(){
     rays_caught++
 }
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+AnimalHomeGame:
+-----------------------
+
+let animals = ['lion_den','fish_ocean','horse_stable','penguin_waddle','chicken_coop','elephant_jungle','cheetah_trees','birds_nest','dog_kennel','bees_beehive']
+createBackground()
+createArrowKeys()
+setCards()
+createSoundButton()
