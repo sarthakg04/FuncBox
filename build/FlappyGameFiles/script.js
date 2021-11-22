@@ -1,13 +1,5 @@
 
-function createInteractionPad() {
-    container.innerHTML += `        
-<img class="asset" src="assets/bird.png" />
-<img class="asset" src="assets/cloud.png" />
-<img class="asset" src="assets/ground.png" />
-<img class="asset" src="assets/pipe.png" />
-<canvas width="800" height="500" id="canvas" tabindex="1"></canvas>
-        `;
-  }
+
 
 (function(){
   var initializing = false, fnTest = /xyz/.test(function(){xyz;}) ? /\b_super\b/ : /.*/;
@@ -55,7 +47,7 @@ function createInteractionPad() {
       if ( !initializing && this.init )
         this.init.apply(this, arguments);
     }
-   
+    
     // Populate our constructed prototype object
     Class.prototype = prototype;
    
@@ -68,7 +60,15 @@ function createInteractionPad() {
     return Class;
   };
 })();
-
+function createInteractionPad() {
+    container.innerHTML += `        
+<img class="asset" src="assets/bird.png" />
+<img class="asset" src="assets/cloud.png" />
+<img class="asset" src="assets/ground.png" />
+<img class="asset" src="assets/pipe.png" />
+<canvas width="800" height="500" id="canvas" tabindex="1"></canvas>
+        `;
+  }
     var flappybird = {};
 
     flappybird.Pipe = Class.extend({
