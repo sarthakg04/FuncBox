@@ -1,4 +1,4 @@
-// fillBackground()
+// fillBackground('hills')
 // let units = ['mm', 'cm', 'dm', 'm', 'dam', 'hm', 'km']
 // createInputBox()
 // createSubmitButton()
@@ -9,6 +9,33 @@
 // showValue()
 // createInteractionPad()
 // createRefreshButton()
+// function Convert(){
+//     switch(unit) {
+//         case 'mm':
+//             measure_in_mm = value_entered;
+//             break;
+//         case 'cm':
+//             measure_in_mm = value_entered * 10;
+//             break;
+//         case 'dm':
+//             measure_in_mm = value_entered * 100;
+//             break;
+//         case 'm':
+//             measure_in_mm = value_entered * 1000;
+//             break;
+//         case 'dam':
+//             measure_in_mm = value_entered * 10000;
+//             break;
+//         case 'hm':
+//             measure_in_mm = value_entered * 100000;
+//             break;
+//         case 'km':
+//             measure_in_mm = value_entered * 1000000;
+//             break;
+//         default:
+//             // kids wish
+//     }
+// }
 
 
 let Phone = document.createElement('div')
@@ -25,8 +52,10 @@ let cat_bg = document.createElement('div')
 
 
 
-function fillBackground(){
+function fillBackground(bg_name){
+    bg_name = bg_name || 'none'
     Phone.classList.add('Phone')
+    Phone.classList.add(bg_name)
     GamePad.classList.add('GamePad')
     document.body.appendChild(Phone)
     Phone.appendChild(GamePad)
@@ -130,13 +159,17 @@ function createStep(){
 
 function Up(){
     let cat = document.querySelector('.cat_bg')
-    if( current_cat_top > 190 ){
+    
+    // console.log(units.length, (( 7 - units.length)*20)+310)
+    // 190
+
+    if( current_cat_top > ((7-(units.length))*20)+190 ){
         current_cat_top -= 20
         current_cat_left -= 110
         cat.style.top = current_cat_top + 'px'
-        console.log(cat_bg.style.top)
+        // console.log(cat_bg.style.top)
         cat.style.right = current_cat_left + 'px'
-        console.log(cat_bg.style.right)
+        // console.log(cat_bg.style.right)
         cat.style.transform = 'scaleX(1)'
         
     }
@@ -149,7 +182,7 @@ function Up(){
 
     let value_div = document.querySelector('.Value')
 
-    console.log(measure_in_mm,temp)
+    // console.log(measure_in_mm,temp)
     value_div.innerHTML = measure_in_mm/temp
 
 
@@ -162,7 +195,8 @@ function Down(){
     
     let cat = document.querySelector('.cat_bg')
     
-    console.log(cat_bg)
+    // console.log(cat_bg)
+    // 310
     if( current_cat_top < 310 ){
         current_cat_top += 20
         current_cat_left += 110
@@ -179,7 +213,7 @@ function Down(){
 
     let value_div = document.querySelector('.Value')
 
-    console.log(measure_in_mm,temp)
+    // console.log(measure_in_mm,temp)
     value_div.innerHTML = measure_in_mm/temp
     
     temp = 1
@@ -190,36 +224,10 @@ function submit(){
     var e = document.getElementById("units_input");
     unit = e.value;
 
-    switch(unit) {
-        case 'mm':
-            e = document.getElementById("input_number");
-            measure_in_mm = parseInt(e.value);
-            break;
-        case 'cm':
-            e = document.getElementById("input_number");
-            measure_in_mm = (e.value)*10;
-            break;
-        case 'dm':
-            e = document.getElementById("input_number");
-            measure_in_mm = (e.value)*100;
-            break;
-        case 'm':
-            e = document.getElementById("input_number");
-            measure_in_mm = (e.value)*1000;
-            break;
-        case 'dam':
-            e = document.getElementById("input_number");
-            measure_in_mm = (e.value)*10000;
-            break;
-        case 'hm':
-            e = document.getElementById("input_number");
-            measure_in_mm = (e.value)*100000;
-            break;
-        case 'km':
-            e = document.getElementById("input_number");
-            measure_in_mm = (e.value)*1000000;
-            break;
-        default:
-            // code block
-    }
+    e = document.getElementById("input_number");
+
+    value_entered = e.value
+
+    Convert()
+
 }
