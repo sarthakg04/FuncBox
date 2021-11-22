@@ -1,6 +1,5 @@
 
 
-
 Fronend Functionsfor Games:
 
 -----------------------------------------------------------------------------------------------------------------------------
@@ -34,6 +33,28 @@ createFinish()
 function CheckLogic(){
     if( fireball_position === current_ironman_position ){
         GameOver()
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Incredibles:
+-----------------------
+let edna_speed = 0.5
+let baskect_ball_speed = 0.5
+let hero = 'MrIncredible'
+let vehicle = 'Helicopter'
+let background = 'jungle'
+createBackground()
+createGrid()
+createCharacters()
+EdnaMovement()
+createInteractionPad()
+createFinish()
+function Check(ball_position){
+    if( ball_position == current_edna_position ){
+        GameOver()
+        return true
     }
 }
 
