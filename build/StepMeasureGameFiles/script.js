@@ -1,4 +1,4 @@
-// fillBackground()
+// fillBackground('hills')
 // let units = ['mm', 'cm', 'dm', 'm', 'dam', 'hm', 'km']
 // createInputBox()
 // createSubmitButton()
@@ -9,6 +9,33 @@
 // showValue()
 // createInteractionPad()
 // createRefreshButton()
+// function Convert(){
+//     switch(unit) {
+//         case 'mm':
+//             measure_in_mm = value_entered;
+//             break;
+//         case 'cm':
+//             measure_in_mm = value_entered * 10;
+//             break;
+//         case 'dm':
+//             measure_in_mm = value_entered * 100;
+//             break;
+//         case 'm':
+//             measure_in_mm = value_entered * 1000;
+//             break;
+//         case 'dam':
+//             measure_in_mm = value_entered * 10000;
+//             break;
+//         case 'hm':
+//             measure_in_mm = value_entered * 100000;
+//             break;
+//         case 'km':
+//             measure_in_mm = value_entered * 1000000;
+//             break;
+//         default:
+//             // kids wish
+//     }
+// }
 
 
 let Phone = document.createElement('div')
@@ -25,8 +52,10 @@ let cat_bg = document.createElement('div')
 
 
 
-function fillBackground(){
+function fillBackground(bg_name){
+    bg_name = bg_name || 'none'
     Phone.classList.add('Phone')
+    Phone.classList.add(bg_name)
     GamePad.classList.add('GamePad')
     document.body.appendChild(Phone)
     Phone.appendChild(GamePad)
@@ -55,10 +84,12 @@ function createInputBox(){
 }
 
 function createSubmitButton(){
-    submit_btn.classList.add('submit_btn')
-    submit_btn.innerHTML = 'Submit'
-    submit_btn.onclick = "submit()"
-    GamePad.appendChild(submit_btn)
+
+    GamePad.innerHTML +=`
+    <button onclick="submit()" class="submit_btn">Submit</button>
+    `
+
+    submit_btn = document.querySelector('.submit_btn')
 
     step_div.classList.add('step_div')
     
@@ -71,11 +102,6 @@ function setCat(){
     cat_bg.classList.add('cat_bg')
     GamePad.appendChild(cat_bg)
 }
-
-// for(i=0;i<units.length;i++){
-//     createStep()
-// }
-
 
 
 function showValue(){
@@ -126,34 +152,39 @@ function createStep(){
     new_step.style.top = (120 - (i*20))+'px'
 
     step_div.appendChild(new_step)
+
 }
 
 
 
 function Up(){
-    if( current_cat_top > 190 ){
+    let cat = document.querySelector('.cat_bg')
+    
+    // console.log(units.length, (( 7 - units.length)*20)+310)
+    // 190
+
+    if( current_cat_top > ((7-(units.length))*20)+190 ){
         current_cat_top -= 20
         current_cat_left -= 110
-        cat_bg.style.top = current_cat_top + 'px'
-        console.log(cat_bg.style.top)
-        cat_bg.style.right = current_cat_left + 'px'
-        console.log(cat_bg.style.right)
-        cat_bg.style.transform = 'scaleX(1)'
+        cat.style.top = current_cat_top + 'px'
+        // console.log(cat_bg.style.top)
+        cat.style.right = current_cat_left + 'px'
+        // console.log(cat_bg.style.right)
+        cat.style.transform = 'scaleX(1)'
         
     }
     step = Math.abs(( current_cat_top - 310 ) / 20 )
-    // console.log('up')
 
-    console.log(current_cat_top)
 
     for( i=0;i<step;i++){
         temp = temp * 10
     }
 
-    // console.log(measure_in_mm,temp)
-    Value.innerHTML = measure_in_mm/temp
+    let value_div = document.querySelector('.Value')
 
-    console.log(Value)
+    // console.log(measure_in_mm,temp)
+    value_div.innerHTML = measure_in_mm/temp
+
 
     temp = 1
 
@@ -161,23 +192,29 @@ function Up(){
 
 
 function Down(){
+    
+    let cat = document.querySelector('.cat_bg')
+    
+    // console.log(cat_bg)
+    // 310
     if( current_cat_top < 310 ){
         current_cat_top += 20
         current_cat_left += 110
-        cat_bg.style.top = current_cat_top + 'px'
-        cat_bg.style.right = current_cat_left + 'px'
-        cat_bg.style.transform = 'scaleX(-1)'
+        cat.style.top = current_cat_top + 'px'
+        cat.style.right = current_cat_left + 'px'
+        cat.style.transform = 'scaleX(-1)'
     }
     step = Math.abs(( current_cat_top - 310 ) / 20 )
-    console.log('down')
 
     
     for( i=0;i<step;i++){
         temp = temp * 10
     }
 
+    let value_div = document.querySelector('.Value')
 
-    Value.innerHTML = measure_in_mm/temp
+    // console.log(measure_in_mm,temp)
+    value_div.innerHTML = measure_in_mm/temp
     
     temp = 1
 }
@@ -186,45 +223,11 @@ function submit(){
     
     var e = document.getElementById("units_input");
     unit = e.value;
-    // console.log(unit)
 
-    switch(unit) {
-        case 'mm':
-            e = document.getElementById("input_number");
-            measure_in_mm = parseInt(e.value);
-            // console.log(measure_in_mm)
-            break;
-        case 'cm':
-            e = document.getElementById("input_number");
-            measure_in_mm = (e.value)*10;
-            // console.log(measure_in_mm)
-            break;
-        case 'dm':
-            e = document.getElementById("input_number");
-            measure_in_mm = (e.value)*100;
-            // console.log(measure_in_mm)
-            break;
-        case 'm':
-            e = document.getElementById("input_number");
-            measure_in_mm = (e.value)*1000;
-            // console.log(measure_in_mm)
-            break;
-        case 'dam':
-            e = document.getElementById("input_number");
-            measure_in_mm = (e.value)*10000;
-            // console.log(measure_in_mm)
-            break;
-        case 'hm':
-            e = document.getElementById("input_number");
-            measure_in_mm = (e.value)*100000;
-            // console.log(measure_in_mm)
-            break;
-        case 'km':
-            e = document.getElementById("input_number");
-            measure_in_mm = (e.value)*1000000;
-            // console.log(measure_in_mm)
-            break;
-        default:
-            // code block
-    }
+    e = document.getElementById("input_number");
+
+    value_entered = e.value
+
+    Convert()
+
 }
