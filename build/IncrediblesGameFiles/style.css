@@ -11,6 +11,19 @@ body {
   background-image: url('./assets/bg.svg');
 }
 
+.park_bg {
+  background-image: url('./assets/park.svg');
+}
+.jungle_bg {
+  background-image: url('./assets/jungle.png');
+}
+.beach_bg {
+  background-image: url('./assets/beach.png');
+}
+.snow_bg {
+  background-image: url('./assets/snow.png');
+}
+
 .Gamepad {
   display: flex;
   flex-wrap: wrap;
@@ -74,16 +87,27 @@ body {
 /* bg */
 
 .Edna_bg {
-  background: url('./assets/edna.svg') no-repeat center;
+  background: url('./assets/edna.png') no-repeat center;
 }
-.Incredible_bg {
-  background: url('./assets/incredible.svg') no-repeat center;
+.MrIncredible_bg {
+  background: url('./assets/incredible.png') no-repeat center;
+}
+.Elasticgirl_bg {
+  background: url('./assets/elasticgirl.png') no-repeat center;
+}
+.Violet_bg {
+  background: url('./assets/violet.png') no-repeat center;
 }
 .Basketball_bg {
-  background: url('./assets/basketball.svg') no-repeat center;
+  background: url('./assets/basketball.png') no-repeat center;
 }
 .Spaceship_bg {
-  background: url('./assets/spaceship.svg') no-repeat center;
+  background: url('./assets/spaceship.svg') no-repeat bottom,
+    url('./assets/edna.png') no-repeat center;
+}
+.Helicopter_bg {
+  background: url('./assets/helicopter.png') no-repeat bottom,
+    url('./assets/edna.png') no-repeat center;
 }
 
 .InteractionPad {
@@ -132,7 +156,7 @@ body {
 }
 
 .edna_basketball {
-  background-image: url('./assets/edna.svg');
+  background: url('./assets/edna_baskect_ball.png') no-repeat bottom;
   /* background-size: 50px 100px; */
 }
 

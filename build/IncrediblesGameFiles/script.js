@@ -1,10 +1,23 @@
 //Frontend Functions for testing
-// createBackground()
+
+// let edna_speed = 0.5
+// let basket_ball_speed = 0.5
+// let hero = 'MrIncredible'
+// let vehicle = 'Helicopter'
+// fillBackground('jungle')
 // createGrid()
 // createCharacters()
 // EdnaMovement()
 // createInteractionPad()
 // createFinish()
+// function Check(ball_position){
+//     if( ball_position == current_edna_position ){
+//         GameOver()
+//         return true
+//     }
+// }
+
+let shoot_btn
 
 var current_edna_position = 0
 var current_basketball_position = 3
@@ -21,8 +34,10 @@ var Phone = document.createElement('div')
 // Frontend Functions
 
 // Create Phone div
-function createBackground(){
+function fillBackground(background){
+    background = background || 'park'
     Phone.classList.add('Phone')
+    Phone.classList.add( background + '_bg')
     document.body.appendChild(Phone)
 }
 
@@ -77,13 +92,14 @@ function createGrid(){
 function createCharacters(){
     //Initialising positions
     edna_squares[current_edna_position].classList.add('Edna_bg')
-    incredible_squares[current_incredible_position].classList.add('Incredible_bg')
+    edna_squares[current_edna_position].classList.add(vehicle+'_bg')
+    incredible_squares[current_incredible_position].classList.add(hero+'_bg')
 
 }
 
 function EdnaMovement(){
     //Start Edna Movement
-    ednaMovementId1 = setTimeout(ednaMove,1000)
+    ednaMovementId1 = setTimeout(ednaMove, edna_speed*1000)
 }
 
 function createInteractionPad(){
@@ -108,29 +124,31 @@ function ednaMove(){
 
     // console.log(current_edna_position)
     edna_squares[current_edna_position].classList.remove('Edna_bg')
+    edna_squares[current_edna_position].classList.remove(vehicle+'_bg')
     // basketball_squares[current_edna_position].classList.remove('thunder_bg')
     current_edna_position = (( current_edna_position + 1 ) % 4)
     edna_squares[current_edna_position].classList.add('Edna_bg')
+    edna_squares[current_edna_position].classList.add(vehicle+'_bg')
     // basketball_squares[current_edna_position].classList.add('thunder_bg')
 
-    ednaMovementId2 = setTimeout(ednaMove,1000)
+    ednaMovementId2 = setTimeout(ednaMove, edna_speed*1000)
 }
 
 //incredibles movement functions
 function MoveLeft(){
     if( current_incredible_position > 0 ){
-        incredible_squares[current_incredible_position].classList.remove('Incredible_bg')
+        incredible_squares[current_incredible_position].classList.remove(hero+'_bg')
         current_incredible_position = current_incredible_position - 1
-        incredible_squares[current_incredible_position].classList.add('Incredible_bg')
+        incredible_squares[current_incredible_position].classList.add(hero+'_bg')
         // console.log(current_incredible_position)
     }
 }
 
 function MoveRight(){
     if( current_incredible_position < 3 ){
-        incredible_squares[current_incredible_position].classList.remove('Incredible_bg')
+        incredible_squares[current_incredible_position].classList.remove(hero+'_bg')
         current_incredible_position = current_incredible_position + 1
-        incredible_squares[current_incredible_position].classList.add('Incredible_bg')
+        incredible_squares[current_incredible_position].classList.add(hero+'_bg')
         // console.log(current_incredible_position)
     }
 }
@@ -139,7 +157,7 @@ function MoveRight(){
 function shoot(){
     if(!shooted){
         shooted = true
-        var shoot_btn = document.querySelector('.shoot_btn')
+        shoot_btn = document.querySelector('.shoot_btn')
         shoot_btn.disabled = true
         current_basketball_position = current_incredible_position + 20 // start div of the basketball
 
@@ -154,26 +172,16 @@ function shoot(){
             // console.log(current_basketball_position)
             if( current_basketball_position > 3 ){
                 basketball_squares[current_basketball_position].classList.add('Basketball_bg')
-                basketball_Id2 = setTimeout(Movebasketball,200)
+                basketball_Id2 = setTimeout(Movebasketball,basket_ball_speed*100)
             }
             if( current_basketball_position < 4 ){
 
                 basketball_squares[current_basketball_position].classList.add('Basketball_bg')
                 // console.log(current_basketball_position)
-                if(( current_basketball_position % 4 ) == current_edna_position ){
-                    basketball_squares[current_basketball_position].classList.remove('Basketball_bg')
-                    var GameDisplay = document.querySelector('.GameDisplay')
-                    GameDisplay.style.display = "block"
-                    shoot_btn.disabled = false
-                    // console.log('Game Over!')
-                    edna_squares[current_edna_position].classList.add('edna_basketball')
-                    var Interaction_Buttons = Array.from(document.querySelectorAll('.Interaction_Buttons'))
-                    for( i=0 ; i<Interaction_Buttons.length; i++ ){
-                        Interaction_Buttons[i].disabled = true
-                    }
-
-                    clearInterval(basketball_Id1)
-                    clearInterval(basketball_Id2)
+                let ball_position =  current_basketball_position % 4
+                
+                if(Check(ball_position)){
+                    
                     clearInterval(ednaMovementId1)
                     clearInterval(ednaMovementId2)
                     return
@@ -194,4 +202,22 @@ function Restart(){
     clearInterval(ednaMovementId1)
     clearInterval(ednaMovementId2)
     window.location.reload()
+}
+
+function GameOver(){
+    basketball_squares[current_basketball_position].classList.remove('Basketball_bg')
+    var GameDisplay = document.querySelector('.GameDisplay')
+    GameDisplay.style.display = "block"
+    shoot_btn.disabled = false
+    // console.log('Game Over!')
+    edna_squares[current_edna_position].classList.add('edna_basketball')
+    var Interaction_Buttons = Array.from(document.querySelectorAll('.Interaction_Buttons'))
+    for( i=0 ; i<Interaction_Buttons.length; i++ ){
+        Interaction_Buttons[i].disabled = true
+    }
+
+    clearInterval(basketball_Id1)
+    clearInterval(basketball_Id2)
+    clearInterval(ednaMovementId1)
+    clearInterval(ednaMovementId2)
 }
