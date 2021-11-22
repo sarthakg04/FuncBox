@@ -1,11 +1,10 @@
 //Frontend Functions for testing
 
 // let edna_speed = 0.5
-// let baskect_ball_speed = 0.5
+// let basket_ball_speed = 0.5
 // let hero = 'MrIncredible'
 // let vehicle = 'Helicopter'
-// let background = 'jungle'
-// createBackground()
+// fillBackground('jungle')
 // createGrid()
 // createCharacters()
 // EdnaMovement()
@@ -35,7 +34,8 @@ var Phone = document.createElement('div')
 // Frontend Functions
 
 // Create Phone div
-function createBackground(){
+function fillBackground(background){
+    background = background || 'park'
     Phone.classList.add('Phone')
     Phone.classList.add( background + '_bg')
     document.body.appendChild(Phone)
@@ -172,7 +172,7 @@ function shoot(){
             // console.log(current_basketball_position)
             if( current_basketball_position > 3 ){
                 basketball_squares[current_basketball_position].classList.add('Basketball_bg')
-                basketball_Id2 = setTimeout(Movebasketball,baskect_ball_speed*100)
+                basketball_Id2 = setTimeout(Movebasketball,basket_ball_speed*100)
             }
             if( current_basketball_position < 4 ){
 
