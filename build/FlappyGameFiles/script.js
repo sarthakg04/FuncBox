@@ -60,6 +60,12 @@
     return Class;
   };
 })();
+function createGamepad() {
+    let container = document.createElement("DIV");
+    container.classList.add("container");
+    container.id = "container";
+    document.body.appendChild(container);
+  }
 function createInteractionPad() {
     container.innerHTML += `        
 <img class="asset" src="assets/bird.png" />
