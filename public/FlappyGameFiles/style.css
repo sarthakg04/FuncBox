@@ -1,6 +1,15 @@
 body {
     background: #ded5ff;
 }
+.container {
+    width: 400px;
+    height: 535px;
+    margin: auto;
+    position: relative;
+    padding-top: 1px;
+    background-size: cover;
+    font-family: 'Finger Paint', cursive;
+  }
 canvas {
     display: block;
     margin: 70px auto;
