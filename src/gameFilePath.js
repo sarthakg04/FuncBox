@@ -28,6 +28,7 @@ module.exports = {
     37: "StatesThatMatterFiles",
     38: "TrashGameFiles",
     39: "FlappyGameFiles",
-    40: "StepMeasureGameFiles"
+    40: "StepMeasureGameFiles",
+    41: "Calculator2GameFiles",
   },
 };
