@@ -6,6 +6,9 @@ import { Helmet } from "react-helmet";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 
+import { toast } from "react-toastify";
+import { parse } from "qs";
+
 // import bell from "./assets/bell.png"
 // import fb from "./assets/fb.svg"
 // import linked from "./assets/linked.svg"
@@ -21,20 +24,43 @@ export default function Footer() {
   const insta =
     "https://ik.imagekit.io/funcboxImages/Footer_assets/insta_ESr1g9XOwSQ.png?updatedAt=1633369896765";
 
+  const apiurl = process.env.REACT_APP_API_URL;
+
   const [getInTouchEmail, setGetInTouchEmail] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // alert(`We will reach you out at ${getInTouchEmail}`);
-    const { data } = await axios.get(
-      `${
-        process.env.NODE_ENV === "production"
-          ? "https://server.funcbox.in"
-          : "http://localhost:5000"
-      }/email/${getInTouchEmail}`
-    );
-    // console.log(data);
-    setGetInTouchEmail("");
+
+    try {
+      const email = getInTouchEmail;
+      const body = { email };
+      const response = await fetch(
+        `${
+          process.env.NODE_ENV === "development"
+            ? apiurl
+            : "https://server.funcbox.in"
+        }/email`,
+        {
+          credentials: "include",
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+        }
+      );
+
+      const parseRes = await response.json();
+
+      if (response.status === 400) {
+        toast.error(parseRes);
+      } else {
+        toast.success(parseRes);
+      }
+
+      console.log(parseRes);
+    } catch (err) {
+      toast.error(err);
+      console.log(err);
+    }
   };
 
   // useEffect(async () => {
