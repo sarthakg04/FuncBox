@@ -8,20 +8,20 @@
 //   "brown",
 //   "dark_green",
 // ];
+// let combinations = {
+//   orange: ["red", "yellow"],
+//   green: ["blue", "yellow"],
+//   purple: ["red", "blue"],
+//   pink: ["red", "white"],
+//   grey: ["black", "white"],
+//   brown: ["orange", "black"],
+//   dark_green: ["green", "black"],
+// };
 // createBackground()
 // fillBackground()
 // createQuestionCard()
 // setQuestions()
 
-let combinations = {
-  orange: ["red", "yellow"],
-  green: ["blue", "yellow"],
-  purple: ["red", "blue"],
-  pink: ["red", "white"],
-  grey: ["black", "white"],
-  brown: ["orange", "black"],
-  dark_green: ["green", "black"],
-};
 let colorHex = {
   orange: "#db842c",
   pink: "#ff99fd",
