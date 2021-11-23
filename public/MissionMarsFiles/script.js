@@ -1,6 +1,6 @@
 //Frontend Functions for testing
 // createGamepad()
-// fill()
+// fillBackground('mars')
 // createElement(['goodrocks','badrocks','wasterocks1','wasterocks2'])
 // createScore()
 // createGrid()
@@ -8,6 +8,15 @@
 // draw()
 // createInteractionPad()
 // createRestartButton()
+// let penalty = 1
+// function CheckLogic(){
+//   if( good_rock_scanned ) {
+//       Score += penalty;
+//     }
+//     else if ( bad_rock_scanned ) {
+//       Score -= penalty;
+//     }
+// }
 
 
 // Frontend Functions
@@ -15,6 +24,9 @@
 let gamePad,elements, squares , goodrocks = 0 , badrocks = 0 , currentRoverPosition = 35;
 let roverDiv , roverImg = 'rover', Score = 0 , time;
 var goodrocksScanned = 0;
+
+let bad_rock_scanned
+let good_rock_scanned
 
 
 function createGamepad() {
@@ -27,8 +39,8 @@ function createGamepad() {
 
 }
 
-function fill(background) {
-  document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(./MissionMarsFiles/assets/backgrounds/Frame.png)';
+function fillBackground(bg) {
+  document.getElementsByClassName('GamePad')[0].classList.add(bg+'_bg')
 }
 
 function createElement(elementss){
@@ -286,23 +298,22 @@ function ScanObject() {
     // leftButton.disabled = false;
     // rightButton.disabled = false;
     // Score++;
-    if( squares[currentRoverPosition].classList.contains('goodrocks') ) {
-      Score++;
-      goodrocksScanned++;
-    }
-    else if ( squares[currentRoverPosition].classList.contains('badrocks') ) {
-      Score--;
+    bad_rock_scanned = squares[currentRoverPosition].classList.contains('badrocks')
+    good_rock_scanned = squares[currentRoverPosition].classList.contains('goodrocks')
+    CheckLogic()
+    if( good_rock_scanned ) {
+      goodrocksScanned += penalty;
     }
     ScanButton.disabled = true
     ScanButton.classList.remove('active')
     scoreDisplay.innerHTML = 'Score: '+ Score
-    if(goodrocksScanned == goodrocks ) {
+    if((goodrocksScanned/penalty) == goodrocks ) {
         if( Score == goodrocks ) {
-          scoreDisplay.innerHTML = 'Perfect Win! Score: '+ Score + '/' + goodrocks
+          scoreDisplay.innerHTML = 'Perfect Win! Score: '+ Score + '/' + (goodrocks*penalty)
           document.getElementById('cc').classList.toggle('active')
         }
         else {
-          scoreDisplay.innerHTML = 'Game Over! Score: '+ Score + '/' + goodrocks
+          scoreDisplay.innerHTML = 'Game Over! Score: '+ Score + '/' + (goodrocks*penalty)
           document.getElementById('cc').classList.toggle('active')
         }
         ScanButton.disabled = true
@@ -311,7 +322,6 @@ function ScanObject() {
   },3000)
 
 }
-
 
 //
 //

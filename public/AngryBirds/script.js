@@ -1,5 +1,5 @@
 //Frontend Functions for testing
-// fill()
+// fillBackground('forest')
 // createScore()
 // createGamePad()
 // for( i = 0; i < 35; i++ ) {
@@ -8,6 +8,17 @@
 // createPlancks()
 // createElements()
 // createInteractionPad()
+// let penalty = 1
+// function CheckLogic(){
+//     if( hit_pig ) {
+//         Score-=penalty
+//         DecreasedScore()
+//     }
+//     else {
+//         Score+=penalty
+//         IncreaseScore()
+//     }
+// }
 
 
 // Frontend Functions
@@ -21,8 +32,9 @@ let currentBirdPosition = 34
 
 let grid
 
-function fill() {
+function fillBackground(bg) {
     let phone = document.querySelector('.Phone')
+    phone.classList.add(bg)
 }
 
 function createScore() {
@@ -251,6 +263,8 @@ function MovePrev() {
     }
 }
 
+let hit_pig
+
 let Score = 0
 let Finish = 0
 let scoreSpan = document.querySelector('.Score')
@@ -258,55 +272,11 @@ let MovementBtns = document.querySelectorAll('.MovementBtns')
 
 function Hit() {
     let hitBtn = document.querySelector('.hitBtn')
-    if(squares[currentBirdPosition].classList.contains('pig-check')) {
-        Score-=1
-        scoreSpan.innerHTML = "Score :" + Score
-    }
-    else {
-        Score+=1
-        Finish+=1
-        if( Finish === 3 ) {
-            for(var i = 0; i < MovementBtns.length; i++) {
-                MovementBtns[i].disabled = true;
-            }
-            hitBtn.disabled = true
-            if( Score === Finish ) {
-                const hitted = document.createElement('div')
-                if(squares[currentBirdPosition].classList.contains('pig-check')){
-                    console.log('bad-hit')
-                    hitted.classList.add('bad_hitted')
-                }
-                else{
-                    hitted.classList.add('hitted')
-                }
-                squares[currentBirdPosition].appendChild(hitted)
-                squares[currentBirdPosition].classList.add('hitted-check')
-                scoreSpan.innerHTML = "Perfect Win : "+ Score+"/"+3
-                return 0
-            }
-            else{
-                const hitted = document.createElement('div')
-                if(squares[currentBirdPosition].classList.contains('pig-check')){
-                    console.log('bad-hit')
-                    hitted.classList.add('bad_hitted')
-                }
-                else{
-                    hitted.classList.add('hitted')
-                }
-                squares[currentBirdPosition].appendChild(hitted)
-                squares[currentBirdPosition].classList.add('hitted-check')
-                scoreSpan.innerHTML = "Game Over! Score : "+ Score+"/"+3
-                return 0
-            }
-        }
-        else {
-            scoreSpan.innerHTML = "Score :" + Score
-        }
-
-    }
+    hit_pig = squares[currentBirdPosition].classList.contains('pig-check')
+    CheckLogic()
     const hitted = document.createElement('div')
     if(squares[currentBirdPosition].classList.contains('pig-check')){
-        console.log('bad-hit')
+        // console.log('bad-hit')
         hitted.classList.add('bad_hitted')
     }
     else{
@@ -321,6 +291,54 @@ function Restart() {
     window.location.reload();
 }
 
+
+function DecreasedScore(){
+    scoreSpan.innerHTML = "Score :" + Score
+}
+
+function IncreaseScore(){
+
+    Finish+=penalty
+    if( Finish === (3*penalty) ) {
+        for(var i = 0; i < MovementBtns.length; i++) {
+            MovementBtns[i].disabled = true;
+        }
+        
+        let hitBtn = document.querySelector('.hitBtn')
+        hitBtn.disabled = true
+        if( Score === Finish ) {
+            const hitted = document.createElement('div')
+            if(squares[currentBirdPosition].classList.contains('pig-check')){
+                // console.log('bad-hit')
+                hitted.classList.add('bad_hitted')
+            }
+            else{
+                hitted.classList.add('hitted')
+            }
+            squares[currentBirdPosition].appendChild(hitted)
+            squares[currentBirdPosition].classList.add('hitted-check')
+            scoreSpan.innerHTML = "Perfect Win : "+ Score+"/"+Finish
+            return 0
+        }
+        else{
+            const hitted = document.createElement('div')
+            if(squares[currentBirdPosition].classList.contains('pig-check')){
+                // console.log('bad-hit')
+                hitted.classList.add('bad_hitted')
+            }
+            else{
+                hitted.classList.add('hitted')
+            }
+            squares[currentBirdPosition].appendChild(hitted)
+            squares[currentBirdPosition].classList.add('hitted-check')
+            scoreSpan.innerHTML = "Game Over! Score : "+ Score+"/"+Finish
+            return 0
+        }
+    }
+    else {
+        scoreSpan.innerHTML = "Score :" + Score
+    }
+}
 // Long Press for the buttons
 
 // function addMovementLogic(){

@@ -13,7 +13,7 @@ import Signup from "../components/LoginAndSignup/Signup";
 import CodeEditor from "../components/CodeEditor/CodeEditor";
 import FuncBoxx from "./FuncBoxx/FuncBoxx";
 import BowlingGame from "../components/Games/BowlingGame/BowlingGame";
-import FlappyGame from  "../components/Games/FlappyGame/FlappyGame";
+import FlappyGame from "../components/Games/FlappyGame/FlappyGame";
 import ClockGame from "../components/Games/ClockGame/ClockGame";
 import AlienGame from "../components/Games/AlienGame/AlienGame";
 import CardGame from "../components/Games/CardGame/cardGame";
@@ -52,7 +52,7 @@ import AnimalHomeGame from "./Games/AnimalHomeGame/AnimalHomeGame";
 import Decimal from "./Games/DecimalGame/DecimalGame";
 import SubscriptionPage from "./Subscriptions/SubscriptionPage";
 import StepMeasure from "./Games/StepMeasureGame/StepMeasure";
-
+import Calculator2Game from "./Games/Calculator2/Calculator2";
 
 function App() {
   const dispatch = useDispatch();
@@ -142,6 +142,7 @@ function App() {
           <Route exact path="/ZombieGame" component={Zombie} />
           <Route exact path="/DecimalGame" component={Decimal} />
           <Route exact path="/animalhome" component={AnimalHomeGame} />
+          <Route exact path="/calculator2" component={Calculator2Game} />
 
           <Route exact path="/UserNavbar" component={UserNavbar} />
           <Route exact path="/Login" component={Login} />
