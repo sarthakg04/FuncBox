@@ -137,7 +137,7 @@ function createKey(ch) {
 
 function createInputField() {
   let label = document.createElement("p");
-  label.innerText = "Enter Expression";
+  label.innerText = "Enter 2 Expressions";
   label.style.fontFamily = `'Finger Paint', cursive`;
   label.classList.add("input_label");
   label.style.backgroundColor = themes[currentTheme].secondary_color;
