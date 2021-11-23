@@ -1,30 +1,29 @@
 //Frontend Functions
+// let currentTheme = "orange";
+// const themes = {
+//   purple: {
+//     primary_color: "#440E52",
+//     secondary_color: "#FF9DE9",
+//   },
+//   violet: {
+//     primary_color: "#1F1D72",
+//     secondary_color: "#C263FC",
+//   },
+//   orange: {
+//     primary_color: "#FE8C23",
+//     secondary_color: "#FFEC41",
+//   },
+//   green: {
+//     primary_color: "#359233",
+//     secondary_color: "#FFBE41",
+//   },
+// };
 // createBackground()
 // setTheme('green')
 // fillBackground()
 // createOutputField()
 // createKeypad()
 // createInputField()
-
-let currentTheme = "orange";
-const themes = {
-  purple: {
-    primary_color: "#440E52",
-    secondary_color: "#FF9DE9",
-  },
-  violet: {
-    primary_color: "#1F1D72",
-    secondary_color: "#C263FC",
-  },
-  orange: {
-    primary_color: "#FE8C23",
-    secondary_color: "#FFEC41",
-  },
-  green: {
-    primary_color: "#359233",
-    secondary_color: "#FFBE41",
-  },
-};
 
 const imageLinks = {
   background: "./CalculatorGameFiles/assets/background.png",

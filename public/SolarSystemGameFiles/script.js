@@ -13,6 +13,28 @@
 //   getPlanet(planet);
 // });
 // }
+// function checkSubmission() {
+//   let correctSequence = [
+//     "mercury",
+//     "venus",
+//     "earth",
+//     "mars",
+//     "jupiter",
+//     "saturn",
+//     "uranus",
+//     "neptune",
+//   ];
+//   if (placedPlanets.length !== correctSequence.length) {
+//     return false;
+//   }
+//   for (let i = 0; i < placedPlanets.length; i++) {
+//     if (placedPlanets[i] !== correctSequence[i]) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
 // createBackground()
 // fillBackground()
 // createOrbits()
@@ -55,16 +77,6 @@ let imageRemoteLinks = {
   neptune: `https://ik.imagekit.io/funcboxImages/SolarSystemGame_assets/neptune_JSVNjzLcbk.png?updatedAt=1633756837384`,
 };
 
-let correctSequence = [
-  "mercury",
-  "venus",
-  "earth",
-  "mars",
-  "jupiter",
-  "saturn",
-  "uranus",
-  "neptune",
-];
 let planetPositions = [
   { x: "286px", y: "35px" },
   { x: "310px", y: "125px" },
@@ -115,13 +127,7 @@ function createPlanetTray() {
   submit.innerText = "Submit";
   submit.onclick = () => {
     if (numPlaced > 0) {
-      let correct = placedPlanets.length === correctSequence.length;
-
-      placedPlanets.forEach((ele, i) => {
-        if (ele !== correctSequence[i]) {
-          correct = false;
-        }
-      });
+      let correct = checkSubmission();
       showGameEnd(correct);
     }
   };
@@ -129,6 +135,30 @@ function createPlanetTray() {
   inventory.appendChild(submit);
   document.getElementById("container").appendChild(inventory);
 }
+
+// function checkSubmission() {
+//   let correctSequence = [
+//     "mercury",
+//     "venus",
+//     "earth",
+//     "mars",
+//     "jupiter",
+//     "saturn",
+//     "uranus",
+//     "neptune",
+//   ];
+//   if (placedPlanets.length !== correctSequence.length) {
+//     return false;
+//   }
+//   for (let i = 0; i < placedPlanets.length; i++) {
+//     if (placedPlanets[i] !== correctSequence[i]) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
+
 // function fillPlanets() {
 //   let planets = [
 //     "mercury",
