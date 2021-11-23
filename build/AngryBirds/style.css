@@ -3,6 +3,9 @@
   height: 533px;
   width: 396px;
   margin: 0;
+}
+
+.forest {
   background-image: url('./assets/Background.svg');
 }
 

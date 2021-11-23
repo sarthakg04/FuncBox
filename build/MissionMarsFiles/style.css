@@ -17,10 +17,16 @@ body {
   margin: auto;
   position: relative;
   /* background-image: url('../MissionMarsFiles/assets/backgrounds/Frame.png'); */
-  background-position: center;
-  background-size: cover;
+  /* background-position: center;
+  background-size: cover; */
   padding-top: 1px;
   /* background: red; */
+}
+
+.mars_bg {
+  background: url('./assets/backgrounds/Frame.png') no-repeat center;
+  background-position: center;
+  background-size: cover;
 }
 
 .score {
