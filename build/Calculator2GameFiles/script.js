@@ -1,38 +1,51 @@
 //Frontend Functions
-// const themes = {
-//   purple: {
-//     primary_color: "#440E52",
-//     secondary_color: "#FF9DE9",
-//   },
-//   violet: {
-//     primary_color: "#1F1D72",
-//     secondary_color: "#C263FC",
-//   },
-//   orange: {
-//     primary_color: "#FE8C23",
-//     secondary_color: "#FFEC41",
-//   },
-//   green: {
-//     primary_color: "#359233",
-//     secondary_color: "#FFBE41",
-//   },
-// };
-// function fillBackground() {
-//   let container = getContainer();
-//   setBackground(container, "purple");
-// }
-// function evaluate()
-// {
-//   const inputText = getInput().text
-//   return eval(inputText) // eval is a javascript function which evaluates mathematical expressions and returns the answer
-// }
+// function evaluate(input1, input2, operation) {
+//     let ans = 0;
+
+//     switch (operation) {
+//       case "+":
+//         ans = input1 + input2;
+//         break;
+//       case "-":
+//         ans = input1 - input2;
+//         break;
+//       case "/":
+//         ans = input1 / input2;
+//         break;
+//       case "*":
+//         ans = input1 * input2;
+//         break;
+//       default:
+//         ans = 0;
+//     }
+//     return ans;
+//   }
 // createBackground()
+// setTheme('green')
 // fillBackground()
 // createOutputField()
 // createKeypad()
 // createInputField()
 
 let currentTheme = "orange";
+const themes = {
+  purple: {
+    primary_color: "#440E52",
+    secondary_color: "#FF9DE9",
+  },
+  violet: {
+    primary_color: "#1F1D72",
+    secondary_color: "#C263FC",
+  },
+  orange: {
+    primary_color: "#FE8C23",
+    secondary_color: "#FFEC41",
+  },
+  green: {
+    primary_color: "#359233",
+    secondary_color: "#FFBE41",
+  },
+};
 
 const imageLinks = {
   background: "./CalculatorGameFiles/assets/background.png",
@@ -40,7 +53,7 @@ const imageLinks = {
   "-": "./CalculatorGameFiles/assets/minus.png",
   "*": "./CalculatorGameFiles/assets/multiply.png",
   "/": "./CalculatorGameFiles/assets/divide.png",
-  "=": "./CalculatorGameFiles/assets/equals.png",
+  //   "=": "./CalculatorGameFiles/assets/equals.png",
 };
 const imageRemoteLinks = {
   background:
@@ -62,21 +75,16 @@ function createBackground() {
   mainContainer.style.backgroundImage = `url("${imageRemoteLinks.background}")`;
   container.appendChild(mainContainer);
 }
-
-// function fillBackground() {
-//   let container = getContainer();
-//   setBackground(container, "purple");
-// }
-function setBackground(container, color) {
-  currentTheme = color;
-  container.style.backgroundColor = themes[currentTheme].primary_color;
+function setTheme(theme) {
+  currentTheme = theme;
 }
-function getContainer() {
+function fillBackground() {
   let container = document.getElementById("container");
-  return container;
+  container.style.backgroundColor = themes[currentTheme].primary_color;
 }
 function createOutputField() {
   let output = document.createElement("input");
+  output.id = "output_field";
   output.classList.add("output_field");
 
   document.getElementsByClassName("main_container")[0].appendChild(output);
@@ -89,42 +97,21 @@ function createKeypad() {
   const main_container = document
     .getElementsByClassName("main_container")[0]
     .appendChild(keypad);
-  main_container.appendChild(createKey("1"));
-  main_container.appendChild(createKey("2"));
-  main_container.appendChild(createKey("3"));
-  main_container.appendChild(createKey("/"));
-  main_container.appendChild(createKey("4"));
-  main_container.appendChild(createKey("5"));
-  main_container.appendChild(createKey("6"));
-  main_container.appendChild(createKey("*"));
-  main_container.appendChild(createKey("7"));
-  main_container.appendChild(createKey("8"));
-  main_container.appendChild(createKey("9"));
-  main_container.appendChild(createKey("-"));
-  let empty_space = createKey("0");
-  empty_space.style.opacity = "0";
-  empty_space.disabled = true;
-  main_container.appendChild(empty_space);
-  main_container.appendChild(createKey("0"));
-  let equal_btn = createKey("=");
-  equal_btn.onclick = () => {
-    let answer = evaluate();
-    if (!Number.isInteger(answer)) {
-      answer = answer.toFixed(2);
-    }
-    inputExpression = "";
-    document.getElementsByClassName("input_field")[0].value = inputExpression;
-    document.getElementsByClassName("output_field")[0].value = answer;
-  };
 
-  main_container.appendChild(equal_btn);
+  let divide_btn = createKey("/");
+  //   divide_btn.addEventListener('click',()=>
+  //   {
+  //       if()
+  //   })
+  main_container.appendChild(divide_btn);
+
+  main_container.appendChild(createKey("*"));
+
+  main_container.appendChild(createKey("-"));
+
   main_container.appendChild(createKey("+"));
 }
-function getInput() {
-  return {
-    text: inputExpression,
-  };
-}
+
 function createKey(ch) {
   let image = "";
   if ("+=-*/".indexOf(ch) > -1) {
@@ -133,30 +120,51 @@ function createKey(ch) {
   let key = document.createElement("button");
   key.classList.add("key");
 
-  if (image.length > 0) {
-    key.innerHTML = `<img src = "${image}">`;
-  } else {
-    key.innerText = ch;
-  }
+  key.innerHTML = `<img src = "${image}">`;
+  //   key.innerText = ch;
   key.onclick = (e) => {
     e.preventDefault();
-    if (ch !== "=") inputExpression += ch;
-    document.getElementsByClassName("input_field")[0].value = inputExpression;
+    let input1 = parseInt(document.getElementById("input_field_1").value);
+    let input2 = parseInt(document.getElementById("input_field_2").value);
+    if (!isNaN(input1) && !isNaN(input2)) {
+      let ans = evaluate(input1, input2, ch);
+      document.getElementById("output_field").value =
+        parseInt(ans) !== ans ? ans.toFixed(2) : ans;
+    }
   };
   return key;
 }
+
 function createInputField() {
   let label = document.createElement("p");
-  label.innerText = "Enter Expression";
+  label.innerText = "Enter 2 Expressions";
   label.style.fontFamily = `'Finger Paint', cursive`;
   label.classList.add("input_label");
   label.style.backgroundColor = themes[currentTheme].secondary_color;
   label.style.color = themes[currentTheme].primary_color;
   let main_container = document.getElementsByClassName("main_container")[0];
   main_container.appendChild(label);
-  let input = document.createElement("input");
-  input.classList.add("input_field");
-  input.value = inputExpression;
-  input.style.borderColor = themes[currentTheme].secondary_color;
-  main_container.appendChild(input);
+  let inputContainer = document.createElement("div");
+  inputContainer.className = "input_section";
+  main_container.appendChild(inputContainer);
+
+  let input1 = document.createElement("input");
+  input1.type = "numeric";
+  input1.classList.add("input_field");
+  input1.id = "input_field_1";
+  input1.value = inputExpression;
+  input1.style.borderColor = themes[currentTheme].secondary_color;
+  inputContainer.appendChild(input1);
+  let input2 = document.createElement("input");
+  input2.type = "numeric";
+  input2.classList.add("input_field");
+  input2.id = "input_field_2";
+  input2.value = inputExpression;
+  input2.style.borderColor = themes[currentTheme].secondary_color;
+  inputContainer.appendChild(input2);
+}
+function getInputs() {
+  let input1 = document.getElementById("input_field_1");
+  let input2 = document.getElementById("input_field_2");
+  return [parseInt(input1.innerText), parseInt(input2.innerText)];
 }
