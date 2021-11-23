@@ -7,7 +7,8 @@ Fronend Functionsfor Games:
 MissionMars:
 -----------------------
 createGamepad()
-fill()
+createGamepad()
+fillBackground('mars')
 createElement(['goodrocks','badrocks','wasterocks1','wasterocks2'])
 createScore()
 createGrid()
@@ -15,6 +16,16 @@ createRover("rover")
 draw()
 createInteractionPad()
 createRestartButton()
+let penalty = 1
+function CheckLogic(){
+  if( good_rock_scanned ) {
+      Score += penalty;
+    }
+    else if ( bad_rock_scanned ) {
+      Score -= penalty;
+    }
+}
+
 
 -----------------------------------------------------------------------------------------------------------------------------
 
@@ -41,11 +52,10 @@ function CheckLogic(){
 Incredibles:
 -----------------------
 let edna_speed = 0.5
-let baskect_ball_speed = 0.5
-let hero = 'MrIncredible'
-let vehicle = 'Helicopter'
-let background = 'jungle'
-createBackground()
+let basket_ball_speed = 0.5
+let hero = 'MrIncredible' or 'Elasticgirl' or 'Violet'
+let vehicle = 'Helicopter' or 'Spaceship'
+fillBackground('jungle' or 'park' or 'beach' or 'snow')
 createGrid()
 createCharacters()
 EdnaMovement()
