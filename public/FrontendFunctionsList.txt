@@ -62,7 +62,7 @@ function Check(ball_position){
 
 AngryBirds:
 -----------------------
-fill()
+fillBackground('forest')
 createScore()
 createGamePad()
 for( i = 0; i < 35; i++ ) {
@@ -71,6 +71,17 @@ for( i = 0; i < 35; i++ ) {
 createPlancks()
 createElements()
 createInteractionPad()
+let penalty = 1
+function CheckLogic(){
+    if( hit_pig ) {
+        Score-=penalty
+        DecreasedScore()
+    }
+    else {
+        Score+=penalty
+        IncreaseScore()
+    }
+}
 
 -----------------------------------------------------------------------------------------------------------------------------
 
