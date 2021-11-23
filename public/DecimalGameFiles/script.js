@@ -1,15 +1,67 @@
 //FOntend Functions
 // createGamepad();
-// fill();
+// fillBackground();
 // createQuestionContainer();
 // createBaskets();
-// createBasketBall();
+// createBall();
 // createResult();
 // function gameSpeed(){
 //   speed =1000;
 // }
+//
+// function genFourDigiRandomNumber(){
+//
+//   //This function would generate a 4 digit random number.
+//
+//   let number = Math.floor(1000+Math.random()*9000);
+//   return number;
+// }
+//
+// function splitNumber(number){
+//
+//   //We would convert the nummber into array.
+//   //Suppose Number is 1234 so this function would return an
+//   //array of [1,2,3,4]. So our game enginer would be able
+//   //to put those values at required place.
+//
+//   let splitedNumber = number.toString().split("");
+//   return splitedNumber;
+// }
+//
+//
+// function restart(){
+//   //To Refresh the page, thus restarting the game.
+//
+//   window.location.reload();
+// }
+//
+// function checkAnswer(pointer , selectedPointer){
+//   if(pointer == selectedPointer){
+//     return true;
+//   }
+//   else {
+//     return false;
+//   }
+// }
+// function correctAnswer(denom){
+//   switch (denom) {
+//     case 10:
+//       pointer = 2;
+//       break;
+//     case 100:
+//       pointer = 1;
+//       break
+//     case 1000:
+//       pointer = 0;
+//       break;
+//     default:
+//
+//   }
+// }
+//
 // gameSpeed();
 // startGame();
+
 
 
 let denomArray = [1000 ,100 , 10];
@@ -17,9 +69,10 @@ let shootArray = ['hitleft' , 'hitcenter' ,  'hitright' ];
 let num;
 let index;
 let ans;
-let pointer = 0;
+let selectedPointer = 0;
 let movePointer;
 let speed = 1000;
+let pointer =0;
 
 
 function createGamepad(){
@@ -30,8 +83,12 @@ function createGamepad(){
   gamePad = document.getElementById('GamePad')
 }
 
-function fill(){
-  document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(./DecimalGameFiles/assets/background.png)';
+function fillBackground(bg){
+  if(!bg){
+    bg='background1'
+  }
+
+  document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(./DecimalGameFiles/assets/'+bg+'.png)';
 }
 
 
@@ -44,7 +101,10 @@ function createQuestionContainer(){
   `;
 }
 
-function createBaskets(){
+function createBaskets(basket){
+  if(!basket){
+    basket = 'basket1'
+  }
   document.getElementsByClassName('GamePad')[0].innerHTML +=`
   <div class="numbers">
     <div class="number">
@@ -52,33 +112,37 @@ function createBaskets(){
     </div>
     <div class="basket">
       <div class="indicator"></div>
-      <img src="./DecimalGameFiles/assets/basket.png" alt="">
+      <img src="./DecimalGameFiles/assets/${basket}.png" alt="">
     </div>
     <div class="number">
       <h1 class="num"></h1>
     </div>
     <div class="basket">
       <div class="indicator"></div>
-      <img src="./DecimalGameFiles/assets/basket.png" alt="">
+      <img src="./DecimalGameFiles/assets/${basket}.png" alt="">
     </div>
     <div class="number">
       <h1 class="num"></h1>
     </div>
     <div class="basket">
       <div class="indicator"></div>
-      <img src="./DecimalGameFiles/assets/basket.png" alt="">
+      <img src="./DecimalGameFiles/assets/${basket}.png" alt="">
     </div>
     <div class="number">
       <h1 class="num"></h1>
     </div>
   </div>
+
   `;
 }
 
-function createBasketBall(){
+function createBall(ball){
+  if(!ball){
+    ball = 'ball1'
+  }
   document.getElementsByClassName('GamePad')[0].innerHTML +=`
   <div class="basketball" onclick="shoot()">
-    <img src="./DecimalGameFiles/assets/ball.png" alt="">
+    <img src="./DecimalGameFiles/assets/${ball}.png" alt="">
   </div>
   `;
 }
@@ -93,15 +157,15 @@ function createResult(){
 
 
 function startGame(){
-  document.getElementsByClassName('indicator')[pointer].classList.add('active');
+  document.getElementsByClassName('indicator')[selectedPointer].classList.add('active');
   movePointer = setInterval(()=>{
 
-    document.getElementsByClassName('indicator')[pointer].classList.remove('active');
-    pointer +=1;
-    if(pointer > 2){
-      pointer = 0 ;
+    document.getElementsByClassName('indicator')[selectedPointer].classList.remove('active');
+    selectedPointer +=1;
+    if(selectedPointer > 2){
+      selectedPointer = 0 ;
     }
-    document.getElementsByClassName('indicator')[pointer].classList.add('active');
+    document.getElementsByClassName('indicator')[selectedPointer].classList.add('active');
 
   },speed);
   genQuestion();
@@ -112,15 +176,17 @@ function startGame(){
 
 
 function genQuestion(){
- num = Math.floor(1000+Math.random()*9000);
+ num = genFourDigiRandomNumber();
  index = Math.floor(Math.random() * 3);
+
  ans = num/denomArray[index];
+ correctAnswer(denomArray[index]);
  document.getElementById('question').innerHTML = num+"/"+denomArray[index];
  fillNumbers();
 }
 
 function fillNumbers(){
-  let snum = num.toString().split("");
+  let snum = splitNumber(num);
   for(let i =0 ; i<4;i++){
     document.getElementsByClassName('num')[i].innerHTML = snum[i];
   }
@@ -131,20 +197,13 @@ function fillNumbers(){
 
 function shoot(){
   clearInterval(movePointer);
-  document.getElementsByClassName('basketball')[0].classList.add(shootArray[pointer]);
+  document.getElementsByClassName('basketball')[0].classList.add(shootArray[selectedPointer]);
   setTimeout(()=>{
-    if(ans == (num/denomArray[pointer])){
-      showResult(true)
-    }
-    else {
-      showResult(false)
-    }
+    let result = checkAnswer(pointer , selectedPointer);
+
+    showResult(result);
   },1500)
 
-}
-
-function restart(){
-  window.location.reload();
 }
 
 function showResult(result){
