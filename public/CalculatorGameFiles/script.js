@@ -1,5 +1,4 @@
 //Frontend Functions
-// let currentTheme = "orange";
 // const themes = {
 //   purple: {
 //     primary_color: "#440E52",
@@ -18,12 +17,22 @@
 //     secondary_color: "#FFBE41",
 //   },
 // };
+// function fillBackground() {
+//   let container = getContainer();
+//   setBackground(container, "purple");
+// }
+// function evaluate()
+// {
+//   const inputText = getInput().text
+//   return eval(inputText) // eval is a javascript function which evaluates mathematical expressions and returns the answer
+// }
 // createBackground()
-// setTheme('green')
 // fillBackground()
 // createOutputField()
 // createKeypad()
 // createInputField()
+
+let currentTheme = "orange";
 
 const imageLinks = {
   background: "./CalculatorGameFiles/assets/background.png",
@@ -53,12 +62,18 @@ function createBackground() {
   mainContainer.style.backgroundImage = `url("${imageRemoteLinks.background}")`;
   container.appendChild(mainContainer);
 }
-function setTheme(theme) {
-  currentTheme = theme;
-}
-function fillBackground() {
-  let container = document.getElementById("container");
+
+// function fillBackground() {
+//   let container = getContainer();
+//   setBackground(container, "purple");
+// }
+function setBackground(container, color) {
+  currentTheme = color;
   container.style.backgroundColor = themes[currentTheme].primary_color;
+}
+function getContainer() {
+  let container = document.getElementById("container");
+  return container;
 }
 function createOutputField() {
   let output = document.createElement("input");
@@ -93,7 +108,7 @@ function createKeypad() {
   main_container.appendChild(createKey("0"));
   let equal_btn = createKey("=");
   equal_btn.onclick = () => {
-    let answer = eval(inputExpression);
+    let answer = evaluate();
     if (!Number.isInteger(answer)) {
       answer = answer.toFixed(2);
     }
@@ -104,6 +119,11 @@ function createKeypad() {
 
   main_container.appendChild(equal_btn);
   main_container.appendChild(createKey("+"));
+}
+function getInput() {
+  return {
+    text: inputExpression,
+  };
 }
 function createKey(ch) {
   let image = "";
