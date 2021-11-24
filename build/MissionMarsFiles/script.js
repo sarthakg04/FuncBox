@@ -10,10 +10,10 @@
 // createRestartButton()
 // let penalty = 1
 // function CheckLogic(){
-//   if( good_rock_scanned ) {
+//   if( good_scan ) {
 //       Score += penalty;
 //     }
-//     else if ( bad_rock_scanned ) {
+//     else if ( bad_scan ) {
 //       Score -= penalty;
 //     }
 // }
@@ -22,11 +22,11 @@
 // Frontend Functions
 
 let gamePad,elements, squares , goodrocks = 0 , badrocks = 0 , currentRoverPosition = 35;
-let roverDiv , roverImg = 'rover', Score = 0 , time;
-var goodrocksScanned = 0;
+let roverDiv , roverImg, Score = 0 , time;
+var goodItemsScanned = 0;
 
-let bad_rock_scanned
-let good_rock_scanned
+let bad_scan
+let good_scan
 
 
 function createGamepad() {
@@ -77,6 +77,7 @@ function draw() {
   for( i = 0; i < 36; i++ ) {
     const square = document.createElement('div')
     grid.appendChild(square)
+    console.log(square.style.height, square.style.width)
   }
 
   let rockArray = randomUniqueNum(34,10)
@@ -84,11 +85,13 @@ function draw() {
   for( i = 0 ; i < rockArray.length ; i++ ) {
     if(i < 4) {
       squares[rockArray[i]].classList.add(elements[0])
+      squares[rockArray[i]].classList.add('good')
       squares[rockArray[i]].classList.add('rocks')
       goodrocks++
     }
     else if ( i >= 4 && i < 7) {
       squares[rockArray[i]].classList.add(elements[1])
+      squares[rockArray[i]].classList.add('bad')
       squares[rockArray[i]].classList.add('rocks')
       badrocks++
     }
@@ -227,6 +230,7 @@ function MoveLeft() {
       currentRoverPosition = currentRoverPosition - 1
 
       roverDiv.classList.add('rover')
+      roverDiv.style.transform = 'scaleX(-1)'
 
       squares[currentRoverPosition].appendChild(roverDiv)
 
@@ -250,6 +254,7 @@ function MoveRight() {
       currentRoverPosition = currentRoverPosition + 1
 
       roverDiv.classList.add('rover')
+      roverDiv.style.transform = 'scaleX(1)'
 
       squares[currentRoverPosition].appendChild(roverDiv)
 
@@ -285,7 +290,7 @@ function ScanObject() {
     document.getElementById('cc').classList.toggle('active')
     setTimeout(()=>{
     document.querySelectorAll('.grid div')[currentRoverPosition].classList.remove('scanning')
-    if( document.querySelectorAll('.grid div')[currentRoverPosition].classList.contains('goodrocks') ){ 
+    if( document.querySelectorAll('.grid div')[currentRoverPosition].classList.contains('good') ){ 
       document.querySelectorAll('.grid div')[currentRoverPosition].classList.add('goodscan')
     }
     else{
@@ -298,16 +303,16 @@ function ScanObject() {
     // leftButton.disabled = false;
     // rightButton.disabled = false;
     // Score++;
-    bad_rock_scanned = squares[currentRoverPosition].classList.contains('badrocks')
-    good_rock_scanned = squares[currentRoverPosition].classList.contains('goodrocks')
+    bad_scan = squares[currentRoverPosition].classList.contains('bad')
+    good_scan = squares[currentRoverPosition].classList.contains('good')
     CheckLogic()
-    if( good_rock_scanned ) {
-      goodrocksScanned += penalty;
+    if( good_scan ) {
+      goodItemsScanned += penalty;
     }
     ScanButton.disabled = true
     ScanButton.classList.remove('active')
     scoreDisplay.innerHTML = 'Score: '+ Score
-    if((goodrocksScanned/penalty) == goodrocks ) {
+    if((goodItemsScanned/penalty) == goodrocks ) {
         if( Score == goodrocks ) {
           scoreDisplay.innerHTML = 'Perfect Win! Score: '+ Score + '/' + (goodrocks*penalty)
           document.getElementById('cc').classList.toggle('active')

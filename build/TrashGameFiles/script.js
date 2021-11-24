@@ -1,13 +1,34 @@
 // FronteEnd functions
 
+// let garbage = [
+//   {
+//   name : 'banana',
+//   correct : 0,
+//   },
+//   {
+//     name : 'milkbottle',
+//     correct : 2
+//   },
+//   {
+//     name : 'bottle',
+//     correct : 1
+//   },
+//   {
+//     name : 'straw',
+//     correct : 2
+//   }
+// ];
 // createGamepad();
-// fill();
+// fillBackground();
 // createDispenser();
 // createDustbins();
 // createInteractionPad();
+// function dropGarbage(item){
+//   item.style.top = '53%';
+// }
 
 
-function fill(){
+function fillBackground(){
   document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(./TrashGameFiles/assets/background.png)';
 }
 
@@ -80,24 +101,7 @@ function createInteractionPad(){
 
 let positions = ['left' , 'center' , 'right'];
 let currentPos = 1;
-let garbage = [
-  {
-  name : 'banana',
-  correct : 0,
-  },
-  {
-    name : 'milkbottle',
-    correct : 2
-  },
-  {
-    name : 'bottle',
-    correct : 1
-  },
-  {
-    name : 'straw',
-    correct : 2
-  }
-]
+
 
 let index;
 let heart = 0;
@@ -138,6 +142,8 @@ function shiftLeft(){
 
 function drop(){
   document.getElementsByClassName('ready')[0].classList.add('drop');
+  let item = document.getElementsByClassName('ready')[0];
+  dropGarbage(item);
   document.getElementsByClassName('ready')[0].classList.remove('ready');
 
   setTimeout(()=>{
