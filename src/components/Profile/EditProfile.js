@@ -45,9 +45,9 @@ export default function EditProfile(props) {
       console.log(token);
       const res = await fetch(
         `${
-          process.env.NODE_ENV === "production"
+          process.env.NODE_ENV === "development"
             ? apiurl
-            : "http://localhost:5000"
+            : "https://server.funcbox.in"
         }/editprofile/edit`,
         {
           credentials: "include",

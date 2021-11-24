@@ -85,7 +85,7 @@ function createGamepad(){
 
 function fillBackground(bg){
   if(!bg){
-    bg='background1'
+    bg='dartbackground'
   }
 
   document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(./DecimalGameFiles/assets/'+bg+'.png)';
@@ -103,7 +103,7 @@ function createQuestionContainer(){
 
 function createBaskets(basket){
   if(!basket){
-    basket = 'basket1'
+    basket = 'basket'
   }
   document.getElementsByClassName('GamePad')[0].innerHTML +=`
   <div class="numbers">
@@ -138,7 +138,7 @@ function createBaskets(basket){
 
 function createBall(ball){
   if(!ball){
-    ball = 'ball1'
+    ball = 'ball'
   }
   document.getElementsByClassName('GamePad')[0].innerHTML +=`
   <div class="basketball" onclick="shoot()">

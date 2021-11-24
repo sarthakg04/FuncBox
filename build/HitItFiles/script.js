@@ -1,10 +1,33 @@
 //Fontend Functions
 // createGamepad()
-// fill()
-// createScore()
+// fillBackground()
+// createScore();
+// let timeRemaining = 240;
 // createQuestionsContainer()
 // initializeGameEngine()
 // createInteractionPad()
+// function checkSelected(number , qType){
+//   if(qType == 'even'){
+//     if(number%2==0){
+//       score+=1;
+//
+//     }
+//     else{
+//       score-=1;
+//
+//     }
+//   }
+//   else {
+//     if(number%2 !=0){
+//       score+=1;
+//
+//     }
+//     else{
+//       score-=1;
+//
+//     }
+//   }
+// }
 
 function createGamepad(){
   let gamePadd = document.createElement('DIV')
@@ -22,7 +45,7 @@ function createScore(){
   `;
 }
 
-function fill(){
+function fillBackground(){
   document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(./HitItFiles/assets/background.png)';
 }
 
@@ -51,7 +74,7 @@ function createInteractionPad(){
 function initializeGameEngine(){
   document.getElementById('container').innerHTML +=`
   <div class="timer">
-    <p id="time">2:00</p>
+    <p id="time">00:00</p>
   </div>
 
   <div class="question">
@@ -66,13 +89,14 @@ function initializeGameEngine(){
 
 
 let time;
-let remaining = 120;
+let remaining ;
 let type
 let score = 0;
 
 
 
 function startGame(){
+  remaining = timeRemaining
   time = setInterval(()=>{
     if(remaining != 0){
 
@@ -167,36 +191,24 @@ function generateQustion(){
 
 
 function validate(num){
+  let typee = '';
   if(type == 0){
-    if(num%2==0){
-      score+=1;
-      document.getElementById('score').innerHTML = score
-    }
-    else{
-      score-=1;
-      document.getElementById('score').innerHTML = score
-    }
+    typee = 'even'
   }
-  else {
-    if(num%2 !=0){
-      score+=1;
-      document.getElementById('score').innerHTML = score
-    }
-    else{
-      score-=1;
-      document.getElementById('score').innerHTML = score
-    }
+  else{
+    typee = 'odd'
   }
-
+  checkSelected(num,typee);
+  document.getElementById('score').innerHTML = score
   generateQustion();
 }
 
 function restart(){
   score = 0;
-  remaining = 120;
+  remaining = timeRemaining;
   document.getElementById('score').innerHTML = '0';
   document.getElementById('resBtn').classList.remove('active');
-  document.getElementById('time').innerHTML = '2:00';
+  document.getElementById('time').innerHTML = '00:00';
   clearInterval(time);
   startGame();
 }
