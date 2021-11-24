@@ -1,7 +1,9 @@
 //FontendFunctions
 // createGamepad();
-// createContainer();
-// createShooter();
+// fillBackground('backgroundYellow');
+// createScore();
+// createContainer('doczombie');
+// createShooter('laser');
 // createInteractionPad();
 
 function createGamepad(){
@@ -12,6 +14,14 @@ function createGamepad(){
   gamePad = document.getElementById('GamePad')
 }
 
+function fillBackground(background){
+  if(!background){
+    background='backgroundOrange'
+  }
+  document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(./ZombieGameFiles/assets/'+background+'.png)';
+}
+
+
 function createScore(){
   document.getElementsByClassName('GamePad')[0].innerHTML +=`
   <div class="score">
@@ -20,23 +30,24 @@ function createScore(){
 
 }
 
-function createContainer(){
+function createContainer(zombie){
+  gZombieTheme = zombie
   document.getElementsByClassName('GamePad')[0].innerHTML +=`
   <audio src="./ZombieGameFiles/assets/laser.mpeg" id="sound">
 
   </audio>
   <div class="zombie__container" id="zContainer">
-  <img src="./ZombieGameFiles/assets/zombieLeft.png" alt="" class="left zombie lleg">
-    <img src="./ZombieGameFiles/assets/zombieLeft.png" alt="" class="center zombie lleg">
-      <img src="./ZombieGameFiles/assets/zombieLeft.png" alt="" class="right zombie lleg">
+  <img src="./ZombieGameFiles/assets/${zombie}Left.png" alt="" class="left zombie lleg">
+    <img src="./ZombieGameFiles/assets/${zombie}Left.png" alt="" class="center zombie lleg">
+      <img src="./ZombieGameFiles/assets/${zombie}Left.png" alt="" class="right zombie lleg">
   </div>
   `;
 }
 
-function createShooter(){
+function createShooter(shooter){
   document.getElementsByClassName('GamePad')[0].innerHTML +=`
   <div class="shooter">
-    <img src="./ZombieGameFiles/assets/centerShoot.png" alt="" id="shooter" class="center">
+    <img src="./ZombieGameFiles/assets/${shooter}centerShoot.png" alt="" id="shooter" class="center">
   </div>
   `;
 }
@@ -64,6 +75,7 @@ let zombieSize = [55, 55 ,55];
 
 let totalzombie = 0
 let score = 0;
+let gZombieTheme;
 // 80px down
 
 function shootLeft(){
@@ -113,11 +125,11 @@ function moveZombie(){
 
       let f  = document.getElementsByClassName('zombie')[i];
       if(f.classList.contains('lleg')){
-        f.src= "./ZombieGameFiles/assets/zombieRight.png"
+        f.src= `./ZombieGameFiles/assets/${gZombieTheme}Right.png`
         f.classList.remove('lleg');
       }
       else{
-        f.src= "./ZombieGameFiles/assets/zombieLeft.png"
+        f.src= `./ZombieGameFiles/assets/${gZombieTheme}Left.png`
         f.classList.add('lleg');
       }
       if(zombieArray[i] >= 235){
