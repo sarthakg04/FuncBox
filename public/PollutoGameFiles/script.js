@@ -1,7 +1,10 @@
 //Frontend Functions
+// setMaxTime(10)
+// setMaxSpawnCount(6)
 // createBackground()
 // createTree()
 // createCar()
+// createTimer()
 // createOxymeter()
 // createSpawners()
 let imageLinks = {
@@ -11,6 +14,7 @@ let imageLinks = {
   tree: "./PollutoGameFiles/assets/tree.png",
   co2: "./PollutoGameFiles/assets/co2.png",
   o2: "./PollutoGameFiles/assets/o2.png",
+  black_hole: "./PollutoGameFiles/assets/black_hole.png",
 };
 const Co2spawnerLoc = [
   { x: "23%", y: "85%" },
@@ -31,8 +35,19 @@ const O2spawnerLoc = [
 const O2spawner = [];
 let numC = 0;
 let counter = 0;
-let max_spawn_count = 6;
+let max_timer_seconds = 10;
 let carElement;
+let interval = null;
+let max_spawn_count = 6;
+let timer_seconds = max_timer_seconds;
+let timer = null;
+function setMaxTime(sec) {
+  max_timer_seconds = sec;
+  timer_seconds = max_timer_seconds;
+}
+function setMaxSpawnCount(num) {
+  max_spawn_count = num;
+}
 function createBackground() {
   let container = document.createElement("div");
   container.classList.add("container");
@@ -58,8 +73,13 @@ function createCar() {
 function createTree() {
   let tree = document.createElement("div");
   let treeimg = document.createElement("img");
+  treeimg.className = "tree_img";
   treeimg.src = imageLinks.tree;
+  let blackhole = document.createElement("img");
+  blackhole.src = imageLinks.black_hole;
+  blackhole.className = "black_hole";
   tree.appendChild(treeimg);
+  tree.appendChild(blackhole);
   tree.classList.add("tree_div");
   const droppable = document.createElement("div");
   tree.addEventListener("dragover", (e) => {
@@ -121,6 +141,9 @@ function updateOxymeter() {
     oxymeter.style.backgroundColor = "orange";
   } else if (fill_percent < 30) {
     oxymeter.style.backgroundColor = "red";
+    if (fill_percent === 0) {
+      gameEnd();
+    }
   } else {
     oxymeter.style.backgroundColor = "#59F87C";
   }
@@ -136,7 +159,7 @@ function createSpawners() {
       createCO2Spawner(loc.x, loc.y);
       numC += 1;
       updateOxymeter();
-    }, i * 1000);
+    }, i * 1000 * ((max_timer_seconds - 1) / max_spawn_count));
   });
 }
 function createOxymeter() {
@@ -150,11 +173,56 @@ function createOxymeter() {
     .appendChild(oxymeter_frame);
 }
 function gameEnd() {
-  const end_text = "Well Done";
+  let end_text = "";
+  if (numC === 0) {
+    end_text = "Well Done";
+  } else {
+    end_text = "Oops!!";
+  }
+  const retry = document.createElement("button");
+  retry.innerText = "Retry";
+
   const element = document.createElement("div");
   element.className = "end_screen";
   document.body.appendChild(element);
+
   const text_element = document.createElement("p");
   text_element.innerText = end_text;
   element.appendChild(text_element);
+  element.appendChild(retry);
+  clearInterval(interval);
+  retry.addEventListener("click", () => {
+    timer_seconds = max_timer_seconds;
+    timer.remove();
+    numC = 0;
+    counter = 0;
+    O2spawner.forEach((spawner) => {
+      spawner.remove();
+    });
+    while (O2spawner.length > 0) {
+      O2spawner.pop();
+    }
+    const spawners = document.getElementsByClassName("spawner");
+    while (spawners.length > 0) {
+      spawners[0].parentNode.removeChild(spawners[0]);
+    }
+    text_element.remove();
+    element.remove();
+    createTimer();
+    createSpawners();
+  });
+}
+function createTimer() {
+  timer = document.createElement("div");
+  timer.className = "timer_div";
+  timer.innerText = "00 : " + timer_seconds;
+  interval = setInterval(() => {
+    timer_seconds -= 1;
+    timer.innerText = "00 : " + timer_seconds;
+    if (timer_seconds === 0) {
+      clearInterval(interval);
+      gameEnd();
+    }
+  }, 1000);
+  document.getElementsByClassName("main_container")[0].appendChild(timer);
 }
