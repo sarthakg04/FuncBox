@@ -175,9 +175,10 @@ function createOxymeter() {
 function gameEnd() {
   let end_text = "";
   if (numC === 0) {
-    end_text = "Well Done";
+    end_text = "Well Done!! <br/> Air is clean";
   } else {
-    end_text = "Oops!!";
+    end_text =
+      "Oops!!<br/>" + (timer_seconds === 0 ? " Time Out" : "Too much CO2");
   }
   const retry = document.createElement("button");
   retry.innerText = "Retry";
@@ -187,7 +188,8 @@ function gameEnd() {
   document.body.appendChild(element);
 
   const text_element = document.createElement("p");
-  text_element.innerText = end_text;
+  text_element.style.textAlign = "center";
+  text_element.innerHTML = end_text;
   element.appendChild(text_element);
   element.appendChild(retry);
   clearInterval(interval);
@@ -212,17 +214,30 @@ function gameEnd() {
     createSpawners();
   });
 }
-function createTimer() {
+function createTimeObject() {
   timer = document.createElement("div");
   timer.className = "timer_div";
   timer.innerText = "00 : " + timer_seconds;
-  interval = setInterval(() => {
-    timer_seconds -= 1;
-    timer.innerText = "00 : " + timer_seconds;
-    if (timer_seconds === 0) {
-      clearInterval(interval);
-      gameEnd();
-    }
-  }, 1000);
   document.getElementsByClassName("main_container")[0].appendChild(timer);
 }
+function updateTimer() {
+  timer.innerText = "00 : " + timer_seconds;
+}
+function getTime() {
+  return timer_seconds;
+}
+function setTime(time) {
+  timer_seconds = time;
+}
+// function createTimer() {
+//   createTimeObject();
+//   interval = setInterval(() => {
+//     let time_left = getTime();
+//     setTime(time_left - 1);
+//     updateTimer();
+//     if (getTime() === 0) {
+//       clearInterval(interval);
+//       gameEnd();
+//     }
+//   }, 1000);
+// }
