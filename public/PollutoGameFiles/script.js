@@ -1,6 +1,19 @@
 //Frontend Functions
-// setMaxTime(10)
+// setMaxTime(6)
 // setMaxSpawnCount(6)
+// function updateTimer() {
+//   let time_left = getTime();
+//   setTime(time_left - 1);
+//   updateTimerText();
+//   if (getTime() === 0) {
+//     gameEnd();
+//   }
+// }
+// function createTimer() {
+//   createTimeObject();
+
+//   everySecond(updateTimer);
+// }
 // createBackground()
 // createTree()
 // createCar()
@@ -173,6 +186,7 @@ function createOxymeter() {
     .appendChild(oxymeter_frame);
 }
 function gameEnd() {
+  clearInterval(interval);
   let end_text = "";
   if (numC === 0) {
     end_text = "Well Done!! <br/> Air is clean";
@@ -214,13 +228,21 @@ function gameEnd() {
     createSpawners();
   });
 }
+// function updateTimer() {
+//   let time_left = getTime();
+//   setTime(time_left - 1);
+//   updateTimer();
+//   if (getTime() === 0) {
+//     gameEnd();
+//   }
+// }
 function createTimeObject() {
   timer = document.createElement("div");
   timer.className = "timer_div";
   timer.innerText = "00 : " + timer_seconds;
   document.getElementsByClassName("main_container")[0].appendChild(timer);
 }
-function updateTimer() {
+function updateTimerText() {
   timer.innerText = "00 : " + timer_seconds;
 }
 function getTime() {
@@ -229,15 +251,22 @@ function getTime() {
 function setTime(time) {
   timer_seconds = time;
 }
+
+function everySecond(func) {
+  interval = setInterval(() => {
+    func();
+  }, 1000);
+}
+// function updateTimer() {
+//   let time_left = getTime();
+//   setTime(time_left - 1);
+//   updateTimerText();
+//   if (getTime() === 0) {
+//     gameEnd();
+//   }
+// }
 // function createTimer() {
 //   createTimeObject();
-//   interval = setInterval(() => {
-//     let time_left = getTime();
-//     setTime(time_left - 1);
-//     updateTimer();
-//     if (getTime() === 0) {
-//       clearInterval(interval);
-//       gameEnd();
-//     }
-//   }, 1000);
+
+//   everySecond(updateTimer);
 // }
