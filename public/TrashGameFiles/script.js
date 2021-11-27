@@ -1,5 +1,7 @@
 // FronteEnd functions
 
+// let bin = ['bio' , 'nonBio' , 'recycle']
+//
 // let garbage = [
 //   {
 //   name : 'banana',
@@ -52,15 +54,15 @@ function createDustbins(){
   document.getElementsByClassName('GamePad')[0].innerHTML +=`
   <div class="dustbins">
     <div class="dustbin">
-      <img src="./TrashGameFiles/assets/greenbin.png" alt="">
+      <img src="./TrashGameFiles/assets/${bin[0]}bin.png" alt="">
       <p> Biodegradable waste </p>
     </div>
     <div class="dustbin">
-      <img src="./TrashGameFiles/assets/bluebin.png" alt="">
+      <img src="./TrashGameFiles/assets/${bin[1]}bin.png" alt="">
       <p> Non-Biodegradable waste </p>
     </div>
     <div class="dustbin">
-      <img src="./TrashGameFiles/assets/yellowbin.png" alt="">
+      <img src="./TrashGameFiles/assets/${bin[2]}bin.png" alt="">
       <p> Recycleable waste </p>
     </div>
 

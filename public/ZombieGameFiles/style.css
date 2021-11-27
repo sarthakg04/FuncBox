@@ -81,11 +81,11 @@ body {
 }
 
 #shooter.left{
-  transform: rotate(-30deg);
+
 }
 
 #shooter.right{
-  transform: rotate(30deg);
+  
 }
 
 .controllers img{
