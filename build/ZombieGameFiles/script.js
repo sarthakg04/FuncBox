@@ -5,6 +5,20 @@
 // createContainer('doczombie');
 // createShooter('laser');
 // createInteractionPad();
+// function rotateShooter(direction , shooter){
+//   switch (direction) {
+//     case 'left':
+//       shooter.style.transform = 'rotate(-30deg)'
+//       break;
+//     case 'center':
+//       shooter.style.transform = 'rotate(0deg)'
+//       break;
+//     case 'right':
+//       shooter.style.transform = 'rotate(30deg)'
+//       break;
+//   }
+// }
+
 
 function createGamepad(){
   let gamePadd = document.createElement('DIV')
@@ -86,6 +100,7 @@ function shootLeft(){
   document.getElementById('shooter').classList.remove("left");
   document.getElementById('shooter').classList.remove("right");
   document.getElementById('shooter').classList.remove("center");
+  rotateShooter(posArray[shooterPoisition] ,document.getElementById('shooter'));
   document.getElementById('shooter').classList.add(posArray[shooterPoisition])
 
 }
@@ -98,6 +113,7 @@ function shootRight(){
   document.getElementById('shooter').classList.remove("left");
   document.getElementById('shooter').classList.remove("right");
   document.getElementById('shooter').classList.remove("center");
+  rotateShooter(posArray[shooterPoisition] ,document.getElementById('shooter'));
   document.getElementById('shooter').classList.add(posArray[shooterPoisition])
 
 }
