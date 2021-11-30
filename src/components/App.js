@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { lazy, useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
@@ -8,8 +8,9 @@ import AngryBirds from "../components/Games/AngryBirds/AngryBirds";
 import MissionMars from "../components/Games/MissionMars/MissionMars";
 import AvengersGame from "./Games/AvengersGame/AvengersGame";
 import MonkeyMultiplier from "./Games/MonkeyMultiplier/MonkeyMultiplier";
-import Login from "../components/LoginAndSignup/Login";
-import Signup from "../components/LoginAndSignup/Signup";
+// import Login from "../components/LoginAndSignup/Login";
+// import Signup from "../components/LoginAndSignup/Signup";
+
 import CodeEditor from "../components/CodeEditor/CodeEditor";
 import FuncBoxx from "./FuncBoxx/FuncBoxx";
 import BowlingGame from "../components/Games/BowlingGame/BowlingGame";
@@ -30,10 +31,10 @@ import MySolarSystem from "./Games/MySolarSystem/MySolarSystem";
 import LetsMakeItRain from "./Games/LetsMakeItRain/LetsMakeItRain";
 import MotuPatlu from "./Games/MotuPatlu/MotuPatlu";
 import StatesThatMatter from "./Games/StatesThatMatter/StatesThatMatter";
-import WelcomePage from "./WelcomePage/WelcomePage";
+// import WelcomePage from "./WelcomePage/WelcomePage";
 import Calculator from "./Games/Calculator/Calculator";
 import UserNavbar from "./UserNavbar/UserNavbar";
-import EditProfile from "./Profile/EditProfile";
+// import EditProfile from "./Profile/EditProfile";
 import ForgotPass from "./ForgotPass/Forgot";
 import Preview from "./Preview/Preview";
 import HitIt from "./Games/HitIt/HitIt";
@@ -53,8 +54,11 @@ import Decimal from "./Games/DecimalGame/DecimalGame";
 import SubscriptionPage from "./Subscriptions/SubscriptionPage";
 import StepMeasure from "./Games/StepMeasureGame/StepMeasure";
 import Calculator2Game from "./Games/Calculator2/Calculator2";
-import AreaGame from "./Games/AreaGame/AreaGame"
-
+import AreaGame from "./Games/AreaGame/AreaGame";
+const Signup = lazy(() => import("../components/LoginAndSignup/Signup"));
+const Login = lazy(() => import("../components/LoginAndSignup/Login"));
+const WelcomePage = lazy(() => import("../components/WelcomePage/WelcomePage"));
+const EditProfile = lazy(() => import("../components/Profile/EditProfile"));
 function App() {
   const dispatch = useDispatch();
   const { token } = useAuth();
