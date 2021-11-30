@@ -1,4 +1,6 @@
 //Frontend Function for testing
+// var number  = randomIntLessThan(10)
+// var multiple = number * randomIntLessThan(10)
 // createScore()
 // generateRandomNumber()
 // createJumpPlaces()
@@ -6,28 +8,30 @@
 // generateMultiples()
 // createInteractionPad()
 // createGameOver()
+// function CheckLogic(jump_num){
+//     if( (NumberIn(jump_num) % number) === 0 ){
+//         Score++
+//         return true
+//     }
+//     else{
+//         GameOver()
+//         return false
+//     }
+// }
 
 // variables
 
-var number  = Math.floor((Math.random() * 9)+2)
 
-//Intializing the multiple where factor is in range number*(1 to 10)
-var multiple = ( number * Math.floor((Math.random() * 10)+1))
-
-//Initializing the other two numbers which are not multiples of the number variable
-var waste_number_1 = ( number * Math.floor((Math.random() * 10)+1)) - 1
-var waste_number_2 = ( number * Math.floor((Math.random() * 10)+1)) + 1
-while(true){
-    if( waste_number_2 === waste_number_1 ){
-        waste_number_2 = ( number * Math.floor((Math.random() * 10)+1)) + 1
-    }
-    else{
-        break
-    }
+function randomIntLessThan(max) { // min and max included 
+  return Math.floor(Math.random() * (max - 1) + 2)
 }
 
-var arr = [multiple,waste_number_1,waste_number_2]
+//Intializing the multiple where factor is in range number*(1 to 10)
 
+
+//Initializing the other two numbers which are not multiples of the number variable
+
+let arr
 
 //Intializing the arr elements into jump_boxes
 var jump_boxes
@@ -55,6 +59,18 @@ var phone_div
 
 
 function createScore(){
+    var waste_number_1 = ( number * Math.floor((Math.random() * 10)+1)) - 1
+    var waste_number_2 = ( number * Math.floor((Math.random() * 10)+1)) + 1
+    while(true){
+        if( waste_number_2 === waste_number_1 ){
+            waste_number_2 = ( number * Math.floor((Math.random() * 10)+1)) + 1
+        }
+        else{
+            break
+        }
+    }
+
+    arr = [multiple,waste_number_1,waste_number_2]
     //Phone div
     phone_div = document.createElement('div')
     phone_div.classList.add('Phone')
@@ -94,6 +110,8 @@ function createJumpPlaces(){
     GamePad.appendChild(jump_boxes_div)
     jump_boxes = Array.from(document.querySelectorAll('.jump_boxes button'))
 
+    
+
 }
 
 function createMonkey(){
@@ -123,6 +141,7 @@ function generateMultiples(){
         jump_boxes[i].appendChild(number_span)
         k++
     }
+    
 }
 
 
@@ -149,6 +168,9 @@ function createGameOver(){
 
 //Jump functions
 function Jump_on_1(){
+    
+    // console.log(jump_boxes[0].childNodes[0].innerHTML)
+
     next_button.disabled = false
 
     var monkey_position = document.querySelector('.monkey')
@@ -164,15 +186,8 @@ function Jump_on_1(){
     jump_box_1.disabled = true
     jump_box_3.disabled = true
     jump_box_3.disabled = true
-    if(ans_box_index != 0){
-        next_button.disabled = true
-        var Game_Over = document.querySelector('.Game_Over')
-        Game_Over.style.display = 'block'
-        var score_set = document.querySelector('.score')
-        score_set.innerHTML = 'Game Over, Score: ' + `${Score}`
-    }
-    else{
-        Score++
+    let temp = CheckLogic(0)
+    if(temp){
         var score_set = document.querySelector('.score')
         score_set.innerHTML = 'Score: ' + `${Score}`
         // localStorage.setItem("MonkeyMultipler_Game_Score", Score);
@@ -193,16 +208,8 @@ function Jump_on_2(){
     jump_box_1.disabled = true
     jump_box_3.disabled = true
     jump_box_3.disabled = true
-    if(ans_box_index != 1){
-        next_button.disabled = true
-        var Game_Over = document.querySelector('.Game_Over')
-        Game_Over.style.display = 'block'
-        var score_set = document.querySelector('.score')
-        score_set.innerHTML = 'Game Over, Score: ' + `${Score}`
-
-    }
-    else{
-        Score++
+    let temp = CheckLogic(1)
+    if(temp){
         var score_set = document.querySelector('.score')
         score_set.innerHTML = 'Score: ' + `${Score}`
         // localStorage.setItem("MonkeyMultipler_Game_Score", Score);
@@ -225,21 +232,29 @@ function Jump_on_3(){
     jump_box_1.disabled = true
     jump_box_3.disabled = true
     jump_box_3.disabled = true
-    if(ans_box_index != 2){
-        next_button.disabled = true
-        var Game_Over = document.querySelector('.Game_Over')
-        Game_Over.style.display = 'block'
-        var score_set = document.querySelector('.score')
-        score_set.innerHTML = 'Game Over, Score: ' + `${Score}`
-    }else{
-        Score++
+    let temp = CheckLogic(2)
+    if(temp){
         var score_set = document.querySelector('.score')
         score_set.innerHTML = 'Score: ' + `${Score}`
         // localStorage.setItem("MonkeyMultipler_Game_Score", Score);
     }
 }
 
+function NumberIn(jump_num){
+    return jump_boxes[jump_num].childNodes[0].innerHTML
+}
+
+function GameOver(){
+    next_button.disabled = true
+    var Game_Over = document.querySelector('.Game_Over')
+    Game_Over.style.display = 'block'
+    var score_set = document.querySelector('.score')
+    score_set.innerHTML = 'Game Over, Score: ' + `${Score}`
+}
+
+
 function Next(){
+    
 
     number  = Math.floor((Math.random() * 9)+2);
     multiple = ( number * Math.floor((Math.random() * 10)+1));

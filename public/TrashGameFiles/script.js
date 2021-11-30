@@ -1,13 +1,36 @@
 // FronteEnd functions
 
+// let bin = ['bio' , 'nonBio' , 'recycle']
+//
+// let garbage = [
+//   {
+//   name : 'banana',
+//   correct : 0,
+//   },
+//   {
+//     name : 'milkbottle',
+//     correct : 2
+//   },
+//   {
+//     name : 'bottle',
+//     correct : 1
+//   },
+//   {
+//     name : 'straw',
+//     correct : 2
+//   }
+// ];
 // createGamepad();
-// fill();
+// fillBackground();
 // createDispenser();
 // createDustbins();
 // createInteractionPad();
+// function dropGarbage(item){
+//   item.style.top = '53%';
+// }
 
 
-function fill(){
+function fillBackground(){
   document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(./TrashGameFiles/assets/background.png)';
 }
 
@@ -31,15 +54,15 @@ function createDustbins(){
   document.getElementsByClassName('GamePad')[0].innerHTML +=`
   <div class="dustbins">
     <div class="dustbin">
-      <img src="./TrashGameFiles/assets/greenbin.png" alt="">
+      <img src="./TrashGameFiles/assets/${bin[0]}bin.png" alt="">
       <p> Biodegradable waste </p>
     </div>
     <div class="dustbin">
-      <img src="./TrashGameFiles/assets/bluebin.png" alt="">
+      <img src="./TrashGameFiles/assets/${bin[1]}bin.png" alt="">
       <p> Non-Biodegradable waste </p>
     </div>
     <div class="dustbin">
-      <img src="./TrashGameFiles/assets/yellowbin.png" alt="">
+      <img src="./TrashGameFiles/assets/${bin[2]}bin.png" alt="">
       <p> Recycleable waste </p>
     </div>
 
@@ -80,24 +103,7 @@ function createInteractionPad(){
 
 let positions = ['left' , 'center' , 'right'];
 let currentPos = 1;
-let garbage = [
-  {
-  name : 'banana',
-  correct : 0,
-  },
-  {
-    name : 'milkbottle',
-    correct : 2
-  },
-  {
-    name : 'bottle',
-    correct : 1
-  },
-  {
-    name : 'straw',
-    correct : 2
-  }
-]
+
 
 let index;
 let heart = 0;
@@ -138,6 +144,8 @@ function shiftLeft(){
 
 function drop(){
   document.getElementsByClassName('ready')[0].classList.add('drop');
+  let item = document.getElementsByClassName('ready')[0];
+  dropGarbage(item);
   document.getElementsByClassName('ready')[0].classList.remove('ready');
 
   setTimeout(()=>{

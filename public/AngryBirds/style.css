@@ -9,6 +9,14 @@
   background-image: url('./assets/Background.svg');
 }
 
+.ocean {
+  background-image: url('./assets/ocean.png');
+}
+
+.snow {
+  background-image: url('./assets/snow.png');
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -67,11 +75,6 @@ body {
   top: 20%; */
 }
 
-.bird_planck {
-  background: url('./assets/bird_planck.svg') no-repeat;
-  background-position: center bottom;
-}
-
 .pig_planck {
   background: url('./assets/pig_planck.svg') no-repeat;
   background-position: center bottom;
@@ -82,13 +85,68 @@ body {
   background-position: center bottom;
 }
 
-.bird_pig_planck {
+.fruit_planck {
+  background: url('./assets/fruit_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.black_bird_planck {
+  background: url('./assets/bird_planck.svg') no-repeat;
+  background-position: center bottom;
+}
+
+.black_bird_pig_planck {
   background: url('./assets/bird_pig_planck.svg') no-repeat;
   background-position: center bottom;
 }
 
-.bird_box_planck {
+.black_bird_box_planck {
   background: url('./assets/bird_box_planck.svg') no-repeat;
+  background-position: center bottom;
+}
+
+.black_bird_fruit_planck {
+  background: url('./assets/black_bird_fruit_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.red_bird_planck {
+  background: url('./assets/red_bird_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.red_bird_pig_planck {
+  background: url('./assets/red_bird_pig_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.red_bird_box_planck {
+  background: url('./assets/red_bird_box_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.red_bird_fruit_planck {
+  background: url('./assets/red_bird_fruit_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.yellow_bird_planck {
+  background: url('./assets/yellow_bird_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.yellow_bird_pig_planck {
+  background: url('./assets/yellow_bird_pig_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.yellow_bird_box_planck {
+  background: url('./assets/yellow_bird_box_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.yellow_bird_fruit_planck {
+  background: url('./assets/yellow_bird_fruit_planck.png') no-repeat;
   background-position: center bottom;
 }
 

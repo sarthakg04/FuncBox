@@ -2,7 +2,33 @@
 // createGamepad();
 // createHeading();
 // createScore();
-// fill();
+// fillBackground();
+// let garbage = [
+//   {name : 'apple' , type : 'bio'} ,
+//   { name : 'banana' , type : 'bio' },
+//   {name : 'can' , type : 'non'},
+//   {name : 'coke' , type : 'non'},
+//   {name : 'egg' , type : 'bio'},
+//   {name : 'fish' , type : 'bio'},
+//   {name : 'plastic' , type : 'non'},
+//   {name : 'melon' , type : 'bio'},
+//   {name  : 'tv' , type : 'non'}
+// ]
+//
+// function verifyGarbage(item){
+//   for(let i =0;i<garbage.length;i++){
+//     if(garbage[i].name == item){
+//       if(garbage[i].type == 'non'){
+//         score +=10;
+//         return true;
+//       }
+//       else{
+//         score -=5;
+//         return false;
+//       }
+//     }
+//   }
+// }
 // createDustbin();
 // fillGarbage();
 // creatPopUp();
@@ -32,7 +58,7 @@ function createScore(){
   `;
 }
 
-function fill(){
+function fillBackground(){
   document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(./RecycleItFiles/assets/background.png)';
 }
 
@@ -45,6 +71,7 @@ function createDustbin(){
 }
 
 function fillGarbage(){
+  let garbage2 = [...garbage]
   document.getElementsByClassName('GamePad')[0].innerHTML +=`
     <div class="garbage__container">
     </div>
@@ -54,13 +81,14 @@ function fillGarbage(){
     let index = Math.floor(Math.random() * ((garbage.length - 1) - 0 + 1) + 0);
     document.getElementsByClassName('garbage__container')[0].innerHTML +=`
     <div class="garbage">
-      <img src="./RecycleItFiles/assets/${garbage[index].name}.png" alt="" class="gImg ${garbage[index].type}" onclick="checkGarbage()">
+      <img src="./RecycleItFiles/assets/${garbage[index].name}.png" alt="" class="gImg ${garbage[index].type} ${garbage[index].name}" onclick="checkGarbage()">
     </div>
     `;
 
     garbage.splice(index , 1);
   }
-
+  garbage = [...garbage2];
+  console.log(garbage);
   addEvent();
 }
 
@@ -90,17 +118,17 @@ function restart(){
   window.location.reload();
 }
 
-let garbage = [
-  {name : 'apple' , type : 'bio'} ,
-  { name : 'banana' , type : 'bio' },
-  {name : 'can' , type : 'non'},
-  {name : 'coke' , type : 'non'},
-  {name : 'egg' , type : 'bio'},
-  {name : 'fish' , type : 'bio'},
-  {name : 'plastic' , type : 'non'},
-  {name : 'melon' , type : 'bio'},
-  {name  : 'tv' , type : 'non'}
-]
+// let garbage = [
+//   {name : 'apple' , type : 'bio'} ,
+//   { name : 'banana' , type : 'bio' },
+//   {name : 'can' , type : 'non'},
+//   {name : 'coke' , type : 'non'},
+//   {name : 'egg' , type : 'bio'},
+//   {name : 'fish' , type : 'bio'},
+//   {name : 'plastic' , type : 'non'},
+//   {name : 'melon' , type : 'bio'},
+//   {name  : 'tv' , type : 'non'}
+// ]
 
 
 
@@ -124,24 +152,32 @@ function updateScore(){
 
 function checkGarbage(){
   img = this.event.target;
-  if(img.classList.contains('non')){
+  let classes = img.classList
+  let res = verifyGarbage(classes[classes.length-1])
+  if(res){
 
     img.classList.add('drop');
     setTimeout(()=>{
       img.style.zIndex = '-1';
     },600)
 
-    score +=10;
+
     updateScore();
 
     non +=1;
-    if(non == 4){
+    let totalNon=0;
+    garbage.forEach((item, i) => {
+      if(item.type == 'non'){
+        totalNon+=1;
+      }
+    });
+
+    if(non == totalNon){
       showWinner();
     }
   }
 
   else{
-    score -=5;
     updateScore();
     showError();
   }

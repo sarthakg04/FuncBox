@@ -6,12 +6,7 @@ import "./SalesPage.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import ClassSelector from "./ClassSelector";
-// import kids from './assets/kids.svg'
-// import box from './assets/boxsvg.svg'
-// import van from './assets/van.svg'
-// import new_pic from './assets/new.svg'
-// import check from './assets/check.svg'
-// import house from './assets/house.svg'
+
 
 export default function SalesPage() {
   const { token } = useAuth();

@@ -1,5 +1,5 @@
+// let units = ['mm', 'cm', 'dm', 'm', 'dam', 'hm', 'km'] // Donot alter this array
 // fillBackground('hills')
-// let units = ['mm', 'cm', 'dm', 'm', 'dam', 'hm', 'km']
 // createInputBox()
 // createSubmitButton()
 // setCat()
@@ -9,33 +9,15 @@
 // showValue()
 // createInteractionPad()
 // createRefreshButton()
-// function Convert(){
-//     switch(unit) {
-//         case 'mm':
-//             measure_in_mm = value_entered;
-//             break;
-//         case 'cm':
-//             measure_in_mm = value_entered * 10;
-//             break;
-//         case 'dm':
-//             measure_in_mm = value_entered * 100;
-//             break;
-//         case 'm':
-//             measure_in_mm = value_entered * 1000;
-//             break;
-//         case 'dam':
-//             measure_in_mm = value_entered * 10000;
-//             break;
-//         case 'hm':
-//             measure_in_mm = value_entered * 100000;
-//             break;
-//         case 'km':
-//             measure_in_mm = value_entered * 1000000;
-//             break;
-//         default:
-//             // kids wish
-//     }
+// function StepUp(){
+//     value_entered /= 10
+//     return value_entered
 // }
+// function StepDown(){
+//     value_entered *= 10
+//     return value_entered
+// }
+
 
 
 let Phone = document.createElement('div')
@@ -48,7 +30,6 @@ let InteractionPad = document.createElement('div')
 let cat_bg = document.createElement('div')
 
 
-// let units = ['mm', 'cm', 'dm', 'm', 'dam', 'hm', 'km']
 
 
 
@@ -96,6 +77,7 @@ function createSubmitButton(){
     GamePad.appendChild(step_div)
 
 }
+
 
 
 function setCat(){
@@ -172,23 +154,37 @@ function Up(){
         // console.log(cat_bg.style.right)
         cat.style.transform = 'scaleX(1)'
         
+        let value_div = document.querySelector('.Value')
+
+        
+        let temp = StepUp()
+        // console.log(temp.countDecimals())
+
+        if(temp.countDecimals() >= 5){
+            value_div.innerHTML = StepUp().toFixed(15)
+        }
+        else{
+            value_div.innerHTML = StepUp()
+        }
+        
     }
-    step = Math.abs(( current_cat_top - 310 ) / 20 )
+    // step = Math.abs(( current_cat_top - 310 ) / 20 )
 
 
-    for( i=0;i<step;i++){
-        temp = temp * 10
-    }
+    // for( i=0;i<step;i++){
+    //     temp = temp * 10
+    // }
 
-    let value_div = document.querySelector('.Value')
 
     // console.log(measure_in_mm,temp)
-    value_div.innerHTML = measure_in_mm/temp
+    // let step_value = measure_in_mm/temp
 
+    
 
-    temp = 1
+    // temp = 1
 
 }
+
 
 
 function Down(){
@@ -203,20 +199,48 @@ function Down(){
         cat.style.top = current_cat_top + 'px'
         cat.style.right = current_cat_left + 'px'
         cat.style.transform = 'scaleX(-1)'
+
+        let value_div = document.querySelector('.Value')
+
+        let temp = StepDown()
+        // console.log(temp.countDecimals())
+
+        if(temp.countDecimals() >= 5){
+            value_div.innerHTML = StepDown().toFixed(15)
+        }
+        else{
+            value_div.innerHTML = StepDown()
+        }
+        
+
     }
-    step = Math.abs(( current_cat_top - 310 ) / 20 )
+    // step = Math.abs(( current_cat_top - 310 ) / 20 )
 
     
-    for( i=0;i<step;i++){
-        temp = temp * 10
-    }
+    // for( i=0;i<step;i++){
+    //     temp = temp * 10
+    // }
 
-    let value_div = document.querySelector('.Value')
+    // let value_div = document.querySelector('.Value')
 
-    // console.log(measure_in_mm,temp)
-    value_div.innerHTML = measure_in_mm/temp
+    // // console.log(measure_in_mm,temp)
+    // value_div.innerHTML = measure_in_mm/temp
     
-    temp = 1
+    // temp = 1
+}
+
+
+Number.prototype.countDecimals = function () {
+
+    if (Math.floor(this.valueOf()) === this.valueOf()) return 0;
+
+    var str = this.toString();
+    if (str.indexOf(".") !== -1 && str.indexOf("-") !== -1) {
+        return str.split("-")[1] || 0;
+    } else if (str.indexOf(".") !== -1) {
+        return str.split(".")[1].length || 0;
+    }
+    return str.split("-")[1] || 0;
 }
 
 function submit(){
@@ -228,6 +252,76 @@ function submit(){
 
     value_entered = e.value
 
+    // console.log(value_entered)
+
     Convert()
 
+}
+
+let value_entered
+
+
+function Convert(){
+    let value_div = document.querySelector('.Value')
+    let cat = document.querySelector('.cat_bg')
+    switch(unit) {
+        case 'mm':
+            current_cat_top = 310
+            current_cat_left = 330
+            cat.style.top = current_cat_top + 'px'
+            cat.style.right = current_cat_left + 'px'
+            measure_in_mm = value_entered;
+            value_div.innerHTML = value_entered
+            break;
+        case 'cm':
+            current_cat_top = 290
+            current_cat_left = 220
+            cat.style.top = current_cat_top + 'px'
+            cat.style.right = current_cat_left + 'px'
+            measure_in_mm = value_entered * 10;
+            value_div.innerHTML = value_entered
+            break;
+        case 'dm':
+            current_cat_top = 270
+            current_cat_left = 110
+            cat.style.top = current_cat_top + 'px'
+            cat.style.right = current_cat_left + 'px'
+            measure_in_mm = value_entered * 100;
+            value_div.innerHTML = value_entered
+            break;
+        case 'm':
+            current_cat_top = 250
+            current_cat_left = 0
+            cat.style.top = current_cat_top + 'px'
+            cat.style.right = current_cat_left + 'px'
+            measure_in_mm = value_entered * 1000;
+            value_div.innerHTML = value_entered
+            break;
+        case 'dam':
+            current_cat_top = 230
+            current_cat_left = -110
+            cat.style.top = current_cat_top + 'px'
+            cat.style.right = current_cat_left + 'px'
+            measure_in_mm = value_entered * 10000;
+            value_div.innerHTML = value_entered
+            break;
+        case 'hm':
+            current_cat_top = 210
+            current_cat_left = -220
+            cat.style.top = current_cat_top + 'px'
+            cat.style.right = current_cat_left + 'px'
+            measure_in_mm = value_entered * 100000;
+            value_div.innerHTML = value_entered
+            break;
+        case 'km':
+            current_cat_top = 190
+            current_cat_left = -330
+            cat.style.top = current_cat_top + 'px'
+            cat.style.right = current_cat_left + 'px'
+            measure_in_mm = value_entered * 1000000;
+            value_div.innerHTML = value_entered
+            break;
+        default:
+            // kids wish
+    }
 }

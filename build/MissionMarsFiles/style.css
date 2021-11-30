@@ -29,6 +29,18 @@ body {
   background-size: cover;
 }
 
+.ocean_bg {
+  background: url('./assets/ocean_bg.png') no-repeat center;
+  background-position: center;
+  background-size: cover;
+}
+
+.garden_bg {
+  background: url('./assets/garden_bg.png') no-repeat center;
+  background-position: center;
+  background-size: cover;
+}
+
 .score {
   margin: 2px;
   padding: 8px;
@@ -72,7 +84,7 @@ body {
 .grid div {
   box-sizing: border-box;
   margin: 0;
-  /* border : 1px solid */
+  /* border: 1px solid; */
 }
 
 .rocks {
@@ -87,6 +99,23 @@ body {
   background: url('../MissionMarsFiles/assets/BadRock.svg') no-repeat center;
 }
 
+.treasurebox {
+  background: url('../MissionMarsFiles/assets/treasure_box.png') no-repeat
+    center;
+}
+
+.monsterbox {
+  background: url('../MissionMarsFiles/assets/monster_box.png') no-repeat center;
+}
+
+.goodclouds {
+  background: url('../MissionMarsFiles/assets/good_cloud.png') no-repeat center;
+}
+
+.badclouds {
+  background: url('../MissionMarsFiles/assets/bad_cloud.png') no-repeat center;
+}
+
 .wasterocks1 {
   background: url('../MissionMarsFiles/assets/WasteRock-2.svg') no-repeat center;
 }
@@ -97,6 +126,20 @@ body {
 
 .rover {
   background: url('../MissionMarsFiles/assets/Rover.svg') no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100%;
+}
+
+.human {
+  background: url('../MissionMarsFiles/assets/human.png') no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100%;
+}
+
+.submarine {
+  background: url('../MissionMarsFiles/assets/submarine.png') no-repeat;
   background-position: center;
   background-size: contain;
   height: 100%;
