@@ -53,7 +53,8 @@ import Decimal from "./Games/DecimalGame/DecimalGame";
 import SubscriptionPage from "./Subscriptions/SubscriptionPage";
 import StepMeasure from "./Games/StepMeasureGame/StepMeasure";
 import Calculator2Game from "./Games/Calculator2/Calculator2";
-import AreaGame from "./Games/AreaGame/AreaGame"
+import AreaGame from "./Games/AreaGame/AreaGame";
+import Mrfraction from "./Games/MrFraction/MrFraction";
 
 function App() {
   const dispatch = useDispatch();
@@ -126,7 +127,7 @@ function App() {
           <Route exact path="/FlappyGame" component={FlappyGame} />
           <Route exact path="/CashierGame" component={CashierGame} />
           <Route exact path="/Photosynthesis" component={Photosynthesis} />
-
+          <Route exact path="/mrfraction" component={Mrfraction} />
           <Route
             exact
             path="/TemperatureConversions"

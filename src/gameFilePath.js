@@ -30,6 +30,7 @@ module.exports = {
     39: "FlappyGameFiles",
     40: "StepMeasureGameFiles",
     41: "Calculator2GameFiles",
-    42: "AreaGameFiles"
+    42: "MrFractionGameFiles",
+    43: "AreaGameFiles",
   },
 };
