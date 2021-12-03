@@ -55,6 +55,7 @@ import StepMeasure from "./Games/StepMeasureGame/StepMeasure";
 import Calculator2Game from "./Games/Calculator2/Calculator2";
 import AreaGame from "./Games/AreaGame/AreaGame";
 import Mrfraction from "./Games/MrFraction/MrFraction";
+import Demo from "./Games/DemoEditor/DemoEditor"
 
 function App() {
   const dispatch = useDispatch();
@@ -146,6 +147,7 @@ function App() {
           <Route exact path="/animalhome" component={AnimalHomeGame} />
           <Route exact path="/calculator2" component={Calculator2Game} />
           <Route exact path="/AreaGame" component={AreaGame} />
+          <Route exact path="/Demo" component={Demo} />
 
           <Route exact path="/UserNavbar" component={UserNavbar} />
           <Route exact path="/Login" component={Login} />
