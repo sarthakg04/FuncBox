@@ -1,9 +1,9 @@
 import React from "react";
 import GameContainer from "../GameContainer/GameContainer";
-export default function HitItGame() {
+export default function Mrfraction() {
   return (
     <div>
-      <GameContainer gid={43} />
+      <GameContainer gid={42} />
     </div>
   );
 }

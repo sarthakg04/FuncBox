@@ -231,7 +231,7 @@ body {
   background-image: url('./assets/bg__2.png');
 }
 
-.GamePad__2 {
+.GamePad_Game_2 {
   width: 350px;
   height: 400px;
   /* border: 1px solid black;
@@ -341,7 +341,7 @@ body {
 
 /* Game 3 CSS */
 
-.Phone___bg___3 {
+.Phone_Game_3_bg {
   background-image: url('./assets/bg___3.png');
 }
 

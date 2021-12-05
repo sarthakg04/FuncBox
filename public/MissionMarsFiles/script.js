@@ -10,6 +10,14 @@
 // createRestartButton()
 // let penalty = 1
 // function CheckLogic(){
+//  if( good_items_scanned ){
+//     good_scan = true
+//     bad_scan = false
+//   }
+//   else if( bad_items_scanned ){
+//     good_scan = false
+//     bad_scan = true
+//   }
 //   if( good_scan ) {
 //       Score += penalty;
 //     }
@@ -272,7 +280,8 @@ function MoveRight() {
     }
 }
 
-
+let bad_items_scanned
+let good_items_scanned
 //
 
 //
@@ -303,8 +312,11 @@ function ScanObject() {
     // leftButton.disabled = false;
     // rightButton.disabled = false;
     // Score++;
-    bad_scan = squares[currentRoverPosition].classList.contains('bad')
-    good_scan = squares[currentRoverPosition].classList.contains('good')
+    // bad_scan = squares[currentRoverPosition].classList.contains('bad')
+    // good_scan = squares[currentRoverPosition].classList.contains('good')
+    bad_items_scanned = squares[currentRoverPosition].classList.contains('bad')
+    good_items_scanned = squares[currentRoverPosition].classList.contains('good')
+    
     CheckLogic()
     if( good_scan ) {
       goodItemsScanned += penalty;
