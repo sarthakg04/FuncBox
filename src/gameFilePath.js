@@ -32,5 +32,7 @@ module.exports = {
     41: "Calculator2GameFiles",
     42: "MrFractionGameFiles",
     43: "AreaGameFiles",
+    44: "DemoEditor",
+    45: "WeightUnitConversions"
   },
 };
