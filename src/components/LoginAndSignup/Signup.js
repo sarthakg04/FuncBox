@@ -75,40 +75,37 @@ export default function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const body = { email, fName, lName, standard, password, confirmPassword };
-      const response = await fetch(
-        `${
-          process.env.NODE_ENV === "production"
-            ? apiurl
-            : "http://localhost:5000"
-        }/auth/register`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(body),
-          credentials: "include",
-        }
-      );
 
-      const parseRes = await response.json();
-      // console.log("conosle" + parseRes);
-      if (parseRes.token) {
-        dispatch(setAuth({ isAuthenticated: true }));
-        dispatch(
-          setUser({
-            username: details.fName + " " + details.lName,
-            userid: parseRes.userid,
-          })
-        );
-        dispatch(setToken({ token: parseRes.token }));
-        toast.success("You are ready to go");
-        history.push("/Welcome");
-      } else {
-        toast.error(parseRes);
+    const body = { email, fName, lName, standard, password, confirmPassword };
+    const response = await fetch(
+      `${
+        process.env.NODE_ENV === "development"
+          ? apiurl
+          : "https://server.funcbox.in"
+      }/auth/register`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
       }
-    } catch (err) {
-      console.log(err.message);
+    );
+
+    console.log(response);
+    const parseRes = await response.json();
+    console.log("console   " + JSON.stringify(parseRes));
+    if (parseRes.token) {
+      dispatch(setAuth({ isAuthenticated: true }));
+      dispatch(
+        setUser({
+          username: details.fName + " " + details.lName,
+          userid: parseRes.userid,
+        })
+      );
+      dispatch(setToken({ token: "Bearer " + parseRes.token }));
+      toast.success("You are ready to go");
+      history.push("/Welcome");
+    } else {
+      toast.error(parseRes);
     }
   };
 
