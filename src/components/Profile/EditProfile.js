@@ -77,7 +77,7 @@ export default function EditProfile(props) {
 
     const res = await fetch(
       `${
-        process.env.NODE_ENV === "development" ? apiurl : "http://localhost:5000"
+        process.env.NODE_ENV === "development" ? apiurl : "https://server.funcbox.in"
       }/editprofile/edit`,
       {
         method: "PUT",
