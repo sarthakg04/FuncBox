@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./ClassSelector.css";
-function ClassSelector({ open, onSubmit, onCancel }) {
+function ClassSelector({ plan, open, onSubmit, onCancel }) {
   const [value, setValue] = useState("1");
   return (
     <div className="class_selection_modal">
       <label htmlFor="class_selection" style={{ margin: "20px" }}>
+        <p>Selected Plan : {plan.toUpperCase()}</p>
         <h2>Select Class</h2>
       </label>
       <select

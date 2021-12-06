@@ -374,6 +374,7 @@ export default function SalesPage() {
         <>
           <div className="class_selection_overlay"></div>
           <ClassSelector
+            plan={plan}
             onCancel={() => {
               setPlan("");
               setModalOpen(false);
