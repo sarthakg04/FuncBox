@@ -3,7 +3,6 @@ import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import "./EditProfile.css";
 
-
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
@@ -14,6 +13,7 @@ import {
   // setUser
 } from "../../auth/authslice";
 import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 // const { fname, lname, caddress, pincode, age, dob, std, phone } = req.body;
 
@@ -25,7 +25,7 @@ export default function EditProfile(props) {
   const [number, setNumber] = useState("");
   const [add, setAdd] = useState("test");
   const [dob, setDob] = useState("2021-10-21");
-  const [avatar, setAvatar] = useState('avatars/tiger1.png');
+  const [avatar, setAvatar] = useState("avatars/tiger1.png");
   const [std, setStd] = useState(3);
   const history = useHistory();
   const dispatch = useDispatch();
@@ -46,7 +46,6 @@ export default function EditProfile(props) {
       );
       const data = await res.json();
 
-
       const userData = data[0][0];
       dispatch(setToken({ token: "Bearer " + data[1].token }));
 
@@ -58,7 +57,7 @@ export default function EditProfile(props) {
       setDob(userData.dob || d.substring(0, d.indexOf("T")));
       setAdd(userData.caddress || "");
       setStd(userData.class || 1);
-      setAvatar(userData.avatar || avatar)
+      setAvatar(userData.avatar || avatar);
     }
     getData();
   }, []);
@@ -72,12 +71,14 @@ export default function EditProfile(props) {
       caddress: add,
       dob: dob,
       std: std,
-      avatar : avatar
+      avatar: avatar,
     };
 
     const res = await fetch(
       `${
-        process.env.NODE_ENV === "development" ? apiurl : "https://server.funcbox.in"
+        process.env.NODE_ENV === "development"
+          ? apiurl
+          : "https://server.funcbox.in"
       }/editprofile/edit`,
       {
         method: "PUT",
@@ -91,7 +92,8 @@ export default function EditProfile(props) {
     const data = await res.json();
 
     if (data === "updated") {
-      alert("Your Account is updated");
+      dispatch(setUser({ username: fname + " " + lname }));
+      toast.success("Your Account is updated");
       history.push("/Welcome");
     }
   }
@@ -227,18 +229,56 @@ export default function EditProfile(props) {
           <img src={avatar} alt="" className="avatar__h" />
           <p>Update Avatar</p>
           <div className="avatars">
-            <img src='avatars/dog.png' alt="" onClick={()=>setAvatar('avatars/dog.png')}/>
-            <img src='avatars/crocodile.png' alt="" onClick={()=>setAvatar('avatars/crocodile.png')}/>
-            <img src='avatars/edu2.png' alt="" onClick={()=>setAvatar('avatars/edu2.png')}/>
-            <img src='avatars/elephant.png' alt="" onClick={()=>setAvatar('avatars/elephant.png')}/>
-            <img src='avatars/graduation.png' alt="" onClick={()=>setAvatar('avatars/graduation.png')}/>
-            <img src='avatars/student2.png' alt="" onClick={()=>setAvatar('avatars/student2.png')}/>
-            <img src='avatars/student3.png' alt="" onClick={()=>setAvatar('avatars/student3.png')}/>
-            <img src='avatars/studying.png' alt="" onClick={()=>setAvatar('avatars/studying.png')}/>
-            <img src='avatars/tiger1.png' alt="" onClick={()=>setAvatar('avatars/tiger1.png')}/>
-            <img src='avatars/tiger2.png' alt="" onClick={()=>setAvatar('avatars/tiger2.png')}/>
-
-
+            <img
+              src="avatars/dog.png"
+              alt=""
+              onClick={() => setAvatar("avatars/dog.png")}
+            />
+            <img
+              src="avatars/crocodile.png"
+              alt=""
+              onClick={() => setAvatar("avatars/crocodile.png")}
+            />
+            <img
+              src="avatars/edu2.png"
+              alt=""
+              onClick={() => setAvatar("avatars/edu2.png")}
+            />
+            <img
+              src="avatars/elephant.png"
+              alt=""
+              onClick={() => setAvatar("avatars/elephant.png")}
+            />
+            <img
+              src="avatars/graduation.png"
+              alt=""
+              onClick={() => setAvatar("avatars/graduation.png")}
+            />
+            <img
+              src="avatars/student2.png"
+              alt=""
+              onClick={() => setAvatar("avatars/student2.png")}
+            />
+            <img
+              src="avatars/student3.png"
+              alt=""
+              onClick={() => setAvatar("avatars/student3.png")}
+            />
+            <img
+              src="avatars/studying.png"
+              alt=""
+              onClick={() => setAvatar("avatars/studying.png")}
+            />
+            <img
+              src="avatars/tiger1.png"
+              alt=""
+              onClick={() => setAvatar("avatars/tiger1.png")}
+            />
+            <img
+              src="avatars/tiger2.png"
+              alt=""
+              onClick={() => setAvatar("avatars/tiger2.png")}
+            />
           </div>
         </div>
       </div>
