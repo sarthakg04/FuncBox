@@ -67,6 +67,29 @@ function WelcomePage() {
         "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/incredibles_4ErvfoQcfAhI.png?updatedAt=1633935134605",
       path: "/IncrediblesGame",
     },
+    {
+      name: "Avengers",
+      img_src:
+        "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/molegame_ndPOWyaTu.png?updatedAt=1633932817320",
+      path: "/AvengersGame",
+    },
+    {
+      name: "Incredibles",
+      img_src:
+        "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/incredibles_4ErvfoQcfAhI.png?updatedAt=1633935134605",
+      path: "/IncrediblesGame",
+    },{
+      name: "Avengers",
+      img_src:
+        "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/molegame_ndPOWyaTu.png?updatedAt=1633932817320",
+      path: "/AvengersGame",
+    },
+    {
+      name: "Incredibles",
+      img_src:
+        "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/incredibles_4ErvfoQcfAhI.png?updatedAt=1633935134605",
+      path: "/IncrediblesGame",
+    },
   ];
 
   return (
