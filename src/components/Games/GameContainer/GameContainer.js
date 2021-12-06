@@ -12,17 +12,21 @@ import { unhash } from "../../../features/hasher";
 import { useHistory } from "react-router-dom";
 import GameUnAuthorized from "../../GameUnAuthorized/GameUnAuthorized";
 import { toast } from "react-toastify";
-function GameContainer({ gid }) {
+function GameContainer({ gid, location }) {
   const [js, setJs] = useState();
   const [srcDoc, setSrcDoc] = useState("");
   const { isAuthenticated, token, userid } = useAuth();
   const [gAccess, setGAccess] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [qrSrc, setQrSrc] = useState("");
   const dispatch = useDispatch();
+  const path = location;
   const gamePath = filepath[gid];
   const history = useHistory();
   const apiurl = process.env.REACT_APP_API_URL;
+  useEffect(() => {
+    console.log(location);
+  }, [location]);
   function toggleQr() {
     document.getElementById("qr").classList.toggle("active");
   }
@@ -74,15 +78,15 @@ function GameContainer({ gid }) {
       } else {
         // console.log(gres);
       }
-      // const gaccess = await gres.json();
-      let gaccess = {
-        token: "token",
-        gAcess: true,
-      };
+      const gaccess = await gres.json();
+      // let gaccess = {
+      //   token: "token",
+      //   gAcess: true,
+      // };
       // console.log("gAccess = ", gaccess);
       if (gaccess === "Not Authorize 1") {
         toast.error("You are not logged in!", { pauseOnHover: false });
-        history.push("/login");
+        history.push({ pathname: "/login", state: { prev: location } });
       }
 
       dispatch(setToken({ token: "Bearer " + gaccess.token }));

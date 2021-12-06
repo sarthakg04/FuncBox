@@ -21,7 +21,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 
-export default function Login() {
+export default function Login(props) {
   const history = useHistory();
   let cardPosion = [0, 1, 2, 3, 4, 5, 6];
   let images = document.getElementsByClassName("item");
@@ -29,10 +29,15 @@ export default function Login() {
   const apiurl = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
+    console.log(props.location);
     if (isAuthenticated) {
       console.log("Authenticated");
       toast.success("You are logged in");
-      history.push("/Welcome");
+      if (props.location.state && props.location.state.prev) {
+        history.goBack();
+      } else {
+        history.push("/Welcome");
+      }
     } else {
       console.log("Not authenticated");
     }
