@@ -1,3 +1,16 @@
+//Frontend Functions
+// let numOfQuestions=2
+// function calculateProfit(price, option) {
+//   let diff = option - price;
+//   let profit = (diff * 100) / price;
+//   showProfit(profit);
+// }
+// createBackground()
+// fillBackground()
+// createItemDisplayBox()
+// createProfitBox()
+// generateItems(numOfQuestions)
+// showQuestions()
 const imageLinks = {
   bg: "https://ik.imagekit.io/funcboxImages/PawnShopGame_assets/bg_ZfPbcwIiNsF.png?updatedAt=1638817367425",
   robo: "https://ik.imagekit.io/funcboxImages/PawnShopGame_assets/robo_nMHLLBSC-Mw5.png?updatedAt=1638818049740",
