@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Fira+Code:wght@600&family=Hanalei+Fill&family=Lakki+Reddy&family=Uncial+Antiqua&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.GamePad {
+  width: 400px;
+  height: 535px;
+  /* border: solid black 1px; */
+  margin: auto;
+  position: relative;
+  /* background-image: url('../MissionMarsFiles/assets/backgrounds/Frame.png'); */
+
+  padding-top: 1px;
+  /* background-position: center; */
+  background-size: cover;
+  position: relative;
+  /* background: red; */
+}

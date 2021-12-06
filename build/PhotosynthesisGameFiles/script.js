@@ -1,22 +1,43 @@
 // Frontend Functions for Test for Game 1
-// createBackground1()
+
+// fillBackground('Game_1')
 // createRays()
 // createCloud()
 // createPlant1()
 // createInteractionPad1()
+// function CheckHit(ray_position){
+//     if( ray_position <= mountain_place ){
+//         rays_hit++
+//     }
+// }
+
 
 // Frontend Functions for Test for Game 2
-// createBackground2()
-// createClouds2()
+
+
+// let num_of_clouds = 9
+// fillBackground('Game_2')
+// createCloudGrid()
+// for(i=0;i<num_of_clouds;i++){
+//     createCloud_Game_2()
+// }
+
 // createShooter2()
 // createInteractionPad2()
+// function CheckLogic(){
+//     if(cloud_hit === true){
+//         hit__count++
+//     }
+// }
 
 
 // Frontend Functions for Test for Game 3
-// createBackground3()
+
+// fillBackground('Game_3')
 // createClouds2()
 // createShooter2()
 // createInteractionPad3()
+
 
 let Phone
 let GamePad
@@ -60,14 +81,15 @@ let ray_2_current_postion = 4
 let ray_3_current_postion = 4
 let ray_4_current_postion = 5
 
+
 // Frontend functions Game 1
 
-function createBackground1() {
+function fillBackground(bg) {
     Phone = document.createElement('div')
     Phone.classList.add('Phone')
-    Phone.classList.add('Phone_Game_1_bg')
-    GamePad = document.createElement('div')    
-    GamePad.classList.add('GamePad')
+    Phone.classList.add('Phone_'+bg+'_bg')
+    GamePad = document.createElement('div')
+    GamePad.classList.add('GamePad_'+bg)
     document.body.appendChild(Phone)
     Phone.appendChild(GamePad)
 }
@@ -207,35 +229,40 @@ let shooter__grid__squares
 
 // Frontend functions Game 1
 
-function createBackground2() {
-    Phone = document.createElement('div')
-    Phone.classList.add('Phone')
-    Phone.classList.add('Phone_Game_2_bg')
-    GamePad = document.createElement('div')    
-    GamePad.classList.add('GamePad__2')
-    document.body.appendChild(Phone)
-    Phone.appendChild(GamePad)
-}
 
-function createClouds2(){
+function createCloudGrid(){
     clouds__grid = document.createElement('div')
     clouds__grid.classList.add('clouds__grid')
 
     
-    for(i=0;i<15;i++){
-        let cloud__div = document.createElement('div')
-        cloud__div.classList.add('cloud__div')
-        if(i<9){
-            cloud__div.classList.add('cloud__bg')
-        }
-
-        clouds__grid.appendChild(cloud__div)
-    }
+    
 
     GamePad.appendChild(clouds__grid)
 }
 
+// for(i=0;i<9;i++){
+//     createCloud_Game_2()
+// }
+
+function createCloud_Game_2(){
+    let cloud__div = document.createElement('div')
+    cloud__div.classList.add('cloud__div')
+    
+    cloud__div.classList.add('cloud__bg')
+
+    clouds__grid.appendChild(cloud__div)
+}
+
 function createShooter2(){
+
+    for(i=0;i < 15 - num_of_clouds ;i++){
+        let cloud__div = document.createElement('div')
+        cloud__div.classList.add('cloud__div')
+        clouds__grid.appendChild(cloud__div)
+    }
+    
+    GamePad.appendChild(clouds__grid)
+
     shooter__grid = document.createElement('div')
     shooter__grid.classList.add('shooter__grid')
     
@@ -301,6 +328,7 @@ let buttons___squares
 
 let InteractionPad___3
 
+
 function createBackground3() {
     Phone = document.createElement('div')
     Phone.classList.add('Phone')
@@ -334,7 +362,7 @@ function createBubbles(){
         }
         bubble_button.onclick = function () {
             if(bubble_button.classList.contains('co2_bg')){
-                co2_hit++
+                onClickingCo2()
                 // console.log(co2_hit)
                 bubble_button.classList.remove('co2_bg')
                 bubble_button.classList.add('co2_active_bg')
@@ -375,6 +403,7 @@ function createInteractionPad3(){
 
 // Backend Functions of Game 1
 
+let mountain_place = 0
 
 function ray_1_move(){
     ray_1_grid_squares[ray_1_current_postion].classList.remove('ray_bg')
@@ -384,7 +413,7 @@ function ray_1_move(){
             ray_1_grid_squares[ray_1_current_postion].classList.add('ray_bg')
         }
         else{
-            rays_hit++
+            CheckHit(ray_1_current_postion)
             check()
             ray_1_current_postion = 4
             ray_1_grid_squares[ray_1_current_postion].classList.add('ray_bg')
@@ -401,12 +430,14 @@ function ray_1_move(){
 }
 
 
+
 function ray_2_move(){
     ray_2_grid_squares[ray_2_current_postion].classList.remove('ray_bg')
     if( ray_2_current_postion <= 0 ){
+        CheckHit(ray_2_current_postion)
         ray_2_current_postion = 4
         ray_2_grid_squares[ray_2_current_postion].classList.add('ray_bg')
-        rays_hit++
+        // rays_hit++
         check()
         // console.log(rays_hit)
     }
@@ -427,9 +458,10 @@ function ray_2_move(){
 function ray_3_move(){
     ray_3_grid_squares[ray_3_current_postion].classList.remove('ray_bg')
     if( ray_3_current_postion <= 0 ){
+        CheckHit(ray_3_current_postion)
         ray_3_current_postion = 4
         ray_3_grid_squares[ray_3_current_postion].classList.add('ray_bg')
-        rays_hit++
+        // rays_hit++
         check()
         // console.log(rays_hit)
     }
@@ -450,9 +482,10 @@ function ray_3_move(){
 function ray_4_move(){
     ray_4_grid_squares[ray_4_current_postion].classList.remove('ray_bg')
     if( ray_4_current_postion <= 0 ){
+        CheckHit(ray_4_current_postion)
         ray_4_current_postion = 5
         ray_4_grid_squares[ray_4_current_postion].classList.add('ray_bg')
-        rays_hit++
+        // rays_hit++
         check()
         // console.log(rays_hit)
     }
@@ -556,9 +589,11 @@ function Move__right(){
     }
 }
 
+let cloud_hit
+
 function Shoot(){
     
-    if( shoot__count <= 10 ){
+    if( shoot__count <= num_of_clouds+1 ){
         
         clouds__grid__squares[current__bullet__position].classList.remove('bullet__bg')
 
@@ -571,11 +606,14 @@ function Shoot(){
         else{
             current__bullet__position = current__bullet__position - 3
         }
+        
+        cloud_hit = clouds__grid__squares[current__bullet__position].classList.contains('cloud__bg')
 
         if( clouds__grid__squares[current__bullet__position].classList.contains('cloud__bg') ){
             clouds__grid__squares[current__bullet__position].classList.remove('cloud__bg')
-            hit__count++
-            if( hit__count === 9 ){
+            // hit__count++
+            CheckLogic()
+            if( hit__count === num_of_clouds ){
 
                 clouds__grid__squares[current__bullet__position].classList.remove('bullet__bg')
 
@@ -622,6 +660,7 @@ function Shoot(){
     }
 
 }
+
 
 function Finish__() {
 
@@ -686,9 +725,9 @@ function Start(){
 
         Time++
         // console.log(Time)
-        Timer.innerHTML = `${10 - Time}`
+        Timer.innerHTML = `${time_limit - Time}`
 
-        if( Time < 10 ){
+        if( Time < time_limit ){
             setTimeout(Start, 1000)
         }
         else{
@@ -707,13 +746,9 @@ function Start(){
             Start_btn.disabled = true
 
             // bubbles___grid.style.display = 'none'
+            
             if( co2_hit === co2_count ){
-                Time = 0
-                // console.log('Winner!')
-                bubbles___grid.style.display = 'none'
-                Phone.classList.remove('Phone___bg___3')
-                Phone.classList.add('Phone___bg___3__happy')
-
+                CheckLogic()
             }
             else{
                 Time = 0
@@ -727,4 +762,14 @@ function Start(){
             }
         }
     }, 1000);
+}
+
+
+
+function HappyPlant(){
+    Time = 0
+    // console.log('Winner!')
+    bubbles___grid.style.display = 'none'
+    Phone.classList.remove('Phone___bg___3')
+    Phone.classList.add('Phone___bg___3__happy')
 }

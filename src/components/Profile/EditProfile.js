@@ -3,17 +3,7 @@ import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import "./EditProfile.css";
 
-import claw from "./assets/claw.svg";
-import crocodile from "./assets/crocodile.png";
-import edu2 from "./assets/edu2.png";
-import elephant from "./assets/elephant.png";
-import graduation from "./assets/graduation.png";
-import student2 from "./assets/student2.png";
-import student3 from "./assets/student3.png";
-import studying from "./assets/studying.png";
-import tiger1 from "./assets/tiger1.png";
-import tiger2 from "./assets/tiger2.png";
-import dog from "./assets/dog.png";
+
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
@@ -35,14 +25,13 @@ export default function EditProfile(props) {
   const [number, setNumber] = useState("");
   const [add, setAdd] = useState("test");
   const [dob, setDob] = useState("2021-10-21");
-  const [avatar, setAvatar] = useState(claw);
+  const [avatar, setAvatar] = useState('avatars/tiger1.png');
   const [std, setStd] = useState(3);
   const history = useHistory();
   const dispatch = useDispatch();
   const apiurl = process.env.REACT_APP_API_URL;
   useEffect(() => {
     async function getData() {
-      console.log(token);
       const res = await fetch(
         `${
           process.env.NODE_ENV === "development"
@@ -56,7 +45,7 @@ export default function EditProfile(props) {
         }
       );
       const data = await res.json();
-      console.log(data);
+
 
       const userData = data[0][0];
       dispatch(setToken({ token: "Bearer " + data[1].token }));
@@ -69,6 +58,7 @@ export default function EditProfile(props) {
       setDob(userData.dob || d.substring(0, d.indexOf("T")));
       setAdd(userData.caddress || "");
       setStd(userData.class || 1);
+      setAvatar(userData.avatar || avatar)
     }
     getData();
   }, []);
@@ -82,11 +72,12 @@ export default function EditProfile(props) {
       caddress: add,
       dob: dob,
       std: std,
+      avatar : avatar
     };
-    console.log(reqBody);
+
     const res = await fetch(
       `${
-        process.env.NODE_ENV === "production" ? apiurl : "http://localhost:5000"
+        process.env.NODE_ENV === "development" ? apiurl : "http://localhost:5000"
       }/editprofile/edit`,
       {
         method: "PUT",
@@ -236,27 +227,18 @@ export default function EditProfile(props) {
           <img src={avatar} alt="" className="avatar__h" />
           <p>Update Avatar</p>
           <div className="avatars">
-            {/*<img src={dog} alt="" onClick={setAvatar(dog)}/>
-            <img src={crocodile} alt="" onClick={setAvatar(crocodile)}/>
-            <img src={edu2} alt="" onClick={setAvatar(edu2)}/>
-            <img src={elephant} alt="" onClick={setAvatar(elephant)}/>
-            <img src={graduation} alt="" onClick={setAvatar(graduation)}/>
-            <img src={student2} alt="" onClick={setAvatar(student2)}/>
-            <img src={student3} alt="" onClick={setAvatar(student3)}/>
-            <img src={studying} alt="" onClick={setAvatar(studying)}/>
-            <img src={tiger1} alt="" onClick={setAvatar(tiger1)}/>
-            <img src={tiger2} alt="" onClick={setAvatar(tiger2)}/>*/}
+            <img src='avatars/dog.png' alt="" onClick={()=>setAvatar('avatars/dog.png')}/>
+            <img src='avatars/crocodile.png' alt="" onClick={()=>setAvatar('avatars/crocodile.png')}/>
+            <img src='avatars/edu2.png' alt="" onClick={()=>setAvatar('avatars/edu2.png')}/>
+            <img src='avatars/elephant.png' alt="" onClick={()=>setAvatar('avatars/elephant.png')}/>
+            <img src='avatars/graduation.png' alt="" onClick={()=>setAvatar('avatars/graduation.png')}/>
+            <img src='avatars/student2.png' alt="" onClick={()=>setAvatar('avatars/student2.png')}/>
+            <img src='avatars/student3.png' alt="" onClick={()=>setAvatar('avatars/student3.png')}/>
+            <img src='avatars/studying.png' alt="" onClick={()=>setAvatar('avatars/studying.png')}/>
+            <img src='avatars/tiger1.png' alt="" onClick={()=>setAvatar('avatars/tiger1.png')}/>
+            <img src='avatars/tiger2.png' alt="" onClick={()=>setAvatar('avatars/tiger2.png')}/>
 
-            <img src={dog} alt="" />
-            <img src={crocodile} alt="" />
-            <img src={edu2} alt="" />
-            <img src={elephant} alt="" />
-            <img src={graduation} alt="" />
-            <img src={student2} alt="" />
-            <img src={student3} alt="" />
-            <img src={studying} alt="" />
-            <img src={tiger1} alt="" />
-            <img src={tiger2} alt="" />
+
           </div>
         </div>
       </div>
