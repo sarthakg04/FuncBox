@@ -146,6 +146,7 @@
 .salesPage__main .plan-details .heading {
   text-align: center;
   margin-bottom: 0;
+  margin-left: 10%;
 }
 
 .salesPage__main .marquee {
@@ -206,8 +207,19 @@
   margin-top: 8px;
 }
 
-.salesPage__main .plan-container:hover .black {
+.salesPage__main .plan-container.open .black {
   margin-top: -20px;
+}
+.salesPage__main .plan-container.open .open_card_button > img {
+  transform-origin: 50% 50%;
+  transform: rotateZ(180deg);
+}
+
+.salesPage__main .plan-container .open_card_button > img {
+  width: 30px;
+  transition: all 200ms;
+  border-radius: 30%;
+  margin: 0px 20px;
 }
 
 .salesPage__main .payment {
