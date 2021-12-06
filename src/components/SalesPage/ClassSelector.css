@@ -3,7 +3,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 200px;
+  width: min(80vw, 500px);
   height: 200px;
   background-color: white;
   display: flex;
@@ -11,9 +11,31 @@
   justify-content: center;
   flex-direction: column;
   z-index: 1000;
+  padding: 20px;
 }
 .submit_class_button {
   padding: 10px;
-  margin: 20px;
+
   background-color: aqua;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 0.2);
+  border-radius: 10px;
+  width: 40%;
+  font-size: 100%;
+}
+.cancel_button {
+  padding: 10px;
+
+  background-color: red;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 0.2);
+  border-radius: 10px;
+  width: 40%;
+  font-size: 100%;
+}
+.buttons_section {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  height: 50px;
+  justify-content: space-evenly;
+  align-items: center;
 }

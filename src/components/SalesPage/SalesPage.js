@@ -6,7 +6,7 @@ import "./SalesPage.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import ClassSelector from "./ClassSelector";
-
+import { toast } from "react-toastify";
 
 export default function SalesPage() {
   const { token } = useAuth();
@@ -33,6 +33,8 @@ export default function SalesPage() {
     if (std !== "-1" && plan !== "") {
       console.log("Plane name: ", plan, "\nClass : ", std);
       displayRazorPay();
+      setPlan("");
+      setStd("-1");
     }
   }, [std, plan]);
   const displayRazorPay = async () => {
@@ -84,17 +86,13 @@ export default function SalesPage() {
       const rzp1 = new window.Razorpay(options);
       rzp1.open();
     } else {
-      alert("Please Login to Continue");
+      toast.error(parseData);
     }
   };
   const handlePurchase = (planName) => {
     if (plan === "") {
       setPlan(planName);
       setModalOpen(true);
-    } else {
-      alert(
-        "You have already chosen a plan. Refresh the page to reset selection"
-      );
     }
   };
 
@@ -177,6 +175,22 @@ export default function SalesPage() {
               <div className="plan-details red">
                 <div className="heading">
                   <h2>Plan 1</h2>
+                  <button
+                    className="open_card_button"
+                    onClick={(e) => {
+                      let card =
+                        e.currentTarget.parentElement.parentElement
+                          .parentElement;
+                      if (card.classList.contains("open")) {
+                        card.classList.remove("open");
+                      } else card.classList.add("open");
+                    }}
+                  >
+                    <img
+                      src="https://ik.imagekit.io/funcboxImages/SalesPage_assets/down_US4XzQ_hW.png?updatedAt=1638804187777"
+                      alt=""
+                    />
+                  </button>
                 </div>
                 <div className="details">
                   <ul>
@@ -222,6 +236,22 @@ export default function SalesPage() {
               <div className="plan-details yellow">
                 <div className="heading">
                   <h2>Plan 2</h2>
+                  <button
+                    className="open_card_button"
+                    onClick={(e) => {
+                      let card =
+                        e.currentTarget.parentElement.parentElement
+                          .parentElement;
+                      if (card.classList.contains("open")) {
+                        card.classList.remove("open");
+                      } else card.classList.add("open");
+                    }}
+                  >
+                    <img
+                      src="https://ik.imagekit.io/funcboxImages/SalesPage_assets/down_US4XzQ_hW.png?updatedAt=1638804187777"
+                      alt=""
+                    />
+                  </button>
                 </div>
                 <div className="details">
                   <ul>
@@ -263,6 +293,24 @@ export default function SalesPage() {
               <div className="plan-details green">
                 <div className="heading">
                   <h2>Plan 3</h2>
+                  <button
+                    className="open_card_button"
+                    onClick={(e) => {
+                      let card =
+                        e.currentTarget.parentElement.parentElement
+                          .parentElement;
+                      if (card.classList.contains("open")) {
+                        card.classList.remove("open");
+                      } else {
+                        card.classList.add("open");
+                      }
+                    }}
+                  >
+                    <img
+                      src="https://ik.imagekit.io/funcboxImages/SalesPage_assets/down_US4XzQ_hW.png?updatedAt=1638804187777"
+                      alt=""
+                    />
+                  </button>
                 </div>
                 <div className="details">
                   <ul>
@@ -324,13 +372,12 @@ export default function SalesPage() {
       </div>
       {modalOpen && (
         <>
-          <div
-            className="class_selection_overlay"
-            onClick={() => {
+          <div className="class_selection_overlay"></div>
+          <ClassSelector
+            onCancel={() => {
+              setPlan("");
               setModalOpen(false);
             }}
-          ></div>
-          <ClassSelector
             onSubmit={(val) => {
               setStd(val);
               setModalOpen(false);
