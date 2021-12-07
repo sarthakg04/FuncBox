@@ -35,5 +35,6 @@ module.exports = {
     44: "DemoEditor",
     45: "PawnShopGameFiles",
     46: "WeightUnitConversions",
+    47: "CountDraculaGameFiles",
   },
 };
