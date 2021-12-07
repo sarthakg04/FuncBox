@@ -3,19 +3,7 @@ let amount_added = 0
 let change = 0
 let cash_values = [ 100, 50, 200, 500, 20, 10, 5, 2, 1 ]
 let item_number = 0
-// let items = [
-//     'suitcase', 'item_1_bg', 'item_2_bg', 'item_3_bg',
-//     'item_4_bg', 'item_5_bg', 'item_6_bg', 'item_7_bg',
-//     'item_8_bg', 'item_9_bg', 'item_10_bg', 'item_11_bg',
-//     'item_12_bg', 'item_13_bg', 'item_14_bg', 'item_15_bg',
-//     'item_16_bg', 'item_17_bg'
-// ]
 
-// const item_prices = [ 449, 387, 273, 35, 195, 385, 29, 75, 165, 200, 135, 125, 99, 125, 399, 120, 45, 57 ]
-
-
-
-// 
 
 
 // fillBackground('cash_point')
@@ -44,8 +32,6 @@ let item_number = 0
 //     ImplementLogic()
 // }
 
-
-// 
 
 
 
