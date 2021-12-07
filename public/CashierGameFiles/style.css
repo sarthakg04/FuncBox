@@ -10,6 +10,9 @@ body {
   height: 534px;
   width: 350px;
   /* margin: 0; */
+}
+
+.cash_point {
   background: url(./assets/bg.png) no-repeat center;
   background-color: black;
 }
