@@ -36,5 +36,6 @@ module.exports = {
     45: "PawnShopGameFiles",
     46: "WeightUnitConversions",
     47: "CountDraculaGameFiles",
+    48: "ChemistryLabGameFiles",
   },
 };

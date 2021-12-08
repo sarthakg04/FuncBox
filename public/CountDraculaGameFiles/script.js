@@ -1,3 +1,16 @@
+// let questions = [10,20];
+// function showQuestions()
+// {
+
+//   setSackNumbers()
+//   createGems()
+// }
+// createBackground()
+// fillBackground()
+// createDracula()
+
+// createSacks()
+// showQuestions()
 const imageLinks = {
   bg: "https://ik.imagekit.io/funcboxImages/CountDraculaGame_assets/bg_z7ChJscP2.png?updatedAt=1638850351011",
   dracula:
