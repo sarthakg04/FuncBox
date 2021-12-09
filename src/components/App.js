@@ -60,6 +60,7 @@ import WeightUnitConversions from "./Games/WeightUnitConversions/WeightUnitConve
 import PawnShop from "./Games/PawnShop/PawnShop";
 import CountDracula from "./Games/CountDracula/CountDracula";
 import ChemistryLab from "./Games/ChemistryLab/ChemistryLab";
+import WeatherGame from "./Games/WeatherGame/WeatherGame";
 
 function App() {
   const dispatch = useDispatch();
@@ -161,6 +162,7 @@ function App() {
           <Route exact path="/countdracula" component={CountDracula} />
           <Route exact path="/chemistrylab" component={ChemistryLab} />
           <Route exact path="/WeightUnitConversions" component={WeightUnitConversions} />
+          <Route exact path="/WeatherGame" component={WeatherGame} />
 
           <Route exact path="/UserNavbar" component={UserNavbar} />
           <Route exact path="/Login" component={Login} />
