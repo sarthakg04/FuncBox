@@ -160,12 +160,7 @@ function App() {
           <Route exact path="/Demo" component={Demo} />
           <Route exact path="/countdracula" component={CountDracula} />
           <Route exact path="/chemistrylab" component={ChemistryLab} />
-
-          <Route
-            exact
-            path="/WeightUnitConversions"
-            component={WeightUnitConversions}
-          />
+          <Route exact path="/WeightUnitConversions" component={WeightUnitConversions} />
 
           <Route exact path="/UserNavbar" component={UserNavbar} />
           <Route exact path="/Login" component={Login} />
