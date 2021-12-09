@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Risque&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Rubik Mono One", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: min(400px, 100vw);
+  height: min(535px, 100vh);
+  /* border: solid black 1px; */
+  margin: auto;
+  position: relative;
+  /* background-image: url('../MissionMarsFiles/assets/backgrounds/Frame.png'); */
+  overflow: hidden;
+  padding-top: 1px;
+  background-size: cover;
+  position: relative;
+  /* background: red; */
+}
+.dracula_img {
+  width: 150px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.gem_div {
+  width: 100%;
+  height: 20%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gem_image {
+  height: 90%;
+  width: 20%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: flex-end;
+}
+.gem_image > p {
+  background-color: white;
+  font-size: 20px;
+  width: 50px;
+  height: 20px;
+  text-align: center;
+}
+.gem_image > img {
+  width: 80%;
+  height: 90%;
+  flex: 1;
+}
+.sack_div {
+  position: absolute;
+  background-size: cover;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  font-size: 50px;
+  color: white;
+  justify-content: center;
+}
+.sack_div:nth-child(1) {
+  left: 2%;
+}
+.sack_div:nth-child(2) {
+  right: 2%;
+}
+
+.gem_image.hide {
+  display: none;
+}
+.lost_screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.win_screen {
+  background-color: blueviolet;
+  position: absolute;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
