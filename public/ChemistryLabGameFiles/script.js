@@ -1,3 +1,13 @@
+// const correctComp = {
+//   H2O: "HOH",
+//   CO2: "COO",
+//   NH3: "NHHH",
+//   O2: "OO",
+//   NO2: "NOO",
+//   HNO3: "HNOOO",
+//   CH4: "CHHHH",
+//   H2SO4: "HHSOOOO",
+// };
 // function onSubmit()
 // {
 //   const isCorrect = checkCorrect()
@@ -84,16 +94,7 @@ const colors = {
   S: "#FC5E68",
 };
 const compounds = ["H2O", "CO2", "NH3", "O2", "NO2", "HNO3", "CH4", "H2SO4"];
-const correctComp = {
-  H2O: "HHO",
-  CO2: "COO",
-  NH3: "HHHN",
-  O2: "OO",
-  NO2: "NOO",
-  HNO3: "HNOOO",
-  CH4: "CHHHH",
-  H2SO4: "HHSOOOO",
-};
+
 function createBackground() {
   let container = document.createElement("div");
   container.id = "container";
