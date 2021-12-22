@@ -191,6 +191,9 @@ export default function SalesPage() {
               onMouseEnter={(e) => {
                 setOpenPlan("basic");
               }}
+              onClick={(e) => {
+                setOpenPlan("basic");
+              }}
             >
               <div className="plan-details red">
                 <div className="heading">
@@ -242,9 +245,10 @@ export default function SalesPage() {
                 openPlan === "deluxe" ? "open" : ""
               }`}
               onMouseEnter={(e) => {
-                if (!e.currentTarget.classList.contains("open")) {
-                  setOpenPlan("deluxe");
-                }
+                setOpenPlan("deluxe");
+              }}
+              onClick={(e) => {
+                setOpenPlan("deluxe");
               }}
             >
               <div className="plan-details yellow">
@@ -293,6 +297,9 @@ export default function SalesPage() {
                 openPlan === "premium" ? "open" : ""
               }`}
               onMouseEnter={(e) => {
+                setOpenPlan("premium");
+              }}
+              onClick={(e) => {
                 setOpenPlan("premium");
               }}
             >

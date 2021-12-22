@@ -1,6 +1,6 @@
 .outer_container {
-  width: 250px;
-  height: 380px;
+  width: 200px;
+  height: 300px;
   flex-shrink: 1;
   margin: 10px;
 }
@@ -10,7 +10,7 @@
 }
 .cards_section {
   margin: 20px auto;
-  width: 85%;
+  width: 65%;
   align-items: center;
   justify-content: center;
   display: flex;

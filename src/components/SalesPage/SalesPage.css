@@ -103,7 +103,8 @@
   /* height: 550px;
   max-height: 550px; */
   position: relative;
-  height: 870px;
+  min-height: 870px;
+  height: max-content;
 }
 
 .salesPage__main .plan-container {
@@ -297,7 +298,7 @@
   border: none;
   border-radius: 22px;
   color: white;
-  font-size: 23px;
+  font-size: 21px;
   transition: all 200ms;
 }
 
