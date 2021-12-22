@@ -12,6 +12,8 @@ export default function SalesPage() {
   const { token } = useAuth();
   const [modalOpen, setModalOpen] = useState(false);
   const [plan, setPlan] = useState("");
+  const [openPlan, setOpenPlan] = useState("basic");
+
   const apiurl = process.env.REACT_APP_API_URL;
   const kids =
     "https://ik.imagekit.io/funcboxImages/SalesPage_assets/kids_KxFxgItfQ.png?updatedAt=1633370064495";
@@ -171,26 +173,28 @@ export default function SalesPage() {
         </div>
         <div className="prices">
           <div className="plan">
-            <div className="plan-container">
+            <div className="buttons">
+              <button
+                className="purchase_button red"
+                onClick={() => {
+                  handlePurchase("basic");
+                }}
+              >
+                Buy for Rs 999/-
+                <span>
+                  <i className="fas fa-shopping-cart" />
+                </span>
+              </button>
+            </div>
+            <div
+              className={`plan-container ${openPlan === "basic" ? "open" : ""}`}
+              onMouseEnter={(e) => {
+                setOpenPlan("basic");
+              }}
+            >
               <div className="plan-details red">
                 <div className="heading">
                   <h2>Plan 1</h2>
-                  <button
-                    className="open_card_button"
-                    onClick={(e) => {
-                      let card =
-                        e.currentTarget.parentElement.parentElement
-                          .parentElement;
-                      if (card.classList.contains("open")) {
-                        card.classList.remove("open");
-                      } else card.classList.add("open");
-                    }}
-                  >
-                    <img
-                      src="https://ik.imagekit.io/funcboxImages/SalesPage_assets/down_US4XzQ_hW.png?updatedAt=1638804187777"
-                      alt=""
-                    />
-                  </button>
                 </div>
                 <div className="details">
                   <ul>
@@ -215,43 +219,37 @@ export default function SalesPage() {
                       <i className="fas fa-shopping-cart" />
                     </span>{" "}
                   </p> */}
-                  <button
-                    // className="atc"
-                    type="submit"
-                    onClick={() => {
-                      handlePurchase("basic");
-                    }}
-                  >
-                    Purchase
-                    <span>
-                      <i className="fas fa-shopping-cart" />
-                    </span>
-                  </button>
                 </div>
               </div>
             </div>
           </div>
           <div className="plan">
-            <div className="plan-container">
+            <div className="buttons">
+              <button
+                className="purchase_button yellow"
+                onClick={() => {
+                  handlePurchase("deluxe");
+                }}
+              >
+                Buy for Rs 1499/-
+                <span>
+                  <i className="fas fa-shopping-cart" />
+                </span>
+              </button>
+            </div>
+            <div
+              className={`plan-container ${
+                openPlan === "deluxe" ? "open" : ""
+              }`}
+              onMouseEnter={(e) => {
+                if (!e.currentTarget.classList.contains("open")) {
+                  setOpenPlan("deluxe");
+                }
+              }}
+            >
               <div className="plan-details yellow">
                 <div className="heading">
                   <h2>Plan 2</h2>
-                  <button
-                    className="open_card_button"
-                    onClick={(e) => {
-                      let card =
-                        e.currentTarget.parentElement.parentElement
-                          .parentElement;
-                      if (card.classList.contains("open")) {
-                        card.classList.remove("open");
-                      } else card.classList.add("open");
-                    }}
-                  >
-                    <img
-                      src="https://ik.imagekit.io/funcboxImages/SalesPage_assets/down_US4XzQ_hW.png?updatedAt=1638804187777"
-                      alt=""
-                    />
-                  </button>
                 </div>
                 <div className="details">
                   <ul>
@@ -272,45 +270,35 @@ export default function SalesPage() {
                 <h1>Deluxe</h1>
                 <div className="price">
                   <p>Rs. 1499/-</p>
-                  <button
-                    // className="atc"
-                    type="submit"
-                    onClick={() => {
-                      handlePurchase("deluxe");
-                    }}
-                  >
-                    Purchase
-                    <span>
-                      <i className="fas fa-shopping-cart" />
-                    </span>
-                  </button>
                 </div>
               </div>
             </div>
           </div>
           <div className="plan">
-            <div className="plan-container">
+            <div className="buttons">
+              <button
+                className="purchase_button green"
+                onClick={() => {
+                  handlePurchase("premium");
+                }}
+              >
+                Buy for Rs 1999/-
+                <span>
+                  <i className="fas fa-shopping-cart" />
+                </span>
+              </button>
+            </div>
+            <div
+              className={`plan-container ${
+                openPlan === "premium" ? "open" : ""
+              }`}
+              onMouseEnter={(e) => {
+                setOpenPlan("premium");
+              }}
+            >
               <div className="plan-details green">
                 <div className="heading">
                   <h2>Plan 3</h2>
-                  <button
-                    className="open_card_button"
-                    onClick={(e) => {
-                      let card =
-                        e.currentTarget.parentElement.parentElement
-                          .parentElement;
-                      if (card.classList.contains("open")) {
-                        card.classList.remove("open");
-                      } else {
-                        card.classList.add("open");
-                      }
-                    }}
-                  >
-                    <img
-                      src="https://ik.imagekit.io/funcboxImages/SalesPage_assets/down_US4XzQ_hW.png?updatedAt=1638804187777"
-                      alt=""
-                    />
-                  </button>
                 </div>
                 <div className="details">
                   <ul>
@@ -332,18 +320,6 @@ export default function SalesPage() {
                 <h1>Premium</h1>
                 <div className="price">
                   <p>Rs. 1999/-</p>
-                  <button
-                    // className="atc"
-                    type="submit"
-                    onClick={() => {
-                      handlePurchase("premium");
-                    }}
-                  >
-                    Purchase
-                    <span>
-                      <i className="fas fa-shopping-cart" />
-                    </span>
-                  </button>
                 </div>
               </div>
             </div>

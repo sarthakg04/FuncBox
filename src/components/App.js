@@ -56,7 +56,11 @@ import Calculator2Game from "./Games/Calculator2/Calculator2";
 import AreaGame from "./Games/AreaGame/AreaGame";
 import Mrfraction from "./Games/MrFraction/MrFraction";
 import Demo from "./Games/DemoEditor/DemoEditor";
-import WeightUnitConversions from "./Games/WeightUnitConversions/WeightUnitConversions"
+import WeightUnitConversions from "./Games/WeightUnitConversions/WeightUnitConversions";
+import PawnShop from "./Games/PawnShop/PawnShop";
+import CountDracula from "./Games/CountDracula/CountDracula";
+import ChemistryLab from "./Games/ChemistryLab/ChemistryLab";
+import WeatherGame from "./Games/WeatherGame/WeatherGame";
 
 function App() {
   const dispatch = useDispatch();
@@ -110,7 +114,12 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <ToastContainer position="top-left" />
+        <ToastContainer
+          position="top-left"
+          pauseOnFocusLoss={false}
+          pauseOnHover={false}
+          autoClose={1000}
+        />
         <Switch>
           <Route exact path="/AngryBirds" component={AngryBirds} />
           <Route exact path="/MissionMars" component={MissionMars} />
@@ -135,6 +144,7 @@ function App() {
             path="/TemperatureConversions"
             component={TemperatureConversions}
           />
+          <Route exact path="/pawnshop" component={PawnShop} />
           <Route exact path="/CardGame" component={CardGame} />
           <Route exact path="/MotuPatlu" component={MotuPatlu} />
           <Route exact path="/StatesThatMatter" component={StatesThatMatter} />
@@ -149,8 +159,10 @@ function App() {
           <Route exact path="/calculator2" component={Calculator2Game} />
           <Route exact path="/AreaGame" component={AreaGame} />
           <Route exact path="/Demo" component={Demo} />
-
+          <Route exact path="/countdracula" component={CountDracula} />
+          <Route exact path="/chemistrylab" component={ChemistryLab} />
           <Route exact path="/WeightUnitConversions" component={WeightUnitConversions} />
+          <Route exact path="/WeatherGame" component={WeatherGame} />
 
           <Route exact path="/UserNavbar" component={UserNavbar} />
           <Route exact path="/Login" component={Login} />

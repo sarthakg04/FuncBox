@@ -99,21 +99,26 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   justify-content: center;
-  margin: 32px 10% 34px;
+  margin: 32px 5% 34px;
+  margin: 0;
   /* height: 550px;
   max-height: 550px; */
   position: relative;
+  height: 870px;
 }
 
 .salesPage__main .plan-container {
   margin: auto;
+
   position: relative;
+  max-width: 400px;
 }
 
 .salesPage__main .plan-details {
   position: relative;
   color: white;
-  padding: 16px;
+  padding: 16px 40px;
+
   padding-bottom: 32px;
   border-radius: 12px;
   z-index: 2;
@@ -146,7 +151,6 @@
 .salesPage__main .plan-details .heading {
   text-align: center;
   margin-bottom: 0;
-  margin-left: 10%;
 }
 
 .salesPage__main .marquee {
@@ -188,7 +192,7 @@
   position: relative;
   background: #eeeeee;
   text-align: center;
-  padding: 32px;
+  padding: 32px 0;
   z-index: 3;
   min-height: 300px;
   border-radius: 0 0 12px 12px;
@@ -201,6 +205,7 @@
 
 .salesPage__main .plan-cover .price {
   margin-top: 8vh;
+  font-size: 30px;
 }
 
 .salesPage__main .plan-cover .price .atc {
@@ -209,17 +214,6 @@
 
 .salesPage__main .plan-container.open .black {
   margin-top: -20px;
-}
-.salesPage__main .plan-container.open .open_card_button > img {
-  transform-origin: 50% 50%;
-  transform: rotateZ(180deg);
-}
-
-.salesPage__main .plan-container .open_card_button > img {
-  width: 30px;
-  transition: all 200ms;
-  border-radius: 30%;
-  margin: 0px 20px;
 }
 
 .salesPage__main .payment {
@@ -288,10 +282,51 @@
   background-color: rgba(128, 128, 128, 0.6);
   z-index: 900;
 }
+.buttons {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+.purchase_button {
+  width: 90%;
+  min-width: 180px;
+  max-width: 350px;
+  padding: 15px 20px;
+  outline: none;
+  border: none;
+  border-radius: 22px;
+  color: white;
+  font-size: 23px;
+  transition: all 200ms;
+}
+
+.purchase_button.yellow {
+  background-color: #ffd27b;
+  box-shadow: 0 0 4px 4px #ffd27b88;
+}
+.purchase_button.yellow:hover {
+  box-shadow: 0 0 10px 5px #ffd37b88;
+}
+.purchase_button.red {
+  background-color: #f05d6a;
+  box-shadow: 0 0 4px 4px #f05d6988;
+}
+.purchase_button.red:hover {
+  box-shadow: 0 0 10px 5px #f05d6988;
+}
+.purchase_button.green {
+  background-color: #36bfa5;
+  box-shadow: 0 0 4px 4px #36bfa588;
+}
+.purchase_button.green:hover {
+  box-shadow: 0 0 10px 5px #36bfa588;
+}
 
 @media (max-width: 1100px) {
   .salesPage__main .prices {
-    margin: 32px 5% 34px;
+    margin: 0;
   }
   .salesPage__main .hero__section .right__section img {
     width: 60%;
@@ -353,6 +388,7 @@
     grid-template-columns: 1fr;
     width: 60%;
     margin: auto;
+    height: max-content;
   }
 }
 

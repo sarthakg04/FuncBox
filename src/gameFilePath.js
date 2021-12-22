@@ -33,6 +33,10 @@ module.exports = {
     42: "MrFractionGameFiles",
     43: "AreaGameFiles",
     44: "DemoEditor",
-    45: "WeightUnitConversions"
+    45: "PawnShopGameFiles",
+    46: "WeightUnitConversions",
+    47: "CountDraculaGameFiles",
+    48: "ChemistryLabGameFiles",
+    49: "WeatherGameFiles"
   },
 };

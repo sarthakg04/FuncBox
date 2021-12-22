@@ -1,9 +1,9 @@
 .footer {
-  background-image: url('https://ik.imagekit.io/funcboxImages/Footer_assets/footerback_O1vaS2jHJT.webp?updatedAt=1633352306577');
+  background-image: url("https://ik.imagekit.io/funcboxImages/Footer_assets/footerback_O1vaS2jHJT.webp?updatedAt=1633352306577");
   background-size: cover;
   background-position: center;
   padding-top: 64px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .getInTouch {
@@ -12,7 +12,7 @@
   border-bottom: 2px solid white;
   display: flex;
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,9 +50,9 @@
   margin-top: 32px;
 }
 
-.madeWith a{
+.madeWith a {
   text-decoration: none;
-  color : white;
+  color: white;
 }
 
 .footer .links {
@@ -80,7 +80,7 @@
   text-decoration: none;
 }
 
-button {
+.footer button {
   background-color: transparent;
   outline: none;
   border: none;
