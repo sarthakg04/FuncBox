@@ -100,7 +100,6 @@
   grid-gap: 16px;
   justify-content: center;
   margin: 32px 5% 34px;
-  margin: 0;
   /* height: 550px;
   max-height: 550px; */
   position: relative;
@@ -326,7 +325,7 @@
 
 @media (max-width: 1100px) {
   .salesPage__main .prices {
-    margin: 0;
+    margin: 3vw;
   }
   .salesPage__main .hero__section .right__section img {
     width: 60%;
