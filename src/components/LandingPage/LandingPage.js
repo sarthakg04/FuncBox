@@ -5,6 +5,8 @@ import "./LandingPage.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import Container from "../FlippableCard/Container";
+import { Link } from "react-router-dom";
+import Ribbon from "./Ribbon";
 
 // import downArrow from './assets/downArrow.svg'
 // import roadmap from './assets/roadmap.svg'
@@ -75,7 +77,35 @@ export default function LandingPage() {
             <img src={logo} alt="" />
           </div>
         </div>
+        
+        <Container />
+        <div className="creativity_div">
+          <h2>Why at an Early Age?</h2>
+          <div className="creativity_container">
+            <div className="creativity_text">
+              <h2 className="creativity_text_heading">Creativity x Age</h2>
+              <p>
+                According to research, children's creativity peaks at the age of
+                six, then gradually declines as they get older.
+              </p>
+            </div>
+            <img
+              className="creativity_graph"
+              src="https://ik.imagekit.io/funcboxImages/LandingPage_assets/Group_263_zvKZQY0-9.png?updatedAt=1640177452938"
+              alt=""
+            />
+          </div>
+        </div>
+        <Ribbon color="#7bdc0096">
+          <p className="ribbon_text"> Get your FuncBox Today ! Hurry</p>
+          <Link to="/salespage" className="ribbon_button buy_now_button">
+            Buy Now
+          </Link>
+        </Ribbon>
 
+        <h2 className="roadmap_heading">
+          Teach Your Kid Concepts Like Never Before
+        </h2>
         <div className="roadMap">
           <img src={roadmap} alt="" />
         </div>
@@ -96,11 +126,36 @@ export default function LandingPage() {
             <img src={logo} alt="" />
           </div>
         </div> */}
-        <div className="how__works">
+        {/* <div className="how__works">
           <img src={howWorks} alt="" />
+        </div> */}
+
+        <Ribbon color="#FFC71C">
+          <p className="ribbon_text">Sign Up Today ! To Buy your own FuncBox</p>
+          <Link className="ribbon_button signup_button">Sign Up</Link>
+        </Ribbon>
+
+        <div className="caution_div">
+          <h2 className="caution_heading">
+            <img
+              style={{ margin: "10px", width: "30px" }}
+              src="https://ik.imagekit.io/funcboxImages/LandingPage_assets/image_173_HVwwhVEcW.png?updatedAt=1640181516955"
+              alt=""
+            />
+            Caution we make your kid smarter!
+          </h2>
+          <img
+            className="caution_table"
+            src="https://ik.imagekit.io/funcboxImages/LandingPage_assets/Group_322_SYX3ELAI4.png?updatedAt=1640182579849"
+            alt=""
+          />
+          <img
+            className="children_image"
+            src="https://ik.imagekit.io/funcboxImages/LandingPage_assets/PikPng_1_tzVajvGOH.png?updatedAt=1640181381233"
+            alt=""
+          />
         </div>
-        <Container />
-        <div className="individuals">
+        {/* <div className="individuals">
           <div className="left__container">
             <img src={img1} alt="" />
           </div>
@@ -121,8 +176,8 @@ export default function LandingPage() {
             </p>
             <a href="#">Buy Now</a>
           </div>
-        </div>
-        <div className="schools">
+        </div> */}
+        {/* <div className="schools">
           <div className="left__container">
             <h1>For Schools</h1>
             <p>
@@ -145,7 +200,7 @@ export default function LandingPage() {
           <div className="right__container">
             <img src={img2} alt="" />
           </div>
-        </div>
+        </div> */}
         <Footer />
       </div>
     </div>

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,500;1,600;1,700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -20,12 +20,13 @@
 }
 
 .landingPage__main .roadMap {
-  margin: 64px;
+  margin: 24px;
   text-align: center;
 }
 
 .landingPage__main .roadMap img {
-  width: 75%;
+  width: 100%;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -42,7 +43,7 @@
   font-style: normal;
   font-weight: normal;
   margin-left: 8vw;
-  font-size: 28px;
+  font-size: 27px;
   line-height: 34px;
 }
 
@@ -114,7 +115,89 @@
 .roadMap_mobile {
   display: none;
 }
+.creativity_div {
+  margin: 50px 0;
+}
+.creativity_div .creativity_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+}
+.creativity_text_heading {
+  font-family: "Caveat Brush", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 81px;
+}
+.creativity_div > h2 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 50px;
+}
 
+.creativity_container .creativity_text {
+  flex: 1;
+  width: 60%;
+  font-size: 19px;
+  margin: 40px;
+}
+.creativity_graph {
+  flex: 1;
+  width: 50%;
+  margin-top: 30px;
+}
+.roadmap_heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+  margin: 10vh 0;
+}
+
+.buy_now_button {
+  color: #7bdc0096;
+}
+.signup_button {
+  color: #ffc71c;
+}
+.caution_div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 500px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.caution_heading {
+  margin: 30px 0;
+  display: flex;
+  text-align: center;
+  font-weight: 400;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+.caution_table {
+  display: block;
+
+  width: 60%;
+  max-width: 600px;
+}
+.children_image {
+  width: 25%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 @media (max-width: 1130px) {
   .landingPage__main .hero__image img {
     width: 68%;
@@ -223,6 +306,12 @@
   .landingPage__main .schools .right__container img {
     width: 80%;
   }
+  .creativity_text_heading {
+    font-size: 34px;
+  }
+  .creativity_text p {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -258,5 +347,22 @@
   .roadMap_mobile > img {
     margin: 30px 0px;
     width: 80%;
+  }
+  .creativity_container {
+    flex-direction: column;
+    width: 80%;
+  }
+  .creativity_container .creativity_text {
+    width: 80%;
+    margin: 2px;
+  }
+  .creativity_graph {
+    width: 80%;
+  }
+  .creativity_text_heading {
+    font-size: 24px;
+  }
+  .creativity_text p {
+    font-size: 18px;
   }
 }
