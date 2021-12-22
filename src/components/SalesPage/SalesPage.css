@@ -103,6 +103,7 @@
   /* height: 550px;
   max-height: 550px; */
   position: relative;
+  height: 800px;
 }
 
 .salesPage__main .plan-container {
@@ -210,6 +211,7 @@
 .salesPage__main .plan-container.open .black {
   margin-top: -20px;
 }
+
 .salesPage__main .plan-container.open .open_card_button > img {
   transform-origin: 50% 50%;
   transform: rotateZ(180deg);
@@ -288,6 +290,34 @@
   background-color: rgba(128, 128, 128, 0.6);
   z-index: 900;
 }
+.buttons {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+.purchase_button {
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 20px;
+  transition: all 20ms;
+}
+.purchase_button:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+.purchase_button.yellow {
+  background-color: #ffd27b;
+}
+.purchase_button.red {
+  background-color: #f05d6a;
+}
+.purchase_button.green {
+  background-color: #36bfa5;
+}
 
 @media (max-width: 1100px) {
   .salesPage__main .prices {
@@ -353,6 +383,7 @@
     grid-template-columns: 1fr;
     width: 60%;
     margin: auto;
+    height: max-content;
   }
 }
 
