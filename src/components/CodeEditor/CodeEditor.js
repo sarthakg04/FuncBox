@@ -1,33 +1,32 @@
-import React, { useState , useEffect } from 'react';
-import Editor from '../Editor/Editor'
-import Frame from '../Frame/Frame'
-import useLocalStorage from '../../hooks/useLocalStorage'
-import QRCode from 'qrcode';
-import Navbar from '../Navbar/Navbar'
-import './CodeEditor.css'
-
-
-
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import QRCode from "qrcode";
+import "./CodeEditor.css";
+import useLocalStorage from "../../hooks/useLocalStorage";
+import Frame from "../Frame/Frame";
+import Editor from "../Editor/Editor";
+import Navbar from "../Navbar/Navbar";
 
 export default function CodeEditor() {
-    const [js, setJs] = useLocalStorage('js', '')
-    const [srcDoc, setSrcDoc] = useState('')
-    const [userName , setUserName] = useState('nishant');
-    const [gameId , setGameId] = useState('3');
-    const [qrSrc , setQrSrc] = useState('');
-    function toggleQr(){
-      document.getElementById('qr').classList.toggle('active');
-      console.log('Hello');
-    }
-    useEffect(()=>{
-      QRCode.toDataURL('https://funcbox.in/'+userName+"+"+gameId).then(setQrSrc);
+	const [js, setJs] = useLocalStorage("js", "");
+	const [srcDoc, setSrcDoc] = useState("");
+	const [userName, setUserName] = useState("nishant");
+	const [gameId, setGameId] = useState("3");
+	const [qrSrc, setQrSrc] = useState("");
 
+	useEffect(() => {
+		QRCode.toDataURL("https://funcbox.in/" + userName + "+" + gameId).then(
+			setQrSrc
+		);
+	}, []);
 
+	function toggleQr() {
+		document.getElementById("qr").classList.toggle("active");
+		console.log("Hello");
+	}
 
-    },[]);
-
-    function updateCode(){
-        setSrcDoc(`
+	function updateCode() {
+		setSrcDoc(`
         <html>
         <head>
         <title>
@@ -42,31 +41,28 @@ export default function CodeEditor() {
         <script>${js}</script>
         </body>
         </html>
-        `)
-    }
+        `);
+	}
 
+	return (
+		<div>
+			<div className="main__container">
+				<Editor
+					language="javascript"
+					displayName="JS"
+					value={js}
+					onChange={setJs}
+					updateCode={updateCode}
+				/>
 
-
-    return (
-        <div>
-              <div className="main__container">
-                <Editor
-                    language="javascript"
-                    displayName="JS"
-                    value={js}
-                    onChange={setJs}
-                    updateCode = {updateCode}
-
-                />
-
-              <div className="preview">
-                <div class="heading">
-                <p>Preview</p>
-                </div>
-                <div className="frame_container">
-                    <div className='phone'>
-                        <Frame srcDoc={srcDoc}/>
-                        {/* <iframe
+				<div className="preview">
+					<div class="heading">
+						<p>Preview</p>
+					</div>
+					<div className="frame_container">
+						<div className="phone">
+							<Frame srcDoc={srcDoc} />
+							{/* <iframe
                             srcDoc={srcDoc}
                             title="output"
                             sandbox="allow-scripts"
@@ -74,24 +70,27 @@ export default function CodeEditor() {
                             width="100%"
                             height="100%"
                         /> */}
-                    </div>
-                </div>
-                </div>
-                <div className="qr_body" id="qr">
-                  <div className="qr_container">
-                    <div className="heading">
-                      <h1>Scan to Share</h1>
-                    </div>
-                    <div className="qr_code">
-                      <img src={qrSrc} alt="" />
-                    </div>
-                    <a href="javascript:void(0)" className="closeQr" onClick={toggleQr}>
-                      Close
-                    </a>
-                  </div>
-                </div>
-            </div>
+						</div>
+					</div>
+					<Link to="/Welcome" className="back_btn">
+						<button>Go Back</button>
+					</Link>
+				</div>
 
-        </div>
-    )
+				<div className="qr_body" id="qr">
+					<div className="qr_container">
+						<div className="heading">
+							<h1>Scan to Share</h1>
+						</div>
+						<div className="qr_code">
+							<img src={qrSrc} alt="" />
+						</div>
+						<a href="javascript:void(0)" className="closeQr" onClick={toggleQr}>
+							Close
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }

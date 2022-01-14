@@ -36,6 +36,23 @@
   border-radius: 20px;
 }
 
+.back_btn {
+  display: flex;
+  height: min-content;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.back_btn > button {
+  background-color: #f06f38;
+  padding: 16px;
+  color: white;
+  font-size: 28px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
 .CodeMirror {
   border-radius: 40px;
 }
