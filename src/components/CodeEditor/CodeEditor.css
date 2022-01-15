@@ -34,18 +34,19 @@
   color: white;
   font-size: 28px;
   border-radius: 20px;
+  cursor: none;
 }
 
 .back_btn {
-  display: flex;
-  height: min-content;
-  justify-content: center;
-  margin-top: 1rem;
+  display: inline-block;
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
 }
 
-.back_btn > button {
+.back_btn button {
   background-color: #f06f38;
-  padding: 16px;
+  padding: 8px 16px;
   color: white;
   font-size: 28px;
   border-radius: 20px;

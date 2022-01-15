@@ -72,9 +72,11 @@ export default function CodeEditor() {
                         /> */}
 						</div>
 					</div>
-					<Link to="/Welcome" className="back_btn">
-						<button>Go Back</button>
-					</Link>
+					<div className="back_btn">
+						<Link to="/Welcome">
+							<button>Go Back</button>
+						</Link>
+					</div>
 				</div>
 
 				<div className="qr_body" id="qr">
