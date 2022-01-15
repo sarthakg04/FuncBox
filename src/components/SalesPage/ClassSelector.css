@@ -59,15 +59,15 @@
 
 .submit_class_button,
 .cancel_class_button {
-  width: 150px;
+  width: 160px;
   height: 50px;
-  padding: 10px 10px;
+  padding: 10px 15px;
   font-family: "Roboto", sans-serif;
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: semibold;
-  color: rgb(15, 0, 0);
+  font-weight: 600;
+  color: rgb(54, 41, 41);
   border: none;
   border-radius: 35px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -78,11 +78,11 @@
 }
 
 .submit_class_button{
-  background-color: rgb(220, 250, 224);
+  background-color: rgb(185, 253, 194);
 }
 
 .cancel_class_button{
-  background-color: rgb(216, 229, 241);
+  background-color: rgb(241, 216, 228);
 }
 
 .submit_class_button:hover,
