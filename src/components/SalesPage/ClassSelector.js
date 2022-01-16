@@ -1,38 +1,81 @@
+// Desgined by Kaustubh
+
 import React, { useState } from "react";
 import "./ClassSelector.css";
+import "./ClassDropdown.css";
+
 function ClassSelector({ plan, open, onSubmit, onCancel }) {
-  const [value, setValue] = useState("1");
+  const [value, setValue] = useState(null);
+
+  function doSomething(e) {
+    
+    document.querySelector(".drop-down .options ul").style.display = "block";
+  }
+
+  function doSomething2(e) {
+    const innerText = e.target.innerText;
+    setValue(innerText.split(" ")[1]);
+    document.querySelector(".drop-down .selected span").innerHTML = innerText;
+    document.querySelector(".drop-down .options ul").style.display = "none";
+  } 
+
+
   return (
     <div className="class_selection_modal">
-      <label htmlFor="class_selection" style={{ margin: "20px" }}>
-        <p>Selected Plan : {plan.toUpperCase()}</p>
-        <h2>Select Class</h2>
+      <label className="class_selection" htmlFor="class_selection">
+        <p>You selected <span className="plan_selected"> {plan.toUpperCase()} </span> plan !</p>
+        <p className="please_select_your_class">Please select your class : </p>
       </label>
-      <select
-        name="class_selector"
-        id="class_selector"
-        style={{ width: "200px", height: "30px" }}
-        onChange={(e) => {
-          setValue(e.target.value);
-        }}
-      >
-        <option value="1">Class 1</option>
-        <option value="2">Class 2</option>
-        <option value="3">Class 3</option>
-        <option value="4">Class 4</option>
-        <option value="5">Class 5</option>
-        <option value="6">Class 6</option>
-        <option value="7">Class 7</option>
-        <option value="8">Class 8</option>
-      </select>
+
+
+      <div className="drop-down">
+        <div className="selected">
+          <span onClick={doSomething}>Select Class</span>
+        </div>
+        <div className="options">
+          <ul>
+            <li onClick={doSomething2}>
+              Class 1
+            </li>
+            <li onClick={doSomething2}>
+              Class 2
+            </li>
+            <li onClick={doSomething2}>
+              Class 3
+            </li>
+            <li onClick={doSomething2}>
+              Class 4
+            </li>
+            <li onClick={doSomething2}>
+              Class 5
+            </li>
+            <li onClick={doSomething2}>
+              Class 6
+            </li>
+            <li onClick={doSomething2}>
+              Class 7
+            </li>
+            <li onClick={doSomething2}>
+              Class 8
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <div className="buttons_section">
-        <button className="submit_class_button" onClick={() => onSubmit(value)}>
-          Submit
-        </button>
-        <button className="cancel_button" onClick={() => onCancel()}>
-          Cancel Payment
-        </button>
+
+        <div className="wrap">
+          <button className="submit_class_button" onClick={() => onSubmit(value)}>
+            Proceed for Payment
+          </button>
+        </div>
+
+        <div className="wrap">
+          <button className="cancel_class_button" onClick={() => onCancel()}>
+            Cancel Payment
+          </button>
+        </div>
+
       </div>
     </div>
   );

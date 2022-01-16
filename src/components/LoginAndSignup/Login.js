@@ -23,8 +23,7 @@ import { toast } from "react-toastify";
 
 export default function Login(props) {
   const history = useHistory();
-  let cardPosion = [0, 1, 2, 3, 4, 5, 6];
-  let images = document.getElementsByClassName("item");
+  const [loginStatus , setLoginStatus] = useState('Login')
   const { isAuthenticated, token } = useAuth();
   const apiurl = process.env.REACT_APP_API_URL;
 
@@ -43,32 +42,6 @@ export default function Login(props) {
     }
   }, [isAuthenticated]);
 
-  function next() {
-    let length = cardPosion.length;
-    let temp = cardPosion[length - 1];
-    for (let i = length - 1; i > 0; i--) {
-      cardPosion[i] = cardPosion[i - 1];
-    }
-    cardPosion[0] = temp;
-    images[cardPosion[0]].classList.remove("point6");
-    images[cardPosion[0]].classList.add("active");
-    images[cardPosion[1]].classList.remove("active");
-    images[cardPosion[1]].classList.add("point1");
-    images[cardPosion[2]].classList.remove("point1");
-    images[cardPosion[2]].classList.add("point2");
-    images[cardPosion[3]].classList.remove("point2");
-    images[cardPosion[3]].classList.add("point3");
-    images[cardPosion[4]].classList.remove("point3");
-    images[cardPosion[4]].classList.add("point4");
-    images[cardPosion[5]].classList.remove("point4");
-    images[cardPosion[5]].classList.add("point5");
-    images[cardPosion[6]].classList.remove("point5");
-    images[cardPosion[6]].classList.add("point6");
-  }
-
-  // setInterval(()=>{
-  // next()
-  // },2500);
 
   const [details, setDetails] = useState({
     username: "Email",
@@ -87,6 +60,7 @@ export default function Login(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // dispatch(setUser({ username: details.username, parseRes.token }));
+    setLoginStatus('Logging In.......')
     try {
       const body = { email: details.username, password: details.password };
       const response = await fetch(
@@ -139,6 +113,7 @@ export default function Login(props) {
         // history.goBack();
       } else {
         toast.error(parseRes);
+        setLoginStatus('Login')
         //   resetInputValue();
       }
     } catch (err) {
@@ -146,15 +121,9 @@ export default function Login(props) {
       setAuth({ isAuthenticated: false });
       setUser({ username: "" });
       setToken({ token: "" });
+      setLoginStatus('Login')
     }
   };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      next();
-    }, 2500);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div>
@@ -211,7 +180,7 @@ export default function Login(props) {
                 onChange={handleChange}
               />
               <button type="submit" name="button" className="submit">
-                Login
+                {loginStatus}
               </button>
             </form>
           </div>

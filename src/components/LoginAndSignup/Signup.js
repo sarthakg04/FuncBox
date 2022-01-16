@@ -21,39 +21,14 @@ import { parse } from "qs";
 import { useDispatch, useSelector } from "react-redux";
 import { setAuth, setToken, setUser } from "../../auth/authslice";
 import { toast } from "react-toastify";
+import ReCAPTCHA from "react-google-recaptcha"
 
 export default function Signup() {
-  let cardPosion = [0, 1, 2, 3, 4, 5, 6];
-  let images = document.getElementsByClassName("item");
+
   const dispatch = useDispatch();
   const history = useHistory();
   const apiurl = process.env.REACT_APP_API_URL;
-  function next() {
-    let length = cardPosion.length;
-    let temp = cardPosion[length - 1];
-    for (let i = length - 1; i > 0; i--) {
-      cardPosion[i] = cardPosion[i - 1];
-    }
-    cardPosion[0] = temp;
-    images[cardPosion[0]].classList.remove("point6");
-    images[cardPosion[0]].classList.add("active");
-    images[cardPosion[1]].classList.remove("active");
-    images[cardPosion[1]].classList.add("point1");
-    images[cardPosion[2]].classList.remove("point1");
-    images[cardPosion[2]].classList.add("point2");
-    images[cardPosion[3]].classList.remove("point2");
-    images[cardPosion[3]].classList.add("point3");
-    images[cardPosion[4]].classList.remove("point3");
-    images[cardPosion[4]].classList.add("point4");
-    images[cardPosion[5]].classList.remove("point4");
-    images[cardPosion[5]].classList.add("point5");
-    images[cardPosion[6]].classList.remove("point5");
-    images[cardPosion[6]].classList.add("point6");
-  }
 
-  // setInterval(()=>{
-  // next()
-  // },2500);
 
   const initialState = {
     email: "Email",
@@ -65,6 +40,7 @@ export default function Signup() {
   };
 
   const [details, setDetails] = useState(initialState);
+  const [rToken , setRToken] = useState('');
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -75,8 +51,11 @@ export default function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const body = { email, fName, lName, standard, password, confirmPassword };
+    if(!rToken){
+        toast.error("Please Fill the Captcha");
+        return;
+    }
+    const body = { email, fName, lName, standard, password, confirmPassword , rtoken : rToken };
     const response = await fetch(
       `${
         process.env.NODE_ENV === "development"
@@ -84,15 +63,14 @@ export default function Signup() {
           : "https://server.funcbox.in"
       }/auth/register`,
       {
+        credentials: "include",
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       }
     );
 
-    console.log(response);
     const parseRes = await response.json();
-    console.log("console   " + JSON.stringify(parseRes));
     if (parseRes.token) {
       dispatch(setAuth({ isAuthenticated: true }));
       dispatch(
@@ -109,12 +87,6 @@ export default function Signup() {
     }
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      next();
-    }, 2500);
-    return () => clearInterval(interval);
-  }, []);
   const { email, fName, lName, standard, password, confirmPassword } = details;
 
   return (
@@ -195,6 +167,13 @@ export default function Signup() {
                 name="confirmPassword"
                 placeholder={details.confirmPassword}
                 onChange={handleChange}
+              />
+
+            <ReCAPTCHA
+              sitekey = "6LdB4hYeAAAAAN9RXvC4FoUTJwOO2ckpwI4vLd5l"
+              onChange = {rtoken => setRToken(rtoken)}
+              onExpired = {e => setRToken("")}
+
               />
               <button type="submit" name="button" className="submit">
                 Sign Up

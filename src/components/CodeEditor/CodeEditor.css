@@ -34,6 +34,24 @@
   color: white;
   font-size: 28px;
   border-radius: 20px;
+  cursor: none;
+}
+
+.back_btn {
+  display: inline-block;
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.back_btn button {
+  background-color: #f06f38;
+  padding: 8px 16px;
+  color: white;
+  font-size: 28px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
 }
 
 .CodeMirror {
