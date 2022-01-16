@@ -1,30 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.c32a3fa2.chunk.css",
-    "main.js": "/static/js/main.d7863ab7.chunk.js",
-    "runtime-main.js": "/static/js/runtime-main.7e592e9d.js",
-    "static/css/2.7cbe72a4.chunk.css": "/static/css/2.7cbe72a4.chunk.css",
-    "static/js/2.bec8045e.chunk.js": "/static/js/2.bec8045e.chunk.js",
-    "index.html": "/index.html",
-    "static/js/2.bec8045e.chunk.js.LICENSE.txt": "/static/js/2.bec8045e.chunk.js.LICENSE.txt",
-    "static/media/RunBtn.e9e71c14.svg": "/static/media/RunBtn.e9e71c14.svg",
-    "static/media/CodeEditor.css": "/static/media/ipad-2.7a3d13ad.svg",
-    "static/media/card2.bd978b22.svg": "/static/media/card2.bd978b22.svg",
-    "static/media/card3.8467a7ec.svg": "/static/media/card3.8467a7ec.svg",
-    "static/media/card4.09f322b9.svg": "/static/media/card4.09f322b9.svg",
-    "static/media/card5.03ba9559.svg": "/static/media/card5.03ba9559.svg",
-    "static/media/card6.9ecbd859.svg": "/static/media/card6.9ecbd859.svg",
-    "static/media/loginBg.79f4e73a.svg": "/static/media/loginBg.79f4e73a.svg",
-    "static/media/marvelCard.89408989.svg": "/static/media/marvelCard.89408989.svg",
-    "static/media/save.9f363663.svg": "/static/media/save.9f363663.svg",
-    "static/media/share.d4d8167e.svg": "/static/media/share.d4d8167e.svg",
-    "static/media/stamp.af4a500a.svg": "/static/media/stamp.af4a500a.svg"
+    "main.css": "/static/css/main.c937acea.css",
+    "main.js": "/static/js/main.e69bfcb1.js",
+    "static/media/card4.svg": "/static/media/card4.f9081922d579d3f6cd66e18e1924cacb.svg",
+    "static/media/marvelCard.svg": "/static/media/marvelCard.b41492b56621566183a1028b7d44a05c.svg",
+    "static/media/loginBg.svg": "/static/media/loginBg.f97716e6772237a3eab4c267ffb22cd9.svg",
+    "static/media/card6.svg": "/static/media/card6.324274cb96b7c962a254dc5264dc735e.svg",
+    "static/media/card2.svg": "/static/media/card2.c1bca1263511da371f82e60d81fa808e.svg",
+    "static/media/card5.svg": "/static/media/card5.bf1031226019f3202eaefefab0fcbaef.svg",
+    "static/media/card3.svg": "/static/media/card3.1388fe73da2f78557e7ce52758ba3cd9.svg",
+    "static/media/background.jpeg": "/static/media/background.ff49b081753a1f57247b.jpeg",
+    "static/media/share.svg": "/static/media/share.667d42f640c252f85b4266f317e2609c.svg",
+    "static/media/stamp.svg": "/static/media/stamp.60dbab0d5366be67f9befc5a1f975e12.svg",
+    "static/media/save.svg": "/static/media/save.be588706453fd58f20ac257a731c7d31.svg",
+    "static/media/RunBtn.svg": "/static/media/RunBtn.42c18a36c739e97b328b88b4fae123d6.svg",
+    "static/media/ipad-2.svg": "/static/media/ipad-2.138606fbc05426c88537.svg",
+    "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/js/runtime-main.7e592e9d.js",
-    "static/css/2.7cbe72a4.chunk.css",
-    "static/js/2.bec8045e.chunk.js",
-    "static/css/main.c32a3fa2.chunk.css",
-    "static/js/main.d7863ab7.chunk.js"
+    "static/css/main.c937acea.css",
+    "static/js/main.e69bfcb1.js"
   ]
 }
