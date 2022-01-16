@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import QRCode from "qrcode";
 import "./CodeEditor.css";
 import useLocalStorage from "../../hooks/useLocalStorage";
@@ -71,11 +70,6 @@ export default function CodeEditor() {
                             height="100%"
                         /> */}
 						</div>
-					</div>
-					<div className="back_btn">
-						<Link to="/Welcome">
-							<button>Go Back</button>
-						</Link>
 					</div>
 				</div>
 
