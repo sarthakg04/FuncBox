@@ -26,6 +26,7 @@ export default function EditProfile(props) {
   const [add, setAdd] = useState("test");
   const [dob, setDob] = useState("2021-10-21");
   const [avatar, setAvatar] = useState("avatars/tiger1.png");
+  const [profileUpdateStatus , setprofileUpdateStatus] = useState('Update Profile')
   const [std, setStd] = useState(3);
   const history = useHistory();
   const dispatch = useDispatch();
@@ -63,6 +64,7 @@ export default function EditProfile(props) {
   }, []);
 
   async function updateProfile() {
+    setprofileUpdateStatus('Updating....')
     const reqBody = {
       fname: fname,
       lname: lname,
@@ -217,9 +219,9 @@ export default function EditProfile(props) {
             </select>
           </div>
           <div className="buttons">
-            <button className="btn" onClick={updateProfile}>
-              Update Profile
-            </button>
+            <a  href="javascript:void(0)" className="btn" onClick={updateProfile}>
+              {profileUpdateStatus}
+            </a>
             <a href="/changePass" className="btn">
               Change Password
             </a>

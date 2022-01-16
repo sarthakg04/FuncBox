@@ -178,7 +178,7 @@ circular__carosel */
 
 @media (max-width: 1023px) {
   .signup__container {
-    grid-template-columns: minmax(0, 1.25fr) 1fr;
+    grid-template-columns: 1fr;
   }
   .signup__container .carousel li img {
     width: 150px;
