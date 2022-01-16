@@ -23,8 +23,6 @@ import { toast } from "react-toastify";
 
 export default function Login(props) {
   const history = useHistory();
-  let cardPosion = [0, 1, 2, 3, 4, 5, 6];
-  let images = document.getElementsByClassName("item");
   const { isAuthenticated, token } = useAuth();
   const apiurl = process.env.REACT_APP_API_URL;
 
@@ -43,32 +41,6 @@ export default function Login(props) {
     }
   }, [isAuthenticated]);
 
-  function next() {
-    let length = cardPosion.length;
-    let temp = cardPosion[length - 1];
-    for (let i = length - 1; i > 0; i--) {
-      cardPosion[i] = cardPosion[i - 1];
-    }
-    cardPosion[0] = temp;
-    images[cardPosion[0]].classList.remove("point6");
-    images[cardPosion[0]].classList.add("active");
-    images[cardPosion[1]].classList.remove("active");
-    images[cardPosion[1]].classList.add("point1");
-    images[cardPosion[2]].classList.remove("point1");
-    images[cardPosion[2]].classList.add("point2");
-    images[cardPosion[3]].classList.remove("point2");
-    images[cardPosion[3]].classList.add("point3");
-    images[cardPosion[4]].classList.remove("point3");
-    images[cardPosion[4]].classList.add("point4");
-    images[cardPosion[5]].classList.remove("point4");
-    images[cardPosion[5]].classList.add("point5");
-    images[cardPosion[6]].classList.remove("point5");
-    images[cardPosion[6]].classList.add("point6");
-  }
-
-  // setInterval(()=>{
-  // next()
-  // },2500);
 
   const [details, setDetails] = useState({
     username: "Email",
@@ -112,7 +84,8 @@ export default function Login(props) {
           `${
             process.env.NODE_ENV === "development"
               ? apiurl
-              : "https://server.funcbox.in"
+              : "http://localhost:5000"
+        
           }/auth/verify`,
           {
             credentials: "include",
@@ -148,13 +121,6 @@ export default function Login(props) {
       setToken({ token: "" });
     }
   };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      next();
-    }, 2500);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div>
