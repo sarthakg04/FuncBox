@@ -236,19 +236,19 @@ export default function EditProfile(props) {
           <p>Update Avatar</p>
           <div className="avatars">
             <img
-              src="avatars/whale.png"
+              src="avatars/Whale.png"
               alt=""
-              onClick={() => setAvatar("avatars/whale.png")}
+              onClick={() => setAvatar("avatars/Whale.png")}
             />
             <img
-              src="avatars/zebra.png"
+              src="avatars/Zebra.png"
               alt=""
-              onClick={() => setAvatar("avatars/zebra.png")}
+              onClick={() => setAvatar("avatars/Zebra.png")}
             />
             <img
-              src="avatars/Elephant.png"
+              src="avatars/elephant.png"
               alt=""
-              onClick={() => setAvatar("avatars/Elephant.png")}
+              onClick={() => setAvatar("avatars/elephant.png")}
             />
             <img
               src="avatars/Panda.png"
@@ -256,24 +256,24 @@ export default function EditProfile(props) {
               onClick={() => setAvatar("avatars/Panda.png")}
             />
             <img
-              src="avatars/fox.png"
+              src="avatars/Fox.png"
               alt=""
-              onClick={() => setAvatar("avatars/fox.png")}
+              onClick={() => setAvatar("avatars/Fox.png")}
             />
             <img
-              src="avatars/tortoise.png"
+              src="avatars/Tortoise.png"
               alt=""
-              onClick={() => setAvatar("avatars/tortoise.png")}
+              onClick={() => setAvatar("avatars/Tortoise.png")}
             />
             <img
-              src="avatars/lion.png"
+              src="avatars/Lion.png"
               alt=""
-              onClick={() => setAvatar("avatars/lion.png")}
+              onClick={() => setAvatar("avatars/Lion.png")}
             />
             <img
-              src="avatars/monkey.png"
+              src="avatars/Monkey.png"
               alt=""
-              onClick={() => setAvatar("avatars/monkey.png")}
+              onClick={() => setAvatar("avatars/Monkey.png")}
             />
             <img
               src="avatars/Tiger.png"
