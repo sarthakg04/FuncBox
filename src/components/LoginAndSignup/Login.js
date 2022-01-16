@@ -23,6 +23,7 @@ import { toast } from "react-toastify";
 
 export default function Login(props) {
   const history = useHistory();
+  const [loginStatus , setLoginStatus] = useState('Login')
   const { isAuthenticated, token } = useAuth();
   const apiurl = process.env.REACT_APP_API_URL;
 
@@ -59,6 +60,7 @@ export default function Login(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // dispatch(setUser({ username: details.username, parseRes.token }));
+    setLoginStatus('Logging In.......')
     try {
       const body = { email: details.username, password: details.password };
       const response = await fetch(
@@ -84,8 +86,7 @@ export default function Login(props) {
           `${
             process.env.NODE_ENV === "development"
               ? apiurl
-              : "http://localhost:5000"
-        
+              : "https://server.funcbox.in"
           }/auth/verify`,
           {
             credentials: "include",
@@ -112,6 +113,7 @@ export default function Login(props) {
         // history.goBack();
       } else {
         toast.error(parseRes);
+        setLoginStatus('Login')
         //   resetInputValue();
       }
     } catch (err) {
@@ -119,6 +121,7 @@ export default function Login(props) {
       setAuth({ isAuthenticated: false });
       setUser({ username: "" });
       setToken({ token: "" });
+      setLoginStatus('Login')
     }
   };
 
@@ -177,7 +180,7 @@ export default function Login(props) {
                 onChange={handleChange}
               />
               <button type="submit" name="button" className="submit">
-                Login
+                {loginStatus}
               </button>
             </form>
           </div>
