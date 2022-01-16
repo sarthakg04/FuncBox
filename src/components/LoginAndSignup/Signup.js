@@ -35,7 +35,7 @@ export default function Signup() {
     fName: "First Name",
     lName: "Last Name",
     standard: "Standard",
-    password: "Passwordd",
+    password: "Password",
     confirmPassword: "Confirm Password",
   };
 
