@@ -11,6 +11,7 @@ function WelcomePage() {
   useEffect(() => {}, [isAuthenticated]);
 
   const username = useSelector((state) => state.auth.username);
+  const avatar = useSelector((state) => state.auth.avatar);
 
   const games = [
     {
@@ -98,11 +99,13 @@ function WelcomePage() {
       <div className="welcome_container">
         <div className="avatar_container">
           <div className="avatar">
+            <div className="avatar_bg">
             <img
               className="avatar_img"
-              src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/avatar_uy1c2lVSi.png?updatedAt=1633928511425"
+              src={avatar}
               alt=""
             />
+            </div>
             <img
               className="overlay"
               src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/overlay_-HxVdV70h.png?updatedAt=1633929022661"
