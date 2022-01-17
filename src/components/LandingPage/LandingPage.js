@@ -7,6 +7,8 @@ import Footer from "../Footer/Footer";
 import Container from "../FlippableCard/Container";
 import { Link } from "react-router-dom";
 import Ribbon from "./Ribbon";
+// import Monkey from "../../assets.monkey.png"
+// import Left from "../../assets.left.png"
 
 // import downArrow from './assets/downArrow.svg'
 // import roadmap from './assets/roadmap.svg'
@@ -16,6 +18,8 @@ import Ribbon from "./Ribbon";
 // import img2 from './assets/img2.png'
 
 export default function LandingPage() {
+  const Monkey = "https://ik.imagekit.io/FuncBoxImages/monkey_jVoJ2JX9D.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642427824992";
+  const Left = "https://ik.imagekit.io/FuncBoxImages/left_FXV9e7pqf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642427825253";
   const homepageimg =
     "https://ik.imagekit.io/funcboxImages/LandingPage_assets/homepageimg_eAE7Ev4l4.webp?updatedAt=1633350407186";
   const downArrow =
@@ -57,14 +61,31 @@ export default function LandingPage() {
       </Helmet>
       <div className="landingPage__main">
         <Navbar home_check={true} about_check={false} shop_check={false} />
-        <div className="hero__section">
+        <div className="Landing_container">
+          <div className="upper">
+            <div className="text">
+              <h1>Introducing Coding for Kids</h1>
+              <h3>Order your first FuncBox Today! </h3>
+            </div>
+            <div className="btn">
+              <button>Buy Now!</button>
+            </div>
+          </div>
+          <div className="lower">
+            <img src={Left} alt="" className="left" />
+            <img src={Monkey} alt="" className="right" />
+          </div>
+        </div>
+
+
+        {/* <div className="hero__section">
           <div className="hero__image">
             <img src={homepageimg} alt="" />
           </div>
           <div className="downArrow">
             <img src={downArrow} alt="" />
           </div>
-        </div>
+        </div> */}
         <div className="details">
           <div className="info">
             <strong>
@@ -77,7 +98,7 @@ export default function LandingPage() {
             <img src={logo} alt="" />
           </div>
         </div>
-        
+
         <Container />
         <div className="creativity_div">
           <h2>Why at an Early Age?</h2>
