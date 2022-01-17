@@ -102,7 +102,7 @@ function WelcomePage() {
             <div className="avatar_bg">
             <img
               className="avatar_img"
-              src={avatar}
+              src={avatar || "avatars/Tiger.png"}
               alt=""
             />
             </div>
