@@ -15,8 +15,11 @@ import home from "./assets/home.png";
 import home_current from "./assets/home_current.png";
 // import logo from './assets/logo.png'
 import login from "./assets/login.png";
+import logo from "./assets/logo.png";
+import funcbox from "./assets/FuncBox.png";
 import shop from "./assets/shop.png";
 import shop_current from "./assets/shop_current.png";
+import login_current from "./assets/login_current.png";
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
@@ -36,14 +39,13 @@ export default function Navbar(props) {
   // const about_current = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/about_current_ZVYrXtG6O.png?updatedAt=1633351778318'
   // const home = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/home_TNxeUkAI2oj.png?updatedAt=1633369073852'
   // const home_current = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/home_current_7g2zrFN17.png?updatedAt=1633351779952'
-  const logo =
-    "https://ik.imagekit.io/funcboxImages/Navbar_assets/logo_fABtRefL6.png?updatedAt=1633358637425";
+  // const logo = "./assets/logo.png";
   // const login = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/login_OS_KcRsPy.png?updatedAt=1633368915926'
   // const shop = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/shop_evdV8iuaBL0.png?updatedAt=1633369146900'
   // const shop_current = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/shop_current_zUZ1xbFqsMTZ.png?updatedAt=1633351783276'
 
   //   console.log(props);
-  const { home_check, about_check, shop_check } = props;
+  const { home_check, about_check, shop_check, login_check } = props;
   function toggleNav() {
     document.getElementById("mobile__links").classList.toggle("active");
   }
@@ -78,6 +80,9 @@ export default function Navbar(props) {
           <Link to="/">
             <img src={logo} alt="logo" className="logo" />
           </Link>
+          <Link to="/">
+            <h1 className="text">FuncBox</h1>
+          </Link>
         </div>
         <div className="link">
           <Link to="/">
@@ -111,7 +116,7 @@ export default function Navbar(props) {
             </div>
           ) : (
             <Link to="/Login">
-              <img src={login} alt="login" />
+              <img src={login_check ? login_current : login} alt="login" />
               <p>Login</p>
             </Link>
           )}
@@ -148,7 +153,7 @@ export default function Navbar(props) {
           </div>
         ) : (
           <Link to="/Login">
-            <img src={login} alt="login" />
+            <img src={login_check ? login_current : login} alt="login" />
             <p>Login</p>
           </Link>
         )}
