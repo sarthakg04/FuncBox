@@ -99,12 +99,7 @@ function App() {
               userid: parseRes.userDetails[0].id,
             })
           );
-          dispatch(
-            setProfile({
-              avatar:
-                parseRes.userDetails[0].avatar,
-            })
-          );
+          dispatch(setProfile({ avatar: parseRes.userDetails[0].avatar }));
           dispatch(setToken({ token: "Bearer " + parseRes.token }));
         } else {
           dispatch(setAuth({ isAuthenticated: false }));

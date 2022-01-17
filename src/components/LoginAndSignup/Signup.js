@@ -19,7 +19,7 @@ import card5 from "./assets/card5.svg";
 import card6 from "./assets/card6.svg";
 import { parse } from "qs";
 import { useDispatch, useSelector } from "react-redux";
-import { setAuth, setToken, setUser } from "../../auth/authslice";
+import { setAuth, setToken, setUser, setProfile } from "../../auth/authslice";
 import { toast } from "react-toastify";
 import ReCAPTCHA from "react-google-recaptcha"
 
@@ -79,6 +79,7 @@ export default function Signup() {
           userid: parseRes.userid,
         })
       );
+      dispatch(setProfile({ avatar: parseRes.userDetails[0].avatar }));
       dispatch(setToken({ token: "Bearer " + parseRes.token }));
       toast.success("You are ready to go");
       history.push("/Welcome");
