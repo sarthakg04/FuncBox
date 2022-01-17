@@ -56,7 +56,10 @@ export default function LandingPage() {
         <meta name="author" content="Team Funcbox" />
       </Helmet>
       <div className="landingPage__main">
+
         <Navbar home_check={true} about_check={false} shop_check={false} />
+
+
         <div className="hero__section">
           <div className="hero__image">
             <img src={homepageimg} alt="" />
@@ -77,7 +80,7 @@ export default function LandingPage() {
             <img src={logo} alt="" />
           </div>
         </div>
-        
+
         <Container />
         <div className="creativity_div">
           <h2>Why at an Early Age?</h2>
