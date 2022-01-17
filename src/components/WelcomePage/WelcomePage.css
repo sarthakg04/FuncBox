@@ -45,10 +45,13 @@
   font-size: 40px;
   font-family: "Montserrat", sans-serif;
 }
-.avatar_img {
-  padding: 20px;
+.avatar_bg{
   background-color: #b4d1c4;
   border-radius: 50%;
+  padding: 25px;
+}
+.avatar_img {
+  width: 200px;
 }
 .overlay {
   position: absolute;

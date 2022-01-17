@@ -21,7 +21,7 @@ import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { useDispatch, useSelector } from "react-redux";
-import { setAuth, setToken, setUser } from "../../auth/authslice";
+import { setAuth, setToken, setUser, setProfile } from "../../auth/authslice";
 import { toast } from "react-toastify";
 
 export default function Navbar(props) {
@@ -50,6 +50,7 @@ export default function Navbar(props) {
   const handleLogout = async () => {
     dispatch(setAuth({ isAuthenticated: false }));
     dispatch(setUser({ username: "", userid: "" }));
+    dispatch(setProfile({ avatar: "" }));
     dispatch(setToken({ token: "" }));
     const res = await fetch(
       `${

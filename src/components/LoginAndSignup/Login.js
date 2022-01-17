@@ -16,6 +16,7 @@ import {
   setAuth,
   setUser,
   setToken,
+  setProfile,
   // setUser
 } from "../../auth/authslice";
 import { useDispatch, useSelector } from "react-redux";
@@ -107,6 +108,11 @@ export default function Login(props) {
               verifyres.userDetails[0].fname +
               " " +
               verifyres.userDetails[0].lname,
+          })
+        );
+        dispatch(
+          setProfile({
+            avatar: verifyres.userDetails[0].avatar
           })
         );
 

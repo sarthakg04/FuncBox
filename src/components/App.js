@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { setAuth, setUser, setToken } from "../auth/authslice";
+import { setAuth, setUser, setToken, setProfile } from "../auth/authslice";
 import AngryBirds from "../components/Games/AngryBirds/AngryBirds";
 import MissionMars from "../components/Games/MissionMars/MissionMars";
 import AvengersGame from "./Games/AvengersGame/AvengersGame";
@@ -99,6 +99,7 @@ function App() {
               userid: parseRes.userDetails[0].id,
             })
           );
+          dispatch(setProfile({ avatar: parseRes.userDetails[0].avatar }));
           dispatch(setToken({ token: "Bearer " + parseRes.token }));
         } else {
           dispatch(setAuth({ isAuthenticated: false }));

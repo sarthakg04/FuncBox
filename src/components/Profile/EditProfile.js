@@ -10,6 +10,7 @@ import {
   setAuth,
   setUser,
   setToken,
+  setProfile,
   // setUser
 } from "../../auth/authslice";
 import { useDispatch, useSelector } from "react-redux";
@@ -25,8 +26,8 @@ export default function EditProfile(props) {
   const [number, setNumber] = useState("");
   const [add, setAdd] = useState("test");
   const [dob, setDob] = useState("2021-10-21");
-  const [avatar, setAvatar] = useState("avatars/tiger1.png");
   const [profileUpdateStatus , setprofileUpdateStatus] = useState('Update Profile')
+  const [avatar, setAvatar] = useState("avatars/Tiger.png");
   const [std, setStd] = useState(3);
   const history = useHistory();
   const dispatch = useDispatch();
@@ -95,6 +96,7 @@ export default function EditProfile(props) {
 
     if (data === "updated") {
       dispatch(setUser({ username: fname + " " + lname }));
+      dispatch(setProfile({ avatar: avatar }));
       toast.success("Your Account is updated");
       history.push("/Welcome");
     }
@@ -228,23 +230,20 @@ export default function EditProfile(props) {
           </div>
         </div>
         <div className="right__container">
-          <img src={avatar} alt="" className="avatar__h" />
+          <div className="avatar__header">
+            <img src={avatar} alt="" className="avatar__h" />
+          </div>
           <p>Update Avatar</p>
           <div className="avatars">
             <img
-              src="avatars/dog.png"
+              src="avatars/Whale.png"
               alt=""
-              onClick={() => setAvatar("avatars/dog.png")}
+              onClick={() => setAvatar("avatars/Whale.png")}
             />
             <img
-              src="avatars/crocodile.png"
+              src="avatars/Zebra.png"
               alt=""
-              onClick={() => setAvatar("avatars/crocodile.png")}
-            />
-            <img
-              src="avatars/edu2.png"
-              alt=""
-              onClick={() => setAvatar("avatars/edu2.png")}
+              onClick={() => setAvatar("avatars/Zebra.png")}
             />
             <img
               src="avatars/elephant.png"
@@ -252,34 +251,34 @@ export default function EditProfile(props) {
               onClick={() => setAvatar("avatars/elephant.png")}
             />
             <img
-              src="avatars/graduation.png"
+              src="avatars/Panda.png"
               alt=""
-              onClick={() => setAvatar("avatars/graduation.png")}
+              onClick={() => setAvatar("avatars/Panda.png")}
             />
             <img
-              src="avatars/student2.png"
+              src="avatars/Fox.png"
               alt=""
-              onClick={() => setAvatar("avatars/student2.png")}
+              onClick={() => setAvatar("avatars/Fox.png")}
             />
             <img
-              src="avatars/student3.png"
+              src="avatars/Tortoise.png"
               alt=""
-              onClick={() => setAvatar("avatars/student3.png")}
+              onClick={() => setAvatar("avatars/Tortoise.png")}
             />
             <img
-              src="avatars/studying.png"
+              src="avatars/Lion.png"
               alt=""
-              onClick={() => setAvatar("avatars/studying.png")}
+              onClick={() => setAvatar("avatars/Lion.png")}
             />
             <img
-              src="avatars/tiger1.png"
+              src="avatars/Monkey.png"
               alt=""
-              onClick={() => setAvatar("avatars/tiger1.png")}
+              onClick={() => setAvatar("avatars/Monkey.png")}
             />
             <img
-              src="avatars/tiger2.png"
+              src="avatars/Tiger.png"
               alt=""
-              onClick={() => setAvatar("avatars/tiger2.png")}
+              onClick={() => setAvatar("avatars/Tiger.png")}
             />
           </div>
         </div>
