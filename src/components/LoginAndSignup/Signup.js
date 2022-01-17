@@ -79,7 +79,6 @@ export default function Signup() {
           userid: parseRes.userid,
         })
       );
-      dispatch(setProfile({ avatar: parseRes.userDetails[0].avatar }));
       dispatch(setToken({ token: "Bearer " + parseRes.token }));
       toast.success("You are ready to go");
       history.push("/Welcome");
