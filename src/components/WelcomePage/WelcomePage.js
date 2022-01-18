@@ -6,7 +6,7 @@ import useAuth from "../../hooks/useAuth";
 import Navbar from "../Navbar/Navbar";
 import "./WelcomePage.css";
 function WelcomePage() {
-  const { isAuthenticated, token, username } = useAuth();
+  const { isAuthenticated, token, username, avatar } = useAuth();
   const apiurl = process.env.REACT_APP_API_URL;
   const history = useHistory();
   const [games, setGames] = useState([]);
@@ -56,8 +56,8 @@ function WelcomePage() {
         }
       );
       const data = await res.json();
+      console.log("user games", data.games);
       if (data && data.games.length > 0) {
-        console.log("All Games:", allGames);
         for (let gameid of data.games) {
           const game = allGames.filter((g) => g.id === gameid);
 
@@ -71,14 +71,11 @@ function WelcomePage() {
     };
     if (allGames.length > 0) {
       getUserGames();
-      console.log(games);
     }
   }, [allGames]);
 
   useEffect(() => {
-    if (games.length > 0) {
-      console.log("games: ", games);
-    }
+    console.log("games = ", games);
   }, [games]);
 
   return (
@@ -88,11 +85,11 @@ function WelcomePage() {
         <div className="avatar_container">
           <div className="avatar">
             <div className="avatar_bg">
-            <img
-              className="avatar_img"
-              src={avatar || "avatars/Tiger.png"}
-              alt=""
-            />
+              <img
+                className="avatar_img"
+                src={avatar || "avatars/Tiger.png"}
+                alt=""
+              />
             </div>
             <img
               className="overlay"
@@ -138,21 +135,22 @@ function WelcomePage() {
                 />
               </div>
               <div className="game_thumbnails">
-                {games?.map((game) => (
-                  <Link className="thumbnail_link" to={game.route}>
-                    <div className="thumbnail">
-                      <div className="thumb_image">
-                        <img
-                          src={`${
-                            game.icon != "test" ? game.icon : placeholder
-                          }`}
-                          alt=""
-                        />
-                      </div>
-                      <p className="game_title">{game.gname}</p>
-                    </div>
-                  </Link>
-                ))}
+                {games.length > 0
+                  ? games.map((game) => (
+                      <Link
+                        key={`game-${game.gname}`}
+                        className="thumbnail_link"
+                        to={game?.route}
+                      >
+                        <div className="thumbnail">
+                          <div className="thumb_image">
+                            <img src={`${game.icon || placeholder}`} alt="" />
+                          </div>
+                          <p className="game_title">{game?.gname}</p>
+                        </div>
+                      </Link>
+                    ))
+                  : ""}
               </div>
               <Link to="/">
                 <img

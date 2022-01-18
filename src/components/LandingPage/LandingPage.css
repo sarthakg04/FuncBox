@@ -14,7 +14,7 @@
   width: 55%;
 }
 
-.landingPage__main .hero__section .downArrow img {
+.landingPage__main .hero_section .downArrow img {
   width: 100%;
   margin-top: -20%;
 }
@@ -320,10 +320,10 @@
     margin-left: 0;
   }
 
-  .landingPage__main .hero__section .downArrow img {
+  .landingPage__main .hero_section .downArrow img {
     display: none;
   }
-  .hero__section {
+  .hero_section {
     height: 52vh;
     display: flex;
     place-items: center;

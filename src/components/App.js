@@ -120,7 +120,7 @@ function App() {
           position="top-left"
           pauseOnFocusLoss={false}
           pauseOnHover={false}
-          autoClose={1000}
+          autoClose={2000}
         />
         <Switch>
           <Route exact path="/howwework" component={HowWeWork} /> {/*Kaustubh Dwivedi */}
