@@ -1,85 +1,97 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { Link, useHistory } from "react-router-dom";
-import useAuth from "../../hooks/useAuth";
+import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import "./WelcomePage.css";
 function WelcomePage() {
-  const { isAuthenticated, token, username } = useAuth();
-  const apiurl = process.env.REACT_APP_API_URL;
-  const history = useHistory();
-  const [games, setGames] = useState([]);
-  const [allGames, setAllGames] = useState([]);
-  const placeholder =
-    "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/placeholder_oF5SIwZ26.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642429577487";
-  useEffect(() => {
-    if (!isAuthenticated) {
-      history.push("/login");
-    }
-  }, [isAuthenticated]);
-  useEffect(() => {
-    const getGames = async () => {
-      const res = await fetch(
-        `${
-          process.env.NODE_ENV === "development"
-            ? apiurl
-            : "https://server.funcbox.in"
-        }/data/games`,
-        {
-          method: "GET",
-          credentials: "include",
-          headers: { token: token },
-        }
-      );
-      const data = await res.json();
-      if (data && data.length > 0) setAllGames(data);
-    };
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const token = useSelector((state)=>state.auth.token);
 
-    if (token) {
-      getGames();
-    }
-  }, [token]);
+  useEffect(() => {}, [isAuthenticated]);
 
-  useEffect(() => {
-    const getUserGames = async () => {
-      const res = await fetch(
-        `${
-          process.env.NODE_ENV === "development"
-            ? apiurl
-            : "https://server.funcbox.in"
-        }/usergames`,
-        {
-          method: "GET",
-          credentials: "include",
-          headers: { token: token },
-        }
-      );
-      const data = await res.json();
-      if (data && data.games.length > 0) {
-        console.log("All Games:", allGames);
-        for (let gameid of data.games) {
-          const game = allGames.filter((g) => g.id === gameid);
+  const username = useSelector((state) => state.auth.username);
+  const avatar = useSelector((state) => state.auth.avatar);
 
-          setGames((games) => {
-            let array = [...games, game[0]];
-            return array;
-          });
-        }
-      }
-      console.log("data:", data);
-    };
-    if (allGames.length > 0) {
-      getUserGames();
-      console.log(games);
-    }
-  }, [allGames]);
-
-  useEffect(() => {
-    if (games.length > 0) {
-      console.log("games: ", games);
-    }
-  }, [games]);
+  const games = [
+    {
+      name: "Alien Game",
+      img_src:
+        "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/superman_vzjKReNAq.png?updatedAt=1633934549464",
+      path: "/AlienGame",
+    },
+    {
+      name: "Mission Mars",
+      img_src:
+        "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/missionmars_TY5evi45WpQ.png?updatedAt=1633934549057",
+      path: "/MissionMars",
+    },
+    {
+      name: "Monkey Multiplier",
+      img_src:
+        "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/monkeymultiplier_Gc5czdndJ4N.png?updatedAt=1633935134438",
+      path: "/MonkeyMultiplier",
+    },
+    {
+      name: "Whack a Mole",
+      img_src:
+        "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/molegame_ndPOWyaTu.png?updatedAt=1633932817320",
+      path: "/MoleGame",
+    },
+    {
+      name: "Angry Birds",
+      img_src:
+        "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/angrybirds_1P8OmNKQB77R.png?updatedAt=1633935134645",
+      path: "/AngryBirds",
+    },
+    {
+      name: "Water Cycle",
+      img_src:
+        "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/watercycle_Yi1RFz1qy.png?updatedAt=1633935134339",
+      path: "/LetsMakeItRain",
+    },
+    {
+      name: "Color Fun",
+      img_src:
+        "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/colorgame_xMmJiGfwh.png?updatedAt=1633937930122",
+      path: "/ColorGame",
+    },
+    {
+      name: "Avengers",
+      img_src:
+        "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/molegame_ndPOWyaTu.png?updatedAt=1633932817320",
+      path: "/AvengersGame",
+    },
+    {
+      name: "Incredibles",
+      img_src:
+        "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/incredibles_4ErvfoQcfAhI.png?updatedAt=1633935134605",
+      path: "/IncrediblesGame",
+    },
+    {
+      name: "Avengers",
+      img_src:
+        "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/molegame_ndPOWyaTu.png?updatedAt=1633932817320",
+      path: "/AvengersGame",
+    },
+    {
+      name: "Incredibles",
+      img_src:
+        "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/incredibles_4ErvfoQcfAhI.png?updatedAt=1633935134605",
+      path: "/IncrediblesGame",
+    },{
+      name: "Avengers",
+      img_src:
+        "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/molegame_ndPOWyaTu.png?updatedAt=1633932817320",
+      path: "/AvengersGame",
+    },
+    {
+      name: "Incredibles",
+      img_src:
+        "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/incredibles_4ErvfoQcfAhI.png?updatedAt=1633935134605",
+      path: "/IncrediblesGame",
+    },
+  ];
 
   return (
     <>
@@ -90,7 +102,7 @@ function WelcomePage() {
             <div className="avatar_bg">
             <img
               className="avatar_img"
-              src={avatar || "avatars/Tiger.png"}
+              src={avatar  || "avatars/Tiger.png"}
               alt=""
             />
             </div>
@@ -138,18 +150,13 @@ function WelcomePage() {
                 />
               </div>
               <div className="game_thumbnails">
-                {games?.map((game) => (
-                  <Link className="thumbnail_link" to={game.route}>
+                {games.map((game) => (
+                  <Link to={game.path}>
                     <div className="thumbnail">
                       <div className="thumb_image">
-                        <img
-                          src={`${
-                            game.icon != "test" ? game.icon : placeholder
-                          }`}
-                          alt=""
-                        />
+                        <img src={`${game.img_src}`} alt="" />
                       </div>
-                      <p className="game_title">{game.gname}</p>
+                      <p className="game_title">{game.name}</p>
                     </div>
                   </Link>
                 ))}
