@@ -61,6 +61,7 @@ import PawnShop from "./Games/PawnShop/PawnShop";
 import CountDracula from "./Games/CountDracula/CountDracula";
 import ChemistryLab from "./Games/ChemistryLab/ChemistryLab";
 import WeatherGame from "./Games/WeatherGame/WeatherGame";
+import HowWeWork from "./HowWeWork/HowWeWork";
 
 function App() {
   const dispatch = useDispatch();
@@ -122,6 +123,8 @@ function App() {
           autoClose={1000}
         />
         <Switch>
+          <Route exact path="/howwework" component={HowWeWork} /> {/*Kaustubh Dwivedi */}
+
           <Route exact path="/AngryBirds" component={AngryBirds} />
           <Route exact path="/MissionMars" component={MissionMars} />
           <Route exact path="/MonkeyMultiplier" component={MonkeyMultiplier} />
@@ -162,7 +165,11 @@ function App() {
           <Route exact path="/Demo" component={Demo} />
           <Route exact path="/countdracula" component={CountDracula} />
           <Route exact path="/chemistrylab" component={ChemistryLab} />
-          <Route exact path="/WeightUnitConversions" component={WeightUnitConversions} />
+          <Route
+            exact
+            path="/WeightUnitConversions"
+            component={WeightUnitConversions}
+          />
           <Route exact path="/WeatherGame" component={WeatherGame} />
 
           <Route exact path="/UserNavbar" component={UserNavbar} />
