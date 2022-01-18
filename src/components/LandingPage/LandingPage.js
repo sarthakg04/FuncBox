@@ -60,7 +60,6 @@ export default function LandingPage() {
         <meta name="author" content="Team Funcbox" />
       </Helmet>
       <div className="landingPage__main">
-
         <Navbar home_check={true} about_check={false} shop_check={false} />
         <div className="Landing_container">
           <div className="upper">
