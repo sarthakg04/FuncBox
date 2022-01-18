@@ -10,22 +10,6 @@
   margin: 32px;
 }
 
-/* .aboutPage__main .hero__section .about_heading {
-  background-color: #f5f5f5;
-  padding: 16px;
-  text-align: center;
-  margin-bottom: -70px;
-  position: relative;
-  z-index: 2;
-} */
-
-/* .aboutPage__main .hero__section h1 {
-  font-weight: 400;
-
-  font-size: 40px;
-  color: rgba(0, 0, 0, 0.5);
-} */
-
 .aboutPage__main .hero__section .about_main_container{
   display: flex;
   align-items: center;
@@ -138,9 +122,9 @@
 
 @media (max-width: 1300px) {
   .phoneimg{
-    width: 90%;
+    width: 100%;
     height: 80%;
-    left: 5vw;
+    left: 1vw;
   }
 
   .about_container2 p{
@@ -150,10 +134,19 @@
 }
 
 @media (max-width: 850px){
+  .yellowbg{
+    width: 60vw;
+  }
+
   .phoneimg{
-    width: 100%;
-    height: 75%;
-    left: 1vw;
+    height: 70%;
+    left: 0vw;
+    top: 20vh;
+  }
+
+  .about_container2 p{
+    font-size: 1.2rem;
+    width: 38vw;
   }
 }
 
@@ -163,19 +156,13 @@
   }
 
   .phoneimg{
-    height: 70%;
+    height: 65%;
   }
-
 }
 
 @media (max-width: 600px) {
-  /* .aboutPage__main .hero__section .about_heading {
-    width: 90%;
-  } */
-
   .aboutPage__main .hero__section .about_main_container{
     flex-direction: column;
-    /* height: fit-content; */
   }
 
   .yellowbg{
@@ -187,7 +174,7 @@
   }
 
   .about_container2{
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   .about_container2 h1{
@@ -195,7 +182,6 @@
   }
 
   .about_container2 p{
-    font-size: 1rem;
     width: 60vw;
   }
 
@@ -215,10 +201,6 @@
   .aboutPage__main .faqs {
     margin: 64px 16px;
   }
-
-  /* .aboutPage__main .hero__section .about_heading {
-    margin-bottom: -4%;
-  } */
 
   .aboutPage__main .faqs .faq__heading {
     font-size: 18px;
@@ -242,5 +224,10 @@
     width: 100%;
     height: 70%;
     left: 0;
+  }
+
+  .about_container2 p{
+    font-size: 1rem;
+    width: 80vw;
   }
 }

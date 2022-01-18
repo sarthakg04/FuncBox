@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet";
 import "./AboutPage.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import Yellowbg from './assets/Yellowbg.png';
+import Phoneimg from './assets/Phone.png';
 
 // import hero from './assets/hero.webp'
 // import roadmap from './assets/roadmap.webp'
@@ -55,10 +57,20 @@ export default function AboutPage() {
         login_check={false}
       />
       <div className="hero__section">
-        <div className="about_heading">
-          <h1>About us</h1>
+        <div className="about_main_container">
+          <div className="about_container1">
+            <img className="yellowbg" src={Yellowbg} alt="bgimg" />
+            <img className="phoneimg" src={Phoneimg} alt="phone" />
+          </div>
+          <div className="about_container2">
+            <h1>About Us</h1>
+            <p>We at Funcbox bring a small box full of creative app cards 
+              which will help your kid learn to code, build creative apps, 
+              type these codes themselves and also share the same within peers. 
+              We also provide a really interactive code editor where your kid 
+              will be guided to develop code.</p>
+          </div>
         </div>
-        <img src={hero} alt="hero" />
       </div>
       <div className="howWeWork">
         <h1>How we work</h1>
