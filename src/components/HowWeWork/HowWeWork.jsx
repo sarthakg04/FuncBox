@@ -20,11 +20,10 @@ import O6 from "./assests/O6.png";
 const HowWeWork = () => {
   return (
     <div className="how-we-work">
-      <h1 className="heading">How we work</h1>
       <div className="Main">
-
         {/* VECTOR IMAMGES */}
 
+        <h1 className="heading">How we work</h1>
         <div className="Vector_center">
           <img src={Vector_center} alt="" />
         </div>
