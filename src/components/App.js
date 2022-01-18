@@ -119,7 +119,7 @@ function App() {
           position="top-left"
           pauseOnFocusLoss={false}
           pauseOnHover={false}
-          autoClose={1000}
+          autoClose={2000}
         />
         <Switch>
           <Route exact path="/AngryBirds" component={AngryBirds} />
@@ -162,7 +162,11 @@ function App() {
           <Route exact path="/Demo" component={Demo} />
           <Route exact path="/countdracula" component={CountDracula} />
           <Route exact path="/chemistrylab" component={ChemistryLab} />
-          <Route exact path="/WeightUnitConversions" component={WeightUnitConversions} />
+          <Route
+            exact
+            path="/WeightUnitConversions"
+            component={WeightUnitConversions}
+          />
           <Route exact path="/WeatherGame" component={WeatherGame} />
 
           <Route exact path="/UserNavbar" component={UserNavbar} />
