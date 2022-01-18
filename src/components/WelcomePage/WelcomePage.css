@@ -49,6 +49,8 @@
   background-color: #b4d1c4;
   border-radius: 50%;
   padding: 25px;
+  aspect-ratio: 1;
+  text-align: center;
 }
 .avatar_img {
   width: 200px;
