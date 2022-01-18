@@ -24,7 +24,7 @@ import { toast } from "react-toastify";
 
 export default function Login(props) {
   const history = useHistory();
-  const [loginStatus , setLoginStatus] = useState('Login')
+  const [loginStatus, setLoginStatus] = useState("Login");
   const { isAuthenticated, token } = useAuth();
   const apiurl = process.env.REACT_APP_API_URL;
 
@@ -43,7 +43,6 @@ export default function Login(props) {
     }
   }, [isAuthenticated]);
 
-
   const [details, setDetails] = useState({
     username: "Email",
     password: "Password",
@@ -61,7 +60,7 @@ export default function Login(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // dispatch(setUser({ username: details.username, parseRes.token }));
-    setLoginStatus('Logging In.......')
+    setLoginStatus("Logging In.......");
     try {
       const body = { email: details.username, password: details.password };
       const response = await fetch(
@@ -119,7 +118,7 @@ export default function Login(props) {
         // history.goBack();
       } else {
         toast.error(parseRes);
-        setLoginStatus('Login')
+        setLoginStatus("Login");
         //   resetInputValue();
       }
     } catch (err) {
@@ -127,13 +126,19 @@ export default function Login(props) {
       setAuth({ isAuthenticated: false });
       setUser({ username: "" });
       setToken({ token: "" });
-      setLoginStatus('Login')
+      setLoginStatus("Login");
     }
   };
 
   return (
     <div>
-      <Navbar />
+      <Navbar
+        home_check={false}
+        about_check={false}
+        shop_check={false}
+        login_check={true}
+      />
+
       <div className="signup__container">
         <div className="circular__carosel">
           <div className="car-wrapper">
