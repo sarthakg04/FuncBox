@@ -20,10 +20,10 @@ import O6 from "./assests/O6.png";
 const HowWeWork = () => {
   return (
     <div className="how-we-work">
+      <h1 className="heading">How we work</h1>
       <div className="Main">
-        {/* <h1 className="heading">How we works</h1> */}
-        
-        {/* VECTOR IMAMGES */} 
+
+        {/* VECTOR IMAMGES */}
 
         <div className="Vector_center">
           <img src={Vector_center} alt="" />
@@ -50,43 +50,43 @@ const HowWeWork = () => {
         {/* SIDE IMAGES */}
 
         <div className="child">
-            <img src={child} alt="" />
+          <img src={child} alt="" />
         </div>
         <div className="incredibles">
-            <img src={incredibles} alt="" />
+          <img src={incredibles} alt="" />
         </div>
         <div className="mypackage">
-            <img src={mypackage} alt="" />
+          <img src={mypackage} alt="" />
         </div>
         <div className="parents">
-            <img src={parents} alt="" />
+          <img src={parents} alt="" />
         </div>
         <div className="rocket">
-            <img src={rocket} alt="" />
+          <img src={rocket} alt="" />
         </div>
         <div className="van">
-            <img src={van} alt="" />
+          <img src={van} alt="" />
         </div>
 
         {/* STEPS IMAGES */}
 
         <div className="O1">
-            <img src={O1} alt="" />
+          <img src={O1} alt="" />
         </div>
         <div className="O2">
-            <img src={O2} alt="" />
+          <img src={O2} alt="" />
         </div>
         <div className="O3">
-            <img src={O3} alt="" />
+          <img src={O3} alt="" />
         </div>
         <div className="O4">
-            <img src={O4} alt="" />
+          <img src={O4} alt="" />
         </div>
         <div className="O5">
-            <img src={O5} alt="" />
+          <img src={O5} alt="" />
         </div>
         <div className="O6">
-            <img src={O6} alt="" />
+          <img src={O6} alt="" />
         </div>
 
         {/* STEPS TEXT */}
