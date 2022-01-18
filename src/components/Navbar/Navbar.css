@@ -51,6 +51,7 @@
 }
 .navigation .logo__container img {
   height: 100%;
+  width: 100%;
 }
 
 .navigation .link a,

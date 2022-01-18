@@ -78,11 +78,11 @@ export default function Navbar(props) {
       <div className="navigation">
         <div className="logo__container">
           <Link to="/">
-            <img src={logo} alt="logo" className="logo" />
+            <img src={funcbox} alt="logo" className="logo" />
           </Link>
-          <Link to="/">
+          {/* <Link to="/">
             <h1 className="text">FuncBox</h1>
-          </Link>
+          </Link> */}
         </div>
         <div className="link">
           <Link to="/">
