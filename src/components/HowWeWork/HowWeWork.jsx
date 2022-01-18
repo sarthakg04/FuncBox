@@ -10,12 +10,6 @@ import van from "./assests/van.png";
 import Vector from "./assests/Vector.png";
 import Vector_center from "./assests/Vector_center.png";
 
-import O1 from "./assests/O1.png";
-import O2 from "./assests/O2.png";
-import O3 from "./assests/O3.png";
-import O4 from "./assests/O4.png";
-import O5 from "./assests/O5.png";
-import O6 from "./assests/O6.png";
 
 const HowWeWork = () => {
   return (
@@ -70,22 +64,22 @@ const HowWeWork = () => {
         {/* STEPS IMAGES */}
 
         <div className="O1">
-          <img src={O1} alt="" />
+          O1
         </div>
         <div className="O2">
-          <img src={O2} alt="" />
+          O2
         </div>
         <div className="O3">
-          <img src={O3} alt="" />
+          O3
         </div>
         <div className="O4">
-          <img src={O4} alt="" />
+          O4
         </div>
         <div className="O5">
-          <img src={O5} alt="" />
+          O5
         </div>
         <div className="O6">
-          <img src={O6} alt="" />
+          O6
         </div>
 
         {/* STEPS TEXT */}
