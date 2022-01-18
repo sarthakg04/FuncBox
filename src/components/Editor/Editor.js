@@ -102,9 +102,9 @@ export default function Editor(props) {
           </a>
         </div>
         <div className="other__icons">
-          <button onClick={saveCode}>
+          <a href="javascript:void(0)" onClick={saveCode}>
             <img src={save} alt="" />
-          </button>
+          </a>
           <a href="javascript:void(0)">
             <img src={share} alt="" onClick={toggleQr} />
           </a>

@@ -18,7 +18,7 @@ function GameContainer({ gid, location }) {
   const [srcDoc, setSrcDoc] = useState("");
   const { isAuthenticated, token, userid } = useAuth();
   const [gAccess, setGAccess] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [qrSrc, setQrSrc] = useState("");
   const dispatch = useDispatch();
   const path = location;
@@ -77,7 +77,7 @@ function GameContainer({ gid, location }) {
         toast.error("Server Error");
         history.push("/");
       } else {
-        // console.log(gres);
+        console.log(gres);
       }
       const gaccess = await gres.json();
       // let gaccess = {
@@ -98,7 +98,7 @@ function GameContainer({ gid, location }) {
         history.push("/");
       }
       setGAccess(gaccess.gAcess);
-      // console.log(gaccess);
+      console.log(gaccess);
     }
     checkGameAccess();
 
@@ -136,25 +136,25 @@ function GameContainer({ gid, location }) {
     ).then(setQrSrc);
   }, [userid]);
   return loading ? (
-		<div> Loading ...</div>
-	) : (
-		<div className="main__container">
-			<Editor
-				language="javascript"
-				displayName="JS"
-				value={js}
-				onChange={setJs}
-				updateCode={updateCode}
-				gid={gid}
-			/>
-			<div className="preview">
-				<div class="heading">
-					<p>Preview</p>
-				</div>
-				<div className="frame_container">
-					<div className="phone">
-						<Frame srcDoc={srcDoc} />
-						{/* <iframe
+    <div> Loading ...</div>
+  ) : (
+    <div className="main__container">
+      <Editor
+        language="javascript"
+        displayName="JS"
+        value={js}
+        onChange={setJs}
+        updateCode={updateCode}
+        gid={gid}
+      />
+      <div className="preview">
+        <div class="heading">
+          <p>Preview</p>
+        </div>
+        <div className="frame_container">
+          <div className="phone">
+            <Frame srcDoc={srcDoc} />
+            {/* <iframe
                       srcDoc={srcDoc}
                       title="output"
                       sandbox="allow-scripts"
@@ -162,29 +162,29 @@ function GameContainer({ gid, location }) {
                       width="100%"
                       height="100%"
                   /> */}
-					</div>
-				</div>
-				<div className="back_btn">
-					<Link to="/Welcome">
-						<button>Go Back</button>
-					</Link>
-				</div>
-			</div>
-			<div className="qr_body" id="qr">
-				<div className="qr_container">
-					<div className="heading">
-						<h1>Scan to Share</h1>
-					</div>
-					<div className="qr_code">
-						<img src={qrSrc} alt="" />
-					</div>
-					<a href="javascript:void(0)" className="closeQr" onClick={toggleQr}>
-						Close
-					</a>
-				</div>
-			</div>
-		</div>
-	);
+          </div>
+        </div>
+        <div className="back_btn">
+          <Link to="/Welcome">
+            <button>Go Back</button>
+          </Link>
+        </div>
+      </div>
+      <div className="qr_body" id="qr">
+        <div className="qr_container">
+          <div className="heading">
+            <h1>Scan to Share</h1>
+          </div>
+          <div className="qr_code">
+            <img src={qrSrc} alt="" />
+          </div>
+          <a href="javascript:void(0)" className="closeQr" onClick={toggleQr}>
+            Close
+          </a>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default GameContainer;

@@ -31,12 +31,12 @@ export default function Signup() {
 
 
   const initialState = {
-    email: "Email",
-    fName: "First Name",
-    lName: "Last Name",
-    standard: "Standard",
-    password: "Password",
-    confirmPassword: "Confirm Password",
+    email: "",
+    fName: "",
+    lName: "",
+    standard: "",
+    password: "",
+    confirmPassword: "",
   };
 
   const [details, setDetails] = useState(initialState);
@@ -79,7 +79,6 @@ export default function Signup() {
           userid: parseRes.userid,
         })
       );
-      dispatch(setProfile({ avatar: parseRes.userDetails[0].avatar }));
       dispatch(setToken({ token: "Bearer " + parseRes.token }));
       toast.success("You are ready to go");
       history.push("/Welcome");
@@ -135,38 +134,38 @@ export default function Signup() {
               <input
                 type="text"
                 name="email"
-                placeholder={details.email}
+                placeholder="Email"
                 onChange={handleChange}
               />
               <input
                 type="text"
                 name="fName"
-                placeholder={details.fName}
+                placeholder="First Name"
                 onChange={handleChange}
               />
               <input
                 type="text"
                 name="lName"
-                placeholder={details.lName}
+                placeholder="Last Name"
                 onChange={handleChange}
               />
 
               <input
-                type="text"
+                type="number"
                 name="standard"
-                placeholder={details.standard}
+                placeholder="Standard"
                 onChange={handleChange}
               />
               <input
                 type="password"
                 name="password"
-                placeholder={details.password}
+                placeholder="Password"
                 onChange={handleChange}
               />
               <input
                 type="password"
                 name="confirmPassword"
-                placeholder={details.confirmPassword}
+                placeholder="Confirm Password"
                 onChange={handleChange}
               />
 
