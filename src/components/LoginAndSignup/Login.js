@@ -109,7 +109,11 @@ export default function Login(props) {
               verifyres.userDetails[0].lname,
           })
         );
-        dispatch(setProfile({ avatar: parseRes.userDetails[0].avatar }));
+        dispatch(
+          setProfile({
+            avatar: verifyres.userDetails[0].avatar
+          })
+        );
 
         // history.goBack();
       } else {
