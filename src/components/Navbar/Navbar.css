@@ -69,7 +69,8 @@
 
 .navigation .logo {
   /* width: 200px; */
-  height: 100%;
+  height: 50%;
+  width: 50;
 }
 .navigation .text {
   margin-top: 30px;
