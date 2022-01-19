@@ -69,7 +69,8 @@
 
 .navigation .logo {
   /* width: 200px; */
-  height: 100%;
+  /* height: 100%;
+  width: 50%; */
 }
 .navigation .text {
   margin-top: 30px;
@@ -208,9 +209,13 @@
     padding-right: 0;
   }
 
-  .navigation .logo {
+  .navigation .logo__container {
     /* width: 200px !important;
     height: 79px !important; */
+  }
+  .navigation .logo__container img {
+    height: 100%;
+    width: 80%;
   }
   .navigation .link a {
     margin-right: 20px;
@@ -228,6 +233,10 @@
 @media (max-width: 767px) {
   .navigation {
     padding: 0 16px;
+  }
+  .navigation .logo__container img {
+    height: 100%;
+    width: 60%;
   }
   .dropbtn {
     display: block;
