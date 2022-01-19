@@ -9,26 +9,29 @@
 .aboutPage__main .hero__section .about_main_container{
   display: flex;
   align-items: center;
+
 }
 
 .about_container1{
   position: relative;
-  margin-top: 3vh;
 }
 
 .yellowbg{
   width: 50vw;
-  height: 87vh;
+  height: 60vh;
   left: 0;
   top: 0;
+  min-height: 500px;
+
 }
 
 .phoneimg{
   position: absolute;
-  left: 7vw;
-  top: 16vh;
-  width: 85%;
-  height: 90%;
+  left: 10%;
+  top : 50%;
+  width: 80%;
+  max-width: 575px;
+  transform: translateY(-40%)
 }
 
 .about_container2{
@@ -130,7 +133,7 @@
 @media (max-width: 940px) {
   .phoneimg{
     height: 75%;
-    top: 20vh;
+    top: 50%;
   }
 }
 
@@ -148,7 +151,7 @@
 @media (max-width: 810px) {
   .phoneimg{
     height: 65%;
-    top: 22vh;
+    top : 50%;
   }
 }
 
@@ -157,17 +160,56 @@
     width: 95%;
   }
 
+  .aboutPage__main .hero__section .about_main_container{
+    flex-direction: column;
+  }
+  .yellowbg{
+    margin-left: -50vw;
+    width: 70vw;
+    margin-bottom: 32px;
+  }
+
   .phoneimg{
-    height: 60%;
-    top: 24vh;
+    width: 95vw;
+    height: auto;
+    top: 50%;
+    left: 0;
+    margin-left: -30vw;
+  }
+
+  .about_container2{
+    width: 75%;
   }
 
   .about_container2 h1{
     font-size: 40px;
   }
+
+  .about_container2 p{
+    width: 75%;
+  }
 }
 
-@media (max-width: 710px) {
+
+@media (max-width:500px) {
+  .yellowbg{
+    min-height: 400px;
+    height: 40vh;
+  }
+  .about_container2{
+    width: 95%;
+  }
+
+  .about_container2 p{
+    width: 95%;
+  }
+}
+
+
+
+
+
+/* @media (max-width: 710px) {
   .phoneimg{
     height: 55%;
     top: 26vh;
@@ -182,19 +224,14 @@
 }
 
 @media (max-width: 600px) {
-  .aboutPage__main .hero__section .about_main_container{
-    flex-direction: column;
-  }
 
-  .yellowbg{
-    margin-left: -50vw;
-    width: 50vw;
-  }
+
+
 
   .phoneimg{
     width: 100vw;
     height: 100vw;
-    margin-left: -50vw;
+
     top: 7vh;
   }
 
@@ -230,8 +267,8 @@
     height: 80vw;
     left: 7vw;
   }
-  
-  
+
+
   .aboutPage__main .faqs {
     margin: 64px 16px;
   }
@@ -286,4 +323,4 @@
   .phoneimg{
     top: 10vh;
   }
-}
+} */

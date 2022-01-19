@@ -369,7 +369,7 @@
 
 /* Landing Page Top */
 .Landing_container {
-	background: linear-gradient(90deg, #ff8b1a 0%, #ffe259 100%);
+	background: #ffcc49;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a1f624bc.css",
-    "main.js": "/static/js/main.d9f89ac1.js",
+    "main.css": "/static/css/main.363502bf.css",
+    "main.js": "/static/js/main.09aafad9.js",
     "static/media/card4.svg": "/static/media/card4.f9081922d579d3f6cd66e18e1924cacb.svg",
     "static/media/marvelCard.svg": "/static/media/marvelCard.b41492b56621566183a1028b7d44a05c.svg",
     "static/media/loginBg.svg": "/static/media/loginBg.f97716e6772237a3eab4c267ffb22cd9.svg",
@@ -9,11 +9,19 @@
     "static/media/card2.svg": "/static/media/card2.c1bca1263511da371f82e60d81fa808e.svg",
     "static/media/card5.svg": "/static/media/card5.bf1031226019f3202eaefefab0fcbaef.svg",
     "static/media/card3.svg": "/static/media/card3.1388fe73da2f78557e7ce52758ba3cd9.svg",
+    "static/media/incredibles.png": "/static/media/incredibles.f7ca48f53a401c8ecfa9.png",
+    "static/media/package.png": "/static/media/package.91eb3ff5cab99879f8d3.png",
     "static/media/FuncBox.png": "/static/media/FuncBox.c2ca16c4287052aff602.png",
     "static/media/Phone.png": "/static/media/Phone.9c40fbdbdb01144c1055.png",
+    "static/media/parents.png": "/static/media/parents.7a2a64f66bf1785966ce.png",
+    "static/media/child.png": "/static/media/child.f14d7c4b5200a0488a2b.png",
     "static/media/background.jpeg": "/static/media/background.ff49b081753a1f57247b.jpeg",
     "static/media/share.svg": "/static/media/share.667d42f640c252f85b4266f317e2609c.svg",
+    "static/media/van.png": "/static/media/van.3e0351ad22628b9a63f0.png",
+    "static/media/rocket.png": "/static/media/rocket.6e93b7e0132803a8a56c.png",
     "static/media/Yellowbg.png": "/static/media/Yellowbg.f111e1a7cad2a7ed29f2.png",
+    "static/media/Vector.png": "/static/media/Vector.b61d6f0b963ee410ea5a.png",
+    "static/media/Vector_center.png": "/static/media/Vector_center.84e2fe899c67c3d8d898.png",
     "static/media/stamp.svg": "/static/media/stamp.60dbab0d5366be67f9befc5a1f975e12.svg",
     "static/media/save.svg": "/static/media/save.be588706453fd58f20ac257a731c7d31.svg",
     "static/media/RunBtn.svg": "/static/media/RunBtn.42c18a36c739e97b328b88b4fae123d6.svg",
@@ -21,7 +29,7 @@
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.a1f624bc.css",
-    "static/js/main.d9f89ac1.js"
+    "static/css/main.363502bf.css",
+    "static/js/main.09aafad9.js"
   ]
 }
