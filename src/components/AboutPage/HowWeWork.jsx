@@ -1,19 +1,19 @@
 import React from "react";
 import "./howwework.css";
 
-import child from "./assests/child.png";
-import incredibles from "./assests/incredibles.png";
-import mypackage from "./assests/package.png";
-import parents from "./assests/parents.png";
-import rocket from "./assests/rocket.png";
-import van from "./assests/van.png";
-import Vector from "./assests/Vector.png";
-import Vector_center from "./assests/Vector_center.png";
+import child from "./assets/child.png";
+import incredibles from "./assets/incredibles.png";
+import mypackage from "./assets/package.png";
+import parents from "./assets/parents.png";
+import rocket from "./assets/rocket.png";
+import van from "./assets/van.png";
+import Vector from "./assets/Vector.png";
+import Vector_center from "./assets/Vector_center.png";
+
 
 
 const HowWeWork = () => {
   return (
-    <div className="how-we-work">
       <div className="Main">
         {/* VECTOR IMAMGES */}
 
@@ -91,7 +91,6 @@ const HowWeWork = () => {
         <div className="step5">Ideate your own apps</div>
         <div className="step6">Deploy!</div>
       </div>
-    </div>
   );
 };
 

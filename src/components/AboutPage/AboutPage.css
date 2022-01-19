@@ -5,10 +5,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.aboutPage__main .howWeWork {
-  text-align: center;
-  margin: 32px;
-}
 
 .aboutPage__main .hero__section .about_main_container{
   display: flex;
@@ -59,22 +55,6 @@
   line-height: 26px;
 }
 
-.aboutPage__main .howWeWork h1 {
-  font-weight: 400;
-
-  font-size: 50px;
-  line-height: 98px;
-}
-
-.aboutPage__main .roadMap {
-  margin: 32px;
-  text-align: center;
-}
-
-.aboutPage__main .roadMap img {
-  width: 75%;
-  margin: auto;
-}
 
 .aboutPage__main .faqs {
   margin: 64px;
@@ -251,9 +231,7 @@
     left: 7vw;
   }
   
-  .aboutPage__main .howWeWork h1 {
-    font-size: 40px;
-  }
+  
   .aboutPage__main .faqs {
     margin: 64px 16px;
   }

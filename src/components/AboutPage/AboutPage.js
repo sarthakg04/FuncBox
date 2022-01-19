@@ -4,8 +4,9 @@ import { Helmet } from "react-helmet";
 import "./AboutPage.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import Yellowbg from './assets/Yellowbg.png';
-import Phoneimg from './assets/Phone.png';
+import Yellowbg from "./assets/Yellowbg.png";
+import Phoneimg from "./assets/Phone.png";
+import HowWeWork from "./HowWeWork";
 
 // import hero from './assets/hero.webp'
 // import roadmap from './assets/roadmap.webp'
@@ -64,19 +65,18 @@ export default function AboutPage() {
           </div>
           <div className="about_container2">
             <h1>About Us</h1>
-            <p>We at FuncBox bring a small box full of creative app cards 
-              which will help your kid learn to code, build creative apps, 
-              type these codes themselves and also share the same within peers. 
-              We also provide a really interactive code editor where your kid 
-              will be guided to develop code.</p>
+            <p>
+              We at FuncBox bring a small box full of creative app cards which
+              will help your kid learn to code, build creative apps, type these
+              codes themselves and also share the same within peers. We also
+              provide a really interactive code editor where your kid will be
+              guided to develop code.
+            </p>
           </div>
         </div>
       </div>
-      {/* <div className="howWeWork">
-        <h1>How we work</h1>
-      </div>
-      <div className="roadMap">
-        <img src={roadmap} alt="roadmap" />
+      <div className="howWeWork__section">
+        <HowWeWork />
       </div>
       <div className="faqs">
         <div className="faq__heading">
@@ -172,7 +172,7 @@ export default function AboutPage() {
           </p>
         </div>
       </div>
-      <Footer /> */}
+      <Footer /> 
     </div>
   );
 }
