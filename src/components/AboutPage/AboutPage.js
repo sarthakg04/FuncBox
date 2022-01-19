@@ -64,7 +64,7 @@ export default function AboutPage() {
           </div>
           <div className="about_container2">
             <h1>About Us</h1>
-            <p>We at Funcbox bring a small box full of creative app cards 
+            <p>We at FuncBox bring a small box full of creative app cards 
               which will help your kid learn to code, build creative apps, 
               type these codes themselves and also share the same within peers. 
               We also provide a really interactive code editor where your kid 
@@ -72,7 +72,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-      <div className="howWeWork">
+      {/* <div className="howWeWork">
         <h1>How we work</h1>
       </div>
       <div className="roadMap">
@@ -172,7 +172,7 @@ export default function AboutPage() {
           </p>
         </div>
       </div>
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
