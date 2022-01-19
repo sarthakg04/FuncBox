@@ -96,8 +96,8 @@ function WelcomePage() {
               src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/overlay_-HxVdV70h.png?updatedAt=1633929022661"
               alt=""
             />
-            <p>Welcome</p>
-            <p>{username}</p>
+          <p className="welcome__username">Welcome</p>
+            <p className="welcome__username">{username}</p>
             <p id="small_screen_msg">
               To get access to the code editor. Please join from a pc or laptop
             </p>
