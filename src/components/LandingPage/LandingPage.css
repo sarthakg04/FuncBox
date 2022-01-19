@@ -367,7 +367,7 @@
   }
 }
 .Landing_container{
-  background: linear-gradient(90deg, #FF8B1A 0%, #FFE259 100%);
+  background: #FFCC49;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
