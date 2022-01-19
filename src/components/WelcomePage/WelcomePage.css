@@ -161,6 +161,12 @@
   text-align: center;
   z-index: 50;
 }
+
+
+.welcome__username{
+  position: relative;
+  z-index: 15;
+}
 @media screen and (max-width: 1100px) {
   .ipad_container {
     display: none;
