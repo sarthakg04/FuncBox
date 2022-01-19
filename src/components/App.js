@@ -61,6 +61,7 @@ import PawnShop from "./Games/PawnShop/PawnShop";
 import CountDracula from "./Games/CountDracula/CountDracula";
 import ChemistryLab from "./Games/ChemistryLab/ChemistryLab";
 import WeatherGame from "./Games/WeatherGame/WeatherGame";
+import HowWeWork from "./AboutPage/HowWeWork";
 
 function App() {
   const dispatch = useDispatch();
@@ -122,6 +123,7 @@ function App() {
           autoClose={2000}
         />
         <Switch>
+
           <Route exact path="/AngryBirds" component={AngryBirds} />
           <Route exact path="/MissionMars" component={MissionMars} />
           <Route exact path="/MonkeyMultiplier" component={MonkeyMultiplier} />
