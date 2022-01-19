@@ -371,9 +371,8 @@
 .Landing_container {
 	background: linear-gradient(90deg, #ff8b1a 0%, #ffe259 100%);
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	flex-direction: column;
-	padding-top: 7%;
 }
 
 .btn button {
@@ -396,7 +395,7 @@
 	align-items: center;
 	text-align: right;
 	color: white;
-	margin-left: 10%;
+	margin: 5% 0 0 10%;
 }
 
 .text > h3 {
@@ -420,31 +419,15 @@
 @media (max-width: 768px) {
 	.Landing_container {
 		height: 100vh;
-		padding-top: 10%;
 	}
 
 	.upper {
 		flex-direction: column;
 		text-align: center;
-		margin-left: 0%;
+		margin: 2% 0 0 0;
 	}
 
 	.text > h1 {
 		font-weight: normal;
-	}
-
-	.lower {
-		height: 65%;
-	}
-}
-
-@media (max-width: 376px) {
-	.lower {
-		flex-direction: column;
-		justify-content: center;
-	}
-
-	.right {
-		width: 30%;
 	}
 }
