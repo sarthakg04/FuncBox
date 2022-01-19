@@ -78,18 +78,11 @@
 	display: flex;
 }
 
-.navigation .logo {
-<<<<<<< HEAD
-	/* width: 200px; */
-	height: 100%;
-||||||| 6a4c7a1
-  /* width: 200px; */
-  height: 100%;
-=======
+.navigation .logo{
   /* width: 200px; */
   /* height: 100%;
   width: 50%; */
->>>>>>> main
+
 }
 .navigation .text {
 	margin-top: 30px;
