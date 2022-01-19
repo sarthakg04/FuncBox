@@ -100,3 +100,25 @@
   cursor: pointer;
   width: 5rem;
 }
+
+
+.profile__container .buttons{
+  width: 50%;
+}
+
+
+@media (max-width : 1023px) {
+  .profile__container .buttons{
+    width: 70%;
+  }
+}
+
+
+@media (max-width :767px) {
+  .profile__container .container{
+    grid-template-columns: 1fr;
+  }
+  .profile__container .buttons{
+    width: 90%;
+  }
+}

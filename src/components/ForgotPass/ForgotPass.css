@@ -96,3 +96,13 @@
 .profile__container .right__container .avatars img{
   cursor: pointer;
 }
+
+
+@media (max-width :767px) {
+  .profile__container .container{
+    grid-template-columns: 1fr;
+  }
+  .profile__container .buttons{
+    width: 90%;
+  }
+}
