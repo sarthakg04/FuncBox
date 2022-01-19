@@ -41,15 +41,15 @@ export default function EditProfile(props){
           <p>Confirm Password</p>
           <input type="password" name="confirmPass" value={confirmPass} onChange = {confirmPassHandler}/>
         </div>
-          <div className="buttons">
-
-            <a href="javascript:void(0)" className="btn">Change Password</a>
-          </div>
         </div>
         <div className="right__container">
 
 
         </div>
+      </div>
+      <div className="buttons">
+
+        <a href="javascript:void(0)" className="btn">Change Password</a>
       </div>
     </div>
   )

@@ -220,14 +220,7 @@ export default function EditProfile(props) {
               <option value="8">8</option>
             </select>
           </div>
-          <div className="buttons">
-            <a  href="javascript:void(0)" className="btn" onClick={updateProfile}>
-              {profileUpdateStatus}
-            </a>
-            <a href="/changePass" className="btn">
-              Change Password
-            </a>
-          </div>
+
         </div>
         <div className="right__container">
           <div className="avatar__header">
@@ -282,6 +275,14 @@ export default function EditProfile(props) {
             />
           </div>
         </div>
+      </div>
+      <div className="buttons">
+        <a  href="javascript:void(0)" className="btn" onClick={updateProfile}>
+          {profileUpdateStatus}
+        </a>
+        <a href="/changePass" className="btn">
+          Change Password
+        </a>
       </div>
     </div>
   );
