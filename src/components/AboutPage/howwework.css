@@ -16,8 +16,6 @@
   margin: auto;
 }
 
-
-
 .Vector1,
 .Vector2,
 .Vector3,
@@ -34,42 +32,46 @@
   z-index: 2;
 }
 
-.Vector2,
-.Vector4,
-.Vector6 {
-  transform: translateX(-50%);
-  left: calc(50% - 380px);
-}
-
-.Vector2 {
-  top: 530px;
-}
-
-.Vector4 {
-  top: 1225px;
-}
-
-.Vector6 {
-  top: 1920px;
+.Vector_center img {
+  width: 350px;
 }
 
 .Vector1,
 .Vector3,
 .Vector5 {
   transform: translateX(+50%);
-  right: calc(50% - 380px);
+  right: calc(50% - 340px);
+}
+
+.Vector2,
+.Vector4,
+.Vector6 {
+  transform: translateX(-50%);
+  left: calc(50% - 340px);
 }
 
 .Vector1 {
-  top: 183px;
+  top: 160px;
 }
 
 .Vector3 {
-  top: 877px;
+  top: 707px;
 }
 
 .Vector5 {
-  top: 1572px;
+  top: 1245px;
+}
+
+.Vector2 {
+  top: 440px;
+}
+
+.Vector4 {
+  top: 980px;
+}
+
+.Vector6 {
+  top: 1520px;
 }
 
 /* Steps */
@@ -85,45 +87,45 @@
   font-family: Montserrat;
   font-style: normal;
   font-weight: 800;
-  font-size: 144px;
+  font-size: 120px;
   line-height: 100px;
   color: #ffffff;
 }
 
 .O1 {
-  top: 183px;
+  top: 153px;
   transform: translateX(+50%);
-  right: calc(50% - 70px);
+  right: calc(50% - 60px);
 }
 
 .O2 {
-  top: 530px;
+  top: 440px;
   transform: translateX(-50%);
-  left: calc(50% - 70px);
+  left: calc(50% - 60px);
 }
 
 .O3 {
-  top: 877px;
+  top: 707px;
   transform: translateX(+50%);
-  right: calc(50% - 70px);
+  right: calc(50% - 60px);
 }
 
 .O4 {
-  top: 1225px;
+  top: 980px;
   transform: translateX(-50%);
-  left: calc(50% - 70px);
+  left: calc(50% - 60px);
 }
 
 .O5 {
-  top: 1572px;
+  top: 1245px;
   transform: translateX(+50%);
-  right: calc(50% - 70px);
+  right: calc(50% - 60px);
 }
 
 .O6 {
-  top: 1920px;
+  top: 1520px;
   transform: translateX(-50%);
-  left: calc(50% - 70px);
+  left: calc(50% - 60px);
 }
 
 /* steps text */
@@ -145,39 +147,39 @@
 }
 
 .step1 {
-  top: 183px;
+  top: 153px;
   transform: translateX(+50%);
-  right: calc(50% - 380px);
+  right: calc(50% - 350px);
 }
 
 .step2 {
-  top: 530px;
+  top: 440px;
   transform: translateX(-50%);
-  left: calc(50% - 380px);
+  left: calc(50% - 350px);
 }
 
 .step3 {
-  top: 877px;
+  top: 707px;
   transform: translateX(+50%);
-  right: calc(50% - 380px);
+  right: calc(50% - 350px);
 }
 
 .step4 {
-  top: 1225px;
+  top: 980px;
   transform: translateX(-50%);
-  left: calc(50% - 380px);
+  left: calc(50% - 350px);
 }
 
 .step5 {
-  top: 1572px;
+  top: 1245px;
   transform: translateX(+50%);
-  right: calc(50% - 380px);
+  right: calc(50% - 350px);
 }
 
 .step6 {
-  top: 1920px;
+  top: 1520px;
   transform: translateX(-50%);
-  left: calc(50% - 380px);
+  left: calc(50% - 350px);
 }
 
 /* side images */
@@ -193,43 +195,47 @@
 
 .parents {
   transform: translate(-50%, -20%);
-  top: 183px;
+  top: 153px;
   left: calc(50% - 300px);
 }
 
 .van {
-  top: 530px;
+  top: 440px;
   transform: translate(+50%, -50%);
   left: calc(50% - 250px);
 }
 
 .mypackage {
-  top: 877px;
+  top: 707px;
   transform: translate(-50%, -30%);
   left: calc(50% - 300px);
 }
 
 .incredibles {
-  top: 1225px;
+  top: 980px;
   transform: translate(+50%, -30%);
   left: calc(50% - 200px);
 }
 
 .child {
-  top: 1572px;
+  top: 1245px;
   transform: translate(-50%, -30%);
   left: calc(50% - 300px);
 }
 
 .rocket {
-  top: 1920px;
+  top: 1510px;
   transform: translate(+50%, -40%);
   left: calc(50% - 100px);
 }
 
 /* @media max-screen */
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1070px) {
+  .Vector_center img {
+    width: 222px;
+  }
+
   .Main {
     height: 70rem;
   }
