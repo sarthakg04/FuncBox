@@ -86,7 +86,7 @@
   border: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1070px) {
   .getInTouch input {
     width: 300px !important;
   }
