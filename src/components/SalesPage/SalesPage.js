@@ -340,7 +340,7 @@ export default function SalesPage() {
             <img src={house} alt="house" />
             <div className="contentt">
               <p>
-                Yay! FuncBox brings special discount for all the School Tie-ups.
+                Yay! FuncBox brings special discount for all the School Tie - ups.
                 FuncBox can be easily incorporated in all the school grades. To
                 make your students outperform and help your institute gain an
                 edge over the others contact our team NOW!
