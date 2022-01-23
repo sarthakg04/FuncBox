@@ -332,11 +332,11 @@ export default function SalesPage() {
             </div>
           </div>
         </div>
-        <div className="for__school">
+        <div className="for_school">
           <div className="heading">
             <h1> For Schools </h1>
           </div>
-          <div className="content">
+          <div className="school_content">
             <img src={house} alt="house" />
             <div className="contentt">
               <p>
@@ -345,7 +345,7 @@ export default function SalesPage() {
                 make your students outperform and help your institute gain an
                 edge over the others contact our team NOW!
               </p>
-              <a href="https://forms.gle/TxefVyHrnWj1doSL7" target="_blank">
+              <a href="https://forms.gle/TxefVyHrnWj1doSL7" target="_blank" className="content_link">
                 Connect Today
               </a>
             </div>

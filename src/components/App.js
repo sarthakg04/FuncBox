@@ -122,6 +122,7 @@ function App() {
           autoClose={2000}
         />
         <Switch>
+
           <Route exact path="/AngryBirds" component={AngryBirds} />
           <Route exact path="/MissionMars" component={MissionMars} />
           <Route exact path="/MonkeyMultiplier" component={MonkeyMultiplier} />

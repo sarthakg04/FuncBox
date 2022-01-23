@@ -44,6 +44,7 @@
   position: relative;
   font-size: 40px;
   font-family: "Montserrat", sans-serif;
+  z-index: 50;
 }
 .avatar_bg {
   background-color: #b4d1c4;
@@ -61,7 +62,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 20;
+  z-index: 10;
 }
 .background {
   position: absolute;
@@ -159,6 +160,12 @@
   font-weight: bold;
   text-align: center;
   z-index: 50;
+}
+
+
+.welcome__username{
+  position: relative;
+  z-index: 15;
 }
 @media screen and (max-width: 1100px) {
   .ipad_container {
