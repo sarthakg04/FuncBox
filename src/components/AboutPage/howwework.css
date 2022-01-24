@@ -5,14 +5,18 @@
   font-style: normal;
   color: #202020;
   z-index: 1;
+  margin: 2rem auto;
+  text-align: center;
 }
 
 .Main {
   position: relative;
-  height: 108rem;
+  height: 130rem;
   width: 99vw;
   margin: auto;
 }
+
+
 
 .Vector1,
 .Vector2,
@@ -30,46 +34,42 @@
   z-index: 2;
 }
 
-.Vector_center img {
-  width: 350px;
+.Vector2,
+.Vector4,
+.Vector6 {
+  transform: translateX(-50%);
+  left: calc(50% - 380px);
+}
+
+.Vector2 {
+  top: 530px;
+}
+
+.Vector4 {
+  top: 1225px;
+}
+
+.Vector6 {
+  top: 1920px;
 }
 
 .Vector1,
 .Vector3,
 .Vector5 {
   transform: translateX(+50%);
-  right: calc(50% - 340px);
-}
-
-.Vector2,
-.Vector4,
-.Vector6 {
-  transform: translateX(-50%);
-  left: calc(50% - 340px);
+  right: calc(50% - 380px);
 }
 
 .Vector1 {
-  top: 160px;
+  top: 183px;
 }
 
 .Vector3 {
-  top: 707px;
+  top: 877px;
 }
 
 .Vector5 {
-  top: 1245px;
-}
-
-.Vector2 {
-  top: 440px;
-}
-
-.Vector4 {
-  top: 980px;
-}
-
-.Vector6 {
-  top: 1520px;
+  top: 1572px;
 }
 
 /* Steps */
@@ -85,45 +85,45 @@
   font-family: Montserrat;
   font-style: normal;
   font-weight: 800;
-  font-size: 120px;
+  font-size: 144px;
   line-height: 100px;
   color: #ffffff;
 }
 
 .O1 {
-  top: 153px;
+  top: 183px;
   transform: translateX(+50%);
-  right: calc(50% - 60px);
+  right: calc(50% - 70px);
 }
 
 .O2 {
-  top: 440px;
+  top: 530px;
   transform: translateX(-50%);
-  left: calc(50% - 60px);
+  left: calc(50% - 70px);
 }
 
 .O3 {
-  top: 707px;
+  top: 877px;
   transform: translateX(+50%);
-  right: calc(50% - 60px);
+  right: calc(50% - 70px);
 }
 
 .O4 {
-  top: 980px;
+  top: 1225px;
   transform: translateX(-50%);
-  left: calc(50% - 60px);
+  left: calc(50% - 70px);
 }
 
 .O5 {
-  top: 1245px;
+  top: 1572px;
   transform: translateX(+50%);
-  right: calc(50% - 60px);
+  right: calc(50% - 70px);
 }
 
 .O6 {
-  top: 1520px;
+  top: 1920px;
   transform: translateX(-50%);
-  left: calc(50% - 60px);
+  left: calc(50% - 70px);
 }
 
 /* steps text */
@@ -145,39 +145,39 @@
 }
 
 .step1 {
-  top: 153px;
+  top: 183px;
   transform: translateX(+50%);
-  right: calc(50% - 350px);
+  right: calc(50% - 380px);
 }
 
 .step2 {
-  top: 440px;
+  top: 530px;
   transform: translateX(-50%);
-  left: calc(50% - 350px);
+  left: calc(50% - 380px);
 }
 
 .step3 {
-  top: 707px;
+  top: 877px;
   transform: translateX(+50%);
-  right: calc(50% - 350px);
+  right: calc(50% - 380px);
 }
 
 .step4 {
-  top: 980px;
+  top: 1225px;
   transform: translateX(-50%);
-  left: calc(50% - 350px);
+  left: calc(50% - 380px);
 }
 
 .step5 {
-  top: 1245px;
+  top: 1572px;
   transform: translateX(+50%);
-  right: calc(50% - 350px);
+  right: calc(50% - 380px);
 }
 
 .step6 {
-  top: 1520px;
+  top: 1920px;
   transform: translateX(-50%);
-  left: calc(50% - 350px);
+  left: calc(50% - 380px);
 }
 
 /* side images */
@@ -193,47 +193,43 @@
 
 .parents {
   transform: translate(-50%, -20%);
-  top: 153px;
+  top: 183px;
   left: calc(50% - 300px);
 }
 
 .van {
-  top: 440px;
+  top: 530px;
   transform: translate(+50%, -50%);
   left: calc(50% - 250px);
 }
 
 .mypackage {
-  top: 707px;
+  top: 877px;
   transform: translate(-50%, -30%);
   left: calc(50% - 300px);
 }
 
 .incredibles {
-  top: 980px;
+  top: 1225px;
   transform: translate(+50%, -30%);
   left: calc(50% - 200px);
 }
 
 .child {
-  top: 1245px;
+  top: 1572px;
   transform: translate(-50%, -30%);
   left: calc(50% - 300px);
 }
 
 .rocket {
-  top: 1510px;
+  top: 1920px;
   transform: translate(+50%, -40%);
   left: calc(50% - 100px);
 }
 
 /* @media max-screen */
 
-@media screen and (max-width: 1070px) {
-  .Vector_center img {
-    width: 222px;
-  }
-
+@media screen and (max-width: 1100px) {
   .Main {
     height: 70rem;
   }
@@ -392,128 +388,5 @@
     top: 990px;
     transform: translate(+50%, -40%);
     left: calc(50% - 60px);
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .Vector_center {
-    display: none;
-  }
-
-  .heading {
-    font-size: 2rem;
-  }
-
-  .step1,
-  .step2,
-  .step3,
-  .step4,
-  .step5,
-  .step6 {
-    transform: none;
-    right: none;
-  }
-
-  .O1,
-  .O2,
-  .O3,
-  .O4,
-  .O5,
-  .O6 {
-    display: none;
-  }
-
-  .Vector1,
-  .Vector3,
-  .Vector5,
-  .Vector2,
-  .Vector4,
-  .Vector6 {
-    left: 40px;
-    right: 0;
-    transform: none;
-    transform: translateY(+80%);
-  }
-
-  .child,
-  .incredibles,
-  .mypackage,
-  .parents,
-  .rocket,
-  .van {
-    left: 320px;
-    right: none;
-    transform: none;
-  }
-
-  .step1 {
-    top: 170px;
-    left: 60px;
-  }
-  .step2 {
-    top: 350px;
-    left: 70px;
-  }
-  .step3 {
-    top: 520px;
-    left: 80px;
-  }
-  .step4 {
-    top: 700px;
-    left: 90px;
-  }
-  .step5 {
-    top: 870px;
-    left: 60px;
-  }
-  .step6 {
-    top: 1040px;
-    left: 120px;
-  }
-}
-
-@media screen and (max-width: 525px) {
-  .child img,
-  .incredibles img,
-  .mypackage img,
-  .parents img,
-  .rocket img,
-  .van img {
-    width: 190px;
-  }
-  .child,
-  .incredibles,
-  .mypackage,
-  .parents,
-  .rocket,
-  .van {
-    left: 280px;
-  }
-  .Vector1,
-  .Vector3,
-  .Vector5,
-  .Vector2,
-  .Vector4,
-  .Vector6 {
-    left: 20px;
-  }
-
-  .step1 {
-    left: 40px;
-  }
-  .step2 {
-    left: 50px;
-  }
-  .step3 {
-    left: 60px;
-  }
-  .step4 {
-    left: 70px;
-  }
-  .step5 {
-    left: 50px;
-  }
-  .step6 {
-    left: 120px;
   }
 }

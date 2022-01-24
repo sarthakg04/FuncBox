@@ -320,58 +320,51 @@
 		margin-left: 0;
 	}
 
-  .landingPage__main .hero_section .downArrow img {
-    display: none;
-  }
-  .hero_section {
-    height: 52vh;
-    display: flex;
-    place-items: center;
-    justify-items: center;
-  }
-  .roadMap {
-    width: 100%;
-    height: fit-content;
-    margin: 2px !important;
-  }
-  .roadMap > img {
-    display: none;
-  }
-  .roadMap_mobile {
-    display: flex;
-    flex-direction: column;
-    margin: 0 10px;
-    padding: 10px;
-    align-items: center;
-  }
-  .roadMap_mobile > img {
-    margin: 30px 0px;
-    width: 80%;
-  }
-  .creativity_container {
-    flex-direction: column;
-    width: 80%;
-  }
-  .creativity_container .creativity_text {
-    width: 80%;
-    margin: 2px;
-  }
-  .creativity_graph {
-    width: 80%;
-  }
-  .creativity_text_heading {
-    font-size: 24px;
-  }
-  .creativity_text p {
-    font-size: 18px;
-  }
-}
-.Landing_container{
-  background: #FFCC49;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  padding-top: 7%;
+	.landingPage__main .hero_section .downArrow img {
+		display: none;
+	}
+	.hero_section {
+		height: 52vh;
+		display: flex;
+		place-items: center;
+		justify-items: center;
+	}
+	.roadMap {
+		width: 100%;
+		height: fit-content;
+		margin: 2px !important;
+	}
+	.roadMap > img {
+		display: none;
+	}
+	.roadMap_mobile {
+		display: flex;
+		flex-direction: column;
+		margin: 0 10px;
+		padding: 10px;
+		align-items: center;
+	}
+	.roadMap_mobile > img {
+		margin: 30px 0px;
+		width: 80%;
+	}
+	.creativity_container {
+		flex-direction: column;
+		width: 80%;
+	}
+	.creativity_container .creativity_text {
+		width: 80%;
+		margin: 2px;
+	}
+	.creativity_graph {
+		width: 80%;
+	}
+	.creativity_text_heading {
+		font-size: 24px;
+	}
+	.creativity_text p {
+		font-size: 18px;
+	}
 }
 
 /* Landing Page Top */
