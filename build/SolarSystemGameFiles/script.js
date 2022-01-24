@@ -136,45 +136,6 @@ function createPlanetTray() {
   document.getElementById("container").appendChild(inventory);
 }
 
-// function checkSubmission() {
-//   let correctSequence = [
-//     "mercury",
-//     "venus",
-//     "earth",
-//     "mars",
-//     "jupiter",
-//     "saturn",
-//     "uranus",
-//     "neptune",
-//   ];
-//   if (placedPlanets.length !== correctSequence.length) {
-//     return false;
-//   }
-//   for (let i = 0; i < placedPlanets.length; i++) {
-//     if (placedPlanets[i] !== correctSequence[i]) {
-//       return false;
-//     }
-//   }
-
-//   return true;
-// }
-
-// function fillPlanets() {
-//   let planets = [
-//     "mercury",
-//     "venus",
-//     "earth",
-//     "mars",
-//     "jupiter",
-//     "saturn",
-//     "uranus",
-//     "neptune",
-//   ];
-//   // planets.sort(() => 0.5 - Math.random());
-// planets.forEach((planet) => {
-//   getPlanet(planet);
-// });
-// }
 
 function getPlanet(planetName) {
   let planet = `<img id="${planetName}" onClick="planetClick(this)" class="planet thumb" src="${imageRemoteLinks[planetName]}" >`;
