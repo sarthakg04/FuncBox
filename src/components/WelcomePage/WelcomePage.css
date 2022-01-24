@@ -54,7 +54,7 @@
 .avatar_img {
   position: absolute;
   width: 200px;
-  left: 8rem;
+  left: 5rem;
   top: -6rem;
 }
 
@@ -62,7 +62,7 @@
   position: relative;
   color: aliceblue;
   font-size: 40px;
-  left: 4.5rem;
+  left: 4rem;
   top: 5rem;
 }
 .overlay {
@@ -187,8 +187,8 @@
   left: 10rem;
   }
   .welcome__username{
-    left: -1.5rem;
-    top: 2rem;
+    left: 2rem;
+    top: 3rem;
   }
   .avatar_img {
     position: absolute;
@@ -205,14 +205,14 @@
   left: 8rem;
   }
   .welcome__username{
-    left: -0.5rem;
-    top: 2rem;
+    left: 2rem;
+    top: 3rem;
     font-size: 30px;
   }
   .avatar_img {
     position: absolute;
     width: 150px;
-    left: 4rem;
-    top: -6rem;
+    left: 3rem;
+    top: -4rem;
   }
 }
