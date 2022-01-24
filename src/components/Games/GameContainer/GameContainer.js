@@ -18,7 +18,7 @@ function GameContainer({ gid, location }) {
   const [srcDoc, setSrcDoc] = useState("");
   const { isAuthenticated, token, userid } = useAuth();
   const [gAccess, setGAccess] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [qrSrc, setQrSrc] = useState("");
   const dispatch = useDispatch();
   const path = location;
@@ -79,12 +79,12 @@ function GameContainer({ gid, location }) {
       } else {
         console.log(gres);
       }
-      const gaccess = await gres.json();
-      // let gaccess = {
-      //   token: "token",
-      //   gAcess: true,
-      // };
-      // console.log("gAccess = ", gaccess);
+      // const gaccess = await gres.json();
+      let gaccess = {
+        token: "token",
+        gAcess: true,
+      };
+      console.log("gAccess = ", gaccess);
       if (gaccess === "Not Authorize 1") {
         toast.error("You are not logged in!", { pauseOnHover: false });
         history.push({ pathname: "/login", state: { prev: location } });
