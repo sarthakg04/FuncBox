@@ -127,7 +127,7 @@ function createInteractionPad() {
     <button class="Interaction_Buttons left_btn" onclick="MoveLeft()"></button>
     <button class="Interaction_Buttons right_btn" onclick="MoveRight()"></button>
     <button class="restart_btn" onclick="Restart()"></button>
-    // <button class="Interaction_Buttons shoot_btn"  onclick="shoot()" >🔥</button>
+    <button class="Interaction_Buttons shoot_btn"  onclick="shoot()" >🔥</button>
     `;
   Phone.appendChild(InteractionPad);
 }
