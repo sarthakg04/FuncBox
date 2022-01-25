@@ -1,4 +1,4 @@
-// let animals = ['lion_den','fish_ocean','horse_stable','ducks_pond','birds_nest','penguin_waddle','cow_shed','dog_kennel','elephant_jungle','camel_desert','bees_beehive','cheetah_savannah','monkey_tree','turtle_ocean','yak_hill','spider_web','pig_sty','rabbit_burrow','sheep_pen','hen_coop']
+// let animals = ['lion_den','fish_ocean','horse_stable','ducks_pond','birds_nest','penguin_waddle','cow_shed','dog_kennel','elephant_jungle','camel_desert','bees_beehive','cheetah_savannah','monkey_tree','turtle_ocean','yak_hill','spider_web','pig_sty','rabbit_burrow','sheep_pen']
 // createBackground()
 // createArrowKeys()
 // setCards()
@@ -88,6 +88,8 @@ const soundFiles = {
   spider:
     "https://drive.google.com/file/d/11qy3GIUf-lB17-1JAHBX9GOaHMj6Of6Z/view?usp=sharing",
   yak: "https://drive.google.com/file/d/1ilNbyMdZJmtUYWpc2InOPQtJCXznM0il/view?usp=sharing",
+  monkey: "https://drive.google.com/file/d/1rIOk5qkYmOw_jlulB23Rq9L5wHnjeN62/view?usp=sharing",
+  turtle: "https://drive.google.com/file/d/1jBLk2LIGATk4V1Q43CtlDVRNsI2B_a6O/view?usp=sharing",
 };
 
 var currentCard = 0;
@@ -104,6 +106,7 @@ function createArrowKeys() {
   document.getElementById("container").appendChild(right_arrow);
   right_arrow.addEventListener("click", () => {
     if (currentCard < animals.length - 1) currentCard++;
+    else if (currentCard == animals.length -1) currentCard = 0;
     setCards();
     if (audio && !audio.paused) {
       audio.pause();
@@ -115,6 +118,7 @@ function createArrowKeys() {
   document.getElementById("container").appendChild(left_arrow);
   left_arrow.addEventListener("click", () => {
     if (currentCard > 0) currentCard--;
+    else if (currentCard == 0) currentCard = animals.length -1;
     setCards();
     if (audio && !audio.paused) {
       audio.pause();
