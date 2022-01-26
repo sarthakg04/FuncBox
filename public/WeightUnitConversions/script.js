@@ -81,7 +81,7 @@ function createInteractionPad() {
 
 function createRefresh() {
   Phone.innerHTML += `
-    <div onclick="window.location.reload()" class="restart">Reset <img style="vertical-align:middle" src="./assets/refresh.png" alt="restart"></div>
+    <div onclick="window.location.reload()" class="restart">Reset <img style="vertical-align:middle" src="./assets/refresh.png" alt="restart" /></div>
     `;
 }
 
