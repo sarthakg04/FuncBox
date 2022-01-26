@@ -114,6 +114,21 @@ body {
   margin: 15px 0 0 50px;
 }
 
+.scoreCard{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+  padding-left: 1rem;
+  width: 100px;
+  height: 50px;
+  border-bottom: 5px solid black;
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  left: 1rem;
+}
+
 .right_btn {
   /* border-radius: 50%; */
   height: 40px;
