@@ -1,29 +1,31 @@
 //Frontend Functions for testing
 
-// let edna_speed = 0.5
-// let basket_ball_speed = 0.5
-// let hero = 'Violet'
-// let vehicle = 'Helicopter'
-// let lives = 5
-// fillBackground('snow')
-// createGrid()
-// createCharacters()
-// EdnaMovement()
-// createScoreCard()
-// createInteractionPad()
-// createFinish()
-// function Check(ball_position){
-//     if( ball_position !== current_edna_position ){
-//             decreaseLife();
-//             if(lives === 0){
-//               GameOver()
-//               return true
-//             }
-// 	}
-//   else{
-//     updateScore();
-//   }
-// }
+/*
+let edna_speed = 0.5
+let basket_ball_speed = 0.5
+let hero = 'Violet'
+let vehicle = 'Helicopter'
+let lives = 5
+fillBackground('snow')
+createGrid()
+createCharacters()
+EdnaMovement()
+createScoreCard()
+createInteractionPad()
+createFinish()
+function Check(ball_position){
+    if( ball_position !== current_edna_position ){
+            decreaseLife();
+            if(lives === 0){
+              GameOver()
+              return true
+            }
+	}
+  else{
+    updateScore();
+  }
+}
+*/
 
 
 let shoot_btn;
