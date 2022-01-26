@@ -13,31 +13,39 @@
 
 	background-color: white;
 }
-.dropbtn {
-	color: black;
-	padding: 4px;
-	font-size: 30px;
-	border: none;
-	cursor: pointer;
-	min-width: 160px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-}
-
-#dropbtn_avatar {
-	width: 4rem;
-	margin-left: 5px;
-}
 
 .dropdown {
 	position: relative;
 }
 
+.dropbtn {
+	color: black;
+	background: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	height: 100%;
+}
+
+.dropbtn > span {
+	font-size: 14px;
+	color: #6e6e6e;
+}
+
+#dropbtn_avatar {
+	width: 2.5rem;
+	background-color: #dddddd;
+	border-radius: 50%;
+	padding: 5px;
+}
+
 .dropdown-content {
 	display: none;
 	position: absolute;
+	transform: translate(-3.8rem, 0px);
 	background-color: #f9f9f9;
 	min-width: 160px;
 	text-align: center;
@@ -63,7 +71,6 @@
 .navigation .link {
 	display: flex;
 	justify-content: space-evenly;
-
 	flex: 1;
 	max-width: 600px;
 	height: 100%;
@@ -78,11 +85,10 @@
 	display: flex;
 }
 
-.navigation .logo{
-  /* width: 200px; */
-  /* height: 100%;
+.navigation .logo {
+	/* width: 200px; */
+	/* height: 100%;
   width: 50%; */
-
 }
 .navigation .text {
 	margin-top: 30px;
@@ -215,23 +221,30 @@
 .hero_section > img {
 	z-index: 0;
 }
+
+@media (max-width: 1125px) {
+	.dropdown-content {
+		transform: translate(-4.7rem, 0px);
+	}
+}
+
 @media (max-width: 1000px) {
 	.navigation {
 		padding: 10px;
 		padding-right: 0;
 	}
 
-  .navigation .logo__container {
-    /* width: 200px !important;
+	.navigation .logo__container {
+		/* width: 200px !important;
     height: 79px !important; */
-  }
-  .navigation .logo__container img {
-    height: 100%;
-    width: 80%;
-  }
-  .navigation .link a {
-    margin-right: 20px;
-  }
+	}
+	.navigation .logo__container img {
+		height: 100%;
+		width: 80%;
+	}
+	.navigation .link a {
+		margin-right: 20px;
+	}
 
 	.getInTouch input {
 		width: 300px;
@@ -243,45 +256,48 @@
 }
 
 @media (max-width: 767px) {
-  .navigation {
-    padding: 0 16px;
-  }
-  .navigation .logo__container img {
-    height: 100%;
-    width: 60%;
-  }
-  .dropbtn {
-    display: block;
-  }
-  .dropdown-content {
-    position: absolute;
-    z-index: 100;
-  }
-  .navigation .logo {
-    /* width: 100px !important; */
-    height: 98% !important;
-  }
+	.navigation {
+		padding: 0 16px;
+	}
+	.navigation .logo__container img {
+		height: 100%;
+		width: 60%;
+	}
 
-  .navigation .home_image {
-    width: 100px !important;
-    height: 39.5px !important;
-  }
+	#dropbtn_avatar {
+		width: 2rem;
+		margin-bottom: 2px;
+	}
 
-  .navigation .link {
-    display: none;
-  }
+	.dropdown-content {
+		z-index: 100;
+		transform: translate(-3.5rem, 5px);
+	}
+	.navigation .logo {
+		/* width: 100px !important; */
+		height: 98% !important;
+	}
 
-  .navigation .bars {
-    display: flex;
-  }
+	.navigation .home_image {
+		width: 100px !important;
+		height: 39.5px !important;
+	}
 
-  .getInTouch input {
-    width: 50%;
-  }
-  .mobile__links.active {
-    display: flex;
-    flex-wrap: wrap;
-  }
+	.navigation .link {
+		display: none;
+	}
+
+	.navigation .bars {
+		display: flex;
+	}
+
+	.getInTouch input {
+		width: 50%;
+	}
+	.mobile__links.active {
+		display: flex;
+		flex-wrap: wrap;
+	}
 }
 
 @media (max-width: 600px) {
@@ -321,5 +337,19 @@
 
 	.footer .social {
 		margin-top: 16px;
+	}
+
+	.mobile__links {
+		margin-left: 20px;
+	}
+
+	.mobile__links a {
+		margin-right: 20px;
+	}
+}
+
+@media (max-width: 330px) {
+	.dropdown-content {
+		transform: translate(-7.5rem, 5px);
 	}
 }

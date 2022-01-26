@@ -104,12 +104,12 @@ export default function Navbar(props) {
 					{isAuthenticated ? (
 						<div className="dropdown">
 							<button class="dropbtn">
-								<span>{shortName(username)}</span>
 								<img
 									id="dropbtn_avatar"
 									src={avatar || "avatars/Tiger.png"}
 									alt="Avatar"
 								/>
+								<span>{shortName(username)}</span>
 							</button>
 							<div class="dropdown-content">
 								<Link to="/welcome">Dashboard</Link>
@@ -154,8 +154,10 @@ export default function Navbar(props) {
 								src={avatar || "avatars/Tiger.png"}
 								alt="Avatar"
 							/>
+							<span>{shortName(username)}</span>
 						</button>
 						<div class="dropdown-content">
+							<Link to="/welcome">Dashboard</Link>
 							<Link to="/editprofile">Edit Profile</Link>
 							<Link to="/subscriptions">Purchase</Link>
 							<Link to="#">Change password</Link>
