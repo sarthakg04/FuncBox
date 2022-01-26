@@ -1,9 +1,12 @@
 //Frontend Functions for testing
-// var background = 'forest' or 'space' or 'galaxy'
+
+// var background = 'space' ||  'galaxy' || 'forest'
+// var villan = 'ultron' || 'loki' || 'thanos' || 'redskull'
+// var hero =  'hulk' || 'spiderman' || 'captainamerica' ||'ironman'
+// createGamepad()
+// createInteractionPad()
 // createBackground()
 // createGrid()
-// var villan = 'thanos' or 'loki' or 'redskull'
-// var hero = 'spiderman' or 'captainamerica' or 'ironman'
 // createCharacters()
 // var Speed = 0.5
 // LokiMovement()
@@ -14,6 +17,16 @@
 //         GameOver()
 //     }
 // }
+
+
+function createGamepad(){
+    let gamePadd = document.createElement('DIV')
+    gamePadd.classList.add('GamePad')
+    gamePadd.id = 'GamePad'
+    document.body.appendChild(gamePadd);
+    gamePad = document.getElementById('GamePad')
+  }
+  
 
 
 // Initializing variables
@@ -27,31 +40,26 @@ var current_fireball_position = 0
 var loki_squares
 var ironman_squares
 var fireball_squares
-var Phone = document.createElement('div')
 
 var GameDisplay
 
-let timer
+var timer
 
-
-let fireball_position
 
 let Time_taken = 0
 //Frontend Functions
 
 //Creating html elements
 
-//Create Phone div
 function createBackground(){
-    Phone.classList.add('Phone')
-    Phone.classList.add(background+'_bg')
+    document.getElementsByClassName('GamePad')[0].classList.add(background+'_bg')
 
 
     timer = document.createElement('div')
     timer.classList.add('timer')
     
     
-    Phone.appendChild(timer)
+    document.getElementsByClassName('GamePad')[0].appendChild(timer)
 
     // console.log(timer)
 }
@@ -60,7 +68,7 @@ function createBackground(){
 function createFinish(){
     GameDisplay = document.createElement('div')
     GameDisplay.classList.add('GameDisplay')
-    Phone.appendChild(GameDisplay)
+    document.getElementsByClassName('GamePad')[0].appendChild(GameDisplay)
 }
 
 //Create box div
@@ -72,17 +80,17 @@ function createGrid(){
     <div class="fireball"></div>
     <div class="ironman"></div>
     `
-    Phone.appendChild(box)
+    document.getElementsByClassName('GamePad')[0].appendChild(box)
 
     //Creating loki boxes
-    for(i=0;i<4;i++){
+    for(let i=0;i<4;i++){
         var loki_box = document.createElement('div')
         // loki_box.classList.add('')
         var loki_grid = document.querySelector('.loki')
         loki_grid.appendChild(loki_box)
     }
     //Creating fireball boxes
-    for(i=0;i<20;i++){
+    for(let i=0;i<20;i++){
         var fireball_box = document.createElement('div')
         // loki_box.classList.add('')
         var fireball_grid = document.querySelector('.fireball')
@@ -90,7 +98,7 @@ function createGrid(){
     }
 
     //Creating ironman boxes
-    for(i=0;i<4;i++){
+    for(let i=0;i<4;i++){
         var ironman_box = document.createElement('div')
         // loki_box.classList.add('')
         var ironman_grid = document.querySelector('.ironman')
@@ -126,7 +134,7 @@ function createInteractionPad(){
     <button class="Interaction_Buttons right_btn" onclick="MoveRight()"></button>
     <button class="restart_btn"onclick="Restart()"></button>
     `
-    Phone.appendChild(InteractionPad)
+    document.getElementsByClassName('GamePad')[0].appendChild(InteractionPad)
 
 
 }
