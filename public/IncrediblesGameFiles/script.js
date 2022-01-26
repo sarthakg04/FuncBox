@@ -17,13 +17,33 @@
 //     }
 // }
 
+// let edna_speed = 0.5;
+// let basket_ball_speed = 0.5;
+// let hero = "MrIncredible";
+// let vehicle = "Helicopter";
+// fillBackground("jungle");
+// createGrid();
+// createCharacters();
+// EdnaMovement();
+// createInteractionPad();
+// createScorePad();
+// createFinish();
+// function Check(ball_position) {
+//   if (ball_position == current_edna_position) {
+//     GameOver();
+//     return true;
+//   } else {
+//     updateScore()
+//   }
+// }
+
 let shoot_btn;
 
 var current_edna_position = 0;
 var current_basketball_position = 3;
 var current_incredible_position = 0;
 var shooted = false;
-
+var score = 0;
 // Initializing Objects
 var edna_squares;
 var incredible_squares;
@@ -107,7 +127,7 @@ function createInteractionPad() {
     <button class="Interaction_Buttons left_btn" onclick="MoveLeft()"></button>
     <button class="Interaction_Buttons right_btn" onclick="MoveRight()"></button>
     <button class="restart_btn" onclick="Restart()"></button>
-    <button class="Interaction_Buttons shoot_btn" onclick="shoot()">🔥</button>
+    <button class="Interaction_Buttons shoot_btn"  onclick="shoot()" >🔥</button>
     `;
   Phone.appendChild(InteractionPad);
 }
@@ -230,3 +250,15 @@ function GameOver() {
   clearInterval(ednaMovementId1);
   clearInterval(ednaMovementId2);
 }
+
+// function updateScore() {
+//   score = score + 1;
+//   console.log(score);
+// }
+
+// function createScorePad() {
+//   var ScorePad = document.createElement("div");
+//   ScorePad.classList.add("ScorePad");
+//   ScorePad.innerHTML += score;
+//   Phone.appendChild(ScorePad);
+// }
