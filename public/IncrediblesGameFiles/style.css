@@ -8,20 +8,20 @@ body {
   height: 535px;
   width: 400px;
   margin: 0;
-  background-image: url('./assets/bg.svg');
+  background-image: url("./assets/bg.svg");
 }
 
 .park_bg {
-  background-image: url('./assets/park.svg');
+  background-image: url("./assets/park.svg");
 }
 .jungle_bg {
-  background-image: url('./assets/jungle.png');
+  background-image: url("./assets/jungle.png");
 }
 .beach_bg {
-  background-image: url('./assets/beach.png');
+  background-image: url("./assets/beach.png");
 }
 .snow_bg {
-  background-image: url('./assets/snow.png');
+  background-image: url("./assets/snow.png");
 }
 
 .Gamepad {
@@ -87,27 +87,27 @@ body {
 /* bg */
 
 .Edna_bg {
-  background: url('./assets/edna.png') no-repeat center;
+  background: url("./assets/edna.png") no-repeat center;
 }
 .MrIncredible_bg {
-  background: url('./assets/incredible.png') no-repeat center;
+  background: url("./assets/incredible.png") no-repeat center;
 }
-.Elasticgirl_bg {
-  background: url('./assets/elasticgirl.png') no-repeat center;
+.elasticgirl_bg {
+  background: url("./assets/elasticgirl.png") no-repeat center;
 }
-.Violet_bg {
-  background: url('./assets/violet.png') no-repeat center;
+.violet_bg {
+  background: url("./assets/violet.png") no-repeat center;
 }
 .Basketball_bg {
-  background: url('./assets/basketball.png') no-repeat center;
+  background: url("./assets/basketball.png") no-repeat center;
 }
-.Spaceship_bg {
-  background: url('./assets/spaceship.svg') no-repeat bottom,
-    url('./assets/edna.png') no-repeat center;
+.spaceship_bg {
+  background: url("./assets/spaceship.svg") no-repeat bottom,
+    url("./assets/edna.png") no-repeat center;
 }
 .Helicopter_bg {
-  background: url('./assets/helicopter.png') no-repeat bottom,
-    url('./assets/edna.png') no-repeat center;
+  background: url("./assets/helicopter.png") no-repeat bottom,
+    url("./assets/edna.png") no-repeat center;
 }
 
 .InteractionPad {
@@ -133,7 +133,7 @@ body {
   /* border-radius: 50%; */
   height: 40px;
   width: 40px;
-  background: url('./assets/right.svg') no-repeat center;
+  background: url("./assets/right.svg") no-repeat center;
   background-size: 40px 40px;
   border: none;
   outline: none;
@@ -143,7 +143,7 @@ body {
   /* border-radius: 50%; */
   height: 40px;
   width: 40px;
-  background: url('./assets/left.svg') no-repeat center;
+  background: url("./assets/left.svg") no-repeat center;
   background-size: 40px 40px;
   border: none;
   outline: none;
@@ -153,7 +153,7 @@ body {
   /* border-radius: 50%; */
   height: 40px;
   width: 40px;
-  background: url('./assets/restart.svg') no-repeat center;
+  background: url("./assets/restart.svg") no-repeat center;
   border: none;
   outline: none;
 }
@@ -171,16 +171,19 @@ body {
 }
 
 .edna_basketball {
-  background: url('./assets/edna_baskect_ball.png') no-repeat bottom;
+  background: url("./assets/edna_baskect_ball.png") no-repeat bottom;
   /* background-size: 50px 100px; */
 }
 
 .GameDisplay {
-  background: url('./assets/GameOver.svg') no-repeat center;
+  background: url("./assets/GameOver.svg") no-repeat center;
   position: absolute;
   top: 25%;
   left: 28%;
   height: 150px;
   width: 180px;
   display: none;
+}
+.ScorePad {
+  margin: 15px 0 0 50px;
 }
