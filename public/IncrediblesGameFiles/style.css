@@ -92,16 +92,16 @@ body {
 .MrIncredible_bg {
   background: url("./assets/incredible.png") no-repeat center;
 }
-.Elasticgirl_bg {
+.elasticgirl_bg {
   background: url("./assets/elasticgirl.png") no-repeat center;
 }
-.Violet_bg {
+.violet_bg {
   background: url("./assets/violet.png") no-repeat center;
 }
 .Basketball_bg {
   background: url("./assets/basketball.png") no-repeat center;
 }
-.Spaceship_bg {
+.spaceship_bg {
   background: url("./assets/spaceship.svg") no-repeat bottom,
     url("./assets/edna.png") no-repeat center;
 }
