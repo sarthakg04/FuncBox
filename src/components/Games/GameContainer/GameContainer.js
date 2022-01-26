@@ -148,7 +148,7 @@ function GameContainer({ gid, location }) {
         gid={gid}
       />
       <div className="preview">
-        <div class="heading">
+        <div className="heading">
           <p>Preview</p>
         </div>
         <div className="frame_container">
