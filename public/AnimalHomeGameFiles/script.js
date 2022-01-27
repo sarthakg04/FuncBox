@@ -1,4 +1,4 @@
-// let animals = ['lion_den','fish_ocean','horse_stable','ducks_pond','birds_nest','penguin_waddle','cow_shed','dog_kennel','elephant_jungle','camel_desert','bees_beehive','cheetah_savannah','monkey_tree','turtle_ocean','yak_hill','spider_web','pig_sty','rabbit_burrow','sheep_pen']
+// let animals = ['lion_den','fish_ocean','horse_stable','ducks_pond','birds_nest','penguin_waddle','cow_shed','dog_kennel','elephant_jungle','camel_desert','bees_beehive','cheetah_savannah','monkey_tree','turtle_ocean','yak_hill','spider_web','pig_sty','rabbit_burrow','sheep_pen','hen_coop']
 // createBackground()
 // createArrowKeys()
 // setCards()
@@ -56,6 +56,8 @@ let animalImageLinks = {
     "https://ik.imagekit.io/funcboxImages/AnimalHomeGame_assets/ducks_ZsK0arHVxl.png?updatedAt=1636650701183",
   turtle:
     "https://ik.imagekit.io/funcboxImages/AnimalHomeGame_assets/turtle_U3dTBvyitl.png?updatedAt=1637641788674",
+  hen:
+    "https://ik.imagekit.io/funcboxImages/AnimalHomeGame_assets/chicken_kXwJgKC7Yn7u.png?ik-sdk-version=javascript-1.4.3&updatedAt=1636650701251",
 };
 
 const soundFiles = {
@@ -90,6 +92,7 @@ const soundFiles = {
   yak: "https://drive.google.com/file/d/1ilNbyMdZJmtUYWpc2InOPQtJCXznM0il/view?usp=sharing",
   monkey: "https://drive.google.com/file/d/1rIOk5qkYmOw_jlulB23Rq9L5wHnjeN62/view?usp=sharing",
   turtle: "https://drive.google.com/file/d/1jBLk2LIGATk4V1Q43CtlDVRNsI2B_a6O/view?usp=sharing",
+  hen: "https://drive.google.com/file/d/1C8c4LxsA_bG_Mm1ik6uYpsN5pBHjf4Fq/view?usp=sharing",
 };
 
 var currentCard = 0;
