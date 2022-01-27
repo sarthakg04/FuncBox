@@ -1,6 +1,6 @@
 import React from "react";
 import GameContainer from "../GameContainer/GameContainer";
-export default function PhotosynthesisGame() {
+export default function MeltTheIceGame() {
   return (
     <div>
       <GameContainer gid={34} />
