@@ -1,41 +1,32 @@
 //Frontend Functions for testing
 
-// let edna_speed = 0.5
-// let basket_ball_speed = 0.5
-// let hero = 'MrIncredible'
-// let vehicle = 'Helicopter'
-// fillBackground('jungle')
-// createGrid()
-// createCharacters()
-// EdnaMovement()
-// createInteractionPad()
-// createFinish()
-// function Check(ball_position){
-//     if( ball_position == current_edna_position ){
-//         GameOver()
-//         return true
-//     }
-// }
+/*
+let edna_speed = 0.5
+let basket_ball_speed = 0.5
+let hero = 'Violet'
+let vehicle = 'Helicopter'
+let lives = 5
+fillBackground('snow')
+createGrid()
+createCharacters()
+EdnaMovement()
+createScoreCard()
+createInteractionPad()
+createFinish()
+function Check(ball_position){
+    if( ball_position !== current_edna_position ){
+            decreaseLife();
+            if(lives === 0){
+              GameOver()
+              return true
+            }
+	}
+  else{
+    updateScore();
+  }
+}
+*/
 
-// let edna_speed = 0.5;
-// let basket_ball_speed = 0.5;
-// let hero = "MrIncredible";
-// let vehicle = "Helicopter";
-// fillBackground("jungle");
-// createGrid();
-// createCharacters();
-// EdnaMovement();
-// createInteractionPad();
-// createScorePad();
-// createFinish();
-// function Check(ball_position) {
-//   if (ball_position == current_edna_position) {
-//     GameOver();
-//     return true;
-//   } else {
-//     updateScore()
-//   }
-// }
 
 let shoot_btn;
 
@@ -49,6 +40,8 @@ var edna_squares;
 var incredible_squares;
 var basketball_squares;
 var Phone = document.createElement("div");
+
+let score = 0
 
 // Frontend Functions
 
@@ -108,6 +101,40 @@ function createGrid() {
   );
 }
 
+// create scoreCard
+function createScoreCard() {
+  var scoreCard = document.createElement("div");
+  scoreCard.classList.add("scoreCard");
+  scoreCard.innerHTML += `
+    <div class="score">
+      <span>Score:</span>
+      <span id="score_span">0</span>
+    </div>
+    <div class="lives">
+      <span>Lives:</span>
+      <span id="live_span">${lives}</span>
+    </div>
+    `;
+  Phone.appendChild(scoreCard);
+}
+
+function decreaseLife() {
+  lives = lives - 1;
+  var lives_span = document.querySelector("#live_span");
+  lives_span.innerHTML = lives;
+}
+
+const sleep = (milliseconds) => {
+  return new Promise((resolve) => setTimeout(resolve, milliseconds));
+};
+
+//updateScore
+function updateScore() {
+  score = score + 1;
+  var Score = document.querySelector("#score_span");
+  Score.innerHTML = score;
+}
+
 function createCharacters() {
   //Initialising positions
   edna_squares[current_edna_position].classList.add("Edna_bg");
@@ -160,6 +187,7 @@ function MoveLeft() {
   }
 }
 
+
 function MoveRight() {
   if (current_incredible_position < 3) {
     incredible_squares[current_incredible_position].classList.remove(
@@ -170,6 +198,9 @@ function MoveRight() {
     // console.log(current_incredible_position)
   }
 }
+
+
+
 
 //Shoot function
 function shoot() {
