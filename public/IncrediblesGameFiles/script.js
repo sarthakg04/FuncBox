@@ -27,7 +27,6 @@ function Check(ball_position){
 }
 */
 
-
 let shoot_btn;
 
 var current_edna_position = 0;
@@ -40,8 +39,6 @@ var edna_squares;
 var incredible_squares;
 var basketball_squares;
 var Phone = document.createElement("div");
-
-let score = 0
 
 // Frontend Functions
 
@@ -187,7 +184,6 @@ function MoveLeft() {
   }
 }
 
-
 function MoveRight() {
   if (current_incredible_position < 3) {
     incredible_squares[current_incredible_position].classList.remove(
@@ -198,9 +194,6 @@ function MoveRight() {
     // console.log(current_incredible_position)
   }
 }
-
-
-
 
 //Shoot function
 function shoot() {
