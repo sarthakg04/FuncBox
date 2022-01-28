@@ -124,16 +124,9 @@ function GameContainer({ gid, location }) {
       getSavedCode();
     }
 
-    QRCode.toDataURL(
-      `${
-        process.env.NODE_ENV === "development"
-          ? "http://localhost:3000/"
-          : "https://www.funcbox.in/"
-      }` +
-        userid +
-        "+" +
-        gid
-    ).then(setQrSrc);
+    QRCode.toDataURL("https://www.funcbox.in/" + userid + "+" + gid).then(
+      setQrSrc
+    );
   }, [userid]);
   return loading ? (
     <div> Loading ...</div>
