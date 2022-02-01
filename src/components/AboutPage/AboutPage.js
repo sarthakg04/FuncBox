@@ -29,9 +29,14 @@ export default function AboutPage() {
         } else {
           dropdownContent.style.maxHeight = dropdownContent.scrollHeight + "px";
         }
-      });
+      } else {
+        let dropdownContent = dropdown[i].nextElementSibling;
+        dropdown[i].getElementsByTagName("i")[0].classList.remove("active");
+        if (dropdownContent.style.maxHeight)
+          dropdownContent.style.maxHeight = null;
+      }
     }
-  }, []);
+  };
 
   return (
     <div className="aboutPage__main">
