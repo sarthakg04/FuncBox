@@ -79,13 +79,13 @@ body {
 	border: none;
 	color: white;
 	font-size: 2rem;
-	/* cursor: pointer; */
+	cursor: pointer;
 	padding: 3px;
 }
 
-/* #game-lose > button:hover {
+#game-lose > button:hover {
 	background-color: rgb(90, 175, 228);
-} */
+}
 
 #game-win {
 	display: none;

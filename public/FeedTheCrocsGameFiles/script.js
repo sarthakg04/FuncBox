@@ -7,7 +7,7 @@
 // createOptions();
 // countDown(60);
 // startGame();
-//
+// createResetButton();
 
 // Variables
 const gamePlay = [
@@ -19,14 +19,13 @@ const gamePlay = [
 	{ id: "5", background: "background-5", angle: "angle-5", answer: "45" },
 	{ id: "6", background: "background-6", angle: "angle-6", answer: "60" },
 	{ id: "7", background: "background-7", angle: "angle-7", answer: "90" },
-	{ id: "8", background: "background-8", angle: "", answer: "" },
-	{ id: "9", background: "background-9", angle: "", answer: "" },
 ];
 
 let gameAns = gamePlay[1];
 let userAns = 0;
 let score = 0;
 let randomNumber = 1;
+let time = 60;
 
 // Create HTML
 function createTopElements() {
@@ -118,7 +117,11 @@ function startGame() {
 		document.getElementById("top-score").style.visibility = "visible";
 		document.getElementById("bottom").style.visibility = "visible";
 		fillBackground(1);
-	}, 3000);
+		score = 0;
+		gameAns = gamePlay[1];
+		userAns = 0;
+		randomNumber = 1;
+	}, 2000);
 }
 
 // Generating a Random Number from 2 to 7
@@ -139,7 +142,9 @@ function checkCorrectAngle() {
 		score = score - 5;
 		document.getElementById("top-score").innerText = `Score: ${score}`;
 	}
-	// console.log("Score = ", score);
+	console.log("Score = ", score);
+	console.log("Game Answer = ", gameAns.answer);
+
 	setTimeout(() => {
 		document.getElementById("top-angle").style.visibility = "hidden";
 		newFood();
@@ -148,9 +153,11 @@ function checkCorrectAngle() {
 
 // Generating a new Question
 function newFood() {
-	randomNumber = generateRandomNumber();
-	gameAns = gamePlay[randomNumber];
-	fillBackground(randomNumber);
+	if (time > 0) {
+		randomNumber = generateRandomNumber();
+		gameAns = gamePlay[randomNumber];
+		fillBackground(randomNumber);
+	}
 }
 
 function createOptions() {
@@ -160,19 +167,20 @@ function createOptions() {
 		ele.onclick = () => {
 			// console.log(ele.innerText);
 			userAns = ele.innerText;
-			// console.log("User Answer = ", userAns);
 			checkCorrectAngle();
+			console.log("User Answer = ", userAns);
 		};
 	});
 }
 
 // Function for Timer
 function countDown(num) {
+	time = num;
 	// const d = new Date();
 	document.getElementById("top-timer").innerHTML = num;
 	num--;
 
-	if (num < 0) {
+	if (num < 50) {
 		document.getElementById("top-timer").style.visibility = "hidden";
 		document.getElementById("top-score").style.visibility = "hidden";
 		document.getElementById("bottom").style.visibility = "hidden";
@@ -211,12 +219,12 @@ function fillBackground(num) {
 }
 
 // Restart the Game Button
-// document.getElementById("restart-btn").addEventListener("click", () => {
-// 	document.getElementById("game-lose").style.display = "none";
-// 	fillBackground(1);
-// 	document.getElementById("top-timer").style.visibility = "visible";
-// 	document.getElementById("top-score").style.visibility = "visible";
-// 	// document.getElementById("top-angle").style.visibility = "hidden";
-// 	document.getElementById("bottom").style.visibility = "visible";
-// 	countDown(60);
-// });
+function createResetButton() {
+	document.getElementById("restart-btn").addEventListener("click", () => {
+		document.getElementById("game-lose").style.display = "none";
+		startGame();
+		setTimeout(() => {
+			countDown(60);
+		}, 3000);
+	});
+}
