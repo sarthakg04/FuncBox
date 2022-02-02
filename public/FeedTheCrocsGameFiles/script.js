@@ -1,6 +1,6 @@
 // FRONTEND FUNCTIONS at /FeedTheCrocsGame
 // createGamepad();
-// fillBackground(0);
+// crocImage();
 // createTopElements();
 // createMiddleElements();
 // createBottomElements();
@@ -9,23 +9,96 @@
 // startGame();
 // createResetButton();
 
+// function getNextCroc() {
+// 	if (timeRemaining > 0) {
+// 		nextQuestionNumber = generateNextQuestionNumber();
+// 		currentQuestionAnswer = gameQuestions[nextQuestionNumber];
+// 		crocImage(currentQuestionAnswer.background);
+// 	}
+// }
+
+// function checkCorrectAnswer() {
+// 	if (userAns == currentQuestionAnswer.answer) {
+// 		score = score + 10;
+// 	} else {
+// 		score = score - 5;
+// 	}
+// 	updateScore();
+// }
+
 // Variables
-const gamePlay = [
-	{ id: "0", background: "background-0", angle: "angle-1", answer: "" },
-	{ id: "1", background: "background-1", angle: "angle-1", answer: "0" },
-	{ id: "2", background: "background-2", angle: "angle-2", answer: "10" },
-	{ id: "3", background: "background-3", angle: "angle-3", answer: "20" },
-	{ id: "4", background: "background-4", angle: "angle-4", answer: "35" },
-	{ id: "5", background: "background-5", angle: "angle-5", answer: "45" },
-	{ id: "6", background: "background-6", angle: "angle-6", answer: "60" },
-	{ id: "7", background: "background-7", angle: "angle-7", answer: "90" },
+const gameQuestions = [
+	{
+		id: "0",
+		background:
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-0_o9TaE0PUk.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784746614",
+		angle:
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-1_f_M89woIY.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784744023",
+		answer: "-",
+	},
+	{
+		id: "1",
+		background:
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-1_1Galn7dgFRS.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784747458",
+		angle:
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-1_f_M89woIY.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784744023",
+		answer: "0",
+	},
+	{
+		id: "2",
+		background:
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-2_skyMrjs4j.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784747860",
+		angle:
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-2_rp3wZEL73.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784743815",
+		answer: "10",
+	},
+	{
+		id: "3",
+		background:
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-3_MxCN1wRA7.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784748173",
+		angle:
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-3_ruujtePltzu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784744035",
+		answer: "20",
+	},
+	{
+		id: "4",
+		background:
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-4_NbwTn7bgAos.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784748745",
+		angle:
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-4_lwGYH5xux.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784744578",
+		answer: "35",
+	},
+	{
+		id: "5",
+		background:
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-5_MNQRIgJ14.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784749298",
+		angle:
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-5_Ds1h-41Lm.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784744991",
+		answer: "45",
+	},
+	{
+		id: "6",
+		background:
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-6_20XmgkHzpyQ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784750143",
+		angle:
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-6_xbfmNq_ywS9.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784745477",
+		answer: "60",
+	},
+	{
+		id: "7",
+		background:
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-7_kRWhFo06n.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784750884",
+		angle:
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-7_InfoimkPZ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784745820",
+		answer: "90",
+	},
 ];
 
-let gameAns = gamePlay[1];
+let currentQuestionAnswer = gameQuestions[1];
 let userAns = 0;
 let score = 0;
-let randomNumber = 1;
-let time = 60;
+let nextQuestionNumber = 1;
+let timeRemaining = 60;
 
 // Create HTML
 function createTopElements() {
@@ -85,7 +158,6 @@ function createBottomElements() {
 	bottom.classList.add("bottom");
 	bottom.id = "bottom";
 	bottom.innerHTML = `
-    <div class="bottom-red"></div>
     <div class="bottom-circle" id="circle-1"><span class="bottom-circle-data">0</span></div>
     <div class="bottom-circle" id="circle-2"><span class="bottom-circle-data">5</span></div>
     <div class="bottom-circle" id="circle-3"><span class="bottom-circle-data">10</span></div>
@@ -95,9 +167,7 @@ function createBottomElements() {
     <div class="bottom-circle" id="circle-7"><span class="bottom-circle-data">60</span></div>
     <div class="bottom-circle" id="circle-8"><span class="bottom-circle-data">90</span></div>
   `;
-	// let bottomRed = document.createElement("div");
-	// bottomRed.classList.add("bottom-red");
-	// bottom.appendChild(bottomRed);
+
 	// let bottomCircle1 = document.createElement("div");
 	// bottomCircle1.classList.add("bottom-circle");
 	// bottomCircle1.id = "circle1";
@@ -112,52 +182,45 @@ function createBottomElements() {
 
 // Starting Game
 function startGame() {
+  crocImage(
+		"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-0_o9TaE0PUk.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784746614"
+	);
 	setTimeout(() => {
 		document.getElementById("top-timer").style.visibility = "visible";
 		document.getElementById("top-score").style.visibility = "visible";
 		document.getElementById("bottom").style.visibility = "visible";
-		fillBackground(1);
 		score = 0;
-		gameAns = gamePlay[1];
+		crocImage(currentQuestionAnswer.background);
+		currentQuestionAnswer = gameQuestions[1];
 		userAns = 0;
-		randomNumber = 1;
+		nextQuestionNumber = 1;
+		document.getElementById("top-score").innerText = `Score: ${score}`;
 	}, 2000);
 }
 
 // Generating a Random Number from 2 to 7
-function generateRandomNumber() {
-	return Math.floor(2 + Math.random() * 6);
+function generateNextQuestionNumber() {
+	return Math.floor(1 + Math.random() * 6);
 }
 
 // Checking for the Win/Lose
-function checkCorrectAngle() {
-	// console.log("Game Answer = ", gameAns.answer);
-	if (userAns == gameAns.answer) {
-		score = score + 10;
-		document.getElementById("top-score").innerText = `Score: ${score}`;
+function updateScore() {
+	// console.log("Game Answer = ", currentQuestionAnswer.answer);
+	if (userAns == currentQuestionAnswer.answer) {
 		document.getElementById("top-angle").style.visibility = "visible";
 		document.getElementById("top-angle").style.backgroundImage =
-			"url(./FeedTheCrocsGameFiles/assets/angle-" + randomNumber + ".png)";
-	} else {
-		score = score - 5;
-		document.getElementById("top-score").innerText = `Score: ${score}`;
+			"url(./FeedTheCrocsGameFiles/assets/angle-" +
+			nextQuestionNumber +
+			".png)";
 	}
+	document.getElementById("top-score").innerText = `Score: ${score}`;
 	console.log("Score = ", score);
-	console.log("Game Answer = ", gameAns.answer);
+	console.log("Game Answer = ", currentQuestionAnswer.answer);
 
 	setTimeout(() => {
 		document.getElementById("top-angle").style.visibility = "hidden";
-		newFood();
+		getNextCroc();
 	}, 3000);
-}
-
-// Generating a new Question
-function newFood() {
-	if (time > 0) {
-		randomNumber = generateRandomNumber();
-		gameAns = gamePlay[randomNumber];
-		fillBackground(randomNumber);
-	}
 }
 
 function createOptions() {
@@ -167,7 +230,7 @@ function createOptions() {
 		ele.onclick = () => {
 			// console.log(ele.innerText);
 			userAns = ele.innerText;
-			checkCorrectAngle();
+			checkCorrectAnswer();
 			console.log("User Answer = ", userAns);
 		};
 	});
@@ -175,23 +238,27 @@ function createOptions() {
 
 // Function for Timer
 function countDown(num) {
-	time = num;
+	timeRemaining = num;
 	// const d = new Date();
 	document.getElementById("top-timer").innerHTML = num;
 	num--;
 
-	if (num < 50) {
+	if (num < 0) {
 		document.getElementById("top-timer").style.visibility = "hidden";
 		document.getElementById("top-score").style.visibility = "hidden";
 		document.getElementById("bottom").style.visibility = "hidden";
 		if (score >= 75) {
 			document.getElementById("score-win").innerText = `Score: ${score}`;
 			document.getElementById("game-win").style.display = "block";
-			fillBackground(9);
+			crocImage(
+				"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-9_XmdT5dwhDCG.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784751429"
+			);
 		} else {
 			document.getElementById("score-lose").innerText = `Score: ${score}`;
 			document.getElementById("game-lose").style.display = "block";
-			fillBackground(8);
+			crocImage(
+				"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-8_yUB92MNtZN.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784751161"
+			);
 		}
 	} else {
 		setTimeout(() => {
@@ -209,13 +276,13 @@ function createGamepad() {
 }
 
 // Function to Fill background
-function fillBackground(num) {
-	if (num == undefined) {
-		num = "0";
+function crocImage(URL) {
+	if (URL == undefined) {
+		URL =
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-0_o9TaE0PUk.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784746614";
 	}
 
-	document.getElementById("GamePad").style.backgroundImage =
-		"url(./FeedTheCrocsGameFiles/assets/background-" + num + ".png)";
+	document.getElementById("GamePad").style.backgroundImage = `url(${URL})`;
 }
 
 // Restart the Game Button
