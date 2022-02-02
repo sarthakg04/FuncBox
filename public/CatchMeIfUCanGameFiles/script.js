@@ -30,8 +30,8 @@ function fillBackground(){
 
 function createButtons(){
     document.getElementsByClassName('GamePad')[0].innerHTML +=`
-    <img src="./CatchMeIfUCanGameFiles/assets/button_left.png" id="button_left">
-    <img src="./CatchMeIfUCanGameFiles/assets/button_right.png" id="button_right">
+    <img src="./CatchMeIfUCanGameFiles/assets/button_left.png" id="button_left" onclick="moveLeft()">
+    <img src="./CatchMeIfUCanGameFiles/assets/button_right.png" id="button_right" onclick="moveRight()">
     `
     getButtons();
 }
@@ -45,29 +45,49 @@ function createDroplets(){
 }
 
 
+
+function moveLeft(){
+  var umberella = document.getElementById("umb_hap");
+  if(umb_position > 70){
+      umb_position = umb_position - 30;
+      umberella.style.left = umb_position + 'px';
+  }
+}
+
+
+ function moveRight(){
+   var umberella = document.getElementById("umb_hap");
+    if(umb_position < 230){
+        umb_position = umb_position + 30;
+        umberella.style.left = umb_position + 'px';
+    }
+}
+
 //Left and Right Arrow Functioning
 var umb_position = 140;
 
 function getButtons(){
+
     var btnleft = document.getElementById("button_left");
     var btnright = document.getElementById("button_right");
     var umberella = document.getElementById("umb_hap");
 
     const moveLeft = function(){
+      console.log("Hello");
         if(umb_position > 70){
             umb_position = umb_position - 30;
             umberella.style.left = umb_position + 'px';
         }
     }
-    
+
     const moveRight = function(){
         if(umb_position < 230){
             umb_position = umb_position + 30;
             umberella.style.left = umb_position + 'px';
         }
     }
-    
-    btnleft.onclick = moveLeft;
+
+
     btnright.onclick = moveRight;
 }
 
@@ -104,5 +124,3 @@ var droplets = document.getElementsByClassName("droplet");
 //         this.style.display = "block";
 //     }
 // });
-
-

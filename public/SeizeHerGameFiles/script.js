@@ -117,12 +117,12 @@ function getQuestion(){
 
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
-    while (currentIndex != 0) {  
+    while (currentIndex != 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;  
+        currentIndex--;
         [array[currentIndex], array[randomIndex]] = [
         array[randomIndex], array[currentIndex]];
-    }  
+    }
     return array;
 }
 
@@ -131,19 +131,16 @@ function getOptions(){
     var m = document.getElementById("num1").innerHTML;
     var n = document.getElementById("num2").innerHTML;
 
-    // console.log(m);
-    // console.log(n);
-
     optionsArray = [
-        [numbers.get(document.getElementById("num1").innerHTML), numbers.get(n)],
+        [numbers.get(parseInt(m)),numbers.get(parseInt(n))],
         [numbers.get(getRandomInt(1, 26)), numbers.get(getRandomInt(1, 26))],
         [numbers.get(getRandomInt(1, 26)), numbers.get(getRandomInt(1, 26))],
         [numbers.get(getRandomInt(1, 26)), numbers.get(getRandomInt(1, 26))]
     ]
-    
+
     shuffle(optionsArray);
 
-    console.log(optionsArray);
+
 
     document.getElementById("opt1").innerHTML = optionsArray[0];
     document.getElementById("opt2").innerHTML = optionsArray[1];
@@ -165,7 +162,7 @@ function getAnswer(){
         var rightdisp = document.getElementById("rightAns");
         var m = document.getElementById("num1").innerHTML;
         var n = document.getElementById("num2").innerHTML;
-    
+
         if(submitted1 == numbers.get(m) && submitted2 == numbers.get(n)){
             rightdisp.style.display = "block";
             // document.getElementById("game_page").style.pointerEvents = "none";
