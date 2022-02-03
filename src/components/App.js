@@ -63,7 +63,7 @@ import ChemistryLab from "./Games/ChemistryLab/ChemistryLab";
 import WeatherGame from "./Games/WeatherGame/WeatherGame";
 import SeizeHerGame from "./Games/SeizeHerGame/SeizeHerGame";
 import CatchMeIfUCanGame from "./Games/CatchMeIfUCanGame/CatchMeIfUCanGame";
-
+import CheesyGuptaGame from "./Games/CheesyGuptaGame/CheesyGuptaGame";
 function App() {
   const dispatch = useDispatch();
   const { token } = useAuth();
@@ -173,6 +173,9 @@ function App() {
           <Route exact path="/WeatherGame" component={WeatherGame} />
           <Route exact path="/SeizeHerGame" component={SeizeHerGame} />
           <Route exact path="/CatchMeIfUCanGame" component={CatchMeIfUCanGame} />
+          <Route exact path="/CheesyGuptaGame" component={CheesyGuptaGame} />
+
+
 
           <Route exact path="/UserNavbar" component={UserNavbar} />
           <Route exact path="/Login" component={Login} />
