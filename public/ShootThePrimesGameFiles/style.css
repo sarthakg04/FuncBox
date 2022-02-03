@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.Phonex {
+  background-color: #ffc6a8;
+  margin: 0;
+  padding: 0;
+}
+
+.Phonex > div {
+  position: absolute;
+}
+
+.Background {
+  top: 0;
+  left: 0;
+}
+
+.Jokers {
+  top: 100px;
+  left: 40px;
+}
+
+.box {
+  font-size: 22px;
+  font-family: 'Rancho', cursive;
+  text-align: center;
+  line-height: 22px;
+  background-color: #ff9595;
+  height: 22px;
+  width: 36px;
+  border-radius: 10px;
+}
+
+
+
+.one{
+    left: 103px;
+    top: 254px;
+}
+
+.two {
+  left: 151px;
+  top: 250px;
+}
+
+.three{
+    left: 202px;
+    top: 254px;
+}
+
+.four{
+    left: 250px;
+    top: 250px;
+}
+
+
+.five{
+  left: 83px;
+  top: 300px;
+}
+
+.six{
+  left: 132px;
+  top: 296px;
+}
+
+.seven{
+  left: 182px;
+  top: 300px;
+}
+
+.eight{
+  left: 230px;
+  top: 296px;
+}
+
+.nine{
+  left: 275px;
+  top: 300px;
+}
