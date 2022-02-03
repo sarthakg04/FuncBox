@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn button{
+            background-color: #FFAC4A;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 15px;
+            color: white;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="unit">
+        <img src="./TemperatureConversionFiles2/assets/saying.png" >
+        <div class="content">
+            <h2>Hey, this is</h2>
+            <h2 id="mainUnit"><select>
+                <option value="celsius" onselect="newp()">Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+            </select></h2>
+        </div>
+    </div>
+    
+    <div class="inputValue">
+        <h4>Enter Value</h4>
+        <input type="number" id="data">
+    </div>
+    <div class="btn">
+        <button id="btn1">Submit</button>
+    </div>
+
+
+    <div class="answer">
+        <h1 class="celAns"></h1>
+    </div>
+    <div class="gameOver">
+        <h1>Game Over</h1>
+        <h2>Your Score</h2>
+        <h3></h3>
+    </div>
+</body>
+</html>
