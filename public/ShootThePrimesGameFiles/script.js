@@ -41,35 +41,99 @@ function generateBoxes() {
             <div class="box nine" onClick="checkPrime(9)"></div>
         `;
 }
+var counter = 30
+var timer;
+function createTimer(val){
+    counter = val || 30;
+    timer = setInterval(function(){
+        counter--;
+        if(counter < 0){
+            clearInterval(timer);
+            allCorrect();
+            return;
+        }
+        document.getElementById("timer").innerHTML = counter + " sec";
+    }, 1000);
+ 
+
+    Phonex.innerHTML += `
+        <div class="timer">
+            <h1 id="timer">${counter} sec</h1>
+        </div>
+        `;
+
+}
+
+function printPrimeAndNonPrime() {
+  var allPrimes = document.querySelector(".prime");
+  for (let i = 0; i < primeNumbers.length; i++) {
+    allPrimes.innerHTML += `${primeNumbers[i]}<br />`;
+  }
+
+  var allNonPrimes = document.querySelector(".nonprime");
+  for (let i = 0; i < nonPrime.length; i++) {
+    allNonPrimes.innerHTML += `${nonPrime[i]}<br />`;
+  }
+}
+
+function allCorrect() {
+  Phonex.innerHTML += `
+        <div class="results">RESULTS</div>
+        <div class="congrats">CONGRATS!</div>
+        <div class="all_correct">You got all primes correct!</div>
+        <div class="celebration">
+            <img src="./ShootThePrimesGameFiles/assets/Celebration.png" alt="" width="300px" />
+        </div>
+        <div class="ResultDiv">
+            <img src="./ShootThePrimesGameFiles/assets/Result.png" alt="" width="350px" />
+        </div>
+        <div class = "prime">
+            <p>  PRIME NOS: </p>
+            <br />
+        </div>
+        <div class = "nonprime">
+            <p>  NON-PRIME NOS: </p>
+            <br />
+        </div>
+        <div class="playAgain">
+            <button onClick="window.location.reload()">Play Again</button>
+        </div>
+        `;
+  clearInterval(timer);
+  printPrimeAndNonPrime();
+
+}
 
 var allNumbers = [];
 
 var primeNumbers = [];
 var nonPrime = [];
 
-var userPrimes = [];
+var correctShots = [];
+var wrongShots = [];
 
 var countPrime = 0;
 
 function checkPrime(idx) {
-    // console.log("checkPrime");
-    var allBoxes = document.querySelectorAll(".box");
-    var clickedBox = allBoxes[idx - 1];
-    var clickedNumber = clickedBox.innerHTML;
-    userPrimes.push(clickedNumber);
-    clickedBox.style.display = "none";
-    console.log("userPrimes", userPrimes);
+  // console.log("checkPrime");
+  var allBoxes = document.querySelectorAll(".box");
+  var clickedBox = allBoxes[idx - 1];
+  var clickedNumber = clickedBox.innerHTML;
+
+  isPrime(clickedNumber)
+    ? correctShots.push(clickedNumber)
+    : wrongShots.push(clickedNumber);
+
+  clickedBox.style.display = "none";
+  console.log("correctShots", correctShots);
+
+  if (correctShots.length === countPrime && wrongShots.length === 0) {
+    allCorrect();
+    return;
+  }
 }
 
 // check if a number is prime or not
-function isPrime(num) {
-    for (var i = 2; i < num/2; i++) {
-        if (num % i === 0) {
-            return false;
-        }
-    }
-    return true;
-}
 
 
 function generateRandomPrimes() {
@@ -77,20 +141,18 @@ function generateRandomPrimes() {
   for (let j = 0; j < 5; j++)
     allNumbers.push(Math.floor(Math.random() * 200) + 1);
 
-  console.log(allNumbers);
   allNumbers = shuffleArray(allNumbers);
-  console.log("final array is", allNumbers);
 
   var myBoxes = document.querySelectorAll(".box");
   for (let i = 0; i < myBoxes.length; i++) {
     myBoxes[i].innerHTML = allNumbers[i];
-    if (isPrime(allNumbers[i])){
-        countPrime++; 
-        primeNumbers.push(allNumbers[i]);
-    }
-    else nonPrime.push(allNumbers[i]);
+    if (isPrime(allNumbers[i])) {
+      countPrime++;
+      primeNumbers.push(parseInt(allNumbers[i]));
+    } else nonPrime.push(parseInt(allNumbers[i]));
   }
-  console.log("countPrime is", countPrime);
+  console.log("primeNumbers", primeNumbers);
+  console.log("nonPrime", nonPrime);
 }
 
 // Shuffling the array

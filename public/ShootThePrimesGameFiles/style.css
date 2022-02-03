@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Rancho', cursive;
 }
 
 .Phonex {
@@ -28,7 +29,6 @@
 
 .box {
   font-size: 20px;
-  font-family: 'Rancho', cursive;
   text-align: center;
   line-height: 22px;
   background-color: #ff9595;
@@ -38,6 +38,24 @@
   cursor: pointer;
 }
 
+.timer{
+  font-size: 16px;
+  color: #FF0000;
+  right: 10px;
+  top: 22px;
+}
+
+.playAgain{
+  font-size: 22px;
+  color: #FF0000;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff9595;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
 
 
 .one{
@@ -85,3 +103,61 @@
   left: 275px;
   top: 300px;
 }
+
+
+.ResultDiv{
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.celebration{
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.results{
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 60px;
+}
+
+.congrats{
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #2EFF0C;
+  font-size: 45px;
+  z-index: 1;
+}
+
+.all_correct{
+  top: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #0057FF;
+  font-size: 30px;
+  z-index: 1;
+  width: max-content;
+}
+
+.prime, .nonprime{
+  top: 250px;
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+}
+.prime{
+  left: 80px;
+}
+.nonprime{
+  left: 220px;
+}
+.prime > p, .nonprime > p{
+  font-size: 22px;
+  color: white;
+}
+
