@@ -32,7 +32,7 @@ export default function Login(props) {
     console.log(props.location);
     if (isAuthenticated) {
       console.log("Authenticated");
-      toast.success("You are logged in");
+
       if (props.location.state && props.location.state.prev) {
         history.goBack();
       } else {
@@ -111,9 +111,10 @@ export default function Login(props) {
         );
         dispatch(
           setProfile({
-            avatar: verifyres.userDetails[0].avatar
+            avatar: verifyres.userDetails[0].avatar,
           })
         );
+        toast.success("You are logged in");
 
         // history.goBack();
       } else {

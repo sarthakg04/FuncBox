@@ -16,7 +16,7 @@ function WelcomePage() {
     "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/placeholder_oF5SIwZ26.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642429577487";
 
   useEffect(() => {
-    if (loading === false && isAuthenticated === false) {
+    if (isAuthenticated === false) {
       history.push("/login");
     }
   }, [loading]);
