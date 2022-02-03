@@ -1,8 +1,24 @@
 /*
     createBackground();
+    //default range is 1 to 100
+    setRange(500, 1000)  
+
+    createBackground();
     createJokers();
     generateBoxes();
     generateRandomPrimes();
+
+    // default value is 30
+    createTimer(40);  
+
+    // check if a number is prime or not
+    function isPrime(num) {
+    for (var i = 2; i < num / 2; i++) {
+        if (num % i === 0) 
+        return false;
+    }
+    return true;
+    }
 */
 
 Phonex = document.createElement("div");
@@ -41,27 +57,27 @@ function generateBoxes() {
             <div class="box nine" onClick="checkPrime(9)"></div>
         `;
 }
-var counter = 30
+var counter = NaN;
+var counterCopy = NaN;
 var timer;
-function createTimer(val){
-    counter = val || 30;
-    timer = setInterval(function(){
-        counter--;
-        if(counter < 0){
-            clearInterval(timer);
-            allCorrect();
-            return;
-        }
-        document.getElementById("timer").innerHTML = counter + " sec";
-    }, 1000);
- 
+function createTimer(val) {
+  counter = val || 30;
+  counterCopy = counter;
+  timer = setInterval(function () {
+    counter--;
+    if (counter < 0) {
+      clearInterval(timer);
+      viewResults();
+      return;
+    }
+    document.getElementById("timer").innerHTML = counter + " sec";
+  }, 1000);
 
-    Phonex.innerHTML += `
+  Phonex.innerHTML += `
         <div class="timer">
             <h1 id="timer">${counter} sec</h1>
         </div>
         `;
-
 }
 
 function printPrimeAndNonPrime() {
@@ -76,11 +92,50 @@ function printPrimeAndNonPrime() {
   }
 }
 
+var wrongAnswers = 0;
+var missedAnswers = 0;
+
+function viewResults() {
+  document.querySelector(".Jokers").style.display = "none";
+  // prime number missed
+  for (let i = 0; i < primeNumbers.length; i++)
+    if (correctShots.includes(primeNumbers[i]) === false) missedAnswers++;
+
+  // non-prime number clicked
+  wrongAnswers = wrongShots.length;
+
+  Phonex.innerHTML += `
+        <div class="results">RESULTS</div>
+        <div class="oops">OOPS!!!</div>
+        <div class="wrong">You clicked ${wrongAnswers} wrong !</div>
+        <div class="missed">You missed ${missedAnswers} primes !</div>
+        
+        <div class="ResultDiv">
+            <img src="./ShootThePrimesGameFiles/assets/Result.png" alt="" width="350px" />
+        </div>
+        <div class = "prime">
+            <p>  PRIME NOS: </p>
+        </div>
+        <div class = "nonprime">
+            <p>  NON-PRIME NOS: </p>
+        </div>
+        <div class="timeTaken">
+            <p>Time Taken: ${counterCopy - counter - 1} sec</p>
+        </div>
+
+        <div class="playAgain" onClick="window.location.reload()">Play Again</div>
+
+      `;
+  clearInterval(timer);
+  printPrimeAndNonPrime();
+}
+
 function allCorrect() {
+  document.querySelector(".Jokers").style.display = "none";
   Phonex.innerHTML += `
         <div class="results">RESULTS</div>
         <div class="congrats">CONGRATS!</div>
-        <div class="all_correct">You got all primes correct!</div>
+        <div class="all_correct">You got all primes correct !</div>
         <div class="celebration">
             <img src="./ShootThePrimesGameFiles/assets/Celebration.png" alt="" width="300px" />
         </div>
@@ -89,19 +144,17 @@ function allCorrect() {
         </div>
         <div class = "prime">
             <p>  PRIME NOS: </p>
-            <br />
         </div>
         <div class = "nonprime">
             <p>  NON-PRIME NOS: </p>
-            <br />
         </div>
-        <div class="playAgain">
-            <button onClick="window.location.reload()">Play Again</button>
+        <div class="timeTaken">
+            <p>Time Taken: ${counterCopy - counter - 1} sec</p>
         </div>
+        <div class="playAgain" onClick="window.location.reload()">Play Again</div>
         `;
   clearInterval(timer);
   printPrimeAndNonPrime();
-
 }
 
 var allNumbers = [];
@@ -121,23 +174,43 @@ function checkPrime(idx) {
   var clickedNumber = clickedBox.innerHTML;
 
   isPrime(clickedNumber)
-    ? correctShots.push(clickedNumber)
-    : wrongShots.push(clickedNumber);
+    ? correctShots.push(parseInt(clickedNumber))
+    : wrongShots.push(parseInt(clickedNumber));
 
   clickedBox.style.display = "none";
-  console.log("correctShots", correctShots);
+//   console.log("correctShots", correctShots);
 
   if (correctShots.length === countPrime && wrongShots.length === 0) {
     allCorrect();
     return;
   }
+
+  if (correctShots.length + wrongShots.length === allNumbers.length) {
+    // console.log(correctShots);
+    // console.log(primeNumbers);
+    viewResults();
+    return;
+  }
 }
 
-// check if a number is prime or not
 
+var range = [NaN, NaN];
+
+function setRange(val1, val2){
+    if(val1 > val2){
+        range[0] = val2;
+        range[1] = val1;
+    }
+    else{
+    range[0] = val1 || 1;
+    range[1] = val2 || 100;
+}
+
+    
+}
 
 function generateRandomPrimes() {
-  for (let i = 0; i < 4; i++) allNumbers.push(getRandomPrime([2, 200]));
+  for (let i = 0; i < 4; i++) allNumbers.push(getRandomPrime(range));
   for (let j = 0; j < 5; j++)
     allNumbers.push(Math.floor(Math.random() * 200) + 1);
 
@@ -151,8 +224,8 @@ function generateRandomPrimes() {
       primeNumbers.push(parseInt(allNumbers[i]));
     } else nonPrime.push(parseInt(allNumbers[i]));
   }
-  console.log("primeNumbers", primeNumbers);
-  console.log("nonPrime", nonPrime);
+//   console.log("primeNumbers", primeNumbers);
+//   console.log("nonPrime", nonPrime);
 }
 
 // Shuffling the array
@@ -172,7 +245,6 @@ function shuffleArray(array) {
 }
 
 // genrating random prime numbers
-const range = [100, 1000];
 const getPrimes = (min, max) => {
   const result = Array(max + 1)
     .fill(0)
