@@ -41,6 +41,7 @@ function createQuestion(){
 
 function createOptions(){
     document.getElementsByClassName('GamePad')[0].innerHTML +=`
+    <div id="options">
     <div class="option1">
         <div id="opt1" class="atext" ></div>
     </div>
@@ -52,6 +53,7 @@ function createOptions(){
     </div>
     <div class="option4">
         <div id="opt4" class="atext"></div>
+    </div>
     </div>
     `
     getOptions();
@@ -127,7 +129,6 @@ function shuffle(array) {
 }
 
 function getOptions(){
-    console.log(numbers);
     var m = document.getElementById("num1").innerHTML;
     var n = document.getElementById("num2").innerHTML;
 
@@ -139,8 +140,6 @@ function getOptions(){
     ]
 
     shuffle(optionsArray);
-
-
 
     document.getElementById("opt1").innerHTML = optionsArray[0];
     document.getElementById("opt2").innerHTML = optionsArray[1];
@@ -163,9 +162,9 @@ function getAnswer(){
         var m = document.getElementById("num1").innerHTML;
         var n = document.getElementById("num2").innerHTML;
 
-        if(submitted1 == numbers.get(m) && submitted2 == numbers.get(n)){
+        if(submitted1 == numbers.get(parseInt(m)) && submitted2 == numbers.get(parseInt(n))){
             rightdisp.style.display = "block";
-            // document.getElementById("game_page").style.pointerEvents = "none";
+            document.getElementById("options").style.pointerEvents = "none";
         }
         else{
             i++;
@@ -178,7 +177,7 @@ function getAnswer(){
             else if(i == 3){
                 document.getElementById("heart3").src = "./SeizeHerGameFiles/assets/bro_heart.png";
                 wrongdisp.style.display = "block";
-                // document.getElementById("game_page").style.pointerEvents = "none";
+                document.getElementById("options").style.pointerEvents = "none";
             }
         }
     }

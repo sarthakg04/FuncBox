@@ -65,6 +65,8 @@ import SeizeHerGame from "./Games/SeizeHerGame/SeizeHerGame";
 import CatchMeIfUCanGame from "./Games/CatchMeIfUCanGame/CatchMeIfUCanGame";
 import CheesyGuptaGame from "./Games/CheesyGuptaGame/CheesyGuptaGame";
 import FeedTheCrocsGame from "./Games/FeedTheCrocsGame/FeedTheCrocsGame";
+import RecognisePatternGame from "./Games/RecognisePatternGame/RecognisePatternGame";
+
 function App() {
   const dispatch = useDispatch();
   const { token } = useAuth();
@@ -223,6 +225,7 @@ function App() {
           <Route exact path="/CatchMeIfUCanGame" component={CatchMeIfUCanGame} />
           <Route exact path="/CheesyGuptaGame" component={CheesyGuptaGame} />
           <Route exact path="/FeedTheCrocsGame" component={FeedTheCrocsGame} />
+          <Route exact path="/RecognisePatternGame" component={RecognisePatternGame} />
 
 
           <Route exact path="/UserNavbar" component={UserNavbar} />
