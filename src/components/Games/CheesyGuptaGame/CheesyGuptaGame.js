@@ -1,9 +1,9 @@
 import React from "react";
 import GameContainer from "../GameContainer/GameContainer";
-export default function PhotosynthesisGame() {
+export default function CheesyGuptaGame() {
   return (
     <div>
-      <GameContainer gid={34} />
+      <GameContainer gid={54} />
     </div>
   );
 }

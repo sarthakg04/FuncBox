@@ -39,7 +39,7 @@ import Preview from "./Preview/Preview";
 import HitIt from "./Games/HitIt/HitIt";
 import TrashGame from "./Games/TrashGame/TrashGame";
 import CashierGame from "./Games/CashierGame/CashierGame";
-import Photosynthesis from "./Games/PhotosynthesisGame/Photosynthesis";
+import MeltTheIce from "./Games/MeltTheIceGame/MeltTheIce";
 import RecycleIt from "./Games/RecycleIt/RecycleIt";
 import useAuth from "../hooks/useAuth";
 import FlippableCard from "./FlippableCard/FlippableCard";
@@ -61,6 +61,7 @@ import PawnShop from "./Games/PawnShop/PawnShop";
 import CountDracula from "./Games/CountDracula/CountDracula";
 import ChemistryLab from "./Games/ChemistryLab/ChemistryLab";
 import WeatherGame from "./Games/WeatherGame/WeatherGame";
+import CheesyGuptaGame from "./Games/CheesyGuptaGame/CheesyGuptaGame";
 
 function App() {
   const dispatch = useDispatch();
@@ -139,7 +140,7 @@ function App() {
           <Route exact path="/Calculator" component={Calculator} />
           <Route exact path="/FlappyGame" component={FlappyGame} />
           <Route exact path="/CashierGame" component={CashierGame} />
-          <Route exact path="/Photosynthesis" component={Photosynthesis} />
+          <Route exact path="/MeltTheIce" component={MeltTheIce} />
           <Route exact path="/mrfraction" component={Mrfraction} />
           <Route
             exact
@@ -169,6 +170,8 @@ function App() {
             component={WeightUnitConversions}
           />
           <Route exact path="/WeatherGame" component={WeatherGame} />
+          <Route exact path="/CheesyGuptaGame" component={CheesyGuptaGame} />
+
 
           <Route exact path="/UserNavbar" component={UserNavbar} />
           <Route exact path="/Login" component={Login} />
