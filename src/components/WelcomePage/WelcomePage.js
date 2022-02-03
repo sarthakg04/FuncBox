@@ -10,14 +10,17 @@ function WelcomePage() {
   const apiurl = process.env.REACT_APP_API_URL;
   const history = useHistory();
   const [games, setGames] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [allGames, setAllGames] = useState([]);
   const placeholder =
     "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/placeholder_oF5SIwZ26.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642429577487";
+
   useEffect(() => {
-    if (!isAuthenticated) {
+    if (loading === false && isAuthenticated === false) {
       history.push("/login");
     }
-  }, [isAuthenticated]);
+  }, [loading]);
+
   useEffect(() => {
     const getGames = async () => {
       const res = await fetch(
@@ -75,9 +78,14 @@ function WelcomePage() {
   }, [allGames]);
 
   useEffect(() => {
-    console.log("games = ", games);
+    if (games.length > 0) {
+      setLoading(false);
+    }
   }, [games]);
 
+  if (loading) {
+    return <div>loading....</div>;
+  }
   return (
     <>
       <Navbar />
@@ -85,11 +93,7 @@ function WelcomePage() {
         <div className="avatar_container">
           <div className="avatar">
             <div className="avatar_bg">
-              <img
-                className="avatar_img"
-                src={avatar || ""}
-                alt=""
-              />
+              <img className="avatar_img" src={avatar || ""} alt="" />
             </div>
             <img
               className="overlay"
@@ -99,7 +103,7 @@ function WelcomePage() {
               width="450px"
               alt=""
             />
-          <p className="welcome__username">Welcome</p>
+            <p className="welcome__username">Welcome</p>
             <p className="welcome__username">{username}</p>
             <p id="small_screen_msg">
               To get access to the code editor. Please join from a pc or laptop
