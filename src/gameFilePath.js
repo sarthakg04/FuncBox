@@ -39,6 +39,8 @@ module.exports = {
     48: "ChemistryLabGameFiles",
     49: "WeatherGameFiles",
     51: "SeizeHerGameFiles",
-    52: "CatchMeIfUCanGameFiles"
+    52: "CatchMeIfUCanGameFiles",
+    53: "FeedTheCrocsGameFiles",
+    54: "CheesyGuptaGameFiles"
   },
 };

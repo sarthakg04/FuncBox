@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Squada One", cursive;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.GamePad {
+	width: 400px;
+	height: 535px;
+	margin: auto;
+	/* background-image: url(./assets/background-0.png); */
+	background-position: center;
+	background-size: cover;
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+/* Top */
+.top {
+	display: flex;
+	justify-content: space-between;
+	color: white;
+	margin: 5px;
+	font-size: 2rem;
+}
+
+.top-timer {
+	border: 1px solid black;
+	height: min-content;
+	border-radius: 50%;
+	padding: 4px;
+	text-align: center;
+	width: 2.5rem;
+	visibility: hidden;
+}
+
+.top-score {
+	height: fit-content;
+	visibility: hidden;
+}
+
+#top-angle {
+	background-image: url(./assets/angle-1.png);
+	width: 30%;
+	height: 20vh;
+	background-position: center;
+	background-size: cover;
+	visibility: hidden;
+	z-index: 5;
+	/* overflow: visible; */
+}
+
+/* Middle */
+#game-lose {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	background-color: lightskyblue;
+	color: white;
+	padding: 0.5rem;
+	font-size: 2rem;
+	border-radius: 5px;
+}
+
+#game-lose > button {
+	background: transparent;
+	border: none;
+	color: white;
+	font-size: 2rem;
+	cursor: pointer;
+	padding: 3px;
+}
+
+#game-lose > button:hover {
+	background-color: rgb(90, 175, 228);
+}
+
+#game-win {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	background-color: lightskyblue;
+	color: white;
+	padding: 0.5rem;
+	font-size: 2rem;
+	border-radius: 5px;
+}
+
+#game-win-satisfied {
+	color: red;
+	font-size: 1rem;
+}
+
+/* Bottom */
+.bottom {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	width: 90%;
+	border-top: 3px solid black;
+	margin: 1rem;
+	visibility: hidden;
+}
+
+.bottom-circle {
+	height: 10px;
+	width: 10px;
+	background-color: black;
+	border-radius: 50%;
+	display: inline-block;
+	transform: translateY(-6px);
+	cursor: pointer;
+	position: relative;
+}
+
+.bottom-circle:focus, .bottom-circle:hover {
+	background-color: red;
+}
+
+.bottom-circle-data {
+	position: absolute;
+	color: white;
+	transform: translate(1px, 10px);
+}
