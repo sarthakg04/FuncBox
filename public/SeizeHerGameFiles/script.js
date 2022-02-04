@@ -1,9 +1,36 @@
 //Frontend functions
-//createGamepad();
-//fillBackground();
-//createQuestion();
-//createOptions();
-//getResult();
+// createGamepad();
+// fillBackground();
+// const numbers = new Map([
+//     [1, "I"],
+//     [2, "II"],
+//     [3, "III"],
+//     [4, "IV"],
+//     [5, "V"],
+//     [6, "VI"],
+//     [7, "VII"],
+//     [8, "VIII"],
+//     [9, "IX"],
+//     [10, "X"],
+//     [11, "XI"],
+//     [12, "XII"],
+//     [13, "XIII"],
+//     [14, "XIV"],
+//     [15, "XV"],
+//     [16, "XVI"],
+//     [17, "XVII"],
+//     [18, "XVIII"],
+//     [19, "XIX"],
+//     [20, "XX"],
+//     [21, "XXI"],
+//     [22, "XXII"],
+//     [23, "XXIII"],
+//     [24, "XXIV"],
+//     [25, "XXV"]
+// ]);
+// createQuestion();
+// createOptions();
+// getResult();
 
 function createGamepad(){
     let gamePadd = document.createElement('DIV')
@@ -75,34 +102,13 @@ function getResult(){
     getAnswer();
 }
 
-
-const numbers = new Map([
-    [1, "I"],
-    [2, "II"],
-    [3, "III"],
-    [4, "IV"],
-    [5, "V"],
-    [6, "VI"],
-    [7, "VII"],
-    [8, "VIII"],
-    [9, "IX"],
-    [10, "X"],
-    [11, "XI"],
-    [12, "XII"],
-    [13, "XIII"],
-    [14, "XIV"],
-    [15, "XV"],
-    [16, "XVI"],
-    [17, "XVII"],
-    [18, "XVIII"],
-    [19, "XIX"],
-    [20, "XX"],
-    [21, "XXI"],
-    [22, "XXII"],
-    [23, "XXIII"],
-    [24, "XXIV"],
-    [25, "XXV"]
-]);
+// const numbers = new Map([
+//     [1, "I"],
+//     [2, "II"],
+//     [3, "III"],
+//     [4, "IV"],
+//     [5, "V"],
+// ]);
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -111,8 +117,8 @@ function getRandomInt(min, max) {
 }
 
 function getQuestion(){
-    var a = getRandomInt(1,26);
-    var b = getRandomInt(1,26);
+    var a = getRandomInt(1,numbers.size +1 );
+    var b = getRandomInt(1,numbers.size + 1);
     document.getElementById("num1").innerHTML = a;
     document.getElementById("num2").innerHTML = b;
 }
@@ -134,9 +140,9 @@ function getOptions(){
 
     optionsArray = [
         [numbers.get(parseInt(m)),numbers.get(parseInt(n))],
-        [numbers.get(getRandomInt(1, 26)), numbers.get(getRandomInt(1, 26))],
-        [numbers.get(getRandomInt(1, 26)), numbers.get(getRandomInt(1, 26))],
-        [numbers.get(getRandomInt(1, 26)), numbers.get(getRandomInt(1, 26))]
+        [numbers.get(getRandomInt(1, numbers.size +1)), numbers.get(getRandomInt(1, numbers.size +1))],
+        [numbers.get(getRandomInt(1, numbers.size +1)), numbers.get(getRandomInt(1, numbers.size +1))],
+        [numbers.get(getRandomInt(1, numbers.size +1)), numbers.get(getRandomInt(1, numbers.size +1))]
     ]
 
     shuffle(optionsArray);
@@ -145,6 +151,7 @@ function getOptions(){
     document.getElementById("opt2").innerHTML = optionsArray[1];
     document.getElementById("opt3").innerHTML = optionsArray[2];
     document.getElementById("opt4").innerHTML = optionsArray[3];
+
 }
 
 

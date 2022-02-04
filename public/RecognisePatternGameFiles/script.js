@@ -1,8 +1,18 @@
 //Frontend functions
 // createGamepad();
 // fillBackground();
-//createQuestion();
-//getResult();
+// var difference = getRandomInt(2, 11);
+// createQuestion();
+// function checkAns(num3, num5){
+//     if (num3 == difference*3 && num5 == difference*5){
+//         return true;
+//     }
+//     else{
+//         return false;
+//     }
+// }
+// getResult();
+
 
 function createGamepad(){
     let gamePadd = document.createElement('DIV')
@@ -63,43 +73,56 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min); 
 }
 
-var i = getRandomInt(2, 11);
-
 function getQuestion(){
     var num1 = document.getElementById("num1");
     var num2 = document.getElementById("num2");
     var num4 = document.getElementById("num4");
     var num6 = document.getElementById("num6");
 
-    num1.innerHTML = i;
-    num2.innerHTML = i*2;
-    num4.innerHTML = i*4;
-    num6.innerHTML = i*6;
+    num1.innerHTML = difference;
+    num2.innerHTML = difference*2;
+    num4.innerHTML = difference*4;
+    num6.innerHTML = difference*6;
 }
 
 function getAnswer(){
-    function checkAns(){
-        var num3 = document.getElementById("num3");
-        var num5 = document.getElementById("num5");
-        var wrongdisp = document.getElementById("wrong_disp");
-        var rightdisp = document.getElementById("right_disp");
-        var sequence1 = document.getElementById("sequence1");
-        var explanation1 = document.getElementById("explanation1");
-        var sequence2 = document.getElementById("sequence2");
-        var explanation2 = document.getElementById("explanation2");
+    document.getElementById("btn").onclick = loadValues;
+}
 
-        if (num3.value == i*3 && num5.value == i*5){
-            rightdisp.style.display = "block";
-            sequence2.innerHTML = i+", "+i*2+", "+i*3+", "+i*4+", "+i*5+", "+i*6;
-            explanation2.innerHTML+= " "+i;
-        }
-        else{
-            wrongdisp.style.display = "block";
-            sequence1.innerHTML = i+", "+i*2+", "+i*3+", "+i*4+", "+i*5+", "+i*6;
-            explanation1.innerHTML+= " "+i;
-        }
+function loadValues(){
+    var a = document.getElementById("num3");
+    var b = document.getElementById("num5");
+    var num3 = a.value;
+    var num5 = b.value;
+    var x = checkAns(num3, num5);
+
+    console.log(checkAns());
+
+    if(x){
+        rightAns();
     }
+    else{
+        wrongAns();
+    }
+}
 
-    document.getElementById("btn").onclick = checkAns;
+function rightAns(){
+    var rightdisp = document.getElementById("right_disp");
+    var sequence2 = document.getElementById("sequence2");
+    var explanation2 = document.getElementById("explanation2");
+
+    rightdisp.style.display = "block";
+    sequence2.innerHTML = difference+", "+difference*2+", "+difference*3+", "+difference*4+", "+difference*5+", "+difference*6;
+    explanation2.innerHTML+= " "+difference;
+}
+
+function wrongAns(){
+    var wrongdisp = document.getElementById("wrong_disp");
+    var sequence1 = document.getElementById("sequence1");
+    var explanation1 = document.getElementById("explanation1");
+
+    wrongdisp.style.display = "block";
+    sequence1.innerHTML = difference+", "+difference*2+", "+difference*3+", "+difference*4+", "+difference*5+", "+difference*6;
+    explanation1.innerHTML+= " "+difference;
 }
 
