@@ -31,11 +31,11 @@
 }
 
 .login__signup {
-  padding: 64px;
+  padding: 20px;
   margin: 0 auto;
   /* Added Extra */
   min-height: 80vh;
-  max-width: 800px;
+  max-width: 600px;
 }
 
 .signup__container .title {
@@ -74,16 +74,19 @@
   margin: auto;
   margin-top: 40px;
   display: none;
+  height: 100%;
 }
 
 .signup__container .content.active {
   display: block;
+  height: 100%;
 }
 
 .signup__container .content form {
   display: flex;
+  height: 100%;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -96,12 +99,12 @@
   border-bottom: 1px solid #787878;
   font-size: 16px;
   padding-left: 0;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   color: #787878;
 }
 
 .signup__container .submit {
-  margin-top: 64px;
+  margin-top: 24px;
   background: white;
   width: 129px;
   height: 40px;
