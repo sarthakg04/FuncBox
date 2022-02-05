@@ -1,0 +1,186 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.Phonex{
+    background-color: #ffc6a8;
+    height: 267px;
+    width: 400px;
+    margin: 0;
+    padding: 0;
+  }
+
+
+.Phonex > div {
+  position: absolute;
+}
+
+.road{
+  top: 0;
+  left: 0;
+}
+
+.table {
+  top: 280px;
+  left: 20px;
+}
+
+.table_leg_1 {
+  top: 440px;
+  left: 40px;
+}
+
+.table_leg_2 {
+  top: 440px;
+  left: 300px;
+}
+
+.table_leg_3 {
+  top: 420px;
+  left: 80px;
+}
+
+.table_leg_4 {
+  top: 420px;
+  left: 260px;
+}
+
+.boy {
+  top: 120px;
+  left: 80px;
+}
+
+.order {
+  top: 100px;
+  left: 160px;
+}
+
+.lives {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.plate {
+  top: 290px;
+  left: 170px;
+}
+
+.life_1 {
+  top: 7px;
+  left: 100px;
+}
+
+.life_2 {
+  top: 7px;
+  left: 200px;
+}
+
+.life_3 {
+  top: 7px;
+  left: 300px;
+}
+
+.slice {
+  top: 125px;
+  left: 275px;
+}
+
+.full_truckle {
+  top: 300px;
+  left: 45px;
+  cursor: pointer;
+}
+
+.fraction_line {
+  top: 130px;
+  left: 220px;
+}
+
+.numerator {
+  top: 110px;
+  font-size: xx-large;
+  font-weight: semi-bold;
+}
+
+.denominator {
+  top: 140px;
+  font-size: xx-large;
+  font-weight: semi-bold;
+}
+
+.give_btn {
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.give_btn:active {
+  bottom: 6px;
+}
+
+.slices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  height: 127px;
+  width: 118px;
+  top: 300px;
+  left: 175px;
+  overflow-y: hidden;
+}
+
+.grid-item {
+  display: grid;
+  place-items: center;
+}
+
+.score{
+  font-size: x-large;
+  font-weight: bold;
+  color: #093a88;
+  top: 252px;
+  left: 190px;
+}
+
+.GameOver {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.GAME_OVER {
+  top: 340px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.OOPS {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 260px;
+}
+
+.TryAgain {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 420px;
+  cursor: pointer;
+}
+
+.TRY_AGAIN {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 430px;
+  cursor: pointer;
+}
+
+.end{
+  display: none;
+}
+
