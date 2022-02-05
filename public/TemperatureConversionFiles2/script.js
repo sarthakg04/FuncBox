@@ -15,7 +15,7 @@
 //     celsius=((inputData - 32) * 5 / 9);
 //     kelvin=(celsius)+273;
 //     showFahrenheitResult()
-    
+
 //   }
 //   else if(selectedOption=="kelvin"){
 //     celsius=inputData-273;
@@ -121,7 +121,7 @@ function convertTemp(){
     celsius=((inputData - 32) * 5 / 9);
     kelvin=(celsius)+273;
     showFahrenheitResult()
-    
+
   }
   else if(selectedOption=="kelvin"){
     celsius=inputData-273;
