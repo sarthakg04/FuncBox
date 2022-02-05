@@ -85,28 +85,28 @@ body {
 }
 
 #middle-beaker-pink {
-  background-color: pink;
+  background-color: #FC47A9;
   border-radius: 0 0 10px 10px;
 	height: 0px;
   transition: all 0.5s ease-in;
 }
 
 #middle-beaker-green {
-  background-color: green;
+  background-color: #5AF661;
   border-radius: 0 0 10px 10px;
 	height: 0px;
   transition: all 0.5s ease-in;
 }
 
 #middle-beaker-red {
-  background-color: red;
+  background-color: #F31422;
   border-radius: 0 0 10px 10px;
 	height: 0px;
   transition: all 0.5s ease-in;
 }
 
 #middle-beaker-blue {
-  background-color: blue;
+  background-color: #1678EC;
   border-radius: 0 0 10px 10px;
 	height: 0px;
   transition: all 0.5s ease-in;
