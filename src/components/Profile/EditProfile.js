@@ -26,9 +26,11 @@ export default function EditProfile(props) {
   const [number, setNumber] = useState("");
   const [add, setAdd] = useState("test");
   const [dob, setDob] = useState("2021-10-21");
-  const [profileUpdateStatus , setprofileUpdateStatus] = useState('Update Profile')
+  const [profileUpdateStatus, setprofileUpdateStatus] =
+    useState("Update Profile");
   const [avatar, setAvatar] = useState("avatars/Tiger.png");
   const [std, setStd] = useState(3);
+  const [loading, setLoading] = useState(true);
   const history = useHistory();
   const dispatch = useDispatch();
   const apiurl = process.env.REACT_APP_API_URL;
@@ -60,12 +62,13 @@ export default function EditProfile(props) {
       setAdd(userData.caddress || "");
       setStd(userData.class || 1);
       setAvatar(userData.avatar || avatar);
+      setLoading(false);
     }
     getData();
   }, []);
 
   async function updateProfile() {
-    setprofileUpdateStatus('Updating....')
+    setprofileUpdateStatus("Updating....");
     const reqBody = {
       fname: fname,
       lname: lname,
@@ -130,7 +133,9 @@ export default function EditProfile(props) {
   function changeStd(e) {
     setStd(e.target.value);
   }
-
+  if (loading) {
+    return <div>loading...</div>;
+  }
   return (
     <div className="profile__container">
       <div className="profile__heading">
@@ -220,7 +225,6 @@ export default function EditProfile(props) {
               <option value="8">8</option>
             </select>
           </div>
-
         </div>
         <div className="right__container">
           <div className="avatar__header">
@@ -277,7 +281,7 @@ export default function EditProfile(props) {
         </div>
       </div>
       <div className="buttons">
-        <a  href="javascript:void(0)" className="btn" onClick={updateProfile}>
+        <a href="javascript:void(0)" className="btn" onClick={updateProfile}>
           {profileUpdateStatus}
         </a>
         <a href="/changePass" className="btn">
