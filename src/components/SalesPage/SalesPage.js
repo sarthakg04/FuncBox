@@ -333,24 +333,24 @@ export default function SalesPage() {
           </div>
         </div>
         <div className="for_school">
-          <div className="heading">
-            <h1> For Schools </h1>
-          </div>
-          <div className="school_content">
-            <img src={house} alt="house" />
-            <div className="contentt">
-              <p>
-                Yay! FuncBox brings special discount for all the School Tie - ups.
-                FuncBox can be easily incorporated in all the school grades. To
-                make your students outperform and help your institute gain an
-                edge over the others contact our team NOW!
-              </p>
-              <a href="https://forms.gle/TxefVyHrnWj1doSL7" target="_blank" className="content_link">
-                Connect Today
-              </a>
+            <div className="heading">
+              <h1> For Schools </h1>
+            </div>
+            <div className="school_content">
+              <img src={house} alt="house" />
+              <div className="contentt">
+                <p>
+                  Yay! FuncBox brings special discount for all the School Tie-ups.
+                  FuncBox can be easily incorporated in all the school grades. To
+                  make your students outperform and help your institute gain an
+                  edge over the others contact our team NOW!
+                </p>
+                <a href="https://forms.gle/TxefVyHrnWj1doSL7" target="_blank" className="content_link">
+                  Connect Today
+                </a>
+              </div>
             </div>
           </div>
-        </div>
         <Footer />
       </div>
       {modalOpen && (

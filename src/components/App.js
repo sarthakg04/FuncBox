@@ -18,6 +18,7 @@ import ClockGame from "../components/Games/ClockGame/ClockGame";
 import AlienGame from "../components/Games/AlienGame/AlienGame";
 import CardGame from "../components/Games/CardGame/cardGame";
 import TemperatureConversions from "../components/Games/TemperatureConversions/TemperatureConversions";
+// import TemperatureConversions2 from "../components/Games/TemperatureConversions2/TemperatureConversions2";
 import PollutoFree from "../components/Games/PollutoFree/PollutoFree";
 import LandingPage from "./LandingPage/LandingPage";
 import AboutPage from "./AboutPage/AboutPage";
@@ -39,7 +40,7 @@ import Preview from "./Preview/Preview";
 import HitIt from "./Games/HitIt/HitIt";
 import TrashGame from "./Games/TrashGame/TrashGame";
 import CashierGame from "./Games/CashierGame/CashierGame";
-import Photosynthesis from "./Games/PhotosynthesisGame/Photosynthesis";
+import MeltTheIce from "./Games/MeltTheIceGame/MeltTheIce";
 import RecycleIt from "./Games/RecycleIt/RecycleIt";
 import useAuth from "../hooks/useAuth";
 import FlippableCard from "./FlippableCard/FlippableCard";
@@ -61,6 +62,8 @@ import PawnShop from "./Games/PawnShop/PawnShop";
 import CountDracula from "./Games/CountDracula/CountDracula";
 import ChemistryLab from "./Games/ChemistryLab/ChemistryLab";
 import WeatherGame from "./Games/WeatherGame/WeatherGame";
+import BasketballGame from "./Games/BasketballGame/BasketballGame";
+import TemperatureConversions2 from "./Games/TemperatureConversions2/TemperatureConversions2";
 
 function App() {
   const dispatch = useDispatch();
@@ -139,8 +142,11 @@ function App() {
           <Route exact path="/Calculator" component={Calculator} />
           <Route exact path="/FlappyGame" component={FlappyGame} />
           <Route exact path="/CashierGame" component={CashierGame} />
-          <Route exact path="/Photosynthesis" component={Photosynthesis} />
+          <Route exact path="/MeltTheIce" component={MeltTheIce} />
           <Route exact path="/mrfraction" component={Mrfraction} />
+          <Route exact path="/BasketballGame" component={BasketballGame} />
+          <Route exact path="/TempConvGame" component={TemperatureConversions2} />
+          
           <Route
             exact
             path="/TemperatureConversions"

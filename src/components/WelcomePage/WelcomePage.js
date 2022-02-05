@@ -87,13 +87,16 @@ function WelcomePage() {
             <div className="avatar_bg">
               <img
                 className="avatar_img"
-                src={avatar || "avatars/Tiger.png"}
+                src={avatar || ""}
                 alt=""
               />
             </div>
             <img
               className="overlay"
-              src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/overlay_-HxVdV70h.png?updatedAt=1633929022661"
+              src="https://ik.imagekit.io/funcboxImages/Dashboard/Exploding_Confetti__1__X1vWXVMPj.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1642926505886"
+              // src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/overlay_-HxVdV70h.png"
+              height="450px"
+              width="450px"
               alt=""
             />
           <p className="welcome__username">Welcome</p>
