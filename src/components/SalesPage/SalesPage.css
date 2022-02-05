@@ -261,7 +261,6 @@
   margin-left: -64px;
   min-height: 250px;
 }
-.contentt
 
 .salesPage__main .for__school .contentt p {
   font-size: 19px;
@@ -301,10 +300,6 @@
   color: white;
   font-size: 21px;
   transition: all 200ms;
-}
-.heading h1{
-  font-weight: 400;
-  font-size: 5rem;
 }
 
 .purchase_button.yellow {
