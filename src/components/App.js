@@ -66,7 +66,11 @@ import CatchMeIfUCanGame from "./Games/CatchMeIfUCanGame/CatchMeIfUCanGame";
 import CheesyGuptaGame from "./Games/CheesyGuptaGame/CheesyGuptaGame";
 import FeedTheCrocsGame from "./Games/FeedTheCrocsGame/FeedTheCrocsGame";
 import LUnitConvGame from "./Games/LUnitConvGame/LUnitConvGame";
+
+import DeciChemistGame from "./Games/DeciChemistGame/DeciChemistGame";
+
 import ShootThePrimesGame from "./Games/ShootThePrimesGame/ShootThePrimesGame";
+
 
 function App() {
   const dispatch = useDispatch();
@@ -186,28 +190,26 @@ function App() {
           <Route exact path="/FeedTheCrocsGame" component={FeedTheCrocsGame} />
           <Route exact path="/LUnitConvGame" component={LUnitConvGame} />
           <Route exact path="/ShootThePrimesGame" component={ShootThePrimesGame} />
-
-
-
-          <Route exact path="/UserNavbar" component={UserNavbar} />
-          <Route exact path="/Login" component={Login} />
-          <Route exact path="/Signup" component={Signup} />
-          <Route exact path="/" component={LandingPage} />
-          <Route exact path="/AboutPage" component={AboutPage} />
-          <Route exact path="/Welcome" component={WelcomePage} />
-          <Route exact path="/SalesPage" component={SalesPage} />
-          <Route exact path="/CodeEditor" component={CodeEditor} />
-          <Route exact path="/TeamsPage" component={TeamsPage} />
-          <Route exact path="/EditProfile" component={EditProfile} />
-          <Route exact path="/ForgotPass" component={ForgotPass} />
-          <Route exact path="/subscriptions" component={SubscriptionPage} />
-          {/* <Route exact path="/flippable" component={Container} /> */}
-          <Route exact path="/VideoEmbed" component={Example} />
-          <Route exact path="/test" component={ServerTest} />
-          <Route exact path="/:code" component={Preview} />
-        </Switch>
-      </div>
-    </Router>
-  );
+          <Route exact path="/DeciChemistGame" component={DeciChemistGame} />
+					<Route exact path="/UserNavbar" component={UserNavbar} />
+					<Route exact path="/Login" component={Login} />
+					<Route exact path="/Signup" component={Signup} />
+					<Route exact path="/" component={LandingPage} />
+					<Route exact path="/AboutPage" component={AboutPage} />
+					<Route exact path="/Welcome" component={WelcomePage} />
+					<Route exact path="/SalesPage" component={SalesPage} />
+					<Route exact path="/CodeEditor" component={CodeEditor} />
+					<Route exact path="/TeamsPage" component={TeamsPage} />
+					<Route exact path="/EditProfile" component={EditProfile} />
+					<Route exact path="/ForgotPass" component={ForgotPass} />
+					<Route exact path="/subscriptions" component={SubscriptionPage} />
+					{/* <Route exact path="/flippable" component={Container} /> */}
+					<Route exact path="/VideoEmbed" component={Example} />
+					<Route exact path="/test" component={ServerTest} />
+					<Route exact path="/:code" component={Preview} />
+				</Switch>
+			</div>
+		</Router>
+	);
 }
 export default App;
