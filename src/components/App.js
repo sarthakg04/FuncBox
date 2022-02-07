@@ -66,6 +66,7 @@ import CatchMeIfUCanGame from "./Games/CatchMeIfUCanGame/CatchMeIfUCanGame";
 import CheesyGuptaGame from "./Games/CheesyGuptaGame/CheesyGuptaGame";
 import FeedTheCrocsGame from "./Games/FeedTheCrocsGame/FeedTheCrocsGame";
 import LUnitConvGame from "./Games/LUnitConvGame/LUnitConvGame";
+import PercentCalcGame from "./Games/PercentCalcGame/PercentCalcGame";
 
 function App() {
   const dispatch = useDispatch();
@@ -174,7 +175,6 @@ function App() {
           />
           <Route exact path="/WeatherGame" component={WeatherGame} />
           <Route exact path="/FeedTheCrocsGame" component={FeedTheCrocsGame} />
-
           <Route exact path="/AngryBirds" component={AngryBirds} />
           <Route exact path="/MissionMars" component={MissionMars} />
           <Route exact path="/MonkeyMultiplier" component={MonkeyMultiplier} />
@@ -230,6 +230,7 @@ function App() {
           <Route exact path="/CheesyGuptaGame" component={CheesyGuptaGame} />
           <Route exact path="/FeedTheCrocsGame" component={FeedTheCrocsGame} />
           <Route exact path="/LUnitConvGame" component={LUnitConvGame} />
+          <Route exact path="/PercentCalcGame" component={PercentCalcGame} />
 
           <Route exact path="/UserNavbar" component={UserNavbar} />
           <Route exact path="/Login" component={Login} />
