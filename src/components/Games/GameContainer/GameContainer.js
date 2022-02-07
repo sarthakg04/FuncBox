@@ -13,6 +13,8 @@ import { unhash } from "../../../features/hasher";
 import { useHistory } from "react-router-dom";
 import GameUnAuthorized from "../../GameUnAuthorized/GameUnAuthorized";
 import { toast } from "react-toastify";
+import "./GameContainer.css";
+
 function GameContainer({ gid, location }) {
   const [js, setJs] = useState();
   const [srcDoc, setSrcDoc] = useState("");
@@ -56,6 +58,7 @@ function GameContainer({ gid, location }) {
 
         `);
   }
+
   useEffect(() => {
     async function checkGameAccess() {
       const gres = await fetch(
@@ -128,6 +131,9 @@ function GameContainer({ gid, location }) {
       setQrSrc
     );
   }, [userid]);
+
+  const [showSteps, setShowSteps] = useState(false);
+
   return loading ? (
     <div> Loading ...</div>
   ) : (
@@ -144,17 +150,72 @@ function GameContainer({ gid, location }) {
         <div className="heading">
           <p>Preview</p>
         </div>
+
         <div className="frame_container">
           <div className="phone">
+            <div
+              className="showStepsScreen"
+              style={{ display: showSteps ? "block" : "none" }}
+            >
+              <div className="innerDiv">
+                <div className="showStepsScreen_header">
+                  <h2>STEPS</h2>
+                </div>
+
+                <div className="showStepsScreen_body">
+                  <span>1. First do this step like this and this and this</span>
+                  <br />
+                  <span>
+                    2. Next do this step by making this go inside this
+                  </span>
+                  <br />
+                  <span>3. Slowly do this step without any hesistation</span>
+                  <br />
+                  <span>
+                    4. Then do this hard step by letting yourself free
+                  </span>
+                  <br />
+                  <span>5. Finally do this step to win the game</span>
+                  <br />
+                </div>
+
+                <div
+                  className="closeStepsIcon"
+                  onClick={() => setShowSteps(false)}
+                >
+                  <img
+                    src="https://ik.imagekit.io/funcboxImages/Group_53_uHdtPJH0t1e.png"
+                    alt="close"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="steps_icon"
+              onClick={() => setShowSteps(true)}
+              style={{ display: !showSteps ? "block" : "none" }}
+            >
+              <div className="click_here_to_view_steps">
+                <span>Click here to view Steps</span>
+              </div>
+
+              <div className="steps_icon_list">
+                <img
+                  width="130px"
+                  src="https://ik.imagekit.io/funcboxImages/Group_52__4__KelIlRFDZ.png"
+                  alt="steps"
+                />
+              </div>
+
+              <img
+                width="24px"
+                src="https://ik.imagekit.io/funcboxImages/Group_51__1__MmDF8JqR_01.png"
+                alt="steps"
+              />
+            </div>
+
             <Frame srcDoc={srcDoc} />
-            {/* <iframe
-                      srcDoc={srcDoc}
-                      title="output"
-                      sandbox="allow-scripts"
-                      frameBorder="0"
-                      width="100%"
-                      height="100%"
-                  /> */}
           </div>
         </div>
         <div className="back_btn">
