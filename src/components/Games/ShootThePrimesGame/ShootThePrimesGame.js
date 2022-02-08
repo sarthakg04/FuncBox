@@ -1,10 +1,9 @@
 import React from "react";
 import GameContainer from "../GameContainer/GameContainer";
-export default function LetsMakeItRain() {
+export default function ShootThePrimesGame() {
   return (
     <div>
-      <GameContainer gid={4} />
+      <GameContainer gid={59} />
     </div>
   );
 }
-
