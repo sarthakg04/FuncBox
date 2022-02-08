@@ -62,14 +62,31 @@ import PawnShop from "./Games/PawnShop/PawnShop";
 import CountDracula from "./Games/CountDracula/CountDracula";
 import ChemistryLab from "./Games/ChemistryLab/ChemistryLab";
 import WeatherGame from "./Games/WeatherGame/WeatherGame";
+<<<<<<< HEAD
+||||||| merged common ancestors
+<<<<<<<<< Temporary merge branch 1
+import BasketballGame from "./Games/BasketballGame/BasketballGame";
+import TemperatureConversions2 from "./Games/TemperatureConversions2/TemperatureConversions2";
+||||||||| 0bb4fde
+=========
+=======
+import BasketballGame from "./Games/BasketballGame/BasketballGame";
+import TemperatureConversions2 from "./Games/TemperatureConversions2/TemperatureConversions2";
+
+>>>>>>> fc88dfcfd86cfc2c2d0504887b0b373d321ca4d5
 import SeizeHerGame from "./Games/SeizeHerGame/SeizeHerGame";
 import CatchMeIfUCanGame from "./Games/CatchMeIfUCanGame/CatchMeIfUCanGame";
 import CheesyGuptaGame from "./Games/CheesyGuptaGame/CheesyGuptaGame";
 import FeedTheCrocsGame from "./Games/FeedTheCrocsGame/FeedTheCrocsGame";
 import LUnitConvGame from "./Games/LUnitConvGame/LUnitConvGame";
+<<<<<<< HEAD
 import BasketballGame from "./Games/BasketballGame/BasketballGame";
 import TemperatureConversions2 from "./Games/TemperatureConversions2/TemperatureConversions2";
 
+||||||| merged common ancestors
+>>>>>>>>> Temporary merge branch 2
+=======
+>>>>>>> fc88dfcfd86cfc2c2d0504887b0b373d321ca4d5
 
 function App() {
   const dispatch = useDispatch();

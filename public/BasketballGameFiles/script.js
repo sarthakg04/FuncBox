@@ -56,12 +56,17 @@ function addBall(){
         <img src="./BasketballGameFiles/assets/ball.png">
         <h1 id="option3" onclick="[getClickedAnswer(this.id),optionClick(this.id),scoreBoard()]"></h1>
     </div>
-</div>`;   
+    </div>`;   
+    document.getElementsByClassName('GamePad')[0].innerHTML+=`<div id="rest2">
+    <img src="./BasketballGameFiles/assets/restart.png" onclick="restart()">`;
+
+    
 }
 
 function displayQuestion(){
     document.getElementsByClassName('GamePad')[0].innerHTML+=`<div id="questionDisp"><h1></h1></div>`;
     document.getElementById('questionDisp').innerHTML=`<h1>${questions[questionIndex]}</h1>`;
+    
 }
 
 function showOptions(){
@@ -72,6 +77,16 @@ function showOptions(){
     document.getElementById("option1").innerText=`${shuffledOptions[0]}`
     document.getElementById("option2").innerText=`${shuffledOptions[1]}`
     document.getElementById("option3").innerText=`${shuffledOptions[2]}`  
+}
+function restart(){
+    questionIndex=0;
+    score=0;
+    fillBackground();
+    setQuestions();
+    addBall();
+    displayQuestion();
+    showOptions();
+    createScore();
 }
 
 var stat=true;
@@ -112,7 +127,11 @@ function nextQuestion(){
         <h1>Game Over</h1>
         <h2>Your Score</h2>
         <h3>${score}</h3>
+        
     </div>`
+    document.getElementsByClassName('GamePad')[0].innerHTML+=`<div id="rest2">
+    <img src="./BasketballGameFiles/assets/restart.png" onclick="restart()">
+</div>`;
     }
 }
 
@@ -142,3 +161,35 @@ function setAnotherQuestion(){
 }
 
 
+
+
+// const ques={
+//     "8+x=16":8,
+//     "2x-8=6":7,
+//     "x-10=0":10,
+//     "4+3x=7":1,
+//     "2x+5=9":2,
+//     "4x-4=16":5,
+//     "9+2x=17":4,
+//     "6+2x=24":9,
+//     "3x-6=3":3,
+//     "3x+5=23":6
+// }
+// var score=0;
+// createGamepad();
+// fillBackground();
+// setQuestions();
+// addBall();
+// displayQuestion();
+// showOptions();
+// createScore();
+// function optionClick(){
+//     if (clickedOption==correctAnsewr){
+//         score+=10;
+//         getCorrectAnswer();
+//     }
+//     else{
+//         getWrongAnswer();
+//     }
+//     setAnotherQuestion();
+// }

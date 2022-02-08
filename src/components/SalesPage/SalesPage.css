@@ -323,20 +323,20 @@
 .purchase_button.green:hover {
   box-shadow: 0 0 10px 5px #36bfa588;
 }
-.school_content{
+.school_content {
   display: flex;
   align-items: center;
-  background-color: #FEF8E7;
+  background-color: #fef8e7;
   margin: 0 5% 50px 5%;
   border-radius: 25px;
   height: fit-content;
 }
-.heading{
-  font-size: 2rem;
-  font-weight: 200;
+.heading {
+  font-size: 2.5rem;
+  font-weight: 500;
 }
 
-.school_content img{
+.school_content img {
   /* max-width: 50%; */
   /* height: 100%; */
   clip-path: circle(100% at 20% 50%);
@@ -344,66 +344,71 @@
   object-fit: contain;
   /* border-top-right-radius: 35%; */
 }
-.contentt{
+.contentt {
   /* padding: 5%; */
   font-size: 1.2rem;
   font-weight: 500;
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
 
+||||||| merged common ancestors
+  
+=======
+>>>>>>> fc88dfcfd86cfc2c2d0504887b0b373d321ca4d5
 }
-.contentt a{
+.contentt a {
   margin-top: 15%;
   font-size: 1rem;
   color: rgb(0, 173, 216);
   font-weight: 600;
   padding-left: 5%;
 }
-.contentt p{
-  padding:0 5%;
+.contentt p {
+  padding: 0 5%;
 }
-@media (max-width: 1099px){
-  .school_content img{
+@media (max-width: 1099px) {
+  .school_content img {
     width: 55%;
   }
-  .contentt p{
+  .contentt p {
     padding-top: 1%;
     font-size: 1rem;
   }
-  .contentt a{
+  .contentt a {
     margin-top: 5%;
   }
 }
-@media (max-width: 719px){
-  .school_content img{
+@media (max-width: 719px) {
+  .school_content img {
     width: 50%;
   }
-  .contentt p{
+  .contentt p {
     font-size: 0.8rem;
   }
-  .contentt a{
+  .contentt a {
     margin-top: 5%;
     font-size: 0.8rem;
   }
 }
-@media (max-width: 575px){
-  .school_content{
+@media (max-width: 575px) {
+  .school_content {
     flex-direction: column;
   }
-  .school_content img{
+  .school_content img {
     width: 100%;
     clip-path: none;
     border-radius: 25px 25px 0 0;
   }
-  .contentt p{
+  .contentt p {
     font-size: 0.9rem;
   }
-  .contentt a{
+  .contentt a {
     margin-top: 2%;
     font-size: 0.9rem;
     text-align: center;
   }
-  .heading{
+  .heading {
     font-size: 1.5rem;
   }
 }
@@ -442,8 +447,6 @@
     margin-left: 10px;
   }
 } */
-
-
 
 @media (max-width: 1100px) {
   .salesPage__main .prices {
@@ -558,7 +561,7 @@
     margin-top: -3%;
   }
 
-  .salesPage__main .for__school  {
+  .salesPage__main .for__school {
     margin: 32px auto;
   }
 

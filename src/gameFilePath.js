@@ -39,11 +39,26 @@ module.exports = {
     48: "ChemistryLabGameFiles",
     49: "WeatherGameFiles",
     50: "BasketballGameFiles",
+<<<<<<< HEAD
+||||||| merged common ancestors
+    58: "TemperatureConversionFiles2",
+||||||||| 0bb4fde
+    49: "WeatherGameFiles"
+=========
+    49: "WeatherGameFiles",
+=======
+    58: "TemperatureConversionFiles2",
+>>>>>>> fc88dfcfd86cfc2c2d0504887b0b373d321ca4d5
     51: "SeizeHerGameFiles",
     52: "CatchMeIfUCanGameFiles",
     53: "FeedTheCrocsGameFiles",
     54: "CheesyGuptaGameFiles",
     55: "LUnitConvGame",
+<<<<<<< HEAD
     58: "TemperatureConversionFiles2",
+||||||| merged common ancestors
+>>>>>>>>> Temporary merge branch 2
+=======
+>>>>>>> fc88dfcfd86cfc2c2d0504887b0b373d321ca4d5
   },
 };

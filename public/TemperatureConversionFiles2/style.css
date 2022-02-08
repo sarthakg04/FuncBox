@@ -92,3 +92,11 @@ select{
   top: 405px;
   text-align: center;
 }
+#rest2 img{
+  width: 45px;
+  text-align: center;
+  position: relative;
+  left: 15px;
+  bottom: 40px;
+  cursor: pointer;
+}

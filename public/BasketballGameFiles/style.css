@@ -22,7 +22,7 @@ body {
   background-position: center;
   background-size: cover;
   position: relative;
-  border : 1px solid black;
+  /* border : 1px solid black; */
   overflow: hidden;
   /* background: red; */
 }
@@ -55,7 +55,7 @@ body {
 #questionDisp{
     text-align: center;
     position: relative;
-    bottom: 125px;
+    bottom: 160px;
 }
 .ballOptions{
     width: 400px;
@@ -99,7 +99,7 @@ body {
 }
 #answerBall img{
     position: relative;
-    bottom: 135px;
+    bottom: 170px;
     width: 120px;
 }
 #answerBall h1{
@@ -118,4 +118,29 @@ body {
 }
 .gameOver h3{
     font-size: 100px;
+}
+/* #rest img{
+    width: 40px;
+    position: relative;
+    left: 15px;
+    bottom: 200px;
+} */
+#rest1 img{
+    width: 75px;
+    text-align: center;
+    position: relative;
+    left: 160px;
+    top: 35px;
+    cursor: pointer;
+    /* position: relative;
+    left: 15px;
+    bottom: 200px; */
+}
+#rest2 img{
+    width: 35px;
+    text-align: center;
+    position: relative;
+    left: 15px;
+    bottom: 160px;
+    cursor: pointer;
 }
