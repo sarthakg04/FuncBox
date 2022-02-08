@@ -193,7 +193,7 @@ function App() {
           <Route exact path="/CheesyGuptaGame" component={CheesyGuptaGame} />
           <Route exact path="/FeedTheCrocsGame" component={FeedTheCrocsGame} />
           <Route exact path="/LUnitConvGame" component={LUnitConvGame} />
-          <Route exact path="/ShootThePrimesGame" component={ShootThePrimesGame} />
+          <Route exact path="/ShootThePrimeGame" component={ShootThePrimesGame} />
           <Route exact path="/DeciChemistGame" component={DeciChemistGame} />
           <Route exact path="/RecPatternGame" component={RecognisePatternGame} />
 

@@ -1,6 +1,6 @@
 /*
   //default range is 1 to 100
-  setRange(100, 200);  
+  setRange(100, 200);
 
   createBackground();
   createJokers();
@@ -9,12 +9,12 @@
   createSubmitButton();
 
   // default value is 30
-  createTimer(40);  
+  createTimer(40);
 
   // check if a number is prime or not
   function isPrime(num) {
     for (var i = 2; i < num / 2; i++) {
-      if (num % i === 0) 
+      if (num % i === 0)
         return false;
     }
     return true;
@@ -118,7 +118,7 @@ function viewResults() {
         <div class="oops">OOPS!!!</div>
         <div class="wrong">You clicked ${wrongAnswers} wrong !</div>
         <div class="missed">You missed ${missedAnswers} primes !</div>
-        
+
         <div class="ResultDiv">
             <img src="./ShootThePrimesGameFiles/assets/Result.png" alt="" width="350px" />
         </div>
@@ -209,7 +209,7 @@ var range = [NaN, NaN];
 function setRange(val1, val2){
     if(val1 > val2)
      [val1, val2] = [val2, val1];
-      
+
     range[0] = val1 || 1;
     range[1] = val2 || 100;
 }
