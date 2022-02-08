@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+
+.steps_icon{
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    cursor: pointer;
+}
+
+.steps_icon_list{
+    position: absolute;
+    display: none;
+    right: 0px;
+    top: 0px;
+}
+
+
+.click_here_to_view_steps{
+    display: none;
+    position: absolute;
+    font-size: 11.8px;
+    width: 120px;
+    top: 6px;
+    right: 9px;
+    z-index: 1;
+}
+
+.steps_icon:hover .steps_icon_list, .steps_icon:hover .click_here_to_view_steps{  
+    display: block;
+}
+
+
+.showStepsScreen{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    width: 100%;
+    height: 115%;
+}
+
+.innerDiv{
+    font-family: 'Montserrat';  
+    background-color: #d3d3d3f3;
+    opacity: 90%;
+    padding: 20px !important;
+    margin: 70px 10% !important;
+    min-height: 70%;
+    border-radius: 15px;
+    box-shadow: #3b3535 0px 0px 20px;
+}
+
+.showStepsScreen_header{
+    font-size: 24px;
+    margin-bottom: 20px !important;
+    text-align: center;
+}
+
+.showStepsScreen_body > span{
+    font-size: 20px;
+}
+
+.closeStepsIcon{
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    margin: 30px auto !important;
+}

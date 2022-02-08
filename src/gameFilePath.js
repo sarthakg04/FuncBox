@@ -44,5 +44,8 @@ module.exports = {
     54: "CheesyGuptaGameFiles",
     55: "LUnitConvGame",
     59: "ShootThePrimesGameFiles",
+    60: "DeciChemistGameFiles",
+
   },
+
 };

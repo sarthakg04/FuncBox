@@ -181,3 +181,28 @@
   color: #0057FF;
   z-index: 1;
 }
+
+.submitButton{
+  top: 440px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  color: #ffffff;
+  letter-spacing: 1.4px;
+  background-color: #03276e;
+  border-radius: 10px;
+  border: 2px solid white;
+  padding: 5px 10px;
+  z-index: 1;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submitButton:active{
+  background-color: #020755;
+  top: 438px;
+}
+
+.submitButton:hover{
+  background-color: #041f57;
+}

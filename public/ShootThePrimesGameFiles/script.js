@@ -1,24 +1,24 @@
 /*
-    createBackground();
-    //default range is 1 to 100
-    setRange(500, 1000)  
+  //default range is 1 to 100
+  setRange(100, 200);
 
-    createBackground();
-    createJokers();
-    generateBoxes();
-    generateRandomPrimes();
+  createBackground();
+  createJokers();
+  generateBoxes();
+  generateRandomPrimes();
+  createSubmitButton();
 
-    // default value is 30
-    createTimer(40);  
+  // default value is 30
+  createTimer(40);
 
-    // check if a number is prime or not
-    function isPrime(num) {
+  // check if a number is prime or not
+  function isPrime(num) {
     for (var i = 2; i < num / 2; i++) {
-        if (num % i === 0) 
+      if (num % i === 0)
         return false;
     }
     return true;
-    }
+  }
 */
 
 Phonex = document.createElement("div");
@@ -42,6 +42,13 @@ function createJokers() {
         </div>
         `;
 }
+
+function createSubmitButton(){
+  Phonex.innerHTML += `
+    <div class="submitButton" onClick="viewResults()">Submit</div>
+    `;
+}
+
 
 function generateBoxes() {
   // console.log("generateBoxes");
@@ -97,6 +104,8 @@ var missedAnswers = 0;
 
 function viewResults() {
   document.querySelector(".Jokers").style.display = "none";
+  document.querySelector(".submitButton").style.display = "none";
+
   // prime number missed
   for (let i = 0; i < primeNumbers.length; i++)
     if (correctShots.includes(primeNumbers[i]) === false) missedAnswers++;
@@ -109,7 +118,7 @@ function viewResults() {
         <div class="oops">OOPS!!!</div>
         <div class="wrong">You clicked ${wrongAnswers} wrong !</div>
         <div class="missed">You missed ${missedAnswers} primes !</div>
-        
+
         <div class="ResultDiv">
             <img src="./ShootThePrimesGameFiles/assets/Result.png" alt="" width="350px" />
         </div>
@@ -132,6 +141,7 @@ function viewResults() {
 
 function allCorrect() {
   document.querySelector(".Jokers").style.display = "none";
+  document.querySelector(".submitButton").style.display = "none";
   Phonex.innerHTML += `
         <div class="results">RESULTS</div>
         <div class="congrats">CONGRATS!</div>
@@ -197,22 +207,18 @@ function checkPrime(idx) {
 var range = [NaN, NaN];
 
 function setRange(val1, val2){
-    if(val1 > val2){
-        range[0] = val2;
-        range[1] = val1;
-    }
-    else{
+    if(val1 > val2)
+     [val1, val2] = [val2, val1];
+
     range[0] = val1 || 1;
     range[1] = val2 || 100;
 }
 
-    
-}
 
 function generateRandomPrimes() {
   for (let i = 0; i < 4; i++) allNumbers.push(getRandomPrime(range));
   for (let j = 0; j < 5; j++)
-    allNumbers.push(Math.floor(Math.random() * 200) + 1);
+    allNumbers.push(Math.floor((Math.random() * (range[1]-range[0])) +range[0]));
 
   allNumbers = shuffleArray(allNumbers);
 

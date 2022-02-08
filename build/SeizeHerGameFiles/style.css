@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+.GamePad {
+  width: 400px;
+  height: 535px;
+  margin: auto;
+  position: relative;
+  padding-top: 1px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* #game_page{
+  position: relative;
+} */
+
+.ceiling{
+  position: absolute;
+  width: 100%;
+  /* height: 120px; */
+  /* left: 0px;
+  top: 0px; */
+}
+
+.wall{
+  position: absolute;
+  /* left: 0px; */
+  top: 77px;
+  width: 100%;
+  /* height: 331px; */
+}
+
+.pillar{
+  position: absolute;
+  width: 100%;
+  /* left: 0px; */
+  top: 60px;
+}
+
+#heart1, #heart2, #heart3{
+  position: absolute;
+  width: 35px;
+  height: 34px;
+  top: 110px;
+}
+
+#heart1{
+  left: 110px;
+}
+
+#heart2{
+  left: 185px;
+}
+
+#heart3{
+  left: 260px;
+}
+
+.female{
+  position: absolute;
+  width: 54px;
+  height: 131px;
+  left: 175px;
+  top: 168px;
+}
+
+.jail{
+  position: absolute;
+  width: 233px;
+  height: 148px;
+  left: 83px;
+  top: 152px;
+}
+
+.floor{
+  position: absolute;
+  width: 100%;
+  /* height: 397px; */
+  left: 0px;
+  top: 300px;
+}
+
+.sad_ceaser{
+  position: absolute;
+  width: 86px;
+  height: 189px;
+  left: 5px;
+  top: 205px;
+}
+
+.question{
+  position: absolute;
+  width: 165px;
+  height: 83px;
+  left: 118px;
+  top: 330px;
+  background: #562A11;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option1, .option2, .option3, .option4{
+  position: absolute;
+  width: 88px;
+  height: 44px;
+  background: #562A11;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option1{
+  left: 35px;
+  top: 420px;
+}
+
+.option2{
+  left: 283px;
+  top: 420px;
+}
+
+.option3{
+  left: 35px;
+  top: 478px;
+}
+
+.option4{
+  left: 283px;
+  top: 478px;
+}
+
+#opt1, #opt2, #opt3, #opt4{
+  cursor: pointer;
+}
+
+.qtext{
+  font-family: Slackey;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 44px;
+  /* line-height: 10px; */
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.atext{
+  font-family: Slackey;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+#wrongAns, #rightAns{
+  display: none;
+}
+
+.wrong, .right{
+  position: absolute;
+  width: 340px;
+  height: 330px;
+  left: 30px;
+  top: 135px;
+}
+
+.lost_text, .won_text{
+  position: absolute;
+  width: 428px;
+  height: 104px;
+  left: -12px;
+  top: 200px;
+
+  font-family: Slackey;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 91px;
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+.retry_wrong, .retry_right{
+  position: absolute;
+  width: 150px;
+  height: 60px;
+  left: 125px;
+  top: 350px;
+}
+
