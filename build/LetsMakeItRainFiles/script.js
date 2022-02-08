@@ -71,7 +71,7 @@ function createDropPath(){
 //     drawDropPath()
 // }
 function setDrop(){
-
+    
     drop_grid_squares = Array.from(document.querySelectorAll('.drop_grid div'))
     drop_grid_squares[current_drop_position].classList.add('drop_bg')
 }
@@ -282,7 +282,7 @@ function checkTemp(){
     temperature.classList.add(className)
 
     if(temperature.classList.contains('temp_100') || rays_caught >= 20 ){
-
+        
         temperature.classList.add('temp_100')
         var sun = document.querySelector('.sun')
         sun.classList.remove('sun')

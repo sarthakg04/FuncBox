@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Squada One', cursive;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.GamePad {
+  width: 400px;
+  height: 535px;
+  /* border: solid black 1px; */
+  margin: auto;
+  position: relative;
+  padding-top: 1px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  border : 1px solid black;
+  overflow: hidden;
+  /* background: red; */
+}
+.unit img{
+  width: 50%;
+  position: relative;
+  top: 25px;
+}
+.content{
+  position: relative;
+  bottom: 125px;
+  width: 155px;
+  left: 20px;
+  text-align: center;
+}
+select{
+  border: none;
+  font-size: 23px;
+  background: none;
+  font-weight: 700;
+}
+.inputValue{
+  width: 155px;
+  text-align: center;
+  position: relative;
+  top: 35px;
+  left: 10px;
+}
+.inputValue h4{
+  color: white;
+  margin-bottom: 10px;
+}
+.inputValue input{
+  width: 60%;
+  border-radius: 5px;
+  border: none;
+  height: 35px;
+  font-size: 25px;
+  text-align: center;
+}
+.btn button{
+  background-color: #FFAC4A;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 15px;
+  color: white;
+  font-size: 25px;
+  position: relative;
+  top: 125px;
+  text-align: center;
+  margin: auto;
+  left: 130px;
+}
+.ansUpper{
+  width: 150px;
+  color: white;
+  position: relative;
+  left: 24px;
+  top: 146px;
+  text-align: center;
+}
+.ansLower{
+  width: 150px;
+  color: white;
+  position: relative;
+  left: 24px;
+  top: 405px;
+  text-align: center;
+}
+#rest2 img{
+  width: 45px;
+  text-align: center;
+  position: relative;
+  left: 15px;
+  bottom: 40px;
+  cursor: pointer;
+}

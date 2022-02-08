@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Rancho', cursive;
+}
+
+.Phonex {
+  background-color: #ffc6a8;
+  margin: 0;
+  padding: 0;
+}
+
+.Phonex > div {
+  position: absolute;
+}
+
+.Background {
+  top: 0;
+  left: 0;
+}
+
+.Jokers {
+  top: 100px;
+  left: 40px;
+}
+
+.box {
+  font-size: 20px;
+  text-align: center;
+  line-height: 22px;
+  background-color: #ff9595;
+  height: 22px;
+  width: 36px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.timer{
+  font-size: 18px;
+  color: #FF0000;
+  right: 10px;
+  top: 22px;
+}
+
+.playAgain{
+  font-size: 22px;
+  color: #fafafa;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff0000;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+
+.one{
+    left: 103px;
+    top: 254px;
+}
+
+.two {
+  left: 151px;
+  top: 250px;
+}
+
+.three{
+    left: 202px;
+    top: 254px;
+}
+
+.four{
+    left: 250px;
+    top: 250px;
+}
+
+
+.five{
+  left: 83px;
+  top: 300px;
+}
+
+.six{
+  left: 132px;
+  top: 296px;
+}
+
+.seven{
+  left: 182px;
+  top: 300px;
+}
+
+.eight{
+  left: 230px;
+  top: 296px;
+}
+
+.nine{
+  left: 275px;
+  top: 300px;
+}
+
+
+.ResultDiv{
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.celebration{
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.results{
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 60px;
+}
+
+.congrats, .oops{
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 45px;
+  z-index: 1;
+}
+
+.correct{
+  color: #2EFF0C;
+}
+
+.oops{
+  color:#FFF500;
+
+}
+
+.all_correct, .wrong, .missed{
+  top: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #0057FF;
+  font-size: 30px;
+  z-index: 1;
+  width: max-content;
+}
+
+.missed{
+  top: 160px;
+}
+
+.prime, .nonprime{
+  top: 250px;
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+}
+.prime{
+  left: 80px;
+}
+.nonprime{
+  left: 220px;
+}
+.prime > p, .nonprime > p{
+  font-size: 22px;
+  color: white;
+}
+
+.timeTaken{
+  top: 444px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  color: #0057FF;
+  z-index: 1;
+}
+
+.submitButton{
+  top: 440px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  color: #ffffff;
+  letter-spacing: 1.4px;
+  background-color: #03276e;
+  border-radius: 10px;
+  border: 2px solid white;
+  padding: 5px 10px;
+  z-index: 1;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submitButton:active{
+  background-color: #020755;
+  top: 438px;
+}
+
+.submitButton:hover{
+  background-color: #041f57;
+}
