@@ -45,7 +45,8 @@ module.exports = {
     55: "LUnitConvGame",
     59: "ShootThePrimesGameFiles",
     60: "DeciChemistGameFiles",
-      
+    61: "RecognisePatternGameFiles",
+
   },
 
 };

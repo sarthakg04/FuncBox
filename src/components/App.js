@@ -66,11 +66,9 @@ import CatchMeIfUCanGame from "./Games/CatchMeIfUCanGame/CatchMeIfUCanGame";
 import CheesyGuptaGame from "./Games/CheesyGuptaGame/CheesyGuptaGame";
 import FeedTheCrocsGame from "./Games/FeedTheCrocsGame/FeedTheCrocsGame";
 import LUnitConvGame from "./Games/LUnitConvGame/LUnitConvGame";
-
 import DeciChemistGame from "./Games/DeciChemistGame/DeciChemistGame";
-
 import ShootThePrimesGame from "./Games/ShootThePrimesGame/ShootThePrimesGame";
-
+import RecognisePatternGame from "./Games/RecognisePatternGame/RecognisePatternGame";
 
 function App() {
   const dispatch = useDispatch();
@@ -132,7 +130,7 @@ function App() {
           autoClose={2000}
         />
         <Switch>
-          
+
 
           <Route exact path="/AngryBirds" component={AngryBirds} />
           <Route exact path="/MissionMars" component={MissionMars} />
@@ -191,6 +189,12 @@ function App() {
           <Route exact path="/LUnitConvGame" component={LUnitConvGame} />
           <Route exact path="/ShootThePrimesGame" component={ShootThePrimesGame} />
           <Route exact path="/DeciChemistGame" component={DeciChemistGame} />
+          <Route exact path="/RecPatternGame" component={RecognisePatternGame} />
+
+
+
+
+
 					<Route exact path="/UserNavbar" component={UserNavbar} />
 					<Route exact path="/Login" component={Login} />
 					<Route exact path="/Signup" component={Signup} />
