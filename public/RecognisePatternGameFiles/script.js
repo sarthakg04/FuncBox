@@ -54,6 +54,7 @@ function getResult(){
         <img src="./RecognisePatternGameFiles/assets/sadrabbit.png" class="wrong_popup">
         <div id="sequence1"></div>
         <div id="explanation1">Multiples of</div>
+        <a><img src="./RecognisePatternGameFiles/assets/retry.png" class="retry_wrong" onclick="restart()"></a>
     </div>
 
     <div id="right_disp">
@@ -61,6 +62,7 @@ function getResult(){
         <img src="./RecognisePatternGameFiles/assets/happyrabbit.png" class="right_popup">
         <div id="sequence2"></div>
         <div id="explanation2">Multiples of</div>
+        <a><img src="./RecognisePatternGameFiles/assets/retry.png" class="retry_right" onclick="restart()"></a>
     </div>
     `
     getAnswer();
@@ -124,5 +126,9 @@ function wrongAns(){
     wrongdisp.style.display = "block";
     sequence1.innerHTML = difference+", "+difference*2+", "+difference*3+", "+difference*4+", "+difference*5+", "+difference*6;
     explanation1.innerHTML+= " "+difference;
+}
+
+function restart(){
+    window.location.reload();
 }
 
