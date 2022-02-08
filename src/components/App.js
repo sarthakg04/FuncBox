@@ -189,7 +189,7 @@ function App() {
           <Route exact path="/LUnitConvGame" component={LUnitConvGame} />
           <Route exact path="/ShootThePrimesGame" component={ShootThePrimesGame} />
           <Route exact path="/DeciChemistGame" component={DeciChemistGame} />
-          <Route exact path="/RecognisePatternGame" component={RecognisePatternGame} />
+          <Route exact path="/RecPatternGame" component={RecognisePatternGame} />
 
 
 
