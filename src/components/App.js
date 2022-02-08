@@ -18,6 +18,7 @@ import ClockGame from "../components/Games/ClockGame/ClockGame";
 import AlienGame from "../components/Games/AlienGame/AlienGame";
 import CardGame from "../components/Games/CardGame/cardGame";
 import TemperatureConversions from "../components/Games/TemperatureConversions/TemperatureConversions";
+// import TemperatureConversions2 from "../components/Games/TemperatureConversions2/TemperatureConversions2";
 import PollutoFree from "../components/Games/PollutoFree/PollutoFree";
 import LandingPage from "./LandingPage/LandingPage";
 import AboutPage from "./AboutPage/AboutPage";
@@ -66,11 +67,11 @@ import CatchMeIfUCanGame from "./Games/CatchMeIfUCanGame/CatchMeIfUCanGame";
 import CheesyGuptaGame from "./Games/CheesyGuptaGame/CheesyGuptaGame";
 import FeedTheCrocsGame from "./Games/FeedTheCrocsGame/FeedTheCrocsGame";
 import LUnitConvGame from "./Games/LUnitConvGame/LUnitConvGame";
-
 import DeciChemistGame from "./Games/DeciChemistGame/DeciChemistGame";
-
 import ShootThePrimesGame from "./Games/ShootThePrimesGame/ShootThePrimesGame";
-
+import RecognisePatternGame from "./Games/RecognisePatternGame/RecognisePatternGame";
+import BasketballGame from "./Games/BasketballGame/BasketballGame";
+import TemperatureConversions2 from "./Games/TemperatureConversions2/TemperatureConversions2";
 
 function App() {
   const dispatch = useDispatch();
@@ -132,7 +133,7 @@ function App() {
           autoClose={2000}
         />
         <Switch>
-          
+
 
           <Route exact path="/AngryBirds" component={AngryBirds} />
           <Route exact path="/MissionMars" component={MissionMars} />
@@ -152,6 +153,9 @@ function App() {
           <Route exact path="/CashierGame" component={CashierGame} />
           <Route exact path="/MeltTheIce" component={MeltTheIce} />
           <Route exact path="/mrfraction" component={Mrfraction} />
+          <Route exact path="/BasketballGame" component={BasketballGame} />
+          <Route exact path="/TempConvGame" component={TemperatureConversions2} />
+
           <Route
             exact
             path="/TemperatureConversions"
@@ -191,6 +195,12 @@ function App() {
           <Route exact path="/LUnitConvGame" component={LUnitConvGame} />
           <Route exact path="/ShootThePrimesGame" component={ShootThePrimesGame} />
           <Route exact path="/DeciChemistGame" component={DeciChemistGame} />
+          <Route exact path="/RecPatternGame" component={RecognisePatternGame} />
+
+
+
+
+
 					<Route exact path="/UserNavbar" component={UserNavbar} />
 					<Route exact path="/Login" component={Login} />
 					<Route exact path="/Signup" component={Signup} />
