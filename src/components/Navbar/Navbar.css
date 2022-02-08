@@ -275,7 +275,7 @@
 	}
 	.navigation .logo {
 		/* width: 100px !important; */
-		height: 98% !important;
+		height: auto !important;
 	}
 
 	.navigation .home_image {
