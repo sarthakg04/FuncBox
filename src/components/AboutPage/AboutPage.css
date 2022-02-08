@@ -1,80 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,500;1,600;1,700&display=swap");
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-.aboutPage__main .howWeWork {
-  text-align: center;
-  margin: 32px;
-}
-
-.aboutPage__main .hero__section .about_main_container{
+.aboutPage__main .hero__section .about_main_container {
   display: flex;
   align-items: center;
 }
 
-.about_container1{
+.about_container1 {
   position: relative;
-  margin-top: 3vh;
 }
 
-.yellowbg{
+.yellowbg {
   width: 50vw;
-  height: 87vh;
+  height: 60vh;
   left: 0;
   top: 0;
+  min-height: 500px;
 }
 
-.phoneimg{
+.phoneimg {
   position: absolute;
-  left: 7vw;
-  top: 16vh;
-  width: 85%;
-  height: 90%;
+  left: 10%;
+  top: 50%;
+  width: 80%;
+  max-width: 575px;
+  transform: translateY(-40%);
 }
 
-.about_container2{
+.about_container2 {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-right: 3vw;
   text-align: center;
   width: 50vw;
 }
 
-.about_container2 h1{
+.about_container2 h1 {
   margin-bottom: 20px;
   font-size: 50px;
   font-weight: 500;
 }
 
-.about_container2 p{
+.about_container2 p {
   font-size: 1.2vw;
   width: 28vw;
   font-weight: 4200;
   line-height: 26px;
 }
 
-.aboutPage__main .howWeWork h1 {
-  font-weight: 400;
-
-  font-size: 50px;
-  line-height: 98px;
-}
-
-.aboutPage__main .roadMap {
-  margin: 32px;
-  text-align: center;
-}
-
-.aboutPage__main .roadMap img {
-  width: 75%;
-  margin: auto;
-}
 
 .aboutPage__main .faqs {
   margin: 64px;
@@ -85,6 +65,7 @@
 
 .aboutPage__main .faq {
   margin-bottom: 32px;
+  cursor: pointer;
 }
 
 .aboutPage__main .faqs .faq__heading {
@@ -114,27 +95,32 @@
   transition: 0.5s;
 }
 
+.question h5 {
+  color: rgb(66, 66, 66);
+}
+
 .answer {
   max-height: 0;
   overflow: hidden;
   transition: 0.5s;
+  color: rgb(3, 6, 143);
 }
 
 @media (max-width: 1300px) {
-  .phoneimg{
+  .phoneimg {
     width: 90%;
     height: 90%;
     left: 5vw;
   }
 
-  .about_container2 p{
+  .about_container2 p {
     font-size: 1.2rem;
     width: 40vw;
   }
 }
 
 @media (max-width: 1170px) {
-  .phoneimg{
+  .phoneimg {
     height: 85%;
     left: 1vw;
     width: 100%;
@@ -142,33 +128,33 @@
 }
 
 @media (max-width: 990px) {
-  .phoneimg{
+  .phoneimg {
     height: 80%;
   }
 }
 
 @media (max-width: 940px) {
-  .phoneimg{
+  .phoneimg {
     height: 75%;
-    top: 20vh;
+    top: 50%;
   }
 }
 
-@media (max-width: 885px){
-  .phoneimg{
+@media (max-width: 885px) {
+  .phoneimg {
     height: 70%;
   }
 
-  .about_container2 p{
+  .about_container2 p {
     font-size: 1.2rem;
     width: 38vw;
   }
 }
 
 @media (max-width: 810px) {
-  .phoneimg{
+  .phoneimg {
     height: 65%;
-    top: 22vh;
+    top: 50%;
   }
 }
 
@@ -177,17 +163,51 @@
     width: 95%;
   }
 
-  .phoneimg{
-    height: 60%;
-    top: 24vh;
+  .aboutPage__main .hero__section .about_main_container {
+    flex-direction: column;
+  }
+  .yellowbg {
+    margin-left: -50vw;
+    width: 70vw;
+    margin-bottom: 32px;
   }
 
-  .about_container2 h1{
+  .phoneimg {
+    width: 95vw;
+    height: auto;
+    top: 50%;
+    left: 0;
+    margin-left: -30vw;
+  }
+
+  .about_container2 {
+    width: 75%;
+  }
+
+  .about_container2 h1 {
     font-size: 40px;
+  }
+
+  .about_container2 p {
+    width: 75%;
   }
 }
 
-@media (max-width: 710px) {
+@media (max-width: 500px) {
+  .yellowbg {
+    min-height: 400px;
+    height: 40vh;
+  }
+  .about_container2 {
+    width: 95%;
+  }
+
+  .about_container2 p {
+    width: 95%;
+  }
+}
+
+/* @media (max-width: 710px) {
   .phoneimg{
     height: 55%;
     top: 26vh;
@@ -202,19 +222,14 @@
 }
 
 @media (max-width: 600px) {
-  .aboutPage__main .hero__section .about_main_container{
-    flex-direction: column;
-  }
 
-  .yellowbg{
-    margin-left: -50vw;
-    width: 50vw;
-  }
+
+
 
   .phoneimg{
     width: 100vw;
     height: 100vw;
-    margin-left: -50vw;
+
     top: 7vh;
   }
 
@@ -250,10 +265,8 @@
     height: 80vw;
     left: 7vw;
   }
-  
-  .aboutPage__main .howWeWork h1 {
-    font-size: 40px;
-  }
+
+
   .aboutPage__main .faqs {
     margin: 64px 16px;
   }
@@ -308,4 +321,4 @@
   .phoneimg{
     top: 10vh;
   }
-}
+} */

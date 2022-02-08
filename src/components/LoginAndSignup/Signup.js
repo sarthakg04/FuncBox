@@ -21,14 +21,12 @@ import { parse } from "qs";
 import { useDispatch, useSelector } from "react-redux";
 import { setAuth, setToken, setUser, setProfile } from "../../auth/authslice";
 import { toast } from "react-toastify";
-import ReCAPTCHA from "react-google-recaptcha"
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Signup() {
-
   const dispatch = useDispatch();
   const history = useHistory();
   const apiurl = process.env.REACT_APP_API_URL;
-
 
   const initialState = {
     email: "",
@@ -40,7 +38,7 @@ export default function Signup() {
   };
 
   const [details, setDetails] = useState(initialState);
-  const [rToken , setRToken] = useState('');
+  const [rToken, setRToken] = useState("");
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -51,11 +49,19 @@ export default function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(!rToken){
-        toast.error("Please Fill the Captcha");
-        return;
+    if (!rToken) {
+      toast.error("Please Fill the Captcha");
+      return;
     }
-    const body = { email, fName, lName, standard, password, confirmPassword , rtoken : rToken };
+    const body = {
+      email,
+      fName,
+      lName,
+      standard,
+      password,
+      confirmPassword,
+      rtoken: rToken,
+    };
     const response = await fetch(
       `${
         process.env.NODE_ENV === "development"
@@ -154,7 +160,13 @@ export default function Signup() {
                 type="number"
                 name="standard"
                 placeholder="Standard"
-                onChange={handleChange}
+                defaultValue={1}
+                onChange={(e) => {
+                  if (e.target.value > 0) {
+                    if (e.target.value <= 8) handleChange();
+                    else e.target.value = 8;
+                  } else e.target.value = 1;
+                }}
               />
               <input
                 type="password"
@@ -169,11 +181,10 @@ export default function Signup() {
                 onChange={handleChange}
               />
 
-            <ReCAPTCHA
-              sitekey = "6LdB4hYeAAAAAN9RXvC4FoUTJwOO2ckpwI4vLd5l"
-              onChange = {rtoken => setRToken(rtoken)}
-              onExpired = {e => setRToken("")}
-
+              <ReCAPTCHA
+                sitekey="6LdB4hYeAAAAAN9RXvC4FoUTJwOO2ckpwI4vLd5l"
+                onChange={(rtoken) => setRToken(rtoken)}
+                onExpired={(e) => setRToken("")}
               />
               <button type="submit" name="button" className="submit">
                 Sign Up

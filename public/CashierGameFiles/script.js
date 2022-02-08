@@ -56,6 +56,7 @@ function createGamePad() {
         <div class="item"></div>
         <div class="recieved"></div>
         <div class="money"></div>
+        <div class="message">Amount to be given back:</div>
         <div class="amount_added">₹0</div>
     `
     Phone.appendChild(GamePad)

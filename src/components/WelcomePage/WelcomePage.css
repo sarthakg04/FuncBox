@@ -42,26 +42,34 @@
   flex-direction: column;
   place-items: center;
   position: relative;
-  font-size: 40px;
   font-family: "Montserrat", sans-serif;
 }
 .avatar_bg {
   background-color: #b4d1c4;
   border-radius: 50%;
   padding: 25px;
-  aspect-ratio: 1;
   text-align: center;
+  z-index: 2;
 }
 .avatar_img {
+  position: absolute;
   width: 200px;
+  left: 5rem;
+  top: -6rem;
+}
+
+.welcome__username{
+  position: relative;
+  color: aliceblue;
+  font-size: 40px;
+  left: 4rem;
+  top: 5rem;
 }
 .overlay {
   position: absolute;
-
-  top: 50%;
-  left: 50%;
+  top: 30%;
+  left: 70%;
   transform: translate(-50%, -50%);
-  z-index: 20;
 }
 .background {
   position: absolute;
@@ -83,7 +91,6 @@
 .ipad_screen {
   width: 88%;
   height: 82%;
-
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -153,6 +160,8 @@
 }
 
 #small_screen_msg {
+  position: absolute;
+  top: -15rem;
   display: none;
   font-size: 20px;
   color: red;
@@ -160,6 +169,8 @@
   text-align: center;
   z-index: 50;
 }
+
+
 @media screen and (max-width: 1100px) {
   .ipad_container {
     display: none;
@@ -169,5 +180,39 @@
   }
   #small_screen_msg {
     display: unset;
+  }
+  .overlay{
+   width: 400px;
+  height: 400px;
+  left: 10rem;
+  }
+  .welcome__username{
+    left: 2rem;
+    top: 3rem;
+  }
+  .avatar_img {
+    position: absolute;
+    width: 180px;
+    left: 4rem;
+    top: -6rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .overlay{
+   width: 300px;
+  height: 300px;
+  left: 8rem;
+  }
+  .welcome__username{
+    left: 2rem;
+    top: 3rem;
+    font-size: 30px;
+  }
+  .avatar_img {
+    position: absolute;
+    width: 150px;
+    left: 3rem;
+    top: -4rem;
   }
 }
