@@ -15,7 +15,7 @@
 //     celsius=((inputData - 32) * 5 / 9);
 //     kelvin=(celsius)+273;
 //     showFahrenheitResult()
-
+//
 //   }
 //   else if(selectedOption=="kelvin"){
 //     celsius=inputData-273;
@@ -34,7 +34,7 @@ function createGamepad() {
 
 function fillBackground(){
   document.getElementsByClassName('GamePad')[0].style.backgroundImage =  "url('./TemperatureConversionFiles2/assets/celsius.png')";
-  
+
 }
 
 function createUnit(){
@@ -119,57 +119,6 @@ function cha(){
 
 
 
-<<<<<<< HEAD
-createGamepad();
-fillBackground();
-createUnit();
-createInputBox();
-createButton();
-function convertTemp(){
-  var inputData=getData();
-  if (selectedOption=="celsius"){
-    fahrenheit=((inputData * 1.8) + 32);
-    kelvin=inputData+372;
-    showCelsiusResult();
-  }
-  else if(selectedOption=="fahrenheit"){
-    celsius=((inputData - 32) * 5 / 9);
-    kelvin=(celsius)+273;
-    showFahrenheitResult()
-
-  }
-  else if(selectedOption=="kelvin"){
-    celsius=inputData-273;
-    fahrenheit=(celsius * 9 / 5 + 32);
-    showKelvinResult()
-  }
-}
-||||||| merged common ancestors
-createGamepad();
-fillBackground();
-createUnit();
-createInputBox();
-createButton();
-function convertTemp(){
-  var inputData=getData();
-  if (selectedOption=="celsius"){
-    fahrenheit=((inputData * 1.8) + 32);
-    kelvin=inputData+372;
-    showCelsiusResult();
-  }
-  else if(selectedOption=="fahrenheit"){
-    celsius=((inputData - 32) * 5 / 9);
-    kelvin=(celsius)+273;
-    showFahrenheitResult()
-    
-  }
-  else if(selectedOption=="kelvin"){
-    celsius=inputData-273;
-    fahrenheit=(celsius * 9 / 5 + 32);
-    showKelvinResult()
-  }
-}
-=======
 // createGamepad();
 // fillBackground();
 // createUnit();
@@ -186,7 +135,7 @@ function convertTemp(){
 //     celsius=((inputData - 32) * 5 / 9);
 //     kelvin=(celsius)+273;
 //     showFahrenheitResult()
-    
+
 //   }
 //   else if(selectedOption=="kelvin"){
 //     celsius=inputData-273;
@@ -194,4 +143,3 @@ function convertTemp(){
 //     showKelvinResult()
 //   }
 // }
->>>>>>> fc88dfcfd86cfc2c2d0504887b0b373d321ca4d5
