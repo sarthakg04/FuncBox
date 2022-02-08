@@ -17,9 +17,9 @@ import Footer from "../Footer/Footer";
 
 export default function LandingPage() {
   const Monkey =
-    "https://ik.imagekit.io/FuncBoxImages/monkey_jVoJ2JX9D.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642427824992";
+		"https://ik.imagekit.io/funcboxImages/landing_page_monkey.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644310058601";
   const Left =
-    "https://ik.imagekit.io/FuncBoxImages/left_FXV9e7pqf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642427825253";
+		"https://ik.imagekit.io/funcboxImages/landing_page_box.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644310106601";
   const homepageimg =
     "https://ik.imagekit.io/funcboxImages/LandingPage_assets/homepageimg_eAE7Ev4l4.webp?updatedAt=1633350407186";
   const downArrow =
