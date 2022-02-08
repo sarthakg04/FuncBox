@@ -1,6 +1,7 @@
 //Frontend Function for testing
-// var number  = randomIntLessThan(10)
-// var multiple = number * randomIntLessThan(10)
+
+//  var number  = randomIntLessThan(10)
+//  var multiple = number * randomIntLessThan(10)
 // createScore()
 // generateRandomNumber()
 // createJumpPlaces()
@@ -8,16 +9,22 @@
 // generateMultiples()
 // createInteractionPad()
 // createGameOver()
+// createGameWon()
+
 // function CheckLogic(jump_num){
 //     if( (NumberIn(jump_num) % number) === 0 ){
 //         Score++
-//         return true
+//       if(Score === 10){
+//         GameWon()
+//         return false
+//       }
 //     }
 //     else{
 //         GameOver()
 //         return false
 //     }
 // }
+
 
 // variables
 
@@ -83,6 +90,16 @@ function createScore(){
     score_text.classList.add('score')
     score_text.innerHTML = 'Score: ' + `${Score}`
     GamePad.appendChild(score_text)
+}
+
+
+function GameComplete(){
+    if(Score === 3){
+        return true
+    }
+    else{
+        return false
+    }
 }
 
 
@@ -162,7 +179,13 @@ function createGameOver(){
     Game_Over.classList.add('Game_Over')
     var GamePad = document.querySelector('.GamePad')
     GamePad.appendChild(Game_Over)
-    // console.log(GamePad)
+}
+
+function createGameWon(){
+    var Won = document.createElement('div')
+    Won.classList.add('Won')
+    var GamePad = document.querySelector('.GamePad')
+    GamePad.appendChild(Won)
 }
 //Backend Functions
 
@@ -252,6 +275,14 @@ function GameOver(){
     score_set.innerHTML = 'Game Over, Score: ' + `${Score}`
 }
 
+function GameWon(){
+    next_button.disabled = true    
+    var Won = document.querySelector('.Won')
+    Won.style.display = 'block'
+    Won.innerHTML = 'Hurray !! <br> You scored 10 points,<br> YOU WON! 🥳🥳'
+    var score_set = document.querySelector('.score')
+    score_set.innerHTML = 'Perfect Score of 10 ' 
+}
 
 function Next(){
     
@@ -286,7 +317,7 @@ function Next(){
     generateMultiples()
     createInteractionPad()
     createGameOver()
-
+    createGameWon()
 }
 
 function Restart(){

@@ -7,12 +7,13 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import ClassSelector from "./ClassSelector";
 import { toast } from "react-toastify";
-
+import { useHistory } from "react-router-dom";
 export default function SalesPage() {
   const { token } = useAuth();
   const [modalOpen, setModalOpen] = useState(false);
   const [plan, setPlan] = useState("");
   const [openPlan, setOpenPlan] = useState("basic");
+  const history = useHistory();
 
   const apiurl = process.env.REACT_APP_API_URL;
   const kids =
@@ -87,6 +88,9 @@ export default function SalesPage() {
       };
       const rzp1 = new window.Razorpay(options);
       rzp1.open();
+    } else if (parseData == "Not Authorize 1") {
+      toast.error("Please login to Purchase");
+      history.push("/signup");
     } else {
       toast.error(parseData);
     }
@@ -333,24 +337,28 @@ export default function SalesPage() {
           </div>
         </div>
         <div className="for_school">
-            <div className="heading">
-              <h1> For Schools </h1>
-            </div>
-            <div className="school_content">
-              <img src={house} alt="house" />
-              <div className="contentt">
-                <p>
-                  Yay! FuncBox brings special discount for all the School Tie-ups.
-                  FuncBox can be easily incorporated in all the school grades. To
-                  make your students outperform and help your institute gain an
-                  edge over the others contact our team NOW!
-                </p>
-                <a href="https://forms.gle/TxefVyHrnWj1doSL7" target="_blank" className="content_link">
-                  Connect Today
-                </a>
-              </div>
+          <div>
+            <h1 className="heading"> For Schools </h1>
+          </div>
+          <div className="school_content">
+            <img src={house} alt="house" />
+            <div className="contentt">
+              <p>
+                Yay! FuncBox brings special discount for all the School Tie-ups.
+                FuncBox can be easily incorporated in all the school grades. To
+                make your students outperform and help your institute gain an
+                edge over the others contact our team NOW!
+              </p>
+              <a
+                href="https://forms.gle/TxefVyHrnWj1doSL7"
+                target="_blank"
+                className="content_link"
+              >
+                Connect Today
+              </a>
             </div>
           </div>
+        </div>
         <Footer />
       </div>
       {modalOpen && (

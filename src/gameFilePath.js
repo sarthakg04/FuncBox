@@ -42,6 +42,11 @@ module.exports = {
     52: "CatchMeIfUCanGameFiles",
     53: "FeedTheCrocsGameFiles",
     54: "CheesyGuptaGameFiles",
+    55: "LUnitConvGame",
+    59: "ShootThePrimesGameFiles",
+    60: "DeciChemistGameFiles",
     61: "RecognisePatternGameFiles",
+
   },
+
 };

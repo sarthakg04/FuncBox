@@ -16,7 +16,13 @@ let bheemchutki =
   "https://ik.imagekit.io/funcboxImages/MotuPatlu_assets/Group_293_YskAbsU7h1d.png?updatedAt=1637005053639";
 let motupatlu =
   "https://ik.imagekit.io/funcboxImages/MotuPatlu_assets/Group_203__1__trS4-5wvbd5.png?updatedAt=1637005043573";
-let laddushop =
+let nobita =
+  "https://ik.imagekit.io/funcboxImages/Doraemon_game/PngItem_1619290_1_s-GFXMXTW.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643184975013";
+let doraemon =
+  "https://ik.imagekit.io/funcboxImages/Doraemon_game/image_159_eGnxOjPu4.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643184975260";
+let doracakeshop =
+  "https://ik.imagekit.io/funcboxImages/Doraemon_game/imgbin_dorayaki-mini-dora-doraemon-dorami-food-png_1_MRFivHr-xXw.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643184974865";
+let ladooshop =
   "https://ik.imagekit.io/funcboxImages/MotuPatlu_assets/Group_295__3__mCVBtvJAvuE.png?updatedAt=1637005115522";
 let samosashop =
   "https://ik.imagekit.io/funcboxImages/MotuPatlu_assets/A4_-_453__1__PePqf5gcG2o.png?updatedAt=1637005899298";
@@ -47,8 +53,8 @@ function createInteractionPad() {
       Speed: 
       <p>
       </div>
-      <input type="number" id="inpdistance"  placeholder="Distance (Km)"/>
-      <input type="number" id="inptime"  placeholder="Time (Hr)"/>
+      <input type="number" id="inpdistance"  placeholder="Distance (Km)" min = "0"/>
+      <input type="number" id="inptime"  placeholder="Time (Hr)" min = "0"/>
       <input type="submit" id="button1" onclick="CalculateSpeed()"/>
       `;
 }
