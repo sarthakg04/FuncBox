@@ -67,15 +67,12 @@ import CatchMeIfUCanGame from "./Games/CatchMeIfUCanGame/CatchMeIfUCanGame";
 import CheesyGuptaGame from "./Games/CheesyGuptaGame/CheesyGuptaGame";
 import FeedTheCrocsGame from "./Games/FeedTheCrocsGame/FeedTheCrocsGame";
 import LUnitConvGame from "./Games/LUnitConvGame/LUnitConvGame";
-<<<<<<< HEAD
 import PercentCalcGame from "./Games/PercentCalcGame/PercentCalcGame";
-=======
 import DeciChemistGame from "./Games/DeciChemistGame/DeciChemistGame";
 import ShootThePrimesGame from "./Games/ShootThePrimesGame/ShootThePrimesGame";
 import RecognisePatternGame from "./Games/RecognisePatternGame/RecognisePatternGame";
 import BasketballGame from "./Games/BasketballGame/BasketballGame";
 import TemperatureConversions2 from "./Games/TemperatureConversions2/TemperatureConversions2";
->>>>>>> 4d29d4731feb4d0648f82239d4c868c1167c17b3
 
 function App() {
   const dispatch = useDispatch();
@@ -137,7 +134,6 @@ function App() {
           autoClose={2000}
         />
         <Switch>
-<<<<<<< HEAD
           <Route exact path="/AngryBirds" component={AngryBirds} />
           <Route exact path="/MissionMars" component={MissionMars} />
           <Route exact path="/MonkeyMultiplier" component={MonkeyMultiplier} />
@@ -185,10 +181,7 @@ function App() {
           />
           <Route exact path="/WeatherGame" component={WeatherGame} />
           <Route exact path="/FeedTheCrocsGame" component={FeedTheCrocsGame} />
-=======
 
-
->>>>>>> 4d29d4731feb4d0648f82239d4c868c1167c17b3
           <Route exact path="/AngryBirds" component={AngryBirds} />
           <Route exact path="/MissionMars" component={MissionMars} />
           <Route exact path="/MonkeyMultiplier" component={MonkeyMultiplier} />
@@ -208,7 +201,11 @@ function App() {
           <Route exact path="/MeltTheIce" component={MeltTheIce} />
           <Route exact path="/mrfraction" component={Mrfraction} />
           <Route exact path="/BasketballGame" component={BasketballGame} />
-          <Route exact path="/TempConvGame" component={TemperatureConversions2} />
+          <Route
+            exact
+            path="/TempConvGame"
+            component={TemperatureConversions2}
+          />
 
           <Route
             exact
@@ -247,37 +244,38 @@ function App() {
           <Route exact path="/CheesyGuptaGame" component={CheesyGuptaGame} />
           <Route exact path="/FeedTheCrocsGame" component={FeedTheCrocsGame} />
           <Route exact path="/LUnitConvGame" component={LUnitConvGame} />
-<<<<<<< HEAD
           <Route exact path="/PercentCalcGame" component={PercentCalcGame} />
-=======
-          <Route exact path="/ShootThePrimeGame" component={ShootThePrimesGame} />
+          <Route
+            exact
+            path="/ShootThePrimeGame"
+            component={ShootThePrimesGame}
+          />
           <Route exact path="/DeciChemistGame" component={DeciChemistGame} />
-          <Route exact path="/RecPatternGame" component={RecognisePatternGame} />
+          <Route
+            exact
+            path="/RecPatternGame"
+            component={RecognisePatternGame}
+          />
 
-
-
-
->>>>>>> 4d29d4731feb4d0648f82239d4c868c1167c17b3
-
-					<Route exact path="/UserNavbar" component={UserNavbar} />
-					<Route exact path="/Login" component={Login} />
-					<Route exact path="/Signup" component={Signup} />
-					<Route exact path="/" component={LandingPage} />
-					<Route exact path="/AboutPage" component={AboutPage} />
-					<Route exact path="/Welcome" component={WelcomePage} />
-					<Route exact path="/SalesPage" component={SalesPage} />
-					<Route exact path="/CodeEditor" component={CodeEditor} />
-					<Route exact path="/TeamsPage" component={TeamsPage} />
-					<Route exact path="/EditProfile" component={EditProfile} />
-					<Route exact path="/ForgotPass" component={ForgotPass} />
-					<Route exact path="/subscriptions" component={SubscriptionPage} />
-					{/* <Route exact path="/flippable" component={Container} /> */}
-					<Route exact path="/VideoEmbed" component={Example} />
-					<Route exact path="/test" component={ServerTest} />
-					<Route exact path="/:code" component={Preview} />
-				</Switch>
-			</div>
-		</Router>
-	);
+          <Route exact path="/UserNavbar" component={UserNavbar} />
+          <Route exact path="/Login" component={Login} />
+          <Route exact path="/Signup" component={Signup} />
+          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/AboutPage" component={AboutPage} />
+          <Route exact path="/Welcome" component={WelcomePage} />
+          <Route exact path="/SalesPage" component={SalesPage} />
+          <Route exact path="/CodeEditor" component={CodeEditor} />
+          <Route exact path="/TeamsPage" component={TeamsPage} />
+          <Route exact path="/EditProfile" component={EditProfile} />
+          <Route exact path="/ForgotPass" component={ForgotPass} />
+          <Route exact path="/subscriptions" component={SubscriptionPage} />
+          {/* <Route exact path="/flippable" component={Container} /> */}
+          <Route exact path="/VideoEmbed" component={Example} />
+          <Route exact path="/test" component={ServerTest} />
+          <Route exact path="/:code" component={Preview} />
+        </Switch>
+      </div>
+    </Router>
+  );
 }
 export default App;
