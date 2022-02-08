@@ -62,9 +62,6 @@ import PawnShop from "./Games/PawnShop/PawnShop";
 import CountDracula from "./Games/CountDracula/CountDracula";
 import ChemistryLab from "./Games/ChemistryLab/ChemistryLab";
 import WeatherGame from "./Games/WeatherGame/WeatherGame";
-import BasketballGame from "./Games/BasketballGame/BasketballGame";
-import TemperatureConversions2 from "./Games/TemperatureConversions2/TemperatureConversions2";
-
 import SeizeHerGame from "./Games/SeizeHerGame/SeizeHerGame";
 import CatchMeIfUCanGame from "./Games/CatchMeIfUCanGame/CatchMeIfUCanGame";
 import CheesyGuptaGame from "./Games/CheesyGuptaGame/CheesyGuptaGame";
@@ -73,6 +70,8 @@ import LUnitConvGame from "./Games/LUnitConvGame/LUnitConvGame";
 import DeciChemistGame from "./Games/DeciChemistGame/DeciChemistGame";
 import ShootThePrimesGame from "./Games/ShootThePrimesGame/ShootThePrimesGame";
 import RecognisePatternGame from "./Games/RecognisePatternGame/RecognisePatternGame";
+import BasketballGame from "./Games/BasketballGame/BasketballGame";
+import TemperatureConversions2 from "./Games/TemperatureConversions2/TemperatureConversions2";
 
 function App() {
   const dispatch = useDispatch();
@@ -156,7 +155,7 @@ function App() {
           <Route exact path="/mrfraction" component={Mrfraction} />
           <Route exact path="/BasketballGame" component={BasketballGame} />
           <Route exact path="/TempConvGame" component={TemperatureConversions2} />
-          
+
           <Route
             exact
             path="/TemperatureConversions"
@@ -194,7 +193,7 @@ function App() {
           <Route exact path="/CheesyGuptaGame" component={CheesyGuptaGame} />
           <Route exact path="/FeedTheCrocsGame" component={FeedTheCrocsGame} />
           <Route exact path="/LUnitConvGame" component={LUnitConvGame} />
-          <Route exact path="/ShootThePrimesGame" component={ShootThePrimesGame} />
+          <Route exact path="/ShootThePrimeGame" component={ShootThePrimesGame} />
           <Route exact path="/DeciChemistGame" component={DeciChemistGame} />
           <Route exact path="/RecPatternGame" component={RecognisePatternGame} />
 

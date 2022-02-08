@@ -23,6 +23,8 @@ var sun
 var rays_list
 var temperature
 var InteractionPad
+var Precipitation_title
+var Precipitation_Description
 
 
 // original script var
@@ -81,6 +83,17 @@ function createSun(){
     sun = document.createElement('div')
     sun.classList.add('sun')
     GamePad.appendChild(sun)
+
+    Precipitation_title = document.createElement('div')
+    Precipitation_title.innerHTML+=`Precipitation`
+    Precipitation_title.classList.add('Precipitation_title')
+    Phone.appendChild(Precipitation_title)
+
+    Precipitation_Description = document.createElement('div')
+    Precipitation_Description.innerHTML+=`Precipitation is water released from clouds in the form of rain, freezing rain, sleet, snow, or hail. It is the primary connection in the water cycle that provides for the delivery of atmospheric water to the Earth. Most precipitation falls as rain.`
+    Precipitation_Description.classList.add('Precipitation_Description')
+    Phone.appendChild(Precipitation_Description)
+
 }
 
 function generateRays(){
@@ -303,6 +316,10 @@ function checkTemp(){
         clearTimeout(ray_4_MovementId_2)
         var rays_list = document.querySelector('.rays_list')
         rays_list.style.display = 'none'
+        drop_grid_squares[current_drop_position].classList.remove('drop_bg')
+        Precipitation_title.style.display = 'block'
+        Precipitation_Description.style.display = 'block'
+        temperature.className = ''
     }
 }
 
