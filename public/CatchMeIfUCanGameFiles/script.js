@@ -4,7 +4,6 @@
 //createButtons();
 //createDroplets();
 
-
 function createGamepad(){
     let gamePadd = document.createElement('DIV')
     gamePadd.classList.add('GamePad')
@@ -32,8 +31,7 @@ function createButtons(){
     document.getElementsByClassName('GamePad')[0].innerHTML +=`
     <img src="./CatchMeIfUCanGameFiles/assets/button_left.png" id="button_left" onclick="moveLeft()">
     <img src="./CatchMeIfUCanGameFiles/assets/button_right.png" id="button_right" onclick="moveRight()">
-    `
-    getButtons();
+    `;
 }
 
 function createDroplets(){
@@ -42,9 +40,11 @@ function createDroplets(){
     <img src="./CatchMeIfUCanGameFiles/assets/Number_drop+9.png" id="droplet2" class="droplet">
     `
     getDroplets();
+    getDistance();
 }
 
-
+//Left and Right Arrow Functioning
+var umb_position = 140;
 
 function moveLeft(){
   var umberella = document.getElementById("umb_hap");
@@ -54,8 +54,7 @@ function moveLeft(){
   }
 }
 
-
- function moveRight(){
+function moveRight(){
    var umberella = document.getElementById("umb_hap");
     if(umb_position < 230){
         umb_position = umb_position + 30;
@@ -63,37 +62,8 @@ function moveLeft(){
     }
 }
 
-//Left and Right Arrow Functioning
-var umb_position = 140;
-
-function getButtons(){
-
-    var btnleft = document.getElementById("button_left");
-    var btnright = document.getElementById("button_right");
-    var umberella = document.getElementById("umb_hap");
-
-    const moveLeft = function(){
-      console.log("Hello");
-        if(umb_position > 70){
-            umb_position = umb_position - 30;
-            umberella.style.left = umb_position + 'px';
-        }
-    }
-
-    const moveRight = function(){
-        if(umb_position < 230){
-            umb_position = umb_position + 30;
-            umberella.style.left = umb_position + 'px';
-        }
-    }
-
-
-    btnright.onclick = moveRight;
-}
-
 
 //Droplets dropping
-
 function getDroplets(){
     var droplet1 = document.getElementById("droplet1");
     var droplet2 = document.getElementById("droplet2");
@@ -107,20 +77,53 @@ function getDroplets(){
     },2000);
 }
 
+
 //Checking if Umberella and Droplets are Colliding
 
-var droplets = document.getElementsByClassName("droplet");
+// var droplets = document.getElementsByClassName("droplet");
 
-// droplet1.bind("EnterFrame", function () {
-//     if (umberella.x < droplet1.x + droplet1.w &&
-//         umberella.x + umberella.w > droplet1.x &&
-//         umberella.y < droplet1.y + droplet1.h &&
-//         umberella.h + umberella.y > droplet1.y) {
-//         // collision detected!
-//         this.style.display = "none";
-//     }
-//     else {
-//         // no collision
-//         this.style.display = "block";
-//     }
-// });
+function getDistance(){
+    function getPositionAtCenter(element) {
+        const {top, left, width, height} = element.getBoundingClientRect();
+        return {
+          x: left + width / 2,
+          y: top + height / 2
+        };
+    }
+
+    function getDistanceBetweenElements(a, b) {
+        const aPosition = getPositionAtCenter(a);
+        const bPosition = getPositionAtCenter(b);
+    
+        return Math.hypot(aPosition.x - bPosition.x, aPosition.y - bPosition.y);  
+    }
+
+    // const distance = getDistanceBetweenElements(document.getElementById("droplet1"),document.getElementById("umb_hap"));
+    // if(distance == 0){
+    //     document.getElementById("droplet1").style.display="none";
+    // }
+    // else{
+    //     document.getElementById("droplet1").style.display="block";
+    // }
+
+    function calcDistance(i){
+        var distance = getDistanceBetweenElements(document.getElementById("droplet"+i),document.getElementById("umb_hap"));
+    
+        if(distance <= 80){
+            document.getElementById("droplet"+i).style.display="none";
+            clearInterval(interval);
+        }
+        // console.log(distance);
+    }
+    
+    // var timesRun = 0;
+    // var interval = setInterval(function(){
+    //     timesRun += 1;
+    //     if(timesRun === 14){
+    //         clearInterval(interval);
+    //     }
+    //     for(var i=1;i<3;i++){
+    //         calcDistance(i);
+    //     }
+    // }, 1000);
+}

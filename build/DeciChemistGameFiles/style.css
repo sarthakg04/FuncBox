@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Squada One", cursive;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.GamePad {
+	width: 400px;
+	height: 535px;
+	margin: auto;
+	background-position: center;
+	background-size: cover;
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	font-size: 1.2rem;
+	color: white;
+}
+
+/* Top */
+#top {
+	display: flex;
+	justify-content: space-between;
+	height: 45%;
+}
+
+#top-board {
+	display: flex;
+	margin: 3rem 0 0 0.5rem;
+	width: 55%;
+	justify-content: space-between;
+	/* visibility: hidden; */
+}
+
+#top-board-ques {
+	margin-top: 4rem;
+	width: 80%;
+	visibility: hidden;
+}
+
+#top-board-timer {
+	border: 1px solid white;
+	padding: 5px;
+	height: min-content;
+	width: 2rem;
+	border-radius: 50%;
+	text-align: center;
+	visibility: hidden;
+}
+
+#top-color {
+	display: grid;
+	grid-template-columns: auto auto;
+	margin-top: 0.5rem;
+	height: 80%;
+	grid-gap: 1.5rem 0.5rem;
+}
+
+#top-color > div > img {
+	height: 80px;
+	cursor: pointer;
+	visibility: hidden;
+}
+
+/* Middle */
+#middle {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	height: 20vh;
+}
+
+#middle-beaker {
+	margin: 0 1.5rem 1.2rem 0;
+	width: 3.5rem;
+}
+
+#middle-beaker-pink {
+  background-color: #FC47A9;
+  border-radius: 0 0 10px 10px;
+	height: 0px;
+  transition: all 0.5s ease-in;
+}
+
+#middle-beaker-green {
+  background-color: #5AF661;
+  border-radius: 0 0 10px 10px;
+	height: 0px;
+  transition: all 0.5s ease-in;
+}
+
+#middle-beaker-red {
+  background-color: #F31422;
+  border-radius: 0 0 10px 10px;
+	height: 0px;
+  transition: all 0.5s ease-in;
+}
+
+#middle-beaker-blue {
+  background-color: #1678EC;
+  border-radius: 0 0 10px 10px;
+	height: 0px;
+  transition: all 0.5s ease-in;
+}
+
+#middle-ans {
+	height: min-content;
+  width: 5rem;
+	background-color: white;
+	color: black;
+	padding: 5px 10px;
+	border-radius: 10px;
+	margin: 0 1rem 0 0;
+	visibility: hidden;
+}
+
+/* Bottom */
+#bottom {
+	display: grid;
+	grid-template-columns: auto auto;
+	width: 50%;
+	height: 15vh;
+	margin: 0 0 1.5rem 10rem;
+	justify-content: flex-end;
+	grid-gap: 1rem;
+}
+
+.btn {
+	background-color: #ffc727;
+	border-radius: 10px;
+	padding: 5px;
+	cursor: pointer;
+	display: none;
+	height: min-content;
+}
+
+#bottom-startBtn {
+	padding: 10px;
+	height: min-content;
+	/* display: none; */
+	/* display: block; */
+}
+
+#bottom-resetBtn {
+	padding: 10px;
+	height: min-content;
+	/* display: none; */
+	/* display: block; */
+}

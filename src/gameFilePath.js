@@ -38,11 +38,20 @@ module.exports = {
     47: "CountDraculaGameFiles",
     48: "ChemistryLabGameFiles",
     49: "WeatherGameFiles",
+    50: "BasketballGameFiles",
     51: "SeizeHerGameFiles",
     52: "CatchMeIfUCanGameFiles",
     53: "FeedTheCrocsGameFiles",
     54: "CheesyGuptaGameFiles",
     55: "LUnitConvGame",
+<<<<<<< HEAD
     57: "PercentCalcGameFiles",
+=======
+    58: "TemperatureConversionFiles2",
+    59: "ShootThePrimesGameFiles",
+    60: "DeciChemistGameFiles",
+    61: "RecognisePatternGameFiles",
+>>>>>>> 4d29d4731feb4d0648f82239d4c868c1167c17b3
   },
+
 };
