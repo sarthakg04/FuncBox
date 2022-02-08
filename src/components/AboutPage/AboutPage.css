@@ -158,6 +158,58 @@
   }
 }
 
+@media (max-width: 1300px) {
+  .phoneimg {
+    width: 90%;
+    height: 90%;
+    left: 5vw;
+  }
+
+  .about_container2 p {
+    font-size: 1.2rem;
+    width: 40vw;
+  }
+}
+
+@media (max-width: 1170px) {
+  .phoneimg {
+    height: 85%;
+    left: 1vw;
+    width: 100%;
+  }
+}
+
+@media (max-width: 990px) {
+  .phoneimg {
+    height: 80%;
+  }
+}
+
+@media (max-width: 940px) {
+  .phoneimg {
+    height: 75%;
+    top: 50%;
+  }
+}
+
+@media (max-width: 885px) {
+  .phoneimg {
+    height: 70%;
+  }
+
+  .about_container2 p {
+    font-size: 1.2rem;
+    width: 38vw;
+  }
+}
+
+@media (max-width: 810px) {
+  .phoneimg {
+    height: 65%;
+    top: 50%;
+  }
+}
+
 @media (max-width: 767px) {
   .aboutPage__main .roadMap img {
     width: 95%;
