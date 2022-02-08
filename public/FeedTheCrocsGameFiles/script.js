@@ -31,65 +31,65 @@ const gameQuestions = [
 	{
 		id: "0",
 		background:
-			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-0_o9TaE0PUk.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784746614",
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-0_o9TaE0PUk.png",
 		angle:
-			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-1_f_M89woIY.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784744023",
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-1.png",
 		answer: "-",
 	},
 	{
 		id: "1",
 		background:
-			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-1_1Galn7dgFRS.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784747458",
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-1_1Galn7dgFRS.png",
 		angle:
-			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-1_f_M89woIY.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784744023",
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-1.png",
 		answer: "0",
 	},
 	{
 		id: "2",
 		background:
-			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-2_skyMrjs4j.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784747860",
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-2_skyMrjs4j.png",
 		angle:
-			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-2_rp3wZEL73.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784743815",
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-2.png",
 		answer: "10",
 	},
 	{
 		id: "3",
 		background:
-			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-3_MxCN1wRA7.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784748173",
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-3_MxCN1wRA7.png",
 		angle:
-			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-3_ruujtePltzu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784744035",
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-3.png",
 		answer: "20",
 	},
 	{
 		id: "4",
 		background:
-			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-4_NbwTn7bgAos.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784748745",
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-4_NbwTn7bgAos.png",
 		angle:
-			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-4_lwGYH5xux.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784744578",
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-4.png",
 		answer: "35",
 	},
 	{
 		id: "5",
 		background:
-			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-5_MNQRIgJ14.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784749298",
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-5_MNQRIgJ14.png",
 		angle:
-			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-5_Ds1h-41Lm.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784744991",
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-5.png",
 		answer: "45",
 	},
 	{
 		id: "6",
 		background:
-			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-6_20XmgkHzpyQ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784750143",
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-6_20XmgkHzpyQ.png",
 		angle:
-			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-6_xbfmNq_ywS9.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784745477",
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-6.png",
 		answer: "60",
 	},
 	{
 		id: "7",
 		background:
-			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-7_kRWhFo06n.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784750884",
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-7_kRWhFo06n.png",
 		angle:
-			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-7_InfoimkPZ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784745820",
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/angle-7.png",
 		answer: "90",
 	},
 ];
@@ -99,6 +99,123 @@ let userAns = 0;
 let score = 0;
 let nextQuestionNumber = 1;
 let timeRemaining = 60;
+
+// Starting Game
+function startGame() {
+	crocImage(
+		"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-0_o9TaE0PUk.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784746614"
+	);
+	nextQuestionNumber = generateNextQuestionNumber();
+	setTimeout(() => {
+		score = 0;
+		userAns = 0;
+		document.getElementById("top-timer").style.visibility = "visible";
+		document.getElementById("top-score").style.visibility = "visible";
+		document.getElementById("bottom").style.visibility = "visible";
+		document.getElementById("top-score").innerText = `Score: ${score}`;
+		// console.log(nextQuestionNumber);
+		currentQuestionAnswer = gameQuestions[nextQuestionNumber];
+		crocImage(currentQuestionAnswer.background);
+	}, 2000);
+}
+
+// Generating a Random Number from 2 to 7
+function generateNextQuestionNumber() {
+	return Math.floor(1 + Math.random() * 6);
+}
+
+// Checking for the Win/Lose
+function updateScore() {
+	// console.log("Game Answer = ", currentQuestionAnswer.answer);
+	if (userAns == currentQuestionAnswer.answer) {
+		document.getElementById("top-angle").style.visibility = "visible";
+		document.getElementById(
+			"top-angle"
+		).style.backgroundImage = `url(${currentQuestionAnswer.angle})`;
+	}
+	document.getElementById("top-score").innerText = `Score: ${score}`;
+	// console.log("Score = ", score);
+	// console.log("Game Answer = ", currentQuestionAnswer.answer);
+
+	setTimeout(() => {
+		document.getElementById("top-angle").style.visibility = "hidden";
+		document.getElementById("bottom").style.visibility = "visible";
+		getNextCroc();
+	}, 1500);
+}
+
+function createOptions() {
+	const bottomCircle = document.querySelectorAll(".bottom-circle");
+	// Setting onClick on each Circle at the Bottom bar
+	bottomCircle.forEach((ele) => {
+		ele.onclick = () => {
+			// console.log(ele.innerText);
+			userAns = ele.innerText;
+			document.getElementById("bottom").style.visibility = "hidden";
+			checkCorrectAnswer();
+			// console.log("User Answer = ", userAns);
+		};
+	});
+}
+
+// Function for Timer
+function countDown(num) {
+	timeRemaining = num;
+	// const d = new Date();
+	document.getElementById("top-timer").innerHTML = num;
+	num--;
+
+	if (num < 0) {
+		document.getElementById("top-timer").style.visibility = "hidden";
+		document.getElementById("top-score").style.visibility = "hidden";
+		document.getElementById("bottom").style.visibility = "hidden";
+		if (score >= 75) {
+			document.getElementById("score-win").innerText = `Score: ${score}`;
+			document.getElementById("game-win").style.display = "block";
+			crocImage(
+				"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-9_XmdT5dwhDCG.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784751429"
+			);
+		} else {
+			document.getElementById("score-lose").innerText = `Score: ${score}`;
+			document.getElementById("game-lose").style.display = "block";
+			crocImage(
+				"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-8_yUB92MNtZN.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784751161"
+			);
+		}
+	} else {
+		setTimeout(() => {
+			countDown(num);
+		}, 1000);
+	}
+}
+
+// Function to create GamePad
+function createGamepad() {
+	document.getElementsByTagName("body")[0].innerHTML += `
+    <div class="GamePad" id="GamePad">
+    </div>
+  `;
+}
+
+// Function to Fill background
+function crocImage(URL) {
+	if (URL == undefined) {
+		URL =
+			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-0_o9TaE0PUk.png";
+	}
+	document.getElementById("GamePad").style.backgroundImage = `url(${URL})`;
+}
+
+// Restart the Game Button
+function createResetButton() {
+	document.getElementById("restart-btn").addEventListener("click", () => {
+		document.getElementById("game-lose").style.display = "none";
+		startGame();
+		setTimeout(() => {
+			countDown(60);
+		}, 3000);
+	});
+}
 
 // Create HTML
 function createTopElements() {
@@ -178,120 +295,4 @@ function createBottomElements() {
 	// bottom.appendChild(bottomCircle1);
 	// console.log(bottom);
 	mainContainer.appendChild(bottom);
-}
-
-// Starting Game
-function startGame() {
-  crocImage(
-		"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-0_o9TaE0PUk.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784746614"
-	);
-	setTimeout(() => {
-		document.getElementById("top-timer").style.visibility = "visible";
-		document.getElementById("top-score").style.visibility = "visible";
-		document.getElementById("bottom").style.visibility = "visible";
-		score = 0;
-		crocImage(currentQuestionAnswer.background);
-		currentQuestionAnswer = gameQuestions[1];
-		userAns = 0;
-		nextQuestionNumber = 1;
-		document.getElementById("top-score").innerText = `Score: ${score}`;
-	}, 2000);
-}
-
-// Generating a Random Number from 2 to 7
-function generateNextQuestionNumber() {
-	return Math.floor(1 + Math.random() * 6);
-}
-
-// Checking for the Win/Lose
-function updateScore() {
-	// console.log("Game Answer = ", currentQuestionAnswer.answer);
-	if (userAns == currentQuestionAnswer.answer) {
-		document.getElementById("top-angle").style.visibility = "visible";
-		document.getElementById("top-angle").style.backgroundImage =
-			"url(./FeedTheCrocsGameFiles/assets/angle-" +
-			nextQuestionNumber +
-			".png)";
-	}
-	document.getElementById("top-score").innerText = `Score: ${score}`;
-	console.log("Score = ", score);
-	console.log("Game Answer = ", currentQuestionAnswer.answer);
-
-	setTimeout(() => {
-		document.getElementById("top-angle").style.visibility = "hidden";
-		getNextCroc();
-	}, 3000);
-}
-
-function createOptions() {
-	const bottomCircle = document.querySelectorAll(".bottom-circle");
-	// Setting onClick on each Circle at the Bottom bar
-	bottomCircle.forEach((ele) => {
-		ele.onclick = () => {
-			// console.log(ele.innerText);
-			userAns = ele.innerText;
-			checkCorrectAnswer();
-			console.log("User Answer = ", userAns);
-		};
-	});
-}
-
-// Function for Timer
-function countDown(num) {
-	timeRemaining = num;
-	// const d = new Date();
-	document.getElementById("top-timer").innerHTML = num;
-	num--;
-
-	if (num < 0) {
-		document.getElementById("top-timer").style.visibility = "hidden";
-		document.getElementById("top-score").style.visibility = "hidden";
-		document.getElementById("bottom").style.visibility = "hidden";
-		if (score >= 75) {
-			document.getElementById("score-win").innerText = `Score: ${score}`;
-			document.getElementById("game-win").style.display = "block";
-			crocImage(
-				"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-9_XmdT5dwhDCG.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784751429"
-			);
-		} else {
-			document.getElementById("score-lose").innerText = `Score: ${score}`;
-			document.getElementById("game-lose").style.display = "block";
-			crocImage(
-				"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-8_yUB92MNtZN.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784751161"
-			);
-		}
-	} else {
-		setTimeout(() => {
-			countDown(num);
-		}, 1000);
-	}
-}
-
-// Function to create GamePad
-function createGamepad() {
-	document.getElementsByTagName("body")[0].innerHTML += `
-    <div class="GamePad" id="GamePad">
-    </div>
-  `;
-}
-
-// Function to Fill background
-function crocImage(URL) {
-	if (URL == undefined) {
-		URL =
-			"https://ik.imagekit.io/funcboxImages/FeedTheCrocsGame/tr:w-500/background-0_o9TaE0PUk.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643784746614";
-	}
-
-	document.getElementById("GamePad").style.backgroundImage = `url(${URL})`;
-}
-
-// Restart the Game Button
-function createResetButton() {
-	document.getElementById("restart-btn").addEventListener("click", () => {
-		document.getElementById("game-lose").style.display = "none";
-		startGame();
-		setTimeout(() => {
-			countDown(60);
-		}, 3000);
-	});
 }
