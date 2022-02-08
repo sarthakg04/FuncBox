@@ -9,12 +9,12 @@
 // createInteractionPad()
 // createRefresh()
 // function StepUp(){
-
+//
 //     weight/= 10
 //      return weight
 // }
 // function StepDown(){
-
+//
 //     weight*= 10
 //      return weight
 // }
@@ -84,7 +84,7 @@ function createInteractionPad() {
 
 function createRefresh() {
   Phone.innerHTML += `
-    <div onclick="window.location.reload()" class="restart">Reset 
+    <div onclick="window.location.reload()" class="restart">Reset
     <img style="vertical-align:middle" src="./assets/refresh.png" alt="restart"/></div>
     `;
 }
@@ -160,13 +160,9 @@ function Up() {
   if (current_step < units.length - 1) {
     steps[current_step].classList.remove("active_step");
     // let flag = 10;
-    // if (selected != "hl") {
+    if (selected != "hl") {
     StepUp();
-    // flag = 1;
-    // } else {
-    //   // flag = 0;
-    //   // console.log(selected);
-    // }
+    }
     console.log(selected);
     // while (flag != 0) {
     if (selected === "ml") {
@@ -178,7 +174,7 @@ function Up() {
     } else if (selected === "l") {
       result_box.innerHTML = "kl";
       selected = "kl";
-    } else if (selected === "kl") {
+    } else if (selected === "kl" || selected === "hl") {
       result_box.innerHTML = "hl";
       selected = "hl";
     }
@@ -192,7 +188,6 @@ function Up() {
 
 function Down() {
   result_box.innerHTML = "";
-  if (current_step > 0) {
     // steps[current_step].classList.remove("active_step");
     if (selected != "ml") {
       StepDown();
@@ -209,7 +204,7 @@ function Down() {
     } else if (selected === "l") {
       result_box.innerHTML = "cl";
       selected = "cl";
-    } else if (selected === "cl") {
+    } else if (selected === "cl" || selected === "ml") {
       result_box.innerHTML = "ml";
       selected = "ml";
     }
@@ -217,7 +212,7 @@ function Down() {
     // steps[current_step].classList.add("active_step");
 
     Value.innerHTML = weight;
-  }
+
 }
 
 // Trash code
