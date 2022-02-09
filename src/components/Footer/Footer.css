@@ -66,7 +66,7 @@ input {
 .horizontal_line {
   width: 90%;
   height: 1px;
-  /* background-color: #000000; */
+  background-color: #000000;
   top: 680px;
   left: 50%;
   transform: translateX(-50%);
@@ -531,7 +531,7 @@ input {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 670px) {
   .get_in_touch {
     top: 130px;
     left: 50px;
@@ -569,6 +569,7 @@ input {
   .important_links {
     top: 200px;
     gap: 2px;
+    font-size: 16px;
   }
 
   .postcredit {
