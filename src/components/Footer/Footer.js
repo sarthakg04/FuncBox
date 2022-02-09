@@ -68,74 +68,57 @@ export default function Footer() {
   // },[]);
 
   return (
-    <div>
-      <div className="footer">
-        <div className="getInTouch">
-          <p>Get in Touch</p>
-          <div className="input">
-            {/* <form onSubmit={handleSubmit}> */}
-            <input
-              type="email"
-              name="email"
-              value={getInTouchEmail}
-              onChange={(e) => setGetInTouchEmail(e.target.value)}
-            />
-            <button
-              onClick={handleSubmit}
-              className="Notification_btn"
-              style={{
-                background: `url(${bell}) no-repeat center`,
-                minWidth: "30px",
-                minHeight: "30px",
-              }}
-              type="submit"
-            ></button>
-            {/* </form> */}
-          </div>
+    <div className="footer">
+      <img
+        className="footer__bg"
+        src="https://ik.imagekit.io/funcboxImages/footer_ZmbXGRfiv.png"
+        alt=""
+      />
+
+      <div className="get_in_touch">
+        <div className="">Get in touch with us</div>
+        <input
+          type="email"
+          value={getInTouchEmail}
+          onChange={(e) => setGetInTouchEmail(e.target.value)}
+          placeholder="Please enter your email"
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleSubmit(e);
+            }
+          }}
+        />
+      </div>
+
+      <div className="home_store_school_blog">
+        <div>Home</div>
+        <div>Store</div>
+        <div>School</div>
+        <div>Blog</div>
+      </div>
+
+      <div className="horizontal_line" />
+
+      <div className="social_media">
+        <div>
+          <img src={fb} alt="" />
         </div>
-        <div className="madeWith">
-          <Link to="/TeamsPage">
-            <p>Made With ❤️ by Team FuncBox </p>
-          </Link>
+        <div>
+          <img src={linked} alt="" />
         </div>
-        <div className="links">
-          <div className="social">
-            <a href="https://www.facebook.com/funcbox.edu" target="_blank">
-              <img src={fb} alt="fb" />
-            </a>
-            <a href="https://www.linkedin.com/company/funcbox" target="_blank">
-              <img src={linked} alt="linked" />
-            </a>
-            <a
-              href="https://www.instagram.com/funcbox_edu/?utm_medium=copy_link"
-              target="_blank"
-            >
-              <img src={insta} alt="insta" />
-            </a>
-          </div>
-          <div className="terms">
-            <ul>
-              <li>
-                <a href="#">Join our Team</a>
-              </li>
-              <li>
-                <a href="./terms.html">Terms</a>
-              </li>
-              <li>
-                <a href="./privacy.html">Privacy</a>
-              </li>
-            </ul>
-            <span id="siteseal">
-              <Helmet>
-                <script
-                  async
-                  type="text/javascript"
-                  src="https://seal.godaddy.com/getSeal?sealID=g4QjFCxgWT2ns8fm4KzgPfb5AIRIOBSTjFrWU0RRdYfvHVh00dDCaC7I0B5W"
-                ></script>
-              </Helmet>
-            </span>
-          </div>
+        <div>
+          <img src={insta} alt="" />
         </div>
+      </div>
+
+      <div className="important_links">
+        <div>Join our Team</div>
+        <div>Terms</div>
+        <div>Privacy</div>
+      </div>
+
+      <div className="postcredit">
+        Made with <span>&#10084;</span> by FuncBox
       </div>
     </div>
   );
