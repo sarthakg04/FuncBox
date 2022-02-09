@@ -54,6 +54,15 @@ input {
   left: 70px;
 }
 
+.home_store_school_blog a{
+  text-decoration: none;
+  color: #000000;
+}
+
+.home_store_school_blog a:hover{
+  text-decoration: underline;
+}
+
 .horizontal_line {
   width: 90%;
   height: 1px;
@@ -87,6 +96,15 @@ input {
   gap: 7px;
   top: 600px;
   right: 120px;
+} 
+
+.important_links a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.important_links a:hover {
+  text-decoration: underline;
 }
 
 .postcredit {
@@ -95,6 +113,15 @@ input {
   top: 710px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.postcredit a{
+  text-decoration: none;
+  color: #000000;
+}
+
+.postcredit a:hover{
+  text-decoration: underline;
 }
 
 .postcredit > span {

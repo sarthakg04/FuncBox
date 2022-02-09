@@ -91,34 +91,58 @@ export default function Footer() {
       </div>
 
       <div className="home_store_school_blog">
-        <div>Home</div>
-        <div>Store</div>
-        <div>School</div>
-        <div>Blog</div>
+        <Link to="/">
+          <div>Home</div>
+        </Link>
+        <Link to="/store">
+          <div>Store</div>
+        </Link>
+        <Link to="/school">
+          <div>School</div>
+        </Link>
+        <Link to="/blogs">
+          <div>Blog</div>
+        </Link>
       </div>
 
       <div className="horizontal_line" />
 
       <div className="social_media">
-        <div>
-          <img src={fb} alt="" />
-        </div>
-        <div>
-          <img src={linked} alt="" />
-        </div>
-        <div>
-          <img src={insta} alt="" />
-        </div>
+        <a href="https://www.facebook.com/funcbox.edu/">
+          <div>
+            <img src={fb} alt="" />
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/company/funcbox/">
+          <div>
+            <img src={linked} alt="" />
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/funcbox_official/">
+          <div>
+            <img src={insta} alt="" />
+          </div>
+        </a>
       </div>
 
       <div className="important_links">
-        <div>Join our Team</div>
-        <div>Terms</div>
-        <div>Privacy</div>
+        <a href="https://www.funcbox.in/join.html">
+          <div>Join our Team</div>
+        </a>
+        <a href="https://www.funcbox.in/terms.html/">
+          <div>Terms</div>
+        </a>
+        <a href="https://www.funcbox.in/privacy.html">
+          <div>Privacy</div>
+        </a>
       </div>
 
       <div className="postcredit">
-        Made with <span>&#10084;</span> by FuncBox
+        <a href="https://www.funcbox.in/TeamsPage">
+          Made with <span>&#10084;</span> by FuncBox
+        </a>
       </div>
     </div>
   );
