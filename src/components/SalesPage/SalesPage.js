@@ -127,6 +127,7 @@ export default function SalesPage() {
       <div className="salesPage__main">
         <div className="hero__section">
           <div className="left__section">
+            <div className="mobile_shop_div">Shop</div>
             <img src={bg_vector} alt="bg_vector" class="vector_bg"/>
             {/* <img src={sales_kid} alt="kid" class="sales_kid"/> */}
           </div>
