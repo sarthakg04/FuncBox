@@ -28,7 +28,7 @@
   left: 70px;
 }
 
-input {
+.footer input {
   width: 400px;
   height: 40px;
   border-radius: 40px;
@@ -124,7 +124,7 @@ input {
   text-decoration: underline;
 }
 
-.postcredit > span {
+.postcredit  span {
   color: red;
 }
 
@@ -136,7 +136,7 @@ input {
     /* background-color: rgb(162, 0, 255); */
   }
 
-  input {
+  .footer input {
     width: 400px;
     height: 40px;
     font-size: 30px;
@@ -187,7 +187,7 @@ input {
     /* background-color: rgb(255, 238, 0); */
   }
 
-  input {
+  .footer input {
     width: 400px;
     height: 40px;
     font-size: 26px;
@@ -243,7 +243,7 @@ input {
     font-size: 28px;
   }
 
-  input {
+  .footer input {
     width: 400px;
     height: 40px;
     font-size: 26px;
@@ -356,7 +356,7 @@ input {
     /* background-color: #000000; */
   }
 
-  input {
+  .footer input {
     width: 300px;
     height: 35px;
     font-size: 20px;
@@ -405,7 +405,7 @@ input {
     /* background-color: #5e018a; */
   }
 
-  input {
+  .footer input {
     width: 300px;
     height: 35px;
     font-size: 20px;
@@ -493,7 +493,7 @@ input {
     font-size: 15px;
   }
 
-  input {
+  .footer input {
     width: 240px;
     height: 30px;
     font-size: 18px;
@@ -538,7 +538,7 @@ input {
     font-size: 15px;
   }
 
-  input {
+  .footer input {
     width: 220px;
     height: 26px;
     font-size: 17px;
@@ -587,7 +587,7 @@ input {
     font-size: 13px;
   }
 
-  input {
+  .footer input {
     width: 200px;
     height: 22px;
     font-size: 15px;
@@ -635,7 +635,7 @@ input {
     font-size: 12px;
   }
 
-  input {
+  .footer input {
     width: 170px;
     height: 18px;
     font-size: 12px;
