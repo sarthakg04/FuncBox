@@ -20,7 +20,7 @@ function GameContainer({ gid, location }) {
   const [srcDoc, setSrcDoc] = useState("");
   const { isAuthenticated, token, userid } = useAuth();
   const [gAccess, setGAccess] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [qrSrc, setQrSrc] = useState("");
   const dispatch = useDispatch();
   const path = location;
