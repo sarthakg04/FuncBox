@@ -46,25 +46,25 @@ export default function LandingPage() {
 
 
 
-  useEffect(()=>{
-    var frameNumber = 0;
-    var playbackConst = 800;
-    var setHeight = document.getElementById("set-height");
-    var vid = document.getElementById('v1');
-
-    vid.addEventListener('loadedmetadata', function(){
-        setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
-    });
-
-    function scrollPlay(){
-      var frameNumber  = window.pageYOffset/playbackConst;
-      vid.currentTime  = frameNumber;
-      window.requestAnimationFrame(scrollPlay);
-    }
-
-    window.requestAnimationFrame(scrollPlay);
-
-  },[])
+  // useEffect(()=>{
+  //   var frameNumber = 0;
+  //   var playbackConst = 800;
+  //   var setHeight = document.getElementById("set-height");
+  //   var vid = document.getElementById('v1');
+  //
+  //   vid.addEventListener('loadedmetadata', function(){
+  //       setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
+  //   });
+  //
+  //   function scrollPlay(){
+  //     var frameNumber  = window.pageYOffset/playbackConst;
+  //     vid.currentTime  = frameNumber;
+  //     window.requestAnimationFrame(scrollPlay);
+  //   }
+  //
+  //   window.requestAnimationFrame(scrollPlay);
+  //
+  // },[])
 
 
 
@@ -130,18 +130,18 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div className="scrolling_vid">
-          <div id="set-height"></div>
-          <div id="v0">
-          <div className="testing">
-            <a href="#top"><button>Skip to top</button></a>
-            <a href="#bottom"><button>Skip section</button></a>
-            <video tabindex="0" id="v1" >
-                <source type='video/mp4' src="Videos/home_scrollvid.mp4"></source>
-            </video>
-          </div>
-          </div>
-        </div>
+        // <div className="scrolling_vid">
+        //   <div id="set-height"></div>
+        //   <div id="v0">
+        //   <div className="testing">
+        //     <a href="#top"><button>Skip to top</button></a>
+        //     <a href="#bottom"><button>Skip section</button></a>
+        //     <video tabindex="0" id="v1" >
+        //         <source type='video/mp4' src="Videos/home_scrollvid.mp4"></source>
+        //     </video>
+        //   </div>
+        //   </div>
+        // </div>
 
         <div id="bottom"></div>
         <Container />
