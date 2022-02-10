@@ -48,7 +48,7 @@ export default function LandingPage() {
    
   useEffect(()=>{
     var frameNumber = 0;
-    var playbackConst = 1200;
+    var playbackConst = 800;
     var setHeight = document.getElementById("set-height");
     var vid = document.getElementById('v1'); 
 
