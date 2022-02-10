@@ -45,28 +45,28 @@ export default function LandingPage() {
     "https://ik.imagekit.io/funcboxImages/LandingPage_assets/Group_238_WAVuVoX6QBy.png?updatedAt=1635786962987";
 
 
-   
+
   useEffect(()=>{
     var frameNumber = 0;
     var playbackConst = 1200;
     var setHeight = document.getElementById("set-height");
-    var vid = document.getElementById('v1'); 
+    var vid = document.getElementById('v1');
 
     vid.addEventListener('loadedmetadata', function(){
         setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
     });
 
-    function scrollPlay(){  
+    function scrollPlay(){
       var frameNumber  = window.pageYOffset/playbackConst;
       vid.currentTime  = frameNumber;
       window.requestAnimationFrame(scrollPlay);
     }
 
     window.requestAnimationFrame(scrollPlay);
-    
+
   },[])
 
-  
+
 
   return (
     <div>
