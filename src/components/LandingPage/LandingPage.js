@@ -6,6 +6,8 @@ import Navbar from "../Navbar/Navbar";
 import Container from "../FlippableCard/Container";
 import Ribbon from "./Ribbon";
 import Footer from "../Footer/Footer";
+import ImageSlider from "../carousel/ImageSlider";
+import { SLIDER_DATA } from "../carousel/SliderData";
 // import Monkey from "../../assets.monkey.png"
 // import Left from "../../assets.left.png"
 // import downArrow from './assets/downArrow.svg'
@@ -17,9 +19,9 @@ import Footer from "../Footer/Footer";
 
 export default function LandingPage() {
   const Monkey =
-		"https://ik.imagekit.io/funcboxImages/landing_page_monkey.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644310058601";
+    "https://ik.imagekit.io/funcboxImages/landing_page_monkey.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644310058601";
   const Left =
-		"https://ik.imagekit.io/funcboxImages/landing_page_box.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644310106601";
+    "https://ik.imagekit.io/funcboxImages/landing_page_box.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644310106601";
   const homepageimg =
     "https://ik.imagekit.io/funcboxImages/LandingPage_assets/homepageimg_eAE7Ev4l4.webp?updatedAt=1633350407186";
   const downArrow =
@@ -103,7 +105,7 @@ export default function LandingPage() {
             <img src={logo} alt="" />
           </div>
         </div>
-
+        <ImageSlider slides={SLIDER_DATA} />
         <Container />
         <div className="creativity_div">
           <h2>Why at an Early Age?</h2>
@@ -229,6 +231,7 @@ export default function LandingPage() {
             <img src={img2} alt="" />
           </div>
         </div> */}
+
         <Footer />
       </div>
     </div>
