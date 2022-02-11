@@ -40,14 +40,18 @@ function CarouselComp() {
 	return (
 		<div className="carouselSlider">
 			<div className="carouselSliderLeft" onClick={prevSlide}>
-				<IoIosArrowBack size={50} />
+				<IoIosArrowBack size={50} className="carouselSliderIcon" />
 			</div>
 
 			<div className="carouselSliderImages" style={cssProperties}>
 				{Cards.map((val, idx) => {
 					return (
 						<div
-							className={idx === centerSrc ? "active slide" : "slide"}
+							className={
+								idx === centerSrc
+									? "active carouselSliderImagesDiv"
+									: "carouselSliderImagesDiv"
+							}
 							key={idx}
 						>
 							{idx === centerSrc && (

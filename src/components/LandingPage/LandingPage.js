@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import "./LandingPage.css";
@@ -7,6 +7,7 @@ import Container from "../FlippableCard/Container";
 import Ribbon from "./Ribbon";
 import Footer from "../Footer/Footer";
 import Carousel from "./Carousel/CarouselComp";
+
 // import Monkey from "../../assets.monkey.png"
 // import Left from "../../assets.left.png"
 // import downArrow from './assets/downArrow.svg'
@@ -44,6 +45,26 @@ export default function LandingPage() {
 	const roadmap_pic4 =
 		"https://ik.imagekit.io/funcboxImages/LandingPage_assets/Group_238_WAVuVoX6QBy.png?updatedAt=1635786962987";
 
+	// useEffect(()=>{
+	//   var frameNumber = 0;
+	//   var playbackConst = 800;
+	//   var setHeight = document.getElementById("set-height");
+	//   var vid = document.getElementById('v1');
+	//
+	//   vid.addEventListener('loadedmetadata', function(){
+	//       setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
+	//   });
+	//
+	//   function scrollPlay(){
+	//     var frameNumber  = window.pageYOffset/playbackConst;
+	//     vid.currentTime  = frameNumber;
+	//     window.requestAnimationFrame(scrollPlay);
+	//   }
+	//
+	//   window.requestAnimationFrame(scrollPlay);
+	//
+	// },[])
+
 	return (
 		<div>
 			<Helmet>
@@ -63,8 +84,8 @@ export default function LandingPage() {
 			</Helmet>
 
 			<div className="landingPage__main">
+				<div id="top"></div>
 				<Navbar home_check={true} about_check={false} shop_check={false} />
-
 				<div className="Landing_container">
 					<div className="upper">
 						<div className="text">
@@ -83,7 +104,6 @@ export default function LandingPage() {
 						<img src={Monkey} alt="" className="right" />
 					</div>
 				</div>
-
 				{/* <div className="hero__section">
           <div className="hero__image">
             <img src={homepageimg} alt="" />
@@ -104,7 +124,37 @@ export default function LandingPage() {
 						<img src={logo} alt="" />
 					</div>
 				</div>
-
+				//{" "}
+				<div className="scrolling_vid">
+					// <div id="set-height"></div>
+					//{" "}
+					<div id="v0">
+						//{" "}
+						<div className="testing">
+							//{" "}
+							<a href="#top">
+								<button>Skip to top</button>
+							</a>
+							//{" "}
+							<a href="#bottom">
+								<button>Skip section</button>
+							</a>
+							//{" "}
+							<video tabindex="0" id="v1">
+								//{" "}
+								<source
+									type="video/mp4"
+									src="Videos/home_scrollvid.mp4"
+								></source>
+								//{" "}
+							</video>
+							//{" "}
+						</div>
+						//{" "}
+					</div>
+					//{" "}
+				</div>
+				<div id="bottom"></div>
 				<Ribbon color="#FFD830">
 					<p
 						className="ribbon_text carousel_text"
@@ -117,7 +167,6 @@ export default function LandingPage() {
 				</Ribbon>
 				<Carousel />
 				{/* <Container /> */}
-
 				<div className="creativity_div">
 					<h2>Why at an Early Age?</h2>
 					<div className="creativity_container">
@@ -141,7 +190,6 @@ export default function LandingPage() {
 						Buy Now
 					</Link>
 				</Ribbon>
-
 				<h2 className="roadmap_heading">
 					Teach Your Kid Concepts Like Never Before
 				</h2>
@@ -168,14 +216,12 @@ export default function LandingPage() {
 				{/* <div className="how__works">
           <img src={howWorks} alt="" />
         </div> */}
-
 				<Ribbon color="#FFC71C">
 					<p className="ribbon_text">Sign Up Today ! To Buy your own FuncBox</p>
 					<Link to="/signup" className="ribbon_button signup_button">
 						Sign Up
 					</Link>
 				</Ribbon>
-
 				<div className="caution_div">
 					<h2 className="caution_heading">
 						<img

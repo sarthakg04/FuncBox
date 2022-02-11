@@ -12,35 +12,32 @@
 }
 
 .carouselSliderLeft {
-	left: 35.5%;
+	left: 36%;
 }
 
 .carouselSliderRight {
 	right: 36%;
 }
 
-.carouselSliderImages {
-}
-
-.slide {
-}
-
-.slide.active {
+.carouselSliderImagesDiv {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* transition: all 1s linear; */
 }
 
 /* CarouselItem Component */
 .carouselSliderItem {
-  perspective: 1000px;
-	width: 100%;
+	perspective: 1000px;
+	width: 90%;
 	display: flex;
-	justify-content: space-between;
-	/* overflow: hidden; */
+	justify-content: center;
+	/* gap: 1rem; */
 }
 
 .carouselSliderItem > img {
-  height: 20rem;
+	height: 25vw;
 	transform-style: preserve-3d;
-  /* transition: all 1s linear; */
 }
 
 #carouselSliderItemLeftLeft {
@@ -55,7 +52,8 @@
 
 #carouselSliderItemCenter {
 	transform: scale(1.2);
-	margin: 0 3rem;
+	z-index: 10;
+	margin: 0 4rem;
 }
 
 #carouselSliderItemRight {
@@ -68,5 +66,76 @@
 	clip-path: url(#myCurve2);
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 1200px) {
+	.carouselSliderLeft {
+		left: 35%;
+	}
+
+	.carouselSliderRight {
+		right: 35%;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.carouselSliderLeft {
+		left: 33%;
+	}
+
+	.carouselSliderRight {
+		right: 33%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.carouselSliderLeft {
+		left: 28%;
+	}
+
+	.carouselSliderRight {
+		right: 28%;
+	}
+
+	.carouselSliderItem > img {
+		height: 35vw;
+	}
+
+	#carouselSliderItemLeftLeft {
+		display: none;
+	}
+
+	#carouselSliderItemRightRight {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.carouselSliderLeft {
+		left: 25%;
+	}
+
+	.carouselSliderRight {
+		right: 25%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.carouselSliderLeft {
+		left: 5%;
+	}
+
+	.carouselSliderRight {
+		right: 5%;
+	}
+
+	.carouselSliderItem > img {
+		height: 60vw;
+	}
+
+	#carouselSliderItemLeft {
+		display: none;
+	}
+
+	#carouselSliderItemRight {
+		display: none;
+	}
 }
