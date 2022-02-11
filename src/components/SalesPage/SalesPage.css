@@ -23,10 +23,6 @@
   /* max-width: 550px; */
 }
 
-.salesPage__main .hero__section .left__section .mobile_shop_div{
-  display: none;
-}
-
 /* .hero__section .left__section .sales_kid {
   position: absolute;
   left: 6vw;
@@ -35,7 +31,7 @@
 } */
 
 .salesPage__main .hero__section .right__section {
-  padding: 0 5vw 80px 0;
+  padding: 0 5vw 80px 5vw;
 }
 
 .salesPage__main .hero__section .right__section .title {
@@ -536,55 +532,32 @@
 
 @media (max-width: 767px) {
   .salesPage__main .features {
-    /* flex-direction: column; */
-    top: 0;
+    flex-direction: column;
+    top: -8vw;
   }
 
   .salesPage__main .features .feature {
-    /* margin-bottom: 16px; */
-    flex-direction: column;
+    margin-bottom: 16px;
   }
 
-  .salesPage__main .feature img {
-    margin-right: 0px;
-    width: 8vw;
-  } 
-  
-  .salesPage__main .feature p{
-    font-size: 2.5vw;
-  }
-
-  /* .salesPage__main .for__school .content {
+  .salesPage__main .for__school .content {
     margin: 32px auto;
-  } */
+  }
   
   .salesPage__main .hero__section {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  /* .salesPage__main .hero__section .left__section{
+  .salesPage__main .hero__section .left__section{
+    /* margin-bottom: 25px; */
     order: 2;
-  } */
-
-  .salesPage__main .hero__section .left__section .vector_bg{
-    /* width: 60vw;
-    top: 0;
-    left: 0; */
-    display: none;
   }
 
-  .salesPage__main .hero__section .left__section .mobile_shop_div{
-    display: block;
-    width: 100vw;
-    background-color: #ffd830;
-    height: 35vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #fff;
+  .salesPage__main .hero__section .left__section .vector_bg{
+    width: 60vw;
+    top: 0;
+    left: 0;
   }
   
   /* .hero__section .left__section .sales_kid {
@@ -595,8 +568,8 @@
   } */
 
   .salesPage__main .hero__section .right__section {
-    padding: 40px 8vw 40px 8vw;
-    /* order: 1; */
+    padding: 40px 8vw 20px 8vw;
+    order: 1;
   }
   
   .salesPage__main .hero__section .right__section .content {

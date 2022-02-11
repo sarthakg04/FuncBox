@@ -37,7 +37,6 @@
 	grid-template-columns: 5fr 3fr;
 	justify-content: space-between;
 	align-items: center;
-	/* background-color: #FFBF49; */
 }
 
 .landingPage__main .details .info {
@@ -54,49 +53,6 @@
 
 .landingPage__main .details .logo img {
 	width: 175px;
-}
-
-.landingPage__main .scrolling_vid{
-	position : relative;
-}
-
-#v0 {
-    position: sticky;
-    bottom: -6px;
-    right: 0;
-    width: 100%;
-}
-
-#v0 video{
-	width : 100%;
-}
-
-/* .testing{
-	position : relative;
-} */
-
-.testing button{
-	position: sticky;
-	top : 20px;
-	/* right : 100px; */
-	z-index: 99;
-	cursor: pointer;
-	border: 1px solid #fff;
-	background-color: transparent;
-	height: 30px;
-	width: 100px;
-	color: #fff;
-	font-size: 0.9em;
-	font-weight: bold;
-	/* box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6); */
-	margin-left: 10px;
-}
-
-.buttonssss{
-	position : sticky;
-	top : 10px;
-	right : 10px;
-	z-index : 4;
 }
 
 .landingPage__main .how__works {
@@ -243,10 +199,6 @@
 	right: 0;
 }
 @media (max-width: 1130px) {
-	.landingPage__main .scrolling_vid{
-		display: none;
-	}
-
 	.landingPage__main .hero__image img {
 		width: 68%;
 	}

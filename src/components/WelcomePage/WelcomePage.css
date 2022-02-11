@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap");
-
-a{
-  color: inherit;
-  text-decoration: inherit;
-}
 .welcome_container {
   width: 100vw;
   height: 90vh;
