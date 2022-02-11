@@ -1,28 +1,24 @@
 .ribbon {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	height: 70px;
-	margin: 40px 0;
+  height: 70px;
+  margin: 40px 0;
 }
 .ribbon_text {
-	font-size: min(23px, 4vw);
-	font-weight: 600;
-	color: white;
-	margin: 10px 30px;
-	max-width: 50%;
+  font-size: min(23px, 4vw);
+  font-weight: 600;
+  color: white;
+  margin: 10px 30px;
+  max-width: 50%;
 }
 .ribbon_button {
-	background-color: white;
-	font-size: min(23px, 4vw);
+  background-color: white;
+  font-size: min(23px, 4vw);
 
-	border-radius: 10px;
-	border: none;
-	outline: none;
-	padding: 10px;
-}
-
-.carousel_text {
-	max-width: 90% !important;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding: 10px;
 }
