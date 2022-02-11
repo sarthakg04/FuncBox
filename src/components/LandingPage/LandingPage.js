@@ -18,9 +18,9 @@ import Footer from "../Footer/Footer";
 
 export default function LandingPage() {
   const Monkey =
-		"https://ik.imagekit.io/funcboxImages/landing_page_monkey.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644310058601";
+    "https://ik.imagekit.io/funcboxImages/landing_page_monkey.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644310058601";
   const Left =
-		"https://ik.imagekit.io/funcboxImages/landing_page_box.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644310106601";
+    "https://ik.imagekit.io/funcboxImages/landing_page_box.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644310106601";
   const homepageimg =
     "https://ik.imagekit.io/funcboxImages/LandingPage_assets/homepageimg_eAE7Ev4l4.webp?updatedAt=1633350407186";
   const downArrow =
@@ -45,7 +45,6 @@ export default function LandingPage() {
     "https://ik.imagekit.io/funcboxImages/LandingPage_assets/Group_238_WAVuVoX6QBy.png?updatedAt=1635786962987";
 
 
-
   // useEffect(()=>{
   //   var frameNumber = 0;
   //   var playbackConst = 800;
@@ -65,8 +64,6 @@ export default function LandingPage() {
   //   window.requestAnimationFrame(scrollPlay);
   //
   // },[])
-
-
 
   return (
     <div>
@@ -89,7 +86,6 @@ export default function LandingPage() {
       <div className="landingPage__main">
         <div id="top"></div>
         <Navbar home_check={true} about_check={false} shop_check={false} />
-
         <div className="Landing_container">
           <div className="upper">
             <div className="text">
@@ -102,7 +98,6 @@ export default function LandingPage() {
               </Link>
             </div>
           </div>
-
           <div className="lower">
             <img src={Left} alt="" className="left" />
             <img src={Monkey} alt="" className="right" />
@@ -125,26 +120,55 @@ export default function LandingPage() {
             </strong>
           </div>
 
+
           <div className="logo">
             <img src={logo} alt="" />
           </div>
         </div>
 
-        // <div className="scrolling_vid">
-        //   <div id="set-height"></div>
-        //   <div id="v0">
-        //   <div className="testing">
-        //     <a href="#top"><button>Skip to top</button></a>
-        //     <a href="#bottom"><button>Skip section</button></a>
-        //     <video tabindex="0" id="v1" >
-        //         <source type='video/mp4' src="Videos/home_scrollvid.mp4"></source>
-        //     </video>
-        //   </div>
-        //   </div>
-        // </div>
-
+        {/* <div className="scrolling_vid">
+					 <div id="set-height"></div>
+					
+					<div id="v0">
+						
+						<div className="testing">
+							
+							<a href="#top">
+								<button>Skip to top</button>
+							</a>
+							
+							<a href="#bottom">
+								<button>Skip section</button>
+							</a>
+							
+							<video tabindex="0" id="v1">
+							
+								<source
+									type="video/mp4"
+									src="Videos/home_scrollvid.mp4"
+								></source>
+								
+							</video>
+							
+						</div>
+						
+					</div>
+					
+				</div> */}
         <div id="bottom"></div>
-        <Container />
+        <Ribbon color="#FFD830">
+          <p
+            className="ribbon_text carousel_text"
+            style={{ textAlign: "center", height: "fit-content" }}
+          >
+            {" "}
+            Build Games and Apps on the Concepts taught in your Classroom with
+            Coding
+          </p>
+        </Ribbon>
+        <Carousel />
+        {/* <Container /> */}
+
         <div className="creativity_div">
           <h2>Why at an Early Age?</h2>
           <div className="creativity_container">
