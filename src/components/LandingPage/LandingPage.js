@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useEffect} from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import "./LandingPage.css";
@@ -6,6 +6,7 @@ import Navbar from "../Navbar/Navbar";
 import Container from "../FlippableCard/Container";
 import Ribbon from "./Ribbon";
 import Footer from "../Footer/Footer";
+
 // import Monkey from "../../assets.monkey.png"
 // import Left from "../../assets.left.png"
 // import downArrow from './assets/downArrow.svg'
@@ -17,9 +18,9 @@ import Footer from "../Footer/Footer";
 
 export default function LandingPage() {
   const Monkey =
-    "https://ik.imagekit.io/FuncBoxImages/monkey_jVoJ2JX9D.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642427824992";
+		"https://ik.imagekit.io/funcboxImages/landing_page_monkey.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644310058601";
   const Left =
-    "https://ik.imagekit.io/FuncBoxImages/left_FXV9e7pqf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642427825253";
+		"https://ik.imagekit.io/funcboxImages/landing_page_box.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644310106601";
   const homepageimg =
     "https://ik.imagekit.io/funcboxImages/LandingPage_assets/homepageimg_eAE7Ev4l4.webp?updatedAt=1633350407186";
   const downArrow =
@@ -43,6 +44,30 @@ export default function LandingPage() {
   const roadmap_pic4 =
     "https://ik.imagekit.io/funcboxImages/LandingPage_assets/Group_238_WAVuVoX6QBy.png?updatedAt=1635786962987";
 
+
+
+  // useEffect(()=>{
+  //   var frameNumber = 0;
+  //   var playbackConst = 800;
+  //   var setHeight = document.getElementById("set-height");
+  //   var vid = document.getElementById('v1');
+  //
+  //   vid.addEventListener('loadedmetadata', function(){
+  //       setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
+  //   });
+  //
+  //   function scrollPlay(){
+  //     var frameNumber  = window.pageYOffset/playbackConst;
+  //     vid.currentTime  = frameNumber;
+  //     window.requestAnimationFrame(scrollPlay);
+  //   }
+  //
+  //   window.requestAnimationFrame(scrollPlay);
+  //
+  // },[])
+
+
+
   return (
     <div>
       <Helmet>
@@ -62,6 +87,7 @@ export default function LandingPage() {
       </Helmet>
 
       <div className="landingPage__main">
+        <div id="top"></div>
         <Navbar home_check={true} about_check={false} shop_check={false} />
 
         <div className="Landing_container">
@@ -104,6 +130,20 @@ export default function LandingPage() {
           </div>
         </div>
 
+        // <div className="scrolling_vid">
+        //   <div id="set-height"></div>
+        //   <div id="v0">
+        //   <div className="testing">
+        //     <a href="#top"><button>Skip to top</button></a>
+        //     <a href="#bottom"><button>Skip section</button></a>
+        //     <video tabindex="0" id="v1" >
+        //         <source type='video/mp4' src="Videos/home_scrollvid.mp4"></source>
+        //     </video>
+        //   </div>
+        //   </div>
+        // </div>
+
+        <div id="bottom"></div>
         <Container />
         <div className="creativity_div">
           <h2>Why at an Early Age?</h2>
