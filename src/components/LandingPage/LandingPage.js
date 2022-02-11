@@ -6,6 +6,7 @@ import Navbar from "../Navbar/Navbar";
 import Container from "../FlippableCard/Container";
 import Ribbon from "./Ribbon";
 import Footer from "../Footer/Footer";
+import FrontTable from "../FrontTable/FrontTable";
 // import Monkey from "../../assets.monkey.png"
 // import Left from "../../assets.left.png"
 // import downArrow from './assets/downArrow.svg'
@@ -122,6 +123,7 @@ export default function LandingPage() {
             />
           </div>
         </div>
+        
         <Ribbon color="#7bdc0096">
           <p className="ribbon_text"> Get your FuncBox Today ! Hurry</p>
           <Link to="/salespage" className="ribbon_button buy_now_button">
@@ -162,26 +164,22 @@ export default function LandingPage() {
             Sign Up
           </Link>
         </Ribbon>
-
         <div className="caution_div">
           <h2 className="caution_heading">
             <img
               style={{ margin: "10px", width: "30px" }}
               src="https://ik.imagekit.io/funcboxImages/LandingPage_assets/image_173_HVwwhVEcW.png?updatedAt=1640181516955"
               alt=""
-            />
+              />
             Caution we make your kid smarter!
           </h2>
-          <img
-            className="caution_table"
-            src="https://ik.imagekit.io/funcboxImages/LandingPage_assets/Group_322_SYX3ELAI4.png?updatedAt=1640182579849"
-            alt=""
-          />
-          <img
+          
+              <FrontTable/>
+          {/* <img
             className="children_image"
             src="https://ik.imagekit.io/funcboxImages/LandingPage_assets/PikPng_1_tzVajvGOH.png?updatedAt=1640181381233"
             alt=""
-          />
+          /> */}
         </div>
         {/* <div className="individuals">
           <div className="left__container">
