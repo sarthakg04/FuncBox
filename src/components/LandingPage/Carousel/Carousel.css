@@ -1,6 +1,8 @@
 .carouselSlider {
 	position: relative;
-	margin: 5rem 0;
+	margin: 10rem 0;
+	padding-right:1vw;
+	padding-left:1vw;
 }
 
 .carouselSliderLeft,
@@ -12,11 +14,11 @@
 }
 
 .carouselSliderLeft {
-	left: 36%;
+	left: 38%;
 }
 
 .carouselSliderRight {
-	right: 36%;
+	right: 38%;
 }
 
 .carouselSliderImagesDiv {
@@ -36,7 +38,7 @@
 }
 
 .carouselSliderItem > img {
-	height: 25vw;
+	height: 20vw;
 	transform-style: preserve-3d;
 }
 

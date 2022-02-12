@@ -76,7 +76,7 @@ export default function Footer() {
       />
 
       <div className="get_in_touch">
-        <div className="">Get in touch with us</div>
+        <div className="get_in_touch_text">Get in touch with us</div>
         <input
           type="email"
           value={getInTouchEmail}

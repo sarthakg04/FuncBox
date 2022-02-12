@@ -21,6 +21,9 @@
   width: 100%;
 }
 
+/* .get_in_touch_text{
+  margin-bottom:1rem;
+} */
 .get_in_touch {
   font-size: 20px;
   font-weight: bold;
@@ -108,9 +111,9 @@
 }
 
 .postcredit {
-  font-size: 20px;
-  font-weight: bold;
-  top: 710px;
+  font-size: 16px;
+  font-weight: normal;
+  top: 1rem;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -173,7 +176,7 @@
   .postcredit {
     top: 1320px;
     left: 50%;
-    font-size: 32px;
+    font-size: 28px;
     transform: translateX(-50%);
   }
 
@@ -224,7 +227,7 @@
   .postcredit {
     top: 1060px;
     left: 50%;
-    font-size: 28px;
+    font-size: 24px;
     transform: translateX(-50%);
   }
 
@@ -308,7 +311,7 @@
     top: 800px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 
