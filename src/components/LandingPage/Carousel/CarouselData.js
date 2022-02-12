@@ -1,0 +1,43 @@
+// Carousel Cards to Display
+export const Cards = [
+	{
+		imgSrc:
+			"https://ik.imagekit.io/funcboxImages/Cards_/A5_-_6__1__rnhsj_bkjTL.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644704705733",
+	},
+	{
+		imgSrc:
+			"https://ik.imagekit.io/funcboxImages/Cards_/A5_-_25__1__Df8wE0IDKA1g.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644704705349",
+	},
+	{
+		imgSrc:
+			"https://ik.imagekit.io/funcboxImages/Cards_/A5_-_225_Tqi7Nw-Dyh7o.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1644704704865",
+	},
+	{
+		imgSrc:
+			"https://ik.imagekit.io/funcboxImages/Cards_assets/photosynthesis_front_qYmpWCw3k.png?updatedAt=1636539897664",
+	},
+	{
+		imgSrc:
+			"https://ik.imagekit.io/funcboxImages/Cards_/A5_-_11_iQ8gidefAMkq.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644704704275",
+	},
+	{
+		imgSrc:
+			"https://ik.imagekit.io/funcboxImages/Cards_assets/cheesy_gupta_front_c1lxz-3la_k.png?updatedAt=1636540917483",
+	},
+	{
+		imgSrc:
+			"https://ik.imagekit.io/funcboxImages/Cards_assets/catch_me_front_360B1H129qwS.png?updatedAt=1636541172735",
+	},
+	{
+		imgSrc:
+			"https://ik.imagekit.io/funcboxImages/Cards_/A5_-_204_9JCO3qMSB6L.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644704704752",
+	},
+	{
+		imgSrc:
+			"https://ik.imagekit.io/funcboxImages/Cards_assets/mr_fraction_front_A-EJN82CT.png?updatedAt=1636555830945",
+	},
+	{
+		imgSrc:
+			"https://ik.imagekit.io/funcboxImages/Cards_/A5_-_238__2__iObSN8quBdtJ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644704703041",
+	},
+];

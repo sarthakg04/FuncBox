@@ -6,46 +6,36 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.background__img {
-  z-index: -1;
-}
 .salesPage__main .hero__section {
-  border-radius: 16px;
-  background: #ddd3abb9;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-gap: 32px;
-  margin: 12vh 10vw 12vh 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .salesPage__main .hero__section i {
   color: #f49365;
 }
 
-.salesPage__main .hero__section .left__section {
+.salesPage__main .hero__section .left__section .vector_bg{
   position: relative;
+  width: 39vw;
+  top: -2vw;
+  /* max-width: 550px; */
 }
 
-.hero__section .left__section img {
-  position: absolute;
-  left: 0%;
-  top: 50%;
-  transform: translate(-3%, -50%);
-  width: 25vw;
+.salesPage__main .hero__section .left__section .mobile_shop_div{
+  display: none;
 }
+
+/* .hero__section .left__section .sales_kid {
+  position: absolute;
+  left: 6vw;
+  width: 21vw;
+  top: 12vw;
+} */
 
 .salesPage__main .hero__section .right__section {
-  padding: 64px;
-  position: relative;
-}
-
-.salesPage__main .hero__section .right__section img {
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 45%;
+  padding: 0 5vw 80px 0;
 }
 
 .salesPage__main .hero__section .right__section .title {
@@ -53,14 +43,14 @@
 }
 
 .salesPage__main .hero__section .right__section .content {
-  position: relative;
-  z-index: 3;
-  font-size: 18px;
+  font-size: 1.3rem;
 }
 
 .salesPage__main .hero__section .right__section p {
   margin-bottom: 8px;
 }
+
+/* Features */
 
 .salesPage__main .features {
   padding: 16px 10%;
@@ -69,6 +59,8 @@
   align-items: center;
   background: #f2af27;
   margin-bottom: 32px;
+  position: relative;
+  top: -7vw;
 }
 
 .salesPage__main .feature {
@@ -362,6 +354,8 @@
 .contentt p {
   padding: 0 5%;
 }
+
+/* Media Queries */
 @media (max-width: 1099px) {
   .school_content img {
     width: 55%;
@@ -374,8 +368,9 @@
     margin-top: 5%;
   }
 }
-@media (max-width: 719px) {
-  .school_content img {
+
+@media (max-width: 719px){
+  .school_content img{
     width: 50%;
   }
   .contentt p {
@@ -385,6 +380,7 @@
     margin-top: 5%;
     font-size: 0.8rem;
   }
+
 }
 @media (max-width: 575px) {
   .school_content {
@@ -406,9 +402,13 @@
   .heading {
     font-size: 1.5rem;
   }
-}
 
-/* @media (max-width: 1292px){
+  .salesPage__main .features {
+    top: -15vw;
+  }
+}
+/* 
+@media (max-width: 1292px){
   .school_content img{
     clip-path: circle(100% at 10% 50%);
   }
@@ -443,19 +443,20 @@
   }
 } */
 
+
 @media (max-width: 1100px) {
   .salesPage__main .prices {
     margin: 3vw;
   }
-  .salesPage__main .hero__section .right__section img {
+  /* .salesPage__main .hero__section .right__section img {
     width: 60%;
-  }
-  .hero__section .left__section img {
+  } */
+  /* .hero__section .left__section img {
     position: relative;
     left: 10%;
     transform: translate(0%, -50%);
     width: 100%;
-  }
+  } */
 
   .salesPage__main .for__school .content {
     display: grid;
@@ -476,6 +477,18 @@
   }
   .background__img {
     width: 50%;
+  }
+  
+  .salesPage__main .hero__section .right__section .content {
+    font-size: 1.1rem;
+  }
+
+  .salesPage__main .hero__section .right__section {
+    padding: 0 5vw 60px 0;
+  }
+
+  .salesPage__main .hero__section .right__section .title {
+    margin-bottom: 25px;
   }
 }
 
@@ -498,6 +511,12 @@
   }
 }
 
+@media (max-width: 900px) {
+  .salesPage__main .hero__section .right__section .content {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 850px) {
   .salesPage__main .prices__heading p {
     margin: 16px;
@@ -509,35 +528,96 @@
     margin: auto;
     height: max-content;
   }
+
+  .salesPage__main .hero__section .right__section .title {
+    margin-bottom: 18px;
+  }
 }
 
 @media (max-width: 767px) {
   .salesPage__main .features {
-    flex-direction: column;
+    /* flex-direction: column; */
+    top: 0;
   }
 
   .salesPage__main .features .feature {
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
+    flex-direction: column;
   }
 
-  .salesPage__main .for__school .content {
-    margin: 32px auto;
+  .salesPage__main .feature img {
+    margin-right: 0px;
+    width: 8vw;
+  } 
+  
+  .salesPage__main .feature p{
+    font-size: 2.5vw;
   }
+
+  /* .salesPage__main .for__school .content {
+    margin: 32px auto;
+  } */
+  
+  .salesPage__main .hero__section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* .salesPage__main .hero__section .left__section{
+    order: 2;
+  } */
+
+  .salesPage__main .hero__section .left__section .vector_bg{
+    /* width: 60vw;
+    top: 0;
+    left: 0; */
+    display: none;
+  }
+
+  .salesPage__main .hero__section .left__section .mobile_shop_div{
+    display: block;
+    width: 100vw;
+    background-color: #ffd830;
+    height: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* .hero__section .left__section .sales_kid {
+    left: 2vw;
+    width: 45vw;
+    top: 17.5vw;
+    transform: rotate(2.5deg);
+  } */
+
+  .salesPage__main .hero__section .right__section {
+    padding: 40px 8vw 40px 8vw;
+    /* order: 1; */
+  }
+  
+  .salesPage__main .hero__section .right__section .content {
+    font-size: 1rem;
+  }
+
 }
 
 @media (max-width: 500px) {
-  .salesPage__main .hero__section {
+  /* .salesPage__main .hero__section {
     width: 90%;
     margin: 32px auto;
-  }
+  } */
 
-  .salesPage__main .hero__section .right__section {
+  /* .salesPage__main .hero__section .right__section {
     padding: 32px;
-  }
+  } */
 
-  .hero__section .left__section img {
+  /* .hero__section .left__section img {
     width: 75%;
-  }
+  } */
 
   .salesPage__main .prices {
     width: 85%;

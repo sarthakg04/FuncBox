@@ -16,8 +16,12 @@ export default function SalesPage() {
   const history = useHistory();
 
   const apiurl = process.env.REACT_APP_API_URL;
-  const kids =
-    "https://ik.imagekit.io/funcboxImages/SalesPage_assets/kids_KxFxgItfQ.png?updatedAt=1633370064495";
+  const bg_vector =
+    "https://ik.imagekit.io/funcboxImages/SalesPage_assets/Group_kid_vector_yezqXduLRFu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644256050892";
+  // const sales_kid =
+  //   "https://ik.imagekit.io/funcboxImages/SalesPage_assets/sales_kid_QRJFuXZku.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644236093789";
+  // const bg_vector =
+  //   "https://ik.imagekit.io/funcboxImages/SalesPage_assets/Vector_HFwi70V8r.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644236093280";
   const box2 =
     "https://ik.imagekit.io/funcboxImages/SalesPage_assets/box_image-removebg-preview_cF9UpW3ZWu7.png?updatedAt=1636629342285";
   const box =
@@ -123,22 +127,24 @@ export default function SalesPage() {
       <div className="salesPage__main">
         <div className="hero__section">
           <div className="left__section">
-            <img src={kids} alt="kids" />
+            <div className="mobile_shop_div">Shop</div>
+            <img src={bg_vector} alt="bg_vector" class="vector_bg"/>
+            {/* <img src={sales_kid} alt="kid" class="sales_kid"/> */}
           </div>
           <div className="right__section">
             <i className="fa-solid fa-cart-shopping" />
-            <img src={box2} alt="box" className="background__img" />
+            {/* <img src={box2} alt="box" className="background__img" /> */}
             <div className="content">
               <p className="title">
                 FuncBox is a box full of surprises which will teach you
-                education concepts and coding with a revolutionary twist.
+                educational concepts and coding with a revolutionary twist.
               </p>
               <p>
-                <i class="fas fa-chevron-right"></i> Perfect for age-group 6-14
+                <i class="fas fa-chevron-right"></i> Perfect for age-group 6-12
                 years.
               </p>
               <p>
-                <i class="fas fa-chevron-right"></i> Build your own fun game
+                <i class="fas fa-chevron-right"></i> Build your own fun games.
               </p>
               <p>
                 <i class="fas fa-chevron-right"></i> Learn to code and explore.

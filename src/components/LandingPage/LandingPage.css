@@ -31,19 +31,19 @@
 }
 
 .landingPage__main .details {
-	width: 70%;
-	margin: 100px auto;
+	width: 80%;
+	margin: 10vh auto;
 	display: grid;
-	grid-template-columns: 5fr 3fr;
-	justify-content: space-between;
 	align-items: center;
+	color: #FFCB42;
 }
 
 .landingPage__main .details .info {
 	font-style: normal;
-	font-weight: normal;
-	margin-left: 8vw;
-	font-size: 27px;
+	font-weight: 400;
+	margin-bottom: 5vh;
+	margin-left: 12vw;
+	font-size: 36px;
 	line-height: 34px;
 }
 

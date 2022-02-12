@@ -5,6 +5,7 @@
   font-style: normal;
   color: #202020;
   z-index: 1;
+  overflow: hidden;
 }
 
 .Main {

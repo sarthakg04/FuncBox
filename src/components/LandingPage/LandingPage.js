@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import "./LandingPage.css";
 import Navbar from "../Navbar/Navbar";
 import Container from "../FlippableCard/Container";
+import Example from "../VideoEmbed/Example";
 import Ribbon from "./Ribbon";
 import Footer from "../Footer/Footer";
+
+import FrontTable from "../FrontTable/FrontTable";
+
+import Carousel from "./Carousel/CarouselComp";
+
 // import Monkey from "../../assets.monkey.png"
 // import Left from "../../assets.left.png"
 // import downArrow from './assets/downArrow.svg'
@@ -17,9 +23,9 @@ import Footer from "../Footer/Footer";
 
 export default function LandingPage() {
   const Monkey =
-    "https://ik.imagekit.io/FuncBoxImages/monkey_jVoJ2JX9D.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642427824992";
+    "https://ik.imagekit.io/funcboxImages/landing_page_monkey.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644310058601";
   const Left =
-    "https://ik.imagekit.io/FuncBoxImages/left_FXV9e7pqf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642427825253";
+    "https://ik.imagekit.io/funcboxImages/landing_page_box.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644310106601";
   const homepageimg =
     "https://ik.imagekit.io/funcboxImages/LandingPage_assets/homepageimg_eAE7Ev4l4.webp?updatedAt=1633350407186";
   const downArrow =
@@ -43,6 +49,26 @@ export default function LandingPage() {
   const roadmap_pic4 =
     "https://ik.imagekit.io/funcboxImages/LandingPage_assets/Group_238_WAVuVoX6QBy.png?updatedAt=1635786962987";
 
+  // useEffect(()=>{
+  //   var frameNumber = 0;
+  //   var playbackConst = 800;
+  //   var setHeight = document.getElementById("set-height");
+  //   var vid = document.getElementById('v1');
+  //
+  //   vid.addEventListener('loadedmetadata', function(){
+  //       setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
+  //   });
+  //
+  //   function scrollPlay(){
+  //     var frameNumber  = window.pageYOffset/playbackConst;
+  //     vid.currentTime  = frameNumber;
+  //     window.requestAnimationFrame(scrollPlay);
+  //   }
+  //
+  //   window.requestAnimationFrame(scrollPlay);
+  //
+  // },[])
+
   return (
     <div>
       <Helmet>
@@ -62,8 +88,8 @@ export default function LandingPage() {
       </Helmet>
 
       <div className="landingPage__main">
+        <div id="top"></div>
         <Navbar home_check={true} about_check={false} shop_check={false} />
-
         <div className="Landing_container">
           <div className="upper">
             <div className="text">
@@ -82,7 +108,6 @@ export default function LandingPage() {
             <img src={Monkey} alt="" className="right" />
           </div>
         </div>
-
         {/* <div className="hero__section">
           <div className="hero__image">
             <img src={homepageimg} alt="" />
@@ -93,18 +118,57 @@ export default function LandingPage() {
         </div> */}
         <div className="details">
           <div className="info">
-            <strong>
-              Introduce your child to the world of Creative Thinking and Logic
-              Building
-            </strong>
+              Want To Make Your Kid A Problem Solver? 
           </div>
 
-          <div className="logo">
+          {/* <div className="logo">
             <img src={logo} alt="" />
-          </div>
+          </div> */}
         </div>
-
-        <Container />
+        <Example/>
+        {/* //{" "}
+				<div className="scrolling_vid">
+					// <div id="set-height"></div>
+					//{" "}
+					<div id="v0">
+						//{" "}
+						<div className="testing">
+							//{" "}
+							<a href="#top">
+								<button>Skip to top</button>
+							</a>
+							//{" "}
+							<a href="#bottom">
+								<button>Skip section</button>
+							</a>
+							//{" "}
+							<video tabindex="0" id="v1">
+								//{" "}
+								<source
+									type="video/mp4"
+									src="Videos/home_scrollvid.mp4"
+								></source>
+								//{" "}
+							</video>
+							//{" "}
+						</div>
+						//{" "}
+					</div>
+					//{" "}
+				</div> */}
+        <div id="bottom"></div>
+        <Ribbon color="#FFD830">
+          <p
+            className="ribbon_text carousel_text"
+            style={{ textAlign: "center", height: "fit-content" }}
+          >
+            {" "}
+            Build Games and Apps on the Concepts taught in your Classroom with
+            Coding
+          </p>
+        </Ribbon>
+        <Carousel />
+        {/* <Container /> */}
         <div className="creativity_div">
           <h2>Why at an Early Age?</h2>
           <div className="creativity_container">
@@ -122,13 +186,13 @@ export default function LandingPage() {
             />
           </div>
         </div>
+        
         <Ribbon color="#7bdc0096">
           <p className="ribbon_text"> Get your FuncBox Today ! Hurry</p>
           <Link to="/salespage" className="ribbon_button buy_now_button">
             Buy Now
           </Link>
         </Ribbon>
-
         <h2 className="roadmap_heading">
           Teach Your Kid Concepts Like Never Before
         </h2>
@@ -155,33 +219,28 @@ export default function LandingPage() {
         {/* <div className="how__works">
           <img src={howWorks} alt="" />
         </div> */}
-
         <Ribbon color="#FFC71C">
           <p className="ribbon_text">Sign Up Today ! To Buy your own FuncBox</p>
           <Link to="/signup" className="ribbon_button signup_button">
             Sign Up
           </Link>
         </Ribbon>
-
         <div className="caution_div">
           <h2 className="caution_heading">
             <img
               style={{ margin: "10px", width: "30px" }}
               src="https://ik.imagekit.io/funcboxImages/LandingPage_assets/image_173_HVwwhVEcW.png?updatedAt=1640181516955"
               alt=""
-            />
+              />
             Caution we make your kid smarter!
           </h2>
-          <img
-            className="caution_table"
-            src="https://ik.imagekit.io/funcboxImages/LandingPage_assets/Group_322_SYX3ELAI4.png?updatedAt=1640182579849"
-            alt=""
-          />
-          <img
+          
+              <FrontTable/>
+          {/* <img
             className="children_image"
             src="https://ik.imagekit.io/funcboxImages/LandingPage_assets/PikPng_1_tzVajvGOH.png?updatedAt=1640181381233"
             alt=""
-          />
+          /> */}
         </div>
         {/* <div className="individuals">
           <div className="left__container">

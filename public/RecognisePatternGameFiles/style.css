@@ -228,3 +228,20 @@ input[type=number] {
     color: #0038FF;
 }
 
+.retry_wrong, .retry_right{
+    position: absolute;
+    cursor: pointer;
+}
+
+.retry_wrong{
+    width: 10%;
+    left: 150px;
+    top: 400px;
+}
+
+.retry_right{
+    width: 8%;
+    left: 188px;
+    top: 490px;
+}
+
