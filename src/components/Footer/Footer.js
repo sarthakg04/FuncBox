@@ -128,13 +128,13 @@ export default function Footer() {
       </div>
 
       <div className="important_links">
-        <a href="https://www.funcbox.in/join.html">
+        <a href="https://forms.gle/WDWrH5zcF84aFaYN6">
           <div>Join our Team</div>
         </a>
-        <a href="https://www.funcbox.in/terms.html/">
+        <a href="https://www.funcbox.in/terms.html">
           <div>Terms</div>
         </a>
-        <a href="https://www.funcbox.in/privacy.html">
+        <a href="https://www.funcbox.in/terms.html">
           <div>Privacy</div>
         </a>
       </div>
