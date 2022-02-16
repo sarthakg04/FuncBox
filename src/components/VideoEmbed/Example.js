@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import VideoEmbed from "./VideoEmbed";
 function Example() {
@@ -5,7 +7,7 @@ function Example() {
     <div>
       <VideoEmbed
         color="#fff"
-        backgroundColor="#000"
+        backgroundColor="#fff"
       >
         <div class="container">
         <iframe

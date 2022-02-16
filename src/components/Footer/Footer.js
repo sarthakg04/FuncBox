@@ -69,14 +69,14 @@ export default function Footer() {
 
   return (
     <div className="footer">
-      <img
+      {/* <img
         className="footer__bg"
-        src="https://ik.imagekit.io/funcboxImages/footer_ZmbXGRfiv.png"
+        src="https://ik.imagekit.io/funcboxImages/image_288_1DiBd8v_PEE8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645042572237"
         alt=""
-      />
-
+      /> */}
+      <div className="full_footer">
       <div className="get_in_touch">
-        <div className="get_in_touch_text">Get in touch with us</div>
+        <div className="get_in_touch_text">Get in touch with us<br/><br/></div>
         <input
           type="email"
           value={getInTouchEmail}
@@ -92,58 +92,57 @@ export default function Footer() {
 
       <div className="home_store_school_blog">
         <Link to="/">
-          <div>Home</div>
+          <div>Home | </div>
         </Link>
         <Link to="/store">
-          <div>Store</div>
+          <div>Store | </div>
         </Link>
         <Link to="/school">
-          <div>School</div>
+          <div>School | </div>
         </Link>
         <Link to="/blogs">
-          <div>Blog</div>
+          <div>Blog | </div>
         </Link>
+        <a href="https://forms.gle/WDWrH5zcF84aFaYN6">
+          <div>Join our Team</div>
+        </a> 
+      
+      <div className="horizontal_rule">
+        </div>
+
+      
+
+      <div className="important_links">
+        <a href="https://www.funcbox.in/terms.html">
+          <div>Terms & Privacy</div>
+        </a>
       </div>
-
-      <div className="horizontal_line" />
-
+      </div>
       <div className="social_media">
         <a href="https://www.facebook.com/funcbox.edu/">
           <div>
-            <img src={fb} alt="" />
+            <img class="fb" src={fb} alt="" />
           </div>
         </a>
 
         <a href="https://www.linkedin.com/company/funcbox/">
           <div>
-            <img src={linked} alt="" />
+            <img class="ld" src={linked} alt="" />
           </div>
         </a>
 
         <a href="https://www.instagram.com/funcbox_official/">
           <div>
-            <img src={insta} alt="" />
+            <img class="ig" src={insta} alt="" />
           </div>
         </a>
       </div>
-
-      <div className="important_links">
-        <a href="https://forms.gle/WDWrH5zcF84aFaYN6">
-          <div>Join our Team</div>
-        </a>
-        <a href="https://www.funcbox.in/terms.html">
-          <div>Terms</div>
-        </a>
-        <a href="https://www.funcbox.in/terms.html">
-          <div>Privacy</div>
-        </a>
-      </div>
-
       <div className="postcredit">
         <a href="https://www.funcbox.in/TeamsPage">
           Made with <span>&#10084;</span> by FuncBox
         </a>
       </div>
+    </div>
     </div>
   );
 }

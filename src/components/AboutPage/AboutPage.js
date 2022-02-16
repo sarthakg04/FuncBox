@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet";
 import "./AboutPage.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import Yellowbg from "./assets/Yellowbg.png";
 import HowWeWork from "./HowWeWork";
 import { faqs } from "./FAQs";
 
@@ -12,11 +11,6 @@ import { faqs } from "./FAQs";
 // import roadmap from './assets/roadmap.webp'
 
 export default function AboutPage() {
-  const hero =
-    "https://ik.imagekit.io/funcboxImages/AboutPage_assets/hero_iVNs8MUzFqB.png?updatedAt=1633369545951";
-  const roadmap =
-    "https://ik.imagekit.io/funcboxImages/AboutPage_assets/roadmap_Lh7cVLgeYGE.png?updatedAt=1633369642977";
-
   const toggleMe = (idx) => {
     var dropdown = document.getElementsByClassName("question");
     for (let i = 0; i < dropdown.length; i++) {
@@ -63,11 +57,11 @@ export default function AboutPage() {
 			<div className="hero__section">
 				<div className="about_main_container">
 					<div className="about_container1">
-						<img className="yellowbg" src={Yellowbg} alt="bgimg" />
+						<img className="yellowbg" src="https://ik.imagekit.io/funcboxImages/Yellowbg_3fQeycethMjO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645030000836" alt="bgimg" />
 						<img
 							className="phoneimg"
               // src={Phoneimg}
-							src="https://ik.imagekit.io/funcboxImages/about_us_phone.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644314091870"
+							src="https://ik.imagekit.io/funcboxImages/Group_347_Rkkvzxdb3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645029860211"
 							alt="phone"
 						/>
 					</div>
