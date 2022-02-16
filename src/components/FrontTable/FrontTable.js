@@ -11,6 +11,10 @@ function FrontTable() {
     Aos.init({ duration: 1000 });
   }, []);
   return (
+    <div className="front_table1">
+    <section className="mob_table">
+      
+    </section>
     <div className="front_table">
       <table>
         <tr className="main">
@@ -126,6 +130,7 @@ function FrontTable() {
           </td>
         </tr>
       </table>
+    </div>
     </div>
   );
 }

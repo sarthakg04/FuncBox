@@ -7,15 +7,16 @@ function Example() {
         color="#fff"
         backgroundColor="#000"
       >
+        <div class="container">
         <iframe
-          width="700"
-          height="450"
+          class="responsive-iframe"
           src="https://www.youtube.com/embed/J8dkPzLnYys"
           title="FuncBox"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
+        </div>
       </VideoEmbed>
     </div>
   );

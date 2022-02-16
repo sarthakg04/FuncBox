@@ -170,7 +170,7 @@ export default function LandingPage() {
         <Carousel />
         {/* <Container /> */}
         <div className="creativity_div">
-          <h2>Why at an Early Age?</h2>
+          <h2 className="roadmap_heading">Why at an Early Age?</h2>
           <div className="creativity_container">
             <div className="creativity_text">
               <h2 className="creativity_text_heading">Creativity x Age</h2>
