@@ -2,15 +2,15 @@
 export const Cards = [
 	{
 		imgSrc:
-			"https://ik.imagekit.io/funcboxImages/Cards_/A5_-_6__1__rnhsj_bkjTL.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644704705733",
+			"https://ik.imagekit.io/funcboxImages/Cards_assets/lets_make_it_rain_front_-z4sZcdqS-BM.png?updatedAt=1636539041706",
 	},
 	{
 		imgSrc:
-			"https://ik.imagekit.io/funcboxImages/Cards_/A5_-_25__1__Df8wE0IDKA1g.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644704705349",
+			"https://ik.imagekit.io/funcboxImages/Cards_assets/solar_system_front_3mFURiBMJ.png?updatedAt=1636539541135",
 	},
 	{
 		imgSrc:
-			"https://ik.imagekit.io/funcboxImages/Cards_/A5_-_225_Tqi7Nw-Dyh7o.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1644704704865",
+			"https://ik.imagekit.io/funcboxImages/Cards_assets/trash_game_front_62lAIyvMw.png?updatedAt=1636539675076",
 	},
 	{
 		imgSrc:
@@ -18,7 +18,7 @@ export const Cards = [
 	},
 	{
 		imgSrc:
-			"https://ik.imagekit.io/funcboxImages/Cards_/A5_-_11_iQ8gidefAMkq.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644704704275",
+			"https://ik.imagekit.io/funcboxImages/Cards_assets/count_dracula_front_ayhrdKZuKVx.png?updatedAt=1636539989893",
 	},
 	{
 		imgSrc:
@@ -30,7 +30,7 @@ export const Cards = [
 	},
 	{
 		imgSrc:
-			"https://ik.imagekit.io/funcboxImages/Cards_/A5_-_204_9JCO3qMSB6L.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644704704752",
+			"https://ik.imagekit.io/funcboxImages/Cards_assets/shapez_front_uSDgWG6m-.png?updatedAt=1636541028835",
 	},
 	{
 		imgSrc:
@@ -38,6 +38,6 @@ export const Cards = [
 	},
 	{
 		imgSrc:
-			"https://ik.imagekit.io/funcboxImages/Cards_/A5_-_238__2__iObSN8quBdtJ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644704703041",
+			"https://ik.imagekit.io/funcboxImages/Cards_assets/hit_it_front_9qAYWpFzG8b.png?updatedAt=1636555979262",
 	},
 ];

@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet";
 import "./LandingPage.css";
 import Navbar from "../Navbar/Navbar";
 import Container from "../FlippableCard/Container";
-import Example from "../VideoEmbed/Example";
 import Ribbon from "./Ribbon";
 import Footer from "../Footer/Footer";
 
@@ -118,14 +117,16 @@ export default function LandingPage() {
         </div> */}
         <div className="details">
           <div className="info">
-              Want To Make Your Kid A Problem Solver? 
+            <strong>
+              Introduce your child to the world of Creative Thinking and Logic
+              Building
+            </strong>
           </div>
 
-          {/* <div className="logo">
+          <div className="logo">
             <img src={logo} alt="" />
-          </div> */}
+          </div>
         </div>
-        <Example/>
         {/* //{" "}
 				<div className="scrolling_vid">
 					// <div id="set-height"></div>

@@ -19,7 +19,9 @@
     "index.html": "/index.html"
   },
   "entrypoints": [
+
     "static/css/main.e94d6799.css",
     "static/js/main.9643fc9d.js"
+
   ]
 }
