@@ -171,11 +171,11 @@ export default function SalesPage() {
           </div>
         </div>
 
-        <div class="marquee">
+        {/* <div class="marquee">
           <marquee direction="left" height="100px">
             We are not accepting any orders Due to COVID-19 restrictions.
           </marquee>
-        </div>
+        </div> */}
 
         <div className="prices__heading">
           <h1>Our Plans</h1>

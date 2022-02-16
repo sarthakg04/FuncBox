@@ -1,14 +1,14 @@
 import React from "react";
 import "./howwework.css";
 
-import child from "./assets/child.png";
-import incredibles from "./assets/incredibles.png";
-import mypackage from "./assets/package.png";
-import parents from "./assets/parents.png";
-import rocket from "./assets/rocket.png";
-import van from "./assets/van.png";
-import Vector from "./assets/Vector.png";
-import Vector_center from "./assets/Vector_center.png";
+// import child from "./assets/child.png";
+// import incredibles from "./assets/incredibles.png";
+// import mypackage from "./assets/package.png";
+// import parents from "./assets/parents.png";
+// import rocket from "./assets/rocket.png";
+// import van from "./assets/van.png";
+// import Vector from "./assets/Vector.png";
+// import Vector_center from "./assets/Vector_center.png";
 
 
 
@@ -19,46 +19,46 @@ const HowWeWork = () => {
 
         <h1 className="heading">How we work</h1>
         <div className="Vector_center">
-          <img src={Vector_center} alt="" />
+          <img src="https://ik.imagekit.io/funcboxImages/Vector_center_zcq3tXrvw.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645030000593" alt="" />
         </div>
         <div className="Vector1">
-          <img src={Vector} alt="" />
+          <img src="https://ik.imagekit.io/funcboxImages/Vector_BYCDUiogb.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645030000316" alt="" />
         </div>
         <div className="Vector2">
-          <img src={Vector} alt="" />
+          <img src="https://ik.imagekit.io/funcboxImages/Vector_BYCDUiogb.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645030000316" alt="" />
         </div>
         <div className="Vector3">
-          <img src={Vector} alt="" />
+          <img src="https://ik.imagekit.io/funcboxImages/Vector_BYCDUiogb.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645030000316" alt="" />
         </div>
         <div className="Vector4">
-          <img src={Vector} alt="" />
+          <img src="https://ik.imagekit.io/funcboxImages/Vector_BYCDUiogb.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645030000316" alt="" />
         </div>
         <div className="Vector5">
-          <img src={Vector} alt="" />
+          <img src="https://ik.imagekit.io/funcboxImages/Vector_BYCDUiogb.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645030000316" alt="" />
         </div>
         <div className="Vector6">
-          <img src={Vector} alt="" />
+          <img src="https://ik.imagekit.io/funcboxImages/Vector_BYCDUiogb.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645030000316" alt="" />
         </div>
 
         {/* SIDE IMAGES */}
 
         <div className="child">
-          <img src={child} alt="" />
+          <img src="https://ik.imagekit.io/funcboxImages/child_Tl0vXWaP6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645029997785" alt="" />
         </div>
         <div className="incredibles">
-          <img src={incredibles} alt="" />
+          <img src="https://ik.imagekit.io/funcboxImages/incredibles_4J0jSyprT.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645029998128" alt="" />
         </div>
         <div className="mypackage">
-          <img src={mypackage} alt="" />
+          <img src="https://ik.imagekit.io/funcboxImages/package_SIdiLacRX7uF.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645029998977" alt="" />
         </div>
         <div className="parents">
-          <img src={parents} alt="" />
+          <img src="https://ik.imagekit.io/funcboxImages/parents_DqGLTiP9b.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645029999154" alt="" />
         </div>
         <div className="rocket">
-          <img src={rocket} alt="" />
+          <img src="https://ik.imagekit.io/funcboxImages/rocket_GUYFaAeiG.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645029999796" alt="" />
         </div>
         <div className="van">
-          <img src={van} alt="" />
+          <img src="https://ik.imagekit.io/funcboxImages/van_pt3a3bgKkzW4.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645030000119" alt="" />
         </div>
 
         {/* STEPS IMAGES */}
