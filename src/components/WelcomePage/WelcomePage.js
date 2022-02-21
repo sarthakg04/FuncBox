@@ -4,6 +4,8 @@ import { useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import Navbar from "../Navbar/Navbar";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 import "./WelcomePage.css";
 function WelcomePage() {
   const { isAuthenticated, token, username, avatar } = useAuth();
@@ -93,9 +95,9 @@ function WelcomePage() {
         <div className="avatar_container">
           <div className="avatar">
             <div className="avatar_bg">
-              <img className="avatar_img" src={avatar || ""} alt="" />
+              <LazyLoadImage className="avatar_img" src={avatar || ""} alt="" />
             </div>
-            <img
+            <LazyLoadImage
               className="overlay"
               src="https://ik.imagekit.io/funcboxImages/Dashboard/Exploding_Confetti__1__X1vWXVMPj.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1642926505886"
               // src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/overlay_-HxVdV70h.png"
@@ -110,17 +112,17 @@ function WelcomePage() {
             </p>
           </div>
           <div className="background">
-            <img
+            <LazyLoadImage
               className="blackp"
               src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/blackpanther_IIsrNDKinTc.png?updatedAt=1633929505144"
               alt=""
             />
-            <img
+            <LazyLoadImage
               className="ironman"
               src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/ironman_b8QMYdK4J.png?updatedAt=1633929505421"
               alt=""
             />
-            <img
+            <LazyLoadImage
               className="captain"
               src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/captainamerica_r8qZ89EV4SS.png?updatedAt=1633929505505"
               alt=""
@@ -129,29 +131,31 @@ function WelcomePage() {
         </div>
         <div className="ipad_container">
           <div className="ipad">
-            <img
+            <LazyLoadImage
               className="ipad_img"
               src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/ipad-2_h7OOMRZo9Xt.svg?updatedAt=1633930967057"
               alt=""
             />
             <div className="ipad_screen">
               <div className="logo_div">
-                <img
+                <LazyLoadImage
                   src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/logo_avuKvwCSN.png?updatedAt=1633931799519"
                   alt=""
                 />
               </div>
               <div className="game_thumbnails">
-                {games.length > 0
+                {games && games.length > 0
                   ? games.map((game) => (
                       <Link
-                        key={`game-${game.gname}`}
+                        key={`game-${game?.gname}`}
                         className="thumbnail_link"
                         to={game?.route}
                       >
                         <div className="thumbnail">
                           <div className="thumb_image">
-                            <img src={`${game.icon || placeholder}`} alt="" />
+
+                            <LazyLoadImage src={`${game.icon || placeholder}`} alt="" />
+
                           </div>
                           <p className="game_title">{game?.gname}</p>
                         </div>
@@ -160,7 +164,7 @@ function WelcomePage() {
                   : ""}
               </div>
               <Link to="/">
-                <img
+                <LazyLoadImage
                   className="home_btn"
                   src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/home_btn_nQkUZBwimU0.png?updatedAt=1633935913014"
                   alt=""
