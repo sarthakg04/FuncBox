@@ -13,6 +13,8 @@ import { useHistory } from "react-router-dom";
 import "./UserNavbar.css";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 import {
   setAuth,
@@ -46,7 +48,7 @@ export default function UserNavbar(props) {
   return (
     <div>
       <div className="userNavbar">
-        <img src={logo} alt="logo" className="logo" />
+        <LazyLoadImage src={logo} alt="logo" className="logo" />
         <div className="optionBox">
           <div
             style={{ display: isAuthenticated ? "block" : "none" }}
@@ -67,7 +69,7 @@ export default function UserNavbar(props) {
             style={{ display: isAuthenticated ? "none" : "block" }}
             className="loginOption"
           >
-            <img src={login} alt="logout" />
+            <LazyLoadImage src={login} alt="logout" />
           </div>
         </div>
       </div>

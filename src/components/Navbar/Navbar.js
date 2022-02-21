@@ -26,6 +26,8 @@ import useAuth from "../../hooks/useAuth";
 import { useDispatch, useSelector } from "react-redux";
 import { setAuth, setToken, setUser, setProfile } from "../../auth/authslice";
 import { toast } from "react-toastify";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 export default function Navbar(props) {
 	const history = useHistory();
@@ -78,7 +80,7 @@ export default function Navbar(props) {
 			<div className="navigation">
 				<div className="logo__container">
 					<Link to="/">
-						<img src={funcbox} alt="logo" className="logo" />
+						<LazyLoadImage src={funcbox} alt="logo" className="logo" />
 					</Link>
 					{/* <Link to="/">
             <h1 className="text">FuncBox</h1>
@@ -86,7 +88,7 @@ export default function Navbar(props) {
 				</div>
 				<div className="link">
 					<Link to="/">
-						<img
+						<LazyLoadImage
 							className="home_image"
 							src={home_check ? home_current : home}
 							alt="home"
@@ -94,17 +96,17 @@ export default function Navbar(props) {
 						<p>Home</p>
 					</Link>
 					<Link to="/AboutPage">
-						<img src={about_check ? about_current : about} alt="about" />
+						<LazyLoadImage src={about_check ? about_current : about} alt="about" />
 						<p>About</p>
 					</Link>
 					<Link to="/SalesPage">
-						<img src={shop_check ? shop_current : shop} alt="shop" />
+						<LazyLoadImage src={shop_check ? shop_current : shop} alt="shop" />
 						<p>Shop</p>
 					</Link>
 					{isAuthenticated ? (
 						<div className="dropdown">
 							<button class="dropbtn">
-								<img
+								<LazyLoadImage
 									id="dropbtn_avatar"
 									src={avatar || "avatars/Tiger.png"}
 									alt="Avatar"
@@ -123,7 +125,7 @@ export default function Navbar(props) {
 						</div>
 					) : (
 						<Link to="/Login">
-							<img src={login_check ? login_current : login} alt="login" />
+							<LazyLoadImage src={login_check ? login_current : login} alt="login" />
 							<p>Login</p>
 						</Link>
 					)}
@@ -134,22 +136,22 @@ export default function Navbar(props) {
 			</div>
 			<div className="mobile__links" id="mobile__links">
 				<Link to="/">
-					<img src={home_check ? home_current : home} alt="home" />
+					<LazyLoadImage src={home_check ? home_current : home} alt="home" />
 					<p>Home</p>
 				</Link>
 				<Link to="/AboutPage">
-					<img src={about_check ? about_current : about} alt="about" />
+					<LazyLoadImage src={about_check ? about_current : about} alt="about" />
 					<p>About</p>
 				</Link>
 
 				<Link to="/SalesPage">
-					<img src={shop_check ? shop_current : shop} alt="shop" />
+					<LazyLoadImage src={shop_check ? shop_current : shop} alt="shop" />
 					<p>Shop</p>
 				</Link>
 				{isAuthenticated ? (
 					<div className="dropdown">
 						<button class="dropbtn">
-							<img
+							<LazyLoadImage
 								id="dropbtn_avatar"
 								src={avatar || "avatars/Tiger.png"}
 								alt="Avatar"
@@ -168,13 +170,13 @@ export default function Navbar(props) {
 					</div>
 				) : (
 					<Link to="/Login">
-						<img src={login_check ? login_current : login} alt="login" />
+						<LazyLoadImage src={login_check ? login_current : login} alt="login" />
 						<p>Login</p>
 					</Link>
 				)}
 				{/*<Link to="/Login">
               <a href="#">
-                  <img src={login} alt="login"/>
+                  <LazyLoadImage src={login} alt="login"/>
                   <p>Login</p>
               </a>
             </Link>*/}
