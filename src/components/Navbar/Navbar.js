@@ -1,11 +1,11 @@
 import React from "react";
 import {
-	Link,
-	BrowserRouter as Router,
-	Route,
-	Switch,
-	Redirect,
-	useLocation,
+  Link,
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+  useLocation,
 } from "react-router-dom";
 import "./Navbar.css";
 
@@ -30,50 +30,51 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
 export default function Navbar(props) {
-	const history = useHistory();
-	const dispatch = useDispatch();
-	const apiurl = process.env.REACT_APP_API_URL;
-	// const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
-	// const username = useSelector((state) => state.auth.username);
-	const { isAuthenticated, username, avatar } = useAuth();
+  const history = useHistory();
+  const dispatch = useDispatch();
+  const apiurl = process.env.REACT_APP_API_URL;
+  // const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  // const username = useSelector((state) => state.auth.username);
+  const { isAuthenticated, username, avatar } = useAuth();
 
-	// const about = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/about_Kyi50psMa.png?updatedAt=1633368974643'
-	// const about_current = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/about_current_ZVYrXtG6O.png?updatedAt=1633351778318'
-	// const home = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/home_TNxeUkAI2oj.png?updatedAt=1633369073852'
-	// const home_current = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/home_current_7g2zrFN17.png?updatedAt=1633351779952'
-	// const logo = "./assets/logo.png";
-	// const login = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/login_OS_KcRsPy.png?updatedAt=1633368915926'
-	// const shop = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/shop_evdV8iuaBL0.png?updatedAt=1633369146900'
-	// const shop_current = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/shop_current_zUZ1xbFqsMTZ.png?updatedAt=1633351783276'
+  // const about = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/about_Kyi50psMa.png?updatedAt=1633368974643'
+  // const about_current = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/about_current_ZVYrXtG6O.png?updatedAt=1633351778318'
+  // const home = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/home_TNxeUkAI2oj.png?updatedAt=1633369073852'
+  // const home_current = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/home_current_7g2zrFN17.png?updatedAt=1633351779952'
+  // const logo = "./assets/logo.png";
+  // const login = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/login_OS_KcRsPy.png?updatedAt=1633368915926'
+  // const shop = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/shop_evdV8iuaBL0.png?updatedAt=1633369146900'
+  // const shop_current = 'https://ik.imagekit.io/funcboxImages/Navbar_assets/shop_current_zUZ1xbFqsMTZ.png?updatedAt=1633351783276'
 
-	//   console.log(props);
-	const { home_check, about_check, shop_check, login_check } = props;
-	function toggleNav() {
-		document.getElementById("mobile__links").classList.toggle("active");
-	}
-	const handleLogout = async () => {
-		dispatch(setAuth({ isAuthenticated: false }));
-		dispatch(setUser({ username: "", userid: "" }));
-		dispatch(setProfile({ avatar: "" }));
-		dispatch(setToken({ token: "" }));
-		const res = await fetch(
-			`${
-				process.env.NODE_ENV === "development"
-					? apiurl
-					: "https://server.funcbox.in"
-			}/logout`,
-			{
-				credentials: "include",
-				method: "GET",
-			}
-		);
-		toast.success("You are logged out");
-		history.push("/");
-	};
+  //   console.log(props);
+  const { home_check, about_check, shop_check, login_check } = props;
+  function toggleNav() {
+    document.getElementById("mobile__links").classList.toggle("active");
+  }
+  const handleLogout = async () => {
+    dispatch(setAuth({ isAuthenticated: false }));
+    dispatch(setUser({ username: "", userid: "" }));
+    dispatch(setProfile({ avatar: "" }));
+    dispatch(setToken({ token: "" }));
+    const res = await fetch(
+      `${
+        process.env.NODE_ENV === "development"
+          ? apiurl
+          : "https://server.funcbox.in"
+      }/logout`,
+      {
+        credentials: "include",
+        method: "GET",
+      }
+    );
+    toast.success("You are logged out");
+    history.push("/");
+  };
 
-	const shortName = (name) => {
-		return name.substring(0, name.indexOf(" "));
-	};
+  const shortName = (name) => {
+    return name.substring(0, name.indexOf(" "));
+  };
+
 
 	return (
 		<div>
@@ -175,12 +176,13 @@ export default function Navbar(props) {
 					</Link>
 				)}
 				{/*<Link to="/Login">
+
               <a href="#">
                   <LazyLoadImage src={login} alt="login"/>
                   <p>Login</p>
               </a>
             </Link>*/}
-			</div>
-		</div>
-	);
+      </div>
+    </div>
+  );
 }
