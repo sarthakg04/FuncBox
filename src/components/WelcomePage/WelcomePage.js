@@ -87,91 +87,91 @@ function WelcomePage() {
     return <div>loading....</div>;
   }
   return (
-    <>
-      <Navbar />
-      <div className="welcome_container">
-        <div className="avatar_container">
-          <div className="avatar">
-            <div className="avatar_bg">
-              <img className="avatar_img" src={avatar || ""} alt="" />
-            </div>
-            <img
-              className="overlay"
-              src="https://ik.imagekit.io/funcboxImages/Dashboard/Exploding_Confetti__1__X1vWXVMPj.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1642926505886"
-              // src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/overlay_-HxVdV70h.png"
-              height="450px"
-              width="450px"
-              alt=""
-            />
-            <p className="welcome__username">Welcome</p>
-            <p className="welcome__username">{username}</p>
-            <p id="small_screen_msg">
-              To get access to the code editor. Please join from a pc or laptop
-            </p>
-          </div>
-          <div className="background">
-            <img
-              className="blackp"
-              src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/blackpanther_IIsrNDKinTc.png?updatedAt=1633929505144"
-              alt=""
-            />
-            <img
-              className="ironman"
-              src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/ironman_b8QMYdK4J.png?updatedAt=1633929505421"
-              alt=""
-            />
-            <img
-              className="captain"
-              src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/captainamerica_r8qZ89EV4SS.png?updatedAt=1633929505505"
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="ipad_container">
-          <div className="ipad">
-            <img
-              className="ipad_img"
-              src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/ipad-2_h7OOMRZo9Xt.svg?updatedAt=1633930967057"
-              alt=""
-            />
-            <div className="ipad_screen">
-              <div className="logo_div">
-                <img
-                  src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/logo_avuKvwCSN.png?updatedAt=1633931799519"
-                  alt=""
-                />
-              </div>
-              <div className="game_thumbnails">
-                {games.length > 0
-                  ? games.map((game) => (
-                      <Link
-                        key={`game-${game.gname}`}
-                        className="thumbnail_link"
-                        to={game?.route}
-                      >
-                        <div className="thumbnail">
-                          <div className="thumb_image">
-                            <img src={`${game.icon || placeholder}`} alt="" />
-                          </div>
-                          <p className="game_title">{game?.gname}</p>
-                        </div>
-                      </Link>
-                    ))
-                  : ""}
-              </div>
-              <Link to="/">
-                <img
-                  className="home_btn"
-                  src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/home_btn_nQkUZBwimU0.png?updatedAt=1633935913014"
-                  alt=""
-                />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+		<>
+			<Navbar />
+			<div className="welcome_container">
+				<div className="avatar_container">
+					<div className="avatar">
+						<div className="avatar_bg">
+							<img className="avatar_img" src={avatar || ""} alt="" />
+						</div>
+						<img
+							className="overlay"
+							src="https://ik.imagekit.io/funcboxImages/exploding_confetti_transparent.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1645435797106"
+							// src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/overlay_-HxVdV70h.png"
+							height="450px"
+							width="450px"
+							alt=""
+						/>
+						<p className="welcome__username">Welcome</p>
+						<p className="welcome__username">{username}</p>
+						<p id="small_screen_msg">
+							To get access to the code editor. Please join from a pc or laptop
+						</p>
+					</div>
+					<div className="background">
+						<img
+							className="blackp"
+							src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/blackpanther_IIsrNDKinTc.png?updatedAt=1633929505144"
+							alt=""
+						/>
+						<img
+							className="ironman"
+							src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/ironman_b8QMYdK4J.png?updatedAt=1633929505421"
+							alt=""
+						/>
+						<img
+							className="captain"
+							src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/captainamerica_r8qZ89EV4SS.png?updatedAt=1633929505505"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div className="ipad_container">
+					<div className="ipad">
+						<img
+							className="ipad_img"
+							src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/ipad-2_h7OOMRZo9Xt.svg?updatedAt=1633930967057"
+							alt=""
+						/>
+						<div className="ipad_screen">
+							<div className="logo_div">
+								<img
+									src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/logo_avuKvwCSN.png?updatedAt=1633931799519"
+									alt=""
+								/>
+							</div>
+							<div className="game_thumbnails">
+								{games.length > 0
+									? games.map((game) => (
+											<Link
+												key={`game-${game.gname}`}
+												className="thumbnail_link"
+												to={game?.route}
+											>
+												<div className="thumbnail">
+													<div className="thumb_image">
+														<img src={`${game.icon || placeholder}`} alt="" />
+													</div>
+													<p className="game_title">{game?.gname}</p>
+												</div>
+											</Link>
+									  ))
+									: ""}
+							</div>
+							<Link to="/">
+								<img
+									className="home_btn"
+									src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/home_btn_nQkUZBwimU0.png?updatedAt=1633935913014"
+									alt=""
+								/>
+							</Link>
+						</div>
+					</div>
+				</div>
+			</div>
+		</>
+	);
 }
 
 export default WelcomePage;
