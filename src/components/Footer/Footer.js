@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { toast } from "react-toastify";
 import { parse } from "qs";
@@ -69,7 +70,7 @@ export default function Footer() {
 
   return (
     <div className="footer">
-      {/* <img
+      {/* <LazyLoadImage
         className="footer__bg"
         src="https://ik.imagekit.io/funcboxImages/image_288_1DiBd8v_PEE8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645042572237"
         alt=""
@@ -121,19 +122,19 @@ export default function Footer() {
       <div className="social_media">
         <a href="https://www.facebook.com/funcbox.edu/">
           <div>
-            <img class="fb" src={fb} alt="" />
+            <LazyLoadImage class="fb" src={fb} alt="" />
           </div>
         </a>
 
         <a href="https://www.linkedin.com/company/funcbox/">
           <div>
-            <img class="ld" src={linked} alt="" />
+            <LazyLoadImage class="ld" src={linked} alt="" />
           </div>
         </a>
 
         <a href="https://www.instagram.com/funcbox_official/">
           <div>
-            <img class="ig" src={insta} alt="" />
+            <LazyLoadImage class="ig" src={insta} alt="" />
           </div>
         </a>
       </div>
