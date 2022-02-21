@@ -142,16 +142,16 @@ function WelcomePage() {
                 />
               </div>
               <div className="game_thumbnails">
-                {games.length > 0
+                {games && games.length > 0
                   ? games.map((game) => (
                       <Link
-                        key={`game-${game.gname}`}
+                        key={`game-${game?.gname}`}
                         className="thumbnail_link"
                         to={game?.route}
                       >
                         <div className="thumbnail">
                           <div className="thumb_image">
-                            <img src={`${game.icon || placeholder}`} alt="" />
+                            <img src={`${game?.icon || placeholder}`} alt="" />
                           </div>
                           <p className="game_title">{game?.gname}</p>
                         </div>
