@@ -40,7 +40,7 @@ import Preview from "./Preview/Preview";
 import HitIt from "./Games/HitIt/HitIt";
 import TrashGame from "./Games/TrashGame/TrashGame";
 import CashierGame from "./Games/CashierGame/CashierGame";
-import MeltTheIce from "./Games/MeltTheIceGame/MeltTheIce";
+import PhotosynthesisGame from "./Games/PhotosynthesisGame/PhotosynthesisGame";
 import RecycleIt from "./Games/RecycleIt/RecycleIt";
 import useAuth from "../hooks/useAuth";
 import FlippableCard from "./FlippableCard/FlippableCard";
@@ -150,7 +150,7 @@ function App() {
           <Route exact path="/Calculator" component={Calculator} />
           <Route exact path="/FlappyGame" component={FlappyGame} />
           <Route exact path="/CashierGame" component={CashierGame} />
-          <Route exact path="/MeltTheIce" component={MeltTheIce} />
+          <Route exact path="/Photosynthesis" component={PhotosynthesisGame} />
           <Route exact path="/mrfraction" component={Mrfraction} />
           <Route
             exact
@@ -198,7 +198,6 @@ function App() {
           <Route exact path="/Calculator" component={Calculator} />
           <Route exact path="/FlappyGame" component={FlappyGame} />
           <Route exact path="/CashierGame" component={CashierGame} />
-          <Route exact path="/MeltTheIce" component={MeltTheIce} />
           <Route exact path="/mrfraction" component={Mrfraction} />
           <Route exact path="/BasketballGame" component={BasketballGame} />
           <Route
