@@ -26,6 +26,8 @@ import useAuth from "../../hooks/useAuth";
 import { useDispatch, useSelector } from "react-redux";
 import { setAuth, setToken, setUser, setProfile } from "../../auth/authslice";
 import { toast } from "react-toastify";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 export default function Navbar(props) {
   const history = useHistory();
@@ -73,108 +75,110 @@ export default function Navbar(props) {
     return name.substring(0, name.indexOf(" "));
   };
 
-  return (
-    <div>
-      <div className="navigation">
-        <div className="logo__container">
-          <Link to="/">
-            <img src={funcbox} alt="logo" className="logo" />
-          </Link>
-          {/* <Link to="/">
+
+	return (
+		<div>
+			<div className="navigation">
+				<div className="logo__container">
+					<Link to="/">
+						<LazyLoadImage src={funcbox} alt="logo" className="logo" />
+					</Link>
+					{/* <Link to="/">
             <h1 className="text">FuncBox</h1>
           </Link> */}
-        </div>
-        <div className="link">
-          <Link to="/">
-            <img
-              className="home_image"
-              src={home_check ? home_current : home}
-              alt="home"
-            />
-            <p>Home</p>
-          </Link>
-          <Link to="/AboutPage">
-            <img src={about_check ? about_current : about} alt="about" />
-            <p>About</p>
-          </Link>
-          <Link to="/SalesPage">
-            <img src={shop_check ? shop_current : shop} alt="shop" />
-            <p>Shop</p>
-          </Link>
-          {isAuthenticated ? (
-            <div className="dropdown">
-              <button className="dropbtn">
-                <img
-                  id="dropbtn_avatar"
-                  src={avatar || "avatars/Tiger.png"}
-                  alt="Avatar"
-                />
-                <span>{shortName(username)}</span>
-              </button>
-              <div className="dropdown-content">
-                <Link to="/welcome">Dashboard</Link>
-                <Link to="/editprofile">Edit Profile</Link>
-                <Link to="/subscriptions">Purchases</Link>
-                <Link to="#">Change password</Link>
-                <Link to="#" onClick={handleLogout}>
-                  Logout
-                </Link>
-              </div>
-            </div>
-          ) : (
-            <Link to="/Login">
-              <img src={login_check ? login_current : login} alt="login" />
-              <p>Login</p>
-            </Link>
-          )}
-        </div>
-        <div className="bars">
-          <i className="fas fa-bars" onClick={toggleNav}></i>
-        </div>
-      </div>
-      <div className="mobile__links" id="mobile__links">
-        <Link to="/">
-          <img src={home_check ? home_current : home} alt="home" />
-          <p>Home</p>
-        </Link>
-        <Link to="/AboutPage">
-          <img src={about_check ? about_current : about} alt="about" />
-          <p>About</p>
-        </Link>
+				</div>
+				<div className="link">
+					<Link to="/">
+						<LazyLoadImage
+							className="home_image"
+							src={home_check ? home_current : home}
+							alt="home"
+						/>
+						<p>Home</p>
+					</Link>
+					<Link to="/AboutPage">
+						<LazyLoadImage src={about_check ? about_current : about} alt="about" />
+						<p>About</p>
+					</Link>
+					<Link to="/SalesPage">
+						<LazyLoadImage src={shop_check ? shop_current : shop} alt="shop" />
+						<p>Shop</p>
+					</Link>
+					{isAuthenticated ? (
+						<div className="dropdown">
+							<button class="dropbtn">
+								<LazyLoadImage
+									id="dropbtn_avatar"
+									src={avatar || "avatars/Tiger.png"}
+									alt="Avatar"
+								/>
+								<span>{shortName(username)}</span>
+							</button>
+							<div class="dropdown-content">
+								<Link to="/welcome">Dashboard</Link>
+								<Link to="/editprofile">Edit Profile</Link>
+								<Link to="/subscriptions">Purchases</Link>
+								<Link to="#">Change password</Link>
+								<Link to="#" onClick={handleLogout}>
+									Logout
+								</Link>
+							</div>
+						</div>
+					) : (
+						<Link to="/Login">
+							<LazyLoadImage src={login_check ? login_current : login} alt="login" />
+							<p>Login</p>
+						</Link>
+					)}
+				</div>
+				<div className="bars">
+					<i className="fas fa-bars" onClick={toggleNav}></i>
+				</div>
+			</div>
+			<div className="mobile__links" id="mobile__links">
+				<Link to="/">
+					<LazyLoadImage src={home_check ? home_current : home} alt="home" />
+					<p>Home</p>
+				</Link>
+				<Link to="/AboutPage">
+					<LazyLoadImage src={about_check ? about_current : about} alt="about" />
+					<p>About</p>
+				</Link>
 
-        <Link to="/SalesPage">
-          <img src={shop_check ? shop_current : shop} alt="shop" />
-          <p>Shop</p>
-        </Link>
-        {isAuthenticated ? (
-          <div className="dropdown">
-            <button className="dropbtn">
-              <img
-                id="dropbtn_avatar"
-                src={avatar || "avatars/Tiger.png"}
-                alt="Avatar"
-              />
-              <span>{shortName(username)}</span>
-            </button>
-            <div class="dropdown-content">
-              <Link to="/welcome">Dashboard</Link>
-              <Link to="/editprofile">Edit Profile</Link>
-              <Link to="/subscriptions">Purchase</Link>
-              <Link to="#">Change password</Link>
-              <Link to="#" onClick={handleLogout}>
-                Logout
-              </Link>
-            </div>
-          </div>
-        ) : (
-          <Link to="/Login">
-            <img src={login_check ? login_current : login} alt="login" />
-            <p>Login</p>
-          </Link>
-        )}
-        {/*<Link to="/Login">
+				<Link to="/SalesPage">
+					<LazyLoadImage src={shop_check ? shop_current : shop} alt="shop" />
+					<p>Shop</p>
+				</Link>
+				{isAuthenticated ? (
+					<div className="dropdown">
+						<button class="dropbtn">
+							<LazyLoadImage
+								id="dropbtn_avatar"
+								src={avatar || "avatars/Tiger.png"}
+								alt="Avatar"
+							/>
+							<span>{shortName(username)}</span>
+						</button>
+						<div class="dropdown-content">
+							<Link to="/welcome">Dashboard</Link>
+							<Link to="/editprofile">Edit Profile</Link>
+							<Link to="/subscriptions">Purchase</Link>
+							<Link to="#">Change password</Link>
+							<Link to="#" onClick={handleLogout}>
+								Logout
+							</Link>
+						</div>
+					</div>
+				) : (
+					<Link to="/Login">
+						<LazyLoadImage src={login_check ? login_current : login} alt="login" />
+						<p>Login</p>
+					</Link>
+				)}
+				{/*<Link to="/Login">
+
               <a href="#">
-                  <img src={login} alt="login"/>
+                  <LazyLoadImage src={login} alt="login"/>
                   <p>Login</p>
               </a>
             </Link>*/}
