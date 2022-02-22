@@ -6,7 +6,7 @@ import Navbar from "../Navbar/Navbar";
 import Container from "../FlippableCard/Container";
 import Ribbon from "./Ribbon";
 import Footer from "../Footer/Footer";
-
+import Example from "../VideoEmbed/Example";
 import FrontTable from "../FrontTable/FrontTable";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Carousel from "./Carousel/CarouselComp";
@@ -91,6 +91,7 @@ export default function LandingPage() {
             <LazyLoadImage src={logo} alt="" />
           </div>
         </div>
+        <Example />
 
         <div id="bottom"></div>
         <Ribbon color="#FFD830">
