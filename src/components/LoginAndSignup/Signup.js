@@ -22,6 +22,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { setAuth, setToken, setUser, setProfile } from "../../auth/authslice";
 import { toast } from "react-toastify";
 import ReCAPTCHA from "react-google-recaptcha";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 export default function Signup() {
   const dispatch = useDispatch();
@@ -103,25 +105,25 @@ export default function Signup() {
           <div className="car-wrapper">
             <ul className="carousel">
               <li className="item active">
-                <img src={card1} />
+                <LazyLoadImage src={card1} />
               </li>
               <li className="item point1">
-                <img src={card2} />
+                <LazyLoadImage src={card2} />
               </li>
               <li className="item point2">
-                <img src={card3} />
+                <LazyLoadImage src={card3} />
               </li>
               <li className="item point3">
-                <img src={card4} />
+                <LazyLoadImage src={card4} />
               </li>
               <li className="item point4">
-                <img src={card5} />
+                <LazyLoadImage src={card5} />
               </li>
               <li className="item point5">
-                <img src={card6} />
+                <LazyLoadImage src={card6} />
               </li>
               <li className="item point6">
-                <img src={card4} />
+                <LazyLoadImage src={card4} />
               </li>
             </ul>
           </div>

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import FlippableCard, { Back, Front } from "./FlippableCard";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 import "./Container.css";
 function Container() {
   const numOfCardsForSmallDevice = 6;
@@ -88,10 +90,10 @@ function Container() {
         <div className="outer_container">
           <FlippableCard>
             <Front>
-              <img className="cards_image" src={card.front} alt="" />
+              <LazyLoadImage className="cards_image" src={card.front} alt="" />
             </Front>
             <Back>
-              <img className="cards_image" src={card.back} alt="" />
+              <LazyLoadImage className="cards_image" src={card.back} alt="" />
             </Back>
           </FlippableCard>
         </div>

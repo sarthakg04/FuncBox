@@ -3386,6 +3386,7 @@
   dependencies:
     "anymatch" "~3.1.2"
     "braces" "~3.0.2"
+    "fsevents" "~2.3.2"
     "glob-parent" "~5.1.2"
     "is-binary-path" "~2.1.0"
     "is-glob" "~4.0.1"
@@ -4398,6 +4399,7 @@
     "estraverse" "^5.2.0"
     "esutils" "^2.0.2"
     "optionator" "^0.8.1"
+    "source-map" "~0.6.1"
   optionalDependencies:
     "source-map" "~0.6.1"
 
@@ -5022,6 +5024,11 @@
 "fs.realpath@^1.0.0":
   "integrity" "sha1-FQStJSMVjKpA20onh8sBQRmU6k8="
   "version" "1.0.0"
+
+"fsevents@^2.3.2", "fsevents@~2.3.2":
+  "integrity" "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA=="
+  "resolved" "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
+  "version" "2.3.2"
 
 "function-bind@^1.1.1":
   "integrity" "sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A=="
@@ -5968,6 +5975,7 @@
     "@types/node" "*"
     "anymatch" "^3.0.3"
     "fb-watchman" "^2.0.0"
+    "fsevents" "^2.3.2"
     "graceful-fs" "^4.2.4"
     "jest-regex-util" "^27.4.0"
     "jest-serializer" "^27.4.0"
@@ -6384,6 +6392,8 @@
 "jsonfile@^4.0.0":
   "integrity" "sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss="
   "version" "4.0.0"
+  dependencies:
+    "graceful-fs" "^4.1.6"
   optionalDependencies:
     "graceful-fs" "^4.1.6"
 
@@ -6392,6 +6402,7 @@
   "resolved" "https://registry.npmjs.org/jsonfile/-/jsonfile-6.1.0.tgz"
   "version" "6.1.0"
   dependencies:
+    "graceful-fs" "^4.1.6"
     "universalify" "^2.0.0"
   optionalDependencies:
     "graceful-fs" "^4.1.6"
@@ -7975,7 +7986,7 @@
     "strip-ansi" "^6.0.1"
     "text-table" "^0.2.0"
 
-"react-dom@*", "react-dom@^16.14.0", "react-dom@>=16":
+"react-dom@*", "react-dom@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react-dom@^15.x.x || ^16.x.x || ^17.x.x", "react-dom@^16.14.0", "react-dom@>=16":
   "integrity" "sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw=="
   "version" "16.14.0"
   dependencies:
@@ -8030,6 +8041,19 @@
 "react-is@^17.0.1", "react-is@^17.0.2":
   "integrity" "sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w=="
   "version" "17.0.2"
+
+"react-lazy-load-image-component@^1.5.1":
+  "integrity" "sha512-grTEZzURLHPkq7JoipcBBQU44ijdF4fH3Cb+eSD5eSAaMsjugbXqTaVWm5ruPUNLduoNR9KKQF6bOR9h2WphEg=="
+  "resolved" "https://registry.npmjs.org/react-lazy-load-image-component/-/react-lazy-load-image-component-1.5.1.tgz"
+  "version" "1.5.1"
+  dependencies:
+    "lodash.debounce" "^4.0.8"
+    "lodash.throttle" "^4.1.1"
+
+"react-lazyload@^3.2.0":
+  "integrity" "sha512-zJlrG8QyVZz4+xkYZH5v1w3YaP5wEFaYSUWC4CT9UXfK75IfRAIEdnyIUF+dXr3kX2MOtL1lUaZmaQZqrETwgw=="
+  "resolved" "https://registry.npmjs.org/react-lazyload/-/react-lazyload-3.2.0.tgz"
+  "version" "3.2.0"
 
 "react-redux@^7.2.1", "react-redux@^7.2.5":
   "integrity" "sha512-10RPdsz0UUrRL1NZE0ejTkucnclYSgXp5q+tB5SWx2qeG2ZJQJyymgAhwKy73yiL/13btfB6fPr+rgbMAaZIAQ=="
@@ -8117,6 +8141,7 @@
     "eslint-webpack-plugin" "^3.1.1"
     "file-loader" "^6.2.0"
     "fs-extra" "^10.0.0"
+    "fsevents" "^2.3.2"
     "html-webpack-plugin" "^5.5.0"
     "identity-obj-proxy" "^3.0.0"
     "jest" "^27.4.3"
@@ -8157,7 +8182,7 @@
   dependencies:
     "clsx" "^1.1.1"
 
-"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^15.1.0 || ^16.0.0", "react@^16.14.0", "react@^16.14.0 || ^17.0.0", "react@^16.3.0 || ^17.0.0", "react@^16.8.3 || ^17", "react@>= 16", "react@>=15", "react@>=15.5 <=16.x", "react@>=16", "react@>=16.3.0", "react@>=16.4.1", "react@>=16.x":
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^15.1.0 || ^16.0.0", "react@^15.x.x || ^16.x.x || ^17.x.x", "react@^16.14.0", "react@^16.14.0 || ^17.0.0", "react@^16.3.0 || ^17.0.0", "react@^16.8.3 || ^17", "react@>= 16", "react@>=15", "react@>=15.5 <=16.x", "react@>=16", "react@>=16.3.0", "react@>=16.4.1", "react@>=16.x":
   "integrity" "sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g=="
   "version" "16.14.0"
   dependencies:
@@ -8459,6 +8484,8 @@
   "integrity" "sha512-+c+lbw1lexBKSMb1yxGDVfJ+vchJH3qLbmavR+awDinTDA2C5Ug9u7lkOzj62SCu0PKUExsW36tpgW7Fmpn3yQ=="
   "resolved" "https://registry.npmjs.org/rollup/-/rollup-2.64.0.tgz"
   "version" "2.64.0"
+  dependencies:
+    "fsevents" "~2.3.2"
   optionalDependencies:
     "fsevents" "~2.3.2"
 

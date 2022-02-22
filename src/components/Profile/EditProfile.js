@@ -15,6 +15,8 @@ import {
 } from "../../auth/authslice";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 // const { fname, lname, caddress, pincode, age, dob, std, phone } = req.body;
 
@@ -228,51 +230,51 @@ export default function EditProfile(props) {
         </div>
         <div className="right__container">
           <div className="avatar__header">
-            <img src={avatar} alt="" className="avatar__h" />
+            <LazyLoadImage src={avatar} alt="" className="avatar__h" />
           </div>
           <p>Update Avatar</p>
           <div className="avatars">
-            <img
+            <LazyLoadImage
               src="avatars/Whale.png"
               alt=""
               onClick={() => setAvatar("avatars/Whale.png")}
             />
-            <img
+            <LazyLoadImage
               src="avatars/Zebra.png"
               alt=""
               onClick={() => setAvatar("avatars/Zebra.png")}
             />
-            <img
+            <LazyLoadImage
               src="avatars/elephant.png"
               alt=""
               onClick={() => setAvatar("avatars/elephant.png")}
             />
-            <img
+            <LazyLoadImage
               src="avatars/Panda.png"
               alt=""
               onClick={() => setAvatar("avatars/Panda.png")}
             />
-            <img
+            <LazyLoadImage
               src="avatars/Fox.png"
               alt=""
               onClick={() => setAvatar("avatars/Fox.png")}
             />
-            <img
+            <LazyLoadImage
               src="avatars/Tortoise.png"
               alt=""
               onClick={() => setAvatar("avatars/Tortoise.png")}
             />
-            <img
+            <LazyLoadImage
               src="avatars/Lion.png"
               alt=""
               onClick={() => setAvatar("avatars/Lion.png")}
             />
-            <img
+            <LazyLoadImage
               src="avatars/Monkey.png"
               alt=""
               onClick={() => setAvatar("avatars/Monkey.png")}
             />
-            <img
+            <LazyLoadImage
               src="avatars/Tiger.png"
               alt=""
               onClick={() => setAvatar("avatars/Tiger.png")}

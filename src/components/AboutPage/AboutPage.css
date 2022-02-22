@@ -56,8 +56,9 @@
 
 .aboutPage__main .faqs {
   margin: 64px;
-  font-size: 28px;
-  font-weight: 300;
+  /* font-size: 28px; */
+  font-size: 1.4rem;
+  /* font-weight: 300; */
   margin-bottom: 32px;
 }
 
@@ -71,8 +72,9 @@
   margin-bottom: 32px;
 }
 
-.aboutPage__main .faqs p {
-  font-size: 24px;
+.aboutPage__main .faqs .answer {
+  /* font-size: 24px; */
+  font-size: 1.2rem;
   margin-bottom: 16px;
 }
 
@@ -128,6 +130,16 @@
     top: 20%;
     height: 65%;
   }
+
+  .aboutPage__main .faqs {
+    font-size: 1.2rem;
+    margin: 55px;
+    margin-top: 120px;
+  }
+
+  .aboutPage__main .faqs .answer {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 767px) {
@@ -178,6 +190,16 @@
 
   .about_container2 p {
     width: 95%;
+  }
+
+  .aboutPage__main .faqs {
+    font-size: 1.1rem;
+    margin: 30px;
+    margin-top: 60px;
+  }
+
+  .aboutPage__main .faqs .answer {
+    font-size: 0.9rem;
   }
 }
 
