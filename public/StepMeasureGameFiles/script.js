@@ -1,8 +1,9 @@
 // let units = ['mm', 'cm', 'dm', 'm', 'dam', 'hm', 'km'] // Donot alter this array
+// let animal = 'dog' or 'cat'
 // fillBackground('hills')
 // createInputBox()
 // createSubmitButton()
-// setCat()
+// setDog() or setCat()
 // for(i=0;i<units.length;i++){
 //     createStep()
 // }
@@ -18,9 +19,8 @@
 //     return value_entered
 // }
 
-var animal = 'dog'
 
-var character = animal + '_bg'
+var character
 
 
 let Phone = document.createElement('div')
@@ -43,6 +43,7 @@ function fillBackground(bg_name){
     GamePad.classList.add('GamePad')
     document.body.appendChild(Phone)
     Phone.appendChild(GamePad)
+    character = animal + '_bg'
 }
 
 function createInputBox(){
