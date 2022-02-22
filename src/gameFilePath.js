@@ -22,7 +22,7 @@ module.exports = {
     31: "HitItFiles",
     32: "LifeCycleOfButterflyFiles",
     33: "MotuPatluGameFiles",
-    34: "MeltTheIceGameFiles",
+    34: "PhotosynthesisGameFiles",
     35: "PollutoGameFiles",
     36: "RecycleItFiles",
     37: "StatesThatMatterFiles",

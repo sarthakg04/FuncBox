@@ -1,4 +1,6 @@
 import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 export default function CarouselItem({
 	leftLeftImgSrc,
@@ -9,16 +11,16 @@ export default function CarouselItem({
 }) {
 	return (
 		<div className="carouselSliderItem">
-			<img src={leftLeftImgSrc} alt="Game" id="carouselSliderItemLeftLeft" />
-			<img src={leftImgSrc} alt="Game" id="carouselSliderItemLeft" />
-			<img
+			<LazyLoadImage src={leftLeftImgSrc} alt="Game" id="carouselSliderItemLeftLeft" />
+			<LazyLoadImage src={leftImgSrc} alt="Game" id="carouselSliderItemLeft" />
+			<LazyLoadImage
 				src={centerImgSrc}
 				alt="Game"
 				id="carouselSliderItemCenter"
 				className=""
 			/>
-			<img src={rightImgSrc} alt="Game" id="carouselSliderItemRight" />
-			<img
+			<LazyLoadImage src={rightImgSrc} alt="Game" id="carouselSliderItemRight" />
+			<LazyLoadImage
 				src={rightRightImgSrc}
 				alt="Game"
 				id="carouselSliderItemRightRight"
