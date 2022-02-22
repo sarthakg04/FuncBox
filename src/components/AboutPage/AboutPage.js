@@ -89,7 +89,7 @@ export default function AboutPage() {
 				{faqs.map((faq, index) => (
 					<div className="faq" key={index} onClick={() => toggleMe(index)}>
 						<div className="question">
-							<h5>{faq.question}</h5>
+							<p>{faq.question}</p>
 							<i className="fas fa-chevron-down"></i>
 						</div>
 						<p className="answer">{faq.answer}</p>
