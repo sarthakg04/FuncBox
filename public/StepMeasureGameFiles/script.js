@@ -18,6 +18,9 @@
 //     return value_entered
 // }
 
+var animal = 'dog'
+
+var character = animal + '_bg'
 
 
 let Phone = document.createElement('div')
@@ -85,6 +88,10 @@ function setCat(){
     GamePad.appendChild(cat_bg)
 }
 
+function setDog(){
+    cat_bg.classList.add('dog_bg')
+    GamePad.appendChild(cat_bg)
+}
 
 function showValue(){
     Value.classList.add('Value')
@@ -140,7 +147,7 @@ function createStep(){
 
 
 function Up(){
-    let cat = document.querySelector('.cat_bg')
+    let cat = document.querySelector('.'+character)
     
     // console.log(units.length, (( 7 - units.length)*20)+310)
     // 190
@@ -189,7 +196,7 @@ function Up(){
 
 function Down(){
     
-    let cat = document.querySelector('.cat_bg')
+    let cat = document.querySelector('.'+character)
     
     // console.log(cat_bg)
     // 310
@@ -263,7 +270,7 @@ let value_entered
 
 function Convert(){
     let value_div = document.querySelector('.Value')
-    let cat = document.querySelector('.cat_bg')
+    let cat = document.querySelector('.'+character)
     switch(unit) {
         case 'mm':
             current_cat_top = 310
