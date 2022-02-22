@@ -187,7 +187,7 @@ export default function LandingPage() {
             />
           </div>
         </div>
-        
+
         <Ribbon color="#7bdc0096">
           <p className="ribbon_text"> Get your FuncBox Today ! Hurry</p>
           <Link to="/salespage" className="ribbon_button buy_now_button">
@@ -232,11 +232,11 @@ export default function LandingPage() {
               style={{ margin: "10px", width: "30px" }}
               src="https://ik.imagekit.io/funcboxImages/LandingPage_assets/image_173_HVwwhVEcW.png?updatedAt=1640181516955"
               alt=""
-              />
+            />
             Caution we make your kid smarter!
           </h2>
-          
-              <FrontTable/>
+
+          <FrontTable />
           {/* <img
             className="children_image"
             src="https://ik.imagekit.io/funcboxImages/LandingPage_assets/PikPng_1_tzVajvGOH.png?updatedAt=1640181381233"
