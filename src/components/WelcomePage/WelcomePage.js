@@ -143,21 +143,21 @@ function WelcomePage() {
 									alt=""
 								/>
 							</div>
-              <div className="search_bar">
+              	<div className="search_bar">
                   <input type="text" id="search_game" placeholder="Search..." onChange={event=>{setGameSearch(event.target.value)}} />
                 </div>
-							<div className="game_thumbnails">
+				<div className="game_thumbnails">
 								{games.length > 0
 									? games.filter((game)=>{
                     if(gameSearch==""){
-                      return game
+                      return game;
                     }
                     else if (game.gname.toLowerCase().includes(gameSearch.toLowerCase())){
-                      return game
+                      return game;
                     }
-                  }).map((game) => (
+                  	}).map((game,i) => (
 											<Link
-												key={`game-${game.gname}`}
+												key={`game-${game.gname}-${i}`}
 												className="thumbnail_link"
 												to={game?.route}
 											>
