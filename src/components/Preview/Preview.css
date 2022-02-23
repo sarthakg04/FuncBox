@@ -1,0 +1,14 @@
+.game_preview {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+}
+.game_preview p {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.strong {
+  font-weight: 500;
+}
