@@ -4,89 +4,91 @@ import { useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import Navbar from "../Navbar/Navbar";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 import "./WelcomePage.css";
 function WelcomePage() {
-  const { isAuthenticated, token, username, avatar } = useAuth();
-  const apiurl = process.env.REACT_APP_API_URL;
-  const history = useHistory();
-  const [games, setGames] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [allGames, setAllGames] = useState([]);
-  const placeholder =
-    "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/placeholder_oF5SIwZ26.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642429577487";
+	const { isAuthenticated, token, username, avatar } = useAuth();
+	const apiurl = process.env.REACT_APP_API_URL;
+	const history = useHistory();
+	const [games, setGames] = useState([]);
+	const [loading, setLoading] = useState(true);
+	const [allGames, setAllGames] = useState([]);
+	const placeholder =
+		"https://ik.imagekit.io/funcboxImages/WelcomePage_assets/placeholder_oF5SIwZ26.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642429577487";
 
-  useEffect(() => {
-    if (isAuthenticated === false) {
-      history.push("/login");
-    }
-  }, [loading]);
+	useEffect(() => {
+		if (isAuthenticated === false) {
+			history.push("/login");
+		}
+	}, [loading]);
 
-  useEffect(() => {
-    const getGames = async () => {
-      const res = await fetch(
-        `${
-          process.env.NODE_ENV === "development"
-            ? apiurl
-            : "https://server.funcbox.in"
-        }/data/games`,
-        {
-          method: "GET",
-          credentials: "include",
-          headers: { token: token },
-        }
-      );
-      const data = await res.json();
-      if (data && data.length > 0) setAllGames(data);
-    };
+	useEffect(() => {
+		const getGames = async () => {
+			const res = await fetch(
+				`${
+					process.env.NODE_ENV === "development"
+						? apiurl
+						: "https://server.funcbox.in"
+				}/data/games`,
+				{
+					method: "GET",
+					credentials: "include",
+					headers: { token: token },
+				}
+			);
+			const data = await res.json();
+			if (data && data.length > 0) setAllGames(data);
+		};
 
-    if (token) {
-      getGames();
-    }
-  }, [token]);
+		if (token) {
+			getGames();
+		}
+	}, [token]);
 
-  useEffect(() => {
-    const getUserGames = async () => {
-      const res = await fetch(
-        `${
-          process.env.NODE_ENV === "development"
-            ? apiurl
-            : "https://server.funcbox.in"
-        }/usergames`,
-        {
-          method: "GET",
-          credentials: "include",
-          headers: { token: token },
-        }
-      );
-      const data = await res.json();
-      console.log("user games", data.games);
-      if (data && data.games.length > 0) {
-        for (let gameid of data.games) {
-          const game = allGames.filter((g) => g.id === gameid);
+	useEffect(() => {
+		const getUserGames = async () => {
+			const res = await fetch(
+				`${
+					process.env.NODE_ENV === "development"
+						? apiurl
+						: "https://server.funcbox.in"
+				}/usergames`,
+				{
+					method: "GET",
+					credentials: "include",
+					headers: { token: token },
+				}
+			);
+			const data = await res.json();
+			console.log("user games", data.games);
+			if (data && data.games.length > 0) {
+				for (let gameid of data.games) {
+					const game = allGames.filter((g) => g.id === gameid);
 
-          setGames((games) => {
-            let array = [...games, game[0]];
-            return array;
-          });
-        }
-      }
-      console.log("data:", data);
-    };
-    if (allGames.length > 0) {
-      getUserGames();
-    }
-  }, [allGames]);
+					setGames((games) => {
+						let array = [...games, game[0]];
+						return array;
+					});
+				}
+			}
+			console.log("data:", data);
+		};
+		if (allGames.length > 0) {
+			getUserGames();
+		}
+	}, [allGames]);
 
-  useEffect(() => {
-    if (games.length > 0) {
-      setLoading(false);
-    }
-  }, [games]);
+	useEffect(() => {
+		if (games.length > 0) {
+			setLoading(false);
+		}
+	}, [games]);
 
-  if (loading) {
-    return <div>loading....</div>;
-  }
-  return (
+	if (loading) {
+		return <div>loading....</div>;
+	}
+	return (
 		<>
 			<Navbar />
 			<div className="welcome_container">
