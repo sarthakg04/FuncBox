@@ -6,6 +6,7 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import HowWeWork from "./HowWeWork";
 import { faqs } from "./FAQs";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 // import hero from './assets/hero.webp'
 // import roadmap from './assets/roadmap.webp'
@@ -57,8 +58,8 @@ export default function AboutPage() {
 			<div className="hero__section">
 				<div className="about_main_container">
 					<div className="about_container1">
-						<img className="yellowbg" src="https://ik.imagekit.io/funcboxImages/Yellowbg_3fQeycethMjO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645030000836" alt="bgimg" />
-						<img
+						<LazyLoadImage className="yellowbg" src="https://ik.imagekit.io/funcboxImages/Yellowbg_3fQeycethMjO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645030000836" alt="bgimg" />
+						<LazyLoadImage
 							className="phoneimg"
               // src={Phoneimg}
 							src="https://ik.imagekit.io/funcboxImages/Group_347_Rkkvzxdb3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645029860211"
@@ -88,7 +89,7 @@ export default function AboutPage() {
 				{faqs.map((faq, index) => (
 					<div className="faq" key={index} onClick={() => toggleMe(index)}>
 						<div className="question">
-							<h5>{faq.question}</h5>
+							<p>{faq.question}</p>
 							<i className="fas fa-chevron-down"></i>
 						</div>
 						<p className="answer">{faq.answer}</p>

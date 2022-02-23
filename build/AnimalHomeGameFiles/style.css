@@ -56,7 +56,12 @@ input {
   position: absolute;
   top: 20px;
   right: 20px;
+  border-radius: 50%;
 }
 .play_button > img {
   width: 100%;
+  border-radius: inherit;
+}
+.play_button > img:hover {
+  border: 3px solid black;
 }

@@ -50,6 +50,10 @@ body {
     no-repeat left;
 }
 
+.happy_drop_bg{
+  background: url('./assets/happy_drop_bg.png') no-repeat left;
+}
+
 .InteractionPad {
   position: relative;
   left: 35%;

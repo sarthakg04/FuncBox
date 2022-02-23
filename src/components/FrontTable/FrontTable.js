@@ -5,6 +5,8 @@ import Check from "./check1.png";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Aos from "aos";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 function FrontTable() {
   useEffect(() => {
@@ -37,94 +39,94 @@ function FrontTable() {
           <td className="box_group">
             <div className="box">
               <div data-aos="fade-up">
-                <img src={Close} />
+                <LazyLoadImage src={Close} />
               </div>
             </div>
             <div className="box">
               <div data-aos="fade-up">
-                <img src={Close} />
+                <LazyLoadImage src={Close} />
               </div>
             </div>
             <div className="box">
               <div data-aos="fade-up">
-                <img src={Close} />
+                <LazyLoadImage src={Close} />
               </div>
             </div>
             <div className="box">
               <div data-aos="fade-up">
-                <img src={Close} />
+                <LazyLoadImage src={Close} />
               </div>
             </div>
             <div className="box">
               <div data-aos="fade-up">
-                <img src={Close} />
+                <LazyLoadImage src={Close} />
               </div>
             </div>
             <div className="box">
               <div data-aos="fade-up">
-                <img src={Close} />
+                <LazyLoadImage src={Close} />
               </div>
             </div>
             <div className="box">
               <div data-aos="fade-up">
-                <img src={Close} />
+                <LazyLoadImage src={Close} />
               </div>
             </div>
             <div className="box">
               <div data-aos="fade-up">
-                <img src={Close} />
+                <LazyLoadImage src={Close} />
               </div>
             </div>
             <div className="box">
               <div data-aos="fade-up">
-                <img src={Close} />
+                <LazyLoadImage src={Close} />
               </div>
             </div>
           </td>
           <td className="box_group">
             <div className="box">
               <div data-aos="fade-up">
-                <img src={Check} />
+                <LazyLoadImage src={Check} />
               </div>
             </div>
             <div className="box">
               <div data-aos="fade-up">
-                <img src={Check} />
+                <LazyLoadImage src={Check} />
               </div>
             </div>
             <div className="box">
               <div data-aos="fade-up">
-                <img src={Check} />
+                <LazyLoadImage src={Check} />
               </div>
             </div>
             <div className="box">
               <div data-aos="fade-up">
-                <img src={Check} />
+                <LazyLoadImage src={Check} />
               </div>
             </div>
             <div className="box">
               <div data-aos="fade-up">
-                <img src={Check} />
+                <LazyLoadImage src={Check} />
               </div>
             </div>
             <div className="box">
               <div data-aos="fade-up">
-                <img src={Check} />
+                <LazyLoadImage src={Check} />
               </div>
             </div>
             <div className="box">
               <div data-aos="fade-up">
-                <img src={Check} />
+                <LazyLoadImage src={Check} />
               </div>
             </div>
             <div className="box">
               <div data-aos="fade-up">
-                <img src={Check} />
+                <LazyLoadImage src={Check} />
               </div>
             </div>
             <div className="box">
               <div data-aos="fade-up">
-                <img src={Check} />
+                <LazyLoadImage src={Check} />
               </div>
             </div>
           </td>

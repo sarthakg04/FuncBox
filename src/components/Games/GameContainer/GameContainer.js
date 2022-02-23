@@ -202,14 +202,12 @@ function GameContainer({ gid, location }) {
 
               <div className="steps_icon_list">
                 <img
-                  width="130px"
                   src="https://ik.imagekit.io/funcboxImages/Group_52__5__fDyu-t9Fnmt.png"
                   alt="steps"
                 />
               </div>
 
               <img
-                width="24px"
                 src="https://ik.imagekit.io/funcboxImages/Group_51__1__MmDF8JqR_01.png"
                 alt="steps"
               />

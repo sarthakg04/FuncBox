@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e94d6799.css",
-    "main.js": "/static/js/main.9643fc9d.js",
+    "main.css": "/static/css/main.e0a2ea2f.css",
+    "main.js": "/static/js/main.072d950a.js",
     "static/media/card4.svg": "/static/media/card4.09f322b92dbd26cbb97c8f53918a2961.svg",
     "static/media/marvelCard.svg": "/static/media/marvelCard.89408989deab5d79440e125059571e0d.svg",
     "static/media/loginBg.svg": "/static/media/loginBg.79f4e73a3baf9ef81419736d99488beb.svg",
@@ -19,9 +19,7 @@
     "index.html": "/index.html"
   },
   "entrypoints": [
-
-    "static/css/main.e94d6799.css",
-    "static/js/main.9643fc9d.js"
-
+    "static/css/main.e0a2ea2f.css",
+    "static/js/main.072d950a.js"
   ]
 }
