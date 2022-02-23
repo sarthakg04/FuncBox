@@ -1,8 +1,9 @@
 .carouselSlider {
-	display: flex;
+  display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: min(25rem, 70vw);
+  /* width: 90%; */
 	padding: 0 1vw;
 }
 
@@ -15,11 +16,9 @@
 /* CarouselItem Component */
 .carouselSliderItem {
 	perspective: 1500px;
-	width: 90%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* gap: 1rem; */
 }
 
 .carouselSliderLeft,
@@ -32,6 +31,7 @@
 	height: 15vw;
 	width: auto;
 	transform-style: preserve-3d;
+  margin: 0 1rem;
 }
 
 #carouselSliderItemLeftLeft {
@@ -42,19 +42,17 @@
 #carouselSliderItemLeft {
 	transform: rotate3d(0, 1, 0, 25deg) scale(1.2);
 	clip-path: url(#myCurve1);
-  margin-left: 1rem;
 }
 
 #carouselSliderItemCenter {
   transform: scale(1.4);
 	z-index: 10;
-	margin: 0 1rem;
+  margin: 0 2rem;
 }
 
 #carouselSliderItemRight {
   transform: rotate3d(0, 1, 0, -25deg) scale(1.2);
 	clip-path: url(#myCurve1);
-  margin-right: 1rem;
 }
 
 #carouselSliderItemRightRight {
@@ -82,15 +80,9 @@
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
 	.carouselSliderItem > img {
 		height: 25vw;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.carouselSliderItem > img {
-		height: 30vw;
 	}
 }
 
@@ -117,5 +109,9 @@
 @media screen and (max-width: 300px) {
 	.carouselSliderItem > img {
 		height: 55vw;
+	}
+
+  #carouselSliderItemCenter {
+		margin: 0 1rem;
 	}
 }
