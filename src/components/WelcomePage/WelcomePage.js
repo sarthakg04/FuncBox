@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import Navbar from "../Navbar/Navbar";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import "./WelcomePage.css";
 function WelcomePage() {
@@ -145,17 +145,18 @@ function WelcomePage() {
               </div>
               <div className="game_thumbnails">
                 {games && games.length > 0
-                  ? games.map((game) => (
+                  ? games.map((game, i) => (
                       <Link
-                        key={`game-${game?.gname}`}
+                        key={`game-${game?.gname}-${i}`}
                         className="thumbnail_link"
                         to={game?.route}
                       >
                         <div className="thumbnail">
                           <div className="thumb_image">
-
-                            <LazyLoadImage src={`${game.icon || placeholder}`} alt="" />
-
+                            <LazyLoadImage
+                              src={`${game.icon || placeholder}`}
+                              alt=""
+                            />
                           </div>
                           <p className="game_title">{game?.gname}</p>
                         </div>

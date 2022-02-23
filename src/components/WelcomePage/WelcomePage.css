@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap");
 
-a{
+a {
   color: inherit;
   text-decoration: inherit;
 }
@@ -63,7 +63,7 @@ a{
   top: -6rem;
 }
 
-.welcome__username{
+.welcome__username {
   position: relative;
   color: aliceblue;
   font-size: 40px;
@@ -94,18 +94,22 @@ a{
   z-index: 10;
 }
 .ipad_screen {
-  width: 88%;
+  width: 87%;
   height: 82%;
   position: absolute;
   display: flex;
   flex-direction: column;
   place-items: center;
   justify-content: space-evenly;
-  top: 63px;
-  left: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .logo_div {
   text-align: center;
+}
+.logo_div > img {
+  width: 150px;
 }
 .thumb_image {
   overflow: hidden;
@@ -118,8 +122,8 @@ a{
   margin-bottom: 5px;
 }
 .game_thumbnails {
-  width: 70%;
-  height: 60%;
+  width: 90%;
+  height: 70%;
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -129,6 +133,7 @@ a{
   grid-row-gap: 5px;
   scrollbar-width: thin;
   scrollbar-color: black rgb(233, 233, 233);
+  margin-left: -10px;
 }
 .game_thumbnails::-webkit-scrollbar {
   width: 12px; /* width of the entire scrollbar */
@@ -159,7 +164,8 @@ a{
   background-color: rgb(201, 199, 199);
 }
 .game_title {
-  width: fit-content;
+  width: 100%;
+  text-align: center;
   font-size: 12px;
   font-family: "Bubblegum Sans", cursive;
 }
@@ -175,7 +181,6 @@ a{
   z-index: 50;
 }
 
-
 @media screen and (max-width: 1100px) {
   .ipad_container {
     display: none;
@@ -186,12 +191,12 @@ a{
   #small_screen_msg {
     display: unset;
   }
-  .overlay{
-   width: 400px;
-  height: 400px;
-  left: 10rem;
+  .overlay {
+    width: 400px;
+    height: 400px;
+    left: 10rem;
   }
-  .welcome__username{
+  .welcome__username {
     left: 2rem;
     top: 3rem;
   }
@@ -204,12 +209,12 @@ a{
 }
 
 @media screen and (max-width: 500px) {
-  .overlay{
-   width: 300px;
-  height: 300px;
-  left: 8rem;
+  .overlay {
+    width: 300px;
+    height: 300px;
+    left: 8rem;
   }
-  .welcome__username{
+  .welcome__username {
     left: 2rem;
     top: 3rem;
     font-size: 30px;

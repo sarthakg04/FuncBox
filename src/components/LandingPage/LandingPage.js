@@ -6,9 +6,9 @@ import Navbar from "../Navbar/Navbar";
 import Container from "../FlippableCard/Container";
 import Ribbon from "./Ribbon";
 import Footer from "../Footer/Footer";
-
+import Example from "../VideoEmbed/Example";
 import FrontTable from "../FrontTable/FrontTable";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import Carousel from "./Carousel/CarouselComp";
 
 // import Monkey from "../../assets.monkey.png"
@@ -25,7 +25,7 @@ export default function LandingPage() {
     "https://ik.imagekit.io/funcboxImages/landing_page_monkey.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644310058601";
   const Left =
     "https://ik.imagekit.io/funcboxImages/landing_page_box.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644310106601";
-  
+
   const roadmap =
     "https://ik.imagekit.io/funcboxImages/LandingPage_assets/roadmap_dQ8uqJcgYEn.png?updatedAt=1633358515221";
   const logo =
@@ -38,7 +38,6 @@ export default function LandingPage() {
     "https://ik.imagekit.io/funcboxImages/LandingPage_assets/Group_237_cC4WV8E3_jn.png?updatedAt=1635786775387";
   const roadmap_pic4 =
     "https://ik.imagekit.io/funcboxImages/LandingPage_assets/Group_238_WAVuVoX6QBy.png?updatedAt=1635786962987";
-
 
   return (
     <div>
@@ -92,6 +91,7 @@ export default function LandingPage() {
             <LazyLoadImage src={logo} alt="" />
           </div>
         </div>
+        <Example />
 
         <div id="bottom"></div>
         <Ribbon color="#FFD830">
@@ -123,7 +123,7 @@ export default function LandingPage() {
             />
           </div>
         </div>
-        
+
         <Ribbon color="#7bdc0096">
           <p className="ribbon_text"> Get your FuncBox Today ! Hurry</p>
           <Link to="/salespage" className="ribbon_button buy_now_button">
@@ -142,7 +142,7 @@ export default function LandingPage() {
           <LazyLoadImage src={roadmap_pic3} alt="" />
           <LazyLoadImage src={roadmap_pic4} alt="" />
         </div>
-        
+
         <Ribbon color="#FFC71C">
           <p className="ribbon_text">Sign Up Today ! To Buy your own FuncBox</p>
           <Link to="/signup" className="ribbon_button signup_button">
@@ -155,14 +155,13 @@ export default function LandingPage() {
               style={{ margin: "10px", width: "30px" }}
               src="https://ik.imagekit.io/funcboxImages/LandingPage_assets/image_173_HVwwhVEcW.png?updatedAt=1640181516955"
               alt=""
-              />
+            />
             Caution we make your kid smarter!
           </h2>
-          
-              <FrontTable/>
-         
+
+          <FrontTable />
         </div>
-       
+
         <Footer />
       </div>
     </div>

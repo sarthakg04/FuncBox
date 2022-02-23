@@ -104,6 +104,20 @@ body {
   box-sizing: border-box; */
 }
 
+.dog_bg {
+  position: fixed;
+  right: 330px;
+  left: 0;
+  /* bottom: 0; */
+  top: 310px;
+  margin: auto;
+  height: 60px;
+  width: 55px;
+  background: url('./assets/dog_bg.png') no-repeat center;
+  /* border: 1px solid #000000;
+  box-sizing: border-box; */
+}
+
 .InteractionPad {
   height: 180px;
   width: 85px;
