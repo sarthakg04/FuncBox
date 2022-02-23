@@ -1,182 +1,97 @@
-.footer {
-  background-image: url("https://ik.imagekit.io/funcboxImages/Footer_assets/footerback_O1vaS2jHJT.webp?updatedAt=1633352306577");
-  background-size: cover;
-  background-position: center;
-  padding-top: 64px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.getInTouch {
-  padding: 32px;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
-  display: flex;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.getInTouch p {
-  font-size: 28px;
-}
-
-.getInTouch .input {
-  display: flex;
-  align-items: center;
-  margin-left: 10%;
-}
-
-.getInTouch input {
-  padding: 16px 64px 16px 32px;
-  border-radius: 26px;
-  border: 0;
-  outline: 0;
-  margin: 8px;
-  width: 500px !important;
-  font-size: 20px;
-  margin-left: 64px;
-}
-
-.getInTouch img {
-  margin-left: -56px;
-}
-
-.madeWith {
-  text-align: center;
-  color: white;
-  font-size: 18px;
-  margin-top: 32px;
-}
-
-.madeWith a {
-  text-decoration: none;
-  color: white;
-}
-
-.footer .links {
-  display: flex;
-  padding: 32px;
-  justify-content: space-between;
-}
-
-.footer .links .social {
-  display: flex;
-  align-items: center;
-}
-
-.footer .links .social a {
-  display: block;
-  margin-right: 16px;
-}
-
-.footer .links ul {
-  list-style: none;
-}
-
-.footer .links a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer button {
-  background-color: transparent;
-  outline: none;
-  border: none;
-}
-
-@media (max-width: 1070px) {
-  .getInTouch input {
-    width: 300px !important;
-  }
-
-  .footer .social img {
-    width: 24px;
-  }
-}
-
-@media (max-width: 767px) {
-  .getInTouch input {
-    width: 50% !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .Notification_btn {
-    position: relative;
-    left: -25%;
-    top: 4px;
-    cursor: pointer;
-  }
-
-  .getInTouch {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .getInTouch .input {
-    justify-content: center;
-  }
-
-  .getInTouch input {
-    margin-left: 0;
-    width: 100% !important;
-    padding: 8px 64px 8px 32px;
-  }
-
-  .footer .madeWith p {
-    font-size: 14px;
-  }
-
-  .footer .social img {
-    width: 22px;
-  }
-
-  .footer .terms a {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 424px) {
-  .footer .links {
-    flex-direction: column-reverse;
-  }
-
-  .footer .social {
-    margin-top: 16px;
-  }
-}
-
-a {
-  color: inherit; /* blue colors for links too */
-  text-decoration: inherit; /* no underline */
-}
-
-.Notification_btn {
+.footer{
   position: relative;
-  left: -10%;
-  cursor: pointer;
+  background: url("https://ik.imagekit.io/funcboxImages/image_288_1DiBd8v_PEE8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645042572237");
+  height:100vh;
+  width:100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
-@media (max-width: 424px) {
-  .Notification_btn {
-    left: -17%;
-    top: -1px;
-  }
+.get_in_touch{
+  margin-left: 2.5vw;
+  position: absolute;
+  font-size: 2rem;
+  color:white;
+  margin-top:50vh;
 }
-
-@media only screen and (min-width: 425px) and (max-width: 600px) {
-  .Notification_btn {
-    left: -17%;
-    top: -1px;
-  }
+.get_in_touch input{
+  width:30vw;
+  border: 1rem solid white;
+  border-radius: 1rem;
 }
-
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-  .Notification_btn {
-    left: -14%;
-    top: -1px;
+.home_store_school_blog{
+  margin-left: 2.5vw;
+  color:white;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: 75vh;
+  justify-content: center;
+  display:flex;
+  gap: 1.5vw;
+  flex-wrap: wrap;
+}
+.home_store_school_blog a :hover{
+  text-decoration: underline;
+}
+.Career{
+  margin-left: 2.5vw;
+  color:white;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: 85vh;
+  justify-content: center;
+  display:flex;
+}
+.horizontal_rule{
+  width:80%;
+  position: absolute;
+  border: 1px solid white;
+  margin-top:15vh;
+  margin-left: 10vw;
+}
+.important_links{
+  color:white;
+  margin-left:35vw;
+  float: left;
+  display:flex;
+}
+.postcredit{
+  margin-left: 40vw;
+  color:white;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: 95vh;
+  justify-content: center;
+  display:flex;
+  gap: 1.5vw;
+  flex-wrap: wrap;
+}
+.social_media{
+  margin-left: 2.5vw;
+  color:white;
+  position: absolute;
+  margin-top: 82vh;
+  justify-content: center;
+  display:flex;
+  gap:2vw;
+  flex-wrap: wrap;
+}
+.ld{
+  height:5vh;
+  width:80%;
+  margin-left:1vw;
+}
+.fb{
+  height:5vh;
+  width:80%;
+  margin-left:1vw;
+}
+.ig{
+  height:5vh;
+  width:80%;
+  margin-left:1vw;
+}
+@media (max-width: 500px) {
+  .get_in_touch input{
+    width:50vw;
   }
 }

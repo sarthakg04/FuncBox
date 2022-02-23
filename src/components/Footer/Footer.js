@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { toast } from "react-toastify";
 import { parse } from "qs";
@@ -68,75 +69,81 @@ export default function Footer() {
   // },[]);
 
   return (
-    <div>
-      <div className="footer">
-        <div className="getInTouch">
-          <p>Get in Touch</p>
-          <div className="input">
-            {/* <form onSubmit={handleSubmit}> */}
-            <input
-              type="email"
-              name="email"
-              value={getInTouchEmail}
-              onChange={(e) => setGetInTouchEmail(e.target.value)}
-            />
-            <button
-              onClick={handleSubmit}
-              className="Notification_btn"
-              style={{
-                background: `url(${bell}) no-repeat center`,
-                minWidth: "30px",
-                minHeight: "30px",
-              }}
-              type="submit"
-            ></button>
-            {/* </form> */}
-          </div>
-        </div>
-        <div className="madeWith">
-          <Link to="/TeamsPage">
-            <p>Made With ❤️ by Team FuncBox </p>
-          </Link>
-        </div>
-        <div className="links">
-          <div className="social">
-            <a href="https://www.facebook.com/funcbox.edu" target="_blank">
-              <img src={fb} alt="fb" />
-            </a>
-            <a href="https://www.linkedin.com/company/funcbox" target="_blank">
-              <img src={linked} alt="linked" />
-            </a>
-            <a
-              href="https://www.instagram.com/funcbox_edu/?utm_medium=copy_link"
-              target="_blank"
-            >
-              <img src={insta} alt="insta" />
-            </a>
-          </div>
-          <div className="terms">
-            <ul>
-              <li>
-                <a href="#">Join our Team</a>
-              </li>
-              <li>
-                <a href="./terms.html">Terms</a>
-              </li>
-              <li>
-                <a href="./privacy.html">Privacy</a>
-              </li>
-            </ul>
-            <span id="siteseal">
-              <Helmet>
-                <script
-                  async
-                  type="text/javascript"
-                  src="https://seal.godaddy.com/getSeal?sealID=g4QjFCxgWT2ns8fm4KzgPfb5AIRIOBSTjFrWU0RRdYfvHVh00dDCaC7I0B5W"
-                ></script>
-              </Helmet>
-            </span>
-          </div>
-        </div>
+    <div className="footer">
+      {/* <LazyLoadImage
+        className="footer__bg"
+        src="https://ik.imagekit.io/funcboxImages/image_288_1DiBd8v_PEE8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645042572237"
+        alt=""
+      /> */}
+      <div className="full_footer">
+      <div className="get_in_touch">
+        <div className="get_in_touch_text">Get in touch with us<br/><br/></div>
+        <input
+          type="email"
+          value={getInTouchEmail}
+          onChange={(e) => setGetInTouchEmail(e.target.value)}
+          placeholder="Please enter your email"
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleSubmit(e);
+            }
+          }}
+        />
       </div>
+
+      <div className="home_store_school_blog">
+        <Link to="/">
+          <div>Home | </div>
+        </Link>
+        <Link to="/store">
+          <div>Store | </div>
+        </Link>
+        <Link to="/school">
+          <div>School | </div>
+        </Link>
+        <Link to="/blogs">
+          <div>Blog | </div>
+        </Link>
+        <a href="https://forms.gle/WDWrH5zcF84aFaYN6">
+          <div>Join our Team</div>
+        </a> 
+      
+      <div className="horizontal_rule">
+        </div>
+
+      
+
+      <div className="important_links">
+        <a href="https://www.funcbox.in/terms.html">
+          <div>Terms & Privacy</div>
+        </a>
+      </div>
+      </div>
+      <div className="social_media">
+        <a href="https://www.facebook.com/funcbox.edu/">
+          <div>
+            <LazyLoadImage class="fb" src={fb} alt="" />
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/company/funcbox/">
+          <div>
+            <LazyLoadImage class="ld" src={linked} alt="" />
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/funcbox_official/">
+          <div>
+            <LazyLoadImage class="ig" src={insta} alt="" />
+          </div>
+        </a>
+      </div>
+      <div className="postcredit">
+        <a href="https://www.funcbox.in/TeamsPage">
+          Made with <span>&#10084;</span> by FuncBox
+        </a>
+      </div>
+    </div>
     </div>
   );
 }

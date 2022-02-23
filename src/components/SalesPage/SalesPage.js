@@ -8,8 +8,10 @@ import Footer from "../Footer/Footer";
 import ClassSelector from "./ClassSelector";
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 export default function SalesPage() {
-  const { token } = useAuth();
+  const { token, isAuthenticated } = useAuth();
   const [modalOpen, setModalOpen] = useState(false);
   const [plan, setPlan] = useState("");
   const [openPlan, setOpenPlan] = useState("basic");
@@ -100,9 +102,14 @@ export default function SalesPage() {
     }
   };
   const handlePurchase = (planName) => {
-    if (plan === "") {
-      setPlan(planName);
-      setModalOpen(true);
+    if (isAuthenticated === true && token) {
+      if (plan === "") {
+        setPlan(planName);
+        setModalOpen(true);
+      }
+    } else {
+      history.push({ pathname: "/login", state: { prev: "/SalesPage" } });
+      toast.error("Please login to Purchase");
     }
   };
 
@@ -127,12 +134,13 @@ export default function SalesPage() {
       <div className="salesPage__main">
         <div className="hero__section">
           <div className="left__section">
-            <img src={bg_vector} alt="bg_vector" class="vector_bg"/>
-            {/* <img src={sales_kid} alt="kid" class="sales_kid"/> */}
+            <div className="mobile_shop_div">Shop</div>
+            <LazyLoadImage src={bg_vector} alt="bg_vector" class="vector_bg" />
+            {/* <LazyLoadImage src={sales_kid} alt="kid" class="sales_kid"/> */}
           </div>
           <div className="right__section">
             <i className="fa-solid fa-cart-shopping" />
-            {/* <img src={box2} alt="box" className="background__img" /> */}
+            {/* <LazyLoadImage src={box2} alt="box" className="background__img" /> */}
             <div className="content">
               <p className="title">
                 FuncBox is a box full of surprises which will teach you
@@ -157,24 +165,24 @@ export default function SalesPage() {
         </div>
         <div className="features">
           <div className="feature">
-            <img src={van} alt="van" />
+            <LazyLoadImage src={van} alt="van" />
             <p>Free Shipping</p>
           </div>
           <div className="feature">
-            <img src={new_pic} alt="new_pic" />
+            <LazyLoadImage src={new_pic} alt="new_pic" />
             <p>New Theme Every Month</p>
           </div>
           <div className="feature">
-            <img src={check} alt="check" />
+            <LazyLoadImage src={check} alt="check" />
             <p>Cancel Anytime</p>
           </div>
         </div>
 
-        <div class="marquee">
+        {/* <div class="marquee">
           <marquee direction="left" height="100px">
             We are not accepting any orders Due to COVID-19 restrictions.
           </marquee>
-        </div>
+        </div> */}
 
         <div className="prices__heading">
           <h1>Our Plans</h1>
@@ -346,7 +354,7 @@ export default function SalesPage() {
             <h1 className="heading"> For Schools </h1>
           </div>
           <div className="school_content">
-            <img src={house} alt="house" />
+            <LazyLoadImage src={house} alt="house" />
             <div className="contentt">
               <p>
                 Yay! FuncBox brings special discount for all the School Tie-ups.

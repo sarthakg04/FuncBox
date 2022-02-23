@@ -56,8 +56,7 @@ let animalImageLinks = {
     "https://ik.imagekit.io/funcboxImages/AnimalHomeGame_assets/ducks_ZsK0arHVxl.png?updatedAt=1636650701183",
   turtle:
     "https://ik.imagekit.io/funcboxImages/AnimalHomeGame_assets/turtle_U3dTBvyitl.png?updatedAt=1637641788674",
-  hen:
-    "https://ik.imagekit.io/funcboxImages/AnimalHomeGame_assets/chicken_kXwJgKC7Yn7u.png?ik-sdk-version=javascript-1.4.3&updatedAt=1636650701251",
+  hen: "https://ik.imagekit.io/funcboxImages/AnimalHomeGame_assets/chicken_kXwJgKC7Yn7u.png?ik-sdk-version=javascript-1.4.3&updatedAt=1636650701251",
 };
 
 const soundFiles = {
@@ -90,8 +89,10 @@ const soundFiles = {
   spider:
     "https://drive.google.com/file/d/11qy3GIUf-lB17-1JAHBX9GOaHMj6Of6Z/view?usp=sharing",
   yak: "https://drive.google.com/file/d/1ilNbyMdZJmtUYWpc2InOPQtJCXznM0il/view?usp=sharing",
-  monkey: "https://drive.google.com/file/d/1rIOk5qkYmOw_jlulB23Rq9L5wHnjeN62/view?usp=sharing",
-  turtle: "https://drive.google.com/file/d/1jBLk2LIGATk4V1Q43CtlDVRNsI2B_a6O/view?usp=sharing",
+  monkey:
+    "https://drive.google.com/file/d/1rIOk5qkYmOw_jlulB23Rq9L5wHnjeN62/view?usp=sharing",
+  turtle:
+    "https://drive.google.com/file/d/1jBLk2LIGATk4V1Q43CtlDVRNsI2B_a6O/view?usp=sharing",
   hen: "https://drive.google.com/file/d/1C8c4LxsA_bG_Mm1ik6uYpsN5pBHjf4Fq/view?usp=sharing",
 };
 
@@ -109,7 +110,7 @@ function createArrowKeys() {
   document.getElementById("container").appendChild(right_arrow);
   right_arrow.addEventListener("click", () => {
     if (currentCard < animals.length - 1) currentCard++;
-    else if (currentCard == animals.length -1) currentCard = 0;
+    else if (currentCard == animals.length - 1) currentCard = 0;
     setCards();
     if (audio && !audio.paused) {
       audio.pause();
@@ -121,7 +122,7 @@ function createArrowKeys() {
   document.getElementById("container").appendChild(left_arrow);
   left_arrow.addEventListener("click", () => {
     if (currentCard > 0) currentCard--;
-    else if (currentCard == 0) currentCard = animals.length -1;
+    else if (currentCard == 0) currentCard = animals.length - 1;
     setCards();
     if (audio && !audio.paused) {
       audio.pause();

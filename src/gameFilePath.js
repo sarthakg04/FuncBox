@@ -22,7 +22,7 @@ module.exports = {
     31: "HitItFiles",
     32: "LifeCycleOfButterflyFiles",
     33: "MotuPatluGameFiles",
-    34: "MeltTheIceGameFiles",
+    34: "PhotosynthesisGameFiles",
     35: "PollutoGameFiles",
     36: "RecycleItFiles",
     37: "StatesThatMatterFiles",
@@ -44,10 +44,10 @@ module.exports = {
     53: "FeedTheCrocsGameFiles",
     54: "CheesyGuptaGameFiles",
     55: "LUnitConvGame",
+    57: "PercentCalcGameFiles",
     58: "TemperatureConversionFiles2",
     59: "ShootThePrimesGameFiles",
     60: "DeciChemistGameFiles",
     61: "RecognisePatternGameFiles",
   },
-
 };

@@ -22,7 +22,7 @@ body {
   flex-wrap: wrap;
   height: 400px;
   width: 287px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: 0 auto 0 auto;
   box-sizing: border-box;
 }
@@ -48,6 +48,10 @@ body {
 .drop_bg {
   background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/drop_5U7ZuQKhq0P.png?updatedAt=1633874667533')
     no-repeat left;
+}
+
+.happy_drop_bg{
+  background: url('./assets/happy_drop_bg.png') no-repeat left;
 }
 
 .InteractionPad {
@@ -204,4 +208,31 @@ body {
   width: 27px;
   background: url('./assets/restart.png');
   border: none;
+}
+
+.Precipitation_Description{
+  
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 200px;
+  margin: auto;
+  font-size: medium;
+  width: 250px;
+  font-weight: bolder;
+  justify-content: center;
+  color: white;
+  display: none;
+}
+
+.Precipitation_title{
+  position: fixed;
+  right: 0;
+  left: 30%;
+  top: 60px;
+  margin: auto;
+  color: white;
+  font-weight: bold;
+  font-size: x-large;
+  display: none;
 }

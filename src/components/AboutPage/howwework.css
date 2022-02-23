@@ -5,6 +5,7 @@
   font-style: normal;
   color: #202020;
   z-index: 1;
+  overflow: hidden;
 }
 
 .Main {
@@ -515,5 +516,65 @@
   }
   .step6 {
     left: 120px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .child img,
+  .incredibles img,
+  .mypackage img,
+  .parents img,
+  .rocket img,
+  .van img {
+    width: 120px;
+  }
+  .child,
+  .incredibles,
+  .mypackage,
+  .parents,
+  .rocket,
+  .van {
+    left: 240px;
+  }
+  .Vector1,
+  .Vector3,
+  .Vector5,
+  .Vector2,
+  .Vector4,
+  .Vector6 {
+    width:10vw;
+    left: 10px;
+  }
+  .Vector1 img,
+  .Vector3 img,
+  .Vector5 img,
+  .Vector2 img,
+  .Vector4 img,
+  .Vector6 img{
+  width:55vw;
+  }
+  .step1 {
+    left: 20px;
+    right:0px;
+  }
+  .step2 {
+    left: 20px;
+    right:0px;
+  }
+  .step3 {
+    left: 20px;
+    right:0px;
+  }
+  .step4 {
+    left: 20px;
+    right:0px;
+  }
+  .step5 {
+    left: 20px;
+    right:0px;
+  }
+  .step6 {
+    left: 20px;
+    right:0px;
   }
 }

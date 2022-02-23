@@ -130,7 +130,13 @@ function createGameFinish() {
 // Backend Functions
 
 function generateRandomRecievedCash( item_cost ) {
-    return (item_cost + Math.floor(Math.random() * item_cost) + 1)
+    console.log(439%100)
+
+    // return (item_cost + Math.floor(Math.random() * item_cost) + 1)
+    
+    return (item_cost - (item_cost%100) +  ((Math.floor(Math.random() * 10) + 1)*100))
+
+    
 }
 
 

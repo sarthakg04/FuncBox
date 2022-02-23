@@ -25,10 +25,9 @@
 .phoneimg {
   position: absolute;
   left: 10%;
-  top: 50%;
-  width: 80%;
-  max-width: 575px;
-  transform: translateY(-40%);
+  top: 10%;
+  width: 70%;
+  height: 80%;
 }
 
 .about_container2 {
@@ -55,11 +54,11 @@
   line-height: 26px;
 }
 
-
 .aboutPage__main .faqs {
   margin: 64px;
-  font-size: 28px;
-  font-weight: 300;
+  /* font-size: 28px; */
+  font-size: 1.4rem;
+  /* font-weight: 300; */
   margin-bottom: 32px;
 }
 
@@ -73,8 +72,9 @@
   margin-bottom: 32px;
 }
 
-.aboutPage__main .faqs p {
-  font-size: 24px;
+.aboutPage__main .faqs .answer {
+  /* font-size: 24px; */
+  font-size: 1.2rem;
   margin-bottom: 16px;
 }
 
@@ -107,106 +107,38 @@
 }
 
 @media (max-width: 1300px) {
-  .phoneimg {
-    width: 90%;
-    height: 90%;
-    left: 5vw;
-  }
-
   .about_container2 p {
     font-size: 1.2rem;
     width: 40vw;
   }
-}
-
-@media (max-width: 1170px) {
   .phoneimg {
-    height: 85%;
-    left: 1vw;
-    width: 100%;
-  }
-}
-
-@media (max-width: 990px) {
-  .phoneimg {
-    height: 80%;
-  }
-}
-
-@media (max-width: 940px) {
-  .phoneimg {
-    height: 75%;
-    top: 50%;
+    top: 15%;
+    height: 70%;
   }
 }
 
 @media (max-width: 885px) {
-  .phoneimg {
+  /* .phoneimg {
     height: 70%;
-  }
+  } */
 
   .about_container2 p {
     font-size: 1.2rem;
     width: 38vw;
   }
-}
-
-@media (max-width: 810px) {
   .phoneimg {
+    top: 20%;
     height: 65%;
-    top: 50%;
-  }
-}
-
-@media (max-width: 1300px) {
-  .phoneimg {
-    width: 90%;
-    height: 90%;
-    left: 5vw;
   }
 
-  .about_container2 p {
+  .aboutPage__main .faqs {
     font-size: 1.2rem;
-    width: 40vw;
-  }
-}
-
-@media (max-width: 1170px) {
-  .phoneimg {
-    height: 85%;
-    left: 1vw;
-    width: 100%;
-  }
-}
-
-@media (max-width: 990px) {
-  .phoneimg {
-    height: 80%;
-  }
-}
-
-@media (max-width: 940px) {
-  .phoneimg {
-    height: 75%;
-    top: 50%;
-  }
-}
-
-@media (max-width: 885px) {
-  .phoneimg {
-    height: 70%;
+    margin: 55px;
+    margin-top: 120px;
   }
 
-  .about_container2 p {
-    font-size: 1.2rem;
-    width: 38vw;
-  }
-}
-
-@media (max-width: 810px) {
-  .phoneimg {
-    height: 65%;
-    top: 50%;
+  .aboutPage__main .faqs .answer {
+    font-size: 1rem;
   }
 }
 
@@ -225,10 +157,9 @@
   }
 
   .phoneimg {
-    width: 95vw;
-    height: auto;
-    top: 50%;
-    left: 0;
+    left: 0%;
+    top: 10%;
+    width: 70vw;
     margin-left: -30vw;
   }
 
@@ -250,12 +181,25 @@
     min-height: 400px;
     height: 40vh;
   }
+  .phoneimg {
+    margin-left: -20vw;
+  }
   .about_container2 {
     width: 95%;
   }
 
   .about_container2 p {
     width: 95%;
+  }
+
+  .aboutPage__main .faqs {
+    font-size: 1.1rem;
+    margin: 30px;
+    margin-top: 60px;
+  }
+
+  .aboutPage__main .faqs .answer {
+    font-size: 0.9rem;
   }
 }
 
