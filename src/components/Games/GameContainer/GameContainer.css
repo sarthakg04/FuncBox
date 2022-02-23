@@ -9,6 +9,11 @@
     cursor: pointer;
 }
 
+.steps_icon > img{
+    width: 24px;
+    height: 24px;
+}
+
 .steps_icon_list{
     position: absolute;
     display: none;
@@ -16,6 +21,9 @@
     top: 0px;
 }
 
+.steps_icon_list > img{
+    width: 130px;
+}
 
 .click_here_to_view_steps{
     display: none;
@@ -69,3 +77,8 @@
     cursor: pointer;
     margin: 30px auto !important;
 }
+
+.closeStepsIcon > img{
+    width: 100%;
+}
+
