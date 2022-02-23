@@ -83,6 +83,7 @@ body {
 .bad_hitted {
   background-color: red;
   border-radius: 50%;
+  opacity: 0.5;
   /* position: absolute;
   left: 30%;
   top: 20%; */
