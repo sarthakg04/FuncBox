@@ -108,7 +108,7 @@ export default function SalesPage() {
         setModalOpen(true);
       }
     } else {
-      history.push("/login");
+      history.push({ pathname: "/login", state: { prev: "/SalesPage" } });
       toast.error("Please login to Purchase");
     }
   };
