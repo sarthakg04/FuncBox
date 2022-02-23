@@ -12,6 +12,7 @@ function WelcomePage() {
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
   const [allGames, setAllGames] = useState([]);
+  const [gameSearch, setGameSearch] = useState('');
   const placeholder =
     "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/placeholder_oF5SIwZ26.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642429577487";
 
@@ -140,10 +141,20 @@ function WelcomePage() {
                   src="https://ik.imagekit.io/funcboxImages/WelcomePage_assets/logo_avuKvwCSN.png?updatedAt=1633931799519"
                   alt=""
                 />
+                <div className="search_bar">
+                  <input type="text" id="search_game" placeholder="Search..." onChange={event=>{setGameSearch(event.target.value)}} />
+                </div>
               </div>
               <div className="game_thumbnails">
                 {games.length > 0
-                  ? games.map((game) => (
+                  ? games.filter((game)=>{
+                    if(gameSearch==""){
+                      return game
+                    }
+                    else if (game.gname.toLowerCase().includes(gameSearch.toLowerCase())){
+                      return game
+                    }
+                  }).map((game) => (
                       <Link
                         key={`game-${game.gname}`}
                         className="thumbnail_link"
@@ -175,3 +186,5 @@ function WelcomePage() {
 }
 
 export default WelcomePage;
+
+

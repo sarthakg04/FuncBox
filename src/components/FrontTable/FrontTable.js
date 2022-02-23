@@ -55,7 +55,6 @@ function FrontTable() {
                     </td>
                 </tr>
             </table>
-        
       </div>
   );
 }
