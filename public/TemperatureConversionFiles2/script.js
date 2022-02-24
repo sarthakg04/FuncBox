@@ -1,6 +1,8 @@
 //FRONTEND FUNCTION
 // createGamepad();
 // fillBackground();
+// //Only three parameters are allowed eg. 1,2,&3
+// addCharacter(3);
 // createUnit();
 // createInputBox();
 // createButton();
