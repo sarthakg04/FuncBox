@@ -33,8 +33,8 @@ function createInputBox(){
   <img src="https://ik.imagekit.io/funcboxImages/LUnitConvGame_assets/inputbox_bwyC3MnFg.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645619194202" class="inputbox">
   <input id="input_number" min="0" value="00.0" class="input_number" type="number" step="0.1">
   <select name="unit" id="input_unit" class="unit_select">
-    <option value="hl">hl</option>
     <option value="kl">kl</option>
+    <option value="hl">hl</option>
     <option value="l">l</option>
     <option value="cl">cl</option>
     <option value="ml">ml</option>
@@ -49,7 +49,7 @@ function getResult(){
   <img src="https://ik.imagekit.io/funcboxImages/LUnitConvGame_assets/pointer_cyXUXRaxN.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645619194205" class="pointer" id="pointer">
   <div class="top_display">
     <p id="final_val">00.0</p>
-    <p id="final_unit">hl</p>
+    <p id="final_unit">kl</p>
   </div>
   `;
 }
@@ -58,10 +58,10 @@ function pointerPosition(pointer_unit){
   var pointer = document.getElementById('pointer');
 
   switch (pointer_unit) {
-    case "hl":
+    case "kl":
       pointer.style.left = "100px";
       break;
-    case "kl":
+    case "hl":
       pointer.style.left = "160px";
       break;
     case "l":
@@ -90,13 +90,13 @@ function upfunc(){
   var final_unit = document.getElementById('final_unit').innerHTML;
 
   switch (final_unit) {
-    case "hl":
-      var x = final_val/10;
-      document.getElementById('final_val').innerHTML = x;
-      document.getElementById('final_unit').innerHTML = "kl";
-      break;
     case "kl":
-      var x = final_val*1000;
+      var x = final_val*10;
+      document.getElementById('final_val').innerHTML = x;
+      document.getElementById('final_unit').innerHTML = "hl";
+      break;
+    case "hl":
+      var x = final_val*100;
       document.getElementById('final_val').innerHTML = x;
       document.getElementById('final_unit').innerHTML = "l";
       break;
@@ -121,15 +121,15 @@ function downfunc(){
   var final_unit = document.getElementById('final_unit').innerHTML;
 
   switch (final_unit) {
-    case "kl":
-      var x = final_val*10;
-      document.getElementById('final_val').innerHTML = x;
-      document.getElementById('final_unit').innerHTML = "hl";
-      break;
-    case "l":
-      var x = final_val/1000;
+    case "hl":
+      var x = final_val/10;
       document.getElementById('final_val').innerHTML = x;
       document.getElementById('final_unit').innerHTML = "kl";
+      break;
+    case "l":
+      var x = final_val/100;
+      document.getElementById('final_val').innerHTML = x;
+      document.getElementById('final_unit').innerHTML = "hl";
       break;
     case "cl":
       var x = final_val/100;
