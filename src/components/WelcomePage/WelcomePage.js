@@ -8,15 +8,15 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import "./WelcomePage.css";
 function WelcomePage() {
-	const { isAuthenticated, token, username, avatar } = useAuth();
-	const apiurl = process.env.REACT_APP_API_URL;
-	const history = useHistory();
-	const [games, setGames] = useState([]);
-	const [loading, setLoading] = useState(true);
-	const [allGames, setAllGames] = useState([]);
-	const placeholder =
-		"https://ik.imagekit.io/funcboxImages/WelcomePage_assets/placeholder_oF5SIwZ26.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642429577487";
-
+  const { isAuthenticated, token, username, avatar } = useAuth();
+  const apiurl = process.env.REACT_APP_API_URL;
+  const history = useHistory();
+  const [games, setGames] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [allGames, setAllGames] = useState([]);
+  const [gameSearch, setGameSearch] = useState('');
+  const placeholder =
+    "https://ik.imagekit.io/funcboxImages/WelcomePage_assets/placeholder_oF5SIwZ26.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642429577487";
 	useEffect(() => {
 		if (isAuthenticated === false) {
 			history.push("/login");
@@ -143,11 +143,21 @@ function WelcomePage() {
 									alt=""
 								/>
 							</div>
-							<div className="game_thumbnails">
+              	<div className="search_bar">
+                  <input type="text" id="search_game" placeholder="Search..." onChange={event=>{setGameSearch(event.target.value)}} />
+                </div>
+				<div className="game_thumbnails">
 								{games.length > 0
-									? games.map((game) => (
+									? games.filter((game)=>{
+                    if(gameSearch==""){
+                      return game;
+                    }
+                    else if (game.gname.toLowerCase().includes(gameSearch.toLowerCase())){
+                      return game;
+                    }
+                  	}).map((game,i) => (
 											<Link
-												key={`game-${game.gname}`}
+												key={`game-${game.gname}-${i}`}
 												className="thumbnail_link"
 												to={game?.route}
 											>
@@ -177,3 +187,5 @@ function WelcomePage() {
 }
 
 export default WelcomePage;
+
+
