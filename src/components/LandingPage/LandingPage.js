@@ -10,6 +10,8 @@ import Example from "../VideoEmbed/Example";
 import FrontTable from "../FrontTable/FrontTable";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Carousel from "./Carousel/CarouselComp";
+import ImageSlider from "../carousel/ImageSlider";
+import { SLIDER_DATA } from "../carousel/SliderData";
 
 // import Monkey from "../../assets.monkey.png"
 // import Left from "../../assets.left.png"
@@ -104,6 +106,9 @@ export default function LandingPage() {
             Coding
           </p>
         </Ribbon>
+
+        <ImageSlider slides={SLIDER_DATA} />
+
         <Carousel />
         {/* <Container /> */}
         <div className="creativity_div">

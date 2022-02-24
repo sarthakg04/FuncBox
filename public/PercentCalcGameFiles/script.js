@@ -93,6 +93,21 @@ function getPercentage() {
   console.log(mark4);
   console.log(mark5);
   console.log(maximum_mark);
+  if (mark1 < 0) {
+    mark1 = 0;
+  }
+  if (mark2 < 0) {
+    mark2 = 0;
+  }
+  if (mark3 < 0) {
+    mark3 = 0;
+  }
+  if (mark4 < 0) {
+    mark4 = 0;
+  }
+  if (mark5 < 0) {
+    mark5 = 0;
+  }
 
   total_marks = mark1 + mark2 + mark3 + mark4 + mark5;
   total_marks = parseInt(total_marks);
