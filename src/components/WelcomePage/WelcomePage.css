@@ -65,7 +65,7 @@ a {
 
 .welcome__username {
   position: relative;
-  color: aliceblue;
+  color: rgb(0, 0, 0);
   font-size: 40px;
   left: 4rem;
   top: 5rem;
