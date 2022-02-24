@@ -180,6 +180,13 @@ a {
   text-align: center;
   z-index: 50;
 }
+.search_bar input{
+  width: 90%;
+  margin: auto;
+  height:30px;
+  border-radius: 5px;
+  padding: 0 10px;
+}
 
 @media screen and (max-width: 1100px) {
   .ipad_container {
