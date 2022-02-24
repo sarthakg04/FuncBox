@@ -1,6 +1,7 @@
 //Frontend Functions for testing
-// let bird = 'black'
+// let hitter = 'black'
 // let goodItem = 'fruit'
+// let badItem = 'pig'
 // fillBackground('forest')
 // createScore()
 // createGamePad()
@@ -71,7 +72,7 @@ function createPlancks() {
     // Creating the bird div and appending it to initial currentBirdPosition
     squares[currentBirdPosition].classList.add('bird-check')
     squares[currentBirdPosition].classList.add('planck-check')
-    squares[currentBirdPosition].classList.add(bird+'_bird_planck')
+    squares[currentBirdPosition].classList.add(hitter+'_bird_planck')
     SetPlancks()
 }
 
@@ -151,7 +152,7 @@ function SetElements() {
         if(i<3) {
             squares[planckArray[i]].classList.remove('planck')
             squares[planckArray[i]].classList.add('pig-check')
-            squares[planckArray[i]].classList.add('pig_planck')
+            squares[planckArray[i]].classList.add(badItem+'_planck')
             
         }
         else{
@@ -171,15 +172,15 @@ function MoveNext() {
         let planck_position_check = true;
         squares[currentBirdPosition].classList.remove('bird-check')
         if(squares[currentBirdPosition].classList.contains('pig-check')) {
-            squares[currentBirdPosition].classList.remove(bird+'_bird_pig_planck')
-            squares[currentBirdPosition].classList.add('pig_planck')
+            squares[currentBirdPosition].classList.remove(hitter+'_bird_'+badItem+'_planck')
+            squares[currentBirdPosition].classList.add(badItem+'_planck')
         }
         if(squares[currentBirdPosition].classList.contains('box-check')) {
-            squares[currentBirdPosition].classList.remove(bird+'_bird_'+ goodItem+'_planck')
+            squares[currentBirdPosition].classList.remove(hitter+'_bird_'+ goodItem+'_planck')
             squares[currentBirdPosition].classList.add(goodItem+'_planck')
         }
         else{
-            squares[currentBirdPosition].classList.remove(bird+'_bird_planck')
+            squares[currentBirdPosition].classList.remove(hitter+'_bird_planck')
             squares[currentBirdPosition].classList.add('planck')
         }
         
@@ -190,17 +191,17 @@ function MoveNext() {
                 squares[currentBirdPosition].classList.add('bird-check')
                 // squares[currentBirdPosition].appendChild(bird)
                 if(squares[currentBirdPosition].classList.contains('pig-check')) {
-                    squares[currentBirdPosition].classList.remove('pig_planck')
-                    squares[currentBirdPosition].classList.add(bird+'_bird_pig_planck')
+                    squares[currentBirdPosition].classList.remove(badItem+'_planck')
+                    squares[currentBirdPosition].classList.add(hitter+'_bird_'+badItem+'_planck')
                 }
                 if(squares[currentBirdPosition].classList.contains('box-check')) {
                     squares[currentBirdPosition].classList.remove(goodItem+'_planck')
-                    squares[currentBirdPosition].classList.add(bird+'_bird_'+ goodItem+'_planck')
+                    squares[currentBirdPosition].classList.add(hitter+'_bird_'+ goodItem+'_planck')
                 }
                 else{
                     
                     squares[currentBirdPosition].classList.remove('planck')
-                    squares[currentBirdPosition].classList.add(bird+'_bird_planck')
+                    squares[currentBirdPosition].classList.add(hitter+'_bird_planck')
                 }
                 if(squares[currentBirdPosition].classList.contains('pig-check') || squares[currentBirdPosition].classList.contains('box-check')) {
                     if(squares[currentBirdPosition].classList.contains('hitted-check')){
@@ -222,15 +223,15 @@ function MovePrev() {
         let planck_position_check = true;
         squares[currentBirdPosition].classList.remove('bird-check')
         if(squares[currentBirdPosition].classList.contains('pig-check')) {
-            squares[currentBirdPosition].classList.remove(bird+'_bird_pig_planck')
-            squares[currentBirdPosition].classList.add('pig_planck')
+            squares[currentBirdPosition].classList.remove(hitter+'_bird_'+badItem+'_planck')
+            squares[currentBirdPosition].classList.add(badItem+'_planck')
         }
         if(squares[currentBirdPosition].classList.contains('box-check')) {
-            squares[currentBirdPosition].classList.remove(bird+'_bird_'+ goodItem+'_planck')
+            squares[currentBirdPosition].classList.remove(hitter+'_bird_'+ goodItem+'_planck')
             squares[currentBirdPosition].classList.add(goodItem+'_planck')
         }
         else{
-            squares[currentBirdPosition].classList.remove(bird+'_bird_planck')
+            squares[currentBirdPosition].classList.remove(hitter+'_bird_planck')
             squares[currentBirdPosition].classList.add('planck')
         }
         
@@ -241,17 +242,17 @@ function MovePrev() {
                 squares[currentBirdPosition].classList.add('bird-check')
                 // squares[currentBirdPosition].appendChild(bird)
                 if(squares[currentBirdPosition].classList.contains('pig-check')) {
-                    squares[currentBirdPosition].classList.remove('pig_planck')
-                    squares[currentBirdPosition].classList.add(bird+'_bird_pig_planck')
+                    squares[currentBirdPosition].classList.remove(badItem+'_planck')
+                    squares[currentBirdPosition].classList.add(hitter+'_bird_'+badItem+'_planck')
                 }
                 if(squares[currentBirdPosition].classList.contains('box-check')) {
                     squares[currentBirdPosition].classList.remove(goodItem+'_planck')
-                    squares[currentBirdPosition].classList.add(bird+'_bird_'+ goodItem+'_planck')
+                    squares[currentBirdPosition].classList.add(hitter+'_bird_'+ goodItem+'_planck')
                 }
                 else{
                     
                     squares[currentBirdPosition].classList.remove('planck')
-                    squares[currentBirdPosition].classList.add(bird+'_bird_planck')
+                    squares[currentBirdPosition].classList.add(hitter+'_bird_planck')
                 }
                 if(squares[currentBirdPosition].classList.contains('pig-check') || squares[currentBirdPosition].classList.contains('box-check')) {
                     if(squares[currentBirdPosition].classList.contains('hitted-check')){
