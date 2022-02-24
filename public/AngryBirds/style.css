@@ -17,6 +17,10 @@
   background-image: url('./assets/snow.png');
 }
 
+.floor {
+  background-image: url('./assets/germs_bg.png');
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -89,8 +93,18 @@ body {
   top: 20%; */
 }
 
+.germ_planck{
+  background: url('./assets/germ_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
 .pig_planck {
   background: url('./assets/pig_planck.svg') no-repeat;
+  background-position: center bottom;
+}
+
+.clean_planck{
+  background: url('./assets/clean_planck.png') no-repeat;
   background-position: center bottom;
 }
 
@@ -102,6 +116,21 @@ body {
 .fruit_planck {
   background: url('./assets/fruit_planck.png') no-repeat;
   background-position: center bottom;
+}
+
+.vaccine_bird_planck{
+  background: url('./assets/vaccine_planck.png') no-repeat;
+  background-position: center top;
+}
+
+.vaccine_bird_germ_planck{
+  background: url('./assets/vaccine_germ_planck.png') no-repeat;
+  background-position: center top;
+}
+
+.vaccine_bird_clean_planck{
+  background: url('./assets/vaccine_clean_planck.png') no-repeat;
+  background-position: center top;
 }
 
 .black_bird_planck {
