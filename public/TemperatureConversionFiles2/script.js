@@ -10,7 +10,7 @@
 //   var inputData=getData();
 //   if (selectedOption=="celsius"){
 //     fahrenheit=((inputData * 1.8) + 32);
-//     kelvin=inputData+372;
+//     kelvin=inputData+273;
 //     showCelsiusResult();
 //   }
 //   else if(selectedOption=="fahrenheit"){
