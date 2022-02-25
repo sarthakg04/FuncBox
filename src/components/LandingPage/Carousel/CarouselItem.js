@@ -1,6 +1,6 @@
 import React from "react";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function CarouselItem({
 	leftLeftImgSrc,
@@ -8,18 +8,36 @@ export default function CarouselItem({
 	centerImgSrc,
 	rightImgSrc,
 	rightRightImgSrc,
+  prevSlide,
+	nextSlide,
 }) {
 	return (
 		<div className="carouselSliderItem">
-			<LazyLoadImage src={leftLeftImgSrc} alt="Game" id="carouselSliderItemLeftLeft" />
+			<LazyLoadImage
+				src={leftLeftImgSrc}
+				alt="Game"
+				id="carouselSliderItemLeftLeft"
+			/>
 			<LazyLoadImage src={leftImgSrc} alt="Game" id="carouselSliderItemLeft" />
+
+			<div className="carouselSliderLeft" onClick={prevSlide}>
+				<IoIosArrowBack size={50} />
+			</div>
 			<LazyLoadImage
 				src={centerImgSrc}
 				alt="Game"
 				id="carouselSliderItemCenter"
 				className=""
 			/>
-			<LazyLoadImage src={rightImgSrc} alt="Game" id="carouselSliderItemRight" />
+			<div className="carouselSliderRight" onClick={nextSlide}>
+				<IoIosArrowForward size={50} />
+			</div>
+
+			<LazyLoadImage
+				src={rightImgSrc}
+				alt="Game"
+				id="carouselSliderItemRight"
+			/>
 			<LazyLoadImage
 				src={rightRightImgSrc}
 				alt="Game"
@@ -37,9 +55,3 @@ export default function CarouselItem({
 		</div>
 	);
 }
-
-// Default Prop Value
-CarouselItem.defaultProps = {
-	imgSrc:
-		"https://ik.imagekit.io/funcboxImages/Cards_assets/lets_make_it_rain_front_-z4sZcdqS-BM.png",
-};

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import "./Carousel.css";
 import { Cards } from "./CarouselData";
 import CarouselItem from "./CarouselItem";
@@ -39,10 +38,6 @@ function CarouselComp() {
 
 	return (
 		<div className="carouselSlider">
-			<div className="carouselSliderLeft" onClick={prevSlide}>
-				<IoIosArrowBack size={50} className="carouselSliderIcon" />
-			</div>
-
 			<div className="carouselSliderImages" style={cssProperties}>
 				{Cards.map((val, idx) => {
 					return (
@@ -61,15 +56,13 @@ function CarouselComp() {
 									centerImgSrc={Cards[centerSrc].imgSrc}
 									rightImgSrc={Cards[rightSrc].imgSrc}
 									rightRightImgSrc={Cards[rightRightSrc].imgSrc}
+									prevSlide={prevSlide}
+									nextSlide={nextSlide}
 								/>
 							)}
 						</div>
 					);
 				})}
-			</div>
-
-			<div className="carouselSliderRight" onClick={nextSlide}>
-				<IoIosArrowForward size={50} />
 			</div>
 		</div>
 	);
