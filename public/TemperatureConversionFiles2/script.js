@@ -83,6 +83,7 @@ function addRestartButton(){
   </div>`;
 }
 function restart(){
+  selectedOption="celsius";
   fillBackground();
   createUnit();
   createInputBox();
@@ -106,8 +107,8 @@ function showFahrenheitResult(){
 }
 function showKelvinResult(){
   document.getElementsByClassName('GamePad')[0].style.backgroundImage =  "url('./TemperatureConversionFiles2/assets/kelRes.png'"
-  document.getElementsByClassName('GamePad')[0].innerHTML=`<h3 class="ansUpper">${celsius} C</h3>`;
-  document.getElementsByClassName('GamePad')[0].innerHTML+=`<h3 class="ansLower">${fahrenheit.toFixed(2)} F</h3>`;
+  document.getElementsByClassName('GamePad')[0].innerHTML=`<h3 class="ansUpper">${fahrenheit.toFixed(2)} F</h3>`;
+  document.getElementsByClassName('GamePad')[0].innerHTML+=`<h3 class="ansLower">${celsius} C</h3>`;
   addRestartButton();
 }
 function getData(){

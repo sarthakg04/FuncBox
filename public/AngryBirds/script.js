@@ -84,7 +84,7 @@ function createInteractionPad() {
     <div class="ControlPad">
         <button id="nextButton" class="MovementBtns left_btn" onclick="MoveNext()"></button>
         <button id="prevButton" class="MovementBtns right_btn" onclick="MovePrev()"></button>
-        <button class="hitBtn" onclick="Hit()" disabled>💥</button>
+        <button class="hitBtn" onclick="Hit()" disabled>HIT</button>
         <button class="restart_btn" onclick="Restart()"></button>
     </div>
     `

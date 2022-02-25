@@ -1,176 +1,206 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,500;1,600;1,700&display=swap");
 * {
-	margin: 0;
-	padding: 0;
-	font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 .aboutPage__main .hero__section .about_main_container {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .about_container1 {
-	position: relative;
+  position: relative;
 }
 
 .yellowbg {
-	width: 50vw;
-	height: 60vh;
-	left: 0;
-	top: 0;
-	min-height: 500px;
+  width: 50vw;
+  height: 60vh;
+  left: 0;
+  top: 0;
+  min-height: 500px;
 }
 
 .phoneimg {
-	position: absolute;
-	left: 10%;
-	top: 10%;
-	width: 70%;
-	height: 80%;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  width: 70%;
+  height: 80%;
 }
 
 .about_container2 {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
-	font-family: "Montserrat", sans-serif;
-	margin-right: 3vw;
-	text-align: center;
-	width: 50vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  margin-right: 3vw;
+  text-align: center;
+  width: 50vw;
 }
 
 .about_container2 h1 {
-	margin-bottom: 20px;
-	font-size: 50px;
-	font-weight: 500;
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: 500;
 }
 
 .about_container2 p {
-	font-size: 1.2vw;
-	width: 28vw;
-	font-weight: 4200;
-	line-height: 26px;
+  font-size: 1.2vw;
+  width: 28vw;
+  font-weight: 4200;
+  line-height: 26px;
 }
 
 .aboutPage__main .faqs {
-	margin: 64px;
-	font-size: 28px;
-	font-weight: 300;
-	margin-bottom: 32px;
+  margin: 64px;
+  /* font-size: 28px; */
+  font-size: 1.4rem;
+  /* font-weight: 300; */
+  margin-bottom: 32px;
 }
 
 .aboutPage__main .faq {
-	margin-bottom: 32px;
-	cursor: pointer;
+  margin-bottom: 32px;
+  cursor: pointer;
 }
 
 .aboutPage__main .faqs .faq__heading {
-	text-align: center;
-	margin-bottom: 32px;
+  text-align: center;
+  margin-bottom: 32px;
 }
 
-.aboutPage__main .faqs p {
-	font-size: 24px;
-	margin-bottom: 16px;
+.aboutPage__main .faqs .answer {
+  /* font-size: 24px; */
+  font-size: 1.2rem;
+  margin-bottom: 16px;
 }
 
 .question {
-	cursor: pointer;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .question i.active {
-	transform: rotate(180deg);
-	transition: 0.5s;
+  transform: rotate(180deg);
+  transition: 0.5s;
 }
 
 .question i {
-	transform: none;
-	transition: 0.5s;
+  transform: none;
+  transition: 0.5s;
 }
 
 .question h5 {
-	color: rgb(66, 66, 66);
+  color: rgb(66, 66, 66);
 }
 
 .answer {
-	max-height: 0;
-	overflow: hidden;
-	transition: 0.5s;
-	color: rgb(3, 6, 143);
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  color: rgb(3, 6, 143);
 }
 
 @media (max-width: 1300px) {
-	.about_container2 p {
-		font-size: 1.2rem;
-		width: 40vw;
-	}
+  .about_container2 p {
+    font-size: 1.2rem;
+    width: 40vw;
+  }
+  .phoneimg {
+    top: 15%;
+    height: 70%;
+  }
 }
 
 @media (max-width: 885px) {
-	/* .phoneimg {
+  /* .phoneimg {
     height: 70%;
   } */
 
-	.about_container2 p {
-		font-size: 1.2rem;
-		width: 38vw;
-	}
+  .about_container2 p {
+    font-size: 1.2rem;
+    width: 38vw;
+  }
+  .phoneimg {
+    top: 20%;
+    height: 65%;
+  }
+
+  .aboutPage__main .faqs {
+    font-size: 1.2rem;
+    margin: 55px;
+    margin-top: 120px;
+  }
+
+  .aboutPage__main .faqs .answer {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 767px) {
-	.aboutPage__main .roadMap img {
-		width: 95%;
-	}
+  .aboutPage__main .roadMap img {
+    width: 95%;
+  }
 
-	.aboutPage__main .hero__section .about_main_container {
-		flex-direction: column;
-	}
-	.yellowbg {
-		margin-left: -50vw;
-		width: 70vw;
-		margin-bottom: 32px;
-	}
+  .aboutPage__main .hero__section .about_main_container {
+    flex-direction: column;
+  }
+  .yellowbg {
+    margin-left: -50vw;
+    width: 70vw;
+    margin-bottom: 32px;
+  }
 
-	.phoneimg {
-		left: 0%;
-		top: 10%;
-		width: 70vw;
-		margin-left: -30vw;
-	}
+  .phoneimg {
+    left: 0%;
+    top: 10%;
+    width: 70vw;
+    margin-left: -30vw;
+  }
 
-	.about_container2 {
-		width: 75%;
-	}
+  .about_container2 {
+    width: 75%;
+  }
 
-	.about_container2 h1 {
-		font-size: 40px;
-	}
+  .about_container2 h1 {
+    font-size: 40px;
+  }
 
-	.about_container2 p {
-		width: 75%;
-	}
+  .about_container2 p {
+    width: 75%;
+  }
 }
 
 @media (max-width: 500px) {
-	.yellowbg {
-		min-height: 400px;
-		height: 40vh;
-	}
+  .yellowbg {
+    min-height: 400px;
+    height: 40vh;
+  }
   .phoneimg {
-		margin-left: -20vw;
-	}
-	.about_container2 {
-		width: 95%;
-	}
+    margin-left: -20vw;
+  }
+  .about_container2 {
+    width: 95%;
+  }
 
-	.about_container2 p {
-		width: 95%;
-	}
+  .about_container2 p {
+    width: 95%;
+  }
+
+  .aboutPage__main .faqs {
+    font-size: 1.1rem;
+    margin: 30px;
+    margin-top: 60px;
+  }
+
+  .aboutPage__main .faqs .answer {
+    font-size: 0.9rem;
+  }
 }
 
 /* @media (max-width: 710px) {

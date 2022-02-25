@@ -1,9 +1,10 @@
 //FontendFunctions
 // createGamepad();
-// fillBackground('backgroundYellow');
+// fillBackground('Yellow');
 // createScore();
 // createContainer('doczombie');
 // createShooter('laser');
+// setZombieSpeed(3);
 // createInteractionPad();
 // function rotateShooter(direction , shooter){
 //   switch (direction) {
@@ -30,8 +31,10 @@ function createGamepad(){
 
 function fillBackground(background){
   if(!background){
-    background='backgroundOrange'
+    background='orange'
   }
+
+  background = background.toLowerCase();
   document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(./ZombieGameFiles/assets/'+background+'.png)';
 }
 
@@ -90,6 +93,9 @@ let zombieSize = [55, 55 ,55];
 let totalzombie = 0
 let score = 0;
 let gZombieTheme;
+
+let setSpeed = 1;
+let finalSpeed = 1000 - (setSpeed-1)*100;
 // 80px down
 
 function shootLeft(){
@@ -128,7 +134,7 @@ function gameOver(){
 }
 
 function moveZombie(){
-  console.log(zombieArray);
+  // console.log(zombieArray);
   for(let i = 0; i<3; i++){
 
 
@@ -204,16 +210,39 @@ function shootCenter(){
 }
 
 
-let gen = setInterval(()=>{
 
-  if(totalzombie < 3){
-    generateZombie();
-    totalzombie+=1;
+function setZombieSpeed(speed){
+  speed = parseInt(speed);
 
+  if(speed){
+    setSpeed = speed;
+    if(setSpeed > 10){
+      setSpeed = 10;
+    }
+    finalSpeed = 1000 - (setSpeed-1)*100;
+    console.log(finalSpeed);
   }
-  moveZombie();
 
-},900);
+}
+
+
+
+
+function startGame(){
+  console.log(finalSpeed);
+  gen = setInterval(()=>{
+
+    if(totalzombie < 3){
+      generateZombie();
+      totalzombie+=1;
+
+    }
+    moveZombie();
+
+  },finalSpeed);
+}
+
+let gen;
 
 
 function restart(){

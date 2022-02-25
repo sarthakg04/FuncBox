@@ -40,7 +40,7 @@ import Preview from "./Preview/Preview";
 import HitIt from "./Games/HitIt/HitIt";
 import TrashGame from "./Games/TrashGame/TrashGame";
 import CashierGame from "./Games/CashierGame/CashierGame";
-import MeltTheIce from "./Games/MeltTheIceGame/MeltTheIce";
+import PhotosynthesisGame from "./Games/PhotosynthesisGame/PhotosynthesisGame";
 import RecycleIt from "./Games/RecycleIt/RecycleIt";
 import useAuth from "../hooks/useAuth";
 import FlippableCard from "./FlippableCard/FlippableCard";
@@ -150,7 +150,7 @@ function App() {
           <Route exact path="/Calculator" component={Calculator} />
           <Route exact path="/FlappyGame" component={FlappyGame} />
           <Route exact path="/CashierGame" component={CashierGame} />
-          <Route exact path="/MeltTheIce" component={MeltTheIce} />
+          <Route exact path="/Photosynthesis" component={PhotosynthesisGame} />
           <Route exact path="/mrfraction" component={Mrfraction} />
           <Route
             exact
@@ -182,24 +182,7 @@ function App() {
           <Route exact path="/WeatherGame" component={WeatherGame} />
           <Route exact path="/FeedTheCrocsGame" component={FeedTheCrocsGame} />
 
-          <Route exact path="/AngryBirds" component={AngryBirds} />
-          <Route exact path="/MissionMars" component={MissionMars} />
-          <Route exact path="/MonkeyMultiplier" component={MonkeyMultiplier} />
-          <Route exact path="/StepMeasure" component={StepMeasure} />
-          <Route exact path="/LetsMakeItRain" component={LetsMakeItRain} />
-          <Route exact path="/BowlingGame" component={BowlingGame} />
-          <Route exact path="/ClockGame" component={ClockGame} />
-          <Route exact path="/AlienGame" component={AlienGame} />
-          <Route exact path="/AvengersGame" component={AvengersGame} />
-          <Route exact path="/MoleGame" component={MoleGame} />
-          <Route exact path="/IncrediblesGame" component={IncrediblesGame} />
-          <Route exact path="/ColorGame" component={ColorFun} />
-          <Route exact path="/SolarGame" component={MySolarSystem} />
-          <Route exact path="/Calculator" component={Calculator} />
-          <Route exact path="/FlappyGame" component={FlappyGame} />
-          <Route exact path="/CashierGame" component={CashierGame} />
-          <Route exact path="/MeltTheIce" component={MeltTheIce} />
-          <Route exact path="/mrfraction" component={Mrfraction} />
+      
           <Route exact path="/BasketballGame" component={BasketballGame} />
           <Route
             exact
@@ -207,34 +190,7 @@ function App() {
             component={TemperatureConversions2}
           />
 
-          <Route
-            exact
-            path="/TemperatureConversions"
-            component={TemperatureConversions}
-          />
-          <Route exact path="/pawnshop" component={PawnShop} />
-          <Route exact path="/CardGame" component={CardGame} />
-          <Route exact path="/MotuPatlu" component={MotuPatlu} />
-          <Route exact path="/StatesThatMatter" component={StatesThatMatter} />
-          <Route exact path="/HitIt" component={HitIt} />
-          <Route exact path="/PollutoFree" component={PollutoFree} />
-          <Route exact path="/TrashGame" component={TrashGame} />
-          <Route exact path="/RecycleIt" component={RecycleIt} />
-          <Route exact path="/butterflyGame" component={Butterfly} />
-          <Route exact path="/ZombieGame" component={Zombie} />
-          <Route exact path="/DecimalGame" component={Decimal} />
-          <Route exact path="/animalhome" component={AnimalHomeGame} />
-          <Route exact path="/calculator2" component={Calculator2Game} />
-          <Route exact path="/AreaGame" component={AreaGame} />
-          <Route exact path="/Demo" component={Demo} />
-          <Route exact path="/countdracula" component={CountDracula} />
-          <Route exact path="/chemistrylab" component={ChemistryLab} />
-          <Route
-            exact
-            path="/WeightUnitConversions"
-            component={WeightUnitConversions}
-          />
-          <Route exact path="/WeatherGame" component={WeatherGame} />
+          
           <Route exact path="/SeizeHerGame" component={SeizeHerGame} />
           <Route
             exact

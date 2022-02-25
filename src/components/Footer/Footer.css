@@ -1,677 +1,97 @@
-/* .footer{
-  background-image: url("https://ik.imagekit.io/funcboxImages/footer_0Z5PkwLoi.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  width: 100%;
-} */
-
-.footer > * {
-  box-sizing: border-box;
-  position: absolute;
-}
-
-.footer {
+.footer{
   position: relative;
+  background: url("https://ik.imagekit.io/funcboxImages/image_288_1DiBd8v_PEE8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645042572237");
+  height:100vh;
+  width:100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
-.footer__bg {
-  height: auto;
-  width: 100%;
+.get_in_touch{
+  margin-left: 2.5vw;
+  position: absolute;
+  font-size: 2rem;
+  color:white;
+  margin-top:50vh;
 }
-
-.get_in_touch {
-  font-size: 20px;
-  font-weight: bold;
-  top: 350px;
-  left: 70px;
+.get_in_touch input{
+  width:30vw;
+  border: 1rem solid white;
+  border-radius: 1rem;
 }
-
-.footer input {
-  width: 400px;
-  height: 40px;
-  border-radius: 40px;
-  outline: none;
-  border: none;
-  font-size: 22px;
-  padding-left: 20px;
+.home_store_school_blog{
+  margin-left: 2.5vw;
+  color:white;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: 75vh;
+  justify-content: center;
+  display:flex;
+  gap: 1.5vw;
+  flex-wrap: wrap;
 }
-
-.bell {
-  top: 385px;
-  left: 420px;
-  cursor: pointer;
-}
-
-.home_store_school_blog {
-  display: flex;
-  flex-direction: row;
-  font-weight: bold;
-  font-size: 22px;
-  gap: 70px;
-  top: 480px;
-  left: 70px;
-}
-
-.home_store_school_blog a {
-  text-decoration: none;
-  color: #000000;
-}
-
-.home_store_school_blog a:hover {
+.home_store_school_blog a :hover{
   text-decoration: underline;
 }
-
-.horizontal_line {
-  width: 90%;
-  height: 1px;
-  background-color: #000000;
-  top: 680px;
-  left: 50%;
-  transform: translateX(-50%);
+.Career{
+  margin-left: 2.5vw;
+  color:white;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: 85vh;
+  justify-content: center;
+  display:flex;
 }
-
-.social_media {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  top: 640px;
-  left: 80px;
+.horizontal_rule{
+  width:80%;
+  position: absolute;
+  border: 1px solid white;
+  margin-top:15vh;
+  margin-left: 10vw;
 }
-
-.social_media img {
-  width: 35px;
-  height: 35px;
+.important_links{
+  color:white;
+  margin-left:35vw;
+  float: left;
+  display:flex;
 }
-
-.social_media img {
-  cursor: pointer;
+.postcredit{
+  margin-left: 40vw;
+  color:white;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: 95vh;
+  justify-content: center;
+  display:flex;
+  gap: 1.5vw;
+  flex-wrap: wrap;
 }
-
-.important_links {
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-  gap: 7px;
-  top: 600px;
-  right: 120px;
+.social_media{
+  margin-left: 2.5vw;
+  color:white;
+  position: absolute;
+  margin-top: 82vh;
+  justify-content: center;
+  display:flex;
+  gap:2vw;
+  flex-wrap: wrap;
 }
-
-.important_links a {
-  text-decoration: none;
-  color: #000000;
+.ld{
+  height:5vh;
+  width:80%;
+  margin-left:1vw;
 }
-
-.important_links a:hover {
-  text-decoration: underline;
+.fb{
+  height:5vh;
+  width:80%;
+  margin-left:1vw;
 }
-
-.postcredit {
-  font-size: 20px;
-  font-weight: bold;
-  top: 710px;
-  left: 50%;
-  transform: translateX(-50%);
+.ig{
+  height:5vh;
+  width:80%;
+  margin-left:1vw;
 }
-
-.postcredit a {
-  text-decoration: none;
-  color: #000000;
-}
-
-.postcredit a:hover {
-  text-decoration: underline;
-}
-
-.postcredit  span {
-  color: red;
-}
-
-@media screen and (max-width: 3200px) {
-  .get_in_touch {
-    top: 700px;
-    left: 140px;
-    font-size: 32px;
-    /* background-color: rgb(162, 0, 255); */
-  }
-
-  .footer input {
-    width: 400px;
-    height: 40px;
-    font-size: 30px;
-    padding-left: 15px;
-  }
-
-  .home_store_school_blog {
-    top: 850px;
-    left: 140px;
-    font-size: 32px;
-  }
-
-  .horizontal_line {
-    top: 1250px;
-    left: 50%;
-  }
-
-  .social_media img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .social_media {
-    top: 1190px;
-    left: 120px;
-  }
-
-  .important_links {
-    top: 1090px;
-    right: 120px;
-    font-size: 30px;
-  }
-
-  .postcredit {
-    top: 1320px;
-    left: 50%;
-    font-size: 32px;
-    transform: translateX(-50%);
-  }
-
-}
-
-@media screen and (max-width: 2800px) {
-  .get_in_touch {
-    top: 600px;
-    left: 120px;
-    font-size: 28px;
-    /* background-color: rgb(255, 238, 0); */
-  }
-
-  .footer input {
-    width: 400px;
-    height: 40px;
-    font-size: 26px;
-    padding-left: 15px;
-  }
-
-  .home_store_school_blog {
-    top: 750px;
-    left: 120px;
-    font-size: 28px;
-  }
-
-  .horizontal_line {
-    top: 1090px;
-    left: 50%;
-  }
-
-  .social_media img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .social_media {
-    top: 1030px;
-    left: 100px;
-  }
-
-  .important_links {
-    top: 980px;
-    right: 120px;
-    font-size: 24px;
-  }
-
-  .postcredit {
-    top: 1120px;
-    left: 50%;
-    font-size: 28px;
-    transform: translateX(-50%);
-  }
-
-}
-
-@media screen and (max-width: 2100px) {
-  .get_in_touch {
-    top: 480px;
-    left: 80px;
-    /* background-color: #02882a; */
-  }
-
-  .home_store_school_blog {
-    top: 610px;
-    left: 80px;
-    font-size: 28px;
-  }
-
-  .footer input {
-    width: 400px;
-    height: 40px;
-    font-size: 26px;
-    padding-left: 15px;
-  }
-
-  .horizontal_line {
-    top: 930px;
-    left: 50%;
-  }
-
-  .social_media {
-    top: 880px;
-    left: 80px;
-  }
-
-  .important_links {
-    top: 820px;
-    right: 120px;
-  }
-
-  .postcredit {
-    top: 960px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .social_media img {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-@media screen and (max-width: 1900px) {
-  .get_in_touch {
-    top: 480px;
-    left: 70px;
-    /* background-color: #c43a3a; */
-  }
-
-  .home_store_school_blog {
-    top: 610px;
-    left: 70px;
-    font-size: 24px;
-  }
-
-  .horizontal_line {
-    top: 830px;
-    left: 50%;
-  }
-
-  .social_media {
-    top: 780px;
-    left: 80px;
-  }
-
-  .important_links {
-    top: 720px;
-    right: 120px;
-  }
-
-  .postcredit {
-    top: 830px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 24px;
-  }
-}
-
-@media screen and (max-width: 1600px) {
-  .get_in_touch {
-    top: 350px;
-    left: 70px;
-    /* background-color: rgb(212, 12, 122); */
-  }
-
-  .home_store_school_blog {
-    top: 510px;
-    left: 70px;
-    font-size: 18px;
-  }
-
-  .horizontal_line {
-    top: 680px;
-    left: 50%;
-  }
-
-  .social_media {
-    top: 630px;
-    left: 80px;
-  }
-
-  .important_links {
-    top: 590px;
-    right: 120px;
-    font-size: 20px;
-  }
-
-  .postcredit {
-    top: 700px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-@media screen and (max-width: 1400px) {
-  .get_in_touch {
-    top: 310px;
-    left: 70px;
-    font-size: 18px;
-    /* background-color: #000000; */
-  }
-
-  .footer input {
-    width: 300px;
-    height: 35px;
-    font-size: 20px;
-    padding-left: 15px;
-  }
-
-  .home_store_school_blog {
-    top: 400px;
-    left: 70px;
-    font-size: 18px;
-  }
-
-  .horizontal_line {
-    top: 580px;
-    left: 50%;
-  }
-
-  .social_media {
-    top: 540px;
-    left: 80px;
-  }
-
-  .important_links {
-    top: 500px;
-    right: 90px;
-    font-size: 18px;
-  }
-
-  .social_media img {
-    width: 30px;
-    height: 30px;
-  }
-
-  .postcredit {
-    top: 590px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .get_in_touch {
-    top: 250px;
-    left: 70px;
-    font-size: 18px;
-    /* background-color: #5e018a; */
-  }
-
-  .footer input {
-    width: 300px;
-    height: 35px;
-    font-size: 20px;
-    padding-left: 15px;
-  }
-
-  .home_store_school_blog {
-    top: 350px;
-    font-size: 20px;
-  }
-
-  .horizontal_line {
-    top: 530px;
-  }
-
-  .social_media {
-    top: 490px;
-  }
-
-  .important_links {
-    top: 400px;
-    font-size: 18px;
-  }
-
-  .social_media img {
-    width: 30px;
-    height: 30px;
-  }
-
-  .postcredit {
-    top: 540px;
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  
-  .horizontal_line {
-    top: 480px;
-  }
-
-  .social_media {
-    top: 440px;
-  }
-
-  .important_links {
-    top: 400px;
-  }
-
-  .postcredit {
-    top: 490px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .get_in_touch {
-    top: 200px;
-    left: 70px;
-    font-size: 18px;
-  }
-
-  .home_store_school_blog {
-    top: 280px;
-    font-size: 20px;
-  }
-  .horizontal_line {
-    top: 390px;
-  }
-
-  .social_media {
-    top: 350px;
-  }
-
-  .important_links {
-    top: 310px;
-  }
-
-  .postcredit {
-    top: 400px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .get_in_touch {
-    top: 180px;
-    font-size: 15px;
-  }
-
-  .footer input {
-    width: 240px;
-    height: 30px;
-    font-size: 18px;
-    padding-left: 10px;
-  }
-
-  .home_store_school_blog {
-    top: 250px;
-    font-size: 16px;
-    gap: 40px;
-  }
-  .horizontal_line {
-    top: 320px;
-  }
-
-  .social_media {
-    top: 290px;
-    gap: 10px;
-  }
-
-  .social_media img {
-    width: 25px;
-    height: 25px;
-  }
-
-  .important_links {
-    top: 250px;
-    right: 50px;
-    gap: 2px;
-  }
-
-  .postcredit {
-    top: 330px;
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 670px) {
-  .get_in_touch {
-    top: 130px;
-    left: 50px;
-    font-size: 15px;
-  }
-
-  .footer input {
-    width: 220px;
-    height: 26px;
-    font-size: 17px;
-    padding-left: 10px;
-  }
-
-  .home_store_school_blog {
-    top: 190px;
-    left: 50px;
-    font-size: 14px;
-    gap: 35px;
-  }
-  .horizontal_line {
-    top: 260px;
-  }
-
-  .social_media {
-    top: 230px;
-    left: 50px;
-    gap: 10px;
-  }
-
-  .social_media img {
-    width: 25px;
-    height: 25px;
-  }
-
-  .important_links {
-    top: 200px;
-    gap: 2px;
-    font-size: 16px;
-  }
-
-  .postcredit {
-    top: 260px;
-    font-size: 16px;
-  }
-}
-
-/* Mobile */
-
-@media screen and (max-width: 470px) {
-  .get_in_touch {
-    top: 100px;
-    left: 30px;
-    font-size: 13px;
-  }
-
-  .footer input {
-    width: 200px;
-    height: 22px;
-    font-size: 15px;
-    padding-left: 10px;
-  }
-
-  .home_store_school_blog {
-    top: 145px;
-    left: 30px;
-    font-size: 12px;
-    gap: 26px;
-  }
-  .horizontal_line {
-    top: 190px;
-  }
-
-  .social_media {
-    top: 170px;
-    left: 30px;
-    gap: 10px;
-  }
-
-  .social_media img {
-    width: 18px;
-    height: 18px;
-  }
-
-  .important_links {
-    top: 140px;
-    right: 20px;
-    gap: 2px;
-    font-size: 12px;
-  }
-
-  .postcredit {
-    top: 190px;
-    font-size: 13px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .get_in_touch {
-    top: 80px;
-    left: 20px;
-    font-size: 12px;
-  }
-
-  .footer input {
-    width: 170px;
-    height: 18px;
-    font-size: 12px;
-    padding-left: 10px;
-  }
-
-  .home_store_school_blog {
-    top: 120px;
-    left: 20px;
-    font-size: 12px;
-    gap: 20px;
-  }
-  .horizontal_line {
-    top: 160px;
-  }
-
-  .social_media {
-    top: 140px;
-    left: 20px;
-    gap: 10px;
-  }
-
-  .social_media img {
-    width: 18px;
-    height: 18px;
-  }
-
-  .important_links {
-    top: 110px;
-    right: 18px;
-    gap: 2px;
-    font-size: 10px;
-  }
-
-  .postcredit {
-    top: 160px;
-    font-size: 10px;
+@media (max-width: 500px) {
+  .get_in_touch input{
+    width:50vw;
   }
 }

@@ -1,66 +1,117 @@
 .carouselSlider {
-	display: block;
-	margin: 0 auto;
-	width: 98%;
-	height: 100%;
-	position: relative;
-}
-
-.carouselSliderImages {
-}
-
-.carouselSliderImagesDiv{
   display: flex;
-  justify-content: center;
+	justify-content: center;
+	align-items: center;
+	min-height: min(25rem, 70vw);
+  /* width: 90%; */
+	padding: 0 1vw;
 }
 
-.carouselSliderImagesDiv > img {
-	cursor: grab;
+.carouselSliderImagesDiv {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.carouselSliderImagesDiv > img:active {
-	cursor: grabbing;
+/* CarouselItem Component */
+.carouselSliderItem {
+	perspective: 1500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.slick-prev {
-	left: 1rem;
-	z-index: 100;
-}
-
-.slick-next {
-	right: 1rem;
-	z-index: 100;
-}
-
-.slick-prev:before,
-.slick-next:before {
-	font-size: 2rem;
-	opacity: 0.75;
-	color: rgb(0, 0, 0);
-}
-
-@media screen and (max-width: 426px) {
-}
-
-.slide {
-	opacity: 0.8;
-	transform: translateX(-10%);
-}
-
-.slide.active {
-	opacity: 1;
-	transform: translateX(0%);
-	transition: transform 1s ease-in;
+.carouselSliderLeft,
+.carouselSliderRight {
+	cursor: pointer;
+	z-index: 5;
 }
 
 .carouselSliderItem > img {
-	/* clip-path: url(#myCurve); */
-	height: 20rem;
-	top: -10rem;
+	height: 15vw;
+	width: auto;
+	transform-style: preserve-3d;
+  margin: 0 1rem;
+}
+
+#carouselSliderItemLeftLeft {
+	transform: rotate3d(0, 1, 0, 50deg);
+	clip-path: url(#myCurve2);
+}
+
+#carouselSliderItemLeft {
+	transform: rotate3d(0, 1, 0, 25deg) scale(1.2);
+	clip-path: url(#myCurve1);
 }
 
 #carouselSliderItemCenter {
-	position: absolute;
-	left: 41%;
-	transform: scale(1.2);
+  transform: scale(1.4);
+	z-index: 10;
+  margin: 0 2rem;
+}
+
+#carouselSliderItemRight {
+  transform: rotate3d(0, 1, 0, -25deg) scale(1.2);
+	clip-path: url(#myCurve1);
+}
+
+#carouselSliderItemRightRight {
+	transform: rotate3d(0, 1, 0, -50deg);
+	clip-path: url(#myCurve2);
+}
+
+@media screen and (max-width: 1200px) {
+	.carouselSliderItem > img {
+		height: 17vw;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.carouselSliderItem > img {
+		height: 20vw;
+	}
+
+	#carouselSliderItemLeftLeft {
+		display: none;
+	}
+
+	#carouselSliderItemRightRight {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.carouselSliderItem > img {
+		height: 25vw;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.carouselSliderItem > img {
+		height: 40vw;
+	}
+
+	#carouselSliderItemLeft {
+		display: none;
+	}
+
+	#carouselSliderItemRight {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.carouselSliderItem > img {
+		height: 45vw;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.carouselSliderItem > img {
+		height: 55vw;
+	}
+
+  #carouselSliderItemCenter {
+		margin: 0 1rem;
+	}
 }

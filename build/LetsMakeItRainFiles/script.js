@@ -23,6 +23,8 @@ var sun
 var rays_list
 var temperature
 var InteractionPad
+var Precipitation_title
+var Precipitation_Description
 
 
 // original script var
@@ -81,6 +83,17 @@ function createSun(){
     sun = document.createElement('div')
     sun.classList.add('sun')
     GamePad.appendChild(sun)
+
+    Precipitation_title = document.createElement('div')
+    Precipitation_title.innerHTML+=`Precipitation`
+    Precipitation_title.classList.add('Precipitation_title')
+    Phone.appendChild(Precipitation_title)
+
+    Precipitation_Description = document.createElement('div')
+    Precipitation_Description.innerHTML+=`Precipitation is water released from clouds in the form of rain, freezing rain, sleet, snow, or hail. It is the primary connection in the water cycle that provides for the delivery of atmospheric water to the Earth. Most precipitation falls as rain.`
+    Precipitation_Description.classList.add('Precipitation_Description')
+    Phone.appendChild(Precipitation_Description)
+
 }
 
 function generateRays(){
@@ -184,6 +197,13 @@ function ray_1_Move(){
     if(current_ray1_position === 0){
         if( current_drop_position === 0 ) {
             onHit()
+            // drop_grid_squares[current_drop_position].classList.remove('drop_bg')
+            drop_grid_squares[current_drop_position].classList.add('happy_drop_bg')
+            setTimeout(
+                // drop_bg_manupulation(),
+                drop_grid_squares[current_drop_position].classList.add('drop_bg'),
+                2000
+                )
             // temparature = document.querySelector('.temparature')
             checkTemp()
             if(rays_caught >= 20){
@@ -195,7 +215,14 @@ function ray_1_Move(){
     ray_1_MovementId_2 = setTimeout(ray_1_Move,1000)
 }
 
-
+// function drop_bg_manupulation(){
+//     drop_grid_squares[current_drop_position].classList.remove('happy_drop_bg')
+//     console.log("Happy added")
+//     drop_grid_squares[current_drop_position].classList.add('drop_bg')
+//     // console.log("Happy removed")
+    
+//     // setTimeout(drop_grid_squares[current_drop_position].classList.add('drop_bg'),1000)
+// }
 
 function ray_2_Move(){
 
@@ -211,6 +238,13 @@ function ray_2_Move(){
     if(current_ray2_position === 0){
         if( current_drop_position === 1 ) {
             onHit()
+            // drop_grid_squares[current_drop_position].classList.remove('drop_bg')
+            drop_grid_squares[current_drop_position].classList.add('happy_drop_bg')
+            setTimeout(
+                // drop_bg_manupulation(),
+                drop_grid_squares[current_drop_position].classList.add('drop_bg'),
+                2000
+                )
             checkTemp()
             if(rays_caught >= 20){
                 return
@@ -237,6 +271,13 @@ function ray_3_Move(){
     if(current_ray3_position === 0){
         if( current_drop_position === 2 ) {
             onHit()
+            // drop_grid_squares[current_drop_position].classList.remove('drop_bg')
+            drop_grid_squares[current_drop_position].classList.add('happy_drop_bg')
+            setTimeout(
+                // drop_bg_manupulation(),
+                drop_grid_squares[current_drop_position].classList.add('drop_bg'),
+                2000
+                )
             checkTemp()
             if(rays_caught >= 20){
                 return
@@ -263,6 +304,13 @@ function ray_4_Move(){
     if(current_ray4_position === 0){
         if( current_drop_position === 3 ) {
             onHit()
+            // drop_grid_squares[current_drop_position].classList.remove('drop_bg')
+            drop_grid_squares[current_drop_position].classList.add('happy_drop_bg')
+            setTimeout(
+                // drop_bg_manupulation(),
+                console.log('call after 2??'),
+                2000
+                )
             checkTemp()
             if(rays_caught >= 20){
                 return
@@ -272,7 +320,6 @@ function ray_4_Move(){
 
     ray_4_MovementId_2 = setTimeout(ray_4_Move,1000)
 }
-
 
 
 function checkTemp(){
@@ -303,6 +350,12 @@ function checkTemp(){
         clearTimeout(ray_4_MovementId_2)
         var rays_list = document.querySelector('.rays_list')
         rays_list.style.display = 'none'
+        drop_grid_squares[current_drop_position].classList.remove('drop_bg')
+        drop_grid_squares[current_drop_position].classList.remove('happy_drop_bg')
+        drop_grid_squares[current_drop_position].style.display = 'none'
+        Precipitation_title.style.display = 'block'
+        Precipitation_Description.style.display = 'block'
+        temperature.className = ''
     }
 }
 
@@ -310,6 +363,8 @@ function checkTemp(){
 function DropUp(){
     if(current_drop_position>0){
         drop_grid_squares[current_drop_position].classList.remove('drop_bg')
+        drop_grid_squares[current_drop_position].classList.remove('happy_drop_bg')
+
         current_drop_position--
         drop_grid_squares[current_drop_position].classList.add('drop_bg')
     }
@@ -318,6 +373,7 @@ function DropUp(){
 function DropDown(){
     if(current_drop_position<3){
         drop_grid_squares[current_drop_position].classList.remove('drop_bg')
+        drop_grid_squares[current_drop_position].classList.remove('happy_drop_bg')
         current_drop_position++
         drop_grid_squares[current_drop_position].classList.add('drop_bg')
     }

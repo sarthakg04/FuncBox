@@ -4,12 +4,14 @@ import Frame from "../Frame/Frame";
 import { getGameId } from "../../features/gamesList";
 import { unhash } from "../../features/hasher";
 import useAuth from "../../hooks/useAuth";
+import "./Preview.css";
 export default function Preview(props) {
   const [js, setJs] = useState("");
   const code = props.match.params.code.split("+");
 
   const [srcDoc, setSrcDoc] = useState("");
   const [userid, setUserId] = useState(code[0]);
+  const [username, setUsername] = useState("");
   const [gid, setGid] = useState(code[1]);
   const path = filepath[gid];
   const apiurl = process.env.REACT_APP_API_URL;
@@ -30,8 +32,15 @@ export default function Preview(props) {
       console.log(unhash(data[len].code));
       setJs(unhash(data[len].code));
     };
+
+    const getUsername = async()=>
+    {
+      const res = await fetch(`https://server.funcbox.in/`)
+    }
+
     if (gid > -1 && userid !== "") {
       getSavedCode();
+      getUsername();
     }
   }, [userid, gid]);
   function updateCode() {
@@ -64,13 +73,9 @@ export default function Preview(props) {
   }, [js]);
 
   return (
-    <div>
-      <div className="preview__container" style={{ marginTop: "32px" }}>
-        <div className="preview">
-          <div className="frame_container">
-            <div className="phone">
-              <Frame srcDoc={srcDoc} />
-              {/* <iframe
+    <div class="game_preview">
+      <Frame srcDoc={srcDoc} />
+      {/* <iframe
                           srcDoc={srcDoc}
                           title="output"
                           sandbox="allow-scripts"
@@ -78,10 +83,9 @@ export default function Preview(props) {
                           width="100%"
                           height="100%"
                       /> */}
-            </div>
-          </div>
-        </div>
-      </div>
+      <p>
+        Made By <span className="strong">{username}</span>
+      </p>
     </div>
   );
 }

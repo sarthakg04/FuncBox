@@ -1,0 +1,399 @@
+/* Game 1 CSS */
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.Phone {
+  margin: 0 auto 0 auto;
+  border: 1px solid black;
+  box-sizing: border-box;
+  height: 535px;
+  width: 400px;
+  /* margin: 0; */
+  /* background-image: url('./assets/bg.png'); */
+}
+
+.Phone_Game_1_bg {
+  background-image: url('./assets/bg.png');
+}
+
+.ray_grid {
+  height: 30px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  position: fixed;
+  right: 0;
+  margin: auto;
+}
+
+.ray_1_grid {
+  left: 0px;
+  width: 230px;
+  top: 130px;
+  transform: rotate(-40deg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ray_2_grid {
+  left: 45px;
+  width: 240px;
+  top: 165px;
+  transform: rotate(-45deg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ray_3_grid {
+  left: 100px;
+  width: 240px;
+  top: 190px;
+  transform: rotate(-50deg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ray_4_grid {
+  left: 160px;
+  width: 260px;
+  top: 225px;
+  transform: rotate(-55deg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ray_div {
+  width: 43px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+}
+
+.cloud_grid {
+  width: 220px;
+  height: 30px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  position: fixed;
+  right: 0;
+  left: 20px;
+  top: 200px;
+  margin: auto;
+  display: flex;
+}
+
+.cloud_div {
+  width: 55px;
+  height: 30px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+}
+
+.ray_bg {
+  background: url('./assets/ray_bg.png') no-repeat center;
+}
+
+.cloud_bg {
+  background: url('./assets/cloud_bg.png') no-repeat center;
+}
+
+.plant {
+  width: 81px;
+  height: 130px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  position: fixed;
+  right: 0;
+  left: 220px;
+  top: 270px;
+  margin: auto;
+  background: url('./assets/plant_bg.png') no-repeat center;
+}
+
+.normal_plant {
+  background: url('./assets/plant_bg.png') no-repeat center;
+}
+
+.happy_plant {
+  background: url('./assets/happy_plant.png') no-repeat center;
+}
+
+.InteractionPad {
+  height: 30px;
+  width: 100px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  position: relative;
+  top: 450px;
+  left: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.fill_space {
+  width: 180px;
+  height: 89.5px;
+  position: fixed;
+  right: 0;
+  left: 220px;
+  top: 400px;
+  margin: auto;
+  /* border: 1px solid red; */
+  /* background-color: #6c481c; */
+
+  background: linear-gradient(to bottom, #6c481c 0%, #6c481c 100%);
+  border-bottom-right-radius: 89.5px;
+  border-bottom-left-radius: 89.5px;
+  box-sizing: border-box;
+}
+
+.fill_space_0 {
+  background: linear-gradient(to bottom, #6c481c 0%, #6c481c 100%);
+  transition: all 0.3s ease-in-out;
+}
+
+.fill_space_2 {
+  background: linear-gradient(
+    to bottom,
+    #6c481c 0%,
+    #6c481c 80%,
+    blue 80%,
+    blue 100%
+  );
+  transition: all 0.3s ease-in-out;
+}
+
+.fill_space_4 {
+  background: linear-gradient(
+    to bottom,
+    #6c481c 0%,
+    #6c481c 60%,
+    blue 60%,
+    blue 100%
+  );
+  transition: all 0.3s ease-in-out;
+}
+
+.fill_space_6 {
+  background: linear-gradient(
+    to bottom,
+    #6c481c 0%,
+    #6c481c 40%,
+    blue 40%,
+    blue 100%
+  );
+}
+
+.fill_space_8 {
+  background: linear-gradient(
+    to bottom,
+    #6c481c 0%,
+    #6c481c 20%,
+    blue 20%,
+    blue 100%
+  );
+}
+
+.fill_space_10 {
+  background: linear-gradient(to bottom, blue 0%, blue 100%);
+}
+
+.Winner {
+  /* background-color: #8f58a5; */
+  padding: 5px;
+  /* border: 1px solid black; */
+  /* border-radius: 5px; */
+  /* box-shadow: 2px 2px 1px grey; */
+
+  background: #8f58a5;
+  border: 3px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  color: white;
+  width: 100px;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  text-align: center;
+  display: none;
+}
+
+/* Game 2 CSS  */
+
+.Phone_Game_2_bg {
+  background-image: url('./assets/bg__2.png');
+}
+
+.GamePad_Game_2 {
+  width: 350px;
+  height: 400px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  position: fixed;
+  right: 0;
+  left: 20px;
+  top: 30px;
+  margin: auto;
+  display: flex;
+}
+
+.clouds__grid {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  right: 0;
+  left: 20px;
+  top: 30px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cloud__div {
+  width: 99px;
+  height: 60px;
+  /* border: 1px solid red;
+  box-sizing: border-box; */
+}
+
+.shooter__grid {
+  width: 300px;
+  height: 100px;
+  position: fixed;
+  right: 0;
+  left: 20px;
+  top: 330px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.shooter__div {
+  width: 99px;
+  height: 100px;
+  /* border: 1px solid blue;
+  box-sizing: border-box; */
+}
+
+.InteractionPad__2 {
+  width: 300px;
+  height: 100px;
+  position: fixed;
+  right: 0;
+  left: 20px;
+  top: 470px;
+  margin: auto;
+}
+
+.cloud__bg {
+  background: url('./assets/cloud__bg.png') no-repeat center;
+}
+
+.shooter__bg {
+  background-color: bisque;
+}
+
+.bullet__bg {
+  background: url('./assets/bullet.png') no-repeat center;
+}
+
+.GameOver__2 {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  right: 0;
+  left: 15px;
+  top: 120px;
+  margin: auto;
+  background: url('./assets/GameOver.png') no-repeat center;
+  display: none;
+}
+
+.WellDone__2 {
+  padding: 5px;
+  /* border: 1px solid black; */
+  /* border-radius: 5px; */
+  /* box-shadow: 2px 2px 1px grey; */
+
+  background: #8f58a5;
+  border: 3px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  color: white;
+  width: 200px;
+  position: relative;
+  position: fixed;
+  right: 0;
+  left: 17px;
+  top: 200px;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  display: none;
+}
+
+/* Game 3 CSS */
+
+.Phone_Game_3_bg {
+  background-image: url('./assets/bg___3.png');
+}
+
+.Phone___bg___3__happy {
+  background-image: url('./assets/Game___3___happybg.png');
+}
+
+.bubbles___grid {
+  width: 300px;
+  height: 350px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  /* background: blue; */
+}
+
+.bubbles___grid button {
+  width: 49px;
+  height: 50px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  border: none;
+  /* background: blue; */
+}
+
+.co2_bg {
+  background: url('./assets/co2.png') no-repeat center;
+}
+
+.o2_bg {
+  background: url('./assets/o2.png') no-repeat center;
+}
+
+.co2_active_bg {
+  background: url('./assets/co2_active.png') no-repeat center;
+}
+
+.Timer {
+  background-color: black;
+  width: fit-content;
+  padding: 10px;
+  height: 30px;
+  color: white;
+  font-size: 20px;
+}
+
+.InteractionPad___3 {
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: flex;
+  width: fit-content;
+  margin: 100px auto;
+}
