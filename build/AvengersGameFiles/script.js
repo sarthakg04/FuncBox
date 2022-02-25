@@ -4,7 +4,6 @@
 // var villan = 'ultron' || 'loki' || 'thanos' || 'redskull'
 // var hero =  'hulk' || 'spiderman' || 'captainamerica' ||'ironman'
 // createGamepad()
-// createInteractionPad()
 // createBackground()
 // createGrid()
 // createCharacters()
