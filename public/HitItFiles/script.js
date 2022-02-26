@@ -11,21 +11,21 @@
 //   if(qType == 'even'){
 //     if(number%2==0){
 //       score+=1;
-
+//
 //     }
 //     else{
 //       score-=1;
-
+//
 //     }
 //   }
 //   else {
 //     if(number%2 !=0){
 //       score+=1;
-
+//
 //     }
 //     else{
 //       score-=1;
-
+//
 //     }
 //   }
 // }
@@ -48,6 +48,7 @@ function createScore(){
 
 function fillBackground(image){
   backImage=image;
+  console.log(backImage);
   document.getElementsByClassName('GamePad')[0].style.backgroundImage =  `url(./HitItFiles/assets/${backImage}background.png)`;
   document.getElementsByClassName('GamePad')[0].innerHTML +=`<div id="ball"></div>`;
 }
@@ -72,7 +73,7 @@ function createInteractionPad(){
     <button type="button" name="button" class="action__btn " onclick="restart()">Restart</button>
   </div>
   `;
-  
+
 }
 
 function initializeGameEngine(){
@@ -89,7 +90,7 @@ function initializeGameEngine(){
 
   </div>
   `;
-  
+
 }
 
 
@@ -102,7 +103,7 @@ let score = 0;
 
 function startGame(){
   remaining = timeRemaining
-  
+
   time = setInterval(()=>{
     if(remaining != 0){
 
@@ -144,7 +145,7 @@ function endGame(){
 function createBalls(){
   document.getElementById("ball").innerHTML=`<div id="ball1"><img src="./HitItFiles/assets/${backImage}ball.png"></div>
   <div id="ball2"><img src="./HitItFiles/assets/${backImage}ball.png"></div>
-  <div id="ball3"><img src="./HitItFiles/assets/${backImage}ball.png"></div>`; 
+  <div id="ball3"><img src="./HitItFiles/assets/${backImage}ball.png"></div>`;
 }
 
 function ballTextColor(){
@@ -220,7 +221,7 @@ function validate(num){
   else{
     typee = 'odd'
   }
-  
+
   checkSelected(num,typee);
   document.getElementById('score').innerHTML = score
   generateQustion();
