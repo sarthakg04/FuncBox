@@ -39,14 +39,18 @@ body {
 }
 
 .garbage{
-  top:70px;
+  top:93px;
 }
 
 .garbage img{
   width: 20px;
 }
 
-.garbage img.banana{
+.garbage img.baggie, .garbage img.bulb, .garbage img.leaf, .garbage img.syringe, .garbage img.apple{
+  width: 35px;
+}
+
+.garbage img.banana, .garbage img.box, .garbage img.fish, .garbage img.cd, .garbage img.packet{
   width: 55px;
 }
 
