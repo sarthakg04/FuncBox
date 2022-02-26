@@ -1,6 +1,8 @@
 //FRONTEND FUNCTION
 // createGamepad();
 // fillBackground();
+// //Only three parameters are allowed eg. 1,2,&3
+// addCharacter(3);
 // createUnit();
 // createInputBox();
 // createButton();
@@ -8,7 +10,7 @@
 //   var inputData=getData();
 //   if (selectedOption=="celsius"){
 //     fahrenheit=((inputData * 1.8) + 32);
-//     kelvin=inputData+372;
+//     kelvin=inputData+273;
 //     showCelsiusResult();
 //   }
 //   else if(selectedOption=="fahrenheit"){
@@ -28,17 +30,21 @@
 
 function createGamepad() {
   document.getElementsByTagName('body')[0].innerHTML += `
-  <div class="GamePad" id="GamePad">
-  </div>`
+  <div class="GamePad" id="GamePad"></div>`
 }
 
+var backImage=1;
 function fillBackground(){
   document.getElementsByClassName('GamePad')[0].style.backgroundImage =  "url('./TemperatureConversionFiles2/assets/celsius.png')";
-
+  document.getElementsByClassName('GamePad')[0].innerHTML=`<div id="char"><img src="./TemperatureConversionFiles2/assets/celChar${backImage}.png" alt=""></div>`;
+}
+function addCharacter(no){
+    backImage=no;
+    document.getElementById("char").innerHTML=`<img src="./TemperatureConversionFiles2/assets/celChar${backImage}.png" alt="">`;
 }
 
 function createUnit(){
-  document.getElementsByClassName('GamePad')[0].innerHTML=`<div class="unit">
+  document.getElementsByClassName('GamePad')[0].innerHTML+=`<div class="unit">
   <img src="./TemperatureConversionFiles2/assets/saying.png" >
   <div class="content">
       <h2>Hey, this is</h2>
@@ -67,19 +73,22 @@ function newp(){
   if (selectedOption=="celsius"){
     document.getElementsByClassName('GamePad')[0].style.backgroundImage =  "url('./TemperatureConversionFiles2/assets/celsius.png')";
     document.getElementById("btn1").style.backgroundColor="#FFAC4A";
+    document.getElementById("char").innerHTML=`<img src="./TemperatureConversionFiles2/assets/celChar${backImage}.png" alt="">`;
   }
   else if(selectedOption=="fahrenheit"){
     document.getElementsByClassName('GamePad')[0].style.backgroundImage =  "url('./TemperatureConversionFiles2/assets/fahrenheit.png')";
     document.getElementById("btn1").style.backgroundColor="#1F5F57";
+    document.getElementById("char").innerHTML=`<img src="./TemperatureConversionFiles2/assets/farChar${backImage}.png" alt="">`;
   }
   else if(selectedOption=="kelvin"){
     document.getElementsByClassName('GamePad')[0].style.backgroundImage =  "url('./TemperatureConversionFiles2/assets/kelvin.png')";
     document.getElementById("btn1").style.backgroundColor="#E1828E";
+    document.getElementById("char").innerHTML=`<img src="./TemperatureConversionFiles2/assets/kelChar${backImage}.png" alt="">`;
   }
 }
 function addRestartButton(){
   document.getElementsByClassName('GamePad')[0].innerHTML+=`<div id="rest2">
-    <img src="./BasketballGameFiles/assets/restart.png" onclick="restart()">
+    <img src="./TemperatureConversionFiles2/assets/restart.png" onclick="restart()">
   </div>`;
 }
 function restart(){
@@ -97,18 +106,30 @@ function showCelsiusResult(){
   document.getElementsByClassName('GamePad')[0].style.backgroundImage =  "url('./TemperatureConversionFiles2/assets/celRes.png'"
   document.getElementsByClassName('GamePad')[0].innerHTML=`<h3 class="ansUpper">${fahrenheit.toFixed(2)} F</h3>`;
   document.getElementsByClassName('GamePad')[0].innerHTML+=`<h3 class="ansLower">${kelvin} K</h3>`;
+  document.getElementsByClassName('GamePad')[0].innerHTML+=`<div id="resultImage">
+  <img src="./TemperatureConversionFiles2/assets/farChar${backImage}.png" id="upper">
+  <img src="./TemperatureConversionFiles2/assets/kelChar${backImage}.png" id="lower">
+</div>`;
   addRestartButton();
 }
 function showFahrenheitResult(){
   document.getElementsByClassName('GamePad')[0].style.backgroundImage =  "url('./TemperatureConversionFiles2/assets/farRes.png'"
   document.getElementsByClassName('GamePad')[0].innerHTML=`<h3 class="ansUpper">${celsius.toFixed(2)} C</h3>`;
   document.getElementsByClassName('GamePad')[0].innerHTML+=`<h3 class="ansLower">${kelvin.toFixed(2)} K</h3>`;
+  document.getElementsByClassName('GamePad')[0].innerHTML+=`<div id="resultImage">
+  <img src="./TemperatureConversionFiles2/assets/celChar${backImage}.png" id="upper">
+  <img src="./TemperatureConversionFiles2/assets/kelChar${backImage}.png" id="lower">
+</div>`;
   addRestartButton();
 }
 function showKelvinResult(){
   document.getElementsByClassName('GamePad')[0].style.backgroundImage =  "url('./TemperatureConversionFiles2/assets/kelRes.png'"
   document.getElementsByClassName('GamePad')[0].innerHTML=`<h3 class="ansUpper">${fahrenheit.toFixed(2)} F</h3>`;
   document.getElementsByClassName('GamePad')[0].innerHTML+=`<h3 class="ansLower">${celsius} C</h3>`;
+  document.getElementsByClassName('GamePad')[0].innerHTML+=`<div id="resultImage">
+  <img src="./TemperatureConversionFiles2/assets/farChar${backImage}.png" id="upper">
+  <img src="./TemperatureConversionFiles2/assets/celChar${backImage}.png" id="lower">
+</div>`;
   addRestartButton();
 }
 function getData(){
