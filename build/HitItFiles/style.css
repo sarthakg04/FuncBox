@@ -117,6 +117,9 @@ body {
   font-family: 'Lakki Reddy', cursive;
   font-size: 20px;
 }
+.option{
+  z-index: 5;
+}
 
 .play__button , .restart__button{
   text-align: center;
@@ -142,8 +145,35 @@ body {
   border: 0;
   outline: 0;
   font-size: 18px;
-  background: #57A607;
+  background: #316200;
   font-family: 'Alice', serif;
   color : white;
   cursor: pointer;
+}
+#ball{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#ball img{
+  width: 60px;
+}
+#ball #ball1{
+  position: absolute;
+  left: 95px;
+  top: 270px;
+  z-index: 0;
+}
+#ball #ball2{
+  position: absolute;
+  left: 170px;
+  top: 270px;
+}
+#ball #ball3{
+  position: absolute;
+  right: 95px;
+  top: 270px;
+}
+.opption .option p{
+  color: black;
 }

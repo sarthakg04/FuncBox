@@ -1,15 +1,32 @@
-//FRONTEND Functions
-// createGamepad();
-// fill();
-//createStagesContainer();
-// createStages();
-// createInteractionPad();
-
+/* 
 let position =0;
 
 let stages = ['egg' , 'catterPiller' , 'cacoon'  , 'butterfly']
 let stages2 = stages
 let placement = []
+
+createGamepad();
+fill();
+createStagesContainer();
+createStages();
+createInteractionPad();
+
+function createStages(){
+  let done = []
+  let flag = 0;
+  while(flag < 4){
+    let index = Math.floor(Math.random() * ((stages2.length -1) - 0 + 1) + 0);
+    if(!done.includes(index)){
+      createStage(index, flag);
+      flag +=1
+    }
+    done.push(index)
+  }
+}
+
+*/
+
+
 
 function createGamepad(){
   let gamePadd = document.createElement('DIV')
@@ -38,26 +55,29 @@ function createStagesContainer(){
   `;
 }
 
-
-
-function createStages(){
-  let done = []
-  let flag = 0;
-  while(flag < 4){
-    let index = Math.floor(Math.random() * ((stages2.length -1) - 0 + 1) + 0);
-    if(!done.includes(index)){
-      document.getElementsByClassName('stages')[0].innerHTML +=`
+function createStage(index, flag){
+  document.getElementsByClassName('stages')[0].innerHTML +=`
       <div class="stage">
         <img src="./LifeCycleOfButterflyFiles/assets/${stages2[index]}.png" alt="" onclick="placePosition(${index} , ${flag})">
       </div>
       `;
-      flag +=1
-    }
-
-    done.push(index)
-
-  }
 }
+
+
+// A frontend function
+
+// function createStages(){
+//   let done = []
+//   let flag = 0;
+//   while(flag < 4){
+//     let index = Math.floor(Math.random() * ((stages2.length -1) - 0 + 1) + 0);
+//     if(!done.includes(index)){
+//       createStage(index, flag);
+//       flag +=1
+//     }
+//     done.push(index)
+//   }
+// }
 
 function createInteractionPad(){
   document.getElementsByClassName('GamePad')[0].innerHTML +=`
@@ -74,6 +94,13 @@ function createInteractionPad(){
   `;
 }
 
+function calculateIndex(index){
+  index +=1;
+  if(index > 3){
+    index = 0
+  }
+  return index
+}
 
 
 
@@ -83,10 +110,7 @@ function placePosition(n , flag){
   document.getElementsByTagName('img')[position].src = `./LifeCycleOfButterflyFiles/assets/${stages[n]}.png`;
   document.getElementsByTagName('img')[position].classList.remove('active');
   document.getElementsByClassName('stage')[flag].style.display = 'none'
-  position +=1;
-  if(position > 3){
-    position = 0
-  }
+  position = calculateIndex(position);
   document.getElementsByTagName('img')[position].classList.add('active')
 }
 
@@ -94,7 +118,7 @@ function placePosition(n , flag){
 
 function submit(){
 
-  if(placement[0] == 0  && placement[1] == 1 && placement[2] == 2 && placement[3] == 3){
+  if(placement[0] === 0  && placement[1] === 1 && placement[2] === 2 && placement[3] === 3){
     document.getElementById('content').innerHTML = "Wow, You did it Correctly!"
   }
   else {

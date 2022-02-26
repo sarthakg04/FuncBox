@@ -5,14 +5,20 @@
 // fillBackground();
 // let garbage = [
 //   {name : 'apple' , type : 'bio'} ,
-//   { name : 'banana' , type : 'bio' },
+//   {name : 'banana' , type : 'bio'},
 //   {name : 'can' , type : 'non'},
 //   {name : 'coke' , type : 'non'},
 //   {name : 'egg' , type : 'bio'},
 //   {name : 'fish' , type : 'bio'},
 //   {name : 'plastic' , type : 'non'},
 //   {name : 'melon' , type : 'bio'},
-//   {name  : 'tv' , type : 'non'}
+//   {name  : 'tv' , type : 'non'},
+//   {name  : 'coconut' , type : 'bio'},
+//   {name  : 'chicken' , type : 'bio'},
+//   {name  : 'noodles' , type : 'bio'},
+//   {name  : 'pen' , type : 'non'},
+//   {name  : 'sword' , type : 'non'},
+//   {name  : 'bottle' , type : 'non'},
 // ]
 //
 // function verifyGarbage(item){
@@ -76,17 +82,17 @@ function fillGarbage(){
     <div class="garbage__container">
     </div>
   `;
-
-  while(garbage.length > 0){
-    let index = Math.floor(Math.random() * ((garbage.length - 1) - 0 + 1) + 0);
-    document.getElementsByClassName('garbage__container')[0].innerHTML +=`
+  
+  for (let i = 0; i < 9; i++) {
+    let index = Math.floor(Math.random() * (garbage.length - 1 - 0 + 1) + 0);
+			document.getElementsByClassName("garbage__container")[0].innerHTML += `
     <div class="garbage">
-      <img src="./RecycleItFiles/assets/${garbage[index].name}.png" alt="" class="gImg ${garbage[index].type} ${garbage[index].name}" onclick="checkGarbage()">
+    <img src="./RecycleItFiles/assets/${garbage[index].name}.png" alt="" class="gImg ${garbage[index].type} ${garbage[index].name}" onclick="checkGarbage()">
     </div>
     `;
-
     garbage.splice(index , 1);
   }
+
   garbage = [...garbage2];
   console.log(garbage);
   addEvent();
@@ -117,19 +123,6 @@ let non = 0;
 function restart(){
   window.location.reload();
 }
-
-// let garbage = [
-//   {name : 'apple' , type : 'bio'} ,
-//   { name : 'banana' , type : 'bio' },
-//   {name : 'can' , type : 'non'},
-//   {name : 'coke' , type : 'non'},
-//   {name : 'egg' , type : 'bio'},
-//   {name : 'fish' , type : 'bio'},
-//   {name : 'plastic' , type : 'non'},
-//   {name : 'melon' , type : 'bio'},
-//   {name  : 'tv' , type : 'non'}
-// ]
-
 
 
 function addEvent(){

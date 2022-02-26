@@ -26,6 +26,12 @@ body {
   overflow: hidden;
   /* background: red; */
 }
+#char img{
+  position: absolute;
+  height: 280px;
+  top: 120px;
+  left: 200px;
+}
 .unit img{
   width: 50%;
   position: relative;
@@ -99,4 +105,16 @@ select{
   left: 15px;
   bottom: 40px;
   cursor: pointer;
+}
+#resultImage img{
+  height: 200px;
+  position: absolute;
+}
+#upper{
+  left: 260px;
+  top: 50px;
+}
+#lower{
+  left: 260px;
+  top: 320px;
 }

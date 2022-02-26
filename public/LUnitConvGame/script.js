@@ -1,271 +1,153 @@
 // Frontend functions for testing
-// let units = ['hl', 'kl', 'l', 'cl', 'ml']  // Can delete few but don't alter the order
-// fillBackground('store')
-// createInputBox()
-// createValue()
-// for(i=0;i<units.length;i++){
-//     createStep(i)
-// }
-// createInteractionPad()
-// createRefresh()
-// function StepUp(){
-//
-//     weight/= 10
-//      return weight
-// }
-// function StepDown(){
-//
-//     weight*= 10
-//      return weight
-// }
+// createGamepad();
+// fillBackground();
+// createIntercationPad();
+// createInputBox();
+// getResult();
 
-let Phone;
-let GamePad;
-let Input_box;
-let InteractionPad;
 
-let step_div;
-let Value;
-
-let steps;
-let e;
-
-function fillBackground(bg) {
-  Phone = document.createElement("div");
-  Phone.classList.add("Phone");
-  Phone.classList.add(bg);
-
-  document.body.appendChild(Phone);
-
-  GamePad = document.createElement("div");
-  GamePad.classList.add("GamePad");
-  Phone.appendChild(GamePad);
+function createGamepad(){
+  let gamePadd = document.createElement('DIV')
+  gamePadd.classList.add('GamePad')
+  gamePadd.id = 'GamePad'
+  document.body.appendChild(gamePadd);
+  gamePad = document.getElementById('GamePad')
 }
 
-function createInputBox() {
-  Input_box = document.createElement("div");
-  Input_box.classList.add("Input_box");
-  Input_box.innerHTML += `
-    <h3 class="enter_number">Enter a number</h3>
-    <input id="input_number" min="0" value="00.00" class="input_number" type="number" step="0.01">
-    `;
-
-  let temp_2 = document.createElement("select");
-  temp_2.id = "units_input";
-
-  Input_box.appendChild(temp_2);
-
-  for (i = 0; i < units.length; i++) {
-    temp_2.innerHTML += `<option value="${units[i]}">${units[i]}</option>`;
-  }
-
-  GamePad.appendChild(Input_box);
-  GamePad.innerHTML += `<button onclick="submit()" class="submit_btn">Submit</button>`;
+function fillBackground(){
+  document.getElementsByClassName('GamePad')[0].innerHTML +=`
+  <img src="https://ik.imagekit.io/funcboxImages/LUnitConvGame_assets/bg_Mx2j1mBcKSFe.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645648368218" class="bg">
+  `;
 }
 
-function createValue() {
-  GamePad.innerHTML += `
-    <div class="step_div"></div>
-    <h2 class="Value">00.00</h2>
-    `;
-  step_div = document.querySelector(".step_div");
-  Value = document.querySelector(".Value");
+function createIntercationPad(){
+  document.getElementsByClassName('GamePad')[0].innerHTML +=`
+  <img src="https://ik.imagekit.io/funcboxImages/LUnitConvGame_assets/ellipse_Bu0MOD18T-GWe.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645619194193" class="ellipse">
+  <img src="https://ik.imagekit.io/funcboxImages/LUnitConvGame_assets/up_vNWXnIzy1M.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645619194203" class="up" id="up_arrow" onClick="upfunc()">
+  <img src="https://ik.imagekit.io/funcboxImages/LUnitConvGame_assets/down_8pHLGhxPBYYA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645619194198" class="down" id="down_arrow" onClick="downfunc()">
+  `;
 }
 
-function createInteractionPad() {
-  InteractionPad = document.createElement("div");
-  InteractionPad.classList.add("InteractionPad");
-  InteractionPad.innerHTML += `
-    <button onclick="Up()" class="up"></button><br>
-    <button onclick="Down()" class="down"></button>
-    `;
-  Phone.appendChild(InteractionPad);
+function createInputBox(){
+  document.getElementsByClassName('GamePad')[0].innerHTML +=`
+  <img src="https://ik.imagekit.io/funcboxImages/LUnitConvGame_assets/inputbox_bwyC3MnFg.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645619194202" class="inputbox">
+  <input id="input_number" min="0" value="00.0" class="input_number" type="number" step="0.1">
+  <select name="unit" id="input_unit" class="unit_select">
+    <option value="kl">kl</option>
+    <option value="hl">hl</option>
+    <option value="l">l</option>
+    <option value="cl">cl</option>
+    <option value="ml">ml</option>
+  </select>
+  `;
 }
 
-function createRefresh() {
-  Phone.innerHTML += `
-    <div onclick="window.location.reload()" class="restart">Reset
-    <img style="vertical-align:middle" src="./assets/refresh.png" alt="restart"/></div>
-    `;
+function getResult(){
+  document.getElementsByClassName('GamePad')[0].innerHTML +=`
+  <img src="https://ik.imagekit.io/funcboxImages/LUnitConvGame_assets/submitbtn_VXf8tDwNA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645619194240" class="submit" onclick="submitfnc()">
+  <img src="https://ik.imagekit.io/funcboxImages/LUnitConvGame_assets/restart_JjjAuKMY81je.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645636416965" class="restart" onclick="restart()">
+  <img src="https://ik.imagekit.io/funcboxImages/LUnitConvGame_assets/pointer_cyXUXRaxN.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645619194205" class="pointer" id="pointer">
+  <div class="top_display">
+    <p id="final_val">00.0</p>
+    <p id="final_unit">kl</p>
+  </div>
+  `;
 }
 
-// Backend functions
+function pointerPosition(pointer_unit){
+  var pointer = document.getElementById('pointer');
 
-let unit;
-
-let weight = 0;
-
-let current_step;
-
-let unit_each = 0;
-let selected;
-
-function createStep(i) {
-  let new_step = document.createElement("div");
-  new_step.classList.add("step");
-  new_step.classList.add(`step_${i}`);
-  new_step.innerHTML = units[i];
-
-  // new_step.style.left = i * 30 + "px";
-  // new_step.style.top = 282 - i * 69 + "px";
-
-  step_div.appendChild(new_step);
-}
-
-function submit() {
-  Value = document.querySelector(".Value");
-
-  steps = Array.from(document.querySelectorAll(".step_div div"));
-
-  for (i = 0; i < units.length; i++) {
-    steps[i].classList.remove("active_step");
-  }
-
-  e = document.getElementById("units_input");
-  unit = e.value;
-
-  e = document.getElementById("input_number");
-  weight = parseFloat(e.value);
-
-  console.log(weight);
-
-  Value.innerHTML = weight;
-
-  current_step = units.findIndex(checkUnitis);
-
-  steps[current_step].classList.add("active_step");
-  result_box = document.createElement("div");
-  result_box.classList.add("result_box");
-  result_box.innerHTML = " ";
-  // var ans = document.getElementById("input_number").value;
-  // console.log(ans);
-  // result_box.innerHTML += ans;
-  var list = document.getElementById("units_input");
-  var val = list.options.selectedIndex;
-  selected = list.options[val].value;
-  // console.log(selected);
-  result_box.innerHTML += selected;
-
-  // console.log(result_box.innerHTML);
-
-  Phone.appendChild(result_box);
-}
-
-function checkUnitis(unit_each) {
-  return unit_each === unit;
-}
-
-function Up() {
-  result_box.innerHTML = "";
-  if (current_step < units.length - 1) {
-    steps[current_step].classList.remove("active_step");
-    // let flag = 10;
-    if (selected != "hl") {
-    StepUp();
-    }
-    console.log(selected);
-    // while (flag != 0) {
-    if (selected === "ml") {
-      result_box.innerHTML = "cl";
-      selected = "cl";
-    } else if (selected === "cl") {
-      result_box.innerHTML = "l";
-      selected = "l";
-    } else if (selected === "l") {
-      result_box.innerHTML = "kl";
-      selected = "kl";
-    } else if (selected === "kl" || selected === "hl") {
-      result_box.innerHTML = "hl";
-      selected = "hl";
-    }
-    // }
-
-    steps[current_step].classList.add("active_step");
-
-    Value.innerHTML = weight;
+  switch (pointer_unit) {
+    case "kl":
+      pointer.style.left = "100px";
+      break;
+    case "hl":
+      pointer.style.left = "160px";
+      break;
+    case "l":
+      pointer.style.left = "215px";
+      break;
+    case "cl":
+      pointer.style.left = "280px";
+      break;
+    case "ml":
+      pointer.style.left = "330px";
+      break;
   }
 }
 
-function Down() {
-  result_box.innerHTML = "";
-    // steps[current_step].classList.remove("active_step");
-    if (selected != "ml") {
-      StepDown();
-    } else {
-      // console.log(selected);
-    }
-    console.log(selected);
-    if (selected === "hl") {
-      result_box.innerHTML = "kl";
-      selected = "kl";
-    } else if (selected === "kl") {
-      result_box.innerHTML = "l";
-      selected = "l";
-    } else if (selected === "l") {
-      result_box.innerHTML = "cl";
-      selected = "cl";
-    } else if (selected === "cl" || selected === "ml") {
-      result_box.innerHTML = "ml";
-      selected = "ml";
-    }
+function submitfnc(){
+  var num_entered = document.getElementById('input_number').value;
+  var unit_entered = document.getElementById('input_unit').value;
+  document.getElementById('final_val').innerHTML = num_entered;
+  document.getElementById('final_unit').innerHTML = unit_entered;
 
-    // steps[current_step].classList.add("active_step");
-
-    Value.innerHTML = weight;
-
+  pointerPosition(unit_entered);
 }
 
-// Trash code
+function upfunc(){
+  var final_val = document.getElementById('final_val').innerHTML;
+  var final_unit = document.getElementById('final_unit').innerHTML;
 
-// function fillBackground(bg) {
-//   Phone = document.createElement("div");
-//   Phone.classList.add("Phone");
-//   Phone.classList.add(bg);
+  switch (final_unit) {
+    case "kl":
+      var x = final_val*10;
+      document.getElementById('final_val').innerHTML = x;
+      document.getElementById('final_unit').innerHTML = "hl";
+      break;
+    case "hl":
+      var x = final_val*100;
+      document.getElementById('final_val').innerHTML = x;
+      document.getElementById('final_unit').innerHTML = "l";
+      break;
+    case "l":
+      var x = final_val*100;
+      document.getElementById('final_val').innerHTML = x;
+      document.getElementById('final_unit').innerHTML = "cl";
+      break;
+    case "cl":
+      var x = final_val*10;
+      document.getElementById('final_val').innerHTML = x;
+      document.getElementById('final_unit').innerHTML = "ml";
+      break;
+  }
 
-//   document.body.appendChild(Phone);
+  var y = document.getElementById('final_unit').innerHTML;
+  pointerPosition(y);
+}
 
-//   GamePad = document.createElement("div");
-//   GamePad.classList.add("GamePad");
-//   Phone.appendChild(GamePad);
-// }
+function downfunc(){
+  var final_val = document.getElementById('final_val').innerHTML;
+  var final_unit = document.getElementById('final_unit').innerHTML;
 
-// let units = ["hl", "kl", "l", "cl", "ml"];
-// let val;
-// function createInputBox() {
-//   Input_box = document.createElement("div");
-//   Input_box.classList.add("Input_box");
-//   Input_box.innerHTML += `
-//     <h3 class="enter_number">Enter a number</h3>
-//     <input id="input_number" min="0" value="00.00" class="input_number" type="number" step="0.01">
-//     `;
-//   let temp_2 = document.createElement("select");
-//   temp_2.id = "units_input";
-//   for (i = 0; i < units.length; i++) {
-//     temp_2.innerHTML += `<option value="${units[i]}">${units[i]}</option>`;
-//   }
-//   GamePad.innerHTML += `<button onclick="submit()"  id ="show" class="submit_btn">Submit</button>`;
+  switch (final_unit) {
+    case "hl":
+      var x = final_val/10;
+      document.getElementById('final_val').innerHTML = x;
+      document.getElementById('final_unit').innerHTML = "kl";
+      break;
+    case "l":
+      var x = final_val/100;
+      document.getElementById('final_val').innerHTML = x;
+      document.getElementById('final_unit').innerHTML = "hl";
+      break;
+    case "cl":
+      var x = final_val/100;
+      document.getElementById('final_val').innerHTML = x;
+      document.getElementById('final_unit').innerHTML = "l";
+      break;
+    case "ml":
+      var x = final_val/10;
+      document.getElementById('final_val').innerHTML = x;
+      document.getElementById('final_unit').innerHTML = "cl";
+      break;
+  }
 
-//   Input_box.appendChild(temp_2);
-//   GamePad.appendChild(Input_box);
-// }
-// var selected;
-// submit = () => {
-//   var list = document.getElementById("units_input");
-//   var val = list.options.selectedIndex;
-//   selected = list.options[val].value;
-//   console.log(selected);
-//   result_box = document.createElement("div");
-//   result_box.classList.add("result_box");
-//   result_box.innerHTML += selected;
-//   var ans = document.getElementById("input_number").value;
-//   console.log(ans);
-//   result_box.innerHTML += ans;
-//   GamePad.appendChild(result_box);
-// };
+  var y = document.getElementById('final_unit').innerHTML;
+  pointerPosition(y);
+}
 
-// function createResult() {
-//   result_box = document.createElement("div");
-//   result_box.classList.add("result_box");
-//   result_box.innerHTML += selected;
-//   GamePad.appendChild(result_box);
-// }
+function restart(){
+  window.location.reload();
+}
+
