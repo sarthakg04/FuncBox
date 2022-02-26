@@ -2,7 +2,7 @@
 // createGamepad();
 // fillBackground();
 // //Only three parameters are allowed eg. 1,2,&3
-// addCharacter(3);
+// addCharacter(1);
 // createUnit();
 // createInputBox();
 // createButton();
@@ -135,33 +135,6 @@ function showKelvinResult(){
 function getData(){
   return (parseInt(document.getElementById("data").value));
 }
-function cha(){
-  console.log("TThis works");
-}
 
 
 
-// createGamepad();
-// fillBackground();
-// createUnit();
-// createInputBox();
-// createButton();
-// function convertTemp(){
-//   var inputData=getData();
-//   if (selectedOption=="celsius"){
-//     fahrenheit=((inputData * 1.8) + 32);
-//     kelvin=inputData+372;
-//     showCelsiusResult();
-//   }
-//   else if(selectedOption=="fahrenheit"){
-//     celsius=((inputData - 32) * 5 / 9);
-//     kelvin=(celsius)+273;
-//     showFahrenheitResult()
-
-//   }
-//   else if(selectedOption=="kelvin"){
-//     celsius=inputData-273;
-//     fahrenheit=(celsius * 9 / 5 + 32);
-//     showKelvinResult()
-//   }
-// }
