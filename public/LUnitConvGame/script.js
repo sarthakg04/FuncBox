@@ -92,22 +92,26 @@ function upfunc(){
   switch (final_unit) {
     case "kl":
       var x = final_val*10;
-      document.getElementById('final_val').innerHTML = x;
+      var p = parseFloat(x.toFixed(10));
+      document.getElementById('final_val').innerHTML = p;
       document.getElementById('final_unit').innerHTML = "hl";
       break;
     case "hl":
       var x = final_val*100;
-      document.getElementById('final_val').innerHTML = x;
+      var p = parseFloat(x.toFixed(10));
+      document.getElementById('final_val').innerHTML = p;
       document.getElementById('final_unit').innerHTML = "l";
       break;
     case "l":
       var x = final_val*100;
-      document.getElementById('final_val').innerHTML = x;
+      var p = parseFloat(x.toFixed(10));
+      document.getElementById('final_val').innerHTML = p;
       document.getElementById('final_unit').innerHTML = "cl";
       break;
     case "cl":
       var x = final_val*10;
-      document.getElementById('final_val').innerHTML = x;
+      var p = parseFloat(x.toFixed(10));
+      document.getElementById('final_val').innerHTML = p;
       document.getElementById('final_unit').innerHTML = "ml";
       break;
   }
@@ -123,22 +127,26 @@ function downfunc(){
   switch (final_unit) {
     case "hl":
       var x = final_val/10;
-      document.getElementById('final_val').innerHTML = x;
+      var p = parseFloat(x.toFixed(10));
+      document.getElementById('final_val').innerHTML = p;
       document.getElementById('final_unit').innerHTML = "kl";
       break;
     case "l":
       var x = final_val/100;
-      document.getElementById('final_val').innerHTML = x;
+      var p = parseFloat(x.toFixed(10));
+      document.getElementById('final_val').innerHTML = p;
       document.getElementById('final_unit').innerHTML = "hl";
       break;
     case "cl":
       var x = final_val/100;
-      document.getElementById('final_val').innerHTML = x;
+      var p = parseFloat(x.toFixed(10));
+      document.getElementById('final_val').innerHTML = p;
       document.getElementById('final_unit').innerHTML = "l";
       break;
     case "ml":
       var x = final_val/10;
-      document.getElementById('final_val').innerHTML = x;
+      var p = parseFloat(x.toFixed(10));
+      document.getElementById('final_val').innerHTML = p;
       document.getElementById('final_unit').innerHTML = "cl";
       break;
   }
