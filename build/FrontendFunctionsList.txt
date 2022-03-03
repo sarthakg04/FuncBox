@@ -1,0 +1,165 @@
+
+
+Fronend Functionsfor Games:
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+MissionMars:
+-----------------------
+createGamepad()
+createGamepad()
+fillBackground('mars')
+createElement(['goodrocks','badrocks','wasterocks1','wasterocks2'])
+createScore()
+createGrid()
+createRover("rover")
+draw()
+createInteractionPad()
+createRestartButton()
+let penalty = 1
+function CheckLogic(){
+  if( good_rock_scanned ) {
+      Score += penalty;
+    }
+    else if ( bad_rock_scanned ) {
+      Score -= penalty;
+    }
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Avengers:
+-----------------------
+var background = 'forest' or 'space' or 'galaxy'
+createBackground()
+createGrid()
+var villan = 'thanos' or 'loki' or 'redskull'
+var hero = 'spiderman' or 'captainamerica' or 'ironman'
+createCharacters()
+var Speed = 0.5
+LokiMovement()
+createInteractionPad()
+createFinish()
+function CheckLogic(){
+    if( fireball_position === current_ironman_position ){
+        GameOver()
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Incredibles:
+-----------------------
+let edna_speed = 0.5
+let basket_ball_speed = 0.5
+let hero = 'MrIncredible' or 'Elasticgirl' or 'Violet'
+let vehicle = 'Helicopter' or 'Spaceship'
+fillBackground('jungle' or 'park' or 'beach' or 'snow')
+createGrid()
+createCharacters()
+EdnaMovement()
+createInteractionPad()
+createFinish()
+function Check(ball_position){
+    if( ball_position == current_edna_position ){
+        GameOver()
+        return true
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+AngryBirds:
+-----------------------
+fillBackground('forest')
+createScore()
+createGamePad()
+for( i = 0; i < 35; i++ ) {
+    drawGrid()
+}
+createPlancks()
+createElements()
+createInteractionPad()
+let penalty = 1
+function CheckLogic(){
+    if( hit_pig ) {
+        Score-=penalty
+        DecreasedScore()
+    }
+    else {
+        Score+=penalty
+        IncreaseScore()
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+MonkeyMultiplier:
+-----------------------
+createScore()
+generateRandomNumber()
+createJumpPlaces()
+createMonkey()
+generateMultiples()
+createInteractionPad()
+createGameOver()
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+CashierGame:
+-----------------------
+fillBackground()
+let items = [
+    'item_1', 'item_2', 'item_3', 
+    'item_4', 'item_5', 'item_6', 'item_7', 
+    'item_8', 'item_9', 'item_10', 'item_11', 
+    'item_12', 'item_13', 'item_14', 'item_15', 
+    'item_16', 'item_17', 'item_18', 'item_19', 'item_20'
+]
+let item_prices = [ 449, 387, 273, 35, 195, 385, 29, 75, 165, 200, 135, 125, 99, 125, 399, 120, 45, 57, 88, 100 ]
+
+let Logic = false
+createGamePad()
+createInteractionPad()
+createItems()
+createGameFinish()
+function CheckLogic(){
+    if( amount_added === ( recieved - item_prices[item_number] ) ){
+        Logic = true
+    }
+    else{
+        Logic = false
+    }
+    ImplementLogic()
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+LetsMakeItRainGame:
+-----------------------
+
+fillBackground()
+createGamePad()
+createDropPath()
+for(i=0;i<4;i++){
+    drawDropPath()
+}
+setDrop()
+createSun()
+generateRays()
+createInteractionPad()
+function onHit(){
+    rays_caught++
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+AnimalHomeGame:
+-----------------------
+
+let animals = ['lion_den','fish_ocean','horse_stable','penguin_waddle','chicken_coop','elephant_jungle','cheetah_trees','birds_nest','dog_kennel','bees_beehive']
+createBackground()
+createArrowKeys()
+setCards()
+createSoundButton()

@@ -1,0 +1,273 @@
+.Phone {
+  border: 1px solid black;
+  height: 533px;
+  width: 398px;
+  margin: 0;
+}
+
+.forest {
+  background-image: url('./assets/Background.svg');
+}
+
+.ocean {
+  background-image: url('./assets/ocean.png');
+}
+
+.snow {
+  background-image: url('./assets/snow.png');
+}
+
+.floor {
+  background-image: url('./assets/germs_bg.png');
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  width: 287px;
+  /* border: 1px solid black; */
+  margin: 35px auto 0 auto;
+}
+
+.grid div {
+  height: 55px;
+  width: 55px;
+  /* border: 1px solid black; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.planck {
+  background: url('./assets/planck.svg') no-repeat;
+  background-position: center bottom;
+  /* position: fixed;
+  z-index: 0;
+  width: 55px; */
+}
+
+.hitBtn {
+  height: 40px;
+  width: fit-content;
+  border: none;
+  outline: none;
+  position: relative;
+  top: -12.5px;
+  font-size: 20px;
+  background-color: red;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  /* margin-top: -100px; */
+  /* padding-right: 45px; */
+  /* padding: 0 45px 0 0; */
+  border: 5px solid black;
+}
+
+.hitBtn:disabled{
+  color: grey;
+  background-color: white;
+}
+
+
+.hitted {
+  background: url('./assets/hitted.svg') no-repeat;
+  position: absolute;
+  left: 30%;
+  top: 20%;
+}
+
+.bad_hitted {
+  background-color: red;
+  border-radius: 50%;
+  opacity: 0.5;
+  /* position: absolute;
+  left: 30%;
+  top: 20%; */
+}
+
+.germ_planck{
+  background: url('./assets/germ_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.pig_planck {
+  background: url('./assets/pig_planck.svg') no-repeat;
+  background-position: center bottom;
+}
+
+.clean_planck{
+  background: url('./assets/clean_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.box_planck {
+  background: url('./assets/box_planck.svg') no-repeat;
+  background-position: center bottom;
+}
+
+.fruit_planck {
+  background: url('./assets/fruit_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.vaccine_bird_planck{
+  background: url('./assets/vaccine_planck.png') no-repeat;
+  background-position: center top;
+}
+
+.vaccine_bird_germ_planck{
+  background: url('./assets/vaccine_germ_planck.png') no-repeat;
+  background-position: center top;
+}
+
+.vaccine_bird_clean_planck{
+  background: url('./assets/vaccine_clean_planck.png') no-repeat;
+  background-position: center top;
+}
+
+.black_bird_planck {
+  background: url('./assets/bird_planck.svg') no-repeat;
+  background-position: center bottom;
+}
+
+.black_bird_pig_planck {
+  background: url('./assets/bird_pig_planck.svg') no-repeat;
+  background-position: center bottom;
+}
+
+.black_bird_box_planck {
+  background: url('./assets/bird_box_planck.svg') no-repeat;
+  background-position: center bottom;
+}
+
+.black_bird_fruit_planck {
+  background: url('./assets/black_bird_fruit_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.red_bird_planck {
+  background: url('./assets/red_bird_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.red_bird_pig_planck {
+  background: url('./assets/red_bird_pig_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.red_bird_box_planck {
+  background: url('./assets/red_bird_box_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.red_bird_fruit_planck {
+  background: url('./assets/red_bird_fruit_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.yellow_bird_planck {
+  background: url('./assets/yellow_bird_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.yellow_bird_pig_planck {
+  background: url('./assets/yellow_bird_pig_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.yellow_bird_box_planck {
+  background: url('./assets/yellow_bird_box_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.yellow_bird_fruit_planck {
+  background: url('./assets/yellow_bird_fruit_planck.png') no-repeat;
+  background-position: center bottom;
+}
+
+.Score {
+  position: fixed;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: fit-content;
+  /* background-image: url('./assets/game_over.svg');
+  height: 200px;
+  width: 300px; */
+  border: 1px solid black;
+  background-color: red;
+  color: white;
+  font-size: x-large;
+  padding: 5px;
+  /* line-height: -10px; */
+}
+
+.GameOver{
+  position: fixed;
+  top: 100px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-image: url('./assets/game_over.svg');
+  height: 200px;
+  width: 300px;
+  display: none;
+}
+
+.Star_img_angryBirds {
+  vertical-align: middle;
+}
+
+.ControlPad {
+  margin: 25px 0 0 130px;
+}
+
+.left_btn {
+  /* border-radius: 50%; */
+  height: 40px;
+  width: 40px;
+  background: url('./assets/left.svg') no-repeat center;
+  background-size: 40px 40px;
+  border: none;
+  outline: none;
+}
+.restart_btn {
+  /* border-radius: 50%; */
+  height: 40px;
+  width: 40px;
+  background: url('./assets/restart.svg') no-repeat center;
+  border: none;
+  outline: none;
+}
+.right_btn {
+  /* border-radius: 50%; */
+  height: 40px;
+  width: 40px;
+  background: url('./assets/right.svg') no-repeat center;
+  background-size: 40px 40px;
+  border: none;
+  outline: none;
+}
+
+.New_refresh_btn{
+  position: fixed;
+  top: 350px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  
+  /* border-radius: 50%; */
+  height: 40px;
+  width: 40px;
+  background: url('./assets/restart.svg') no-repeat center;
+  border: none;
+  outline: none;
+}

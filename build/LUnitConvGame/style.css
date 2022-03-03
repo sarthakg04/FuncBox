@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+.GamePad {
+  width: 400px;
+  height: 535px;
+  margin: auto;
+  position: relative;
+  padding-top: 1px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.ellipse{
+  position: absolute;
+  left: 5px;
+  top: 145px;
+  width: 24%;
+}
+
+.up{
+  position: absolute;
+  left: 30px;
+  top: 152px;
+  width: 12%;
+  cursor: pointer;
+}
+
+.down{
+  position: absolute;
+  left: 30px;
+  top: 200px;
+  width: 12%;
+  cursor: pointer;
+}
+
+.submit{
+  position: absolute;
+  left: 260px;
+  top: 450px;
+  width: 25%;
+  cursor: pointer;
+}
+
+.restart{
+  position: absolute;
+  left: 260px;
+  top: 490px;
+  width: 25%;
+  cursor: pointer;
+}
+
+.inputbox{
+  position: absolute;
+  left: 110px;
+  top: 445px;
+  width: 35%;
+}
+
+.pointer{
+  position: absolute;
+  left: 100px;
+  top: 170px;
+}
+
+.input_number{
+  position: absolute;
+  font-family: 'Reem Kufi';
+  left: 135px;
+  top: 482px;
+  width: 63px;
+  height: 24px;
+  font-size: 22px;
+  color: #EB2F2F;
+  border: none;
+  text-align: center;
+}
+
+.input_number:focus{
+  outline: none;
+}
+
+.unit_select{
+  position: absolute;
+  font-family: 'Reem Kufi';
+  left: 200px;
+  top: 484px;
+  color: #EB2F2F;
+  border: none;
+  font-size: 18px;
+  height: 19px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.unit_select:focus{
+  outline: none;
+}
+
+.unit_select option{
+  font-family: 'Reem Kufi';
+}
+
+.top_display{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-family: 'Reem Kufi';
+  font-size: 28px;
+  color: #DF5608;
+  left: 170px;
+  top:120px;
+}
+
+#final_unit{
+  margin-left: 10px;
+}
+

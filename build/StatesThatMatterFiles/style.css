@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap");
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 400px;
+	height: 535px;
+	margin: auto;
+	position: relative;
+	padding-top: 1px;
+	background-size: cover;
+	font-family: "Finger Paint", cursive;
+}
+#myAnimation {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	background-image: url(https://ik.imagekit.io/funcboxImages/StatesofMatter_assets/ice_GWuHHBxccJsJ.png?updatedAt=1635364136174);
+}
+#mychar {
+	margin-top: 50vh;
+	width: 70px;
+	height: 140px;
+	position: absolute;
+	background-image: url(https://ik.imagekit.io/funcboxImages/StatesofMatter_assets/image-removebg-preview_-_2021-10-11T215945_2_PdYBCoJLvBR.png?updatedAt=1635364137074);
+	background-size: 100% 100%;
+}
+/* interaction pad*/
+.right_btn {
+	/* border-radius: 50%; */
+	height: 40px;
+	width: 40px;
+	background: url("./assets/right.svg") no-repeat center;
+	background-size: 40px 40px;
+	border: none;
+	outline: none;
+}
+
+.left_btn {
+	/* border-radius: 50%; */
+	height: 40px;
+	width: 40px;
+	background: url("./assets/left.svg") no-repeat center;
+	background-size: 40px 40px;
+	border: none;
+	outline: none;
+}
+
+.restart_btn {
+	/* border-radius: 50%; */
+	height: 40px;
+	width: 40px;
+	background: url("./assets/restart.svg") no-repeat center;
+	border: none;
+	outline: none;
+}
+
+.Interaction_Buttons {
+	margin-top: 80vh;
+	margin-left: 35vw;
+}

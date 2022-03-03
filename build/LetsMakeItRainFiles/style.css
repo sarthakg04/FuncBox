@@ -1,0 +1,238 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.Phone {
+  /* margin: 0 auto 0 auto; */
+  /* border: 1px solid black; */
+  height: 535px;
+  width: 400px;
+  /* margin: 0; */
+  background-image: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/bg_mvaxzFGiivV.png?updatedAt=1633874665554');
+}
+
+.Phone_rain_bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/bg_mvaxzFGiivV.png?updatedAt=1633874665554');
+}
+
+.GamePad {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  width: 287px;
+  /* border: 1px solid black; */
+  margin: 0 auto 0 auto;
+  box-sizing: border-box;
+}
+
+.drop_grid {
+  position: relative;
+  top: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 55px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+}
+
+.drop_grid div {
+  height: 67px;
+  width: 55px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+}
+
+.drop_bg {
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/drop_5U7ZuQKhq0P.png?updatedAt=1633874667533')
+    no-repeat left;
+}
+
+.happy_drop_bg{
+  background: url('./assets/happy_drop_bg.png') no-repeat left;
+}
+
+.InteractionPad {
+  position: relative;
+  left: 35%;
+  margin-top: 10px;
+  width: fit-content;
+}
+
+.top_arrow {
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/top_arrow_TPJjyylOHsY.png?updatedAt=1633874672848');
+  height: 50px;
+  width: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+.bottom_arrow {
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/bottom_arrow_rC6MNTBNZ.png?updatedAt=1633874666533');
+  height: 50px;
+  width: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+.sun {
+  margin-left: auto;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/sun_8X0Vdv6Iv.png?updatedAt=1633874671909');
+  height: 171px;
+  width: 153px;
+}
+
+.rain {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  height: 181px;
+  width: 241px;
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/rain_MNJ2H6D29.png?updatedAt=1633874668831');
+}
+
+.rays_list {
+  position: absolute;
+}
+
+.ray_grid {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  height: 20px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+}
+
+.ray_1_grid {
+  /* 3 */
+  width: 100px;
+  top: 110px;
+  margin-left: 60px;
+  transform: rotate(-25deg);
+}
+
+.ray_2_grid {
+  /* 4 */
+  width: 130px;
+  top: 160px;
+  margin-left: 52px;
+  transform: rotate(-40deg);
+}
+
+.ray_3_grid {
+  /* 6 */
+  width: 190px;
+  top: 200px;
+  margin-left: 40px;
+  transform: rotate(-45deg);
+}
+
+.ray_4_grid {
+  /* 8 */
+  width: 250px;
+  top: 250px;
+  margin-left: 25px;
+  transform: rotate(-50deg);
+}
+
+.ray_grid div {
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  width: 30px;
+}
+
+.ray_bg {
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/ray_YT-bO0kfYbx.png?updatedAt=1633874669596')
+    no-repeat center;
+}
+
+.temperature {
+  height: 150px;
+  width: 72px;
+  position: absolute;
+  top: 230px;
+  left: 240px;
+  /* border: 1px solid black;
+  box-sizing: border-box; */
+  transform: rotate(-20deg);
+}
+
+.temp_10 {
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/10_TBQZ5lupQ.png?updatedAt=1634019442154')
+    no-repeat center;
+}
+.temp_20 {
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/20_NhMH1bywJ.png?updatedAt=1634019442854')
+    no-repeat center;
+}
+.temp_30 {
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/30_xs1xFKElh.png?updatedAt=1634019443652')
+    no-repeat center;
+}
+.temp_40 {
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/40_KOpmP_oNdMT5.png?updatedAt=1634019444479')
+    no-repeat center;
+}
+.temp_50 {
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/50_VrhUQwlkuDK.png?updatedAt=1634019445311')
+    no-repeat center;
+}
+.temp_60 {
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/60_KytEGI4DB_GA.png?updatedAt=1634019446141')
+    no-repeat center;
+}
+.temp_70 {
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/70_66d5pTsSu3l.png?updatedAt=1634019446956')
+    no-repeat center;
+}
+.temp_80 {
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/80_k8L84XfIs.png?updatedAt=1634019447848')
+    no-repeat center;
+}
+.temp_90 {
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/90_fIXiM1nMnPp.png?updatedAt=1634019448591')
+    no-repeat center;
+}
+.temp_100 {
+  background: url('https://ik.imagekit.io/funcboxImages/LetsMakeItRainGame_assets/100_gbU985QzO.png?updatedAt=1634019449402')
+    no-repeat center;
+}
+
+.restart_btn {
+  height: 27px;
+  width: 27px;
+  background: url('./assets/restart.png');
+  border: none;
+}
+
+.Precipitation_Description{
+  
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 200px;
+  margin: auto;
+  font-size: medium;
+  width: 250px;
+  font-weight: bolder;
+  justify-content: center;
+  color: white;
+  display: none;
+}
+
+.Precipitation_title{
+  position: fixed;
+  right: 0;
+  left: 30%;
+  top: 60px;
+  margin: auto;
+  color: white;
+  font-weight: bold;
+  font-size: x-large;
+  display: none;
+}

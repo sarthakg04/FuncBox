@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Risque&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: 'Risque', cursive;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.GamePad {
+  width: 400px;
+  height: 535px;
+  /* border: solid black 1px; */
+  margin: auto;
+  position: relative;
+  /* background-image: url('../MissionMarsFiles/assets/backgrounds/Frame.png'); */
+
+  padding-top: 1px;
+  background-size: cover;
+  position: relative;
+  /* background: red; */
+}
+
+
+.score{
+  margin-top: 32px;
+  text-align: center;
+  color : white;
+}
+
+.score h3{
+  font-size: 24px;
+}
+
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  background: #8B5E3C;
+  border : 1px solid black;
+  border-radius: 8px;
+  height: 275px;
+  width: 80%;
+  margin: auto;
+  margin-top: 32px;
+  grid-gap: 16px;
+}
+
+/* .element{
+  background: url('assets/hole.svg');
+  background-size: cover;
+  background-position: center;
+} */
+
+.element{
+  text-align: center;
+  margin: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.element img{
+  width: 75%;
+  margin: auto;
+}
+
+.element.active img{
+  width: 80%;
+}
+
+
+.element .hammer , .element.active .hammer{
+  position: absolute;
+  left: 10%;
+  top: 60%;
+  transform: translate(-50% , -50%);
+  width: 150%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+
+.element.hit .hammer{
+  opacity: 1;
+  visibility: visible;
+
+}
+
+.lifes{
+  display: flex;
+  justify-content: space-between;
+  margin: 32px 64px;
+}
+
+.lifes .life img{
+  width: 30px;
+}
+
+.restart{
+  background-color: #8B5E3C;
+  border-radius: 8px;
+  text-align: center;
+  padding: 16px;
+  position: absolute;
+  color : white;
+  left: 50%;
+  top : 50%;
+  transform: translate(-50%, -50%);
+  border : 1px solid black;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.restart.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.start , .stop{
+  margin-top: -24px;
+  margin-left: 16px;
+  background-color: #8B5E3C;
+  border-radius: 8px;
+  text-align: center;
+  padding: 8px;
+  color : white;
+  display: inline-block;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.start.active , .stop.active{
+  opacity: 1;
+  visibility: visible;
+}

@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+input {
+  outline: none;
+}
+
+.container {
+  width: min(400px, 100%);
+  height: 100vh;
+  /* border: solid black 1px; */
+  margin: auto;
+  position: relative;
+  /* background-image: url('../MissionMarsFiles/assets/backgrounds/Frame.png'); */
+
+  padding-top: 1px;
+  background-size: cover;
+  position: relative;
+  /* background: red; */
+  overflow: hidden;
+}
+.main_container {
+  width: 100%;
+  height: 100%;
+  background-color: aquamarine;
+}
+.arrow_key {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  transform: translate(0, -50%);
+  top: 50%;
+  cursor: pointer;
+}
+.arrow_key > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.arrow_key.right {
+  right: 10px;
+}
+.arrow_key.left {
+  left: 10px;
+}
+.play_button {
+  width: 60px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+}
+.play_button > img {
+  width: 100%;
+  border-radius: inherit;
+}
+.play_button > img:hover {
+  border: 3px solid black;
+}

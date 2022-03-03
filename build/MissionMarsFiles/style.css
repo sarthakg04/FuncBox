@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.GamePad {
+  width: 400px;
+  height: 535px;
+  /* border: solid black 1px; */
+  margin: auto;
+  position: relative;
+  /* background-image: url('../MissionMarsFiles/assets/backgrounds/Frame.png'); */
+  /* background-position: center;
+  background-size: cover; */
+  padding-top: 1px;
+  /* background: red; */
+}
+
+.mars_bg {
+  background: url('./assets/backgrounds/Frame.png') no-repeat center;
+  background-position: center;
+  background-size: cover;
+}
+
+.ocean_bg {
+  background: url('./assets/ocean_bg.png') no-repeat center;
+  background-position: center;
+  background-size: cover;
+}
+
+.garden_bg {
+  background: url('./assets/garden_bg.png') no-repeat center;
+  background-position: center;
+  background-size: cover;
+}
+
+.score {
+  margin: 2px;
+  padding: 8px;
+  border-radius: 8px;
+  background: black;
+  min-width: 40%;
+  font-weight: 500;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.score-div {
+  display: flex;
+  align-items: center;
+}
+
+.score img {
+  margin-right: 8px;
+}
+
+.score h3 {
+  margin: 0;
+  font-weight: 500;
+  color: white;
+}
+
+.grid {
+  height: 400px;
+  /* border: solid black 1px; */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /* grid-template-rows: repeat(5,1fr); */
+  box-sizing: border-box;
+  padding: 5px;
+  margin: auto;
+  position: relative;
+
+  z-index: 2;
+}
+
+.grid div {
+  box-sizing: border-box;
+  margin: 0;
+  /* border: 1px solid; */
+}
+
+.rocks {
+  /* border-radius: 15px; */
+}
+
+.goodrocks {
+  background: url('../MissionMarsFiles/assets/GoodRock.svg') no-repeat center;
+}
+
+.badrocks {
+  background: url('../MissionMarsFiles/assets/BadRock.svg') no-repeat center;
+}
+
+.treasurebox {
+  background: url('../MissionMarsFiles/assets/treasure_box.png') no-repeat
+    center;
+}
+
+.monsterbox {
+  background: url('../MissionMarsFiles/assets/monster_box.png') no-repeat center;
+}
+
+.goodclouds {
+  background: url('../MissionMarsFiles/assets/good_cloud.png') no-repeat center;
+}
+
+.badclouds {
+  background: url('../MissionMarsFiles/assets/bad_cloud.png') no-repeat center;
+}
+
+.wasterocks1 {
+  background: url('../MissionMarsFiles/assets/WasteRock-2.svg') no-repeat center;
+}
+
+.wasterocks2 {
+  background: url('../MissionMarsFiles/assets/WasteRock-1.svg') no-repeat center;
+}
+
+.rover {
+  background: url('../MissionMarsFiles/assets/Rover.svg') no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100%;
+}
+
+.human {
+  background: url('../MissionMarsFiles/assets/human.png') no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100%;
+}
+
+.submarine {
+  background: url('../MissionMarsFiles/assets/submarine.png') no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100%;
+}
+
+.up {
+  transform: rotate(0);
+}
+
+.down {
+  transform: rotate(180deg);
+}
+
+.scanned {
+  /* background-color: green; */
+  border-radius: 10px;
+}
+
+.goodscan {
+  background-color: green;
+}
+
+.badscan {
+  background-color: red;
+}
+
+.scanning {
+  animation: 0.75s blink;
+  animation-iteration-count: infinite;
+}
+
+.controller-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px;
+}
+
+.controller-container.active {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.arrow-keys {
+  text-align: center;
+}
+
+.arrow-keys img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.left-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -6px;
+}
+
+.left-right .middle {
+  width: 15px;
+  margin: 3px;
+}
+
+.Scan {
+  margin-top: -14px;
+  margin-left: 16px;
+  background: #2ba002;
+  height: 60px;
+  width: 60px;
+  color: black;
+  border-radius: 50%;
+  border: 3px solid white;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.Scan:active,
+.Scan:focus {
+  outline: 0;
+}
+
+.Scan.active {
+  background: #36d100;
+  cursor: pointer;
+}
+
+.restartBtn {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 30px;
+  cursor: pointer;
+}
+
+/* .upRotate {
+  transform: rotate(0deg);
+}
+
+.downRotate {
+  transform: rotate(180deg);
+}
+
+.rightRotate {
+  transform: rotate(90deg);
+}
+
+.leftRotate {
+  transform: rotate(-90deg);
+}
+
+.roverImg {
+  position: absolute;
+  left: 290px;
+  top: 408px;
+  width: 40px;
+  transition: 0.5s;
+  z-index: 4;
+  opacity: 0;
+} */
+
+/* 72
+45
+325
+354 */
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* .notransform {
+  transform: none;
+} */
