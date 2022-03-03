@@ -39,24 +39,24 @@
 // fillGarbage();
 // creatPopUp();
 
-function createGamepad(){
-  let gamePadd = document.createElement('DIV')
-  gamePadd.classList.add('GamePad')
-  gamePadd.id = 'GamePad'
-  document.body.appendChild(gamePadd);
-  gamePad = document.getElementById('GamePad')
+function createGamepad() {
+	let gamePadd = document.createElement("DIV");
+	gamePadd.classList.add("GamePad");
+	gamePadd.id = "GamePad";
+	document.body.appendChild(gamePadd);
+	gamePad = document.getElementById("GamePad");
 }
 
-function createHeading(){
-  document.getElementsByClassName('GamePad')[0].innerHTML +=`
+function createHeading() {
+	document.getElementsByClassName("GamePad")[0].innerHTML += `
   <div class="heading">
     <p>Please remove the non-biodegradable waste from the soil</p>
   </div>
   `;
 }
 
-function createScore(){
-  document.getElementsByClassName('GamePad')[0].innerHTML +=`
+function createScore() {
+	document.getElementsByClassName("GamePad")[0].innerHTML += `
   <div class="score">
     <img src="./RecycleItFiles/assets/score.png" alt="">
     <p id = 'score'>0</p>
@@ -64,42 +64,47 @@ function createScore(){
   `;
 }
 
-function fillBackground(){
-  document.getElementsByClassName('GamePad')[0].style.backgroundImage =  'url(./RecycleItFiles/assets/background.png)';
+function fillBackground() {
+	document.getElementsByClassName("GamePad")[0].style.backgroundImage =
+		"url(./RecycleItFiles/assets/background.png)";
 }
 
-function createDustbin(){
-  document.getElementsByClassName('GamePad')[0].innerHTML +=`
+function createDustbin() {
+	document.getElementsByClassName("GamePad")[0].innerHTML += `
   <div class="dustbin">
     <img src="./RecycleItFiles/assets/dustbin.png" alt="">
   </div>
   `;
 }
 
-function fillGarbage(){
-  let garbage2 = [...garbage]
-  document.getElementsByClassName('GamePad')[0].innerHTML +=`
+function fillGarbage() {
+	let garbage2 = [...garbage];
+	document.getElementsByClassName("GamePad")[0].innerHTML += `
     <div class="garbage__container">
     </div>
   `;
-  
-  for (let i = 0; i < 9; i++) {
-    let index = Math.floor(Math.random() * (garbage.length - 1 - 0 + 1) + 0);
-			document.getElementsByClassName("garbage__container")[0].innerHTML += `
-    <div class="garbage">
-    <img src="./RecycleItFiles/assets/${garbage[index].name}.png" alt="" class="gImg ${garbage[index].type} ${garbage[index].name}" onclick="checkGarbage()">
-    </div>
-    `;
-    garbage.splice(index , 1);
-  }
 
-  garbage = [...garbage2];
-  console.log(garbage);
-  addEvent();
+	let arrayLength = garbage.length;
+	if (arrayLength > 9) {
+		arrayLength = 9;
+	}
+	console.log(arrayLength);
+	for (let i = 0; i < arrayLength; i++) {
+		let index = Math.floor(Math.random() * (garbage.length - 1 - 0 + 1) + 0);
+		document.getElementsByClassName("garbage__container")[0].innerHTML += `
+        <div class="garbage">
+          <img src="./RecycleItFiles/assets/${garbage[index].name}.png" alt="" class="gImg ${garbage[index].type} ${garbage[index].name}" onclick="checkGarbage()">
+        </div>
+      `;
+		garbage.splice(index, 1);
+	}
+
+	garbage = [...garbage2];
+	addEvent();
 }
 
-function creatPopUp(){
-  document.getElementsByClassName('GamePad')[0].innerHTML +=`
+function creatPopUp() {
+	document.getElementsByClassName("GamePad")[0].innerHTML += `
   <div class="wrong__container">
     <h1>WRONG!!!!!</h1>
 
@@ -120,66 +125,61 @@ function creatPopUp(){
 
 let score = 0;
 let non = 0;
-function restart(){
-  window.location.reload();
+function restart() {
+	window.location.reload();
 }
 
+function addEvent() {
+	let images = document.getElementsByClassName("gImg");
 
-function addEvent(){
-
-let images = document.getElementsByClassName('gImg');
-
-for(i=0 ;i<images.length ; i++){
-
-    images[i].addEventListener('click', (e)=>{
-      console.log('yes');
-    checkGarbage( e.target)
-  })
+	for (i = 0; i < images.length; i++) {
+		images[i].addEventListener("click", (e) => {
+			// console.log('yes');
+			checkGarbage(e.target);
+		});
+	}
+}
+function updateScore() {
+	document.getElementById("score").innerHTML = score;
 }
 
-}
-function updateScore(){
-  document.getElementById('score').innerHTML = score;
-}
+function checkGarbage() {
+	img = this.event.target;
+	let classes = img.classList;
+	let res = verifyGarbage(classes[classes.length - 1]);
+	if (res) {
+		img.classList.add("drop");
+		setTimeout(() => {
+			img.style.zIndex = "-1";
+		}, 600);
 
+		updateScore();
 
-function checkGarbage(){
-  img = this.event.target;
-  let classes = img.classList
-  let res = verifyGarbage(classes[classes.length-1])
-  if(res){
+		non += 1;
+		let totalNon = 0;
+		garbage.forEach((item, i) => {
+			if (item.type == "non") {
+				totalNon += 1;
+			}
+		});
 
-    img.classList.add('drop');
-    setTimeout(()=>{
-      img.style.zIndex = '-1';
-    },600)
-
-
-    updateScore();
-
-    non +=1;
-    let totalNon=0;
-    garbage.forEach((item, i) => {
-      if(item.type == 'non'){
-        totalNon+=1;
-      }
-    });
-
-    if(non == totalNon){
-      showWinner();
-    }
-  }
-
-  else{
-    updateScore();
-    showError();
-  }
+		if (non == totalNon) {
+			showWinner();
+		}
+	} else {
+		updateScore();
+		showError();
+	}
 }
 
-function showError(){
-  document.getElementsByClassName('wrong__container')[0].classList.toggle('active')
+function showError() {
+	document
+		.getElementsByClassName("wrong__container")[0]
+		.classList.toggle("active");
 }
 
-function showWinner(){
-  document.getElementsByClassName('right__container')[0].classList.toggle('active')
+function showWinner() {
+	document
+		.getElementsByClassName("right__container")[0]
+		.classList.toggle("active");
 }
