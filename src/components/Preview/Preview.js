@@ -28,19 +28,15 @@ export default function Preview(props) {
         }
       );
       const data = await res.json();
-      const len = data.length - 1;
-      console.log(unhash(data[len].code));
-      setJs(unhash(data[len].code));
+      if (data) {
+        const len = data.length - 1;
+        console.log(unhash(data[len].code));
+        setJs(unhash(data[len].code));
+      }
     };
-
-    const getUsername = async()=>
-    {
-      const res = await fetch(`https://server.funcbox.in/`)
-    }
 
     if (gid > -1 && userid !== "") {
       getSavedCode();
-      getUsername();
     }
   }, [userid, gid]);
   function updateCode() {
@@ -69,11 +65,20 @@ export default function Preview(props) {
   }
 
   useEffect(() => {
+    const getUsername = async () => {
+      const res = await fetch(
+        `https://server.funcbox.in/admindashboard/username/${userid}`
+      );
+      const data = await res.json();
+      if (data !== "error") setUsername(data[0].fname);
+    };
+
     updateCode();
+    if (js.length > 0) getUsername();
   }, [js]);
 
   return (
-    <div class="game_preview">
+    <div className="game_preview">
       <Frame srcDoc={srcDoc} />
       {/* <iframe
                           srcDoc={srcDoc}
@@ -83,9 +88,13 @@ export default function Preview(props) {
                           width="100%"
                           height="100%"
                       /> */}
-      <p>
-        Made By <span className="strong">{username}</span>
-      </p>
+      {js.length > 0 ? (
+        <p>
+          Made By <span className="strong">{username}</span>
+        </p>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

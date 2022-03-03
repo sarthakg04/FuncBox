@@ -194,9 +194,32 @@ body {
 }
 
 .Score {
-  background-color: black;
+  position: fixed;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: fit-content;
+  /* background-image: url('./assets/game_over.svg');
+  height: 200px;
+  width: 300px; */
+  border: 1px solid black;
+  background-color: red;
   color: white;
-  /* line-height: 20px; */
+  font-size: x-large;
+  padding: 5px;
+  /* line-height: -10px; */
+}
+
+.GameOver{
+  position: fixed;
+  top: 100px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-image: url('./assets/game_over.svg');
+  height: 200px;
+  width: 300px;
+  display: none;
 }
 
 .Star_img_angryBirds {
@@ -230,6 +253,21 @@ body {
   width: 40px;
   background: url('./assets/right.svg') no-repeat center;
   background-size: 40px 40px;
+  border: none;
+  outline: none;
+}
+
+.New_refresh_btn{
+  position: fixed;
+  top: 350px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  
+  /* border-radius: 50%; */
+  height: 40px;
+  width: 40px;
+  background: url('./assets/restart.svg') no-repeat center;
   border: none;
   outline: none;
 }
