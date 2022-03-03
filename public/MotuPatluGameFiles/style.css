@@ -1,69 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap");
 
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  #cartoon{
-    position:absolute;
-    margin-top:32vh;
-    margin-left:5vw;
-    width:300px;
-    height:300px;
-    background-size: cover;
-  }
-  .container {
-    width: 400px;
-    height: 535px;
-    margin: auto;
-    position: relative;
-    padding-top: 1px;
-    background-size: cover;
-    font-family: 'Finger Paint', cursive;
-  }
-
-  #button1 {
-    position: absolute;
-    margin-top:83vh;
-    margin-left:73vw;
-    width: 15vw;
-    height: 5vh;
-    background: rgb(255,172,74,0);
-    border-radius: 37px;
-    font-weight: 600;
-    border: none;
-    color: rgb(88, 81, 81);
-    font-size: 10px;
-    font-family: 'Finger Paint', cursive;
-  }
-  #inpdistance{
-    position: absolute;
-    width: 30vw;
-    height: 6vh;
-    border:1px black;
-    border-style: solid;
-    margin-left:10vw;
-    margin-top:90vh;
-    border-radius: 20px;
-    padding: 15px;
-  }
-  #inptime{
-    padding: 15px;
-    position: absolute;
-    width: 30vw;
-    height: 6vh;
-    border:black 1px;
-    border-style: solid;
-    margin-left:40vw;
-    margin-top:90vh;
-    border-radius: 20px;
-  }
-.speed{
-    position: absolute;
-    margin-top: 28.5vh;
-    margin-left:27vw ;
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+#cartoon {
+  position: absolute;
+  margin-top: 32vh;
+  margin-left: 5vw;
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+}
+.container {
+  width: 400px;
+  height: 535px;
+  margin: auto;
+  position: relative;
+  padding-top: 1px;
+  background-size: cover;
+  font-family: "Finger Paint", cursive;
+}
+
+#button1 {
+  position: absolute;
+  margin-top: 83vh;
+  margin-left: 73vw;
+  width: 15vw;
+  height: 5vh;
+  background: rgb(255, 172, 74, 0);
+  border-radius: 37px;
+  font-weight: 600;
+  border: none;
+  color: rgb(88, 81, 81);
+  font-size: 10px;
+  font-family: "Finger Paint", cursive;
+}
+#inpdistance {
+  position: absolute;
+  width: 30vw;
+  height: 6vh;
+  border: 1px black;
+  border-style: solid;
+  margin-left: 10vw;
+  margin-top: 90vh;
+  border-radius: 20px;
+  padding: 15px;
+}
+#inptime {
+  padding: 15px;
+  position: absolute;
+  width: 30vw;
+  height: 6vh;
+  border: black 1px;
+  border-style: solid;
+  margin-left: 40vw;
+  margin-top: 90vh;
+  border-radius: 20px;
+}
+.speed {
+  position: absolute;
+  margin-top: 28.5vh;
+  margin-left: 27vw;
+}
+
