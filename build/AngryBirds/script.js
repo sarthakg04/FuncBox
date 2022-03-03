@@ -1,4 +1,4 @@
-//Frontend Functions for testing
+// Frontend Functions for testing
 // let hitter = 'black'
 // let goodItem = 'fruit'
 // let badItem = 'pig'
@@ -36,6 +36,8 @@ let currentBirdPosition = 34
 
 let grid
 
+
+
 function fillBackground(bg) {
     let phone = document.querySelector('.Phone')
     phone.classList.add(bg)
@@ -58,6 +60,11 @@ function createGamePad() {
     gamePad.appendChild(Grid)
     
     grid = document.querySelector('.grid')
+
+    let GameOver_div = document.createElement('div')
+    GameOver_div.classList.add('GameOver')
+
+    Phone.appendChild(GameOver_div)
 
     // drawGrid()
 }
@@ -302,6 +309,12 @@ function DecreasedScore(){
 
 function IncreaseScore(){
 
+    let GameOver_div = document.querySelector('.GameOver')
+
+    let grid_clear = document.querySelector('.grid')
+
+    let ControlPad = document.querySelector('.ControlPad')
+
     Finish+=penalty
     if( Finish === (3*penalty) ) {
         for(var i = 0; i < MovementBtns.length; i++) {
@@ -321,7 +334,18 @@ function IncreaseScore(){
             }
             squares[currentBirdPosition].appendChild(hitted)
             squares[currentBirdPosition].classList.add('hitted-check')
+            GameOver_div.style.display = 'block'
+
+            grid_clear.style.display = 'none'
+            ControlPad.style.display = 'none'
             scoreSpan.innerHTML = "Perfect Win : "+ Score+"/"+Finish
+
+            let New_refresh_btn = document.createElement('button')
+            New_refresh_btn.onclick = function(){window.location.reload();};
+            New_refresh_btn.classList.add('New_refresh_btn')
+
+            Phone.appendChild(New_refresh_btn)
+
             return 0
         }
         else{
@@ -335,7 +359,19 @@ function IncreaseScore(){
             }
             squares[currentBirdPosition].appendChild(hitted)
             squares[currentBirdPosition].classList.add('hitted-check')
+            
+            GameOver_div.style.display = 'block'
+            grid_clear.style.display = 'none'
+            ControlPad.style.display = 'none'
             scoreSpan.innerHTML = "Game Over! Score : "+ Score+"/"+Finish
+
+
+            let New_refresh_btn = document.createElement('button')
+            New_refresh_btn.onclick = function(){window.location.reload();};
+            New_refresh_btn.classList.add('New_refresh_btn')
+
+            Phone.appendChild(New_refresh_btn)
+
             return 0
         }
     }

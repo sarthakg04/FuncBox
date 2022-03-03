@@ -1,7 +1,6 @@
 // FronteEnd functions
 
 // let bin = ['bio' , 'nonBio' , 'recycle']
-//
 // let garbage = [
 //   {
 //   name : 'banana',
@@ -14,6 +13,46 @@
 //   {
 //     name : 'bottle',
 //     correct : 1
+//   },
+//   {
+//     name : 'apple',
+//     correct : 0
+//   },
+//   {
+//     name : 'baggie',
+//     correct : 1
+//   },
+//   {
+//     name : 'box',
+//     correct : 2
+//   },
+//   {
+//     name : 'bulb',
+//     correct : 2
+//   },
+//   {
+//     name : 'can',
+//     correct : 2
+//   },
+//   {
+//     name : 'cd',
+//     correct : 1
+//   },
+//   {
+//     name : 'fish',
+//     correct : 0
+//   },
+//   {
+//     name : 'leaf',
+//     correct : 0
+//   },
+//   {
+//     name : 'packet',
+//     correct : 1
+//   },
+//   {
+//     name : 'syringe',
+//     correct : 2
 //   },
 //   {
 //     name : 'straw',
@@ -150,6 +189,8 @@ function drop(){
 
   setTimeout(()=>{
     if(garbage[index].correct != currentPos){
+      var audio = new Audio('./TrashGameFiles/assets/Lifelostsound.mp3');
+      audio.play();
       document.getElementsByClassName('lyf')[heart].src='./TrashGameFiles/assets/brokenHeart.png';
       heart +=1;
       if(heart == 3){
