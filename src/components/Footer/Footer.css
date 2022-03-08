@@ -1,97 +1,215 @@
-.footer{
-  position: relative;
+.footer {
   background: url("https://ik.imagekit.io/funcboxImages/image_288_1DiBd8v_PEE8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645042572237");
-  height:100vh;
-  width:100%;
+  height: 100vh;
+  width: 100vw;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.get_in_touch{
-  margin-left: 2.5vw;
-  position: absolute;
+
+.full_footer {
+  padding-top: 26rem;
+}
+.get_in_touch {
+  display: inline-block;
+  width: max-content;
+  margin-left: 3%;
+  position: relative;
   font-size: 2rem;
-  color:white;
-  margin-top:50vh;
+  color: white;
 }
-.get_in_touch input{
-  width:30vw;
+
+.get_in_touch input {
+  margin-top: 1.2rem;
+  width: 150%;
+  height: 1.4rem;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
   border: 1rem solid white;
-  border-radius: 1rem;
+  border-radius: 2rem;
 }
-.home_store_school_blog{
-  margin-left: 2.5vw;
-  color:white;
-  font-size: 1rem;
+
+.get_in_touch input:focus {
+  outline: none;
+}
+
+.bell img {
   position: absolute;
-  margin-top: 75vh;
-  justify-content: center;
-  display:flex;
-  gap: 1.5vw;
-  flex-wrap: wrap;
+  right: -11rem;
+  top: 4.2rem;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
 }
-.home_store_school_blog a :hover{
+
+.links {
+  color: white;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.home_store_school_blog {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer a:hover {
   text-decoration: underline;
+  font-weight: 500;
 }
-.Career{
-  margin-left: 2.5vw;
-  color:white;
-  font-size: 1rem;
-  position: absolute;
-  margin-top: 85vh;
-  justify-content: center;
-  display:flex;
+
+.social_media {
+  margin-left: 5%;
+  color: white;
+  justify-content: start;
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1%;
 }
-.horizontal_rule{
-  width:80%;
-  position: absolute;
+
+.social_media img {
+  height: 40px;
+  width: 40px;
+}
+
+.horizontal_rule {
+  width: 90%;
+  margin: 0 auto;
   border: 1px solid white;
-  margin-top:15vh;
-  margin-left: 10vw;
 }
-.important_links{
-  color:white;
-  margin-left:35vw;
-  float: left;
-  display:flex;
+
+.postcredit {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 0.5rem;
 }
-.postcredit{
-  margin-left: 40vw;
-  color:white;
-  font-size: 1rem;
-  position: absolute;
-  margin-top: 95vh;
-  justify-content: center;
-  display:flex;
-  gap: 1.5vw;
-  flex-wrap: wrap;
+
+.postcredit span {
+  font-size: 1.6rem;
+  color: red;
 }
-.social_media{
-  margin-left: 2.5vw;
-  color:white;
-  position: absolute;
-  margin-top: 82vh;
-  justify-content: center;
-  display:flex;
-  gap:2vw;
-  flex-wrap: wrap;
+
+
+
+
+@media (max-width: 2000px) {
+  .full_footer {
+    padding-top: 26rem;
+  }
+} 
+
+
+@media (max-width: 1800px) {
+  .full_footer {
+    padding-top: 26rem;
+  }
+} 
+
+
+
+@media (max-width: 1500px) {
+  .full_footer {
+    padding-top: 20rem;
+  }
+} 
+
+
+@media (max-width: 1300px) {
+  .full_footer {
+    padding-top: 18rem;
+  }
+} 
+
+
+
+@media (max-width: 1000px) {
+
+  .get_in_touch input {
+    font-size: 1.1rem;
+    width: 130%;
+  }
+  .bell img {
+    right: -7rem;
+    top: 4.2rem;
+  }
+  .links {
+    font-size: 1.3rem;
+  }
+  .postcredit {
+    font-size: 1.3rem;
+  }
 }
-.ld{
-  height:5vh;
-  width:80%;
-  margin-left:1vw;
+
+@media (max-width: 800px) {
+  .get_in_touch {
+    font-size: 1.8rem;
+  }
+  .get_in_touch input {
+    font-size: 1.1rem;
+    width: 130%;
+  }
+  .bell img {
+    right: -7rem;
+    top: 3.7rem;
+  }
+  .links {
+    font-size: 1.2rem;
+  }
+  .home_store_school_blog {
+    gap: 1rem;
+  }
+  .postcredit {
+    font-size: 1.2rem;
+  }
 }
-.fb{
-  height:5vh;
-  width:80%;
-  margin-left:1vw;
+
+@media (max-width: 600px) {
+  .bell img {
+    right: -5rem;
+    top: 3.7rem;
+  }
+  .links {
+    margin-top: 3rem;
+  }
+
+  .home_store_school_blog {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .social_media img {
+    height: 30px;
+    width: 30px;
+  }
 }
-.ig{
-  height:5vh;
-  width:80%;
-  margin-left:1vw;
-}
-@media (max-width: 500px) {
-  .get_in_touch input{
-    width:50vw;
+
+@media (max-width: 400px) {
+  .get_in_touch {
+    font-size: 1.4rem;
+  }
+
+  .get_in_touch input {
+    font-size: 1rem;
+    width: 120%;
+    height: 1rem;
+  }
+
+  .links {
+    font-size: 1rem;
+    flex-direction: row !important;
+  }
+
+  .bell img {
+    right: -4.5rem;
+    top: 3.2rem;
+  }
+  .home_store_school_blog {
+    display: flex;
+    flex-direction: column;
+  }
+  .postcredit {
+    font-size: 1rem;
   }
 }
