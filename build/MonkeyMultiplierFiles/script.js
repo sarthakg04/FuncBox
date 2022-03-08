@@ -89,7 +89,7 @@ function createScore(){
     score_text = document.createElement('div')
     score_text.classList.add('score')
     score_text.innerHTML = 'Score: ' + `${Score}`
-    GamePad.appendChild(score_text)
+    phone_div.appendChild(score_text)
 }
 
 
@@ -272,7 +272,7 @@ function GameOver(){
     var Game_Over = document.querySelector('.Game_Over')
     Game_Over.style.display = 'block'
     var score_set = document.querySelector('.score')
-    score_set.innerHTML = 'Game Over, Score: ' + `${Score}`
+    score_set.innerHTML = 'Score: ' + `${Score}`
 }
 
 function GameWon(){
