@@ -1,6 +1,50 @@
 // Frontend functions for testing
 // createGamepad();
 // fillBackground();
+// function stepUp(final_val, final_unit){
+//   switch (final_unit) {
+//     case "kl":
+//       var new_val = final_val*10;
+//       var new_unit = "hl";
+//       break;
+//     case "hl":
+//       var new_val = final_val*100;
+//       var new_unit = "l";
+//       break;
+//     case "l":
+//       var new_val = final_val*100;
+//       var new_unit = "cl";
+//       break;
+//     case "cl":
+//       var new_val = final_val*10;
+//       var new_unit = "ml";
+//       break;
+//   }
+//   printResult(new_val, new_unit);
+// }
+
+// function stepDown(final_val, final_unit){
+//   switch (final_unit) {
+//     case "hl":
+//       var new_val = final_val/10;
+//       var new_unit = "kl";
+//       break;
+//     case "l":
+//       var new_val = final_val/100;
+//       var new_unit = "hl";
+//       break;
+//     case "cl":
+//       var new_val = final_val/100;
+//       var new_unit = "l";
+//       break;
+//     case "ml":
+//       var new_val = final_val/10;
+//       var new_unit = "cl";
+//       break;
+//   }
+//   printResult(new_val, new_unit);
+// }
+
 // createIntercationPad();
 // createInputBox();
 // getResult();
@@ -54,6 +98,7 @@ function getResult(){
   `;
 }
 
+
 function pointerPosition(pointer_unit){
   var pointer = document.getElementById('pointer');
 
@@ -76,6 +121,7 @@ function pointerPosition(pointer_unit){
   }
 }
 
+
 function submitfnc(){
   var num_entered = document.getElementById('input_number').value;
   var unit_entered = document.getElementById('input_unit').value;
@@ -85,77 +131,41 @@ function submitfnc(){
   pointerPosition(unit_entered);
 }
 
+
+function fixPrecision(n){
+  return parseFloat(n.toFixed(10));
+}
+
+
+function printResult(x, y){
+  var val = fixPrecision(x);
+  document.getElementById('final_val').innerHTML = val;
+  document.getElementById('final_unit').innerHTML = y;
+}
+
+
 function upfunc(){
   var final_val = document.getElementById('final_val').innerHTML;
   var final_unit = document.getElementById('final_unit').innerHTML;
 
-  switch (final_unit) {
-    case "kl":
-      var x = final_val*10;
-      var p = parseFloat(x.toFixed(10));
-      document.getElementById('final_val').innerHTML = p;
-      document.getElementById('final_unit').innerHTML = "hl";
-      break;
-    case "hl":
-      var x = final_val*100;
-      var p = parseFloat(x.toFixed(10));
-      document.getElementById('final_val').innerHTML = p;
-      document.getElementById('final_unit').innerHTML = "l";
-      break;
-    case "l":
-      var x = final_val*100;
-      var p = parseFloat(x.toFixed(10));
-      document.getElementById('final_val').innerHTML = p;
-      document.getElementById('final_unit').innerHTML = "cl";
-      break;
-    case "cl":
-      var x = final_val*10;
-      var p = parseFloat(x.toFixed(10));
-      document.getElementById('final_val').innerHTML = p;
-      document.getElementById('final_unit').innerHTML = "ml";
-      break;
-  }
+  stepUp(final_val, final_unit);
 
   var y = document.getElementById('final_unit').innerHTML;
   pointerPosition(y);
 }
+
 
 function downfunc(){
   var final_val = document.getElementById('final_val').innerHTML;
   var final_unit = document.getElementById('final_unit').innerHTML;
 
-  switch (final_unit) {
-    case "hl":
-      var x = final_val/10;
-      var p = parseFloat(x.toFixed(10));
-      document.getElementById('final_val').innerHTML = p;
-      document.getElementById('final_unit').innerHTML = "kl";
-      break;
-    case "l":
-      var x = final_val/100;
-      var p = parseFloat(x.toFixed(10));
-      document.getElementById('final_val').innerHTML = p;
-      document.getElementById('final_unit').innerHTML = "hl";
-      break;
-    case "cl":
-      var x = final_val/100;
-      var p = parseFloat(x.toFixed(10));
-      document.getElementById('final_val').innerHTML = p;
-      document.getElementById('final_unit').innerHTML = "l";
-      break;
-    case "ml":
-      var x = final_val/10;
-      var p = parseFloat(x.toFixed(10));
-      document.getElementById('final_val').innerHTML = p;
-      document.getElementById('final_unit').innerHTML = "cl";
-      break;
-  }
+  stepDown(final_val, final_unit);
 
   var y = document.getElementById('final_unit').innerHTML;
   pointerPosition(y);
 }
 
+
 function restart(){
   window.location.reload();
 }
-
