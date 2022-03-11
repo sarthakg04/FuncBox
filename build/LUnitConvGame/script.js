@@ -169,3 +169,4 @@ function downfunc(){
 function restart(){
   window.location.reload();
 }
+
