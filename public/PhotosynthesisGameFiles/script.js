@@ -33,10 +33,18 @@
 
 // Frontend Functions for Test for Game 3
 
+// let time_limit = 10
 // fillBackground('Game_3')
-// createClouds2()
-// createShooter2()
+// createBubbles()
 // createInteractionPad3()
+// function onClickingCo2(){
+//     co2_hit++
+// }
+// function CheckLogic(){
+//     if( co2_hit === co2_count ){
+//         HappyPlant()
+//     }
+// }
 
 
 let Phone
