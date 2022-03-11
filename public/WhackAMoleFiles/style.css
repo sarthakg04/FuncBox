@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Risque&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Risque&display=swap");
 
-*{
+* {
   box-sizing: border-box;
-  font-family: 'Risque', cursive;
+  font-family: "Risque", cursive;
   margin: 0;
   padding: 0;
 }
@@ -10,10 +10,11 @@
 body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .GamePad {
-  width: 400px;
+  width: 405px;
   height: 535px;
   /* border: solid black 1px; */
   margin: auto;
@@ -26,23 +27,21 @@ body {
   /* background: red; */
 }
 
-
-.score{
+.score {
   margin-top: 32px;
   text-align: center;
-  color : white;
+  color: white;
 }
 
-.score h3{
+.score h3 {
   font-size: 24px;
 }
 
-
-.grid{
+.grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
-  background: #8B5E3C;
-  border : 1px solid black;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  background: #8b5e3c;
+  border: 1px solid black;
   border-radius: 8px;
   height: 275px;
   width: 80%;
@@ -57,80 +56,80 @@ body {
   background-position: center;
 } */
 
-.element{
+.element {
   text-align: center;
   margin: 8px;
   cursor: pointer;
   position: relative;
 }
 
-.element img{
+.element img {
   width: 75%;
   margin: auto;
 }
 
-.element.active img{
+.element.active img {
   width: 80%;
 }
 
-
-.element .hammer , .element.active .hammer{
+.element .hammer,
+.element.active .hammer {
   position: absolute;
   left: 10%;
   top: 60%;
-  transform: translate(-50% , -50%);
+  transform: translate(-50%, -50%);
   width: 150%;
   opacity: 0;
   visibility: hidden;
   transition: 0.2s;
 }
 
-.element.hit .hammer{
+.element.hit .hammer {
   opacity: 1;
   visibility: visible;
-
 }
 
-.lifes{
+.lifes {
   display: flex;
   justify-content: space-between;
   margin: 32px 64px;
 }
 
-.lifes .life img{
+.lifes .life img {
   width: 30px;
 }
 
-.restart{
-  background-color: #8B5E3C;
+.restart {
+  background-color: #8b5e3c;
   border-radius: 8px;
   text-align: center;
   padding: 16px;
   position: absolute;
-  color : white;
+  color: white;
   left: 50%;
-  top : 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
-  border : 1px solid black;
+  border: 1px solid black;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
   transition: 0.5s;
 }
 
-.restart.active{
+.restart.active {
   opacity: 1;
   visibility: visible;
 }
 
-.start , .stop{
+.start,
+.stop {
   margin-top: -24px;
   margin-left: 16px;
-  background-color: #8B5E3C;
+  background-color: #8b5e3c;
   border-radius: 8px;
   text-align: center;
   padding: 8px;
-  color : white;
+  color: white;
   display: inline-block;
   cursor: pointer;
   opacity: 0;
@@ -138,7 +137,8 @@ body {
   transition: 0.5s;
 }
 
-.start.active , .stop.active{
+.start.active,
+.stop.active {
   opacity: 1;
   visibility: visible;
 }

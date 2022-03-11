@@ -46,7 +46,7 @@ function fillBackground(bg) {
 function createScore() {
     let scoreSpanCreate = document.createElement('span')
     scoreSpanCreate.classList.add('Score')
-    scoreSpanCreate.innerHTML =  "Start"
+    scoreSpanCreate.innerHTML =  "Score"
     Phone.appendChild(scoreSpanCreate)
 }
 
@@ -58,7 +58,7 @@ function createGamePad() {
 
     Phone.appendChild(gamePad)
     gamePad.appendChild(Grid)
-    
+
     grid = document.querySelector('.grid')
 
     let GameOver_div = document.createElement('div')
@@ -72,7 +72,7 @@ function createGamePad() {
 
 
 function createPlancks() {
-    
+
     // Forming an array with all the divs inside the grid div
     squares = Array.from(document.querySelectorAll('.grid div'));
 
@@ -99,7 +99,7 @@ function createInteractionPad() {
     squares = Array.from(document.querySelectorAll('.grid div'));
     scoreSpan = document.querySelector('.Score')
     MovementBtns = document.querySelectorAll('.MovementBtns')
-     
+
 }
 
 
@@ -142,7 +142,7 @@ function randomUniqueNum(range, outputCount) {
 
 // Setting plancks at random positions
 function SetPlancks() {
-    
+
     for( i=0; i<planckArray.length ; i++ ) {
         // const planck = document.createElement('div')
         // planck.classList.add('planck')
@@ -160,7 +160,7 @@ function SetElements() {
             squares[planckArray[i]].classList.remove('planck')
             squares[planckArray[i]].classList.add('pig-check')
             squares[planckArray[i]].classList.add(badItem+'_planck')
-            
+
         }
         else{
             squares[planckArray[i]].classList.remove('planck')
@@ -190,7 +190,7 @@ function MoveNext() {
             squares[currentBirdPosition].classList.remove(hitter+'_bird_planck')
             squares[currentBirdPosition].classList.add('planck')
         }
-        
+
         while(planck_position_check) {
             currentBirdPosition-=1
             if(squares[currentBirdPosition].classList.contains('planck-check')) {
@@ -206,7 +206,7 @@ function MoveNext() {
                     squares[currentBirdPosition].classList.add(hitter+'_bird_'+ goodItem+'_planck')
                 }
                 else{
-                    
+
                     squares[currentBirdPosition].classList.remove('planck')
                     squares[currentBirdPosition].classList.add(hitter+'_bird_planck')
                 }
@@ -241,7 +241,7 @@ function MovePrev() {
             squares[currentBirdPosition].classList.remove(hitter+'_bird_planck')
             squares[currentBirdPosition].classList.add('planck')
         }
-        
+
         while(planck_position_check) {
             currentBirdPosition+=1
             if(squares[currentBirdPosition].classList.contains('planck-check')) {
@@ -257,7 +257,7 @@ function MovePrev() {
                     squares[currentBirdPosition].classList.add(hitter+'_bird_'+ goodItem+'_planck')
                 }
                 else{
-                    
+
                     squares[currentBirdPosition].classList.remove('planck')
                     squares[currentBirdPosition].classList.add(hitter+'_bird_planck')
                 }
@@ -320,7 +320,7 @@ function IncreaseScore(){
         for(var i = 0; i < MovementBtns.length; i++) {
             MovementBtns[i].disabled = true;
         }
-        
+
         let hitBtn = document.querySelector('.hitBtn')
         hitBtn.disabled = true
         if( Score === Finish ) {
@@ -359,7 +359,7 @@ function IncreaseScore(){
             }
             squares[currentBirdPosition].appendChild(hitted)
             squares[currentBirdPosition].classList.add('hitted-check')
-            
+
             GameOver_div.style.display = 'block'
             grid_clear.style.display = 'none'
             ControlPad.style.display = 'none'
