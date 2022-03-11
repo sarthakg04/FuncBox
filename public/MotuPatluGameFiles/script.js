@@ -18,7 +18,7 @@ let motupatlu =
   "https://ik.imagekit.io/funcboxImages/MotuPatlu_assets/Group_203__1__trS4-5wvbd5.png?updatedAt=1637005043573";
 
 let doraemon =
-  "https://ik.imagekit.io/funcboxImages/MotuPatlu_assets/Group_296_VP0nhH8K4.png?ik-sdk-version=javascript-1.4.3&updatedAt=1646291015396";
+  "https://ik.imagekit.io/funcboxImages/Doraemon_game/doraemon_YfjBaLRggdzY.png?ik-sdk-version=javascript-1.4.3&updatedAt=1647002097773";
 let doracakeshop =
   "https://ik.imagekit.io/funcboxImages/MotuPatlu_assets/Group_306_dXNc32KPZ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1646290817828";
 let ladooshop =
@@ -54,7 +54,7 @@ function createInteractionPad() {
       </div>
       <input type="number" id="inpdistance"  placeholder="Distance (Km)" min = "0"/>
       <input type="number" id="inptime"  placeholder="Time (Hr)" min = "0"/>
-      <input type="submit" id="button1" onclick="CalculateSpeed()"/>
+      <button type="submit" id="button1" onclick="CalculateSpeed()">Submit</button>
       `;
 }
 
@@ -64,6 +64,7 @@ function AddChar(temp) {
   console.log("character added");
 }
 function print(variable) {
-  document.getElementById("speedoutput").innerHTML =
-    "Speed :" + variable.toFixed(2) + " Km/hr";
+  if (variable)
+    document.getElementById("speedoutput").innerHTML =
+      "Speed:  " + variable.toFixed(2) + " Km/hr";
 }

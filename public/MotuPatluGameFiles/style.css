@@ -10,10 +10,12 @@ body {
 }
 #cartoon {
   position: absolute;
-  margin-top: 32vh;
+  margin-top: 37vh;
   margin-left: 5vw;
-  width: 300px;
-  height: 300px;
+
+  width: 260px;
+  height: 280px;
+
   background-size: cover;
 }
 .container {
@@ -37,7 +39,7 @@ body {
   font-weight: 600;
   border: none;
   color: rgb(88, 81, 81);
-  font-size: 10px;
+  font-size: 0.8rem;
   font-family: "Finger Paint", cursive;
 }
 #inpdistance {
@@ -67,4 +69,6 @@ body {
   margin-top: 28.5vh;
   margin-left: 27vw;
 }
-
+#button1:hover {
+  cursor: pointer;
+}
