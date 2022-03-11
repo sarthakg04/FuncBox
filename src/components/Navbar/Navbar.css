@@ -25,7 +25,7 @@
 	cursor: pointer;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: center;
 	height: 100%;
 }
@@ -33,12 +33,21 @@
 .dropbtn > span {
 	font-size: 14px;
 	color: #6e6e6e;
+	margin-top: 4px;
+}
+
+.dropbtn > div {
+	background-color: #dddddd;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 50px;
+	min-height: 50px;
 }
 
 #dropbtn_avatar {
 	width: 2.5rem;
-	background-color: #dddddd;
-	border-radius: 50%;
 	padding: 5px;
 }
 
@@ -267,6 +276,11 @@
 	#dropbtn_avatar {
 		width: 2rem;
 		margin-bottom: 2px;
+	}
+
+	.dropbtn > div {
+		min-width: 45px;
+		min-height: 45px;
 	}
 
 	.dropdown-content {

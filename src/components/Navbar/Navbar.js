@@ -97,7 +97,10 @@ export default function Navbar(props) {
 						<p>Home</p>
 					</Link>
 					<Link to="/AboutPage">
-						<LazyLoadImage src={about_check ? about_current : about} alt="about" />
+						<LazyLoadImage
+							src={about_check ? about_current : about}
+							alt="about"
+						/>
 						<p>About</p>
 					</Link>
 					<Link to="/SalesPage">
@@ -107,11 +110,13 @@ export default function Navbar(props) {
 					{isAuthenticated ? (
 						<div className="dropdown">
 							<button class="dropbtn">
-								<LazyLoadImage
-									id="dropbtn_avatar"
-									src={avatar || "avatars/Tiger.png"}
-									alt="Avatar"
-								/>
+								<div>
+									<LazyLoadImage
+										id="dropbtn_avatar"
+										src={avatar || "avatars/Tiger.png"}
+										alt="Avatar"
+									/>
+								</div>
 								<span>{shortName(username)}</span>
 							</button>
 							<div class="dropdown-content">
@@ -126,7 +131,10 @@ export default function Navbar(props) {
 						</div>
 					) : (
 						<Link to="/Login">
-							<LazyLoadImage src={login_check ? login_current : login} alt="login" />
+							<LazyLoadImage
+								src={login_check ? login_current : login}
+								alt="login"
+							/>
 							<p>Login</p>
 						</Link>
 					)}
@@ -141,7 +149,10 @@ export default function Navbar(props) {
 					<p>Home</p>
 				</Link>
 				<Link to="/AboutPage">
-					<LazyLoadImage src={about_check ? about_current : about} alt="about" />
+					<LazyLoadImage
+						src={about_check ? about_current : about}
+						alt="about"
+					/>
 					<p>About</p>
 				</Link>
 
@@ -152,11 +163,13 @@ export default function Navbar(props) {
 				{isAuthenticated ? (
 					<div className="dropdown">
 						<button class="dropbtn">
-							<LazyLoadImage
-								id="dropbtn_avatar"
-								src={avatar || "avatars/Tiger.png"}
-								alt="Avatar"
-							/>
+							<div>
+								<LazyLoadImage
+									id="dropbtn_avatar"
+									src={avatar || "avatars/Tiger.png"}
+									alt="Avatar"
+								/>
+							</div>
 							<span>{shortName(username)}</span>
 						</button>
 						<div class="dropdown-content">
@@ -171,7 +184,10 @@ export default function Navbar(props) {
 					</div>
 				) : (
 					<Link to="/Login">
-						<LazyLoadImage src={login_check ? login_current : login} alt="login" />
+						<LazyLoadImage
+							src={login_check ? login_current : login}
+							alt="login"
+						/>
 						<p>Login</p>
 					</Link>
 				)}
@@ -182,7 +198,7 @@ export default function Navbar(props) {
                   <p>Login</p>
               </a>
             </Link>*/}
-      </div>
-    </div>
-  );
+			</div>
+		</div>
+	);
 }
