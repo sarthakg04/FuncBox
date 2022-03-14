@@ -2,42 +2,48 @@ import React from "react";
 import { useState, useEffect } from "react";
 import {
   Link,
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
   useHistory,
 } from "react-router-dom";
+import "./ClassDropdown.css";
 import "./style.css";
 import Navbar from "../Navbar/Navbar";
-import bg from "./assets/loginBg.svg";
 import card1 from "./assets/marvelCard.svg";
 import card2 from "./assets/card2.svg";
 import card3 from "./assets/card3.svg";
 import card4 from "./assets/card4.svg";
 import card5 from "./assets/card5.svg";
 import card6 from "./assets/card6.svg";
-import { parse } from "qs";
-import { useDispatch, useSelector } from "react-redux";
-import { setAuth, setToken, setUser, setProfile } from "../../auth/authslice";
+import { useDispatch } from "react-redux";
+import { setAuth, setToken, setUser } from "../../auth/authslice";
 import { toast } from "react-toastify";
 import ReCAPTCHA from "react-google-recaptcha";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Signup() {
   const dispatch = useDispatch();
   const history = useHistory();
   const apiurl = process.env.REACT_APP_API_URL;
-
+  
   const initialState = {
     email: "",
     fName: "",
     lName: "",
-    standard: "",
+    standard : 0,
     password: "",
     confirmPassword: "",
   };
+
+  function doSomething(e) {
+    document.querySelector(".drop-down-x .options ul").style.display = "block";
+  }
+
+  function doSomething2(e) {
+    const innerText = e.target.innerText;
+    setDetails({ ...details, standard : innerText.split(" ")[1]});
+    document.querySelector(".drop-down-x .selected span").innerHTML = innerText;
+    document.querySelector(".drop-down-x .options ul").style.display = "none";
+  }
+
 
   const [details, setDetails] = useState(initialState);
   const [rToken, setRToken] = useState("");
@@ -158,7 +164,7 @@ export default function Signup() {
                 onChange={handleChange}
               />
 
-              <input
+              {/* <input
                 type="number"
                 name="standard"
                 placeholder="Standard"
@@ -169,7 +175,26 @@ export default function Signup() {
                     else e.target.value = 8;
                   } else e.target.value = 1;
                 }}
-              />
+              /> */}
+
+              <div className="drop-down-x">
+                <div className="selected">
+                  <span onClick={doSomething}>Select Class</span>
+                </div>
+                <div className="options">
+                  <ul>
+                    <li onClick={doSomething2}>Class 1</li>
+                    <li onClick={doSomething2}>Class 2</li>
+                    <li onClick={doSomething2}>Class 3</li>
+                    <li onClick={doSomething2}>Class 4</li>
+                    <li onClick={doSomething2}>Class 5</li>
+                    <li onClick={doSomething2}>Class 6</li>
+                    <li onClick={doSomething2}>Class 7</li>
+                    <li onClick={doSomething2}>Class 8</li>
+                  </ul>
+                </div>
+              </div>
+
               <input
                 type="password"
                 name="password"
