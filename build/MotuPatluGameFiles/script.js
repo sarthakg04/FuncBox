@@ -49,7 +49,7 @@ function createInteractionPad() {
       </div>
       <div class="speed">
       <p id="speedoutput">
-      Speed: 
+      Speed:
       <p>
       </div>
       <input type="number" id="inpdistance"  placeholder="Distance (Km)" min = "0"/>
@@ -65,5 +65,5 @@ function AddChar(temp) {
 }
 function print(variable) {
   document.getElementById("speedoutput").innerHTML =
-    "Speed :" + variable.toFixed(2) + " Km/hr";
+    "Speed : " + variable.toFixed(2) + " Km/hr";
 }

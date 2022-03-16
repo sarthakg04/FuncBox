@@ -62,7 +62,7 @@ function createScore(){
     phone_div.appendChild(GamePad)
     score_text = document.createElement('div')
     score_text.classList.add('score')
-    score_text.innerHTML = 'Perfect Score of 10 ' + `${Score}`
+    score_text.innerHTML = 'Score: ' + `${Score}`
     phone_div.appendChild(score_text)
 }
 
@@ -254,9 +254,9 @@ function GameWon(){
     var Won = document.querySelector('.Won')
     Won.style.display = 'block'
     Won.style.textAlign = 'center'
-    Won.innerHTML = 'Hurray !! <br> You scored 10 points,<br> YOU WON! 🥳🥳'
+    Won.innerHTML = 'Hurray !! <br> You scored ' + `${Score}` + ' points,<br> YOU WON! 🥳🥳'
     var score_set = document.querySelector('.score')
-    score_set.innerHTML = 'Perfect Score of 10 ' 
+    score_set.innerHTML = 'Perfect Score of ' + `${Score}`
 }
 
 function Next(){
