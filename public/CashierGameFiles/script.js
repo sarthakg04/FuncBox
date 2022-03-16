@@ -145,6 +145,7 @@ function ImplementLogic() {
 
         if(item_number === item_prices.length - 1 )
         {
+            Winner.innerHTML = "Well Done"
             Winner.style.display = 'block'
             return
         }
