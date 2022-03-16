@@ -137,7 +137,7 @@ function App() {
 					<Route exact path="/Angry_Birds_Climb" component={AngryBirds} />
 					<Route exact path="/Mission_Mars" component={MissionMars} />
 					<Route exact path="/Monkey_Multiplier" component={MonkeyMultiplier} />
-					<Route exact path="/Step_Measure" component={StepMeasure} />
+					<Route exact path="/Distance_Unit_Conversion" component={StepMeasure} />
 					<Route exact path="/Lets_Make_It_Rain" component={LetsMakeItRain} />
 					<Route exact path="/Bowling_Game" component={BowlingGame} />
 					<Route exact path="/Clock_Game" component={ClockGame} />
