@@ -66,9 +66,11 @@ function fillBackground(){
 
 function createIntercationPad(){
   document.getElementsByClassName('GamePad')[0].innerHTML +=`
+  <div class="ip">
   <img src="https://ik.imagekit.io/funcboxImages/LUnitConvGame_assets/ellipse_Bu0MOD18T-GWe.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645619194193" class="ellipse">
   <img src="https://ik.imagekit.io/funcboxImages/LUnitConvGame_assets/up_vNWXnIzy1M.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645619194203" class="up" id="up_arrow" onClick="upfunc()">
   <img src="https://ik.imagekit.io/funcboxImages/LUnitConvGame_assets/down_8pHLGhxPBYYA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645619194198" class="down" id="down_arrow" onClick="downfunc()">
+  </div>
   `;
 }
 
@@ -169,4 +171,3 @@ function downfunc(){
 function restart(){
   window.location.reload();
 }
-

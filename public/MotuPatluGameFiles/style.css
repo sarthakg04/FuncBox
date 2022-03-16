@@ -10,10 +10,10 @@ body {
 }
 #cartoon {
   position: absolute;
-  margin-top: 32vh;
+  margin-top: 40vh;
   margin-left: 5vw;
-  width: 300px;
-  height: 300px;
+  width: 270px;
+  height: 270px;
   background-size: cover;
 }
 .container {
@@ -67,4 +67,3 @@ body {
   margin-top: 28.5vh;
   margin-left: 27vw;
 }
-
