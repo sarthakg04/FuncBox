@@ -75,163 +75,167 @@ import BasketballGame from "./Games/BasketballGame/BasketballGame";
 import TemperatureConversions2 from "./Games/TemperatureConversions2/TemperatureConversions2";
 
 function App() {
-  const dispatch = useDispatch();
-  const { token } = useAuth();
-  const apiurl = process.env.REACT_APP_API_URL;
-  toast.configure();
-  useEffect(() => {
-    const isAuth = async () => {
-      try {
-        const response = await fetch(
-          `${
-            process.env.NODE_ENV === "development"
-              ? apiurl
-              : "https://server.funcbox.in"
-          }/auth/verify`,
-          {
-            credentials: "include",
+	const dispatch = useDispatch();
+	const { token } = useAuth();
+	const apiurl = process.env.REACT_APP_API_URL;
+	toast.configure();
+	useEffect(() => {
+		const isAuth = async () => {
+			try {
+				const response = await fetch(
+					`${
+						process.env.NODE_ENV === "development"
+							? apiurl
+							: "https://server.funcbox.in"
+					}/auth/verify`,
+					{
+						credentials: "include",
 
-            method: "GET",
-            headers: { token: token, data: "all" },
-          }
-        );
+						method: "GET",
+						headers: { token: token, data: "all" },
+					}
+				);
 
-        const parseRes = await response.json();
+				const parseRes = await response.json();
 
-        // console.log(parseRes);
-        if (parseRes.isAuthorized === true) {
-          // console.log("Authenticated from verify");
-          dispatch(setAuth({ isAuthenticated: true }));
-          dispatch(
-            setUser({
-              username:
-                parseRes.userDetails[0].fname +
-                " " +
-                parseRes.userDetails[0].lname,
-              userid: parseRes.userDetails[0].id,
-            })
-          );
-          dispatch(setProfile({ avatar: parseRes.userDetails[0].avatar }));
-          dispatch(setToken({ token: "Bearer " + parseRes.token }));
-        } else {
-          dispatch(setAuth({ isAuthenticated: false }));
-          dispatch(setToken({ token: " " }));
-        }
-      } catch (error) {
-        console.error(error.message);
-      }
-    };
+				// console.log(parseRes);
+				if (parseRes.isAuthorized === true) {
+					// console.log("Authenticated from verify");
+					dispatch(setAuth({ isAuthenticated: true }));
+					dispatch(
+						setUser({
+							username:
+								parseRes.userDetails[0].fname +
+								" " +
+								parseRes.userDetails[0].lname,
+							userid: parseRes.userDetails[0].id,
+						})
+					);
+					dispatch(setProfile({ avatar: parseRes.userDetails[0].avatar }));
+					dispatch(setToken({ token: "Bearer " + parseRes.token }));
+				} else {
+					dispatch(setAuth({ isAuthenticated: false }));
+					dispatch(setToken({ token: " " }));
+				}
+			} catch (error) {
+				console.error(error.message);
+			}
+		};
 
-    isAuth();
-  }, []);
-  return (
-    <Router>
-      <div className="App">
-        <ToastContainer
-          position="top-left"
-          pauseOnFocusLoss={false}
-          pauseOnHover={false}
-          autoClose={2000}
-        />
-        <Switch>
-          <Route exact path="/AngryBirds" component={AngryBirds} />
-          <Route exact path="/MissionMars" component={MissionMars} />
-          <Route exact path="/MonkeyMultiplier" component={MonkeyMultiplier} />
-          <Route exact path="/StepMeasure" component={StepMeasure} />
-          <Route exact path="/LetsMakeItRain" component={LetsMakeItRain} />
-          <Route exact path="/BowlingGame" component={BowlingGame} />
-          <Route exact path="/ClockGame" component={ClockGame} />
-          <Route exact path="/AlienGame" component={AlienGame} />
-          <Route exact path="/AvengersGame" component={AvengersGame} />
-          <Route exact path="/MoleGame" component={MoleGame} />
-          <Route exact path="/IncrediblesGame" component={IncrediblesGame} />
-          <Route exact path="/ColorGame" component={ColorFun} />
-          <Route exact path="/SolarGame" component={MySolarSystem} />
-          <Route exact path="/Calculator" component={Calculator} />
-          <Route exact path="/FlappyGame" component={FlappyGame} />
-          <Route exact path="/CashierGame" component={CashierGame} />
-          <Route exact path="/Photosynthesis" component={PhotosynthesisGame} />
-          <Route exact path="/mrfraction" component={Mrfraction} />
-          <Route
-            exact
-            path="/TemperatureConversions"
-            component={TemperatureConversions}
-          />
-          <Route exact path="/pawnshop" component={PawnShop} />
-          <Route exact path="/CardGame" component={CardGame} />
-          <Route exact path="/MotuPatlu" component={MotuPatlu} />
-          <Route exact path="/StatesThatMatter" component={StatesThatMatter} />
-          <Route exact path="/HitIt" component={HitIt} />
-          <Route exact path="/PollutoFree" component={PollutoFree} />
-          <Route exact path="/TrashGame" component={TrashGame} />
-          <Route exact path="/RecycleIt" component={RecycleIt} />
-          <Route exact path="/butterflyGame" component={Butterfly} />
-          <Route exact path="/ZombieGame" component={Zombie} />
-          <Route exact path="/DecimalGame" component={Decimal} />
-          <Route exact path="/animalhome" component={AnimalHomeGame} />
-          <Route exact path="/calculator2" component={Calculator2Game} />
-          <Route exact path="/AreaGame" component={AreaGame} />
-          <Route exact path="/Demo" component={Demo} />
-          <Route exact path="/countdracula" component={CountDracula} />
-          <Route exact path="/chemistrylab" component={ChemistryLab} />
-          <Route
-            exact
-            path="/WeightUnitConversions"
-            component={WeightUnitConversions}
-          />
-          <Route exact path="/WeatherGame" component={WeatherGame} />
-          <Route exact path="/FeedTheCrocsGame" component={FeedTheCrocsGame} />
+		isAuth();
+	}, []);
+	return (
+		<Router>
+			<div className="App">
+				<ToastContainer
+					position="top-left"
+					pauseOnFocusLoss={false}
+					pauseOnHover={false}
+					autoClose={2000}
+				/>
+				<Switch>
+					<Route exact path="/Angry_Birds_Climb" component={AngryBirds} />
+					<Route exact path="/Mission_Mars" component={MissionMars} />
+					<Route exact path="/Monkey_Multiplier" component={MonkeyMultiplier} />
+					<Route exact path="/Distance_Unit_Conversion" component={StepMeasure} />
+					<Route exact path="/Lets_Make_It_Rain" component={LetsMakeItRain} />
+					<Route exact path="/Bowling_Game" component={BowlingGame} />
+					<Route exact path="/Clock_Game" component={ClockGame} />
+					<Route exact path="/Alien_Game" component={AlienGame} />
+					<Route exact path="/Avengers_Assemble" component={AvengersGame} />
+					<Route exact path="/Whack_A_Mole" component={MoleGame} />
+					<Route
+						exact
+						path="/The_Incredible_Shot"
+						component={IncrediblesGame}
+					/>
+					<Route exact path="/Colour_Fun" component={ColorFun} />
+					<Route exact path="/My_Solar_System" component={MySolarSystem} />
+					<Route exact path="/My_Own_Calculator" component={Calculator} />
+					<Route exact path="/Flappy_Game" component={FlappyGame} />
+					<Route exact path="/Cash_Out_Cashier" component={CashierGame} />
+					<Route exact path="/Photosynthesis" component={PhotosynthesisGame} />
+					<Route exact path="/Mr_Fraction" component={Mrfraction} />
+					<Route
+						exact
+						path="/Temperature_Conversions"
+						component={TemperatureConversions}
+					/>
+					<Route exact path="/Pawn_Shop" component={PawnShop} />
+					<Route exact path="/Card_Game" component={CardGame} />
+					<Route exact path="/Speedy_Calculator" component={MotuPatlu} />
+					<Route
+						exact
+						path="/States_That_Matter"
+						component={StatesThatMatter}
+					/>
+					<Route exact path="/Hit_It" component={HitIt} />
+					<Route exact path="/Pollut_O_Free" component={PollutoFree} />
+					<Route exact path="/The_Trash_Game" component={TrashGame} />
+					<Route exact path="/Soil_Friendly" component={RecycleIt} />
+					<Route exact path="/Butterfly_Game" component={Butterfly} />
+					<Route exact path="/Lil_Jombee" component={Zombie} />
+					<Route exact path="/Decimal_Game" component={Decimal} />
+					<Route
+						exact
+						path="/Animals_And_Their_Homes"
+						component={AnimalHomeGame}
+					/>
+					<Route exact path="/Calculator_Game" component={Calculator2Game} />
+					<Route exact path="/Shapes_Area" component={AreaGame} />
+					<Route exact path="/Demo" component={Demo} />
+					<Route exact path="/Count_Dracula" component={CountDracula} />
+					<Route exact path="/Chemistry_Lab" component={ChemistryLab} />
+					<Route
+						exact
+						path="/Weight_Unit_Conversions"
+						component={WeightUnitConversions}
+					/>
+					<Route exact path="/Weather_Weather" component={WeatherGame} />
+					<Route exact path="/Feed_The_Crocs" component={FeedTheCrocsGame} />
+					<Route exact path="/Basketball_Game" component={BasketballGame} />
+					<Route exact path="/Temp_Conv" component={TemperatureConversions2} />
+					<Route exact path="/Seize_Her" component={SeizeHerGame} />
+					<Route
+						exact
+						path="/Catch_Me_If_U_Can"
+						component={CatchMeIfUCanGame}
+					/>
+					<Route exact path="/Cheesy_Gupta" component={CheesyGuptaGame} />
+					<Route exact path="/Feed_The_Crocs" component={FeedTheCrocsGame} />
+					<Route
+						exact
+						path="/Liquid_Unit_Conversions"
+						component={LUnitConvGame}
+					/>
+					<Route exact path="/Percent_Calculator" component={PercentCalcGame} />
+					<Route exact path="/Shoot_The_Prime" component={ShootThePrimesGame} />
+					<Route exact path="/Deci_Chemist" component={DeciChemistGame} />
+					<Route
+						exact
+						path="/Recognise_Pattern"
+						component={RecognisePatternGame}
+					/>
 
-      
-          <Route exact path="/BasketballGame" component={BasketballGame} />
-          <Route
-            exact
-            path="/TempConvGame"
-            component={TemperatureConversions2}
-          />
-
-          
-          <Route exact path="/SeizeHerGame" component={SeizeHerGame} />
-          <Route
-            exact
-            path="/CatchMeIfUCanGame"
-            component={CatchMeIfUCanGame}
-          />
-          <Route exact path="/CheesyGuptaGame" component={CheesyGuptaGame} />
-          <Route exact path="/FeedTheCrocsGame" component={FeedTheCrocsGame} />
-          <Route exact path="/LUnitConvGame" component={LUnitConvGame} />
-          <Route exact path="/PercentCalcGame" component={PercentCalcGame} />
-          <Route
-            exact
-            path="/ShootThePrimeGame"
-            component={ShootThePrimesGame}
-          />
-          <Route exact path="/DeciChemistGame" component={DeciChemistGame} />
-          <Route
-            exact
-            path="/RecPatternGame"
-            component={RecognisePatternGame}
-          />
-
-          <Route exact path="/UserNavbar" component={UserNavbar} />
-          <Route exact path="/Login" component={Login} />
-          <Route exact path="/Signup" component={Signup} />
-          <Route exact path="/" component={LandingPage} />
-          <Route exact path="/AboutPage" component={AboutPage} />
-          <Route exact path="/Welcome" component={WelcomePage} />
-          <Route exact path="/SalesPage" component={SalesPage} />
-          <Route exact path="/CodeEditor" component={CodeEditor} />
-          <Route exact path="/TeamsPage" component={TeamsPage} />
-          <Route exact path="/EditProfile" component={EditProfile} />
-          <Route exact path="/ForgotPass" component={ForgotPass} />
-          <Route exact path="/subscriptions" component={SubscriptionPage} />
-          {/* <Route exact path="/flippable" component={Container} /> */}
-          <Route exact path="/VideoEmbed" component={Example} />
-          <Route exact path="/test" component={ServerTest} />
-          <Route exact path="/:code" component={Preview} />
-        </Switch>
-      </div>
-    </Router>
-  );
+					<Route exact path="/UserNavbar" component={UserNavbar} />
+					<Route exact path="/Login" component={Login} />
+					<Route exact path="/Signup" component={Signup} />
+					<Route exact path="/" component={LandingPage} />
+					<Route exact path="/AboutPage" component={AboutPage} />
+					<Route exact path="/Welcome" component={WelcomePage} />
+					<Route exact path="/SalesPage" component={SalesPage} />
+					<Route exact path="/CodeEditor" component={CodeEditor} />
+					<Route exact path="/TeamsPage" component={TeamsPage} />
+					<Route exact path="/EditProfile" component={EditProfile} />
+					<Route exact path="/ForgotPass" component={ForgotPass} />
+					<Route exact path="/subscriptions" component={SubscriptionPage} />
+					{/* <Route exact path="/flippable" component={Container} /> */}
+					<Route exact path="/VideoEmbed" component={Example} />
+					<Route exact path="/test" component={ServerTest} />
+					<Route exact path="/:code" component={Preview} />
+				</Switch>
+			</div>
+		</Router>
+	);
 }
 export default App;

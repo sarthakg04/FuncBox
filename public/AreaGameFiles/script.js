@@ -82,26 +82,26 @@ function fillInputs(){
   switch (position) {
     case 0:
       document.getElementById('inputs').innerHTML =`
-      <input type="number" min=0 min=0 name="raidus" value="" placeholder="r=" id="circle_radius" oninput="calcArea('circle')">
+      <input type="number" min=0 min=0 name="raidus" value="" placeholder="r = " id="circle_radius" oninput="calcArea('circle')">
       `;
       break;
       case 1:
       document.getElementById('inputs').innerHTML =`
-      <input type="number" min=0 min=0 name="side" value="" placeholder="s=" id="square__side" oninput="calcArea('square')">
+      <input type="number" min=0 min=0 name="side" value="" placeholder="s = " id="square__side" oninput="calcArea('square')">
       `;
       break;
 
       case 2:
       document.getElementById('inputs').innerHTML =`
-      <input type="number" min=0 min=0 name="a" value="" placeholder="a=" id="trapezium__a" oninput="calcArea('trapezium')">
-      <input type="number" min=0 min=0 name="b" value="" placeholder="b=" id="trapezium__b" oninput="calcArea('trapezium')">
-      <input type="number" min=0 min=0 name="h" value="" placeholder="h=" id="trapezium__h" oninput="calcArea('trapezium')">
+      <input type="number" min=0 min=0 name="a" value="" placeholder="a = " id="trapezium__a" oninput="calcArea('trapezium')">
+      <input type="number" min=0 min=0 name="b" value="" placeholder="b = " id="trapezium__b" oninput="calcArea('trapezium')">
+      <input type="number" min=0 min=0 name="h" value="" placeholder="h = " id="trapezium__h" oninput="calcArea('trapezium')">
       `;
       break;
       case 3:
       document.getElementById('inputs').innerHTML =`
-      <input type="number" min=0 min=0 name="base" value="" placeholder="b=" id="triangle__base" oninput="calcArea('triangle')">
-        <input type="number" min=0 min=0 name="height" value="" placeholder="h=" id="triangle__height" oninput="calcArea('triangle')">
+      <input type="number" min=0 min=0 name="base" value="" placeholder="b = " id="triangle__base" oninput="calcArea('triangle')">
+        <input type="number" min=0 min=0 name="height" value="" placeholder="h = " id="triangle__height" oninput="calcArea('triangle')">
       `;
       break;
     default:

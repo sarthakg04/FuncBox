@@ -193,15 +193,35 @@ function MoveNext() {
           squares[currentBirdPosition].classList.remove("planck");
           squares[currentBirdPosition].classList.add(hitter + "_bird_planck");
         }
-        if (
-          squares[currentBirdPosition].classList.contains("pig-check") ||
-          squares[currentBirdPosition].classList.contains("box-check")
-        ) {
-          if (squares[currentBirdPosition].classList.contains("hitted-check")) {
-            hitBtn.disabled = true;
-          } else {
-            hitBtn.disabled = false;
-          }
+
+        while(planck_position_check) {
+            currentBirdPosition-=1
+            if(squares[currentBirdPosition].classList.contains('planck-check')) {
+                planck_position_check = false
+                squares[currentBirdPosition].classList.add('bird-check')
+                // squares[currentBirdPosition].appendChild(bird)
+                if(squares[currentBirdPosition].classList.contains('pig-check')) {
+                    squares[currentBirdPosition].classList.remove(badItem+'_planck')
+                    squares[currentBirdPosition].classList.add(hitter+'_bird_'+badItem+'_planck')
+                }
+                if(squares[currentBirdPosition].classList.contains('box-check')) {
+                    squares[currentBirdPosition].classList.remove(goodItem+'_planck')
+                    squares[currentBirdPosition].classList.add(hitter+'_bird_'+ goodItem+'_planck')
+                }
+                else{
+
+                    squares[currentBirdPosition].classList.remove('planck')
+                    squares[currentBirdPosition].classList.add(hitter+'_bird_planck')
+                }
+                if(squares[currentBirdPosition].classList.contains('pig-check') || squares[currentBirdPosition].classList.contains('box-check')) {
+                    if(squares[currentBirdPosition].classList.contains('hitted-check')){
+                        hitBtn.disabled = true
+                    }
+                    else{
+                        hitBtn.disabled = false
+                    }
+                }
+            }
         }
       }
     }
@@ -251,15 +271,35 @@ function MovePrev() {
           squares[currentBirdPosition].classList.remove("planck");
           squares[currentBirdPosition].classList.add(hitter + "_bird_planck");
         }
-        if (
-          squares[currentBirdPosition].classList.contains("pig-check") ||
-          squares[currentBirdPosition].classList.contains("box-check")
-        ) {
-          if (squares[currentBirdPosition].classList.contains("hitted-check")) {
-            hitBtn.disabled = true;
-          } else {
-            hitBtn.disabled = false;
-          }
+
+        while(planck_position_check) {
+            currentBirdPosition+=1
+            if(squares[currentBirdPosition].classList.contains('planck-check')) {
+                planck_position_check = false
+                squares[currentBirdPosition].classList.add('bird-check')
+                // squares[currentBirdPosition].appendChild(bird)
+                if(squares[currentBirdPosition].classList.contains('pig-check')) {
+                    squares[currentBirdPosition].classList.remove(badItem+'_planck')
+                    squares[currentBirdPosition].classList.add(hitter+'_bird_'+badItem+'_planck')
+                }
+                if(squares[currentBirdPosition].classList.contains('box-check')) {
+                    squares[currentBirdPosition].classList.remove(goodItem+'_planck')
+                    squares[currentBirdPosition].classList.add(hitter+'_bird_'+ goodItem+'_planck')
+                }
+                else{
+
+                    squares[currentBirdPosition].classList.remove('planck')
+                    squares[currentBirdPosition].classList.add(hitter+'_bird_planck')
+                }
+                if(squares[currentBirdPosition].classList.contains('pig-check') || squares[currentBirdPosition].classList.contains('box-check')) {
+                    if(squares[currentBirdPosition].classList.contains('hitted-check')){
+                        hitBtn.disabled = true
+                    }
+                    else{
+                        hitBtn.disabled = false
+                    }
+                }
+            }
         }
       }
     }
@@ -304,10 +344,65 @@ function IncreaseScore() {
 
   let ControlPad = document.querySelector(".ControlPad");
 
-  Finish += penalty;
-  if (Finish === 3 * penalty) {
-    for (var i = 0; i < MovementBtns.length; i++) {
-      MovementBtns[i].disabled = true;
+    Finish+=penalty
+    if( Finish === (3*penalty) ) {
+        for(var i = 0; i < MovementBtns.length; i++) {
+            MovementBtns[i].disabled = true;
+        }
+
+        let hitBtn = document.querySelector('.hitBtn')
+        hitBtn.disabled = true
+        if( Score === Finish ) {
+            const hitted = document.createElement('div')
+            if(squares[currentBirdPosition].classList.contains('pig-check')){
+                // console.log('bad-hit')
+                hitted.classList.add('bad_hitted')
+            }
+            else{
+                hitted.classList.add('hitted')
+            }
+            squares[currentBirdPosition].appendChild(hitted)
+            squares[currentBirdPosition].classList.add('hitted-check')
+            GameOver_div.style.display = 'block'
+
+            grid_clear.style.display = 'none'
+            ControlPad.style.display = 'none'
+            scoreSpan.innerHTML = "Perfect Win : "+ Score+"/"+Finish
+
+            let New_refresh_btn = document.createElement('button')
+            New_refresh_btn.onclick = function(){window.location.reload();};
+            New_refresh_btn.classList.add('New_refresh_btn')
+
+            Phone.appendChild(New_refresh_btn)
+
+            return 0
+        }
+        else{
+            const hitted = document.createElement('div')
+            if(squares[currentBirdPosition].classList.contains('pig-check')){
+                // console.log('bad-hit')
+                hitted.classList.add('bad_hitted')
+            }
+            else{
+                hitted.classList.add('hitted')
+            }
+            squares[currentBirdPosition].appendChild(hitted)
+            squares[currentBirdPosition].classList.add('hitted-check')
+
+            GameOver_div.style.display = 'block'
+            grid_clear.style.display = 'none'
+            ControlPad.style.display = 'none'
+            scoreSpan.innerHTML = "Game Over! Score : "+ Score+"/"+Finish
+
+
+            let New_refresh_btn = document.createElement('button')
+            New_refresh_btn.onclick = function(){window.location.reload();};
+            New_refresh_btn.classList.add('New_refresh_btn')
+
+            Phone.appendChild(New_refresh_btn)
+
+            return 0
+        }
     }
 
     let hitBtn = document.querySelector(".hitBtn");

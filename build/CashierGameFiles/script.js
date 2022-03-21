@@ -1,7 +1,7 @@
 let Item_1_price = 700
 let amount_added = 0
 let change = 0
-let cash_values = [ 100, 50, 200, 500, 20, 10, 5, 2, 1 ]
+let cash_values = [ 500, 200, 100, 50, 20, 10, 5, 2, 1 ] // 500,200,10,5,20
 let item_number = 0
 
 
@@ -145,6 +145,7 @@ function ImplementLogic() {
 
         if(item_number === item_prices.length - 1 )
         {
+            Winner.innerHTML = "Well Done"
             Winner.style.display = 'block'
             return
         }

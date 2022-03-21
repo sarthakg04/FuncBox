@@ -7,6 +7,12 @@
   font-family: Helvetica, sans-serif;
 }
 
+
+/* .ip{
+  display: inline-block;
+  transform: rotate(-90deg);
+} */
+
 .GamePad {
   width: 400px;
   height: 535px;
@@ -34,19 +40,21 @@
 }
 
 .up{
-  position: absolute;
-  left: 30px;
-  top: 152px;
-  width: 12%;
-  cursor: pointer;
+    position: absolute;
+    left: 15px;
+    top: 176px;
+    width: 10%;
+    transform: rotate(-90deg);
+    cursor: pointer;
 }
 
 .down{
   position: absolute;
-  left: 30px;
-  top: 200px;
-  width: 12%;
+  left: 55px;
+  top: 176px;
+  width: 10%;
   cursor: pointer;
+  transform: rotate(-90deg);
 }
 
 .submit{
@@ -131,4 +139,3 @@
 #final_unit{
   margin-left: 10px;
 }
-

@@ -1,31 +1,5 @@
 //Frontend Function for testing
-
-//  var number  = randomIntLessThan(10)
-//  var multiple = number * randomIntLessThan(10)
-// createScore()
-// generateRandomNumber()
-// createJumpPlaces()
-// createMonkey()
-// generateMultiples()
-// createInteractionPad()
-// createGameOver()
-// createGameWon()
-
-// function CheckLogic(jump_num){
-//     if( (NumberIn(jump_num) % number) === 0 ){
-//         Score++
-//       if(Score === 10){
-//         GameWon()
-//         return false
-//       }
-//     }
-//     else{
-//         GameOver()
-//         return false
-//     }
-// }
-
-
+ 
 // variables
 
 
@@ -279,9 +253,10 @@ function GameWon(){
     next_button.disabled = true    
     var Won = document.querySelector('.Won')
     Won.style.display = 'block'
-    Won.innerHTML = 'Hurray !! <br> You scored 10 points,<br> YOU WON! 🥳🥳'
+    Won.style.textAlign = 'center'
+    Won.innerHTML = 'Hurray !! <br> You scored ' + `${Score}` + ' points,<br> YOU WON! 🥳🥳'
     var score_set = document.querySelector('.score')
-    score_set.innerHTML = 'Perfect Score of 10 ' 
+    score_set.innerHTML = 'Perfect Score of ' + `${Score}`
 }
 
 function Next(){

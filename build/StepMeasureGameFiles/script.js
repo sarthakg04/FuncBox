@@ -164,15 +164,23 @@ function Up(){
         
         let value_div = document.querySelector('.Value')
 
-        
+        console.log(value_entered)
+
         let temp = StepUp()
+
+        console.log(value_entered)
+
         // console.log(temp.countDecimals())
 
         if(temp.countDecimals() >= 5){
-            value_div.innerHTML = StepUp().toFixed(15)
+            value_div.innerHTML = temp.toFixed(15)
         }
         else{
-            value_div.innerHTML = StepUp()
+
+            console.log(value_entered)
+
+            value_div.innerHTML = temp
+
         }
         
     }
@@ -214,10 +222,10 @@ function Down(){
         // console.log(temp.countDecimals())
 
         if(temp.countDecimals() >= 5){
-            value_div.innerHTML = StepDown().toFixed(15)
+            value_div.innerHTML = temp.toFixed(15)
         }
         else{
-            value_div.innerHTML = StepDown()
+            value_div.innerHTML = temp
         }
         
 

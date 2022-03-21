@@ -229,7 +229,7 @@ function endGame() {
 function createEndGameCard() {
   let wellDone = document.createElement("div");
   wellDone.classList.add("well_done_card");
-  wellDone.innerHTML = `<p>Well Done</p><br/><button onClick="restart()">retry<img src="./ColorFunGameFiles/assets/retry_icon.png"></button>`;
+  wellDone.innerHTML = `<p>Well Done</p><br/><button onClick="restart()">Retry<img src="./ColorFunGameFiles/assets/retry_icon.png"></button>`;
   return wellDone;
 }
 function restart() {
