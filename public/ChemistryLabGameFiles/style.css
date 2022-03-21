@@ -40,6 +40,7 @@ body {
   width: 170px;
 }
 .atom {
+  cursor: pointer;
   padding: 20px;
   border-radius: 50%;
   border: 2px solid;
@@ -100,4 +101,20 @@ body {
   top: 0;
   left: 0;
   z-index: 5;
+}
+.play_again_button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  
+  z-index: 20;
+  display: none;
+}
+.play_again_button > button {
+  background-color: rgb(231, 136, 101);
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
 }

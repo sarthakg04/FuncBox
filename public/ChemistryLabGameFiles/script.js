@@ -57,7 +57,7 @@ const imageLinks = {
   CH4_end_screen:
     "https://ik.imagekit.io/funcboxImages/ChemistryLabGame_assets/ch4_end_screen_sqfSdpcEd-Vx.png?updatedAt=1638993898661",
   O2_end_screen:
-    "https://ik.imagekit.io/funcboxImages/ChemistryLabGame_assets/o2_flask_FBQqdHQvUlW_.png?updatedAt=1638991463116",
+    "https://ik.imagekit.io/funcboxImages/ChemistryLabGame_assets/o2_end_screen_gopn-zBFhmsy.png?ik-sdk-version=javascript-1.4.3&updatedAt=1638993898794",
   H2O_end_screen:
     "https://ik.imagekit.io/funcboxImages/ChemistryLabGame_assets/h2o_end_screen_x7Alum29pxEP.png?updatedAt=1638991463474",
   NO2_end_screen:
@@ -148,6 +148,8 @@ function showCorrect() {
     win_screen.src = imageLinks[compound + "_end_screen"];
     win_screen.className = "win_screen";
     document.getElementById("container").appendChild(win_screen);
+    const play_again = document.getElementsByClassName("play_again_button")[0];
+    play_again.style.display = "unset";
   }, 1000);
 }
 function showWrongAndReset() {
@@ -165,6 +167,42 @@ function showWrongAndReset() {
     document.getElementsByClassName("submit_btn")[0].disabled = false;
   }, 2000);
 }
+
+function createPlayAgainButton() {
+  const button_div = document.createElement("div");
+  button_div.className = "play_again_button";
+  const button = document.createElement("button");
+  button.innerText = "Play Again";
+  button.onclick = () => {
+    playAgain();
+  };
+  button_div.appendChild(button);
+  document.getElementById("container").appendChild(button_div);
+}
+function playAgain() {
+  console.log("play again");
+  document.getElementsByClassName("play_again_button")[0].style.display =
+    "none";
+  document.getElementsByClassName("win_screen")[0].remove();
+  const activeElements = document.getElementsByClassName("active");
+  while (activeElements.length > 0) {
+    activeElements[0].classList.remove("active");
+  }
+  selection = "";
+  document.getElementsByClassName("submit_btn")[0].disabled = false;
+
+  const atoms = document.getElementsByClassName("atom");
+  while (atoms.length > 0) {
+    atoms[0].remove();
+  }
+  const flask = document.getElementsByClassName("flask_image")[0];
+  flask.remove();
+
+  createConicalFlask();
+  getRandomCompound();
+  showAtoms();
+}
+
 function createAtom(pos, atom) {
   let atom_div = document.createElement("div");
   atom_div.innerHTML = `<p>${atom}</p>`;
