@@ -80,9 +80,9 @@ let imageRemoteLinks = {
 let planetPositions = [
   { x: "286px", y: "35px" },
   { x: "310px", y: "125px" },
-  { x: "330px", y: "210px" },
-  { x: "270px", y: "266px" },
-  { x: "320px", y: "348px" },
+  { x: "240px", y: "165px" },
+  { x: "360px", y: "290px" },
+  { x: "260px", y: "335px" },
   { x: "300px", y: "427px" },
   { x: "250px", y: "495px" },
   { x: "70px", y: "505px" },
