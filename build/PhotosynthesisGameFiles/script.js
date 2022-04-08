@@ -16,7 +16,7 @@
 
 
 // let num_of_clouds = 9
-// fillBackground('Game_2')
+// fillBackground('sky')
 // createCloudGrid()
 // for(i=0;i<num_of_clouds;i++){
 //     createCloud_Game_2()
