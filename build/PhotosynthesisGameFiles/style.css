@@ -227,7 +227,7 @@ body {
 
 /* Game 2 CSS  */
 
-.Phone_Game_2_bg {
+.Phone_sky_bg {
   background-image: url('./assets/bg__2.png');
 }
 
@@ -296,7 +296,8 @@ body {
 }
 
 .shooter__bg {
-  background-color: bisque;
+  /* background-color: bisque; */
+  background-image: url('./assets/shooter.png');
 }
 
 .bullet__bg {
