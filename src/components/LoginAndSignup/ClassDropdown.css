@@ -1,0 +1,57 @@
+/* Class DropDown List : Kaustubh */
+
+.drop-down-x {
+  align-self: flex-start;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-size: 16px;
+}
+
+.drop-down-x .selected span {
+  background: #fff no-repeat scroll right center;
+  display: block;
+  border: 1px solid #d7d7d7;
+  width: min(70vw, 460px);
+  border-radius: 2px;
+  text-decoration: none;
+  color: #3179ac;
+}
+
+.drop-down-x .selected span {
+  cursor: pointer;
+  display: block;
+  padding: 8px;
+}
+
+.drop-down-x .option {
+  position: relative;
+}
+
+.drop-down-x .options ul {
+  background: #eee none repeat scroll 0 0;
+  display: none;
+  list-style: none;
+  padding: 0px 0px;
+  width: min(70vw, 470px);
+  border: 1px solid #d7d7d7;
+}
+
+.drop-down-x .selected span.value,
+.drop-down-x .options span.value {
+  display: none;
+}
+
+.drop-down-x .options ul li {
+  padding: 5px;
+  display: block;
+  text-decoration: none;
+  color: #3179ac;
+  font-weight: semibold;
+}
+
+.drop-down-x .options ul li:hover {
+  cursor: pointer;
+  background: #3179ac;
+  color: #fff;
+  transition: 0.2s ease;
+}
